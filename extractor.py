@@ -1,7 +1,4 @@
 # extractor.py
-# Legge un transcript audio + novità Google Doc
-# e usa Claude per estrarre struttura didattica in JSON
-
 import os
 import json
 from pathlib import Path
@@ -11,178 +8,308 @@ import anthropic
 load_dotenv()
 client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
-EXTRACTION_PROMPT = """Sei un tutor di tedesco specializzato per studenti italiani.
-Lo studente si chiama Kevin, è livello A2→B1, madrelingua italiana, studia tramite inglese.
-La lezione è tenuta in inglese da una docente madrelingua tedesca.
+EXTRACTION_PROMPT = """You are an expert German language tutor.
+The student is Kevin, Italian, level A2→B1, studying via English with a native German speaker.
+The lesson transcript is in English with German examples and occasional Italian.
 
-Hai a disposizione DUE fonti:
-1. TRANSCRIPT AUDIO: la lezione registrata (dialogo orale, spiegazioni, esercizi)
-2. DOC NOVITÀ: le righe aggiunte nel Google Doc condiviso durante/dopo la lezione
+Extract ONLY valid JSON, zero backtick, zero extra text.
 
-Integra entrambe le fonti. Il doc è più preciso per grammatica e vocabolario scritto.
-Il transcript è più ricco di contesto, esempi orali e nuances della spiegazione.
-
-- IMPORTANT: the "german" field must NEVER include the article. 
-  Write ONLY the base word. Article goes ONLY in "article" field.
-  CORRECT: {"german": "Sorge", "article": "die"}
-  WRONG:   {"german": "die Sorge", "article": "die"}
-
-Estrai SOLO con JSON valido, zero testo aggiuntivo, zero backtick.
-
-Formato esatto:
+Format:
 {
-  "lesson_number": "stima il numero progressivo della lezione se deducibile, altrimenti stringa vuota",
-  "topic": "argomento principale in 5 parole",
-  "summary_en": "riassunto in inglese semplice (max 120 parole)",
-  "summary_it": "stesso riassunto in italiano",
+  "lesson_number": "progressive number if deducible, else empty string",
+  "topic": "main topic in 5 words",
+  "summary_en": "lesson summary in English (max 120 words)",
+  "summary_it": "same summary in Italian",
   "vocabulary": [
     {
-      "german": "aufstehen",
-      "article": "",
-      "plural": "",
-      "category": "verb_separable",
-      "italian": "alzarsi",
-      "english": "to get up",
-      "example_de": "Ich stehe um 7 Uhr auf.",
-      "example_it": "Mi alzo alle 7.",
-      "level": "A1"
+      "german": "Sorge",
+      "article": "die",
+      "plural": "die Sorgen",
+      "category": "noun",
+      "italian": "la preoccupazione",
+      "english": "worry, concern",
+      "example_de": "Mach dir keine Sorgen.",
+      "example_it": "Non preoccuparti.",
+      "level": "A2"
     }
-    CRITICAL RULE for vocabulary:
-    - The "german" field must NEVER contain the article.
-    - Write ONLY the base word in "german".
-    - Article goes ONLY in the "article" field.
-    - CORRECT: {"german": "Sorge", "article": "die", ...}
-    - WRONG:   {"german": "die Sorge", "article": "die", ...}
-    - WRONG:   {"german": "die Sorge", "article": "", ...}
-    This applies to ALL nouns without exception.
   ],
   "grammar_points": [
     {
-      "rule": "nome regola grammaticale",
-      "explanation_en": "explanation in English, clear and concise",
-      "examples": ["esempio 1 in tedesco", "esempio 2 in tedesco"]
+      "rule": "rule name",
+      "explanation_en": "clear explanation in English",
+      "examples": ["example 1", "example 2", "example 3"],
+      "full_rule": "",
+      "common_mistakes": "",
+      "exceptions": "",
+      "source_verified": false
     }
   ],
   "phrases": [
     {
-      "german": "Wie geht's?",
-      "english": "How are you?",
-      "context": "informal greeting"
+      "german": "Ich frage mich, ob...",
+      "english": "I wonder if...",
+      "context": "introducing indirect question"
     }
   ],
-  "homework": "compiti assegnati se menzionati nel transcript o nel doc, altrimenti stringa vuota",
+  "homework": "homework if mentioned, else empty string",
   "comprehension_questions": [
-    {"question_de": "domanda in tedesco", "answer_de": "risposta in tedesco"}
+    {"question_de": "...", "answer_de": "..."}
   ],
-  "doc_sections_covered": ["lista delle sezioni del Google Doc toccate in questa lezione"]
+  "doc_sections_covered": ["list of doc sections covered"]
 }
 
-Regole:
-- vocabulary: estrai TUTTE le parole nuove per A1→B1, senza limite numerico. Includi tutto il vocabolario genuinamente presente nella lezione.
-- category deve essere esattamente uno di: verb_regular, verb_irregular, verb_separable, verb_modal, noun, adjective, adverb, phrase, expression
-- article: includi sempre per i sostantivi (der/die/das), lascia stringa vuota per il resto, senza ripetere se già presente
-- plural: includi per i sostantivi quando deducibile, altrimenti stringa vuota
-- level: A1, A2, B1 o B2 in base alla difficoltà della parola
-- grammar_points: max 4, only those explicitly covered in the lesson. All explanations in English only.
-- comprehension_questions: esattamente 3
-- Se una parola appare sia nel doc che nel transcript, includila una sola volta con esempio dal transcript
-- doc_sections_covered: usa i titoli delle sezioni del doc (es. '2. Akkusativ', '5. Modalverben 1')"""
+CRITICAL RULES:
+- vocabulary "german" field: NEVER include the article. Base word only.
+  CORRECT: {"german": "Sorge", "article": "die"}
+  WRONG:   {"german": "die Sorge", "article": "die"}
+- category must be one of: verb_regular, verb_irregular, verb_separable,
+  verb_modal, noun, adjective, adverb, phrase, expression
+- article: der/die/das for nouns, empty string for everything else
+- plural: include for nouns when deducible, else empty string
+- level: A1, A2, B1, or B2
+- All explanations in English only
+- grammar_points: max 5, only those explicitly covered in the lesson
+- vocabulary: extract ALL new words for A2→B1, no artificial cap
+- comprehension_questions: exactly 3
+- phrases: English field only, no Italian"""
 
 
-def extract(transcript_path: str | Path, output_filename: str | None = None,
+def parse_json_safe(raw: str, fallback: dict = None) -> dict | None:
+    """
+    Prova a parsare JSON da una stringa potenzialmente sporca.
+    Cerca il primo { e l'ultimo } e prova a parsare quel blocco.
+    """
+    if not raw or not raw.strip():
+        return fallback
+
+    clean = raw.strip()
+
+    # Rimuovi backtick
+    if clean.startswith("```"):
+        lines = clean.split("\n")
+        clean = "\n".join(lines[1:-1]).strip()
+
+    # Trova il blocco JSON principale
+    start = clean.find("{")
+    end   = clean.rfind("}") + 1
+    if start >= 0 and end > start:
+        clean = clean[start:end]
+
+    try:
+        return json.loads(clean)
+    except json.JSONDecodeError as e:
+        print(f"   ⚠️  JSON parse error: {e}")
+        return fallback
+
+
+def extract_text_from_response(response) -> str:
+    """
+    Estrae il testo dalla risposta API, gestendo sia risposte normali
+    che risposte con tool use (web search) che hanno blocchi multipli.
+    """
+    print(f"   Response blocks: {len(response.content)}")
+
+    text_blocks = []
+    for i, block in enumerate(response.content):
+        btype = getattr(block, "type", "?")
+        btext = getattr(block, "text", "")
+        print(f"   Block {i}: type={btype} len={len(btext)}")
+        if btype == "text" and btext.strip():
+            text_blocks.append(btext)
+
+    if not text_blocks:
+        return ""
+
+    # Prendi l'ultimo blocco text — è la risposta finale dopo le ricerche
+    return text_blocks[-1]
+
+
+def needs_web_search(grammar_points: list) -> list:
+    """
+    Controlla quali grammar points necessitano web search.
+    Salta quelli già approfonditi in lezioni precedenti.
+    """
+    seen_rules = {}
+    for f in sorted(Path("data").glob("lezione_*.json")):
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+            for gp in d.get("grammar_points", []):
+                rule_key = gp.get("rule", "").lower().strip()
+                if rule_key and gp.get("full_rule"):
+                    seen_rules[rule_key] = gp
+        except Exception:
+            pass
+
+    to_research = []
+    for gp in grammar_points:
+        rule_key = gp.get("rule", "").lower().strip()
+        if not rule_key:
+            continue
+        if rule_key not in seen_rules:
+            to_research.append(gp)
+            print(f"   🆕 New rule: {gp.get('rule')}")
+        elif not seen_rules[rule_key].get("common_mistakes"):
+            to_research.append(gp)
+            print(f"   📝 Incomplete: {gp.get('rule')} — will enrich")
+        else:
+            print(f"   ✅ Already complete: {gp.get('rule')} — skip")
+
+    return to_research
+
+
+def enrich_grammar_with_web(grammar_points: list) -> list:
+    """
+    Usa web search per approfondire i grammar points indicati.
+    """
+    if not grammar_points:
+        return grammar_points
+
+    grammar_prompt = f"""You are an expert German grammar tutor with web search access.
+Research each grammar rule below using web search.
+Search on: dartmouth.edu/~deutsch, germanveryeasy.com, duden.de
+
+For each rule find and include:
+1. Complete rule with ALL forms, cases, conjugation tables
+2. Common mistakes Italian speakers make
+3. 4 varied example sentences showing different contexts
+4. Exceptions and special cases
+
+Grammar points to research:
+{json.dumps(grammar_points, ensure_ascii=False, indent=2)}
+
+After your research, return ONLY valid JSON with NO backtick, NO extra text:
+{{
+  "grammar_points": [
+    {{
+      "rule": "exact same rule name as input",
+      "explanation_en": "complete explanation in English",
+      "full_rule": "complete grammar rule with all forms and tables",
+      "common_mistakes": "typical mistakes Italian speakers make",
+      "examples": ["example 1", "example 2", "example 3", "example 4"],
+      "exceptions": "exceptions and special cases",
+      "source_verified": true
+    }}
+  ]
+}}"""
+
+    response = client.messages.create(
+        model="claude-sonnet-4-5",
+        max_tokens=8000,
+        tools=[{
+            "type": "web_search_20250305",
+            "name": "web_search"
+        }],
+        messages=[{"role": "user", "content": grammar_prompt}]
+    )
+
+    cost = (response.usage.input_tokens * 0.000003 +
+            response.usage.output_tokens * 0.000015)
+    print(f"   💶 Web search cost: €{cost:.3f}")
+
+    raw = extract_text_from_response(response)
+    print(f"   Raw text preview: {repr(raw[:150])}")
+
+    result = parse_json_safe(raw)
+    if result:
+        enriched = result.get("grammar_points", [])
+        if enriched:
+            print(f"   ✅ {len(enriched)} rules enriched with web search")
+            return enriched
+
+    print("   ⚠️  Could not parse web search result — using base grammar")
+    return grammar_points
+
+
+def extract(transcript_path: str, output_filename: str = None,
             doc_new_content: str = "", doc_full_content: str = "") -> dict:
     """
-    Estrae struttura didattica da transcript audio + novità Google Doc.
-
-    transcript_path:   percorso al file .txt del transcript
-    output_filename:   nome del file .json di output (senza estensione)
-    doc_new_content:   righe aggiunte nel Google Doc dall'ultima lezione
-    doc_full_content:  testo completo del doc (per contesto, non usato nel prompt)
-
-    Restituisce: dizionario Python con tutti i dati estratti
+    Estrae struttura didattica da transcript + novità Google Doc.
+    Call 1: vocabolario e struttura base (no web search)
+    Call 2: web search solo per regole grammaticali nuove o incomplete
     """
-
     transcript_path = Path(transcript_path)
-
     if not transcript_path.exists():
-        raise FileNotFoundError(f"Transcript non trovato: {transcript_path}")
+        raise FileNotFoundError(f"Transcript not found: {transcript_path}")
 
     if output_filename is None:
         output_filename = transcript_path.stem
 
-    output_path = Path("data") / f"{output_filename}.json"
-
+    output_path  = Path("data") / f"{output_filename}.json"
     transcript_text = transcript_path.read_text(encoding="utf-8")
 
-    print(f"📄 Transcript: {transcript_path.name} ({len(transcript_text)} caratteri)")
+    print(f"📄 Transcript: {transcript_path.name} ({len(transcript_text)} char)")
 
-    # Costruisce il messaggio fondendo le due fonti
-    user_content = f"{EXTRACTION_PROMPT}\n\n"
+    user_content  = f"{EXTRACTION_PROMPT}\n\n"
     user_content += f"=== TRANSCRIPT AUDIO ===\n{transcript_text}\n\n"
 
     if doc_new_content.strip():
-        # Limita a 8000 caratteri — le novità recenti sono alla fine
-        doc_trimmed = doc_new_content[-8000:] if len(doc_new_content) > 8000 else doc_new_content
-        user_content += f"=== DOC NOVITÀ (righe aggiunte questa lezione) ===\n{doc_trimmed}\n\n"
-        print(f"📝 Doc novità: {len(doc_trimmed)} caratteri inclusi "
-              f"(totale diff: {len(doc_new_content)})")
+        trimmed = (doc_new_content[-8000:]
+                   if len(doc_new_content) > 8000
+                   else doc_new_content)
+        user_content += f"=== DOC NEW CONTENT ===\n{trimmed}\n\n"
+        print(f"📝 Doc content: {len(trimmed)} chars included")
     else:
-        print("📝 Doc novità: nessuna (primo snapshot o nessuna modifica rilevata)")
+        print("📝 Doc content: none")
 
-    print("🧠 Invio a Claude per estrazione...")
-
-    response = client.messages.create(
+    # ── CALL 1: estrazione base ──────────────────────────────────────────────
+    print("🧠 Call 1/2 — Base extraction...")
+    response1 = client.messages.create(
         model="claude-sonnet-4-5",
-        max_tokens=16000,
-        messages=[{
-            "role": "user",
-            "content": user_content
-        }]
+        max_tokens=8000,
+        messages=[{"role": "user", "content": user_content}]
     )
 
-    block = response.content[0]
-    raw_text = block.text if block.type == "text" else ""
+    raw1  = response1.content[0].text.strip()
+    data  = parse_json_safe(raw1)
+    if not data:
+        raise ValueError("Could not parse base extraction response")
 
-    # Pulizia difensiva backtick
-    clean_text = raw_text.strip()
-    if clean_text.startswith("```"):
-        lines = clean_text.split("\n")
-        clean_text = "\n".join(lines[1:-1]).strip()
+    cost1 = (response1.usage.input_tokens * 0.000003 +
+             response1.usage.output_tokens * 0.000015)
+    print(f"   ✅ {len(data.get('vocabulary',[]))} words, "
+          f"{len(data.get('grammar_points',[]))} grammar points | €{cost1:.3f}")
 
-    data = json.loads(clean_text)
+    # ── CALL 2: web search grammatica ────────────────────────────────────────
+    grammar_points = data.get("grammar_points", [])
+    if grammar_points:
+        print("🌐 Call 2/2 — Checking grammar for web search...")
+        to_research = needs_web_search(grammar_points)
 
-    # Salva JSON formattato
+        if to_research:
+            print(f"   Researching {len(to_research)}/{len(grammar_points)} rules...")
+            enriched = enrich_grammar_with_web(to_research)
+
+            # Merge: sostituisci solo i punti ricercati
+            enriched_map = {gp.get("rule","").lower(): gp for gp in enriched}
+            final_grammar = []
+            for gp in grammar_points:
+                key = gp.get("rule","").lower()
+                final_grammar.append(enriched_map.get(key, gp))
+            data["grammar_points"] = final_grammar
+        else:
+            print("   ✅ All rules already complete — web search skipped")
+    else:
+        print("🌐 No grammar points — skipping web search")
+
+    # Salva
     output_path.write_text(
         json.dumps(data, ensure_ascii=False, indent=2),
         encoding="utf-8"
     )
 
-    # Riepilogo output
-    print(f"✅ Salvato: {output_path}")
-    print(f"📚 Argomento: {data.get('topic', 'N/A')}")
-    print(f"📝 Parole: {len(data.get('vocabulary', []))} | "
-          f"Grammatica: {len(data.get('grammar_points', []))} | "
-          f"Frasi: {len(data.get('phrases', []))}")
+    print(f"\n✅ Saved: {output_path}")
+    print(f"📚 Topic: {data.get('topic','N/A')}")
+    print(f"📝 Words: {len(data.get('vocabulary',[]))} | "
+          f"Grammar: {len(data.get('grammar_points',[]))} | "
+          f"Phrases: {len(data.get('phrases',[]))}")
 
     if data.get("homework"):
-        print(f"📌 Compiti: {data['homework']}")
-
+        print(f"📌 Homework: {data['homework']}")
     if data.get("doc_sections_covered"):
-        print(f"📖 Sezioni doc coperte: {', '.join(data['doc_sections_covered'])}")
+        print(f"📖 Sections: {', '.join(data['doc_sections_covered'])}")
 
-    print(f"\n--- RIASSUNTO ---")
-    print(f"EN: {data.get('summary_en', '')}")
-    print(f"IT: {data.get('summary_it', '')}")
-
-    print(f"\n--- VOCABOLARIO ({len(data.get('vocabulary', []))} parole) ---")
-    for word in data.get("vocabulary", []):
-        article = f"{word.get('article', '')} " if word.get("article") else ""
-        print(f"  [{word.get('category', '?')}] {article}{word['german']} "
-              f"→ {word['italian']} ({word.get('level', '?')})")
-
-    cost = (response.usage.input_tokens * 0.000003 +
-            response.usage.output_tokens * 0.000015)
-    print(f"\n💶 Costo Claude: €{cost:.3f}")
+    print(f"\n--- SUMMARY ---")
+    print(f"EN: {data.get('summary_en','')}")
 
     return data
 
