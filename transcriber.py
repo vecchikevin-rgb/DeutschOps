@@ -92,6 +92,15 @@ def transcribe_api(audio_path: Path, output_path: Path) -> str:
 
     output_path.write_text(text, encoding="utf-8")
 
+    # Salva metadati per main.py
+    meta_path = output_path.with_suffix(".meta.json")
+    meta_path.write_text(json.dumps({
+        "duration_seconds": duration,
+        "duration_minutes": duration / 60,
+        "cost_eur": cost,
+        "language": result.language
+    }), encoding="utf-8")
+
     print(f"✅ Trascritto in: {output_path}")
     print(f"⏱️  Durata reale: {duration:.0f}s ({duration/60:.1f} min)")
     print(f"🌍 Lingua rilevata: {result.language}")
@@ -246,7 +255,7 @@ def transcribe_local(audio_path: Path, output_path: Path) -> str:
     return text
 
 
-def transcribe(audio_path: str, output_filename: str = None) -> str:
+def transcribe(audio_path: str | Path, output_filename: str | None = None) -> str:
     """
     Funzione principale. Routing automatico basato su durata stimata.
     - Sotto soglia → API diretta senza chiedere

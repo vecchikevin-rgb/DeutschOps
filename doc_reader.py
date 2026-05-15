@@ -16,7 +16,7 @@ DOC_ID = "165S8CsHT3TrCpr6Se3l3VYakb7r16_bgg81l5ygJvpc"
 
 # Permessi richiesti — sola lettura per ora
 SCOPES = [
-    "https://www.googleapis.com/auth/drive.readonly",
+    "https://www.googleapis.com/auth/drive",
     "https://www.googleapis.com/auth/documents"
 ]
 
@@ -73,7 +73,7 @@ def read_doc(service) -> str:
     return text
 
 
-def save_snapshot(text: str, label: str = None) -> Path:
+def save_snapshot(text: str, label: str | None = None) -> Path:
     """
     Salva uno snapshot del doc con data/label.
     Restituisce il percorso del file salvato.
@@ -102,36 +102,51 @@ def get_latest_snapshot() -> tuple[Path | None, str]:
 
 def extract_new_content(old_text: str, new_text: str) -> str:
     """
-    Estrae il contenuto genuinamente nuovo basandosi sulla lunghezza.
-    Il Google Doc cresce sempre per append — il nuovo è sempre in fondo.
-    Aggiunge un buffer del 10% per catturare eventuali edits vicino al confine.
+    Estrae contenuto genuinamente nuovo usando diff riga per riga.
+    Funziona indipendentemente dalla posizione nel documento.
     """
-    old_len = len(old_text)
-    new_len = len(new_text)
-    
-    if new_len <= old_len:
-        return ""  # nessuna aggiunta
-    
-    # Caratteri aggiunti + buffer 10% per sicurezza
-    chars_added = new_len - old_len
-    buffer = max(500, int(chars_added * 0.1))
-    start = max(0, old_len - buffer)
-    
-    new_content = new_text[start:].strip()
-    
-    print(f"   Doc cresciuto di {chars_added} caratteri ({old_len} → {new_len})")
-    return new_content
+    import difflib
+
+    old_lines = old_text.splitlines()
+    new_lines = new_text.splitlines()
+
+    added = []
+    current_section = ""
+
+    matcher = difflib.SequenceMatcher(
+        None, old_lines, new_lines, autojunk=False
+    )
+
+    for tag, i1, i2, j1, j2 in matcher.get_opcodes():
+        if tag in ("insert", "replace"):
+            # Trova sezione corrente
+            for line in new_lines[max(0, j1-10):j1]:
+                stripped = line.strip()
+                if stripped and (
+                    stripped[0].isdigit() and "." in stripped[:5]
+                    or stripped.startswith("🚨")
+                    or stripped.isupper() and len(stripped) > 3
+                ):
+                    current_section = stripped
+
+            block = [l for l in new_lines[j1:j2] if l.strip()]
+            if block:
+                if current_section and (
+                    not added or added[-1] != f"[{current_section}]"
+                ):
+                    added.append(f"\n[Section: {current_section}]")
+                added.extend(block)
+
+    return "\n".join(added)
 
 
-def read_and_diff(label: str = None) -> dict:
+def read_and_diff(label: str | None = None) -> dict:
     """
-    Funzione principale: legge il doc, confronta con snapshot precedente,
-    restituisce dizionario con contenuto completo e novità.
+    Legge il doc e confronta con snapshot precedente.
+    Usa la lunghezza totale per rilevare aggiunte genuine.
     """
     service = get_drive_service()
     current_text = read_doc(service)
-
-    # Carica snapshot precedente
     prev_path, prev_text = get_latest_snapshot()
 
     if prev_path:
@@ -140,12 +155,11 @@ def read_and_diff(label: str = None) -> dict:
         if new_content:
             print(f"🆕 Trovate {len(new_content.splitlines())} righe nuove nel doc")
         else:
-            print("📋 Nessuna modifica rilevata nel doc rispetto allo snapshot precedente")
+            print("📋 Nessuna modifica rilevata")
     else:
-        print("📋 Primo snapshot — nessun confronto disponibile")
-        new_content = current_text  # tutto è "nuovo" al primo avvio
+        print("📋 Primo snapshot")
+        new_content = current_text
 
-    # Salva nuovo snapshot
     save_snapshot(current_text, label)
 
     return {

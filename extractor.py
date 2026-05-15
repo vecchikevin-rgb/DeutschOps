@@ -22,6 +22,11 @@ Hai a disposizione DUE fonti:
 Integra entrambe le fonti. Il doc è più preciso per grammatica e vocabolario scritto.
 Il transcript è più ricco di contesto, esempi orali e nuances della spiegazione.
 
+- IMPORTANT: the "german" field must NEVER include the article. 
+  Write ONLY the base word. Article goes ONLY in "article" field.
+  CORRECT: {"german": "Sorge", "article": "die"}
+  WRONG:   {"german": "die Sorge", "article": "die"}
+
 Estrai SOLO con JSON valido, zero testo aggiuntivo, zero backtick.
 
 Formato esatto:
@@ -76,7 +81,7 @@ Regole:
 - doc_sections_covered: usa i titoli delle sezioni del doc (es. '2. Akkusativ', '5. Modalverben 1')"""
 
 
-def extract(transcript_path: str, output_filename: str = None,
+def extract(transcript_path: str | Path, output_filename: str | None = None,
             doc_new_content: str = "", doc_full_content: str = "") -> dict:
     """
     Estrae struttura didattica da transcript audio + novità Google Doc.
@@ -120,14 +125,15 @@ def extract(transcript_path: str, output_filename: str = None,
 
     response = client.messages.create(
         model="claude-sonnet-4-5",
-        max_tokens=8000,
+        max_tokens=16000,
         messages=[{
             "role": "user",
             "content": user_content
         }]
     )
 
-    raw_text = response.content[0].text
+    block = response.content[0]
+    raw_text = block.text if block.type == "text" else ""
 
     # Pulizia difensiva backtick
     clean_text = raw_text.strip()
@@ -175,8 +181,8 @@ def extract(transcript_path: str, output_filename: str = None,
 
 if __name__ == "__main__":
     extract(
-        transcript_path="transcripts/lezione_2026-05-14-stefanie.txt",
-        output_filename="lezione_2026-05-14-stefanie",
+        transcript_path="transcripts/lezione_2026-05-15-stefanie.txt",
+        output_filename="lezione_2026-05-15-stefanie",
         doc_new_content="",
         doc_full_content=""
     )

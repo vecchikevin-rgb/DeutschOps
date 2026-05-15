@@ -14,7 +14,7 @@ from doc_writer import append_lesson_summary
 from vocab_db import update_from_lesson
 
 
-def process_lesson(audio_path: str, lesson_date: str = None):
+def process_lesson(audio_path: str, lesson_date: str | None = None):
 
     if lesson_date is None:
         lesson_date = date.today().isoformat()

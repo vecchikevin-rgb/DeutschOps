@@ -435,7 +435,7 @@ def append_lesson_summary(lesson_json_path: str,
 
 if __name__ == "__main__":
     append_lesson_summary(
-        lesson_json_path="data/lezione_2026-05-14-stefanie.json",
-        lesson_date="2026-05-14",
-        pdf_path="pdfs/lezione_2026-05-14-stefanie.pdf"
+        lesson_json_path="data/lezione_2026-05-15-stefanie.json",
+        lesson_date="2026-05-15",
+        pdf_path="pdfs/lezione_2026-05-15-stefanie.pdf"
     )
