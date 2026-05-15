@@ -14,7 +14,7 @@ from doc_writer import append_lesson_summary
 from vocab_db import update_from_lesson
 
 
-def process_lesson(audio_path: str, lesson_date: str | None = None):
+def process_lesson(audio_path: str, lesson_date: str = None):
 
     if lesson_date is None:
         lesson_date = date.today().isoformat()
@@ -23,64 +23,80 @@ def process_lesson(audio_path: str, lesson_date: str | None = None):
     print(f"  DeutschOps — Lezione {lesson_date}")
     print(f"{'='*50}\n")
 
-    # Step 1: Google Doc
+    transcript_path = Path(f"transcripts/lezione_{lesson_date}.txt")
+    json_path       = Path(f"data/lezione_{lesson_date}.json")
+    pdf_path_str    = f"pdfs/lezione_{lesson_date}.pdf"
+
+    # ── Step 1: Google Doc ──────────────────────────────
     print("STEP 1/6 — Lettura Google Doc")
     print("-" * 30)
     doc_data = read_and_diff(label=lesson_date)
     doc_new  = doc_data["new_content"]
     doc_full = doc_data["full_text"]
 
-    # Step 2: Trascrizione
-    print(f"\nSTEP 2/6 — Trascrizione audio")
-    print("-" * 30)
-    transcribe(audio_path, output_filename=f"lezione_{lesson_date}")
+    # ── Step 2: Trascrizione ────────────────────────────
+    if transcript_path.exists():
+        print(f"\nSTEP 2/6 — Trascrizione audio")
+        print("-" * 30)
+        print(f"♻️  Transcript già esistente — skip trascrizione")
+        print(f"   {transcript_path}")
+    else:
+        print(f"\nSTEP 2/6 — Trascrizione audio")
+        print("-" * 30)
+        transcribe(audio_path, output_filename=f"lezione_{lesson_date}")
 
-    # Leggi durata e costo reali dal file meta
+    # Leggi durata e costo reali
     meta_path = Path(f"transcripts/lezione_{lesson_date}.meta.json")
     if meta_path.exists():
-        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        meta             = json.loads(meta_path.read_text(encoding="utf-8"))
         duration_minutes = meta.get("duration_minutes", 0)
         transcript_cost  = meta.get("cost_eur", 0)
     else:
-        # Fallback stima da dimensione file
         size_mb          = Path(audio_path).stat().st_size / (1024 * 1024)
         duration_minutes = size_mb * 2.1
         transcript_cost  = duration_minutes * 0.006
 
-    # Step 3: Estrazione
-    print(f"\nSTEP 3/6 — Estrazione con Claude")
-    print("-" * 30)
-    data = extract(
-        transcript_path=f"transcripts/lezione_{lesson_date}.txt",
-        output_filename=f"lezione_{lesson_date}",
-        doc_new_content=doc_new,
-        doc_full_content=doc_full
-    )
+    # ── Step 3: Estrazione ──────────────────────────────
+    if json_path.exists():
+        print(f"\nSTEP 3/6 — Estrazione con Claude")
+        print("-" * 30)
+        print(f"♻️  JSON già esistente — skip estrazione")
+        print(f"   {json_path}")
+        data = json.loads(json_path.read_text(encoding="utf-8"))
+    else:
+        print(f"\nSTEP 3/6 — Estrazione con Claude")
+        print("-" * 30)
+        data = extract(
+            transcript_path=str(transcript_path),
+            output_filename=f"lezione_{lesson_date}",
+            doc_new_content=doc_new,
+            doc_full_content=doc_full
+        )
 
-    # Step 4: Anki
+    # ── Step 4: Anki ────────────────────────────────────
     print(f"\nSTEP 4/6 — Caricamento in Anki")
     print("-" * 30)
-    feed(f"data/lezione_{lesson_date}.json", lesson_date=lesson_date)
+    feed(str(json_path), lesson_date=lesson_date)
 
-    # Step 5: PDF
+    # ── Step 5: PDF ─────────────────────────────────────
     print(f"\nSTEP 5/6 — Generazione PDF")
     print("-" * 30)
-    pdf_path = generate_pdf(f"data/lezione_{lesson_date}.json")
+    pdf_path_str = generate_pdf(str(json_path))
 
-    # Step 6: Google Doc update
+    # ── Step 6: Google Doc ──────────────────────────────
     print(f"\nSTEP 6/6 — Aggiornamento Google Doc")
     print("-" * 30)
     try:
         append_lesson_summary(
-            lesson_json_path=f"data/lezione_{lesson_date}.json",
+            lesson_json_path=str(json_path),
             lesson_date=lesson_date,
-            pdf_path=pdf_path
+            pdf_path=pdf_path_str
         )
     except Exception as e:
         print(f"⚠️  Doc writer fallito (non bloccante): {e}")
 
-    # Registro + Vocab DB
-    claude_cost = 0.08  # media osservata
+    # ── Registro + Vocab DB ─────────────────────────────
+    claude_cost = 0.09
     register_lesson(
         lesson_date=lesson_date,
         audio_file=audio_path,
@@ -89,13 +105,13 @@ def process_lesson(audio_path: str, lesson_date: str | None = None):
         claude_cost=claude_cost,
         duration_minutes=duration_minutes
     )
-    update_from_lesson(f"data/lezione_{lesson_date}.json", lesson_date)
+    update_from_lesson(str(json_path), lesson_date)
 
     print(f"\n{'='*50}")
     print(f"  Lezione {lesson_date} processata.")
-    print(f"  Transcript : transcripts/lezione_{lesson_date}.txt")
-    print(f"  Dati       : data/lezione_{lesson_date}.json")
-    print(f"  PDF        : {pdf_path}")
+    print(f"  Transcript : {transcript_path}")
+    print(f"  Dati       : {json_path}")
+    print(f"  PDF        : {pdf_path_str}")
     print(f"  Anki       : deck Deutsch::DeutschOps aggiornato")
     print(f"  Google Doc : tab KPI + summary aggiornato")
     print(f"{'='*50}\n")
