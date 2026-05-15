@@ -10,5 +10,7 @@ Audiolessons/
 *.m4a
 *.7z
 ffmpeg.exe
-ffmpeg-*.7z
-doc_snapshots/backups/
+pdfs/
+transcripts/
+data/
+doc_snapshots/
