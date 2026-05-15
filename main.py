@@ -1,6 +1,7 @@
 # main.py
 import sys
 import json
+import os
 from datetime import date
 from pathlib import Path
 
@@ -12,11 +13,46 @@ from lesson_registry import register_lesson, print_registry
 from pdf_gen import generate_pdf
 from doc_writer import append_lesson_summary
 from vocab_db import update_from_lesson
+from grammar_book import update_from_lesson as update_grammar_book
+from generate_astra_prompts import generate_all_prompts
 
+def prepare_audio(audio_path: str, lesson_date: str) -> str:
+    """
+    Se il file è un video (>20MB), lo comprime in audio.
+    Mantiene max 5 video nella cartella Audiolessons — elimina il più vecchio.
+    Restituisce il percorso del file audio da usare.
+    """
+    audio_path = Path(audio_path)
+    compressed = Path(f"Audiolessons/lezione_{lesson_date}-compressed.mp4")
+
+    # Comprimi se necessario
+    if audio_path.stat().st_size > 20 * 1024 * 1024:
+        print(f"🎬 Video rilevato ({audio_path.stat().st_size/1024/1024:.0f}MB) — comprimo...")
+        os.system(
+            f'ffmpeg.exe -i "{audio_path}" -vn -ar 16000 -ac 1 -b:a 32k '
+            f'"{compressed}" -y -loglevel quiet'
+        )
+        print(f"✅ Audio: {compressed.name} "
+              f"({compressed.stat().st_size/1024/1024:.1f}MB)")
+    else:
+        compressed = audio_path
+
+    # Mantieni max 5 video in Audiolessons — elimina il più vecchio
+    video_files = sorted(
+        Path("Audiolessons").glob("Classroom with Stefanie*.mp4"),
+        key=lambda f: f.stat().st_mtime
+    )
+    if len(video_files) > 5:
+        to_delete = video_files[0]  # il più vecchio
+        to_delete.unlink()
+        print(f"🗑️  Eliminato video vecchio: {to_delete.name}")
+
+    return str(compressed)
 
 def process_lesson(audio_path: str, lesson_date: str = None):
 
     if lesson_date is None:
+        audio_path = prepare_audio(audio_path, lesson_date)
         lesson_date = date.today().isoformat()
 
     print(f"\n{'='*50}")
@@ -106,6 +142,11 @@ def process_lesson(audio_path: str, lesson_date: str = None):
         duration_minutes=duration_minutes
     )
     update_from_lesson(str(json_path), lesson_date)
+    update_grammar_book(f"data/lezione_{lesson_date}.json")
+
+    
+    # dopo update_from_lesson:
+    generate_all_prompts()
 
     print(f"\n{'='*50}")
     print(f"  Lezione {lesson_date} processata.")
