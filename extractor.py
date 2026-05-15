@@ -47,6 +47,14 @@ Formato esatto:
       "example_it": "Mi alzo alle 7.",
       "level": "A1"
     }
+    CRITICAL RULE for vocabulary:
+    - The "german" field must NEVER contain the article.
+    - Write ONLY the base word in "german".
+    - Article goes ONLY in the "article" field.
+    - CORRECT: {"german": "Sorge", "article": "die", ...}
+    - WRONG:   {"german": "die Sorge", "article": "die", ...}
+    - WRONG:   {"german": "die Sorge", "article": "", ...}
+    This applies to ALL nouns without exception.
   ],
   "grammar_points": [
     {
