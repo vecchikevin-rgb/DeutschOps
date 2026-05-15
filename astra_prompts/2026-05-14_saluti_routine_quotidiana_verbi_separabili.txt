@@ -1,0 +1,81 @@
+=== ASTRA STUDY PROMPT ===
+Date: 2026-05-14
+Topic: Saluti, routine quotidiana, verbi separabili
+Sections: N/A
+
+--- CONTEXT FOR ASTRA ---
+You are my German tutor. I am Kevin, Italian, level A2-B1.
+My lessons are taught in English by a native German speaker (Stefanie).
+Today we are reviewing: Saluti, routine quotidiana, verbi separabili
+
+--- LESSON SUMMARY ---
+This lesson covers greetings for different parts of the day, asking 'how are you' with various responses, and discussing daily routines. Key topics include separable verbs like 'aufstehen', the irregular verb 'schlafen', going home with 'nach Hause', and expressing tiredness. Students practiced dialogues introducing themselves and others, learned time expressions like 'spät' and 'früh', and reviewed numbers. The lesson emphasized the difference between complete and shortened question forms.
+
+--- KEY VOCABULARY ---
+  • müde — tired []
+  • das Kind — child / children []
+  • aufstehen — to stand up, to get up []
+  • spät — late []
+  • früh — early []
+  • der Schulbus — school bus []
+  • schlafen — to sleep []
+  • schlecht — bad []
+  • sehr — very []
+  • der Kurs — course []
+
+--- GRAMMAR POINTS ---
+  • Verbi separabili (Trennbare Verben)
+    e.g. Ich stehe auf
+    e.g. Du stehst auf
+  • Verbi irregolari con cambio vocalico (a → ä)
+    e.g. Ich schlafe
+    e.g. Du schläfst
+  • Wie geht's? / Wie geht es dir?
+    e.g. Wie geht's? - Gut!
+    e.g. Wie geht es dir? - Nicht so gut
+
+--- USEFUL PHRASES ---
+  • Wie geht's? — Come stai?
+  • Ich bin müde. — Sono stanco/a.
+  • Guten Morgen! — Buongiorno! (mattina)
+  • Es ist schon spät. — È già tardi.
+  • Ich gehe nach Hause. — Vado a casa.
+  • Ich gehe schlafen. — Vado a dormire.
+  • Gute Nacht! — Buonanotte!
+  • Der Kurs ist zu Ende. — Il corso è finito.
+  • Bis morgen! — A domani!
+  • Nicht so gut. — Non tanto bene.
+
+
+
+--- EXERCISES TO GENERATE ---
+Based on the above material, please generate:
+
+1. FILL IN THE BLANK (5 sentences)
+   Use the key vocabulary above. Leave one word blank per sentence.
+   Include the answer below each sentence in a spoiler or after a separator.
+
+2. TRANSLATION DE → EN (5 sentences)
+   Use vocabulary and grammar from this lesson.
+
+3. TRANSLATION EN → DE (5 sentences)
+   Use vocabulary and grammar from this lesson.
+
+4. DIALOGUE COMPLETION (2 short dialogues, 3-4 lines each)
+   Leave one or two lines blank for me to complete.
+   Context: everyday situations using today's grammar (Verbi separabili (Trennbare Verben)).
+
+5. FREE WRITING PROMPT (1 task)
+   Ask me to write 3-5 sentences in German using at least 5 words
+   from today's vocabulary.
+
+6. GRAMMAR DRILL (5 sentences)
+   Focus specifically on: Verbi separabili (Trennbare Verben)
+   Show me sentences with errors for me to correct.
+
+--- INSTRUCTIONS ---
+- Correct all my answers immediately with explanation in English
+- Note recurring mistakes
+- Use only A2-B1 vocabulary unless I ask for more
+- If I write something correct but unnatural, suggest a more native alternative
+=== END PROMPT ===

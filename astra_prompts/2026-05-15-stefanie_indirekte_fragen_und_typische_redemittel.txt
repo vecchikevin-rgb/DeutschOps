@@ -1,0 +1,88 @@
+=== ASTRA STUDY PROMPT ===
+Date: 2026-05-15-stefanie
+Topic: Indirekte Fragen und typische Redemittel
+Sections: 17. Nebensätze
+
+--- CONTEXT FOR ASTRA ---
+You are my German tutor. I am Kevin, Italian, level A2-B1.
+My lessons are taught in English by a native German speaker (Stefanie).
+Today we are reviewing: Indirekte Fragen und typische Redemittel
+
+--- LESSON SUMMARY ---
+This lesson focused on practicing indirect questions (Nebensätze mit 'ob' and question words) with typical German phrases and sentence starters. Kevin practiced converting direct questions into indirect ones using structures like 'Ich frage mich, ob...', 'Weißt du, ob...', 'Ich überlege, ob...', and 'Darf ich Sie fragen, ob...'. The teacher emphasized fluency through repetition of these common patterns. New vocabulary included expressions like 'mach dir keine Sorgen', 'unterwegs', 'es ist mir egal', 'mindestens', and 'höchstens'. The lesson also introduced the distinction between 'Ahnung' and 'Idee', and the structure 'mir gefällt'. The teacher plans to continue with more subordinate clauses next week before moving to comparative and superlative forms.
+
+--- KEY VOCABULARY ---
+  • mindestens — at least [B1]
+  • höchstens — at most [B1]
+  • die Sorge — worry [A2]
+  • unterwegs — on the way, out and about [A2]
+  • egal — doesn't matter, I don't care [A2]
+  • gleich — equal, same [A2]
+  • überlegen — to consider, to think about [B1]
+  • die Ahnung — clue, notion [A2]
+  • abfahren — to depart, to leave [A2]
+  • geöffnet — open [A2]
+  • geschlossen — closed [A2]
+  • parken — to park [A2]
+  • informieren — to inform [B1]
+  • das Redenmittel — phrase, means of speaking [B1]
+  • der Schlüssel — key [A1]
+  • vergessen — to forget [A2]
+  • die Bedingung — condition [B1]
+  • der Kontext — context [B1]
+  • das Substantiv — noun [A2]
+
+--- GRAMMAR POINTS ---
+  • Indirekte Fragen mit 'ob'
+    → Indirect yes/no questions use 'ob' (if/whether) as a conjunction. The conjugated verb moves to the end of the subordinate clause. Structure: Main clause + ob + subject + other elements + conjugated verb. Example: Direct: 'Ist der Supermarkt geöffnet?' → Indirect: 'Ich weiß nicht, ob der Supermarkt geöffnet ist.'
+    e.g. Ich frage mich, ob ich den Schlüssel im Auto vergessen habe.
+    e.g. Weißt du, ob der Zug nach Zürich hier abfährt?
+  • Typische Satzanfänge für indirekte Fragen
+    → Common sentence starters for indirect questions include: 'Ich frage mich, ob...' (I wonder if...), 'Weißt du, ob...' (Do you know if...), 'Ich überlege, ob...' (I'm considering if...), 'Ich möchte wissen, ob...' (I would like to know if...), 'Darf ich Sie fragen, ob...' (May I ask you if... - very polite), 'Ich habe keine Ahnung, ob...' (I have no idea if...).
+    e.g. Darf ich Sie fragen, ob Ihnen Ihre neue Arbeit gefällt?
+    e.g. Ich möchte wissen, ob man hier parken darf.
+  • Mir gefällt + Nominativ
+    → The structure 'mir gefällt' (I like) uses dative pronoun + gefallen + nominative subject. The thing you like is in nominative case and is the grammatical subject. Literal translation: 'to me pleases'. Examples: mir (to me), dir (to you informal), ihm/ihr (to him/her), Ihnen (to you formal).
+    e.g. Mir gefällt schönes Wetter.
+    e.g. Regen gefällt mir nicht.
+
+--- USEFUL PHRASES ---
+  • Mach dir keine Sorgen — Don't worry
+  • Es ist mir egal — I don't care / It doesn't matter to me
+  • Ich habe keine Ahnung — I have no idea / I have no clue
+  • Ich frage mich, ob... — I wonder if...
+  • Darf ich Sie fragen, ob... — May I ask you if...
+
+
+
+--- EXERCISES TO GENERATE ---
+Based on the above material, please generate:
+
+1. FILL IN THE BLANK (5 sentences)
+   Use the key vocabulary above. Leave one word blank per sentence.
+   Include the answer below each sentence in a spoiler or after a separator.
+
+2. TRANSLATION DE → EN (5 sentences)
+   Use vocabulary and grammar from this lesson.
+
+3. TRANSLATION EN → DE (5 sentences)
+   Use vocabulary and grammar from this lesson.
+
+4. DIALOGUE COMPLETION (2 short dialogues, 3-4 lines each)
+   Leave one or two lines blank for me to complete.
+   Context: everyday situations using today's grammar (Indirekte Fragen mit 'ob').
+
+5. FREE WRITING PROMPT (1 task)
+   Ask me to write 3-5 sentences in German using at least 5 words
+   from today's vocabulary.
+
+6. GRAMMAR DRILL (5 sentences)
+   Focus specifically on: Indirekte Fragen mit 'ob'
+   Show me sentences with errors for me to correct.
+
+--- INSTRUCTIONS ---
+- Correct all my answers immediately with explanation in English
+- Note recurring mistakes
+- Use only A2-B1 vocabulary unless I ask for more
+- If I write something correct but unnatural, suggest a more native alternative
+=== END PROMPT ===

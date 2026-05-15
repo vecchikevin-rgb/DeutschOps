@@ -1,0 +1,86 @@
+=== ASTRA STUDY PROMPT ===
+Date: 2026-05-14-stefanie
+Topic: Subordinate clauses with ob and dass
+Sections: 17. Nebensätze
+
+--- CONTEXT FOR ASTRA ---
+You are my German tutor. I am Kevin, Italian, level A2-B1.
+My lessons are taught in English by a native German speaker (Stefanie).
+Today we are reviewing: Subordinate clauses with ob and dass
+
+--- LESSON SUMMARY ---
+This lesson focused on subordinate clauses in German, specifically the difference between 'wenn', 'ob', and 'dass'. The teacher clarified that 'wenn' doesn't always mean 'if' - for indirect questions, German uses 'ob' instead. Students learned how to transform direct questions into indirect questions using 'ob', and how to report what someone says using 'dass'. The lesson covered verb placement in subordinate clauses (verb goes to the end) and practiced converting direct speech into reported speech with these conjunctions.
+
+--- KEY VOCABULARY ---
+  • ob — whether, if (indirect question) [A2]
+  • dass — that [A2]
+  • indirekt — indirect [B1]
+  • die Frage — question [A1]
+  • bald — soon [A2]
+  • umwandeln — to convert, to transform [B1]
+  • formulieren — to formulate [B1]
+  • die Bedingung — condition [B1]
+  • erzählen — to tell, to narrate [A2]
+  • verwenden — to use [A2]
+  • bedeuten — to mean [A2]
+  • regnen — to rain [A1]
+  • zu Hause bleiben — to stay at home [A1]
+  • der Nebensatz — subordinate clause [B1]
+
+--- GRAMMAR POINTS ---
+  • Indirect questions with 'ob'
+    → When transforming a direct yes/no question into an indirect question, German uses 'ob' (not 'wenn'). The verb moves to the end of the subordinate clause. Direct: 'Kommt dein Freund bald?' becomes indirect: 'Ich weiß nicht, ob mein Freund bald kommt.'
+    e.g. Ich weiß nicht, ob mein Freund bald kommt.
+    e.g. Weißt du, ob es morgen regnet?
+  • Reporting with 'dass'
+    → When reporting what someone says or knows (not a question), use 'dass' to introduce the subordinate clause. The verb goes to the end of the clause. Example: 'Mein Freund kommt' becomes 'Ich weiß, dass mein Freund kommt.'
+    e.g. Ich weiß, dass mein Freund bald kommt.
+    e.g. Er sagt, dass er zu Hause bleibt.
+  • Conditional sentences with 'wenn'
+    → 'Wenn' is used for conditional sentences (if-then situations) and when-clauses, not for indirect yes/no questions. It expresses a condition: 'Wenn es regnet, bleibe ich zu Hause' (If it rains, I stay at home).
+    e.g. Wenn es regnet, bleibe ich zu Hause.
+    e.g. Wenn mein Freund kommt, gehen wir ins Kino.
+  • Verb position in subordinate clauses
+    → In all subordinate clauses (introduced by ob, dass, wenn, weil, etc.), the conjugated verb moves to the end of the clause. This is a fundamental rule of German word order.
+    e.g. Ich weiß nicht, ob mein Freund bald kommt.
+    e.g. Ich weiß, dass mein Freund bald kommt.
+
+--- USEFUL PHRASES ---
+  • Ich weiß nicht, ob... — I don't know if...
+  • Ich weiß, dass... — I know that...
+  • bei indirekten Fragen — in indirect questions
+  • Wenn dies, dann passiert dies — If this, then that happens
+
+
+
+--- EXERCISES TO GENERATE ---
+Based on the above material, please generate:
+
+1. FILL IN THE BLANK (5 sentences)
+   Use the key vocabulary above. Leave one word blank per sentence.
+   Include the answer below each sentence in a spoiler or after a separator.
+
+2. TRANSLATION DE → EN (5 sentences)
+   Use vocabulary and grammar from this lesson.
+
+3. TRANSLATION EN → DE (5 sentences)
+   Use vocabulary and grammar from this lesson.
+
+4. DIALOGUE COMPLETION (2 short dialogues, 3-4 lines each)
+   Leave one or two lines blank for me to complete.
+   Context: everyday situations using today's grammar (Indirect questions with 'ob').
+
+5. FREE WRITING PROMPT (1 task)
+   Ask me to write 3-5 sentences in German using at least 5 words
+   from today's vocabulary.
+
+6. GRAMMAR DRILL (5 sentences)
+   Focus specifically on: Indirect questions with 'ob'
+   Show me sentences with errors for me to correct.
+
+--- INSTRUCTIONS ---
+- Correct all my answers immediately with explanation in English
+- Note recurring mistakes
+- Use only A2-B1 vocabulary unless I ask for more
+- If I write something correct but unnatural, suggest a more native alternative
+=== END PROMPT ===
