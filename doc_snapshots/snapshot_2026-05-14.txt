@@ -1,0 +1,4581 @@
+﻿🚨 0. Liste der Verben
+List of verbs:
+Regular
+
+
+Arbeiten (to work) A1
+
+
+Spielen (to play) A1
+
+
+Singen (to sing) A1
+
+
+Hören (to listen to) A1
+
+
+Machen (to do) A1
+
+
+Hassen (to hate) B1
+
+
+Putzen (to clean) A1
+
+
+Wählen (to choose/to elect) A1
+
+
+Kaufen (to buy) A1
+
+
+Brauchen (to need) A1
+
+
+Benutzen (to use) A1
+
+
+Besuchen (to visit) A1
+
+
+Kennen (to know - conoscere) A1
+
+
+Wünschen (to wish) A1
+
+
+Träumen (to dream) A1
+
+
+Kosten (to cost) A1
+
+
+Früstücken (to have breakfast) A1
+
+
+Beschreiben (to describe) A1
+
+
+Rufen (to call) A1 (irr for else)
+
+
+Denken (to think) A1 (irr for else)
+
+
+Glauben (to believe) A1
+
+
+Passen (to pass - to fit (even in calendar)) A1
+
+
+
+
+Irregular
+
+
+Sein (to be) A1
+ich bin                du bist                er/es/sie ist
+wir sind        ihr seid        sie/Sie sind
+
+
+Heißen (be called) A1
+ich heiße        du heißt        er/es/sie heißt        wir heißen        ihr heißt        sie/Sie heißen
+
+
+Schauen (to watch) A2
+ich schaue        du schaust        er/es/sie schaut wir schauen        ihr schaut        sie/Sie schauen
+
+
+Lesen (to read) A1
+ich lese        du liest        er/es/sie liest        wir lesen        ihr lest                sie/Sie lesen
+
+
+Treffen (to meet) A1
+ich treffe        du triffst        er/es/sie trifft        wir treffen        ihr trefft        sie/Sie treffen
+
+
+Vergessen (to forget) A1
+ich vergesse                du vergisst
+er/es/sie vergisst         wir vergessen
+ihr vergesst                sie/Sie vergessen
+
+
+Tragen (to wear) A1
+ich trage        du trägst        er/es/sie trägt        wir tragen        ihr tragt        sie/Sie tragen
+
+
+Schlafen (to sleep) A1
+ich schlafe        du schläfst        er/es/sie schläft wir schlafen        ihr schlaft        sie/Sie schlafen
+
+
+Wissen (to know - sapere) A1
+ich weiß        du weiß        er/es/sie weiß wir wissen        ihr wisst        sie/Sie wissen
+
+
+Nehmen (to take) A1
+ich nehme        du nimmst        er/es/sie nimmt wir nehmen        ihr nehmt        sie/Sie nehmen
+
+
+Essen (to eat) A1
+ich esse        du isst                er/es/sie isst        wir essen        ihr esst        sie/Sie essen
+
+
+Rauchen (to smoke) A1
+
+
+Fragen (to ask) A1
+
+
+Antworten (to answer) A1
+
+
+Sagen (to say) A1
+
+
+Bekommen (to get) A1 (irr for else)
+
+
+Bestellen (to order) A1
+
+
+Leben (to live) A1
+
+
+Wohnen (reside) A1
+
+
+Gehen (to go) A1
+
+
+Stehen (to stand (up)) A1 (irr for else)
+
+
+Bringen (to bring) A1
+
+
+Verstehen (to understand) A1 (irr for else)
+
+
+Zeigen (to show) A1
+
+
+Suchen (to search) A1
+
+
+Feiern (to party) A1
+
+
+Schmecken (to taste) A1
+
+
+Fliegen (to fly) A1 (irr for else)
+
+
+Liegen (to lay) A1 (irr for else)
+
+
+Erziehen (to educate) B1
+
+
+Bleiben (to stay/remain) A1
+
+
+Ergänzen (to add) A1
+
+
+Bestehen (to be made of / also: to pass f.e. an exam) A2 (irr for else)
+
+
+Bilden (to form) A1
+
+
+Zählen (to count) A1
+
+
+Fahren (to go w/ mean of transport) A1
+ich fahre        du fährst        er/es/sie fährt        wir fahren        ihr fahrt        sie/Sie fahren
+
+
+Gefallen (to like a lot - emotionally) A1
+ich gefalle        du gefällst        er/es/sie gefällt wir gefallen        ihr gefallt        sie/Sie gefallen
+
+
+Geben (to give) A1
+ich gebe        du gibst        er/es/sie gibt        wir geben        ihr gebt        sie/Sie geben
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Überfluten (to overflow) C2
+
+
+Erreichen (to reach) A2
+
+
+Passieren (to happen) A1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Separable
+
+
+an|rufen (to call w/phone)(irr) A1
+
+
+ein|kaufen (to go shopping) A1
+
+
+auf|stehen (to stand up)(irr) A1
+
+
+fern|sehen (to see tv)(irr) A1
+
+
+auf|wachen (to wake up) B1
+
+
+früh|stücken (to have breakfast) A1
+
+
+aus|steigen (to get out of/exit) A1
+
+
+an|bieten (to offer) A1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Modal verbs
+
+
+Wollen (to want)(irr) A1
+ich will                du willst        er/es/sie will        wir wollen        ihr wollt        sie/Sie wollen
+
+
+Können (to be able to)(irr) A1
+ich kann        du kannst        er/es/sie kann wir können        ihr könnt        sie/Sie können
+
+
+Müssen (to must)(irr) A1
+ich muss        du musst        er/es/sie muss wir müssen        ihr müsst        sie/Sie müssen
+
+
+Dürfen (to be allowed to)(irr) A1
+ich darf        du darfst        er/es/sie darf        wir dürfen        ihr dürft        sie/Sie dürfen
+
+
+Mögen (to like + would like) A1 + subjunctive
+ich        mag - möchte
+du        magst - möchtest
+er/es/sie        mag - möchte
+wir        mögen - möchten
+ihr        mögt - möchtet
+sie/Sie        mögen - möchten
+🎸 1. Verb + hobby + info + gern
+Sich vorstellen
+
+
+  
+
+
+
+
+
+Wie heißt du? Wie heißen Sie? 
+Ich heiße Kevin. 
+Mein Vorname ist Kevin.
+Mein Familienname ist…
+
+
+Wie alt bist du? Wie alt sind Sie? 
+Ich bin 30 (dreißig) Jahre alt. 
+Und du?
+Ich bin 39 (neununddreißig) Jahre alt. 
+
+
+Wo wohnst du? 
+Ich wohne in Bergamo. 
+
+
+Woher kommst du?
+Ich komme aus Bergamo / Italien. 
+
+
+Was ist deine Muttersprache?
+Meine Muttersprache ist Italienisch.
+
+
+Sprichst du nur Italienisch? Welche Sprachen sprichst du?
+Nein, ich spreche auch Englisch und Französisch. 
+
+
+Präsens: Was studierst du? 
+Ich studiere Chemie. 
+Perfekt: Was hast du studiert? 
+Ich habe Chemie studiert. 
+Ich bin gegangen. 
+Wo arbeitest du? 
+Ich arbeite als Produktionsmanager im Chemiesektor. (m/n)
+Ich arbeite als Bäcker in der Bäckerei. (f)
+
+
+Wo arbeitet dein Bruder? 
+Mein Bruder arbeitet als Grafikdesigner im Sektor / Bereich Grafikdesign. 
+
+
+die Schwester - Ich habe auch eine Schwester. Ihr Name ist Angela. Angela ist 20 Jahre alt. 
+der Bruder - Ich habe einen Bruder. Mein Bruder ist fünfundzwanzig Jahre alt. 
+
+
+
+
+Hobbys
+
+
+Ich trinke gern(e) Wein. 
+
+
+Was macht Hans gern(e)? pg18
+Hans spielt gern Tennis und sammelt gerne Briefmarken. 
+Was macht seine Frau gerne? 
+Seine Frau liest gern Kriminalromane. 
+Was macht sein Bruder gern? 
+Sein Bruder schreibt gern Computerprogramme. 
+
+
+Wie heißt seine Tochter?
+Seine Tochter heißt Marie. 
+Wie heißt sein Sohn? 
+Sein Sohn heißt Maximilian. 
+Wie alt ist sein Sohn? 
+Sein Sohn ist vier Jahre alt. 
+Er spielt gern Fußball. 
+
+
+spielen: Fußball spielen, Karten spielen, Gitarre spielen
+gehen: spazieren gehen, ins Kino gehen, shoppen gehen
+machen: Sport machen, Yoga machen, Fotos machen
+hören: Musik / Podcasts hören
+fahren: Fahrrad / Motorrad fahren, Ski fahren, Skateboard fahren (to travel)
+lesen: Bücher / Zeitungen lesen
+kochen / backen: Essen kochen, Kuchen / Pizza backen
+trinken: Wein / Bier / Kaffee trinken 
+tanzen: Salsa tanzen
+malen: Bilder malen - to paint!
+schreiben: Romane schreiben (Romanzi)
+wandern (hiking), fotografieren, reisen (travel), fernsehen, Filme / Serien schauen (watch), essen (to eat), schwimmen, Deutsch lernen, im Garten arbeiten, laufen / joggen, surfen, trinken (to drink)
+
+
+
+
+
+
+Mittwoch, der 11te März (Dienstag, der 21ste März, Sonntag, der 31ste März)
+
+
+Wir wiederholen heute:
+* Ich _____ (nicht) gern. (to like doing something)
+* Ich _____ lieber. (to prefer doing something) 
+* Possessivartikel
+* Negation Verben und Adjektive
+
+
+To like doing something: Ich _____ (nicht) gern. 
+
+
+Tanzt du gern Salsa? 
+Ja, ich tanze gern Salsa, aber ich tanze lieber Bachata. 
+
+
+Spielst du gern Gitarre? 
+Ich spiele gern Gitarre. 
+
+
+Spielst du gut Gitarre? 
+Nein, ich spiele nicht (so) gut. 
+
+
+Fährst du gern Schi? (same as SKI)
+Ja, ich fahre gerne Schi, aber ich fahre lieber Snowboard. 
+
+
+Wanderst du gern?
+Ich wandere nicht gern. 
+
+
+Kochst du gern? 
+Ich koche gern. 
+
+
+Reist du gern? 
+Ich reise gern. 
+
+
+Hörst du gern Popmusik?
+Ja, ich höre gern Popmusik. 
+Ich höre nicht gern Popmusik, aber ich höre gern Rockmusik.  
+Ich höre gern Popmusik, aber ich höre lieber Rockmusik. 
+
+
+Kochst du gern Suppen? 
+Ich koche nicht gern Suppen, aber ich koche gerne Reis. 
+Ich koche nicht gern Suppen, ich koche lieber Reis.
+
+
+Hörst du gern Podcasts?
+Ich höre (nicht) gern Podcasts, ich höre lieber Musik. 
+Fährst du gern Fahrrad?  (bicycle)
+Ich fahre gern Fahrrad, (aber) ich fahre lieber Motorrad. 
+
+
+Schaust du gerne Actionfilme? 
+Ich schaue gerne Actionfilme. 
+
+
+Liest du gern Zeitungen? (lesen - to read) 
+Ich lese gern Zeitungen, aber ich lese lieber ein Buch (n). 
+
+
+Isst du gerne Reis? (essen) (to eat rice)
+Ich esse gerne Reis. 
+
+
+Trinkst du gerne Bier?
+Ich trinke gerne Bier, aber ich trinke lieber Wein. 
+
+
+
+
+Torsten Frings:
+
+
+Wo wohnt Torsten?
+Torsten wohnt in München.
+
+
+Was ist Torsten von Beruf? 
+Torsten ist ein Lehrer (von Beruf).
+Wo arbeitet Torsten? 
+Torsten arbeitet als Lehrer in der Schule. 
+Was macht Torsten gern? Was sind seine Hobbys? 
+Torsten liest gern (...), Torsten schaut gerne Filme im Kino.
+Torsten macht gerne Sport und (er) hört gerne Musik. 
+Was sind seine Interessen? 
+Torstens Interessen sind Kunst, Computer und Musik.
+Was ist sein Lieblingsfilm?
+Seine Lieblingsfilme sind (fast alle) Krimis. 
+Was ist sein / Torstens Lieblingsessen?  
+Sein Lieblingsessen ist Italienisch: Pizza und Nudeln.
+Was mag er? (to like)
+Torsten mag Picasso. 
+
+
+Was hasst er? 
+Torsten hasst Putzen. 
+Torsten putzt nicht gern. 
+
+
+
+
+mögen → Ich mag 
+Du magst
+Er mag
+Wir mögen
+Ihr mögt
+Sie mögen 
+
+
+Meike Hildebrand:
+
+
+Wo wohnt Meike?
+Meike wohnt in München.
+Was ist Meike von Beruf? 
+Meike ist eine Lehrerin (von Beruf).
+Wo arbeitet Meike? 
+Meike arbeitet als Lehrerin in der Schule. 
+Was macht Meike gern? Was sind ihre Hobbys? Wie heißt ihre Mutter? Wie heißt ihr Vater? 
+Meike liest gern (...), Meike schaut gerne Filme im Kino.
+Meike macht gerne Sport und (sie) hört gerne Musik. 
+Was sind ihre Interessen? 
+Meikes Interessen sind Kunst, Computer und Mode.
+Was ist ihr Lieblingsfilm?
+Ihre Lieblingsfilme sind alle Filme von Woody Allen. 
+Was ist ihr / Meikes Lieblingsessen? (das)
+Ihr Lieblingsessen ist Italienisch: Pizza und Nudeln.
+Was mag sie? (to like) / Was macht sie gern? 
+Meike trifft gern Freundinnen. (to meet friends)
+Was hasst sie? 
+Meike hasst Putzen.
+Meike putzt nicht gern. 
+
+
+
+
+treffen- meet
+ich treffe    spreche
+du triffst     sprichst
+er trifft       spricht
+
+
+  
+
+
+
+
+
+  
+
+
+
+Negation: Verben + Adjektive
+Ich spiele nicht gern Tennis. (“nicht” always comes after the verb)
+Ich komme nicht. 
+Ich bin nicht wütend / traurig. 
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+→ Infinitiv: gehen
+
+
+Wortstamm: geh-
+du gehst
+er / sie / es geht
+
+
+→ Infinitiv: arbeiten 
+
+
+Wortstamm: arbeit-
+du arbeitst → du arbeitest
+er / sie / es arbeitt. → er arbeitet
+
+
+Root is always the infinitive minus -en. In the case of roots with a t at the end (arbeit-) the e is just added for smoother pronunciation, otherwise there’s no e needed. Another example → Infinitiv: warten (to wait). Er wartt → Er wartet (auf den Bus). 
+
+
+
+
+  
+
+2. Akkusativ
+Wir lernen heute:
+* Negation Nomen
+* Akkusativ (der 4te Fall)
+* W-Fragen?
+
+
+
+
+
+
+Negation - Nomen
+Ich habe Angst - Ich habe keine Angst. (f) 
+Hast du Hunger? - Nein, ich habe keinen Hunger. (m)
+Hast du ein Kind? - Nein, ich habe kein Kind. (n)
+
+
+Ich habe einen Bruder.
+Ich habe ein Kind. 
+Ich habe eine Tochter. 
+
+
+Dinge (things) kommen und gehen
+
+
+Hast du einen Plattenspieler? 
+Ich habe keinen Plattenspieler. 
+Ich hatte einen Plattenspieler. 
+Hast du Schallplatten? 
+Ja, ich habe Schallplatten. 
+Benutzt du ein Smartphone? (n)
+Ich benutze ein Smartphone. 
+Hast du einen MP3-Player?
+Ich hatte den / einen MP3-Player. 
+
+
+das Buch - die Bücher 
+Liest du gerne Bücher aus Papier oder liest du lieber online?
+Ich lese keine Bücher online. Ich lese lieber Bücher aus Papier. 
+
+
+Hast du einen Computer? (m)
+Jawohl, ich habe einen Computer.
+Hast du ein Auto? (n)
+Ich habe ein Auto. 
+Hast du ein Navi? (n)
+Hast du ein Tablet? 
+Ich habe kein Tablet.
+Benutzt du eine Digitalkamera?
+Ich benutze keine Digitalkamera. 
+
+
+Es gibt - there is / there are
+
+
+
+
+
+
+
+
+13.03 Hausaufgabe Akkusativ
+
+
+Übung Akkusativ mit Definitartikel:
+(new verbs: suchen (regulär)  - to search (for) 
+und: kennen (regulär) - (to know, but only conoscere e non sapere → sapere = wissen (regulär)) brauchen (to need)
+
+
+das Buch (n)
+den Apfel (m)
+den Schlu:ssel (key)(m)
+den Weg (the way)(m)
+den Computer (m)
+die Freunde (f)
+die Musik (f)
+die Kartoffeln (potato)(f)
+den Saft (souce)(m)
+
+
+  
+
+
+
+
+
+
+
+Übung Akkusativ mit Negativartikel
+New verbs: bekommen - to get / ricevere (regulär)
+
+
+ACHTUNG: There’s a mistake in one sentence → Sie isSt kein Fleisch. Deutsch ist schwer, haha 😀
+
+
+kein Auto (n)
+keine Hilfe (help)(f)
+keinen Job (job)(m)
+keine Probleme (problems)(n)
+kein Geld (money)(n)
+keine Ahnung (idea)(f)
+kein Bier (beer)(n)
+kein Fleisch (meat)(n)
+keinen Sport (m)
+
+
+mögen - to like Ich mag
+machen - to do Ich mache 
+  
+
+
+
+Übung Akkusativ mit Possessivartikel MEIN
+(mein/dein → same endings as “kein”, just switch the K for M(D) 
+
+
+New verbs → fragen - to ask (regulär)
+→ besuchen - to visit (regulär)
+→ vergessen - to forget (ich vergesse, du vergisst, er vergisst, wir vergessen, ihr vergesst, sie vergessen)
+
+
+mein Handy (telephone)(n)
+meine Freundin (friend)(f)
+mein Kind (n)
+meine Eltern (pl)(n)
+meine Semmel (bread roll)(f)
+
+
+meinen Termin (appointment)(m) beim Artz (at the doctor)
+meine Lieblings-Band (f)(banda musicale)
+
+
+das Band -  a little string 
+die Band  - la banda
+
+
+  
+
+🧣 3. Was er trägt? + AKK
+17ter März 2026
+
+
+tragen (to wear/to carry)(indossare)
+ich trage
+du trägst
+er trägt
+wir tragen
+ihr tragt
+sie tragen 
+
+
+Was trägt der Bayer?
+Er trägt einen Hut und er trägt ein Hemd (shirt)(n). 
+das T-Shirt (n)
+Er trägt eine Hose (trousers)(f). 
+Er trägt Socken (socks)(pl)(f) und Schuhe (shoes)(pl)(m) (der Schuh)
+
+
+Was trägt der Bayer noch? 
+Er trägt ein Bier (n). 
+Er trägt eine Jacke (Jacket)(f)
+
+
+Trägt der Bayer ein T-Shirt?
+Nein, er trägt kein T-Shirt (n), er trägt ein Hemd (n). 
+
+
+Trägt er einen Schal (m -scarf)?
+Nein, er trägt keinen Schal. 
+
+
+Ich habe morgen einen Termin.
+der Junge
+
+
+groß big
+klein small
+alt old
+jung young
+
+
+Amelie hat einen Bruder. Ihr Bruder ist klein / jung. 
+Amelie hat einen kleinen, jungen Bruder.
+Amelie hat eine alte Tante. 
+Amelie hat ein junges Kind. 
+Amelie hat alte Eltern. 
+
+
+der Beistrich 
+
+
+
+
+  
+
+
+
+  
+
+die Tochter /  der Sohn
+die Kinder 
+
+
+Welche Familienmitglieder hat Amelie? (family members)
+Amelie hat einen Bruder. 
+Amelie hat einen Vater.
+Amelie hat eine Mutter. 
+Amelie hat eine Tante. (Aunt)
+Amelie hat einen Onkel.  (Uncle)
+Amelie hat einen Opa / Großvater.
+Amelie hat eine Oma / Großmutter. 
+
+
+Hausaufgabe:
+
+
+Akkusativ und Adjektivdeklination
+
+
+  
+
+
+
+  
+
+
+
+
+
+Beispiele: 
+F: Der Bayer trägt eine grüne Hose. (grün - green)
+PL: Der Bayer trägt braune Schuhe. (braun - brown)
+N: Der Bayer trägt ein weißes Hemd. (weiß - white)
+
+
+
+
+Der Bayer trägt einen grünen Hut (m). (grün)
+Der Bayer trägt braune Socken (pl) (braun)
+Ich kaufe (to buy, regular) neue Schuhe (pl). (neu - new)
+Ich brauche ein neues Handy (n). (neu)
+Ich benutze einen alten Computer (m). (alt)
+Er kauft einen neuen Hut. (m)(neu)(to buy)
+Ich habe ein kleines Kind. (n)(klein)
+Du hast einen wichtigen Termin (m). (wichtig - important)
+Ich habe einen großen Bruder. (groß - big)
+Er hat eine kleine Schwester. (klein)
+Sie isst einen roten Apfel. (m)(rot - red)
+Sie isst gerne rote Äpfel. (pl. von “Apfel” - rot)
+Mein Vater hat ein italienisches Restaurant. (n)(italienisch)
+Er braucht einen neuen Job. (m)(neu)
+Ich kenne ein gutes japanisches Restaurant. (gut - japanisch)
+Er hat eine interessante Arbeit. (f)(interessant)
+Sie hat einen interessanten Job. (m)(interessant)
+Ich sehe einen romantischen, romanticen Film. (m)(romantisch - romantic)
+Wir hören ein schönes Lied. (n) (schön - beautiful)
+Sie haben kleine Kinder. (pl)(klein) keine kleinen Kinder
+Er hat ein altes Auto. (n)(alt)  → Autos Er hat alte Autos. Er hat keine alten Autos. 
+Er vergisst einen wichtigen Termin. (wichtig)
+vergessen  (to forget) → ich vergesse, du vergisst, er vergisst, wir vergessen, ihr vergesst, sie vergessen.
+Ich suche eine neue Wohnung (f - apartment) (neu)
+Deutsch ist eine schwierige Sprache. (f)(schwierig - difficult)
+Ich besuche einen alten Freund. (m)(alt)
+Wir haben ein großes Haus. (n)(groß)
+Ich lese ein interessantes Buch. (n)(interessant)
+Ich lese gerne interessante Bücher. (pl-n)(interessant)
+Ich lese gerne keine interessanten Bücher.
+Ich wünsche (to wish, regular) DIR / IHNEN einen schönen Abend. (m) (the evening - schön)
+Ich wünsche einen schönen Tag. (m)(day) (schön)
+Mein Handy macht schöne Fotos. (pl-n)(schön)
+Ich träume einen Traum. (m)(dream)
+Ich träume davon, ein Pilot zu werden. 
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+light blue = hellblau
+dark blue = dunkelblau
+
+
+
+
+Kannst du Frau Kean beschreiben? 
+Sie trägt ein blaues Kleid.
+Frau Kean sitzt im Bus / im Auto / im Flugzeug. 
+Welche Farbe haben die Schuhe von Frau Kean? 
+Ich kann das nicht sehen. (I can’t see it)
+Ich kann das / es nicht verstehen. (i don’t understand it)
+Frau Kean trägt schwarze Schuhe. 
+
+
+Was macht Paul zum Beispiel? (z.B. = for example)
+Paul kauft Postkarten / eine Postkarte und er trägt ein weißes T-Shirt. 
+Er trägt braune Hosen / er trägt eine braune Hose (f). 
+
+
+Das ist eine gute Idee. Wir beschreiben Dmitri. 
+Dmitri ruft seine Mutter an. (to call)
+Dmitri trägt ein gelbes T-Shirt und er trägt eine blaue Hose. Er trägt seine weißen Schuhe. 
+
+
+die Hose 
+das T-Shirt
+die Postkarte
+die Schuhe 
+
+
+
+
+
+
+tragen - er trägt 
+die Hose (f)
+der Hut (m)
+das T-Shirt (n) → Kevin trägt ein blaues T-Shirt und er trägt eine blaue Hose. 
+Seine Schuhe sind grau. 
+Was macht Kevin? 
+Er fährt Skateboard. Er trägt einen gelben Hut. 
+Kevin ist ein cooler Junge.  Ich habe einen coolen Sohn. 
+Amelia ist ein cooles Mädchen. (n) 
+Ann trägt einen blauen Helm und sie trägt ein grünes T-Shirt. (m) 
+Was macht Ann? 
+Sie fährt Fahrrad. 
+Ann ist eine coole (f) Frau.  f
+
+
+John trägt eine blaue Hose und er hört Musik. 
+
+
+Welches T-Shirt (n) trägt John?
+Welche Farbe (f) hat das T-Shirt von John? 
+Sein T-Shirt ist weiß. 
+Seine Lieblingsfarbe ist weiß. 
+
+
+
+
+
+
+die Woche - the week 
+der Montag - Monday
+der Dienstag - Tuesday
+der Mittwoch - Wednesday
+der Donnerstag - Thursday
+der Freitag - Friday
+der Samstag - Saturday
+der Sonntag - Sunday
+
+
+
+
+
+
+
+
+
+
+
+
+🩺 4. Woche Termin
+die Woche - the week 
+der Montag - Monday
+der Dienstag - Tuesday
+der Mittwoch - Wednesday
+der Donnerstag - Thursday
+der Freitag - Friday
+der Samstag - Saturday
+der Sonntag - Sunday
+
+
+
+
+dienstags → Dienstags habe ich Unterricht. (lesson)
+Morgens habe ich Unterricht. 
+Am Sonntagmorgen
+Am Samstagnachmittag 
+
+
+  
+
+
+
+
+
+kosten → to cost : Wie viel kostet es? 
+halb 12 zwölf
+Es ist 11 Uhr 23.
+
+
+Es ist 20 nach elf. 
+Nachmittag: 20 vor 5
+die Stunde / die Minute / die Sekunde 
+
+
+Was machst du am Mittwoch um 8 Uhr? 
+Am Mittwoch arbeite ich von 8 Uhr bis 11 Uhr. 
+Dann / Danach (Later) habe ich eine Stunde Pause.
+Von 12 bis 13 Uhr esse ich Mittagessen / zu Mittag. 
+Ich esse Abendessen / zu Abend. 
+Um 12 Uhr koche ich ein leckeres (tasty) Mittagessen. (n)
+Was machst du am Dienstagvormittag?
+Am Dienstagvormittag habe ich einen wichtigen Arzttermin. (m) (important medical appointment)
+Das ist ein wichtiger Arzttermin und danach kaufe ich einen neuen Laptop. (to buy)
+Am Dienstagnachmittag treffe ich meine alte Freundin und dann, um 3 Uhr, schaue ich ein interessantes Fußballspiel. 
+Was machst du am Montagvormittag? Am Montagvormittag um 9 Uhr lese ich wichtige E-Mails. 
+Von wann bis wann liest du wichtige E-Mails? (from when to when)
+Ich lese meine E-Mails von 9 bis 10 Uhr. 
+Am Samstagvormittag habe ich frei. Am Samstagvormittag schlafe ich lange. 
+
+
+schlafen - to sleep → ich schlafe du schläfst er schläft wir schlafen ihr schlaft sie schlafen 
+das Spiel 
+lecker - tasty 
+
+
+der Plan für heute:
+* Zuerst: du beschreibst die Mini-Situationen / die Person 5 Minuten
+* Danach / Dann: Kevin beschreibt seinen normalen Tag / Alltag. (der Alltag) (everyday)
+* Zum Schluss / Am Ende: der Kalender. die Terminvereinbarung → einen Termin vereinbaren / machen (appointment agreeing)
+
+
+beschreiben - describe - Ich beschreibe. 
+aufschreiben - Ich schreibe auf. 
+
+
+Wann wachst du auf? (to wake up)
+Wann stehst du auf? (to stand up)
+Ich stehe um 9 Uhr auf. 
+
+
+Am Dienstag wache ich um 8 Uhr auf und zuerst esse ich mein Frühstück / frühstücke ich (first). Zuerst esse ich mein Frühstück bis 9 Uhr. Ich lerne Deutsch. 
+Schaust du Videos im Bett? Ich schaue keine Videos im Bett. Ich schaue sie in der Küche um 9 Uhr. Ich schaue oft interessante Videos. Danach esse ich mein leckeres Mittagessen um 5 vor halb 1.  13 Uhr 25 
+Dann trinke ich gerne einen Kaffee. 
+Sein Vater ist mein Cousin. (sein) 
+I have ____
+Du hast einen Vater. 
+Du bist ein Vater.
+Ich treffe meinen Vater.
+
+
+das Mittagessen 
+die Küche 
+auf/wachen
+
+
+Was machst du am Donnerstag um viertel nach 9 / oder: 9 Uhr 15? 
+Am Donnerstagmorgen um viertel nach 9 muss ich die Bank anrufen, denn ich brauche eine Information. Am Donnerstagmorgen um viertel nach 9 rufe ich die Bank an. 
+
+
+Konnektoren ohne Inversion: denn, und, aber, oder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Redemittel:
+→ einen Termin vereinbaren
+
+
+  
+
+
+
+  
+
+next week - nächste Woche 
+passen - to fit (regular)
+früh - early
+benutzen - to use
+besuchen - to visit
+
+
+Am Montag geht es von viertel vor elf bis zehn vor halb 12 / 20 nach elf. 
+
+
+Hast du am Montagmorgen um viertel nach 6 Zeit? 
+Nein, ich stehe früh auf und mache Yoga um viertel nach 6. 
+Nein, ich habe keine Zeit, denn ich muss früh aufstehen und Yoga machen.
+
+
+Hast du am Montagnachmittag um viertel vor 5 Zeit? 
+Nein, ich habe keine Zeit, denn ich schaue einen interessanten Film. 
+
+
+Kannst du am Dienstag um 20 nach elf? 
+Nein, am Dienstag kann ich nicht. Am Dienstag kaufe ich einen neuen Laptop um viertel vor elf. 
+
+
+Um 20 nach elf besuche ich meinen alten Freund. 
+Kennst du ihn schon lange? 
+Ja, ich kenne ihn schon lange.
+
+
+Hast du Freizeit? 
+Hast du frei?
+
+
+Hast du Zeit am Samstagvormittag? 
+Ja, am Samstagvormittag habe ich frei, aber ich kann nicht, denn ich will lange schlafen. 
+
+
+Von wann bis wann arbeitest du am Mittwoch? 
+Am Mittwoch arbeite ich von halb neun bis 20 nach elf. 
+
+
+Kannst du ihn am Samstag um halb drei treffen?
+Nein, ich kann ihn nicht treffen, denn ich muss (einen) Kaffee mit Anna trinken. 
+ 
+die Frage - the question
+
+
+Am Sonntag um halb 3 besuche ich meine Eltern. 
+Besuchst du sie oft? 
+Ja, ich besuche sie oft. (them)
+
+
+Excursus:
+Ich treffe mich.
+Du triffst dich.
+Er trifft ihn. Es trifft es. Sie trifft sie.
+Wir treffen uns. 
+Ihr trefft euch. 
+Sie treffen sie.
+
+
+Uhrzeit
+	Montag 
+	Dienstag 
+	Mittwoch
+	Donnerstag
+	Freitag 
+	Samstag
+	Sonntag
+	06.15
+	früh aufstehen / Yoga machen
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	08.30
+	frühstücken mit Anna
+	
+
+	Arbeit
+	
+
+	
+
+	
+
+	
+
+	09.15
+	E-Mails lesen / wichtig
+	Arzttermin / wichtig
+	Arbeit
+	Bank anrufen / Informationen brauchen 
+	Zeitung lesen 
+	
+
+	wandern gehen
+	10.45
+	
+
+	Laptop kaufen / neu
+	Arbeit 
+	Friseurtermin / wichtig
+	
+
+	frei / lange schlafen
+	
+
+	11.20
+	Wohnung suchen / neu
+	Freund besuchen / alt
+	
+
+	
+
+	
+
+	
+
+	Kuchen backen / lecker
+	12.50
+	
+
+	
+
+	Mittag-
+essen kochen / lecker
+	
+
+	
+
+	
+
+	
+
+	13.15
+	
+
+	treffen / Freundin / alt
+	
+
+	Schuhe kaufen / neu 
+	Fahrrad fahren 
+	
+
+	To-Do-Liste schreiben 
+	14.30
+	Deutsch lernen
+	
+
+	
+
+	Buch lesen / deutsch
+	shoppen gehen 
+	trinken / Kaffee mit Anna
+	Eltern besuchen 
+	15.15
+	Meeting / wichtig 
+	Fußballspiel schauen  / interessant
+	
+
+	
+
+	
+
+	spazieren gehen
+	
+
+	16.45
+	Film schauen / interessant 
+	
+
+	Sport machen
+	Oma besuchen
+	Freundin anrufen 
+	Serie schauen / spannend 
+	Musik hören / klassisch
+	
+
+
+
+
+
+
+
+
+
+  
+
+5. Modalverben 1
+  
+
+
+
+
+
+  
+
+
+
+trennen - to separate 
+
+
+rufen - to call
+an/rufen - to call with phone 
+
+
+I go out - to go out 
+Ich gehe aus - aus/gehen 
+
+
+kaufen – to buy something
+ein/kaufen - Ich kaufe ein. Ich gehe einkaufen.  
+
+
+Ich stehe im Supermarkt. 
+auf/stehen: Ich stehe um sieben Uhr auf. 
+
+
+to see - sehen 
+to watch - schauen 
+fern/sehen. 
+
+
+frühstücken → Ich frühstücke. (to have breakfast)
+
+
+Wann wachst du auf? (to wake up)
+Wann stehst du auf? (to stand up)
+Ich stehe um 9 Uhr auf. 
+
+
+brauchen - kein Modalverb!
+Was brauchst du?
+Ich brauche einen Stuhl. 
+der Stuhl 
+______
+
+
+
+
+Modalverben 
+
+
+(Ich möchte gern / Ich hätte gern einen Kaffee.)
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+wollen
+
+
+Ich will einen Kaffee.
+Kann ich einen Kaffee haben, bitte? 
+Kann ich bitte einen Kaffee haben? 
+Ich kann Gitarre spielen. 
+Ich kann gut singen, Gitarre und Piano spielen. 
+Ich kann schöne Lieder singen. 
+
+
+Ich kann nicht lange schlafen, denn ich muss arbeiten. 
+
+
+Vokabeln:
+früh - early
+spät
+DANN - later afterwards 
+DENN - because
+
+
+Ich hatte einen Arzttermin. 
+Hattest du den Arzttermin am Vormittag?
+Ja, ich hatte meinen Arzttermin am Vormittag. 
+Wie lange war dein Arzttermin? 
+Ich war von viertel vor 9 bis halb 10 beim Arzt.
+Mein Arzt ist ein guter, er ist schnell und professionell. 
+NOMINATIV Er ist ein schneller und professioneller Arzt. 
+AKKUSATIV Ich habe einen schnellen und professionellen Arzt. 
+
+
+Wie lange (how long) dauert (does it last) unsere Stunde / unser Unterricht? 
+Heute habe ich einen Termin mit Stefanie von elf bis zehn vor zwölf.
+
+
+
+
+
+
+6. Personalpronomen Akkusativ
+  
+
+
+
+Kevin hat ein Problem. (hatte = past)
+Du musst einen Experten anrufen. 
+Ja, ich muss einen Elektriker anrufen. 
+Ja, ich muss ihn anrufen. 
+Nein, ich rufe ihn nicht an. 
+Warum?
+Nein, ich will ihn nicht anrufen, denn er ist zu teuer. 
+Er kostet zu viel. 
+
+
+Ich muss die Elektrikerin anrufen. 
+Ich muss sie anrufen. 
+
+
+Hat dein Bruder eine Freundin? 
+Er hat eine Freundin. 
+Kennst du sie? 
+Ja, ich kenne sie. 
+Hat dein Bruder einen Freund?
+Ja, er hat einen Freund. 
+Kennst du ihn? 
+Nein, ich kenne ihn nicht. 
+
+
+Wir treffen uns morgen.
+Du triffst mich. 
+Morgen treffe ich dich. 
+Ich habe einen Bruder. Morgen treffe ich ihn.
+Ich habe eine Schwester. Morgen treffe ich sie. 
+
+
+Mein Bruder liebt sie. 
+Liebt sie ihn? 
+Ich weiß nicht, aber ich denke, sie liebt ihn. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Übungen:
+
+
+  
+[a]
+
+
+Ich mag es sehr. 
+mögen 
+
+
+
+
+Exkurs → POSSESSIVPRONOMEN
+Seine Freundin ist sympathisch. 
+Welche Farbe haben ihre Haare? (die Farbe - the color)
+Ihre Haare sind blond / braun. 
+
+
+Vokabeln:
+Ich glaube, das ist eine gute Idee. (glauben - to believe, regular)
+Ich denke, das ist eine gute Idee. (denken - to think, regular)
+wissen → 
+ich weiß
+du weißt
+er weiß
+wir wissen
+ihr wisst
+sie wissen
+
+
+
+
+7. Modalverben 2
+  
+  
+
+
+
+Ich frage: Darf ich hier rauchen? 
+Ich kann antworten: Nein, du darfst nicht rauchen. 
+
+
+der Zahnarzt / der Arzt → dentist 
+Kevin hat einen Zahnarzttermin. 
+Ich darf kein Müsli essen. (das Müsli)
+Ich darf Wasser trinken. 
+Darfst du keine Marmelade vor dem Zahnarzttermin? 
+Doch, ich darf sie essen.
+Darfst du Kaffee trinken?
+Nein, ich darf keinen Kaffee trinken
+Darfst du eine Banane essen?
+Ja, Ich darf eine Banane essen
+Ja, du darfst hier Zigaretten rauchen. 
+Nein, du darfst hier keine Zigaretten rauchen.
+ausschlafen 
+Warum darfst du lange schlafen? 
+Du darfst lange ausschlafen, denn ich habe frei.
+(Du darfst lange ausschlafen, weil du frei hast und ich meine kleine Mutter und Tante treffe.)
+denn - aber - oder - und
+die Zigarette 
+
+
+
+
+
+
+
+
+  
+
+
+
+Das sagen die Gäste. 
+Die Gäste sagen das. 
+nur - only 
+without - ohne 
+sagen - to say 
+bekommen - to get
+nehmen - to take (irregular) 
+Ich nehme
+du nimmst 
+er nimmt
+wir nehmen
+ihr nehmt 
+sie nehmen
+der Kellner / die Kellnerin - the waiter 
+das Wort - the word 
+Wasser mit Kohlensäure 
+bestellen - regular - to order 
+
+
+Was nehmen Sie? 
+🍕 8. Menu
+Ich habe eine schwarze Katze und eine schwarz-weiße Katze.
+der Kater 
+
+
+Eine Woche hat sieben Tage. 
+Ein Monat hat 4 Wochen oder 30 Tage. 
+Ein Jahr hat 365 Tage. 
+Ich lebe seit 30 Jahren in Italien. 
+
+
+die Nummer/n / die Zahl/en 
+seit - since 
+leben - to live 
+
+
+  
+
+
+
+geöffnet (open) - geschlossen (closed) 
+
+
+Das Bio-Café ist von Montag bis Freitag von halb 12 bis 3 geöffnet und es ist am Samstag von 11.30 bis 4 Uhr geöffnet und am Sonntagvormittag von 10 bis 13 Uhr.
+
+
+Das Bio-Café ist von Montag um 15.00 Uhr bis Dienstag um 11.30 Uhr geschlossen.
+Wir haben von heute um 15 Uhr bis Morgen um 11 Uhr 30 geschlossen.
+Wir haben geöffnet oder wir sind geöffnet.
+
+Was gibt es in Karls Bio-Café? 
+In Karls Bio-Café isst man Veggie-Burger und Salate.
+Es gibt auch veganes Essen?
+Jawohl, wir haben auch veganes Essen, wie zum Beispiel Veggie-Burger und Salate.
+z.B. 
+Was glaubst du Kevin, welches Restaurant ist Karls Bio-Café?
+Sein Restaurant ist ein vegetarisches.
+Das Restaurant ist vegetarisch. 
+
+
+
+
+ich esse 
+du isst
+er isst
+wir essen 
+ihr esst
+sie essen 
+
+
+
+
+  
+
+
+
+das Menü / die Speisekarte
+
+
+die Vorspeise
+die Hauptspeise
+die Nachspeise / das Dessert 
+
+
+Wir haben die Kartoffelsuppe und sie kostet 4€ 50, dann die Karottensuppe kostet 4€.
+
+
+Was nimmst du als Vorspeise?
+Ich hasse Suppe. Ich esse gerne nur die Hauptspeise.
+Ich nehme das Wiener Schnitzel mit Pommes Frites und Salat für 14,90€.
+Ich habe Hunger.
+
+
+Isst du heute wieder spät Abendessen? 
+Ich habe nicht gegessen. 
+
+
+
+
+📆 9. Das Datum
+die Nummern - die Zahlen
+  
+
+
+
+2025 - alt aber aktuell                        70=siebZig Schweiz pronunciation
+In Zürich gibt es 436.370 Einwohner.        70=siebtsich Deutsch
+der Einwohner - die Einwohner
+Gleich=Same
+Mehr - Weniger = More Less
+In Genf gibt es 208.991 Einwohner.
+Bern hat mehr Einwohner als Luzern. Es hat 50.000 mehr als Luzern.
+Lugano hat die wenigsten Einwohner.
+am meisten / am wenigsten 
+der Meister / Master 
+
+
+
+
+
+
+  
+
+
+
+  
+
+In Rom gibt es 2.746.984 Einwohner.
+
+
+Welche Stadt hat mehr Einwohner als Genua?
+Mailand hat mehr Einwohner als Genua.
+
+
+Datum - Dates
+
+
+Heute ist der 9te April 2026.
+der Geburtstag=Birthday
+die Geburt = the birth
+Ich habe am 9ten April Geburtstag.
+
+
+Das ist der erste Stock.
+Wir sind im ersten Stock.                        Dative
+
+
+Heute ist der erste April.
+Ich habe am ersten April Geburtstag.         Dative
+
+
+
+
+
+
+
+
+
+
+
+
+Ordinal Numbers - TO BE DECLINED
+
+
+
+
+der schöne Mai
+der erste Mai
+
+
+
+
+For all adjectives consider der die das + adj+-e
+1 der / die / das Erste  - EIN erster Schultag / EINE erste Pause / EIN erstes Mal 
+2 der / die / das Zweite
+3 der / die / das Dritte
+4 der / die / das Vierte
+5 der / die / das Fünfte
+6 der / die / das Sechste
+7 der / die / das Siebte
+8 der / die / das Achte
+9 der / die / das Neunte
+10 der / die / das Zehnte
+11 der / die / das Elfte
+12 der / die / das Zwölfte
+13 der / die / das Dreizehnte
+14 der / die / das Vierzehnte
+15 der / die / das Fünfzehnte
+16 der / die / das Sechzehnte
+17 der / die / das Siebzehnte
+18 der / die / das Achtzehnte
+19 der / die / das Neunzehnte
+20 der / die / das Zwanzigste
+21 der / die / das Einundzwanzigste
+…
+
+
+Monat
+Fehler - mistake
+
+
+alle masculine DER
+1 Jänner / Januar 
+2 Februar
+3 März
+4 April
+5 Mai
+6 Juni
+7 Juli
+8 August
+9 September
+10 Oktober - der Bär / the bear
+11 November
+12 Dezember
+
+
+
+
+Ich bin am 11ten April 1995 geboren. 
+Ich habe am 11ten April Geburtstag. 
+🏡 10. Dativ mit Präpositionen
+  
+
+WG die Wohngemeinschaft
+→ Ich besuche heute meine Freunde. 
+→ Ich besuche sie. 
+
+
+
+
+Wohnen und Haushalt
+
+
+Wohnst du in einer Wohnung oder in einem Haus? 
+Ich wohne in einer Wohnung. Ich wohne in einem Reihenhaus. 
+Wohnst du alleine oder mit deiner Familie / mit deinen Freunden?
+Ich wohne mit meiner Mutter. Wir sind zwei. (→ Wir sind zu zweit)
+Wer kocht? Du oder deine Mutter?
+Oft koche ich, aber meine Mutter kocht auch. Ich koche gern, aber ich koche nur einfache Speisen / Gerichte. 
+Was ist deine Spezialität? 
+Ich koche gern Vitello Tonnato. 
+Was brauchst du für eine Mayonnaise? 
+Ich lese die Instruktion im Internet. Ich brauche Essig, Öl, Eier, Salz, Zitrone… Das ist alles. 
+Wer putzt eure Wohnung / euer Reihenhaus? 
+Meine Mutter putzt das / unser Reihenhaus. 
+In welchem Stock oder in welcher Etage ist dein Schlafzimmer? 
+Mein Schlafzimmer liegt im ersten Stock. 
+Habt ihr einen Garten / einen Balkon / eine Terrasse? 
+Wir haben zwei kleine Gärten, einer liegt vor dem Haus und einer liegt hinter dem Haus. 
+
+
+
+
+The ONE-case - Indefinitpronomen
+
+
+Nominativ: 
+Ich habe 2 Gärten, einer ist vor dem Haus, einer hinter dem Haus. (der Garten)
+Wo ist ein Bancomat? - Da ist einer! 
+   
+Akkusativ:
+
+
+  
+
+  
+
+
+
+Habt ihr auch einen Balkon?
+Ich glaube, wir haben einen Balkon, aber das ist zwischen dem Haus und dem Garten. → Es ist ein Patio / eine Veranda. 
+Wo bist du oft? Was ist dein Lieblingsort? 
+Ich bin oft im Wohnzimmer oder in der Küche. Ich bin nicht oft im Garten, aber mein Hund ist oft im Garten. 
+Wohnt dein Hund im Garten? 
+Nein, er wohnt im Haus. 
+Ist es ein großes Haus oder ein kleines Haus?
+Dieses Haus ist ein bisschen klein für zwei Personen, denn wir haben zwei Schlafzimmer.
+Hast du eine große Küche? 
+Ja, hier in Bergamo haben wir oft eine große Küche, aber die Küche ist zusammen mit dem Wohnzimmer. → Es ist eine Wohnküche. Ich bin gerade in der Wohnküche. Ich kann das Sofa, den Fernseher und die Fenster sehen. 
+Habt ihr eine Spülmaschine in der Wohnküche?
+Ja, wir haben eine Spülmaschine. Ich hasse Geschirr spülen. 
+Welche Arbeit im Haus machst du gerne? 
+Ich belade gerne die Spülmaschine / die Waschmaschine. 
+Wir haben vier Schritte. 
+* der erste Schritt: die Waschmaschine beladen
+* der zweite Schritt: der Trockner trocknet die Wäsche 
+* der dritte Schritt: die Wäsche aufhängen 
+* der letzte Schritt: die Wäsche falten
+
+
+
+
+der Fehler = the mistake
+bestellen 
+
+
+Ich möchte die Penne all’arrabbiata
+Du möchtest die Penne, und was nimmst du noch?
+Als Dessert möchte ich eine Torte, bitte.
+Welche Torte? Wir haben Sjsadhjsahdjasdhdsh.
+Oh, ich nehme die Sachertorte.
+Nimmst du einen Salat als Vorspeise?
+Ja, gibt es einen grünen Salat?
+Ja wohl, nimmst du das?
+Ja, das ist perfekt!
+
+
+der Bus → Du nimmst den Bus. 
+Du nimmst auch 
+der Zug → Du nimmst den Zug
+das Flugzeug → Du nimmst das Flugzeug
+
+
+
+
+27. April
+
+
+Hast du ein Badezimmer?
+Ja, ich habe ein Badezimmer. 
+In welchem Stock ist dein Badezimmer?
+Mein Badezimmer ist im ersten Stock. 
+Was hast du im Badezimmer?
+Ich habe einen Spiegel und ich habe ein Waschbecken. Ich habe zwei Badezimmer. Das große Badezimmer hat eine Badewanne und das kleine Badezimmer hat eine Dusche. 
+Gehst du lieber in die Badewanne oder in die Dusche? 
+Ich gehe gern in mein großes Badezimmer. 
+Also gehst du gerne in die Badewanne? 
+Nein, ich benutze lieber die Dusche. 
+Ist das dein Badezimmer oder benutzt es auch deine Mutter? 
+Die zwei Badezimmer sind für beide. 
+Was machst du normalerweise im Badezimmer?
+Ich kann mein Gesicht waschen. 
+Putzt du auch die Zähne? 
+Ja, ich putze auch meine Zähne im Badezimmer. 
+Wie oft pro Tag putzt du deine Zähne?
+Ich putze meine Zähne drei Mal pro Tag.  Ich putze sie ein Mal am Morgen, einmal nach dem ersten Essen und einmal vor dem Schlafen. 
+Was machst du nach dem Zähneputzen? 
+Ich gehe auf die Toilette. AKK → Wohin gehst du? 
+Danach gehe ich ins (in das) Bett. 
+Ich sitze auf der Toilette. DAT → Wo bist du?
+Ich bin im Bett. 
+Wo warst du heute? 
+Heute war ich in der Bibliothek. 
+Warst du auch in einem Café? 
+Ich war in einer Bar / in einem Café einen Kaffee trinken. 
+Warst du auch im Supermarkt?
+Nein, ich habe nicht im Supermarkt eingekauft. 
+Hast du heute schon zu Abend gegessen?
+Nein, ich habe heute noch nicht zu Abend gegessen. Ich gehe jetzt essen. Ich esse jetzt gleich. (Present = used for future) 
+
+
+Real Future: Ich werde gleich essen. (I will eat.)
+
+
+ich werde essen 
+du wirst essen 
+er wird essen 
+wir werden essen 
+ihr werdet essen 
+sie werden essen 
+
+
+Weißt du schon, was du isst? 
+Ich möchte eine Piadina essen. 
+Machst du die Piadina im Ofen oder in der Pfanne? 
+Ich mache sie in der Pfanne. 
+Ich liebe Sushi. Sushi essen kostet 30 Euro, aber du kannst den ganzen Fisch essen. 
+→ Du kannst essen, wie viel du willst. 
+→ You can eat how much you want. 
+→ Du kannst essen, was du möchtest. 
+→ You can eat what you want. 
+
+
+
+
+das Waschbecken = the sink
+die Badewanne = bathtub
+die Dusche = shower
+die Zähne / der Zahn = teeth
+das Essen das Schlafen das Spielen 
+Ich putze meine Zähne nach dem Essen oder vor dem Schlafen. 
+die Toilette / das Klo 
+Ich gehe schnell auf das (aufs) Klo. 
+die Bibliothek 
+der Supermarkt 
+der Ofen
+die Pfanne
+das Fleisch 
+der Rohschinken 
+roh - crudo 
+both - beide 
+das Gesicht - the face 
+
+
+Eigentlich 
+wirklich
+
+
+→ Ich esse gern Piadina, aber ich esse lieber Sushi. 
+
+
+
+
+  
+
+Ich nehme den Bus, die U-Bahn, das Auto.
+Ich fahre mit dem Bus, mit der U-Bahn, mit dem Auto.
+Ich esse mit meinem Vater.
+Ich mag meinen Vater.
+
+
+Dative prepositions:
+
+
+mit → with
+aus → from (place)
+-Ich komme aus der Schweiz
+-Von wann bis wann arbeiten normale Menschen?
+-Sie arbeiten von Montag bis Freitag. (vom) von dem dreizehnten April bis zu dem (zum) zwanzigsten Mai.
+von → from (time)(location)
+(bis) zu → to (time)(location)
+seit → since (date)
+-Ich arbeite seit dem zehnten April nicht
+nach → after (time)(location)
+-Ich sehe nach dem Abendessen fern
+bei → at (place)
+-Wir treffen uns bei dem (beim) Zahnarzt
+-Ich esse bei meiner Mutter.
+
+
+  
+
+die Haltestelle → H Post
+die Kreuzung → crossing
+Ich bin bei der Schule und ich möchte zur Apotheke. Ich muss geradeaus gehen bis zum Rathausplatz. Ich gehe weiter bis zur Maximilianstraße, dann gehe ich nach links und ich nehme die erste Straße rechts und ich gehe weiter bis zur Kreuzung, wo ich nach links gehe. 
+Wenn ich bei der / an der Kreuzung bin, gehe ich nach links und die Apotheke ist links. 
+
+
+Ich bin bei der Post, ich möchte zu dem (zum) Krankenhaus gehen.
+Wohin gehe ich?
+Ich will von der Post zu dem (zum) Krankenhaus gehen.
+Wie komme ich von der Post zu dem Krankenhaus?
+
+
+Ich muss nach rechts gehen und dann gehe ich geradeaus und das Krankenhaus ist rechts.
+
+
+Ich komme gerade aus der Schule und ich gehe geradeaus bis zum Rathausplatz. 
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+Wechselpräpositionen
+  
+
+
+
+
+
+
+
+
+
+                                                    hinter                                    am
+
+
+
+
+
+
+                        neben                              über                         unter
+
+
+
+
+
+
+                           im                               auf                         zwischen
+
+
+
+
+
+
+state → dativ → wo?
+movement → akkusativ → wohin?
+
+
+der Blumentopf 
+das Fenster
+das Licht / die Lampe 
+
+
+Wo ist das Bad? 
+Das Bad ist zwischen dem kleinen Schlafzimmer und dem großen Schlafzimmer
+Und es ist über dem hellen Esszimmer
+Wo ist die Vase? Es gibt zwei Vasen im Haus, eine ist im Schlafzimmer auf dem Schrank neben dem Fenster und die andere ist über der Lampe
+  
+
+Wir haben das Schlafzimmer oben links mit zwei Betten. 
+Es gibt ein anderes Schlafzimmer oben rechts mit nur einem Bett. 
+Es gibt ein Bad zwischen den Zimmern. Wir haben acht Zimmer. 
+Wir haben eine Küche, ein Wohnzimmer, ein Esszimmer, das untere Zimmer kenne ich nicht, das ist der Keller, es gibt ein Arbeitszimmer und einen Waschraum.
+
+
+Wo? 
+→ Ich bin im Supermarkt.
+Wohin?  
+→ Ich gehe in den Supermarkt. 
+
+
+Das ist alles, um Mayonaise zu machen. 
+das Reihenhaus
+schnell - langsam 
+die Dinge / das Ding 
+Gerichte / Speisen 
+der Essig / das Öl 
+die Eier 
+das Salz 
+der Garten / die Gärten 
+die Frucht / die Früchte (das Obst und das Gemüse) 
+die Zitrone/n
+der Ort / the location 
+die Küche 
+zusammen - together 
+die Wohnküche 
+die Spülmaschine - the dishwasher
+spülen - wash dishes 
+beladen - to load
+das Geschirr spülen - wash dishes 
+waschen - to wash 
+die Waschmaschine 
+der Wäscheständer 
+der letze Schritt 
+ein letzer Schritt 
+die Wäsche auf dem Wäscheständer aufhängen
+die Kleidung 
+die Wäsche 
+der Schritt / die Schritte 
+der Trockner
+trocknen - to dry 
+trocken (dry) - feucht (wet)
+nass machen 
+gießen - innaffiare 
+wässern - to water 
+falten - to fold
+aufhängen  - to hang up 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. You (du) buy the friend (female: die Freundin) a present (das Geschenk, neuter).
+2. We (wir) show the tourists (plural: die Touristen) the way (der Weg, masculine).
+3. He (er) brings the sister (die Schwester) a soup (die Suppe, feminine).
+4. They (sie) give the teacher (male: der Lehrer) an answer (die Antwort, feminine).
+5. You all (ihr) send the grandmother (die Oma) a card (die Karte, feminine).
+6. We (wir) offer the guest (male: der Gast) a tea (der Tee, masculine).
+7. She (sie) tells the children (plural: die Kinder) a story (die Geschichte, feminine).
+8. You (du) lend the colleague (male: der Kollege) a pen (der Stift, masculine).
+9. I (ich) explain the problem (das Problem, neuter) to the boss (female: die Chefin).
+10. We (wir) bring the neighbors (plural: die Nachbarn) the cake (der Kuchen, masculine).
+
+
+1 Du kaufst der Freundin ein Geschenk
+2 Wir zeigen den Touristen den Weg
+3 Er bringst der Schwester eine Suppe
+4 Sie geben dem Lehrer eine Antwort
+5 Ihr schickt der Oma eine Karte
+6 Wir beiten dem Gast einen Tee an
+7 Sie sagt den Kindern eine Geschichte
+8 Du leiht dem Kollege den Stift
+9 Ich erkläre dem Problem die Chefin
+10 Wir bringen den Nachbarn den Kuchen
+Verbs to use:
+1. bringen (to bring)
+2. zeigen (to show)
+3. kaufen (to buy)
+4. sagen (to tell/say)
+5. schicken (to send)
+6. leihen (to lend)
+7. anbieten (to offer)
+8. geben (to give)
+9. erklären (to explain)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11. Verben mit Dativ / Dat+Akk
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Akkusativ + Pronomen 
+
+
+Besuchst du deinen Bruder oft?
+Ich besuche meinen Bruder oft. 
+Ich besuche ihn oft. 
+
+
+Besuchst du auch deine Schwester? 
+Ja, ich besuche auch meine Schwester.
+Ja, ich besuche sie auch oft.
+
+
+Siehst du deinen Bruder am Wochenende? 
+Ich sehe meinen Bruder am Wochenende. 
+Ich sehe ihn am Wochenende. 
+
+
+Siehst du deine Freunde am Wochenende?
+Ja, ich sehe meine Freunde am Wochenende. 
+Ja, am Wochenende sehe ich meine Freunde. 
+Ja, ich sehe sie am Wochenende.
+
+
+Besuchst du uns morgen?
+Ja, ich besuche euch morgen. 
+
+
+Rufst du uns später an? 
+Ja, ich rufe euch an. 
+
+
+Verstehst du das Wort?
+Ja, ich verstehe es. 
+
+
+Verstehst du mich?
+Ich verstehe dich. 
+
+
+Lernst du das neue Thema? 
+Ja, heute habe ich das neue Thema gelernt. 
+Ja, ich habe es heute gelernt. 
+
+
+Hörst du uns gut? 
+Ja, ich höre euch gut. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dativ + Pronomen
+
+
+Kannst du mir helfen?
+Ja, ich kann dir helfen. 
+
+
+Kannst du uns helfen? 
+Ja, ich kann euch helfen. 
+ 
+Schickst du mir die E-Mail? 
+Ja, ich schicke dir die E-Mail. 
+
+
+Schickst du uns die E-Mail? 
+Ich schicke euch die E-Mail. 
+
+
+Hilfst du deiner Mutter oft? 
+Ja, ich helfe meiner Mutter oft.
+Ja, ich helfe ihr oft. 
+
+
+Zeigst du uns den Weg zum Supermarkt? 
+Ja, ich zeige euch den Weg zum Supermarkt. 
+
+
+Kaufst du mir das Buch?
+Ja, ich kaufe dir das Buch.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. You (du) buy the friend (female: die Freundin) a present (das Geschenk, neuter).
+2. We (wir) show the tourists (plural: die Touristen) the way (der Weg, masculine).
+3. He (er) brings the sister (die Schwester) a soup (die Suppe, feminine).
+4. They (sie) give the teacher (male: der Lehrer) an answer (die Antwort, feminine).
+5. You all (ihr) send the grandmother (die Oma) a card (die Karte, feminine).
+6. We (wir) offer the guest (male: der Gast) a tea (der Tee, masculine).
+7. She (sie) tells the children (plural: die Kinder) a story (die Geschichte, feminine).
+8. You (du) lend the colleague (male: der Kollege) a pen (der Stift, masculine).
+9. I (ich) explain the problem (das Problem, neuter) to the boss (female: die Chefin).
+10. We (wir) bring the neighbors (plural: die Nachbarn) the cake (der Kuchen, masculine).
+
+
+1 Du kaufst der Freundin ein Geschenk
+2 Wir zeigen den Touristen den Weg
+3 Er bringst der Schwester eine Suppe
+4 Sie geben dem Lehrer eine Antwort
+5 Ihr schickt der Oma eine Karte
+6 Wir beiten dem Gast einen Tee an
+7 Sie sagt den Kindern eine Geschichte
+8 Du leiht dem Kollege den Stift
+9 Ich erkläre dem Problem die Chefin
+10 Wir bringen den Nachbarn den Kuchen
+Verbs to use:
+1. bringen (to bring)
+2. zeigen (to show)
+3. kaufen (to buy)
+4. sagen (to tell/say)
+5. schicken (to send)
+6. leihen (to lend)
+7. anbieten (to offer)
+8. geben (to give)
+9. erklären (to explain)
+
+
+
+
+
+
+
+
+
+
+Verben mit Dativ
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+Verben mit Dativ und Akkusativ
+
+
+  
+
+
+
+  
+
+🏛️ 12. Perfekt
+  
+
+
+
+
+
+regelmäßig = regular
+unregelmäßig = irregular 
+
+
+
+
+
+
+1. regelmäßig: “ge” + ROOT + “t”:
+
+
+(Excursion for “sein” and “haben”: 
+haben → ich habe gehabt (would be regular, but is rarely used → instead: ich hatte
+sein → ich bin gewesen (irregular, but as well, rarely used → instead: ich war) 
+
+
+machen → Ich habe gemacht
+sagen → Ich habe gesagt
+wünschen (to desire) → Ich habe mir ein Geschenk gewünscht
+lernen → Ich habe Deutsch gelernt
+träumen (von)  (to dream) → Ich habe von dir geträumt
+glauben (an) (to believe) → Ich habe an den Gott geglaubt
+fragen → Ich habe die Frage gefragt
+hassen (to hate) → Ich habe die Suppe gehasst
+hören → Ich habe Musik gehört
+spielen → Heute habe ich Gitarre gespielt 
+schauen → Ich habe das Tennismatch geschaut
+brauchen (to need) → Ich habe ein Ticket gebraucht
+frühstücken → Am Dienstagmorgen habe ich gefrühstückt
+passen → Der Hut hat sehr gut gepasst
+rauchen → Die Lehrerin hat zu viel geraucht
+leben (vivere) → Dieses Jahr hat meine Großmutter nicht allein gelebt
+wohnen (abitare) → Wo hast du in deinem Leben gewohnt? Ich habe in Bergamo gewohnt
+zeigen (to show) → Wem hast du dein Haus gezeigt?
+suchen (to search) → Wo hast du das Buch schon gesucht? Ich habe in euer Arbeitszimmer geschaut
+schmecken (taste to me) → Der Kuchen hat mir geschmeckt. 
+MIR HAT ES GESCHMECKT (like with taste to me) → es schmeckt mir 
+MIR HAT ES GEFALLEN (like more general to me) → es gefällt mir 
+zählen (to count) → Warum hat er das Geld gezählt? Er darf nicht
+putzen (to clean) → Wann hast du den Hund geputzt?
+wählen (to choose) → habt ihr gewählt, wohin wir gehen? 
+waschen (to wash) → Ich habe meinen Hut gewaschen
+reisen (to travel) → Ich bin in die Schweiz, nach Deutschland gereist
+kaufen (to buy) → Ich habe ein Buch gekauft
+
+
+→ E-Addition (mostly for roots ending with a -t, same rule as in Präsens) 
+
+
+antworten → geantwortet
+arbeiten → gearbeitet 
+kosten → gekostet
+bilden (to form) → Sie haben die Frage gebildet
+
+
+2. regelmäßig: ROOT + -t:
+
+
+organisieren → Ich habe organisiert 
+benutzen (to use) → Ich habe benutzt
+besuchen (to visit) → Er hat seine Großeltern oft besucht
+bestellen (to order) → Heute habe ich sehr früh mein Zimmer bestellt
+überfluten (to overflow) → Das Wasser hat die Stadt überflutet
+erreichen (to reach) → Wen hast du nach 8 Uhr mit deinem Freund erreicht?
+passieren (to happen) → Was ist am Montagabend passiert?
+ergänzen (to fulfill / to complete) → Hast du das Salz bis zum Wasser ergänzt?
+trainieren → Warum hast du die ganze Woche trainiert? Ich habe ohne Probleme geschlafen.
+
+
+probieren → Ich habe probiert, Deutsch zu sprechen
+
+
+der Alltag → the daily routine
+
+
+ergänzen - completare qc → Ich ergänze den Satz, ich ergänze die Tabelle (erGÄNZen is coming from ganz = whole, so it means “to make it whole / complete. With “ergänzen” you refer to the thing where you want to add something to: Ich ergänze die Tabelle → I make the table complete. You could say (it sounds a bit weird though, but correct) Ich ergänze den Kuchen mit einer Kirsche. I complete the cake with a cherry. (cake = direct object, cherry = indirect) 
+
+
+hinzufügen / aggiungere qc: Here you refer to the thing that you are adding: Ich füge ein bisschen Salz hinzu. Ich füge einen Kommentar hinzu. I add a cherry to the cake: Ich füge eine Kirsche zum Kuchen hinzu  (the cherry = direct object, the cake indirect)
+
+
+→ Ich füge einen Kommentar hinzu, denn ich muss die Tabelle ergänzen. 
+
+
+3. (just add “ge” to infinitiv): 
+
+
+tragen (to transport) → getragen 
+fahren → gefahren 
+geben → gegeben 
+schlafen → geschlafen 
+lesen →  gelesen 
+sehen → gesehen 
+rufen → gerufen
+anrufen → ich habe meine Mutter angerufen (separable words have the GE in the middle!) 
+fernsehen → Ich habe gestern ferngesehen. 
+laufen (to run) → ich bin gelaufen 
+
+
+4. Irregular:
+
+
+vergessen - Ich habe meinen Schlüssel vergessen (stays same) 
+gehen – Ich bin nach Hause gegangen.*
+kennen – Ich habe gekannt
+essen → Ich habe gestern sehr viel gegessen
+beschreiben - ich habe den Touristen den Weg beschrieben
+stehen - Ich bin gestanden 
+bringen - ich habe gebracht
+verstehen - ich habe verstanden
+fliegen - ich bin mit dem Flugzeug geflogen (movement)
+liegen - Ich bin k.o. im Bett gelegen (state)  
+erziehen - Ich habe meine Kinder schlecht erzogen 
+bleiben - Ich bin zu Hause geblieben 
+bestehen - ich habe die Prüfung / das Examen bestanden
+wissen - ich habe gewusst
+nehmen - ich habe genommen 
+wissen - das habe ich nicht gewusst!
+treffen - Ich habe meine Freunde getroffen 
+verstehen - Ich habe verstanden 
+schreiben - Ich habe geschrieben 
+
+
+*→  (“bin” instead of “haben” mostly used with the same verbs as in italian, sono andato (ich bin gegangen), sono morto (ich bin gestorben), sono nato (ich bin geboren), mi sono svegliato (ich bin aufgewacht), sono corso (ich bin gelaufen) = movements, state / change of state, in german this rule also applies to swimming, flying bc movements)
+
+
+
+
+
+
+Unregelmäßige Verben A1
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Liste A2:
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13. Liste Verben A1
+Komplette Liste Verben A1 (Goethe-Institut)
+(except modal verbs, haben + sein, where we use the Präteritum instead of Perfekt) 
+
+
+Regelmäßige Verben:
+(ge + ROOT + t or ROOT + t)
+
+
+Infinitiv (+ 3. Person Präsens)
+	Perfekt 
+	Übersetzung / Beispiel 
+
+
+
+
+	abholen (holt ab) (pick up)
+	hat abgeholt
+	
+
+	anklicken (klickt an) (click)
+	hat angeklickt
+	
+
+	ankreuzen (kreuzt an) (check/cross/mark)
+	hat angekreuzt
+	
+
+	anmachen (macht an) (turn on)
+	hat angemacht
+	
+
+	(sich) anmelden (meldet (sich) an) (to register)
+	hat (sich) angemeldet
+	
+
+	anrufen (ruft an) (to call)
+	hat angerufen 
+	
+
+	antworten (antwortet) (to answer)
+	hat geantwortet
+	
+
+	arbeiten (arbeitet) (to work)
+	hat gearbeitet 
+	
+
+	aufhören (hört auf) (to stop)
+	hat aufgehört 
+	
+
+	ausfüllen (füllt aus) (to fill out)
+	hat ausgefüllt 
+	
+
+	ausmachen (macht aus) (to turn off)
+	hat ausgemacht
+	
+
+	baden (badet) (to bath)
+	hat gebadet 
+	
+
+	bedeuten (bedeutet) (to mean)
+	hat bedeutet 
+	
+
+	benutzen (benutzt) (to use)
+	hat benutzt
+	
+
+	besichtigen (besichtigt) (to view (for city))
+	hat besichtigt 
+	
+
+	bestellen (bestellt) (to order)
+	hat bestellt
+	
+
+	besuchen (besucht) (to search)
+	hat besucht 
+	
+
+	bezahlen (bezahlt) (to pay)
+	hat bezahlt  
+	
+
+	brauchen (braucht) (to need)
+	hat gebraucht 
+	
+
+	danken (dankt) (to thank)
+	hat gedankt 
+	
+
+	dauern (dauert) (to last)
+	hat gedauert 
+	
+
+	drucken (druckt) (to press)
+	hat gedruckt 
+	
+
+	drücken (drückt) (to hug)
+	hat gedrückt
+	
+
+	einkaufen (kauft ein) (to go shopping)
+	hat eingekauft 
+	
+
+	enden (endet) (to end)
+	hat geendet 
+	
+
+	(sich) entschuldigen (entschuldigt (sich)) (to excuse)
+	hat (sich) entschuldigt 
+	
+
+	erklären (erklärt) (to explain)
+	hat erklärt 
+	
+
+	erlauben (erlaubt) (to allow)
+	hat erlaubt 
+	
+
+	erzählen (erzählt) (to tell)
+	hat erzählt 
+	
+
+	feiern (feiert) (to party)
+	hat gefeiert 
+	
+
+	fehlen (fehlt) (to miss)
+	hat gefehlt
+	
+
+	fragen (fragt) (to question)
+	hat gefragt
+	
+
+	(sich) freuen (freut (sich)) (to be happy)
+	hat (sich) gefreut 
+	
+
+	frühstücken (frühstückt) (to have breakfast)
+	hat gefrühstückt
+	
+
+	gehören (gehört) (to belong)
+	hat gehört
+	
+
+	glauben (glaubt) (to believe)
+	hat geglaubt
+	
+
+	gratulieren (gratuliert) (to congratulate)
+	hat gratuliert 
+	
+
+	grillen (grillt) (to grill)
+	hat gegrillt 
+	
+
+	heiraten (heiratet) (to marry)
+	hat geheiratet 
+	
+
+	holen (holt) (to fetch)
+	hat geholt 
+	
+
+	hören (hört) (to hear)
+	hat gehört 
+	
+
+	kaufen (kauft) (to buy)
+	hat gekauft
+	
+
+	kennenlernen (lernt kennen) (to get to know)
+	hat kennengelernt
+	
+
+	kochen (kocht) (to cook)
+	hat gekocht
+	
+
+	kosten (kostet) (to cost)
+	hat gekostet
+	
+
+	kriegen (kriegt) (to get)
+	hat gekriegt 
+	
+
+	(sich) kümmern (kümmert (sich)) (to take care)
+	hat (sich) gekümmert 
+	
+
+	lachen (lacht) (to laugh)
+	hat gelacht 
+	
+
+	leben (lebt) (to live)
+	hat gelebt
+	
+
+	legen (legt) (to place)
+	hat gelegt
+	
+
+	lernen (lernt) (to learn)
+	hat gelernt 
+	
+
+	lieben (liebt) (to love)
+	hat geliebt 
+	
+
+	machen (macht) (to do)
+	hat gemacht 
+	
+
+	mieten (mietet) (to rent)
+	hat gemietet 
+	
+
+	mitmachen (macht mit) (to partecipate)
+	hat mitgemacht 
+	
+
+	öffnen (öffnet) (to open)
+	hat geöffnet
+	
+
+	rauchen (raucht) (to smoke)
+	hat geraucht
+	
+
+	regnen (regnet) (to rain)
+	hat geregnet
+	
+
+	reisen (reist) (to travel)
+	ist gereist 
+	
+
+	reparieren (repariert) (repair)
+	hat repariert 
+	
+
+	sagen (sagt) (to say)
+	hat gesagt 
+	
+
+	schicken (schickt) (to send)
+	hat geschickt 
+	
+
+	schmecken (schmeckt) (to taste good)
+	hat geschmeckt 
+	Der Kuchen hat gut geschmeckt.
+Der Kuchen hat mir gut geschmeckt. (What (Nominativ) tastes good to whom (Dativ)?)
+	spielen (spielt) (to play)
+	hat gespielt 
+	
+
+	stellen (stellt) (to place)
+	hat gestellt 
+	
+
+	studieren (studiert) (to study)
+	hat studiert 
+	
+
+	suchen (sucht) (to seek/search)
+	hat gesucht 
+	
+
+	tanzen (tanzt) (to dance)
+	hat getanzt 
+	
+
+	telefonieren (telefoniert) (to make a phone call)
+	hat telefoniert 
+	
+
+	übernachten (übernachtet) (stay overnight)
+	hat übernachtet 
+	
+
+	verdienen (verdient) (to earn)
+	hat verdient 
+	
+
+	verkaufen (verkauft) (to sell)
+	hat verkauft 
+	
+
+	vermieten (vermietet) (to rent)
+	hat vermietet 
+	
+
+	(sich) vorstellen (stellt (sich) vor) (to introduce)
+	hat (sich) vorgestellt
+	
+
+	wandern (wandert) (to hike)
+	ist gewandert 
+	
+
+	warten (wartet) (to wait)
+	hat gewartet 
+	
+
+	wiederholen (wiederholt) (to repeat)
+	hat wiederholt 
+	
+
+	wohnen (wohnt) (to reside)
+	hat gewohnt
+	
+
+	zahlen (zahlt) (to pay)
+	hat gezahlt 
+	
+
+	
+
+
+
+Unregelmäßige Verben
+
+
+1. Partizip Perfekt = 1. ge + Infinitiv oder 2. NUR Infinitiv 
+
+
+Infinitiv
+	Perfekt 
+	Übersetzung / Beispiel 
+	abfahren (fährt ab) (to depart)
+	ist abgefahren 
+	
+
+	abgeben (gibt ab) (to hand over)
+	hat abgegeben 
+	
+
+	anfangen (fängt an) (to begin)
+	hat angefangen 
+	
+
+	ankommen (kommt an) (to arrive)
+	ist angekommen 
+	
+
+	aussehen (sieht aus) (to look)
+	hat ausgesehen 
+	
+
+	bekommen (bekommt) (to receive)
+	hat bekommen 
+	
+
+	einladen (lädt ein) (to invite)
+	hat eingeladen 
+	
+
+	essen (isst) (to eat)
+	hat gegessen 
+	
+
+	fahren (fährt) (to drive)
+	ist gefahren (selten: hat gefahren) 
+	
+
+	fernsehen (sieht fern) (to watch tv)
+	hat ferngesehen
+	
+
+	geben (gibt) (to give)
+	hat gegeben
+	
+
+	gefallen (gefällt) (to please)
+	hat gefallen 
+	
+
+	halten (hält) (to hold)
+	hat gehalten 
+	
+
+	heißen (heißt) (to be called)
+	hat geheißen 
+	
+
+	kommen (kommt) (to come)
+	ist gekommen 
+	
+
+	laufen (läuft) (to run)
+	ist gelaufen 
+	
+
+	lesen (liest) (to read)
+	hat gelesen 
+	
+
+	mitkommen (kommt mit) (to come with)
+	ist mitgekommen 
+	
+
+	schlafen (schläft) (to sleep)
+	hat geschlafen 
+	
+
+	sehen (sieht) (to see)
+	hat gesehen
+	
+
+	(sich) waschen (wäscht (sich)) (to wash)
+	hat (sich) gewaschen 
+	
+
+	
+
+
+
+2. unregelmäßiges Partizip mit Vokalwechsel (change of vocal, total change 😛)
+
+
+Infinitiv 
+	Perfekt 
+	Übersetzung / Beispiel 
+	abfliegen (fliegt ab) (to depart)
+	ist abgeflogen 
+	
+
+	anbieten (bietet an) (to offer)
+	hat angeboten 
+	
+
+	(sich) anziehen (zieht (sich) an) (to put on)
+	hat (sich) angezogen 
+	
+
+	aufstehen (steht auf) (to stand up)
+	ist aufgestanden 
+	
+
+	aussteigen (steigt aus) (to exit)
+	ist ausgestiegen 
+	
+
+	(sich) ausziehen (zieht (sich) aus (to undress)
+	hat (sich) ausgezogen 
+	
+
+	beginnen (beginnt) (to start)
+	hat begonnen 
+	
+
+	bleiben (bleibt) (to remain)
+	ist geblieben 
+	
+
+	bringen (bringt) (to bring)
+	hat gebracht
+	
+
+	einsteigen (steigt ein) (to get in)
+	ist eingestiegen 
+	
+
+	empfehlen (empfiehlt) (to recommend)
+	hat empfohlen
+	
+
+	finden (findet) (to find)
+	hat gefunden 
+	
+
+	fliegen (fliegt) (to fly)
+	ist geflogen 
+	
+
+	gehen (geht) (to go)
+	ist gegangen 
+	
+
+	gewinnen (gewinnt) (to win)
+	hat gewonnen
+	
+
+	helfen (hilft) (to help)
+	hat geholfen 
+	
+
+	kennen (kennt) (to know)
+	hat gekannt 
+	
+
+	liegen (liegt) (to lay)
+	hat / ist gelegen 
+	
+
+	mitbringen (bringt mit) (to bring along)
+	hat mitgebracht
+	
+
+	mitnehmen (nimmt mit) (to take along)
+	hat mitgenommen 
+	
+
+	nehmen (nimmt) (to take)
+	hat genommen 
+	
+
+	riechen (riecht) (to smell)
+	hat gerochen 
+	
+
+	scheinen (scheint) (to seem)
+	hat geschienen 
+	
+
+	schließen (schließt) (to close)
+	hat geschlossen 
+	
+
+	schreiben (schreibt) (to write)
+	hat geschrieben 
+	
+
+	schwimmen (schwimmt) (to swim)
+	ist geschwommen (selten: hat geschwommen) 
+	
+
+	sitzen (sitzt) (to sit)
+	hat gesessen 
+	
+
+	stehen (steht) (to stand)
+	hat / ist gestanden 
+	
+
+	(sich) treffen (trifft (sich)) (to meet)
+	hat (sich) getroffen 
+	
+
+	trinken (trinkt) (to drink)
+	hat getrunken 
+	
+
+	tun (tut) (to do)
+	hat getan 
+	
+
+	überweisen (überweist) (to transfer)
+	hat überwiesen 
+	
+
+	umziehen (zieht um) (to move)
+	ist umgezogen 
+	
+
+	unterschreiben (unterschreibt) (to sign)
+	hat unterschrieben 
+	
+
+	verstehen (versteht) (to understand)
+	hat verstanden 
+	
+
+	werden (wird) (to become)
+	ist geworden 
+	
+
+	wissen (weiß) (to know)
+	hat gewusst 
+	
+
+	
+
+
+
+Use of sein → for movements, change of state (z.B. Er ist aufgestanden) + BLEIBEN und WERDEN, in the South (like Switzerland) also for stehen und liegen 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14. Possessivpronomen
+  
+
+
+
+
+
+
+
+Genitiv is not used, especially in Switzerland. Instead: von + Dativ
+
+
+My brother’s girlfriend = die Freundin meines Bruders (would be the correct Genitiv form) →
+Die Freundin von meinem Bruder (von + Dativ)
+My sister’s husband = der Mann meiner Schwester (Genitiv) → 
+Der Mann von meiner Schwester (von + Dativ) 
+  
+
+                    em              e
+
+
+
+
+                          er                   e
+                            en                er
+
+
+                          er                en
+                           en                n           e
+                          er                en
+
+
+                             ir               /
+                         ir        /
+                        em             /
+                     hr       en
+
+
+                             ir             e
+                         ir                 en
+                      uch       e
+                er                          en  
+                        ir                   /
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+                                      Mein                          Meine
+                                                                meinen
+                                           meinen
+
+
+                                                 meiner
+
+
+                                        dein
+
+
+                                                deine
+                                        dein
+
+
+
+
+
+
+
+
+
+
+                                                  Seine
+                                                seinem
+                                                        seinen
+
+
+                                                          seine
+
+
+
+
+
+
+
+
+                                      ihre                      ihrem
+                                                                    ihre
+
+
+
+
+
+
+                                                        ihr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+                                        unser
+
+
+                                                            unseren
+                                              Unser
+
+
+                                                                unsere
+
+
+
+
+
+
+                                                            eure
+                                                               euer
+
+
+                                                                   eure
+
+
+                                        eurem
+
+
+
+
+
+
+                                                       Ihren
+
+
+                                                            Ihren
+                                             Ihre
+
+
+
+
+
+
+                                        ihr
+                                                        ihren                ihr
+
+
+
+
+                                               ihre
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15. Adjectives
+  
+
+
+
+der Schmuck (m) - the jewellery 
+
+
+Sie möchte viel goldenen, teuren, hellen, neuen Schmuck tragen. 
+Sie möchte einen Urlaub (m) mit dem Flugzeug machen. 
+AKK Sie möchte in den Urlaub fliegen. 
+DAT Sie ist im Urlaub. 
+Sie träumt von ein neues, blaues, teures Auto kaufen. →  
+Sie träumt davon, ein neues, blaues, teures Auto zu kaufen.  
+Sie träumt von einem neuen, blauen, teuren Auto. 
+Sie träumt von einem großen, ho(c)hen, schönen Haus. Sie möchte einen langen, interessanten, entspannten Urlaub machen. 
+
+
+  
+
+
+
+Ich habe den Eiffelturm gesehen / besichtigt. 
+Wie heißen diese “Dinge” in diesem Bild? 
+
+
+Ich habe den schiefen Turm von Pisa besichtigt. 
+Ich habe den großen Ben-Turm besichtigt. 
+schief - to lean
+
+
+die Sehenswürdigkeiten = viewing site
+
+
+der Turm (m) = the tower
+die Tür (f) = the door
+
+
+Ich träume von der perfekten Insel (f) für mich. 
+Es ist keine windige, hässliche, bekannte, schmutzige Insel. 
+Es ist eine unbekannte Insel.
+Die Insel meiner Träume (f) ist eine Insel mit einem Dschungel und einem schönen, sauberen Strand.  
+
+
+stark (strong)
+schwach (weak) 
+bekannt (known, famous)
+unbekannt (unknown)
+schön (beautiful)
+hässlich (ugly)
+gut (good)
+schlecht (bad)
+interessant (interesting)
+langweilig (boring)
+schnell (fast)
+langsam (slow)
+bequem (comfortable)
+anstrengend (tiring)
+kurz (short)
+lang (long)
+teuer (expensive)
+billig (cheap)
+sauber (clean)
+schmutzig (dirty)
+modern (modern)
+alt (old)
+neu (new)
+sonnig (sunny)
+regnerisch (rainy)
+warm (warm)
+kalt (cold)
+windig (windy)
+glücklich (happy)
+entspannt (relaxed)
+müde (tired) 
+einfach (easy)
+schwierig (difficult)
+schwer (heavy)
+leicht (light)
+hart (hard)
+weich (soft)
+
+
+
+
+
+
+
+
+Adjektive nach Definitartikel im Nominativ und Akkusativ
+
+
+  
+
+
+
+Adjektive nach Indefinitartikel im Nominativ und Akkusativ 
+
+
+  
+
+
+
+Adjektive nach Dativ: (immer -en)
+
+
+  
+
+
+
+Ich möchte ein Hotel mit den schönen Zimmern. 
+Ich möchte eine Garage mit schönen Autos. 
+
+
+
+
+  
+
+
+ German indefinite article, negative article, possessive article + adjective  (1-2-3-4) 
+ 
+
+
+
+⛱️ 16. Reisen und Urlaub
+Reisen und Urlaub
+
+
+Reist du gern? 
+Ja, ich liebe Reisen. 
+Wie viele Länder hast du besucht? 
+Ich weiß nicht. Ich bin nach Deutschland, nach Frankreich, nach Spanien, nach Italien und nach Griechenland gereist. Ich bin auch in die Niederlande und in die Schweiz gefahren. Ich bin nach Amsterdam und nach Singapur gereist. Ich bin auch nach Schweden, nach Estland und nach Australien gereist. 
+Warst du auch in Afrika? 
+Ich bin nach Marokko, nach Tunesien, nach Algerien, nach Ägypten und nach Zypern gereist. → Ich habe den Norden von Afrika gesehen. 
+Wie bist du gereist? Mit dem Auto, mit dem Flugzeug, mit dem Bus, mit dem Zug, mit dem Schiff? 
+Ich bin mit dem Flugzeug nach Marokko geflogen. 
+Wie bist du nach Australien gereist? 
+Ich bin mit dem Flugzeug nach Australien geflogen. 
+Wie lange warst du in Australien? 
+Ich war einen Monat in Australien. 
+Hast du viele Dinge gesehen? 
+Ich habe viele Dinge gesehen, zum Beispiel das Opernhaus in Sydney und es gibt einen kleinen Berg in der Mitte von Australien. Dieser Felsen ist sehr schön. Was noch? Das Meer, das Korallenriff von Melbourne, es gibt viele Wellen im Meer und es gibt viele Surfer.
+Warst du surfen oder tauchen?
+Ich habe nicht gesurft, denn ich kann nicht surfen, aber ich möchte surfen lernen. Ich liebe das Surfen. 
+Du hast also schon oft deinen Reisepass gebraucht? 
+Ja, ich habe den Reisepass für Australien, Singapur, Großbritannien, Algerien, Tunesien  und Marokko benutzt / gebraucht. 
+
+
+Aber eigentlich, wann du fliegst nach Marokko, du brauchst keinen Reisepass. → 
+Wenn du nach Marokko fliegst, brauchst du keinen Reisepass. 
+(Subordinate Sentence: Verb (fliegst) at the end. Second part (after the comma), “brauchst du” = Inversion.)                                                 
+
+
+Bist du auch nach Amerika geflogen? 
+Ich bin noch nicht nach Amerika geflogen. 
+Was war deine Lieblingsreise / dein bester Urlaub? 
+Mein bester Urlaub war in Nizza, an der hellblauen Küste. 
+
+
+Wo machst du gerne Urlaub? Bist du lieber 
+AN: am Strand, am Meer, am See, am Fluss, an der Küste
+IN: in den Bergen / im Gebirge, in der Wüste, im Wald, im Dschungel, in der Stadt, AUF: auf dem Land oder auf einer Insel? 
+Ich fahre gern ans Meer, aber ich habe Sonnenschutz benutzt. Eigentlich hasse ich die Sonne, denn ich bin sehr weiß. 
+
+
+
+
+besuchen - Ich habe besucht
+fahren - Ich bin gefahren 
+fliegen - Ich bin geflogen 
+brauchen - Ich habe gebraucht 
+benutzen - Ich habe benutzt
+reisen - Ich bin gereist
+sehen - Ich habe gesehen
+warten - Ich habe gewartet (Imperativ: Warte!!)
+
+
+
+
+der Reisepass (m) der Pass 
+das Korallenriff (n)
+die Welle / die Wellen (f)
+die Küste (f) 
+der Strand (m) the beach 
+die Reise (f)
+der Urlaub (m) 
+der Flug (m)
+das Flugzeug (n) 
+das Ding / die Dinge (n)
+der Felsen  - the rock (m) 
+das Land (n) 
+die Insel (f) 
+der Wald (m) / der Dschungel (m) 
+die Wüste (f) 
+der Berg - pl. die Berge (m) / das Gebirge (n) 
+der Fluss - pl. die Flüsse (m) 
+die Creme (f) 
+die Sonnencreme (f)
+der Sonnenschutz (m) 
+der Schutz (protection)
+
+
+Länder → 
+Griechenland = Greece
+Schweden = Sweden
+Estland = Estonia
+Marokko 
+Tunesien 
+Algerien 
+Ägypten 
+Zypern 
+die Türkei 
+die Schweiz 
+die Niederlande
+der Iran 
+der Irak 
+der Libanon
+die Vereinigten Staaten von Amerika → die USA 
+Großbritannien → das Vereinigte Königreich → England → Schottland 
+Singapur 
+Australien 
+
+
+Ich habe nicht gesurft, denn ich kann nicht surfen, aber ich möchte surfen lernen. Ich möchte spazieren gehen. 
+
+
+Regelmäßige Verben
+
+
+→ in Italien (state)
+→ nach Italien (movement)
+
+
+das Känguruh (n)
+
+
+gern - lieber - am liebsten
+gut - besser - am liebsten 
+
+
+viel - a lot / wenig - a little 
+
+
+der Vogel (m)  = F
+das Visum (n) = W
+
+
+drei Stopps 
+abfliegen 
+ankommen 
+anfangen 
+
+
+Ich habe fertig 
+
+
+( beenden - active: Ich beende den Film. 
+enden - passive: A film ends. )
+
+
+NO “GE-” past making
+be-, emp-, ent-, er-, ge-, miss-, ver- und zer- 
+
+
+die Gastfamilie 
+die Host-Family 
+
+
+selbst - on your own / yourself 
+andere - others (declined) 
+weder … noch - neither…  nor 
+Entweder… oder - either .. or 
+genug - enough 
+sicher - sure 
+
+
+F: Hast du oft die Sonnencreme benutzt?
+A: Nein, ich habe nicht die Sonnencreme in Australien benutzt. 
+F: Hast du viele bekannte Sehenswürdigkeiten besichtigt?
+A: Ja, ich habe viele Sehenswürdigkeiten und schöne Dinge besichtigt. 
+F: Bist du alleine gereist oder mit deinen Freunden / mit deiner Familie? 
+A: Ich bin mit meinen Freunden gereist. Wir sind nach Australien gereist. 
+F: Welches Essen hast du am liebsten bestellt?
+A: Wir haben das Känguruh mit Kartoffeln gegessen. 
+F: Hast du für die Reise viel oder wenig bezahlt? 
+A: Ich habe für die Reise viel bezahlt, aber viel war für das Flugzeug. 
+F: Hast du ein Visum gebraucht? 
+A: Ich weiß es nicht. Meine Mutter hat diese Dinge gemacht. 
+F: Wie lange hat die Reise gedauert?
+A: Die Reise hat 24 Stunden lang gedauert. 
+F: Wem hast du von der Reise erzählt? 
+A: Ich habe meinen Freunden und meinen Familien und meinen Lehrern erzählt. 
+F: Wo / was hast du gefrühstückt? 
+A: Ich habe mit der Host-Family gefrühstückt. Ich habe das Marmeladenbrot mit Milch dort gegessen. 
+F: Hast du auch manchmal selbst gekocht? 
+A: Doch, ich habe Tiramisu gekocht, aber das war nicht genug und nicht gut also.
+Es war weder viel noch gut. 
+F: Wie viel hat dein Hotel / dein Hostel pro Nacht gekostet? 
+A: Ich weiß es nicht, aber ich bin sicher, das Haus hat null Euro gekostet. 
+F: Wo hast du gewohnt? In einem schönen Hotel oder in einem billigen Hostel? 
+A: Ich habe in einem Haus gewohnt. 
+F: Hat dir das Essen geschmeckt? 
+A: Nein, das Essen schmeckt sehr schlecht. Ich habe sechs Kilo verloren. (3 Kilo Tomaten, 3 Packungen Zigaretten) 
+F: Hast du schon einmal viele Stunden am Flughafen gewartet? 
+A: Ja, ich habe zwölf Stunden gewartet. Ich habe im Flughafen von Singapur gewartet. War es teuer? Ich habe es vergessen.  
+F: Hast du ein Auto / einen Van gemietet / gekauft? 
+A: Nein, ich war minderjährig. 
+F: Hast du ein interessantes Museum besucht?
+A: Nein, Australien ist nicht bekannt für Museen (pl. NEU) / Museumsbesuche. Australien ist sehr bekannt für Safaris.
+F: Bist du in den Bergen gewandert?
+A: Nein, weil man nicht wandern darf. (subordinate, conjugated verb at the end)
+Warum ist das verboten? Es gibt einen Aberglauben von den Aborigines. Es ist sehr heilig für sie. (für + AKK)
+F: Hast du deine Unterkunft (f) / deinen Flug online gebucht? (to book) 
+A: Ja, wir müssen online buchen. Wir waren noch nicht dort / in Australien. 
+→ schon 
+→ noch nicht 
+F: Hast du viele schöne Fotos gemacht? die Tiere / das Tier (NEU)
+A: Ja, ich habe viele Fotos gemacht. Ich habe viele Fotos von Tieren gemacht. Hast du eine große Spinne (F) gesehen? Ja, ich habe eine sehr große Spinne draußen neben meinem Fenster gesehen. Sie war 50 Zentimeter groß. Der Körper war 10 Zentimeter groß und die Beine 50. Es gibt auch gefährliche Schlangen und Haie. 
+
+
+F: Hast du viele neue Leute kennengelernt?
+A: Ja, ich habe viele Leute getroffen. 
+F: Bist du mit einem Rucksack (m) oder mit einem Koffer / Trolley (m) gereist? 
+A: Ich bin mit beiden, einem Rucksack und einem Koffer gereist. 
+
+
+gar nicht (not at all)- Das Essen in Australien hat gar nicht gut geschmeckt.
+sogar (even)- Ich habe sogar 6 Kilo verloren. 
+ganz (quite)- Das war ganz toll! 
+
+
+Ich denke, dass das gut ist.
+Ich denke, das ist gut. 
+
+
+der Körper(m) - the body
+das Bein (n) / die Beine (pl) - the leg 
+der Hai (m) die Haie
+die Spinne (f)  die Spinnen
+die Schlange (f) die Schlangen 
+gefährlich - dangerous GEFAHR! 
+inside - outside 
+drinnen - draußen 
+Ich habe dir verboten, im Zimmer zu rauchen. 
+
+
+IRREGULÄRE VERBEN
+
+
+Wann hast du mit der Reiseplanung angefangen? 
+Nach wie vielen Stunden Flug bist du angekommen? 
+Hast du einen Sonnenbrand bekommen? 
+Welcher Moment hat dir am besten gefallen? 
+Hast du einen klassischen Reiseführer gelesen? 
+Was / Wo hast du gegessen?
+Bist du in die Wüste gefahren? 
+ 
+KOMPLETT IRREGULÄR 
+
+
+Wo ist dein Flugzeug abgeflogen?
+Wie lange bist du in Melbourne geblieben? 
+Hast du gute Bars / Restaurants gefunden? 
+Bist du oft an den Strand gegangen? 
+Bist / Hast du oft am Strand gelegen? 
+Hast du deiner Mutter Souvenirs mitgebracht? 
+Bist du oft im Meer geschwommen oder auch im Schwimmbad (n)? 
+Bist du rot oder braun geworden? 
+Was hast du getrunken? 
+
+
+
+
+
+
+
+
+
+
+das Bild / die Bilder (n) 
+
+
+Der Mann im Bild 4 trinkt einen Drink (m) allein am Tisch. Er wartet auf eine Freundin. 
+Der Mann im Bild 4 hat einen Drink allein am Tisch getrunken und er hat auf eine Freundin gewartet. 
+
+
+Das zweite Bild zeigt eine teure Rechnung, aber das ist für 3 Speisen.
+Das zweite Bild hat eine teure Rechnung gezeigt, aber das war für 3 Speisen. 
+
+
+Wie viel hat der Mann oder die Personen für die 3 Speisen bezahlt? 
+Der Mann oder die Personen hat / haben 140 Euro bezahlt für die Speisen. 
+
+
+warten auf…
+zeigen 
+die Speise (f) 
+das Gericht (n) 
+das Essen 
+die Rechnung (f) 
+rechnen - to count 
+→ AN (Tisch, Bar, Bahnhof) 
+
+
+der Kunde (m) die Kunden 
+der Passagier (m) die Passagiere 
+
+
+Der Mann wartet auf die Passagiere. Im Bild 11 es gibt zwei Touristen und sie haben das Foto von der Sehenswürdigkeit / den Sehenswürdigkeiten gemacht. 
+
+
+→ Im 13ten Bild hat die Frau Sonne gebraucht. 
+→ Wir brauchen “benutzen” - Der Mann und die Frau im Bild 5 haben einen Stuhl benutzt. 
+→ Im Bild 13 hat sie den Strand besucht. 
+
+
+
+
+die Sonne (f) 
+der Fisch (m) 
+der Stand (m)
+
+
+
+
+Ich koche gerade den Fisch. 
+
+
+(Ich esse gerade. -  I’m eating right now. 
+Ich habe gerade gesessen. - I was eating right now.) 
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+17. Nebensätze
+  
+
+der Satz  / die Sätze
+in diesem Teil 
+to stay - bleiben 
+
+
+Es geht ihr nicht gut.
+Es geht mir gut.
+
+
+
+
+Du hast einen neuen Laptop gekauft, weil dein Laptop alt war. 
+Du hast erzählt, dass der RAM zu klein war. 
+Du hast erzählt, dass dein Laptop zu wenig GB-RAM hatte. 
+
+
+Wenn es regnet, bleibe ich zu Hause. 
+Wenn es sehr stark regnet, nimmst du einen Regenschirm mit. 
+Wenn ich einen Regenschirm mitnehme, regnet es nie / bleibe ich trocken.  
+Ich nehme mit. 
+
+
+der Regenschutz 
+der Regenschirm 
+der Schutz (m) 
+
+
+Ich bleibe zu Hause, wenn es regnet. 
+
+
+Wenn ich einen neuen Laptop brauche, kaufe ich im Internet einen neuen.
+Ich kaufe im Internet einen neuen Laptop, wenn ich einen Laptop brauche. 
+
+
+
+
+(Ich gehe (rein) ins Internet.)
+
+
+
+
+
+
+Ich hatte zu wenig vom Essen. 
+
+
+
+
+WEIL-Sätze
+
+
+….. , weil + SUBJEKT + WHATEVER + gefragt hat 
+
+
+
+
+Heute esse ich, weil ich Hunger habe. 
+Heute habe ich gegessen, weil ich Hunger hatte. 
+Ich habe großen Hunger.
+
+
+Ivan kocht für Betty, weil sie spät nach Hause kommt. 
+Ivan hat für Betty gekocht, weil sie spät nach Hause gekommen ist.
+Ivan kocht für Betty, weil sie nicht kochen kann.  
+Ivan hat für Betty gekocht, weil sie nicht kochen konnte. 
+
+
+wollte / konnte / mochte / durfte / sollte 
+
+
+gekommen 
+
+
+Ich habe Hunger. 
+
+
+anfangen - to start / to begin 
+bald - soon 
+vorher - before 
+danach - after
+
+
+früh - früher
+spät - später
+
+
+der Anfang / das Ende
+die Seite / die Seiten (f) 
+
+
+11. Mai 
+
+
+zurückkommen
+ich bin zurückgekommen 
+gestern
+schon vs. noch
+Ich war / Ich bin gewesen 
+
+
+Wie lange bist du in Krakau geblieben? 
+Ich bin drei Tage in Krakau geblieben. 
+Ich war schon einmal in Krakau, aber meine Freunde waren (noch) nie in Krakau.
+
+
+Ich bin nach Auschwitz gereist. 
+Ist das weit entfernt von Krakau? 
+Liegt das in der Nähe von Krakau? 
+Ja, Auschwitz ist 65 Kilometer (von Krakau) entfernt. 
+Aber es gibt einen Zug von Krakau bis Auschwitz. 
+Wie lange braucht der Zug? Der Zug braucht ca. eine Stunde. 
+
+
+Habt ihr Krakau und Auschwitz an diesem Wochenende besichtigt? 
+Ja, wir sind jeden Tag in Krakau zu Fuß gegangen. 
+Wir sind jeden Tag durch die Stadt / durch Krakau spaziert. 
+
+
+Warum seid ihr nach Krakau gefahren? 
+Ich bin nach Krakau gereist, weil wir die Stadt sehen wollten.
+
+
+Ich war ein Reiseführer / Touristenguide für meine Freunde. 
+
+
+bestellen = to order
+in den Ofen schieben 
+in den Ofen (rein) schieben 
+die Entfernung (f) - the distance 
+spazieren - Ich bin spaziert 
+
+
+Heute esse ich, weil ich noch nicht gegessen habe.
+
+
+  
+
+
+
+Relativsätze
+
+
+  
+
+
+
+Ich habe gehört, dass Krakau eine schöne Stadt ist. Es ist eine schöne Stadt zum Leben. Es ist eine schöne Stadt für Studenten, die gerne Party machen. 
+Der Freund, mit dem ich gerne trinke, kommt morgen um neun Uhr zu mir nach Hause. 
+Das ist der Freund, mit dem ich gerne trinke. 
+Das sind die Freunde, mit denen ich in Krakau war.
+(das Essen / die Speise / das Gericht) 
+Das ist die Speise, die ich bestellt habe. 
+Das ist der Fisch, den ich bestellt habe. 
+
+
+→ die = i quali
+
+
+DASS-Sätze 
+
+
+I think that… I forgot that… I believe that… 
+Ich denke, dass… Ich habe vergessen, dass… Ich glaube, dass…
+
+
+Achtung! NOT for: The book that… ( → Relativsatz! Das Buch, das ich lese, ist sehr interessant.)
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18. movements
+Position - Wo?
+Movement - die Bewegung (f) - Wohin? 
+
+
+through - durch + AKK
+Ich gehe durch die Stadt (f) / durch den Wald (m). 
+
+
+Er geht zurück - He goes back. 
+zurückgehen
+zurückkommen 
+zurückbringen 
+
+
+geradeaus - (nach) links - (nach) rechts
+
+
+WOHIN? vor / hinter → Der Mann geht vor das Krankenhaus. Der Mann ist / steht vor dem Krankenhaus. 
+
+
+
+
+WO? vorne / hinten 
+Er geht nach hinten. Er ist hinten. 
+Er geht nach vorne. Er ist vorne. 
+
+
+rauf / runter
+zu Hause / at home 
+nach Hause / towards home 
+
+
+Wohin? Wo? 
+Bild 1:  Der Mann geht rein. Er ist im Haus. Er ist drinnen. Er geht nach drinnen. 
+Bild 4: Der Mann geht raus. Er ist draußen. Er geht nach draußen. 
+Bild 4: Der Mann bringt den Müll raus. 
+Bild 3: Der Mann geht rauf. Er ist oben. 
+Bild 2: Der geht runter. Dann ist er unten. 
+Bild 2: Der Mann mit dem Müll geht die Treppe runter. 
+
+
+→ anrufen
+→ runtergehen 
+→ raufgehen
+→ rausbringen 
+→ reinbringen 
+
+
+die Treppe (f) die Treppen 
+ 
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tab 20
+die Steuer / die Steuern
+
+
+herausfinden
+(sich) entscheiden 
+es ist passiert 
+
+
+→ Ich habe den gleichen. 
+→ Ich habe denselben. 
+
+
+jemand - someone
+jemandem - Ich gebe jemandem ein Geschenk. DAT
+jemanden AKK 
+
+
+der Laptop (m) 
+
+
+empfehlen - Ich habe empfohlen 
+
+
+Ich empfehle denselben. Das ist ein sehr guter Laptop für billige Laptops. 
+
+
+Das ist der beste von allen.
+
+
+Ich finde Asus am besten. 
+
+
+
+
+[a]Ex 1a
+
+
+1 c
+2 e
+3 d
+4 a
+5 b
+6 f
+
+
+Ex 1b
+
+
+1

@@ -1,0 +1,237 @@
+{
+  "lesson_number": "",
+  "topic": "Subordinate clauses with ob and dass",
+  "summary_en": "This lesson focused on subordinate clauses in German, specifically the difference between 'wenn', 'ob', and 'dass'. The teacher clarified that 'wenn' doesn't always mean 'if' - for indirect questions, German uses 'ob' instead. Students learned how to transform direct questions into indirect questions using 'ob', and how to report what someone says using 'dass'. The lesson covered verb placement in subordinate clauses (verb goes to the end) and practiced converting direct speech into reported speech with these conjunctions.",
+  "summary_it": "Questa lezione si è concentrata sulle proposizioni subordinate in tedesco, specificatamente sulla differenza tra 'wenn', 'ob' e 'dass'. L'insegnante ha chiarito che 'wenn' non significa sempre 'if' - per le domande indirette, il tedesco usa 'ob'. Gli studenti hanno imparato come trasformare domande dirette in domande indirette usando 'ob', e come riportare ciò che qualcuno dice usando 'dass'. La lezione ha coperto la posizione del verbo nelle proposizioni subordinate (il verbo va alla fine) e ha praticato la conversione del discorso diretto in discorso riportato con queste congiunzioni.",
+  "vocabulary": [
+    {
+      "german": "ob",
+      "article": "",
+      "plural": "",
+      "category": "expression",
+      "english": "se (domanda indiretta)",
+      "english": "whether, if (indirect question)",
+      "example_de": "Ich weiß nicht, ob mein Freund bald kommt.",
+      "example_it": "Non so se il mio amico arriva presto.",
+      "level": "A2"
+    },
+    {
+      "german": "dass",
+      "article": "",
+      "plural": "",
+      "category": "expression",
+      "english": "che",
+      "english": "that",
+      "example_de": "Ich weiß, dass mein Freund bald kommt.",
+      "example_it": "So che il mio amico arriva presto.",
+      "level": "A2"
+    },
+    {
+      "german": "indirekt",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "english": "indiretto",
+      "english": "indirect",
+      "example_de": "eine indirekte Frage",
+      "example_it": "una domanda indiretta",
+      "level": "B1"
+    },
+    {
+      "german": "die Frage",
+      "article": "die",
+      "plural": "Fragen",
+      "category": "noun",
+      "english": "la domanda",
+      "english": "question",
+      "example_de": "Kommt dein Freund bald? Das ist eine direkte Frage.",
+      "example_it": "Il tuo amico arriva presto? Questa è una domanda diretta.",
+      "level": "A1"
+    },
+    {
+      "german": "bald",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "english": "presto",
+      "english": "soon",
+      "example_de": "Mein Freund kommt bald.",
+      "example_it": "Il mio amico arriva presto.",
+      "level": "A2"
+    },
+    {
+      "german": "umwandeln",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "english": "trasformare, convertire",
+      "english": "to convert, to transform",
+      "example_de": "Du kannst es in eine Frage umwandeln.",
+      "example_it": "Puoi trasformarlo in una domanda.",
+      "level": "B1"
+    },
+    {
+      "german": "formulieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "english": "formulare",
+      "english": "to formulate",
+      "example_de": "Du kannst es als Frage formulieren.",
+      "example_it": "Puoi formularlo come domanda.",
+      "level": "B1"
+    },
+    {
+      "german": "die Bedingung",
+      "article": "die",
+      "plural": "Bedingungen",
+      "category": "noun",
+      "english": "la condizione",
+      "english": "condition",
+      "example_de": "Wenn es regnet - das ist eine Bedingung.",
+      "example_it": "Se piove - questa è una condizione.",
+      "level": "B1"
+    },
+    {
+      "german": "erzählen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "english": "raccontare",
+      "english": "to tell, to narrate",
+      "example_de": "Ich erzähle, dass mein Freund kommt.",
+      "example_it": "Racconto che il mio amico arriva.",
+      "level": "A2"
+    },
+    {
+      "german": "verwenden",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "english": "usare, utilizzare",
+      "english": "to use",
+      "example_de": "Bei indirekten Fragen verwenden wir 'ob'.",
+      "example_it": "Per le domande indirette usiamo 'ob'.",
+      "level": "A2"
+    },
+    {
+      "german": "bedeuten",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "english": "significare",
+      "english": "to mean",
+      "example_de": "Wenn bedeutet nicht immer 'if'.",
+      "example_it": "Wenn non significa sempre 'if'.",
+      "level": "A2"
+    },
+    {
+      "german": "regnen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "english": "piovere",
+      "english": "to rain",
+      "example_de": "Wenn es regnet, bleibe ich zu Hause.",
+      "example_it": "Se piove, resto a casa.",
+      "level": "A1"
+    },
+    {
+      "german": "zu Hause bleiben",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "english": "restare a casa",
+      "english": "to stay at home",
+      "example_de": "Ich bleibe zu Hause.",
+      "example_it": "Resto a casa.",
+      "level": "A1"
+    },
+    {
+      "german": "der Nebensatz",
+      "article": "der",
+      "plural": "Nebensätze",
+      "category": "noun",
+      "english": "la proposizione subordinata",
+      "english": "subordinate clause",
+      "example_de": "Im Nebensatz steht das Verb am Ende.",
+      "example_it": "Nella proposizione subordinata il verbo sta alla fine.",
+      "level": "B1"
+    }
+  ],
+  "grammar_points": [
+    {
+      "rule": "Indirect questions with 'ob'",
+      "explanation_en": "When transforming a direct yes/no question into an indirect question, German uses 'ob' (not 'wenn'). The verb moves to the end of the subordinate clause. Direct: 'Kommt dein Freund bald?' becomes indirect: 'Ich weiß nicht, ob mein Freund bald kommt.'",
+      "examples": [
+        "Ich weiß nicht, ob mein Freund bald kommt.",
+        "Weißt du, ob es morgen regnet?"
+      ]
+    },
+    {
+      "rule": "Reporting with 'dass'",
+      "explanation_en": "When reporting what someone says or knows (not a question), use 'dass' to introduce the subordinate clause. The verb goes to the end of the clause. Example: 'Mein Freund kommt' becomes 'Ich weiß, dass mein Freund kommt.'",
+      "examples": [
+        "Ich weiß, dass mein Freund bald kommt.",
+        "Er sagt, dass er zu Hause bleibt."
+      ]
+    },
+    {
+      "rule": "Conditional sentences with 'wenn'",
+      "explanation_en": "'Wenn' is used for conditional sentences (if-then situations) and when-clauses, not for indirect yes/no questions. It expresses a condition: 'Wenn es regnet, bleibe ich zu Hause' (If it rains, I stay at home).",
+      "examples": [
+        "Wenn es regnet, bleibe ich zu Hause.",
+        "Wenn mein Freund kommt, gehen wir ins Kino."
+      ]
+    },
+    {
+      "rule": "Verb position in subordinate clauses",
+      "explanation_en": "In all subordinate clauses (introduced by ob, dass, wenn, weil, etc.), the conjugated verb moves to the end of the clause. This is a fundamental rule of German word order.",
+      "examples": [
+        "Ich weiß nicht, ob mein Freund bald kommt.",
+        "Ich weiß, dass mein Freund bald kommt.",
+        "Wenn es regnet, bleibe ich zu Hause."
+      ]
+    }
+  ],
+  "phrases": [
+  {
+    "german": "Ich weiß nicht, ob...",
+    "english": "I don't know if...",
+    "context": "to introduce an indirect question"
+  },
+  {
+    "german": "Ich weiß, dass...",
+    "english": "I know that...",
+    "context": "to report information"
+  },
+  {
+    "german": "bei indirekten Fragen",
+    "english": "in indirect questions",
+    "context": "grammatical expression"
+  },
+  {
+    "german": "Wenn dies, dann passiert dies",
+    "english": "If this, then that happens",
+    "context": "conditional structure"
+  }
+],
+  "homework": "",
+  "comprehension_questions": [
+    {
+      "question_de": "Wann verwenden wir 'ob' in einem Satz?",
+      "answer_de": "Wir verwenden 'ob' bei indirekten Fragen, zum Beispiel: Ich weiß nicht, ob mein Freund bald kommt."
+    },
+    {
+      "question_de": "Was ist der Unterschied zwischen 'wenn' und 'ob'?",
+      "answer_de": "'Wenn' bedeutet 'if' für Bedingungen oder 'when'. 'Ob' bedeutet 'if/whether' nur für indirekte Fragen."
+    },
+    {
+      "question_de": "Wo steht das Verb in einem Nebensatz?",
+      "answer_de": "Das Verb steht am Ende des Nebensatzes."
+    }
+  ],
+  "doc_sections_covered": [
+    "17. Nebensätze"
+  ]
+}

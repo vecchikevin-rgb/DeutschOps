@@ -1,0 +1,14 @@
+.env
+venv/
+__pycache__/
+*.pyc
+token.json
+credentials.json
+Audiolessons/
+*.mp4
+*.mp3
+*.m4a
+*.7z
+ffmpeg.exe
+ffmpeg-*.7z
+doc_snapshots/backups/

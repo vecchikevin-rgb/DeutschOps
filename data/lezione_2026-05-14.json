@@ -1,0 +1,193 @@
+{
+  "summary_en": "This lesson covers greetings for different parts of the day, asking 'how are you' with various responses, and discussing daily routines. Key topics include separable verbs like 'aufstehen', the irregular verb 'schlafen', going home with 'nach Hause', and expressing tiredness. Students practiced dialogues introducing themselves and others, learned time expressions like 'spät' and 'früh', and reviewed numbers. The lesson emphasized the difference between complete and shortened question forms.",
+  "summary_it": "Questa lezione tratta i saluti per diverse parti della giornata, chiedere 'come stai' con varie risposte e discutere routine quotidiane. Gli argomenti chiave includono verbi separabili come 'aufstehen', il verbo irregolare 'schlafen', andare a casa con 'nach Hause' ed esprimere stanchezza. Gli studenti hanno praticato dialoghi di presentazione, imparato espressioni temporali come 'spät' e 'früh', e ripassato i numeri. La lezione ha enfatizzato la differenza tra forme complete e abbreviate delle domande.",
+  "topic": "Saluti, routine quotidiana, verbi separabili",
+  "vocabulary": [
+    {
+      "german": "müde",
+      "article": "",
+      "plural": "",
+      "italian": "stanco/a",
+      "english": "tired",
+      "example_de": "Ich bin müde.",
+      "example_it": "Sono stanco."
+    },
+    {
+      "german": "das Kind",
+      "article": "das",
+      "plural": "die Kinder",
+      "italian": "il bambino / i bambini",
+      "english": "child / children",
+      "example_de": "Die Kinder stehen auf.",
+      "example_it": "I bambini si alzano."
+    },
+    {
+      "german": "aufstehen",
+      "article": "",
+      "plural": "",
+      "italian": "alzarsi",
+      "english": "to stand up, to get up",
+      "example_de": "Ich stehe auf.",
+      "example_it": "Mi alzo."
+    },
+    {
+      "german": "spät",
+      "article": "",
+      "plural": "",
+      "italian": "tardi",
+      "english": "late",
+      "example_de": "Es ist schon spät.",
+      "example_it": "È già tardi."
+    },
+    {
+      "german": "früh",
+      "article": "",
+      "plural": "",
+      "italian": "presto",
+      "english": "early",
+      "example_de": "Ich komme früh.",
+      "example_it": "Vengo presto."
+    },
+    {
+      "german": "der Schulbus",
+      "article": "der",
+      "plural": "die Schulbusse",
+      "italian": "lo scuolabus",
+      "english": "school bus",
+      "example_de": "Der Schulbus kommt in fünf Minuten.",
+      "example_it": "Lo scuolabus arriva tra cinque minuti."
+    },
+    {
+      "german": "schlafen",
+      "article": "",
+      "plural": "",
+      "italian": "dormire",
+      "english": "to sleep",
+      "example_de": "Ich gehe schlafen.",
+      "example_it": "Vado a dormire."
+    },
+    {
+      "german": "schlecht",
+      "article": "",
+      "plural": "",
+      "italian": "male",
+      "english": "bad",
+      "example_de": "Mir geht es schlecht.",
+      "example_it": "Sto male."
+    },
+    {
+      "german": "sehr",
+      "article": "",
+      "plural": "",
+      "italian": "molto",
+      "english": "very",
+      "example_de": "Sehr gut!",
+      "example_it": "Molto bene!"
+    },
+    {
+      "german": "der Kurs",
+      "article": "der",
+      "plural": "die Kurse",
+      "italian": "il corso",
+      "english": "course",
+      "example_de": "Der Kurs ist zu Ende.",
+      "example_it": "Il corso è finito."
+    }
+  ],
+  "grammar_points": [
+    {
+      "rule": "Verbi separabili (Trennbare Verben)",
+      "explanation_it": "Alcuni verbi in tedesco sono composti da un prefisso separabile (come 'auf') e un verbo base (come 'stehen'). Nella frase, il prefisso va alla fine: 'Ich stehe auf' (mi alzo). All'infinito il verbo è unito: 'aufstehen'.",
+      "examples": [
+        "Ich stehe auf",
+        "Du stehst auf",
+        "Die Kinder stehen auf"
+      ]
+    },
+    {
+      "rule": "Verbi irregolari con cambio vocalico (a → ä)",
+      "explanation_it": "Alcuni verbi cambiano la vocale 'a' in 'ä' alla seconda e terza persona singolare. Esempio: 'schlafen' diventa 'du schläfst' e 'er/sie/es schläft'.",
+      "examples": [
+        "Ich schlafe",
+        "Du schläfst",
+        "Er schläft",
+        "Wir schlafen"
+      ]
+    },
+    {
+      "rule": "Wie geht's? / Wie geht es dir?",
+      "explanation_it": "'Wie geht's?' è la forma abbreviata di 'Wie geht es dir?' e significa 'Come stai?'. Si può rispondere con: gut (bene), schlecht (male), nicht so gut (non tanto bene), sehr gut (molto bene).",
+      "examples": [
+        "Wie geht's? - Gut!",
+        "Wie geht es dir? - Nicht so gut",
+        "Wie geht's? - Sehr gut, danke!"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "german": "Wie geht's?",
+      "italian": "Come stai?",
+      "context": "saluto informale quotidiano"
+    },
+    {
+      "german": "Ich bin müde.",
+      "italian": "Sono stanco/a.",
+      "context": "esprimere stanchezza"
+    },
+    {
+      "german": "Guten Morgen!",
+      "italian": "Buongiorno! (mattina)",
+      "context": "saluto mattutino"
+    },
+    {
+      "german": "Es ist schon spät.",
+      "italian": "È già tardi.",
+      "context": "riferimento temporale"
+    },
+    {
+      "german": "Ich gehe nach Hause.",
+      "italian": "Vado a casa.",
+      "context": "esprimere destinazione casa"
+    },
+    {
+      "german": "Ich gehe schlafen.",
+      "italian": "Vado a dormire.",
+      "context": "esprimere intenzione di andare a letto"
+    },
+    {
+      "german": "Gute Nacht!",
+      "italian": "Buonanotte!",
+      "context": "saluto serale/notturno"
+    },
+    {
+      "german": "Der Kurs ist zu Ende.",
+      "italian": "Il corso è finito.",
+      "context": "fine di un'attività"
+    },
+    {
+      "german": "Bis morgen!",
+      "italian": "A domani!",
+      "context": "saluto di commiato"
+    },
+    {
+      "german": "Nicht so gut.",
+      "italian": "Non tanto bene.",
+      "context": "risposta a 'come stai'"
+    }
+  ],
+  "comprehension_questions": [
+    {
+      "question_de": "Was ist der Unterschied zwischen 'aufstehen' im Infinitiv und in einem Satz?",
+      "answer_de": "Im Infinitiv ist 'aufstehen' zusammen geschrieben. In einem Satz wird es getrennt: 'Ich stehe auf' - das Präfix 'auf' geht ans Ende."
+    },
+    {
+      "question_de": "Wie konjugiert man 'schlafen' in der zweiten Person Singular?",
+      "answer_de": "Du schläfst (mit Umlaut ä)."
+    },
+    {
+      "question_de": "Was sagt man auf Deutsch, wenn man nach Hause geht?",
+      "answer_de": "Ich gehe nach Hause."
+    }
+  ]
+}

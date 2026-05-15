@@ -1,0 +1,5354 @@
+{
+  "vocabulary": [
+    {
+      "german": "arbeiten",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "lavorare",
+      "english": "to work",
+      "example_de": "Ich arbeite als Produktionsmanager.",
+      "level": "A1"
+    },
+    {
+      "german": "spielen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "giocare",
+      "english": "to play",
+      "example_de": "Hans spielt gern Tennis.",
+      "level": "A1"
+    },
+    {
+      "german": "singen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "cantare",
+      "english": "to sing",
+      "example_de": "Ich singe gern.",
+      "level": "A1"
+    },
+    {
+      "german": "hören",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "ascoltare",
+      "english": "to listen to",
+      "example_de": "Ich höre gern Musik.",
+      "level": "A1"
+    },
+    {
+      "german": "machen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "fare",
+      "english": "to do",
+      "example_de": "Was machst du gern?",
+      "level": "A1"
+    },
+    {
+      "german": "hassen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "odiare",
+      "english": "to hate",
+      "example_de": "Torsten hasst Putzen.",
+      "level": "B1"
+    },
+    {
+      "german": "putzen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "pulire",
+      "english": "to clean",
+      "example_de": "Ich putze nicht gern.",
+      "level": "A1"
+    },
+    {
+      "german": "wählen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "scegliere / eleggere",
+      "english": "to choose / to elect",
+      "example_de": "Ich wähle eine Option.",
+      "level": "A1"
+    },
+    {
+      "german": "kaufen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "comprare",
+      "english": "to buy",
+      "example_de": "Ich kaufe neue Schuhe.",
+      "level": "A1"
+    },
+    {
+      "german": "brauchen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "avere bisogno",
+      "english": "to need",
+      "example_de": "Ich brauche ein neues Handy.",
+      "level": "A1"
+    },
+    {
+      "german": "benutzen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "usare",
+      "english": "to use",
+      "example_de": "Ich benutze ein Smartphone.",
+      "level": "A1"
+    },
+    {
+      "german": "besuchen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "visitare",
+      "english": "to visit",
+      "example_de": "Ich besuche einen alten Freund.",
+      "level": "A1"
+    },
+    {
+      "german": "kennen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "conoscere",
+      "english": "to know (conoscere)",
+      "example_de": "Ich kenne ein gutes Restaurant.",
+      "level": "A1"
+    },
+    {
+      "german": "wünschen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "desiderare",
+      "english": "to wish",
+      "example_de": "Ich wünsche dir einen schönen Tag.",
+      "level": "A1"
+    },
+    {
+      "german": "träumen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "sognare",
+      "english": "to dream",
+      "example_de": "Ich träume einen Traum.",
+      "level": "A1"
+    },
+    {
+      "german": "kosten",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "costare",
+      "english": "to cost",
+      "example_de": "Wie viel kostet es?",
+      "level": "A1"
+    },
+    {
+      "german": "frühstücken",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "fare colazione",
+      "english": "to have breakfast",
+      "example_de": "Ich frühstücke um 8 Uhr.",
+      "level": "A1"
+    },
+    {
+      "german": "beschreiben",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "descrivere",
+      "english": "to describe",
+      "example_de": "Kannst du Frau Kean beschreiben?",
+      "level": "A1"
+    },
+    {
+      "german": "rufen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "chiamare",
+      "english": "to call",
+      "example_de": "Ich rufe dich an.",
+      "level": "A1"
+    },
+    {
+      "german": "denken",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "pensare",
+      "english": "to think",
+      "example_de": "Ich denke an dich.",
+      "level": "A1"
+    },
+    {
+      "german": "glauben",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "credere",
+      "english": "to believe",
+      "example_de": "Ich glaube dir.",
+      "level": "A1"
+    },
+    {
+      "german": "passen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "andare bene / adattarsi",
+      "english": "to pass / to fit",
+      "example_de": "Das passt gut.",
+      "level": "A1"
+    },
+    {
+      "german": "rauchen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "fumare",
+      "english": "to smoke",
+      "example_de": "Er raucht nicht.",
+      "level": "A1"
+    },
+    {
+      "german": "fragen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "chiedere",
+      "english": "to ask",
+      "example_de": "Ich frage meinen Lehrer.",
+      "level": "A1"
+    },
+    {
+      "german": "antworten",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "rispondere",
+      "english": "to answer",
+      "example_de": "Ich antworte auf die Frage.",
+      "level": "A1"
+    },
+    {
+      "german": "sagen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "dire",
+      "english": "to say",
+      "example_de": "Was sagst du?",
+      "level": "A1"
+    },
+    {
+      "german": "bekommen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "ricevere",
+      "english": "to get",
+      "example_de": "Ich bekomme ein Geschenk.",
+      "level": "A1"
+    },
+    {
+      "german": "bestellen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "ordinare",
+      "english": "to order",
+      "example_de": "Ich bestelle eine Pizza.",
+      "level": "A1"
+    },
+    {
+      "german": "leben",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "vivere",
+      "english": "to live",
+      "example_de": "Ich lebe in Italien.",
+      "level": "A1"
+    },
+    {
+      "german": "wohnen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "abitare",
+      "english": "to reside",
+      "example_de": "Ich wohne in Bergamo.",
+      "level": "A1"
+    },
+    {
+      "german": "gehen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "andare",
+      "english": "to go",
+      "example_de": "Ich gehe ins Kino.",
+      "level": "A1"
+    },
+    {
+      "german": "stehen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "stare in piedi",
+      "english": "to stand (up)",
+      "example_de": "Ich stehe hier.",
+      "level": "A1"
+    },
+    {
+      "german": "bringen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "portare",
+      "english": "to bring",
+      "example_de": "Ich bringe das Buch.",
+      "level": "A1"
+    },
+    {
+      "german": "verstehen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "capire",
+      "english": "to understand",
+      "example_de": "Ich kann das nicht verstehen.",
+      "level": "A1"
+    },
+    {
+      "german": "zeigen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "mostrare",
+      "english": "to show",
+      "example_de": "Ich zeige dir den Weg.",
+      "level": "A1"
+    },
+    {
+      "german": "suchen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "cercare",
+      "english": "to search",
+      "example_de": "Ich suche eine neue Wohnung.",
+      "level": "A1"
+    },
+    {
+      "german": "feiern",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "festeggiare",
+      "english": "to party",
+      "example_de": "Wir feiern heute.",
+      "level": "A1"
+    },
+    {
+      "german": "schmecken",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "avere sapore",
+      "english": "to taste",
+      "example_de": "Das schmeckt gut.",
+      "level": "A1"
+    },
+    {
+      "german": "fliegen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "volare",
+      "english": "to fly",
+      "example_de": "Ich fliege nach Berlin.",
+      "level": "A1"
+    },
+    {
+      "german": "liegen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "stare sdraiato",
+      "english": "to lay",
+      "example_de": "Das Buch liegt auf dem Tisch.",
+      "level": "A1"
+    },
+    {
+      "german": "erziehen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "educare",
+      "english": "to educate",
+      "example_de": "Eltern erziehen ihre Kinder.",
+      "level": "B1"
+    },
+    {
+      "german": "bleiben",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "rimanere",
+      "english": "to stay / remain",
+      "example_de": "Ich bleibe zu Hause.",
+      "level": "A1"
+    },
+    {
+      "german": "ergänzen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "aggiungere",
+      "english": "to add",
+      "example_de": "Ergänzen Sie die Sätze.",
+      "level": "A1"
+    },
+    {
+      "german": "bestehen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "essere composto di / superare",
+      "english": "to be made of / to pass (exam)",
+      "example_de": "Ich bestehe die Prüfung.",
+      "level": "A2"
+    },
+    {
+      "german": "bilden",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "formare",
+      "english": "to form",
+      "example_de": "Bilden Sie einen Satz.",
+      "level": "A1"
+    },
+    {
+      "german": "zählen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "contare",
+      "english": "to count",
+      "example_de": "Ich zähle von eins bis zehn.",
+      "level": "A1"
+    },
+    {
+      "german": "überfluten",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "inondare",
+      "english": "to overflow",
+      "example_de": "Der Fluss überflutet die Stadt.",
+      "level": "C2"
+    },
+    {
+      "german": "erreichen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "raggiungere",
+      "english": "to reach",
+      "example_de": "Ich erreiche mein Ziel.",
+      "level": "A2"
+    },
+    {
+      "german": "passieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "accadere",
+      "english": "to happen",
+      "example_de": "Was ist passiert?",
+      "level": "A1"
+    },
+    {
+      "german": "sein",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "essere",
+      "english": "to be",
+      "example_de": "Ich bin 30 Jahre alt.",
+      "level": "A1"
+    },
+    {
+      "german": "heißen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "chiamarsi",
+      "english": "to be called",
+      "example_de": "Ich heiße Kevin.",
+      "level": "A1"
+    },
+    {
+      "german": "schauen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "guardare",
+      "english": "to watch",
+      "example_de": "Ich schaue gerne Filme.",
+      "level": "A2"
+    },
+    {
+      "german": "lesen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "leggere",
+      "english": "to read",
+      "example_de": "Ich lese ein interessantes Buch.",
+      "level": "A1"
+    },
+    {
+      "german": "treffen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "incontrare",
+      "english": "to meet",
+      "example_de": "Ich treffe meine Freunde.",
+      "level": "A1"
+    },
+    {
+      "german": "vergessen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "dimenticare",
+      "english": "to forget",
+      "example_de": "Ich vergesse meinen Termin.",
+      "level": "A1"
+    },
+    {
+      "german": "tragen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "indossare / portare",
+      "english": "to wear / to carry",
+      "example_de": "Er trägt einen Hut.",
+      "level": "A1"
+    },
+    {
+      "german": "schlafen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "dormire",
+      "english": "to sleep",
+      "example_de": "Ich schlafe gut.",
+      "level": "A1"
+    },
+    {
+      "german": "wissen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "sapere",
+      "english": "to know (sapere)",
+      "example_de": "Ich weiß es nicht.",
+      "level": "A1"
+    },
+    {
+      "german": "nehmen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "prendere",
+      "english": "to take",
+      "example_de": "Ich nehme den Bus.",
+      "level": "A1"
+    },
+    {
+      "german": "essen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "mangiare",
+      "english": "to eat",
+      "example_de": "Ich esse gerne Pizza.",
+      "level": "A1"
+    },
+    {
+      "german": "fahren",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "andare (con mezzo di trasporto)",
+      "english": "to go with means of transport",
+      "example_de": "Ich fahre mit dem Bus.",
+      "level": "A1"
+    },
+    {
+      "german": "gefallen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "piacere molto",
+      "english": "to like a lot (emotionally)",
+      "example_de": "Das Buch gefällt mir.",
+      "level": "A1"
+    },
+    {
+      "german": "geben",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "dare",
+      "english": "to give",
+      "example_de": "Ich gebe dir das Buch.",
+      "level": "A1"
+    },
+    {
+      "german": "anrufen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "telefonare",
+      "english": "to call with phone",
+      "example_de": "Ich rufe dich an.",
+      "level": "A1"
+    },
+    {
+      "german": "einkaufen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "fare la spesa",
+      "english": "to go shopping",
+      "example_de": "Ich kaufe ein.",
+      "level": "A1"
+    },
+    {
+      "german": "aufstehen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "alzarsi",
+      "english": "to stand up / get up",
+      "example_de": "Ich stehe um 7 Uhr auf.",
+      "level": "A1"
+    },
+    {
+      "german": "fernsehen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "guardare la TV",
+      "english": "to watch TV",
+      "example_de": "Ich sehe gerne fern.",
+      "level": "A1"
+    },
+    {
+      "german": "aufwachen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "svegliarsi",
+      "english": "to wake up",
+      "example_de": "Ich wache um 6 Uhr auf.",
+      "level": "B1"
+    },
+    {
+      "german": "aussteigen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "scendere / uscire",
+      "english": "to get out of / exit",
+      "example_de": "Ich steige aus dem Bus aus.",
+      "level": "A1"
+    },
+    {
+      "german": "anbieten",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "offrire",
+      "english": "to offer",
+      "example_de": "Ich biete dir Hilfe an.",
+      "level": "A1"
+    },
+    {
+      "german": "wollen",
+      "article": "",
+      "plural": "",
+      "category": "verb_modal",
+      "italian": "volere",
+      "english": "to want",
+      "example_de": "Ich will nach Berlin fahren.",
+      "level": "A1"
+    },
+    {
+      "german": "können",
+      "article": "",
+      "plural": "",
+      "category": "verb_modal",
+      "italian": "potere / essere capace",
+      "english": "to be able to / can",
+      "example_de": "Ich kann Deutsch sprechen.",
+      "level": "A1"
+    },
+    {
+      "german": "müssen",
+      "article": "",
+      "plural": "",
+      "category": "verb_modal",
+      "italian": "dovere",
+      "english": "must / to have to",
+      "example_de": "Ich muss arbeiten.",
+      "level": "A1"
+    },
+    {
+      "german": "dürfen",
+      "article": "",
+      "plural": "",
+      "category": "verb_modal",
+      "italian": "potere (permesso)",
+      "english": "to be allowed to",
+      "example_de": "Ich darf hier parken.",
+      "level": "A1"
+    },
+    {
+      "german": "mögen",
+      "article": "",
+      "plural": "",
+      "category": "verb_modal",
+      "italian": "piacere / gradire",
+      "english": "to like / would like",
+      "example_de": "Ich mag Pizza. Ich möchte Kaffee.",
+      "level": "A1"
+    },
+    {
+      "german": "trinken",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "bere",
+      "english": "to drink",
+      "example_de": "Ich trinke gerne Wein.",
+      "level": "A1"
+    },
+    {
+      "german": "sammeln",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "collezionare",
+      "english": "to collect",
+      "example_de": "Er sammelt gerne Briefmarken.",
+      "level": "A1"
+    },
+    {
+      "german": "schreiben",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "scrivere",
+      "english": "to write",
+      "example_de": "Er schreibt gern Computerprogramme.",
+      "level": "A1"
+    },
+    {
+      "german": "tanzen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "ballare",
+      "english": "to dance",
+      "example_de": "Ich tanze gern Salsa.",
+      "level": "A1"
+    },
+    {
+      "german": "malen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "dipingere",
+      "english": "to paint",
+      "example_de": "Ich male Bilder.",
+      "level": "A1"
+    },
+    {
+      "german": "wandern",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "fare escursionismo",
+      "english": "to hike",
+      "example_de": "Ich wandere nicht gern.",
+      "level": "A1"
+    },
+    {
+      "german": "fotografieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "fotografare",
+      "english": "to photograph",
+      "example_de": "Ich fotografiere gerne.",
+      "level": "A1"
+    },
+    {
+      "german": "reisen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "viaggiare",
+      "english": "to travel",
+      "example_de": "Ich reise gern.",
+      "level": "A1"
+    },
+    {
+      "german": "schwimmen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "nuotare",
+      "english": "to swim",
+      "example_de": "Ich schwimme gern.",
+      "level": "A1"
+    },
+    {
+      "german": "lernen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "imparare",
+      "english": "to learn",
+      "example_de": "Ich lerne Deutsch.",
+      "level": "A1"
+    },
+    {
+      "german": "laufen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "correre",
+      "english": "to run / jog",
+      "example_de": "Ich laufe jeden Tag.",
+      "level": "A1"
+    },
+    {
+      "german": "joggen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "fare jogging",
+      "english": "to jog",
+      "example_de": "Ich jogge morgens.",
+      "level": "A1"
+    },
+    {
+      "german": "surfen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "fare surf",
+      "english": "to surf",
+      "example_de": "Ich surfe gerne.",
+      "level": "A1"
+    },
+    {
+      "german": "kochen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "cucinare",
+      "english": "to cook",
+      "example_de": "Ich koche gerne.",
+      "level": "A1"
+    },
+    {
+      "german": "backen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "cuocere al forno",
+      "english": "to bake",
+      "example_de": "Ich backe einen Kuchen.",
+      "level": "A1"
+    },
+    {
+      "german": "studieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "studiare (università)",
+      "english": "to study (university)",
+      "example_de": "Ich studiere Chemie.",
+      "level": "A1"
+    },
+    {
+      "german": "sprechen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "parlare",
+      "english": "to speak",
+      "example_de": "Ich spreche Deutsch.",
+      "level": "A1"
+    },
+    {
+      "german": "kommen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "venire",
+      "english": "to come",
+      "example_de": "Ich komme aus Italien.",
+      "level": "A1"
+    },
+    {
+      "german": "haben",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "avere",
+      "english": "to have",
+      "example_de": "Ich habe einen Bruder.",
+      "level": "A1"
+    },
+    {
+      "german": "sitzen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "essere seduto",
+      "english": "to sit",
+      "example_de": "Sie sitzt im Bus.",
+      "level": "A1"
+    },
+    {
+      "german": "sehen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "vedere",
+      "english": "to see",
+      "example_de": "Ich kann das nicht sehen.",
+      "level": "A1"
+    },
+    {
+      "german": "werden",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "diventare",
+      "english": "to become",
+      "example_de": "Ich träume davon, ein Pilot zu werden.",
+      "level": "A1"
+    },
+    {
+      "german": "warten",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "aspettare",
+      "english": "to wait",
+      "example_de": "Er wartet auf den Bus.",
+      "level": "A1"
+    },
+    {
+      "german": "spazieren gehen",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "fare una passeggiata",
+      "english": "to go for a walk",
+      "example_de": "Ich gehe gerne spazieren.",
+      "level": "A1"
+    },
+    {
+      "german": "ins Kino gehen",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "andare al cinema",
+      "english": "to go to the cinema",
+      "example_de": "Ich gehe ins Kino.",
+      "level": "A1"
+    },
+    {
+      "german": "shoppen gehen",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "andare a fare shopping",
+      "english": "to go shopping",
+      "example_de": "Ich gehe shoppen.",
+      "level": "A1"
+    },
+    {
+      "german": "Sport machen",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "fare sport",
+      "english": "to do sports",
+      "example_de": "Ich mache gerne Sport.",
+      "level": "A1"
+    },
+    {
+      "german": "Yoga machen",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "fare yoga",
+      "english": "to do yoga",
+      "example_de": "Ich mache Yoga.",
+      "level": "A1"
+    },
+    {
+      "german": "Fotos machen",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "fare foto",
+      "english": "to take photos",
+      "example_de": "Mein Handy macht schöne Fotos.",
+      "level": "A1"
+    },
+    {
+      "german": "Fußball spielen",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "giocare a calcio",
+      "english": "to play football",
+      "example_de": "Er spielt gern Fußball.",
+      "level": "A1"
+    },
+    {
+      "german": "Karten spielen",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "giocare a carte",
+      "english": "to play cards",
+      "example_de": "Wir spielen Karten.",
+      "level": "A1"
+    },
+    {
+      "german": "Gitarre spielen",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "suonare la chitarra",
+      "english": "to play guitar",
+      "example_de": "Ich spiele gern Gitarre.",
+      "level": "A1"
+    },
+    {
+      "german": "Fahrrad fahren",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "andare in bicicletta",
+      "english": "to ride a bicycle",
+      "example_de": "Ich fahre gern Fahrrad.",
+      "level": "A1"
+    },
+    {
+      "german": "Motorrad fahren",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "andare in moto",
+      "english": "to ride a motorcycle",
+      "example_de": "Ich fahre lieber Motorrad.",
+      "level": "A1"
+    },
+    {
+      "german": "Ski fahren",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "sciare",
+      "english": "to ski",
+      "example_de": "Ich fahre gerne Ski.",
+      "level": "A1"
+    },
+    {
+      "german": "Skateboard fahren",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "andare in skateboard",
+      "english": "to skateboard",
+      "example_de": "Kevin fährt Skateboard.",
+      "level": "A1"
+    },
+    {
+      "german": "Snowboard fahren",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "fare snowboard",
+      "english": "to snowboard",
+      "example_de": "Ich fahre lieber Snowboard.",
+      "level": "A1"
+    },
+    {
+      "german": "im Garten arbeiten",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "lavorare in giardino",
+      "english": "to work in the garden",
+      "example_de": "Ich arbeite gerne im Garten.",
+      "level": "A1"
+    },
+    {
+      "german": "Mittagessen essen",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "pranzare",
+      "english": "to have lunch",
+      "example_de": "Ich esse zu Mittag.",
+      "level": "A1"
+    },
+    {
+      "german": "Abendessen essen",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "cenare",
+      "english": "to have dinner",
+      "example_de": "Ich esse zu Abend.",
+      "level": "A1"
+    },
+    {
+      "german": "der Wein",
+      "article": "der",
+      "plural": "Weine",
+      "category": "noun",
+      "italian": "il vino",
+      "english": "wine",
+      "example_de": "Ich trinke gerne Wein.",
+      "level": "A1"
+    },
+    {
+      "german": "das Tennis",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "il tennis",
+      "english": "tennis",
+      "example_de": "Hans spielt gern Tennis.",
+      "level": "A1"
+    },
+    {
+      "german": "die Briefmarke",
+      "article": "die",
+      "plural": "Briefmarken",
+      "category": "noun",
+      "italian": "il francobollo",
+      "english": "stamp",
+      "example_de": "Er sammelt gerne Briefmarken.",
+      "level": "A1"
+    },
+    {
+      "german": "der Kriminalroman",
+      "article": "der",
+      "plural": "Kriminalromane",
+      "category": "noun",
+      "italian": "il romanzo giallo",
+      "english": "crime novel",
+      "example_de": "Sie liest gern Kriminalromane.",
+      "level": "A1"
+    },
+    {
+      "german": "das Computerprogramm",
+      "article": "das",
+      "plural": "Computerprogramme",
+      "category": "noun",
+      "italian": "il programma per computer",
+      "english": "computer program",
+      "example_de": "Er schreibt gern Computerprogramme.",
+      "level": "A1"
+    },
+    {
+      "german": "die Tochter",
+      "article": "die",
+      "plural": "Töchter",
+      "category": "noun",
+      "italian": "la figlia",
+      "english": "daughter",
+      "example_de": "Seine Tochter heißt Marie.",
+      "level": "A1"
+    },
+    {
+      "german": "der Sohn",
+      "article": "der",
+      "plural": "Söhne",
+      "category": "noun",
+      "italian": "il figlio",
+      "english": "son",
+      "example_de": "Sein Sohn ist vier Jahre alt.",
+      "level": "A1"
+    },
+    {
+      "german": "der Fußball",
+      "article": "der",
+      "plural": "Fußbälle",
+      "category": "noun",
+      "italian": "il calcio",
+      "english": "football / soccer",
+      "example_de": "Er spielt gern Fußball.",
+      "level": "A1"
+    },
+    {
+      "german": "die Musik",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "la musica",
+      "english": "music",
+      "example_de": "Ich höre gerne Musik.",
+      "level": "A1"
+    },
+    {
+      "german": "der Podcast",
+      "article": "der",
+      "plural": "Podcasts",
+      "category": "noun",
+      "italian": "il podcast",
+      "english": "podcast",
+      "example_de": "Ich höre gerne Podcasts.",
+      "level": "A1"
+    },
+    {
+      "german": "das Buch",
+      "article": "das",
+      "plural": "Bücher",
+      "category": "noun",
+      "italian": "il libro",
+      "english": "book",
+      "example_de": "Ich lese gerne Bücher.",
+      "level": "A1"
+    },
+    {
+      "german": "die Zeitung",
+      "article": "die",
+      "plural": "Zeitungen",
+      "category": "noun",
+      "italian": "il giornale",
+      "english": "newspaper",
+      "example_de": "Ich lese gerne Zeitungen.",
+      "level": "A1"
+    },
+    {
+      "german": "das Bier",
+      "article": "das",
+      "plural": "Biere",
+      "category": "noun",
+      "italian": "la birra",
+      "english": "beer",
+      "example_de": "Ich trinke gerne Bier.",
+      "level": "A1"
+    },
+    {
+      "german": "der Reis",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "il riso",
+      "english": "rice",
+      "example_de": "Ich esse gerne Reis.",
+      "level": "A1"
+    },
+    {
+      "german": "die Suppe",
+      "article": "die",
+      "plural": "Suppen",
+      "category": "noun",
+      "italian": "la zuppa",
+      "english": "soup",
+      "example_de": "Ich koche nicht gern Suppen.",
+      "level": "A1"
+    },
+    {
+      "german": "das Fahrrad",
+      "article": "das",
+      "plural": "Fahrräder",
+      "category": "noun",
+      "italian": "la bicicletta",
+      "english": "bicycle",
+      "example_de": "Ich fahre gern Fahrrad.",
+      "level": "A1"
+    },
+    {
+      "german": "das Motorrad",
+      "article": "das",
+      "plural": "Motorräder",
+      "category": "noun",
+      "italian": "la moto",
+      "english": "motorcycle",
+      "example_de": "Ich fahre lieber Motorrad.",
+      "level": "A1"
+    },
+    {
+      "german": "der Actionfilm",
+      "article": "der",
+      "plural": "Actionfilme",
+      "category": "noun",
+      "italian": "il film d'azione",
+      "english": "action film",
+      "example_de": "Ich schaue gerne Actionfilme.",
+      "level": "A1"
+    },
+    {
+      "german": "die Schwester",
+      "article": "die",
+      "plural": "Schwestern",
+      "category": "noun",
+      "italian": "la sorella",
+      "english": "sister",
+      "example_de": "Ich habe eine Schwester.",
+      "level": "A1"
+    },
+    {
+      "german": "der Bruder",
+      "article": "der",
+      "plural": "Brüder",
+      "category": "noun",
+      "italian": "il fratello",
+      "english": "brother",
+      "example_de": "Ich habe einen Bruder.",
+      "level": "A1"
+    },
+    {
+      "german": "der Vorname",
+      "article": "der",
+      "plural": "Vornamen",
+      "category": "noun",
+      "italian": "il nome",
+      "english": "first name",
+      "example_de": "Mein Vorname ist Kevin.",
+      "level": "A1"
+    },
+    {
+      "german": "der Familienname",
+      "article": "der",
+      "plural": "Familiennamen",
+      "category": "noun",
+      "italian": "il cognome",
+      "english": "surname / family name",
+      "example_de": "Mein Familienname ist Rossi.",
+      "level": "A1"
+    },
+    {
+      "german": "die Muttersprache",
+      "article": "die",
+      "plural": "Muttersprachen",
+      "category": "noun",
+      "italian": "la lingua madre",
+      "english": "mother tongue",
+      "example_de": "Meine Muttersprache ist Italienisch.",
+      "level": "A1"
+    },
+    {
+      "german": "die Sprache",
+      "article": "die",
+      "plural": "Sprachen",
+      "category": "noun",
+      "italian": "la lingua",
+      "english": "language",
+      "example_de": "Welche Sprachen sprichst du?",
+      "level": "A1"
+    },
+    {
+      "german": "die Chemie",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "la chimica",
+      "english": "chemistry",
+      "example_de": "Ich studiere Chemie.",
+      "level": "A1"
+    },
+    {
+      "german": "der Produktionsmanager",
+      "article": "der",
+      "plural": "Produktionsmanager",
+      "category": "noun",
+      "italian": "il responsabile della produzione",
+      "english": "production manager",
+      "example_de": "Ich arbeite als Produktionsmanager.",
+      "level": "A2"
+    },
+    {
+      "german": "der Sektor",
+      "article": "der",
+      "plural": "Sektoren",
+      "category": "noun",
+      "italian": "il settore",
+      "english": "sector",
+      "example_de": "Ich arbeite im Chemiesektor.",
+      "level": "A2"
+    },
+    {
+      "german": "der Bäcker",
+      "article": "der",
+      "plural": "Bäcker",
+      "category": "noun",
+      "italian": "il fornaio",
+      "english": "baker",
+      "example_de": "Ich arbeite als Bäcker.",
+      "level": "A1"
+    },
+    {
+      "german": "die Bäckerei",
+      "article": "die",
+      "plural": "Bäckereien",
+      "category": "noun",
+      "italian": "il panificio",
+      "english": "bakery",
+      "example_de": "Ich arbeite in der Bäckerei.",
+      "level": "A1"
+    },
+    {
+      "german": "der Grafikdesigner",
+      "article": "der",
+      "plural": "Grafikdesigner",
+      "category": "noun",
+      "italian": "il grafico",
+      "english": "graphic designer",
+      "example_de": "Mein Bruder arbeitet als Grafikdesigner.",
+      "level": "A2"
+    },
+    {
+      "german": "der Bereich",
+      "article": "der",
+      "plural": "Bereiche",
+      "category": "noun",
+      "italian": "l'ambito / il settore",
+      "english": "area / field",
+      "example_de": "Er arbeitet im Bereich Grafikdesign.",
+      "level": "A2"
+    },
+    {
+      "german": "das Grafikdesign",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "il design grafico",
+      "english": "graphic design",
+      "example_de": "Er arbeitet im Bereich Grafikdesign.",
+      "level": "A2"
+    },
+    {
+      "german": "das Hobby",
+      "article": "das",
+      "plural": "Hobbys",
+      "category": "noun",
+      "italian": "l'hobby",
+      "english": "hobby",
+      "example_de": "Was sind deine Hobbys?",
+      "level": "A1"
+    },
+    {
+      "german": "der Lehrer",
+      "article": "der",
+      "plural": "Lehrer",
+      "category": "noun",
+      "italian": "l'insegnante (m)",
+      "english": "teacher (male)",
+      "example_de": "Torsten ist ein Lehrer.",
+      "level": "A1"
+    },
+    {
+      "german": "die Lehrerin",
+      "article": "die",
+      "plural": "Lehrerinnen",
+      "category": "noun",
+      "italian": "l'insegnante (f)",
+      "english": "teacher (female)",
+      "example_de": "Meike ist eine Lehrerin.",
+      "level": "A1"
+    },
+    {
+      "german": "die Schule",
+      "article": "die",
+      "plural": "Schulen",
+      "category": "noun",
+      "italian": "la scuola",
+      "english": "school",
+      "example_de": "Ich arbeite in der Schule.",
+      "level": "A1"
+    },
+    {
+      "german": "der Film",
+      "article": "der",
+      "plural": "Filme",
+      "category": "noun",
+      "italian": "il film",
+      "english": "film / movie",
+      "example_de": "Ich schaue gerne Filme.",
+      "level": "A1"
+    },
+    {
+      "german": "das Kino",
+      "article": "das",
+      "plural": "Kinos",
+      "category": "noun",
+      "italian": "il cinema",
+      "english": "cinema",
+      "example_de": "Ich gehe ins Kino.",
+      "level": "A1"
+    },
+    {
+      "german": "das Interesse",
+      "article": "das",
+      "plural": "Interessen",
+      "category": "noun",
+      "italian": "l'interesse",
+      "english": "interest",
+      "example_de": "Was sind deine Interessen?",
+      "level": "A1"
+    },
+    {
+      "german": "die Kunst",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "l'arte",
+      "english": "art",
+      "example_de": "Meine Interessen sind Kunst und Musik.",
+      "level": "A1"
+    },
+    {
+      "german": "der Computer",
+      "article": "der",
+      "plural": "Computer",
+      "category": "noun",
+      "italian": "il computer",
+      "english": "computer",
+      "example_de": "Ich habe einen Computer.",
+      "level": "A1"
+    },
+    {
+      "german": "die Mode",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "la moda",
+      "english": "fashion",
+      "example_de": "Ihre Interessen sind Mode und Kunst.",
+      "level": "A1"
+    },
+    {
+      "german": "der Lieblingsfilm",
+      "article": "der",
+      "plural": "Lieblingsfilme",
+      "category": "noun",
+      "italian": "il film preferito",
+      "english": "favorite film",
+      "example_de": "Was ist dein Lieblingsfilm?",
+      "level": "A1"
+    },
+    {
+      "german": "der Krimi",
+      "article": "der",
+      "plural": "Krimis",
+      "category": "noun",
+      "italian": "il giallo (film/libro)",
+      "english": "crime story / thriller",
+      "example_de": "Seine Lieblingsfilme sind Krimis.",
+      "level": "A1"
+    },
+    {
+      "german": "das Lieblingsessen",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "il cibo preferito",
+      "english": "favorite food",
+      "example_de": "Was ist dein Lieblingsessen?",
+      "level": "A1"
+    },
+    {
+      "german": "die Pizza",
+      "article": "die",
+      "plural": "Pizzas",
+      "category": "noun",
+      "italian": "la pizza",
+      "english": "pizza",
+      "example_de": "Mein Lieblingsessen ist Pizza.",
+      "level": "A1"
+    },
+    {
+      "german": "die Nudeln",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "la pasta",
+      "english": "pasta / noodles",
+      "example_de": "Ich esse gerne Nudeln.",
+      "level": "A1"
+    },
+    {
+      "german": "die Freundin",
+      "article": "die",
+      "plural": "Freundinnen",
+      "category": "noun",
+      "italian": "l'amica",
+      "english": "friend (female)",
+      "example_de": "Meike trifft gern Freundinnen.",
+      "level": "A1"
+    },
+    {
+      "german": "der Freund",
+      "article": "der",
+      "plural": "Freunde",
+      "category": "noun",
+      "italian": "l'amico",
+      "english": "friend (male)",
+      "example_de": "Ich besuche einen alten Freund.",
+      "level": "A1"
+    },
+    {
+      "german": "die Angst",
+      "article": "die",
+      "plural": "Ängste",
+      "category": "noun",
+      "italian": "la paura",
+      "english": "fear",
+      "example_de": "Ich habe keine Angst.",
+      "level": "A1"
+    },
+    {
+      "german": "der Hunger",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "la fame",
+      "english": "hunger",
+      "example_de": "Ich habe keinen Hunger.",
+      "level": "A1"
+    },
+    {
+      "german": "das Kind",
+      "article": "das",
+      "plural": "Kinder",
+      "category": "noun",
+      "italian": "il bambino",
+      "english": "child",
+      "example_de": "Ich habe ein kleines Kind.",
+      "level": "A1"
+    },
+    {
+      "german": "der Plattenspieler",
+      "article": "der",
+      "plural": "Plattenspieler",
+      "category": "noun",
+      "italian": "il giradischi",
+      "english": "record player",
+      "example_de": "Ich hatte einen Plattenspieler.",
+      "level": "A1"
+    },
+    {
+      "german": "die Schallplatte",
+      "article": "die",
+      "plural": "Schallplatten",
+      "category": "noun",
+      "italian": "il disco in vinile",
+      "english": "vinyl record",
+      "example_de": "Ich habe Schallplatten.",
+      "level": "A1"
+    },
+    {
+      "german": "das Smartphone",
+      "article": "das",
+      "plural": "Smartphones",
+      "category": "noun",
+      "italian": "lo smartphone",
+      "english": "smartphone",
+      "example_de": "Ich benutze ein Smartphone.",
+      "level": "A1"
+    },
+    {
+      "german": "der MP3-Player",
+      "article": "der",
+      "plural": "MP3-Player",
+      "category": "noun",
+      "italian": "il lettore MP3",
+      "english": "MP3 player",
+      "example_de": "Ich hatte einen MP3-Player.",
+      "level": "A1"
+    },
+    {
+      "german": "das Papier",
+      "article": "das",
+      "plural": "Papiere",
+      "category": "noun",
+      "italian": "la carta",
+      "english": "paper",
+      "example_de": "Ich lese Bücher aus Papier.",
+      "level": "A1"
+    },
+    {
+      "german": "das Auto",
+      "article": "das",
+      "plural": "Autos",
+      "category": "noun",
+      "italian": "l'auto",
+      "english": "car",
+      "example_de": "Ich habe ein Auto.",
+      "level": "A1"
+    },
+    {
+      "german": "das Navi",
+      "article": "das",
+      "plural": "Navis",
+      "category": "noun",
+      "italian": "il navigatore",
+      "english": "GPS / navigation device",
+      "example_de": "Hast du ein Navi?",
+      "level": "A1"
+    },
+    {
+      "german": "das Tablet",
+      "article": "das",
+      "plural": "Tablets",
+      "category": "noun",
+      "italian": "il tablet",
+      "english": "tablet",
+      "example_de": "Ich habe kein Tablet.",
+      "level": "A1"
+    },
+    {
+      "german": "die Digitalkamera",
+      "article": "die",
+      "plural": "Digitalkameras",
+      "category": "noun",
+      "italian": "la fotocamera digitale",
+      "english": "digital camera",
+      "example_de": "Ich benutze keine Digitalkamera.",
+      "level": "A1"
+    },
+    {
+      "german": "der Apfel",
+      "article": "der",
+      "plural": "Äpfel",
+      "category": "noun",
+      "italian": "la mela",
+      "english": "apple",
+      "example_de": "Sie isst einen roten Apfel.",
+      "level": "A1"
+    },
+    {
+      "german": "der Schlüssel",
+      "article": "der",
+      "plural": "Schlüssel",
+      "category": "noun",
+      "italian": "la chiave",
+      "english": "key",
+      "example_de": "Ich suche den Schlüssel.",
+      "level": "A1"
+    },
+    {
+      "german": "der Weg",
+      "article": "der",
+      "plural": "Wege",
+      "category": "noun",
+      "italian": "la strada / il percorso",
+      "english": "way / path",
+      "example_de": "Ich zeige dir den Weg.",
+      "level": "A1"
+    },
+    {
+      "german": "die Kartoffel",
+      "article": "die",
+      "plural": "Kartoffeln",
+      "category": "noun",
+      "italian": "la patata",
+      "english": "potato",
+      "example_de": "Ich esse gerne Kartoffeln.",
+      "level": "A1"
+    },
+    {
+      "german": "der Saft",
+      "article": "der",
+      "plural": "Säfte",
+      "category": "noun",
+      "italian": "il succo",
+      "english": "juice",
+      "example_de": "Ich trinke Orangensaft.",
+      "level": "A1"
+    },
+    {
+      "german": "die Hilfe",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "l'aiuto",
+      "english": "help",
+      "example_de": "Ich brauche keine Hilfe.",
+      "level": "A1"
+    },
+    {
+      "german": "der Job",
+      "article": "der",
+      "plural": "Jobs",
+      "category": "noun",
+      "italian": "il lavoro",
+      "english": "job",
+      "example_de": "Er braucht einen neuen Job.",
+      "level": "A1"
+    },
+    {
+      "german": "das Problem",
+      "article": "das",
+      "plural": "Probleme",
+      "category": "noun",
+      "italian": "il problema",
+      "english": "problem",
+      "example_de": "Ich habe keine Probleme.",
+      "level": "A1"
+    },
+    {
+      "german": "das Geld",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "i soldi",
+      "english": "money",
+      "example_de": "Ich habe kein Geld.",
+      "level": "A1"
+    },
+    {
+      "german": "die Ahnung",
+      "article": "die",
+      "plural": "Ahnungen",
+      "category": "noun",
+      "italian": "l'idea",
+      "english": "idea / clue",
+      "example_de": "Ich habe keine Ahnung.",
+      "level": "A1"
+    },
+    {
+      "german": "das Spiel",
+      "article": "das",
+      "plural": "die Spiele",
+      "category": "noun",
+      "italian": "il gioco, la partita",
+      "english": "the game",
+      "example_de": "Ich schaue ein interessantes Fußballspiel.",
+      "level": "A1"
+    },
+    {
+      "german": "lecker",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "gustoso, buono",
+      "english": "tasty",
+      "example_de": "Ich esse mein leckeres Mittagessen.",
+      "level": "A1"
+    },
+    {
+      "german": "der Alltag",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "la quotidianità",
+      "english": "everyday life",
+      "example_de": "Kevin beschreibt seinen normalen Alltag.",
+      "level": "A2"
+    },
+    {
+      "german": "aufschreiben",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "scrivere, annotare",
+      "english": "to write down",
+      "example_de": "Ich schreibe auf.",
+      "level": "A2"
+    },
+    {
+      "german": "das Mittagessen",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "il pranzo",
+      "english": "lunch",
+      "example_de": "Ich esse mein leckeres Mittagessen um 5 vor halb 1.",
+      "level": "A1"
+    },
+    {
+      "german": "die Küche",
+      "article": "die",
+      "plural": "die Küchen",
+      "category": "noun",
+      "italian": "la cucina",
+      "english": "the kitchen",
+      "example_de": "Ich schaue Videos in der Küche.",
+      "level": "A1"
+    },
+    {
+      "german": "früh",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "presto",
+      "english": "early",
+      "example_de": "Ich stehe früh auf.",
+      "level": "A1"
+    },
+    {
+      "german": "die Frage",
+      "article": "die",
+      "plural": "die Fragen",
+      "category": "noun",
+      "italian": "la domanda",
+      "english": "the question",
+      "example_de": "Das ist eine gute Frage.",
+      "level": "A1"
+    },
+    {
+      "german": "trennen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "separare",
+      "english": "to separate",
+      "example_de": "Ich trenne die Wörter.",
+      "level": "A2"
+    },
+    {
+      "german": "ausgehen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "uscire",
+      "english": "to go out",
+      "example_de": "Ich gehe aus.",
+      "level": "A2"
+    },
+    {
+      "german": "der Stuhl",
+      "article": "der",
+      "plural": "die Stühle",
+      "category": "noun",
+      "italian": "la sedia",
+      "english": "the chair",
+      "example_de": "Ich brauche einen Stuhl.",
+      "level": "A1"
+    },
+    {
+      "german": "spät",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "tardi",
+      "english": "late",
+      "example_de": "Ich komme spät nach Hause.",
+      "level": "A1"
+    },
+    {
+      "german": "dann",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "poi, dopo",
+      "english": "then, afterwards",
+      "example_de": "Zuerst esse ich und dann trinke ich Kaffee.",
+      "level": "A1"
+    },
+    {
+      "german": "denn",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "perché (causale)",
+      "english": "because",
+      "example_de": "Ich kann nicht, denn ich muss arbeiten.",
+      "level": "A2"
+    },
+    {
+      "german": "dauern",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "durare",
+      "english": "to last",
+      "example_de": "Wie lange dauert unsere Stunde?",
+      "level": "A2"
+    },
+    {
+      "german": "der Experte",
+      "article": "der",
+      "plural": "die Experten",
+      "category": "noun",
+      "italian": "l'esperto",
+      "english": "the expert",
+      "example_de": "Du musst einen Experten anrufen.",
+      "level": "B1"
+    },
+    {
+      "german": "der Elektriker",
+      "article": "der",
+      "plural": "die Elektriker",
+      "category": "noun",
+      "italian": "l'elettricista",
+      "english": "the electrician",
+      "example_de": "Ich muss den Elektriker anrufen.",
+      "level": "A2"
+    },
+    {
+      "german": "teuer",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "caro, costoso",
+      "english": "expensive",
+      "example_de": "Er ist zu teuer.",
+      "level": "A1"
+    },
+    {
+      "german": "lieben",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "amare",
+      "english": "to love",
+      "example_de": "Mein Bruder liebt sie.",
+      "level": "A1"
+    },
+    {
+      "german": "die Farbe",
+      "article": "die",
+      "plural": "die Farben",
+      "category": "noun",
+      "italian": "il colore",
+      "english": "the color",
+      "example_de": "Welche Farbe haben ihre Haare?",
+      "level": "A1"
+    },
+    {
+      "german": "der Zahnarzt",
+      "article": "der",
+      "plural": "die Zahnärzte",
+      "category": "noun",
+      "italian": "il dentista",
+      "english": "the dentist",
+      "example_de": "Kevin hat einen Zahnarzttermin.",
+      "level": "A2"
+    },
+    {
+      "german": "das Müsli",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "il muesli",
+      "english": "the muesli",
+      "example_de": "Ich darf kein Müsli essen.",
+      "level": "A2"
+    },
+    {
+      "german": "ausschlafen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "dormire fino a tardi",
+      "english": "to sleep in",
+      "example_de": "Du darfst lange ausschlafen.",
+      "level": "A2"
+    },
+    {
+      "german": "die Zigarette",
+      "article": "die",
+      "plural": "die Zigaretten",
+      "category": "noun",
+      "italian": "la sigaretta",
+      "english": "the cigarette",
+      "example_de": "Du darfst hier keine Zigaretten rauchen.",
+      "level": "A2"
+    },
+    {
+      "german": "nur",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "solo, soltanto",
+      "english": "only",
+      "example_de": "Ich esse nur einfache Speisen.",
+      "level": "A1"
+    },
+    {
+      "german": "ohne",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "senza",
+      "english": "without",
+      "example_de": "Ich trinke Kaffee ohne Zucker.",
+      "level": "A2"
+    },
+    {
+      "german": "der Kellner",
+      "article": "der",
+      "plural": "die Kellner",
+      "category": "noun",
+      "italian": "il cameriere",
+      "english": "the waiter",
+      "example_de": "Der Kellner bringt das Essen.",
+      "level": "A2"
+    },
+    {
+      "german": "die Kellnerin",
+      "article": "die",
+      "plural": "die Kellnerinnen",
+      "category": "noun",
+      "italian": "la cameriera",
+      "english": "the waitress",
+      "example_de": "Die Kellnerin nimmt die Bestellung auf.",
+      "level": "A2"
+    },
+    {
+      "german": "das Wort",
+      "article": "das",
+      "plural": "die Wörter",
+      "category": "noun",
+      "italian": "la parola",
+      "english": "the word",
+      "example_de": "Ich lerne neue Wörter.",
+      "level": "A1"
+    },
+    {
+      "german": "der Kater",
+      "article": "der",
+      "plural": "die Kater",
+      "category": "noun",
+      "italian": "il gatto (maschio)",
+      "english": "the tomcat",
+      "example_de": "Ich habe einen schwarzen Kater.",
+      "level": "A2"
+    },
+    {
+      "german": "die Nummer",
+      "article": "die",
+      "plural": "die Nummern",
+      "category": "noun",
+      "italian": "il numero",
+      "english": "the number",
+      "example_de": "Das ist meine Telefonnummer.",
+      "level": "A1"
+    },
+    {
+      "german": "die Zahl",
+      "article": "die",
+      "plural": "die Zahlen",
+      "category": "noun",
+      "italian": "il numero, la cifra",
+      "english": "the number",
+      "example_de": "Welche Zahl kommt nach zehn?",
+      "level": "A1"
+    },
+    {
+      "german": "seit",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "da (tempo)",
+      "english": "since",
+      "example_de": "Ich lebe seit 30 Jahren in Italien.",
+      "level": "A2"
+    },
+    {
+      "german": "geöffnet",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "aperto",
+      "english": "open",
+      "example_de": "Das Café ist geöffnet.",
+      "level": "A2"
+    },
+    {
+      "german": "geschlossen",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "chiuso",
+      "english": "closed",
+      "example_de": "Das Café ist geschlossen.",
+      "level": "A2"
+    },
+    {
+      "german": "das Menü",
+      "article": "das",
+      "plural": "die Menüs",
+      "category": "noun",
+      "italian": "il menù",
+      "english": "the menu",
+      "example_de": "Ich möchte das Menü sehen.",
+      "level": "A2"
+    },
+    {
+      "german": "die Speisekarte",
+      "article": "die",
+      "plural": "die Speisekarten",
+      "category": "noun",
+      "italian": "il menù, la carta",
+      "english": "the menu",
+      "example_de": "Die Speisekarte ist sehr umfangreich.",
+      "level": "A2"
+    },
+    {
+      "german": "die Vorspeise",
+      "article": "die",
+      "plural": "die Vorspeisen",
+      "category": "noun",
+      "italian": "l'antipasto",
+      "english": "the appetizer",
+      "example_de": "Was nimmst du als Vorspeise?",
+      "level": "A2"
+    },
+    {
+      "german": "die Hauptspeise",
+      "article": "die",
+      "plural": "die Hauptspeisen",
+      "category": "noun",
+      "italian": "il piatto principale",
+      "english": "the main course",
+      "example_de": "Als Hauptspeise nehme ich das Schnitzel.",
+      "level": "A2"
+    },
+    {
+      "german": "die Nachspeise",
+      "article": "die",
+      "plural": "die Nachspeisen",
+      "category": "noun",
+      "italian": "il dolce, il dessert",
+      "english": "the dessert",
+      "example_de": "Möchtest du eine Nachspeise?",
+      "level": "A2"
+    },
+    {
+      "german": "das Dessert",
+      "article": "das",
+      "plural": "die Desserts",
+      "category": "noun",
+      "italian": "il dessert",
+      "english": "the dessert",
+      "example_de": "Als Dessert möchte ich eine Torte.",
+      "level": "A2"
+    },
+    {
+      "german": "der Einwohner",
+      "article": "der",
+      "plural": "die Einwohner",
+      "category": "noun",
+      "italian": "l'abitante",
+      "english": "the inhabitant",
+      "example_de": "In Rom gibt es 2.746.984 Einwohner.",
+      "level": "A2"
+    },
+    {
+      "german": "gleich",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "stesso, uguale",
+      "english": "same",
+      "example_de": "Wir haben das gleiche Auto.",
+      "level": "A2"
+    },
+    {
+      "german": "mehr",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "più",
+      "english": "more",
+      "example_de": "Bern hat mehr Einwohner als Luzern.",
+      "level": "A1"
+    },
+    {
+      "german": "weniger",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "meno",
+      "english": "less",
+      "example_de": "Lugano hat weniger Einwohner.",
+      "level": "A2"
+    },
+    {
+      "german": "das Datum",
+      "article": "das",
+      "plural": "die Daten",
+      "category": "noun",
+      "italian": "la data",
+      "english": "the date",
+      "example_de": "Welches Datum ist heute?",
+      "level": "A2"
+    },
+    {
+      "german": "der Geburtstag",
+      "article": "der",
+      "plural": "die Geburtstage",
+      "category": "noun",
+      "italian": "il compleanno",
+      "english": "the birthday",
+      "example_de": "Ich habe am 9ten April Geburtstag.",
+      "level": "A1"
+    },
+    {
+      "german": "die Geburt",
+      "article": "die",
+      "plural": "die Geburten",
+      "category": "noun",
+      "italian": "la nascita",
+      "english": "the birth",
+      "example_de": "Die Geburt war am ersten Mai.",
+      "level": "A2"
+    },
+    {
+      "german": "der Stock",
+      "article": "der",
+      "plural": "die Stockwerke",
+      "category": "noun",
+      "italian": "il piano",
+      "english": "the floor, story",
+      "example_de": "Ich wohne im ersten Stock.",
+      "level": "A2"
+    },
+    {
+      "german": "der Fehler",
+      "article": "der",
+      "plural": "die Fehler",
+      "category": "noun",
+      "italian": "l'errore",
+      "english": "the mistake",
+      "example_de": "Das ist ein Fehler.",
+      "level": "A2"
+    },
+    {
+      "german": "der Monat",
+      "article": "der",
+      "plural": "die Monate",
+      "category": "noun",
+      "italian": "il mese",
+      "english": "the month",
+      "example_de": "Januar ist der erste Monat.",
+      "level": "A1"
+    },
+    {
+      "german": "geboren",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "nato",
+      "english": "born",
+      "example_de": "Ich bin am 11ten April 1995 geboren.",
+      "level": "A2"
+    },
+    {
+      "german": "die Wohngemeinschaft",
+      "article": "die",
+      "plural": "die Wohngemeinschaften",
+      "category": "noun",
+      "italian": "l'appartamento condiviso",
+      "english": "shared apartment, WG",
+      "example_de": "Ich wohne in einer Wohngemeinschaft.",
+      "level": "B1"
+    },
+    {
+      "german": "die Wohnung",
+      "article": "die",
+      "plural": "die Wohnungen",
+      "category": "noun",
+      "italian": "l'appartamento",
+      "english": "the apartment",
+      "example_de": "Ich wohne in einer Wohnung.",
+      "level": "A1"
+    },
+    {
+      "german": "das Haus",
+      "article": "das",
+      "plural": "die Häuser",
+      "category": "noun",
+      "italian": "la casa",
+      "english": "the house",
+      "example_de": "Ich wohne in einem Haus.",
+      "level": "A1"
+    },
+    {
+      "german": "das Reihenhaus",
+      "article": "das",
+      "plural": "die Reihenhäuser",
+      "category": "noun",
+      "italian": "la casa a schiera",
+      "english": "the row house",
+      "example_de": "Ich wohne in einem Reihenhaus.",
+      "level": "A2"
+    },
+    {
+      "german": "alleine",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "da solo",
+      "english": "alone",
+      "example_de": "Wohnst du alleine?",
+      "level": "A1"
+    },
+    {
+      "german": "die Speise",
+      "article": "die",
+      "plural": "die Speisen",
+      "category": "noun",
+      "italian": "il piatto, la pietanza",
+      "english": "the dish",
+      "example_de": "Ich koche einfache Speisen.",
+      "level": "A2"
+    },
+    {
+      "german": "das Gericht",
+      "article": "das",
+      "plural": "die Gerichte",
+      "category": "noun",
+      "italian": "il piatto",
+      "english": "the dish",
+      "example_de": "Das ist mein Lieblingsgericht.",
+      "level": "A2"
+    },
+    {
+      "german": "die Etage",
+      "article": "die",
+      "plural": "die Etagen",
+      "category": "noun",
+      "italian": "il piano",
+      "english": "the floor",
+      "example_de": "In welcher Etage wohnst du?",
+      "level": "A2"
+    },
+    {
+      "german": "das Schlafzimmer",
+      "article": "das",
+      "plural": "die Schlafzimmer",
+      "category": "noun",
+      "italian": "la camera da letto",
+      "english": "the bedroom",
+      "example_de": "Mein Schlafzimmer liegt im ersten Stock.",
+      "level": "A1"
+    },
+    {
+      "german": "der Garten",
+      "article": "der",
+      "plural": "die Gärten",
+      "category": "noun",
+      "italian": "il giardino",
+      "english": "the garden",
+      "example_de": "Wir haben zwei kleine Gärten.",
+      "level": "A1"
+    },
+    {
+      "german": "der Balkon",
+      "article": "der",
+      "plural": "die Balkone",
+      "category": "noun",
+      "italian": "il balcone",
+      "english": "the balcony",
+      "example_de": "Habt ihr einen Balkon?",
+      "level": "A1"
+    },
+    {
+      "german": "die Terrasse",
+      "article": "die",
+      "plural": "die Terrassen",
+      "category": "noun",
+      "italian": "la terrazza",
+      "english": "the terrace",
+      "example_de": "Wir sitzen auf der Terrasse.",
+      "level": "A2"
+    },
+    {
+      "german": "der Patio",
+      "article": "der",
+      "plural": "die Patios",
+      "category": "noun",
+      "italian": "il patio",
+      "english": "the patio",
+      "example_de": "Es ist ein Patio.",
+      "level": "A2"
+    },
+    {
+      "german": "die Veranda",
+      "article": "die",
+      "plural": "die Veranden",
+      "category": "noun",
+      "italian": "la veranda",
+      "english": "the veranda",
+      "example_de": "Wir haben eine Veranda.",
+      "level": "A2"
+    },
+    {
+      "german": "der Lieblingsort",
+      "article": "der",
+      "plural": "die Lieblingsorte",
+      "category": "noun",
+      "italian": "il posto preferito",
+      "english": "the favorite place",
+      "example_de": "Was ist dein Lieblingsort?",
+      "level": "A2"
+    },
+    {
+      "german": "das Wohnzimmer",
+      "article": "das",
+      "plural": "die Wohnzimmer",
+      "category": "noun",
+      "italian": "il soggiorno",
+      "english": "the living room",
+      "example_de": "Ich bin oft im Wohnzimmer.",
+      "level": "A1"
+    },
+    {
+      "german": "der Hund",
+      "article": "der",
+      "plural": "die Hunde",
+      "category": "noun",
+      "italian": "il cane",
+      "english": "the dog",
+      "example_de": "Mein Hund ist oft im Garten.",
+      "level": "A1"
+    },
+    {
+      "german": "klein",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "piccolo",
+      "english": "small",
+      "example_de": "Das Haus ist ein bisschen klein.",
+      "level": "A1"
+    },
+    {
+      "german": "groß",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "grande",
+      "english": "big, large",
+      "example_de": "Hast du eine große Küche?",
+      "level": "A1"
+    },
+    {
+      "german": "die Wohnküche",
+      "article": "die",
+      "plural": "die Wohnküchen",
+      "category": "noun",
+      "italian": "la cucina soggiorno",
+      "english": "the kitchen-living room",
+      "example_de": "Es ist eine Wohnküche.",
+      "level": "A2"
+    },
+    {
+      "german": "gerade",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "proprio ora, in questo momento",
+      "english": "right now, just",
+      "example_de": "Ich bin gerade in der Wohnküche.",
+      "level": "A2"
+    },
+    {
+      "german": "das Sofa",
+      "article": "das",
+      "plural": "die Sofas",
+      "category": "noun",
+      "italian": "il divano",
+      "english": "the sofa",
+      "example_de": "Ich kann das Sofa sehen.",
+      "level": "A1"
+    },
+    {
+      "german": "der Fernseher",
+      "article": "der",
+      "plural": "die Fernseher",
+      "category": "noun",
+      "italian": "il televisore",
+      "english": "the TV",
+      "example_de": "Ich kann den Fernseher sehen.",
+      "level": "A1"
+    },
+    {
+      "german": "das Fenster",
+      "article": "das",
+      "plural": "die Fenster",
+      "category": "noun",
+      "italian": "la finestra",
+      "english": "the window",
+      "example_de": "Ich kann die Fenster sehen.",
+      "level": "A1"
+    },
+    {
+      "german": "die Spülmaschine",
+      "article": "die",
+      "plural": "die Spülmaschinen",
+      "category": "noun",
+      "italian": "la lavastoviglie",
+      "english": "the dishwasher",
+      "example_de": "Wir haben eine Spülmaschine.",
+      "level": "A2"
+    },
+    {
+      "german": "spülen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "lavare (piatti)",
+      "english": "to wash dishes",
+      "example_de": "Ich hasse Geschirr spülen.",
+      "level": "A2"
+    },
+    {
+      "german": "das Geschirr",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "le stoviglie, i piatti",
+      "english": "the dishes",
+      "example_de": "Ich hasse Geschirr spülen.",
+      "level": "A2"
+    },
+    {
+      "german": "beladen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "caricare",
+      "english": "to load",
+      "example_de": "Ich belade die Spülmaschine.",
+      "level": "B1"
+    },
+    {
+      "german": "die Waschmaschine",
+      "article": "die",
+      "plural": "die Waschmaschinen",
+      "category": "noun",
+      "italian": "la lavatrice",
+      "english": "the washing machine",
+      "example_de": "Ich belade die Waschmaschine.",
+      "level": "A2"
+    },
+    {
+      "german": "der Trockner",
+      "article": "der",
+      "plural": "die Trockner",
+      "category": "noun",
+      "italian": "l'asciugatrice",
+      "english": "the dryer",
+      "example_de": "Der Trockner trocknet die Wäsche.",
+      "level": "A2"
+    },
+    {
+      "german": "trocknen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "asciugare",
+      "english": "to dry",
+      "example_de": "Der Trockner trocknet die Wäsche.",
+      "level": "A2"
+    },
+    {
+      "german": "die Wäsche",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "il bucato",
+      "english": "the laundry",
+      "example_de": "Ich muss die Wäsche aufhängen.",
+      "level": "A2"
+    },
+    {
+      "german": "aufhängen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "stendere",
+      "english": "to hang up",
+      "example_de": "Ich muss die Wäsche aufhängen.",
+      "level": "A2"
+    },
+    {
+      "german": "falten",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "piegare",
+      "english": "to fold",
+      "example_de": "Ich falte die Wäsche.",
+      "level": "A2"
+    },
+    {
+      "german": "der Schritt",
+      "article": "der",
+      "plural": "die Schritte",
+      "category": "noun",
+      "italian": "il passo",
+      "english": "the step",
+      "example_de": "Das ist der erste Schritt.",
+      "level": "A2"
+    },
+    {
+      "german": "der Bus",
+      "article": "der",
+      "plural": "die Busse",
+      "category": "noun",
+      "italian": "l'autobus",
+      "english": "the bus",
+      "example_de": "Ich nehme den Bus.",
+      "level": "A1"
+    },
+    {
+      "german": "der Zug",
+      "article": "der",
+      "plural": "die Züge",
+      "category": "noun",
+      "italian": "il treno",
+      "english": "the train",
+      "example_de": "Ich nehme den Zug.",
+      "level": "A1"
+    },
+    {
+      "german": "das Flugzeug",
+      "article": "das",
+      "plural": "die Flugzeuge",
+      "category": "noun",
+      "italian": "l'aereo",
+      "english": "the airplane",
+      "example_de": "Ich nehme das Flugzeug.",
+      "level": "A1"
+    },
+    {
+      "german": "das Badezimmer",
+      "article": "das",
+      "plural": "die Badezimmer",
+      "category": "noun",
+      "italian": "il bagno",
+      "english": "the bathroom",
+      "example_de": "Ich habe zwei Badezimmer.",
+      "level": "A1"
+    },
+    {
+      "german": "der Spiegel",
+      "article": "der",
+      "plural": "die Spiegel",
+      "category": "noun",
+      "italian": "lo specchio",
+      "english": "the mirror",
+      "example_de": "Ich habe einen Spiegel im Badezimmer.",
+      "level": "A2"
+    },
+    {
+      "german": "das Waschbecken",
+      "article": "das",
+      "plural": "die Waschbecken",
+      "category": "noun",
+      "italian": "il lavandino",
+      "english": "the sink",
+      "example_de": "Ich habe ein Waschbecken.",
+      "level": "A2"
+    },
+    {
+      "german": "die Badewanne",
+      "article": "die",
+      "plural": "die Badewannen",
+      "category": "noun",
+      "italian": "la vasca da bagno",
+      "english": "the bathtub",
+      "example_de": "Das große Badezimmer hat eine Badewanne.",
+      "level": "A2"
+    },
+    {
+      "german": "die Dusche",
+      "article": "die",
+      "plural": "die Duschen",
+      "category": "noun",
+      "italian": "la doccia",
+      "english": "the shower",
+      "example_de": "Das kleine Badezimmer hat eine Dusche.",
+      "level": "A1"
+    },
+    {
+      "german": "waschen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "lavare",
+      "english": "to wash",
+      "example_de": "Ich kann mein Gesicht waschen.",
+      "level": "A1"
+    },
+    {
+      "german": "das Gesicht",
+      "article": "das",
+      "plural": "die Gesichter",
+      "category": "noun",
+      "italian": "il viso",
+      "english": "the face",
+      "example_de": "Ich wasche mein Gesicht.",
+      "level": "A1"
+    },
+    {
+      "german": "die Zähne",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "i denti",
+      "english": "the teeth",
+      "example_de": "Ich putze meine Zähne.",
+      "level": "A1"
+    },
+    {
+      "german": "der Zahn",
+      "article": "der",
+      "plural": "die Zähne",
+      "category": "noun",
+      "italian": "il dente",
+      "english": "the tooth",
+      "example_de": "Ich habe einen Zahn verloren.",
+      "level": "A1"
+    },
+    {
+      "german": "die Toilette",
+      "article": "die",
+      "plural": "die Toiletten",
+      "category": "noun",
+      "italian": "il gabinetto, la toilette",
+      "english": "the toilet",
+      "example_de": "Ich gehe auf die Toilette.",
+      "level": "A1"
+    },
+    {
+      "german": "das Klo",
+      "article": "das",
+      "plural": "die Klos",
+      "category": "noun",
+      "italian": "il cesso (informale)",
+      "english": "the toilet (informal)",
+      "example_de": "Ich gehe schnell aufs Klo.",
+      "level": "A2"
+    },
+    {
+      "german": "das Bett",
+      "article": "das",
+      "plural": "die Betten",
+      "category": "noun",
+      "italian": "il letto",
+      "english": "the bed",
+      "example_de": "Ich gehe ins Bett.",
+      "level": "A1"
+    },
+    {
+      "german": "die Bibliothek",
+      "article": "die",
+      "plural": "die Bibliotheken",
+      "category": "noun",
+      "italian": "la biblioteca",
+      "english": "the library",
+      "example_de": "Heute war ich in der Bibliothek.",
+      "level": "A2"
+    },
+    {
+      "german": "die Bar",
+      "article": "die",
+      "plural": "die Bars",
+      "category": "noun",
+      "italian": "il bar",
+      "english": "the bar",
+      "example_de": "Ich war in einer Bar.",
+      "level": "A1"
+    },
+    {
+      "german": "das Café",
+      "article": "das",
+      "plural": "die Cafés",
+      "category": "noun",
+      "italian": "il caffè (locale)",
+      "english": "the café",
+      "example_de": "Ich war in einem Café.",
+      "level": "A1"
+    },
+    {
+      "german": "der Supermarkt",
+      "article": "der",
+      "plural": "die Supermärkte",
+      "category": "noun",
+      "italian": "il supermercato",
+      "english": "the supermarket",
+      "example_de": "Ich war im Supermarkt.",
+      "level": "A1"
+    },
+    {
+      "german": "der Ofen",
+      "article": "der",
+      "plural": "die Öfen",
+      "category": "noun",
+      "italian": "il forno",
+      "english": "the oven",
+      "example_de": "Ich mache die Piadina im Ofen.",
+      "level": "A2"
+    },
+    {
+      "german": "die Pfanne",
+      "article": "die",
+      "plural": "die Pfannen",
+      "category": "noun",
+      "italian": "la padella",
+      "english": "the pan",
+      "example_de": "Ich mache sie in der Pfanne.",
+      "level": "A2"
+    },
+    {
+      "german": "das Fleisch",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "la carne",
+      "english": "the meat",
+      "example_de": "Ich esse kein Fleisch.",
+      "level": "A1"
+    },
+    {
+      "german": "roh",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "crudo",
+      "english": "raw",
+      "example_de": "Der Rohschinken ist sehr lecker.",
+      "level": "A2"
+    },
+    {
+      "german": "beide",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "entrambi",
+      "english": "both",
+      "example_de": "Die zwei Badezimmer sind für beide.",
+      "level": "A2"
+    },
+    {
+      "german": "eigentlich",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "in realtà, a dire il vero",
+      "english": "actually",
+      "example_de": "Eigentlich wollte ich nach Hause gehen.",
+      "level": "B1"
+    },
+    {
+      "german": "wirklich",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "veramente, davvero",
+      "english": "really",
+      "example_de": "Das ist wirklich gut.",
+      "level": "A2"
+    },
+    {
+      "german": "mit",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "con",
+      "english": "with",
+      "example_de": "Ich fahre mit dem Bus.",
+      "level": "A1"
+    },
+    {
+      "german": "aus",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "da (luogo di provenienza)",
+      "english": "from (place)",
+      "example_de": "Ich komme aus der Schweiz.",
+      "level": "A1"
+    },
+    {
+      "german": "von",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "da (tempo/luogo)",
+      "english": "from (time/location)",
+      "example_de": "Sie arbeiten von Montag bis Freitag.",
+      "level": "A1"
+    },
+    {
+      "german": "zu",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "a, verso",
+      "english": "to",
+      "example_de": "Ich gehe zum Zahnarzt.",
+      "level": "A1"
+    },
+    {
+      "german": "nach",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "dopo",
+      "english": "after",
+      "example_de": "Ich sehe nach dem Abendessen fern.",
+      "level": "A1"
+    },
+    {
+      "german": "bei",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "da, presso",
+      "english": "at, by",
+      "example_de": "Wir treffen uns beim Zahnarzt.",
+      "level": "A2"
+    },
+    {
+      "german": "die Haltestelle",
+      "article": "die",
+      "plural": "die Haltestellen",
+      "category": "noun",
+      "italian": "la fermata",
+      "english": "the stop",
+      "example_de": "Die Haltestelle ist hier.",
+      "level": "A2"
+    },
+    {
+      "german": "die Kreuzung",
+      "article": "die",
+      "plural": "die Kreuzungen",
+      "category": "noun",
+      "italian": "l'incrocio",
+      "english": "the crossing",
+      "example_de": "An der Kreuzung gehe ich nach links.",
+      "level": "A2"
+    },
+    {
+      "german": "geradeaus",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "dritto",
+      "english": "straight ahead",
+      "example_de": "Ich muss geradeaus gehen.",
+      "level": "A2"
+    },
+    {
+      "german": "die Apotheke",
+      "article": "die",
+      "plural": "die Apotheken",
+      "category": "noun",
+      "italian": "la farmacia",
+      "english": "the pharmacy",
+      "example_de": "Ich möchte zur Apotheke.",
+      "level": "A2"
+    },
+    {
+      "german": "das Krankenhaus",
+      "article": "das",
+      "plural": "die Krankenhäuser",
+      "category": "noun",
+      "italian": "l'ospedale",
+      "english": "the hospital",
+      "example_de": "Ich möchte zum Krankenhaus gehen.",
+      "level": "A2"
+    },
+    {
+      "german": "der Blumentopf",
+      "article": "der",
+      "plural": "die Blumentöpfe",
+      "category": "noun",
+      "italian": "il vaso di fiori",
+      "english": "the flowerpot",
+      "example_de": "Der Blumentopf steht am Fenster.",
+      "level": "A2"
+    },
+    {
+      "german": "das Licht",
+      "article": "das",
+      "plural": "die Lichter",
+      "category": "noun",
+      "italian": "la luce",
+      "english": "the light",
+      "example_de": "Das Licht ist an.",
+      "level": "A1"
+    },
+    {
+      "german": "die Lampe",
+      "article": "die",
+      "plural": "die Lampen",
+      "category": "noun",
+      "italian": "la lampada",
+      "english": "the lamp",
+      "example_de": "Die Vase ist über der Lampe.",
+      "level": "A1"
+    },
+    {
+      "german": "das Bad",
+      "article": "das",
+      "plural": "die Bäder",
+      "category": "noun",
+      "italian": "il bagno",
+      "english": "the bathroom",
+      "example_de": "Das Bad ist zwischen den Schlafzimmern.",
+      "level": "A1"
+    },
+    {
+      "german": "die Vase",
+      "article": "die",
+      "plural": "die Vasen",
+      "category": "noun",
+      "italian": "il vaso",
+      "english": "the vase",
+      "example_de": "Es gibt zwei Vasen im Haus.",
+      "level": "A2"
+    },
+    {
+      "german": "der Schrank",
+      "article": "der",
+      "plural": "die Schränke",
+      "category": "noun",
+      "italian": "l'armadio",
+      "english": "the closet",
+      "example_de": "Die Vase ist auf dem Schrank.",
+      "level": "A2"
+    },
+    {
+      "german": "hell",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "luminoso, chiaro",
+      "english": "bright, light",
+      "example_de": "Das Bad ist über dem hellen Esszimmer.",
+      "level": "A2"
+    },
+    {
+      "german": "das Esszimmer",
+      "article": "das",
+      "plural": "die Esszimmer",
+      "category": "noun",
+      "italian": "la sala da pranzo",
+      "english": "the dining room",
+      "example_de": "Das Bad ist über dem hellen Esszimmer.",
+      "level": "A2"
+    },
+    {
+      "german": "oben",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "sopra, di sopra",
+      "english": "above, upstairs",
+      "example_de": "Das Schlafzimmer ist oben links.",
+      "level": "A2"
+    },
+    {
+      "german": "links",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "a sinistra",
+      "english": "left",
+      "example_de": "Das Schlafzimmer ist oben links.",
+      "level": "A1"
+    },
+    {
+      "german": "rechts",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "a destra",
+      "english": "right",
+      "example_de": "Das Krankenhaus ist rechts.",
+      "level": "A1"
+    },
+    {
+      "german": "hinter",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "dietro",
+      "english": "behind",
+      "example_de": "Der Garten liegt hinter dem Haus.",
+      "level": "A2"
+    },
+    {
+      "german": "neben",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "accanto a",
+      "english": "next to",
+      "example_de": "Die Vase ist neben dem Fenster.",
+      "level": "A2"
+    },
+    {
+      "german": "über",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "sopra",
+      "english": "over, above",
+      "example_de": "Das Bad ist über dem Esszimmer.",
+      "level": "A2"
+    },
+    {
+      "german": "schnell",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "veloce",
+      "english": "fast",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "langsam",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "lento",
+      "english": "slow",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "das Ding",
+      "article": "das",
+      "plural": "die Dinge",
+      "category": "noun",
+      "italian": "la cosa",
+      "english": "thing",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "der Essig",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "l'aceto",
+      "english": "vinegar",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "das Öl",
+      "article": "das",
+      "plural": "die Öle",
+      "category": "noun",
+      "italian": "l'olio",
+      "english": "oil",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "das Ei",
+      "article": "das",
+      "plural": "die Eier",
+      "category": "noun",
+      "italian": "l'uovo",
+      "english": "egg",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "das Salz",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "il sale",
+      "english": "salt",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "die Frucht",
+      "article": "die",
+      "plural": "die Früchte",
+      "category": "noun",
+      "italian": "il frutto",
+      "english": "fruit",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "das Obst",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "la frutta",
+      "english": "fruit",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "das Gemüse",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "la verdura",
+      "english": "vegetables",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "die Zitrone",
+      "article": "die",
+      "plural": "die Zitronen",
+      "category": "noun",
+      "italian": "il limone",
+      "english": "lemon",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "der Ort",
+      "article": "der",
+      "plural": "die Orte",
+      "category": "noun",
+      "italian": "il luogo",
+      "english": "location, place",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "zusammen",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "insieme",
+      "english": "together",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "der Wäscheständer",
+      "article": "der",
+      "plural": "die Wäscheständer",
+      "category": "noun",
+      "italian": "lo stendibiancheria",
+      "english": "clothes drying rack",
+      "example_de": "",
+      "level": "B1"
+    },
+    {
+      "german": "die Kleidung",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "i vestiti",
+      "english": "clothing",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "trocken",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "asciutto",
+      "english": "dry",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "feucht",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "umido",
+      "english": "wet, humid",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "nass machen",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "bagnare",
+      "english": "to make wet",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "gießen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "innaffiare",
+      "english": "to water, to pour",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "wässern",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "annaffiare",
+      "english": "to water",
+      "example_de": "",
+      "level": "B1"
+    },
+    {
+      "german": "das Geschenk",
+      "article": "das",
+      "plural": "die Geschenke",
+      "category": "noun",
+      "italian": "il regalo",
+      "english": "present, gift",
+      "example_de": "Du kaufst der Freundin ein Geschenk.",
+      "level": "A1"
+    },
+    {
+      "german": "der Tourist",
+      "article": "der",
+      "plural": "die Touristen",
+      "category": "noun",
+      "italian": "il turista",
+      "english": "tourist",
+      "example_de": "Wir zeigen den Touristen den Weg.",
+      "level": "A1"
+    },
+    {
+      "german": "die Antwort",
+      "article": "die",
+      "plural": "die Antworten",
+      "category": "noun",
+      "italian": "la risposta",
+      "english": "answer",
+      "example_de": "Sie geben dem Lehrer eine Antwort.",
+      "level": "A1"
+    },
+    {
+      "german": "die Oma",
+      "article": "die",
+      "plural": "die Omas",
+      "category": "noun",
+      "italian": "la nonna",
+      "english": "grandma",
+      "example_de": "Ihr schickt der Oma eine Karte.",
+      "level": "A1"
+    },
+    {
+      "german": "die Karte",
+      "article": "die",
+      "plural": "die Karten",
+      "category": "noun",
+      "italian": "la cartolina, la carta",
+      "english": "card",
+      "example_de": "Ihr schickt der Oma eine Karte.",
+      "level": "A1"
+    },
+    {
+      "german": "der Gast",
+      "article": "der",
+      "plural": "die Gäste",
+      "category": "noun",
+      "italian": "l'ospite",
+      "english": "guest",
+      "example_de": "Wir bieten dem Gast einen Tee an.",
+      "level": "A2"
+    },
+    {
+      "german": "der Tee",
+      "article": "der",
+      "plural": "die Tees",
+      "category": "noun",
+      "italian": "il tè",
+      "english": "tea",
+      "example_de": "Wir bieten dem Gast einen Tee an.",
+      "level": "A1"
+    },
+    {
+      "german": "die Geschichte",
+      "article": "die",
+      "plural": "die Geschichten",
+      "category": "noun",
+      "italian": "la storia",
+      "english": "story, history",
+      "example_de": "Sie sagt den Kindern eine Geschichte.",
+      "level": "A2"
+    },
+    {
+      "german": "der Kollege",
+      "article": "der",
+      "plural": "die Kollegen",
+      "category": "noun",
+      "italian": "il collega",
+      "english": "colleague (male)",
+      "example_de": "Du leihst dem Kollegen den Stift.",
+      "level": "A2"
+    },
+    {
+      "german": "der Stift",
+      "article": "der",
+      "plural": "die Stifte",
+      "category": "noun",
+      "italian": "la penna",
+      "english": "pen",
+      "example_de": "Du leihst dem Kollegen den Stift.",
+      "level": "A1"
+    },
+    {
+      "german": "die Chefin",
+      "article": "die",
+      "plural": "die Chefinnen",
+      "category": "noun",
+      "italian": "la capo",
+      "english": "boss (female)",
+      "example_de": "Ich erkläre das Problem der Chefin.",
+      "level": "A2"
+    },
+    {
+      "german": "der Nachbar",
+      "article": "der",
+      "plural": "die Nachbarn",
+      "category": "noun",
+      "italian": "il vicino",
+      "english": "neighbor",
+      "example_de": "Wir bringen den Nachbarn den Kuchen.",
+      "level": "A1"
+    },
+    {
+      "german": "der Kuchen",
+      "article": "der",
+      "plural": "die Kuchen",
+      "category": "noun",
+      "italian": "la torta",
+      "english": "cake",
+      "example_de": "Wir bringen den Nachbarn den Kuchen.",
+      "level": "A1"
+    },
+    {
+      "german": "schicken",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "mandare",
+      "english": "to send",
+      "example_de": "Ihr schickt der Oma eine Karte.",
+      "level": "A1"
+    },
+    {
+      "german": "leihen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "prestare",
+      "english": "to lend",
+      "example_de": "Du leihst dem Kollegen den Stift.",
+      "level": "A2"
+    },
+    {
+      "german": "erklären",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "spiegare",
+      "english": "to explain",
+      "example_de": "Ich erkläre das Problem der Chefin.",
+      "level": "A2"
+    },
+    {
+      "german": "das Wochenende",
+      "article": "das",
+      "plural": "die Wochenenden",
+      "category": "noun",
+      "italian": "il fine settimana",
+      "english": "weekend",
+      "example_de": "Siehst du deinen Bruder am Wochenende?",
+      "level": "A1"
+    },
+    {
+      "german": "das Thema",
+      "article": "das",
+      "plural": "die Themen",
+      "category": "noun",
+      "italian": "il tema, l'argomento",
+      "english": "topic, theme",
+      "example_de": "Lernst du das neue Thema?",
+      "level": "A2"
+    },
+    {
+      "german": "helfen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "aiutare",
+      "english": "to help",
+      "example_de": "Kannst du mir helfen? Ja, ich kann dir helfen.",
+      "level": "A1"
+    },
+    {
+      "german": "die E-Mail",
+      "article": "die",
+      "plural": "die E-Mails",
+      "category": "noun",
+      "italian": "l'email",
+      "english": "email",
+      "example_de": "Schickst du mir die E-Mail?",
+      "level": "A1"
+    },
+    {
+      "german": "die Mutter",
+      "article": "die",
+      "plural": "die Mütter",
+      "category": "noun",
+      "italian": "la madre",
+      "english": "mother",
+      "example_de": "Hilfst du deiner Mutter oft?",
+      "level": "A1"
+    },
+    {
+      "german": "der Gott",
+      "article": "der",
+      "plural": "die Götter",
+      "category": "noun",
+      "italian": "il dio",
+      "english": "god",
+      "example_de": "Ich habe an den Gott geglaubt.",
+      "level": "A2"
+    },
+    {
+      "german": "die Gitarre",
+      "article": "die",
+      "plural": "die Gitarren",
+      "category": "noun",
+      "italian": "la chitarra",
+      "english": "guitar",
+      "example_de": "Heute habe ich Gitarre gespielt.",
+      "level": "A1"
+    },
+    {
+      "german": "das Ticket",
+      "article": "das",
+      "plural": "die Tickets",
+      "category": "noun",
+      "italian": "il biglietto",
+      "english": "ticket",
+      "example_de": "Ich habe ein Ticket gebraucht.",
+      "level": "A1"
+    },
+    {
+      "german": "der Hut",
+      "article": "der",
+      "plural": "die Hüte",
+      "category": "noun",
+      "italian": "il cappello",
+      "english": "hat",
+      "example_de": "Der Hut hat sehr gut gepasst.",
+      "level": "A2"
+    },
+    {
+      "german": "die Großmutter",
+      "article": "die",
+      "plural": "die Großmütter",
+      "category": "noun",
+      "italian": "la nonna",
+      "english": "grandmother",
+      "example_de": "Dieses Jahr hat meine Großmutter nicht allein gelebt.",
+      "level": "A1"
+    },
+    {
+      "german": "allein",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "solo, da solo",
+      "english": "alone",
+      "example_de": "Meine Großmutter hat nicht allein gelebt.",
+      "level": "A1"
+    },
+    {
+      "german": "das Arbeitszimmer",
+      "article": "das",
+      "plural": "die Arbeitszimmer",
+      "category": "noun",
+      "italian": "lo studio",
+      "english": "study, office",
+      "example_de": "Ich habe in eurem Arbeitszimmer geschaut.",
+      "level": "A2"
+    },
+    {
+      "german": "die Schweiz",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "la Svizzera",
+      "english": "Switzerland",
+      "example_de": "Ich bin in die Schweiz gereist.",
+      "level": "A1"
+    },
+    {
+      "german": "organisieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "organizzare",
+      "english": "to organize",
+      "example_de": "Ich habe organisiert.",
+      "level": "A2"
+    },
+    {
+      "german": "das Zimmer",
+      "article": "das",
+      "plural": "die Zimmer",
+      "category": "noun",
+      "italian": "la camera",
+      "english": "room",
+      "example_de": "Heute habe ich mein Zimmer bestellt.",
+      "level": "A1"
+    },
+    {
+      "german": "das Wasser",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "l'acqua",
+      "english": "water",
+      "example_de": "Das Wasser hat die Stadt überflutet.",
+      "level": "A1"
+    },
+    {
+      "german": "die Stadt",
+      "article": "die",
+      "plural": "die Städte",
+      "category": "noun",
+      "italian": "la città",
+      "english": "city",
+      "example_de": "Das Wasser hat die Stadt überflutet.",
+      "level": "A1"
+    },
+    {
+      "german": "trainieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "allenarsi",
+      "english": "to train",
+      "example_de": "Warum hast du die ganze Woche trainiert?",
+      "level": "A2"
+    },
+    {
+      "german": "probieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "provare",
+      "english": "to try",
+      "example_de": "Ich habe probiert, Deutsch zu sprechen.",
+      "level": "A2"
+    },
+    {
+      "german": "hinzufügen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "aggiungere",
+      "english": "to add",
+      "example_de": "Ich füge einen Kommentar hinzu.",
+      "level": "B1"
+    },
+    {
+      "german": "der Kommentar",
+      "article": "der",
+      "plural": "die Kommentare",
+      "category": "noun",
+      "italian": "il commento",
+      "english": "comment",
+      "example_de": "Ich füge einen Kommentar hinzu.",
+      "level": "B1"
+    },
+    {
+      "german": "die Tabelle",
+      "article": "die",
+      "plural": "die Tabellen",
+      "category": "noun",
+      "italian": "la tabella",
+      "english": "table, chart",
+      "example_de": "Ich ergänze die Tabelle.",
+      "level": "B1"
+    },
+    {
+      "german": "die Kirsche",
+      "article": "die",
+      "plural": "die Kirschen",
+      "category": "noun",
+      "italian": "la ciliegia",
+      "english": "cherry",
+      "example_de": "Ich füge eine Kirsche zum Kuchen hinzu.",
+      "level": "A2"
+    },
+    {
+      "german": "die Prüfung",
+      "article": "die",
+      "plural": "die Prüfungen",
+      "category": "noun",
+      "italian": "l'esame",
+      "english": "exam",
+      "example_de": "Ich habe die Prüfung bestanden.",
+      "level": "A2"
+    },
+    {
+      "german": "das Examen",
+      "article": "das",
+      "plural": "die Examina",
+      "category": "noun",
+      "italian": "l'esame",
+      "english": "examination",
+      "example_de": "Ich habe das Examen bestanden.",
+      "level": "B1"
+    },
+    {
+      "german": "abholen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "andare a prendere",
+      "english": "to pick up",
+      "example_de": "Ich habe abgeholt.",
+      "level": "A2"
+    },
+    {
+      "german": "anklicken",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "cliccare",
+      "english": "to click",
+      "example_de": "Ich habe angeklickt.",
+      "level": "A2"
+    },
+    {
+      "german": "ankreuzen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "spuntare, segnare con una croce",
+      "english": "to check, to cross, to mark",
+      "example_de": "Ich habe angekreuzt.",
+      "level": "A2"
+    },
+    {
+      "german": "anmachen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "accendere",
+      "english": "to turn on",
+      "example_de": "Ich habe angemacht.",
+      "level": "A2"
+    },
+    {
+      "german": "sich anmelden",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "registrarsi",
+      "english": "to register",
+      "example_de": "Ich habe mich angemeldet.",
+      "level": "B1"
+    },
+    {
+      "german": "aufhören",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "smettere",
+      "english": "to stop",
+      "example_de": "Ich habe aufgehört.",
+      "level": "A2"
+    },
+    {
+      "german": "ausfüllen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "compilare",
+      "english": "to fill out",
+      "example_de": "Ich habe ausgefüllt.",
+      "level": "A2"
+    },
+    {
+      "german": "ausmachen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "spegnere",
+      "english": "to turn off",
+      "example_de": "Ich habe ausgemacht.",
+      "level": "A2"
+    },
+    {
+      "german": "baden",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "fare il bagno",
+      "english": "to bathe",
+      "example_de": "Ich habe gebadet.",
+      "level": "A2"
+    },
+    {
+      "german": "bedeuten",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "significare",
+      "english": "to mean",
+      "example_de": "Das hat bedeutet.",
+      "level": "A2"
+    },
+    {
+      "german": "besichtigen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "visitare (città)",
+      "english": "to view, to sightsee",
+      "example_de": "Ich habe besichtigt.",
+      "level": "A2"
+    },
+    {
+      "german": "bezahlen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "pagare",
+      "english": "to pay",
+      "example_de": "Ich habe bezahlt.",
+      "level": "A1"
+    },
+    {
+      "german": "danken",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "ringraziare",
+      "english": "to thank",
+      "example_de": "Ich habe gedankt.",
+      "level": "A2"
+    },
+    {
+      "german": "drucken",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "stampare",
+      "english": "to print",
+      "example_de": "Ich habe gedruckt.",
+      "level": "A2"
+    },
+    {
+      "german": "drücken",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "premere, abbracciare",
+      "english": "to press, to hug",
+      "example_de": "Ich habe gedrückt.",
+      "level": "A2"
+    },
+    {
+      "german": "enden",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "finire",
+      "english": "to end",
+      "example_de": "Es hat geendet.",
+      "level": "A2"
+    },
+    {
+      "german": "sich entschuldigen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "scusarsi",
+      "english": "to apologize",
+      "example_de": "Ich habe mich entschuldigt.",
+      "level": "A2"
+    },
+    {
+      "german": "erlauben",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "permettere",
+      "english": "to allow",
+      "example_de": "Ich habe erlaubt.",
+      "level": "B1"
+    },
+    {
+      "german": "erzählen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "raccontare",
+      "english": "to tell",
+      "example_de": "Ich habe erzählt.",
+      "level": "A2"
+    },
+    {
+      "german": "der Schmuck",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "il gioiello",
+      "english": "the jewellery",
+      "example_de": "Sie möchte viel goldenen, teuren, hellen, neuen Schmuck tragen.",
+      "level": "A2"
+    },
+    {
+      "german": "der Urlaub",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "la vacanza",
+      "english": "the vacation",
+      "example_de": "Sie möchte einen Urlaub mit dem Flugzeug machen.",
+      "level": "A1"
+    },
+    {
+      "german": "das Bild",
+      "article": "das",
+      "plural": "die Bilder",
+      "category": "noun",
+      "italian": "l'immagine",
+      "english": "the picture",
+      "example_de": "Wie heißen diese Dinge in diesem Bild?",
+      "level": "A1"
+    },
+    {
+      "german": "der Turm",
+      "article": "der",
+      "plural": "die Türme",
+      "category": "noun",
+      "italian": "la torre",
+      "english": "the tower",
+      "example_de": "Ich habe den schiefen Turm von Pisa besichtigt.",
+      "level": "A2"
+    },
+    {
+      "german": "schief",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "storto, pendente",
+      "english": "crooked, to lean",
+      "example_de": "Ich habe den schiefen Turm von Pisa besichtigt.",
+      "level": "B1"
+    },
+    {
+      "german": "die Tür",
+      "article": "die",
+      "plural": "die Türen",
+      "category": "noun",
+      "italian": "la porta",
+      "english": "the door",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "die Sehenswürdigkeit",
+      "article": "die",
+      "plural": "die Sehenswürdigkeiten",
+      "category": "noun",
+      "italian": "l'attrazione turistica",
+      "english": "the sight, viewing site",
+      "example_de": "Hast du viele bekannte Sehenswürdigkeiten besichtigt?",
+      "level": "A2"
+    },
+    {
+      "german": "die Insel",
+      "article": "die",
+      "plural": "die Inseln",
+      "category": "noun",
+      "italian": "l'isola",
+      "english": "the island",
+      "example_de": "Ich träume von der perfekten Insel für mich.",
+      "level": "A2"
+    },
+    {
+      "german": "windig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "ventoso",
+      "english": "windy",
+      "example_de": "Es ist keine windige Insel.",
+      "level": "A2"
+    },
+    {
+      "german": "hässlich",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "brutto",
+      "english": "ugly",
+      "example_de": "Es ist keine hässliche Insel.",
+      "level": "A2"
+    },
+    {
+      "german": "bekannt",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "conosciuto, famoso",
+      "english": "known, famous",
+      "example_de": "Es ist keine bekannte Insel.",
+      "level": "A2"
+    },
+    {
+      "german": "unbekannt",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "sconosciuto",
+      "english": "unknown",
+      "example_de": "Es ist eine unbekannte Insel.",
+      "level": "A2"
+    },
+    {
+      "german": "schmutzig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "sporco",
+      "english": "dirty",
+      "example_de": "Es ist keine schmutzige Insel.",
+      "level": "A2"
+    },
+    {
+      "german": "der Dschungel",
+      "article": "der",
+      "plural": "die Dschungel",
+      "category": "noun",
+      "italian": "la giungla",
+      "english": "the jungle",
+      "example_de": "Die Insel ist eine Insel mit einem Dschungel.",
+      "level": "A2"
+    },
+    {
+      "german": "der Strand",
+      "article": "der",
+      "plural": "die Strände",
+      "category": "noun",
+      "italian": "la spiaggia",
+      "english": "the beach",
+      "example_de": "Die Insel hat einen schönen, sauberen Strand.",
+      "level": "A1"
+    },
+    {
+      "german": "sauber",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "pulito",
+      "english": "clean",
+      "example_de": "Die Insel hat einen sauberen Strand.",
+      "level": "A2"
+    },
+    {
+      "german": "stark",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "forte",
+      "english": "strong",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "schwach",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "debole",
+      "english": "weak",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "schön",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "bello",
+      "english": "beautiful",
+      "example_de": "Sie träumt von einem schönen Haus.",
+      "level": "A1"
+    },
+    {
+      "german": "gut",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "buono",
+      "english": "good",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "schlecht",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "cattivo",
+      "english": "bad",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "interessant",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "interessante",
+      "english": "interesting",
+      "example_de": "Sie möchte einen interessanten Urlaub machen.",
+      "level": "A1"
+    },
+    {
+      "german": "langweilig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "noioso",
+      "english": "boring",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "bequem",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "comodo",
+      "english": "comfortable",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "anstrengend",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "faticoso",
+      "english": "tiring",
+      "example_de": "",
+      "level": "B1"
+    },
+    {
+      "german": "kurz",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "corto",
+      "english": "short",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "lang",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "lungo",
+      "english": "long",
+      "example_de": "Sie möchte einen langen Urlaub machen.",
+      "level": "A1"
+    },
+    {
+      "german": "billig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "economico",
+      "english": "cheap",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "modern",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "moderno",
+      "english": "modern",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "alt",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "vecchio",
+      "english": "old",
+      "example_de": "Du hast einen neuen Laptop gekauft, weil dein Laptop alt war.",
+      "level": "A1"
+    },
+    {
+      "german": "neu",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "nuovo",
+      "english": "new",
+      "example_de": "Sie möchte neuen Schmuck tragen.",
+      "level": "A1"
+    },
+    {
+      "german": "sonnig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "soleggiato",
+      "english": "sunny",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "regnerisch",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "piovoso",
+      "english": "rainy",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "warm",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "caldo",
+      "english": "warm",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "kalt",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "freddo",
+      "english": "cold",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "glücklich",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "felice",
+      "english": "happy",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "entspannt",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "rilassato",
+      "english": "relaxed",
+      "example_de": "Sie möchte einen entspannten Urlaub machen.",
+      "level": "A2"
+    },
+    {
+      "german": "müde",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "stanco",
+      "english": "tired",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "einfach",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "facile",
+      "english": "easy",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "schwierig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "difficile",
+      "english": "difficult",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "schwer",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "pesante",
+      "english": "heavy",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "leicht",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "leggero",
+      "english": "light",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "hart",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "duro",
+      "english": "hard",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "weich",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "morbido",
+      "english": "soft",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "das Hotel",
+      "article": "das",
+      "plural": "die Hotels",
+      "category": "noun",
+      "italian": "l'hotel",
+      "english": "the hotel",
+      "example_de": "Ich möchte ein Hotel mit schönen Zimmern.",
+      "level": "A1"
+    },
+    {
+      "german": "die Garage",
+      "article": "die",
+      "plural": "die Garagen",
+      "category": "noun",
+      "italian": "il garage",
+      "english": "the garage",
+      "example_de": "Ich möchte eine Garage mit schönen Autos.",
+      "level": "A2"
+    },
+    {
+      "german": "das Land",
+      "article": "das",
+      "plural": "die Länder",
+      "category": "noun",
+      "italian": "il paese",
+      "english": "the country",
+      "example_de": "Wie viele Länder hast du besucht?",
+      "level": "A1"
+    },
+    {
+      "german": "der Norden",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "il nord",
+      "english": "the north",
+      "example_de": "Ich habe den Norden von Afrika gesehen.",
+      "level": "A2"
+    },
+    {
+      "german": "das Schiff",
+      "article": "das",
+      "plural": "die Schiffe",
+      "category": "noun",
+      "italian": "la nave",
+      "english": "the ship",
+      "example_de": "Ich bin mit dem Schiff gereist.",
+      "level": "A2"
+    },
+    {
+      "german": "das Opernhaus",
+      "article": "das",
+      "plural": "die Opernhäuser",
+      "category": "noun",
+      "italian": "il teatro dell'opera",
+      "english": "the opera house",
+      "example_de": "Ich habe das Opernhaus in Sydney gesehen.",
+      "level": "B1"
+    },
+    {
+      "german": "der Berg",
+      "article": "der",
+      "plural": "die Berge",
+      "category": "noun",
+      "italian": "la montagna",
+      "english": "the mountain",
+      "example_de": "Es gibt einen kleinen Berg in der Mitte von Australien.",
+      "level": "A1"
+    },
+    {
+      "german": "der Felsen",
+      "article": "der",
+      "plural": "die Felsen",
+      "category": "noun",
+      "italian": "la roccia",
+      "english": "the rock",
+      "example_de": "Dieser Felsen ist sehr schön.",
+      "level": "B1"
+    },
+    {
+      "german": "das Meer",
+      "article": "das",
+      "plural": "die Meere",
+      "category": "noun",
+      "italian": "il mare",
+      "english": "the sea",
+      "example_de": "Ich fahre gern ans Meer.",
+      "level": "A1"
+    },
+    {
+      "german": "das Korallenriff",
+      "article": "das",
+      "plural": "die Korallenriffe",
+      "category": "noun",
+      "italian": "la barriera corallina",
+      "english": "the coral reef",
+      "example_de": "Das Korallenriff von Melbourne ist schön.",
+      "level": "B1"
+    },
+    {
+      "german": "die Welle",
+      "article": "die",
+      "plural": "die Wellen",
+      "category": "noun",
+      "italian": "l'onda",
+      "english": "the wave",
+      "example_de": "Es gibt viele Wellen im Meer.",
+      "level": "A2"
+    },
+    {
+      "german": "der Surfer",
+      "article": "der",
+      "plural": "die Surfer",
+      "category": "noun",
+      "italian": "il surfista",
+      "english": "the surfer",
+      "example_de": "Es gibt viele Surfer.",
+      "level": "A2"
+    },
+    {
+      "german": "tauchen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "fare immersioni",
+      "english": "to dive",
+      "example_de": "Warst du tauchen?",
+      "level": "A2"
+    },
+    {
+      "german": "der Reisepass",
+      "article": "der",
+      "plural": "die Reisepässe",
+      "category": "noun",
+      "italian": "il passaporto",
+      "english": "the passport",
+      "example_de": "Du hast also schon oft deinen Reisepass gebraucht?",
+      "level": "A2"
+    },
+    {
+      "german": "der Pass",
+      "article": "der",
+      "plural": "die Pässe",
+      "category": "noun",
+      "italian": "il passaporto",
+      "english": "the passport",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "die Lieblingsreise",
+      "article": "die",
+      "plural": "die Lieblingsreisen",
+      "category": "noun",
+      "italian": "il viaggio preferito",
+      "english": "the favorite trip",
+      "example_de": "Was war deine Lieblingsreise?",
+      "level": "A2"
+    },
+    {
+      "german": "die Küste",
+      "article": "die",
+      "plural": "die Küsten",
+      "category": "noun",
+      "italian": "la costa",
+      "english": "the coast",
+      "example_de": "Mein bester Urlaub war in Nizza, an der hellblauen Küste.",
+      "level": "A2"
+    },
+    {
+      "german": "der See",
+      "article": "der",
+      "plural": "die Seen",
+      "category": "noun",
+      "italian": "il lago",
+      "english": "the lake",
+      "example_de": "Ich fahre gern an den See.",
+      "level": "A1"
+    },
+    {
+      "german": "der Fluss",
+      "article": "der",
+      "plural": "die Flüsse",
+      "category": "noun",
+      "italian": "il fiume",
+      "english": "the river",
+      "example_de": "Ich fahre gern an den Fluss.",
+      "level": "A2"
+    },
+    {
+      "german": "das Gebirge",
+      "article": "das",
+      "plural": "die Gebirge",
+      "category": "noun",
+      "italian": "la catena montuosa",
+      "english": "the mountain range",
+      "example_de": "Ich fahre gern ins Gebirge.",
+      "level": "A2"
+    },
+    {
+      "german": "die Wüste",
+      "article": "die",
+      "plural": "die Wüsten",
+      "category": "noun",
+      "italian": "il deserto",
+      "english": "the desert",
+      "example_de": "Ich fahre gern in die Wüste.",
+      "level": "A2"
+    },
+    {
+      "german": "der Wald",
+      "article": "der",
+      "plural": "die Wälder",
+      "category": "noun",
+      "italian": "la foresta",
+      "english": "the forest",
+      "example_de": "Ich fahre gern in den Wald.",
+      "level": "A1"
+    },
+    {
+      "german": "die Sonne",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "il sole",
+      "english": "the sun",
+      "example_de": "Eigentlich hasse ich die Sonne.",
+      "level": "A1"
+    },
+    {
+      "german": "der Sonnenschutz",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "la protezione solare",
+      "english": "the sun protection",
+      "example_de": "Ich habe Sonnenschutz benutzt.",
+      "level": "B1"
+    },
+    {
+      "german": "die Sonnencreme",
+      "article": "die",
+      "plural": "die Sonnencremes",
+      "category": "noun",
+      "italian": "la crema solare",
+      "english": "the sunscreen",
+      "example_de": "Hast du oft die Sonnencreme benutzt?",
+      "level": "B1"
+    },
+    {
+      "german": "die Creme",
+      "article": "die",
+      "plural": "die Cremes",
+      "category": "noun",
+      "italian": "la crema",
+      "english": "the cream",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "der Schutz",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "la protezione",
+      "english": "the protection",
+      "example_de": "",
+      "level": "B1"
+    },
+    {
+      "german": "die Reise",
+      "article": "die",
+      "plural": "die Reisen",
+      "category": "noun",
+      "italian": "il viaggio",
+      "english": "the trip, journey",
+      "example_de": "Was war deine Lieblingsreise?",
+      "level": "A1"
+    },
+    {
+      "german": "der Flug",
+      "article": "der",
+      "plural": "die Flüge",
+      "category": "noun",
+      "italian": "il volo",
+      "english": "the flight",
+      "example_de": "Hast du deinen Flug online gebucht?",
+      "level": "A2"
+    },
+    {
+      "german": "gern",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "volentieri",
+      "english": "gladly",
+      "example_de": "Reist du gern?",
+      "level": "A1"
+    },
+    {
+      "german": "lieber",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "preferibilmente",
+      "english": "preferably",
+      "example_de": "Ich fahre lieber ans Meer.",
+      "level": "A2"
+    },
+    {
+      "german": "am liebsten",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "preferito (superlativo)",
+      "english": "most preferably",
+      "example_de": "Welches Essen hast du am liebsten bestellt?",
+      "level": "A2"
+    },
+    {
+      "german": "viel",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "molto",
+      "english": "a lot, much",
+      "example_de": "Hast du für die Reise viel bezahlt?",
+      "level": "A1"
+    },
+    {
+      "german": "wenig",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "poco",
+      "english": "a little, few",
+      "example_de": "Hast du für die Reise wenig bezahlt?",
+      "level": "A2"
+    },
+    {
+      "german": "das Känguru",
+      "article": "das",
+      "plural": "die Kängurus",
+      "category": "noun",
+      "italian": "il canguro",
+      "english": "the kangaroo",
+      "example_de": "Wir haben das Känguruh mit Kartoffeln gegessen.",
+      "level": "A2"
+    },
+    {
+      "german": "der Vogel",
+      "article": "der",
+      "plural": "die Vögel",
+      "category": "noun",
+      "italian": "l'uccello",
+      "english": "the bird",
+      "example_de": "",
+      "level": "A1"
+    },
+    {
+      "german": "das Visum",
+      "article": "das",
+      "plural": "die Visa",
+      "category": "noun",
+      "italian": "il visto",
+      "english": "the visa",
+      "example_de": "Hast du ein Visum gebraucht?",
+      "level": "B1"
+    },
+    {
+      "german": "der Stopp",
+      "article": "der",
+      "plural": "die Stopps",
+      "category": "noun",
+      "italian": "la fermata",
+      "english": "the stop",
+      "example_de": "Es gibt drei Stopps.",
+      "level": "A2"
+    },
+    {
+      "german": "abfliegen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "decollare",
+      "english": "to take off",
+      "example_de": "Wo ist dein Flugzeug abgeflogen?",
+      "level": "B1"
+    },
+    {
+      "german": "ankommen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "arrivare",
+      "english": "to arrive",
+      "example_de": "Nach wie vielen Stunden Flug bist du angekommen?",
+      "level": "A1"
+    },
+    {
+      "german": "anfangen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "iniziare",
+      "english": "to start, to begin",
+      "example_de": "Wann hast du mit der Reiseplanung angefangen?",
+      "level": "A1"
+    },
+    {
+      "german": "beenden",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "terminare (attivo)",
+      "english": "to end, to finish (active)",
+      "example_de": "Ich beende den Film.",
+      "level": "B1"
+    },
+    {
+      "german": "die Gastfamilie",
+      "article": "die",
+      "plural": "die Gastfamilien",
+      "category": "noun",
+      "italian": "la famiglia ospitante",
+      "english": "the host family",
+      "example_de": "Ich habe mit der Gastfamilie gefrühstückt.",
+      "level": "B1"
+    },
+    {
+      "german": "selbst",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "da solo, stesso",
+      "english": "on your own, yourself",
+      "example_de": "Hast du auch manchmal selbst gekocht?",
+      "level": "A2"
+    },
+    {
+      "german": "andere",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "altri",
+      "english": "others",
+      "example_de": "",
+      "level": "A2"
+    },
+    {
+      "german": "weder ... noch",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "né ... né",
+      "english": "neither ... nor",
+      "example_de": "Es war weder viel noch gut.",
+      "level": "B1"
+    },
+    {
+      "german": "entweder ... oder",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "o ... o",
+      "english": "either ... or",
+      "example_de": "",
+      "level": "B1"
+    },
+    {
+      "german": "genug",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "abbastanza",
+      "english": "enough",
+      "example_de": "Das war nicht genug und nicht gut.",
+      "level": "A2"
+    },
+    {
+      "german": "sicher",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "sicuro",
+      "english": "sure",
+      "example_de": "Ich bin sicher, das Haus hat null Euro gekostet.",
+      "level": "A2"
+    },
+    {
+      "german": "verlieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "perdere",
+      "english": "to lose",
+      "example_de": "Ich habe sechs Kilo verloren.",
+      "level": "A2"
+    },
+    {
+      "german": "mieten",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "affittare, noleggiare",
+      "english": "to rent",
+      "example_de": "Hast du ein Auto gemietet?",
+      "level": "A2"
+    },
+    {
+      "german": "minderjährig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "minorenne",
+      "english": "underage",
+      "example_de": "Nein, ich war minderjährig.",
+      "level": "B1"
+    },
+    {
+      "german": "das Museum",
+      "article": "das",
+      "plural": "die Museen",
+      "category": "noun",
+      "italian": "il museo",
+      "english": "the museum",
+      "example_de": "Hast du ein interessantes Museum besucht?",
+      "level": "A1"
+    },
+    {
+      "german": "die Safari",
+      "article": "die",
+      "plural": "die Safaris",
+      "category": "noun",
+      "italian": "il safari",
+      "english": "the safari",
+      "example_de": "Australien ist sehr bekannt für Safaris.",
+      "level": "A2"
+    },
+    {
+      "german": "verboten",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "vietato",
+      "english": "forbidden",
+      "example_de": "Warum ist das verboten?",
+      "level": "A2"
+    },
+    {
+      "german": "der Aberglaube",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "la superstizione",
+      "english": "the superstition",
+      "example_de": "Es gibt einen Aberglauben von den Aborigines.",
+      "level": "B1"
+    },
+    {
+      "german": "heilig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "sacro",
+      "english": "sacred, holy",
+      "example_de": "Es ist sehr heilig für sie.",
+      "level": "B1"
+    },
+    {
+      "german": "die Unterkunft",
+      "article": "die",
+      "plural": "die Unterkünfte",
+      "category": "noun",
+      "italian": "l'alloggio",
+      "english": "the accommodation",
+      "example_de": "Hast du deine Unterkunft online gebucht?",
+      "level": "B1"
+    },
+    {
+      "german": "buchen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "prenotare",
+      "english": "to book",
+      "example_de": "Hast du deine Unterkunft online gebucht?",
+      "level": "A2"
+    },
+    {
+      "german": "schon",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "già",
+      "english": "already",
+      "example_de": "Ich war schon einmal in Krakau.",
+      "level": "A1"
+    },
+    {
+      "german": "noch nicht",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "non ancora",
+      "english": "not yet",
+      "example_de": "Wir waren noch nicht dort.",
+      "level": "A1"
+    },
+    {
+      "german": "das Foto",
+      "article": "das",
+      "plural": "die Fotos",
+      "category": "noun",
+      "italian": "la foto",
+      "english": "the photo",
+      "example_de": "Hast du viele schöne Fotos gemacht?",
+      "level": "A1"
+    },
+    {
+      "german": "das Tier",
+      "article": "das",
+      "plural": "die Tiere",
+      "category": "noun",
+      "italian": "l'animale",
+      "english": "the animal",
+      "example_de": "Ich habe viele Fotos von Tieren gemacht.",
+      "level": "A1"
+    },
+    {
+      "german": "die Spinne",
+      "article": "die",
+      "plural": "die Spinnen",
+      "category": "noun",
+      "italian": "il ragno",
+      "english": "the spider",
+      "example_de": "Ich habe eine sehr große Spinne gesehen.",
+      "level": "A2"
+    },
+    {
+      "german": "draußen",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "fuori",
+      "english": "outside",
+      "example_de": "Sie war draußen neben meinem Fenster.",
+      "level": "A2"
+    },
+    {
+      "german": "drinnen",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "dentro",
+      "english": "inside",
+      "example_de": "Er ist drinnen.",
+      "level": "A2"
+    },
+    {
+      "german": "der Körper",
+      "article": "der",
+      "plural": "die Körper",
+      "category": "noun",
+      "italian": "il corpo",
+      "english": "the body",
+      "example_de": "Der Körper war 10 Zentimeter groß.",
+      "level": "A2"
+    },
+    {
+      "german": "das Bein",
+      "article": "das",
+      "plural": "die Beine",
+      "category": "noun",
+      "italian": "la gamba",
+      "english": "the leg",
+      "example_de": "Die Beine waren 50 Zentimeter groß.",
+      "level": "A1"
+    },
+    {
+      "german": "gefährlich",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "pericoloso",
+      "english": "dangerous",
+      "example_de": "Es gibt auch gefährliche Schlangen und Haie.",
+      "level": "A2"
+    },
+    {
+      "german": "die Schlange",
+      "article": "die",
+      "plural": "die Schlangen",
+      "category": "noun",
+      "italian": "il serpente",
+      "english": "the snake",
+      "example_de": "Es gibt gefährliche Schlangen.",
+      "level": "A2"
+    },
+    {
+      "german": "der Hai",
+      "article": "der",
+      "plural": "die Haie",
+      "category": "noun",
+      "italian": "lo squalo",
+      "english": "the shark",
+      "example_de": "Es gibt gefährliche Haie.",
+      "level": "A2"
+    },
+    {
+      "german": "die Leute",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "la gente",
+      "english": "the people",
+      "example_de": "Hast du viele neue Leute kennengelernt?",
+      "level": "A1"
+    },
+    {
+      "german": "kennenlernen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "conoscere",
+      "english": "to get to know, to meet",
+      "example_de": "Hast du viele neue Leute kennengelernt?",
+      "level": "A1"
+    },
+    {
+      "german": "der Rucksack",
+      "article": "der",
+      "plural": "die Rucksäcke",
+      "category": "noun",
+      "italian": "lo zaino",
+      "english": "the backpack",
+      "example_de": "Bist du mit einem Rucksack gereist?",
+      "level": "A2"
+    },
+    {
+      "german": "der Koffer",
+      "article": "der",
+      "plural": "die Koffer",
+      "category": "noun",
+      "italian": "la valigia",
+      "english": "the suitcase",
+      "example_de": "Bist du mit einem Koffer gereist?",
+      "level": "A1"
+    },
+    {
+      "german": "gar nicht",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "per niente",
+      "english": "not at all",
+      "example_de": "Das Essen in Australien hat gar nicht gut geschmeckt.",
+      "level": "B1"
+    },
+    {
+      "german": "sogar",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "addirittura",
+      "english": "even",
+      "example_de": "Ich habe sogar 6 Kilo verloren.",
+      "level": "B1"
+    },
+    {
+      "german": "ganz",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "abbastanza, molto",
+      "english": "quite",
+      "example_de": "Das war ganz toll!",
+      "level": "A2"
+    },
+    {
+      "german": "der Sonnenbrand",
+      "article": "der",
+      "plural": "die Sonnenbrände",
+      "category": "noun",
+      "italian": "la scottatura solare",
+      "english": "the sunburn",
+      "example_de": "Hast du einen Sonnenbrand bekommen?",
+      "level": "B1"
+    },
+    {
+      "german": "der Reiseführer",
+      "article": "der",
+      "plural": "die Reiseführer",
+      "category": "noun",
+      "italian": "la guida turistica",
+      "english": "the travel guide",
+      "example_de": "Hast du einen klassischen Reiseführer gelesen?",
+      "level": "B1"
+    },
+    {
+      "german": "finden",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "trovare",
+      "english": "to find",
+      "example_de": "Hast du gute Restaurants gefunden?",
+      "level": "A1"
+    },
+    {
+      "german": "das Restaurant",
+      "article": "das",
+      "plural": "die Restaurants",
+      "category": "noun",
+      "italian": "il ristorante",
+      "english": "the restaurant",
+      "example_de": "Hast du gute Restaurants gefunden?",
+      "level": "A1"
+    },
+    {
+      "german": "das Souvenir",
+      "article": "das",
+      "plural": "die Souvenirs",
+      "category": "noun",
+      "italian": "il souvenir",
+      "english": "the souvenir",
+      "example_de": "Hast du deiner Mutter Souvenirs mitgebracht?",
+      "level": "A2"
+    },
+    {
+      "german": "mitbringen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "portare con sé",
+      "english": "to bring along",
+      "example_de": "Hast du deiner Mutter Souvenirs mitgebracht?",
+      "level": "A2"
+    },
+    {
+      "german": "das Schwimmbad",
+      "article": "das",
+      "plural": "die Schwimmbäder",
+      "category": "noun",
+      "italian": "la piscina",
+      "english": "the swimming pool",
+      "example_de": "Bist du im Schwimmbad geschwommen?",
+      "level": "A1"
+    },
+    {
+      "german": "rot",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "rosso",
+      "english": "red",
+      "example_de": "Bist du rot geworden?",
+      "level": "A1"
+    },
+    {
+      "german": "braun",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "marrone, abbronzato",
+      "english": "brown, tanned",
+      "example_de": "Bist du braun geworden?",
+      "level": "A1"
+    }
+  ]
+}
