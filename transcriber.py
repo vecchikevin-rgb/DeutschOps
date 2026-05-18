@@ -281,11 +281,20 @@ def transcribe(audio_path: str | Path, output_filename: str | None = None) -> st
         print(f"⏱️  Durata stimata: ~{estimated:.0f} min → API automatica")
         text = transcribe_api(audio_path, output_path)
     else:
-        mode = ask_routing(estimated)
-        if mode == "api":
+        # Controlla variabile d'ambiente per scelta automatica
+        auto_mode = os.environ.get("WHISPER_MODE", "").lower()
+        if auto_mode == "api":
+            print(f"⏱️  Durata stimata: ~{estimated:.0f} min → API (auto)")
             text = transcribe_api(audio_path, output_path)
-        else:
+        elif auto_mode == "local":
+            print(f"⏱️  Durata stimata: ~{estimated:.0f} min → Locale (auto)")
             text = transcribe_local(audio_path, output_path)
+        else:
+            mode = ask_routing(estimated)
+            if mode == "api":
+                text = transcribe_api(audio_path, output_path)
+            else:
+                text = transcribe_local(audio_path, output_path)
 
     print(f"\n--- ANTEPRIMA (prime 300 caratteri) ---")
     print(text[:300])

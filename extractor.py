@@ -9,7 +9,7 @@ load_dotenv()
 client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
 EXTRACTION_PROMPT = """You are an expert German language tutor.
-The student is Kevin, Italian, level A2→B1, studying via English with a native German speaker.
+The student is Kevin, Italian, level A2->B1, studying via English with a native German speaker.
 The lesson transcript is in English with German examples and occasional Italian.
 
 Extract ONLY valid JSON, zero backtick, zero extra text.
@@ -27,7 +27,7 @@ Format:
       "plural": "die Sorgen",
       "category": "noun",
       "italian": "la preoccupazione",
-      "english": "worry, concern",
+      "english": "concern",
       "example_de": "Mach dir keine Sorgen.",
       "example_it": "Non preoccuparti.",
       "level": "A2"
@@ -69,42 +69,38 @@ CRITICAL RULES:
 - level: A1, A2, B1, or B2
 - All explanations in English only
 - grammar_points: max 5, only those explicitly covered in the lesson
-- vocabulary: extract ALL new words for A2→B1, no artificial cap
+- vocabulary: extract ALL new words for A2->B1, no artificial cap
 - comprehension_questions: exactly 3
-- phrases: English field only, no Italian"""
+- phrases: English field only, no Italian
 
-LINGUISTIC ACCURACY RULES (from native speaker feedback)(take these as feedback to improve the model's accuracy in future iterations):
-- "sollen" in Präsens = "shall I...?" (real suggestion asking for opinion)
-  NEVER translate as "should" — that is Konjunktiv II "sollte"
+LINGUISTIC ACCURACY RULES (from native speaker Stefanie):
+- take these as feedback to improve the model accuracy in future iterations
+- "sollen" in Prasens = "shall I...?" (real suggestion asking for opinion)
+  NEVER translate as "should" - that is Konjunktiv II "sollte"
 - "verreisen" = to go on a trip (no destination implied)
   "reisen nach [place]" = to travel to a specific place
-  BAD example: "Ich verreise nach Italien" — use "Ich reise nach Italien" instead
-- Use "die KI" not "AI" when referring to Artificial Intelligence in German context
-- "keine Ahnung" is a fixed phrase — add to phrases/Redemittel, NOT isolated vocabulary
+  BAD example: "Ich verreise nach Italien" - use "Ich reise nach Italien" instead
+- Use "die KI" not "AI" when referring to Artificial Intelligence in German
+- "keine Ahnung" is a fixed phrase - add to phrases only, NOT isolated vocabulary
   Correct: {"german": "Ich habe keine Ahnung", "english": "I have no idea", "context": "fixed phrase"}
 - "die Sorge" = "concern" (more precise than "worry")
-- "egal" is NOT a standalone word — only in fixed structure "es ist mir egal"
-  Add to phrases only: {"german": "Es ist mir egal", "english": "It doesn't matter to me"}
-- "mindestens" example: "Du brauchst mindestens 14 GB" NOT "du siehst mind 14 gb benutzen"
-- "es ist mir egal" belongs in phrases/Redemittel, NOT in grammar_points"""
+- "egal" is NOT a standalone word - only used in fixed structure "es ist mir egal"
+  Add to phrases only: {"german": "Es ist mir egal", "english": "It does not matter to me"}
+- "mindestens" correct example: "Du brauchst mindestens 14 GB"
+- "es ist mir egal" belongs in phrases only, NOT in grammar_points"""
 
 
 def parse_json_safe(raw: str, fallback: dict = None) -> dict | None:
-    """
-    Prova a parsare JSON da una stringa potenzialmente sporca.
-    Cerca il primo { e l'ultimo } e prova a parsare quel blocco.
-    """
+    """Try to parse JSON from a potentially dirty string."""
     if not raw or not raw.strip():
         return fallback
 
     clean = raw.strip()
 
-    # Rimuovi backtick
     if clean.startswith("```"):
         lines = clean.split("\n")
         clean = "\n".join(lines[1:-1]).strip()
 
-    # Trova il blocco JSON principale
     start = clean.find("{")
     end   = clean.rfind("}") + 1
     if start >= 0 and end > start:
@@ -113,15 +109,12 @@ def parse_json_safe(raw: str, fallback: dict = None) -> dict | None:
     try:
         return json.loads(clean)
     except json.JSONDecodeError as e:
-        print(f"   ⚠️  JSON parse error: {e}")
+        print(f"   Warning: JSON parse error: {e}")
         return fallback
 
 
 def extract_text_from_response(response) -> str:
-    """
-    Estrae il testo dalla risposta API, gestendo sia risposte normali
-    che risposte con tool use (web search) che hanno blocchi multipli.
-    """
+    """Extract text from API response, handling web search multi-block responses."""
     print(f"   Response blocks: {len(response.content)}")
 
     text_blocks = []
@@ -135,15 +128,11 @@ def extract_text_from_response(response) -> str:
     if not text_blocks:
         return ""
 
-    # Prendi l'ultimo blocco text — è la risposta finale dopo le ricerche
     return text_blocks[-1]
 
 
 def needs_web_search(grammar_points: list) -> list:
-    """
-    Controlla quali grammar points necessitano web search.
-    Salta quelli già approfonditi in lezioni precedenti.
-    """
+    """Check which grammar points need web search. Skip already researched ones."""
     seen_rules = {}
     for f in sorted(Path("data").glob("lezione_*.json")):
         try:
@@ -162,85 +151,75 @@ def needs_web_search(grammar_points: list) -> list:
             continue
         if rule_key not in seen_rules:
             to_research.append(gp)
-            print(f"   🆕 New rule: {gp.get('rule')}")
+            print(f"   New rule: {gp.get('rule')}")
         elif not seen_rules[rule_key].get("common_mistakes"):
             to_research.append(gp)
-            print(f"   📝 Incomplete: {gp.get('rule')} — will enrich")
+            print(f"   Incomplete: {gp.get('rule')} -- will enrich")
         else:
-            print(f"   ✅ Already complete: {gp.get('rule')} — skip")
+            print(f"   Already complete: {gp.get('rule')} -- skip")
 
     return to_research
 
 
 def enrich_grammar_with_web(grammar_points: list) -> list:
-    """
-    Usa web search per approfondire i grammar points indicati.
-    """
+    """Use web search to enrich grammar points."""
     if not grammar_points:
         return grammar_points
 
-    grammar_prompt = f"""You are an expert German grammar tutor with web search access.
-Research each grammar rule below using web search.
-Search on: dartmouth.edu/~deutsch, germanveryeasy.com, duden.de
-
-For each rule find and include:
-1. Complete rule with ALL forms, cases, conjugation tables
-2. Common mistakes Italian speakers make
-3. 4 varied example sentences showing different contexts
-4. Exceptions and special cases
-
-Grammar points to research:
-{json.dumps(grammar_points, ensure_ascii=False, indent=2)}
-
-After your research, return ONLY valid JSON with NO backtick, NO extra text:
-{{
-  "grammar_points": [
-    {{
-      "rule": "exact same rule name as input",
-      "explanation_en": "complete explanation in English",
-      "full_rule": "complete grammar rule with all forms and tables",
-      "common_mistakes": "typical mistakes Italian speakers make",
-      "examples": ["example 1", "example 2", "example 3", "example 4"],
-      "exceptions": "exceptions and special cases",
-      "source_verified": true
-    }}
-  ]
-}}"""
+    grammar_prompt = (
+        "You are an expert German grammar tutor with web search access.\n"
+        "Research each grammar rule below using web search.\n"
+        "Search on: dartmouth.edu/~deutsch, germanveryeasy.com, duden.de\n\n"
+        "For each rule find and include:\n"
+        "1. Complete rule with ALL forms, cases, conjugation tables\n"
+        "2. Common mistakes Italian speakers make\n"
+        "3. 4 varied example sentences showing different contexts\n"
+        "4. Exceptions and special cases\n\n"
+        "Grammar points to research:\n"
+        + json.dumps(grammar_points, ensure_ascii=False, indent=2)
+        + "\n\nAfter your research, return ONLY valid JSON with NO backtick, NO extra text:\n"
+        '{\n  "grammar_points": [\n    {\n'
+        '      "rule": "exact same rule name as input",\n'
+        '      "explanation_en": "complete explanation in English",\n'
+        '      "full_rule": "complete grammar rule with all forms and tables",\n'
+        '      "common_mistakes": "typical mistakes Italian speakers make",\n'
+        '      "examples": ["example 1", "example 2", "example 3", "example 4"],\n'
+        '      "exceptions": "exceptions and special cases",\n'
+        '      "source_verified": true\n'
+        "    }\n  ]\n}"
+    )
 
     response = client.messages.create(
         model="claude-sonnet-4-5",
         max_tokens=8000,
-        tools=[{
-            "type": "web_search_20250305",
-            "name": "web_search"
-        }],
+        tools=[{"type": "web_search_20250305", "name": "web_search"}],
         messages=[{"role": "user", "content": grammar_prompt}]
     )
 
     cost = (response.usage.input_tokens * 0.000003 +
             response.usage.output_tokens * 0.000015)
-    print(f"   💶 Web search cost: €{cost:.3f}")
+    print(f"   Web search cost: {cost:.3f} EUR")
 
     raw = extract_text_from_response(response)
-    print(f"   Raw text preview: {repr(raw[:150])}")
+    print(f"   Raw preview: {repr(raw[:150])}")
 
     result = parse_json_safe(raw)
     if result:
         enriched = result.get("grammar_points", [])
         if enriched:
-            print(f"   ✅ {len(enriched)} rules enriched with web search")
+            print(f"   {len(enriched)} rules enriched with web search")
             return enriched
 
-    print("   ⚠️  Could not parse web search result — using base grammar")
+    print("   Could not parse web search result -- using base grammar")
     return grammar_points
 
 
 def extract(transcript_path: str, output_filename: str = None,
             doc_new_content: str = "", doc_full_content: str = "") -> dict:
     """
-    Estrae struttura didattica da transcript + novità Google Doc.
-    Call 1: vocabolario e struttura base (no web search)
-    Call 2: web search solo per regole grammaticali nuove o incomplete
+    Extract didactic structure from transcript + Google Doc new content.
+    Call 1: base vocabulary and structure (no web search)
+    Call 2: web search only for new or incomplete grammar rules
     """
     transcript_path = Path(transcript_path)
     if not transcript_path.exists():
@@ -249,10 +228,10 @@ def extract(transcript_path: str, output_filename: str = None,
     if output_filename is None:
         output_filename = transcript_path.stem
 
-    output_path  = Path("data") / f"{output_filename}.json"
+    output_path     = Path("data") / f"{output_filename}.json"
     transcript_text = transcript_path.read_text(encoding="utf-8")
 
-    print(f"📄 Transcript: {transcript_path.name} ({len(transcript_text)} char)")
+    print(f"Transcript: {transcript_path.name} ({len(transcript_text)} char)")
 
     user_content  = f"{EXTRACTION_PROMPT}\n\n"
     user_content += f"=== TRANSCRIPT AUDIO ===\n{transcript_text}\n\n"
@@ -262,39 +241,37 @@ def extract(transcript_path: str, output_filename: str = None,
                    if len(doc_new_content) > 8000
                    else doc_new_content)
         user_content += f"=== DOC NEW CONTENT ===\n{trimmed}\n\n"
-        print(f"📝 Doc content: {len(trimmed)} chars included")
+        print(f"Doc content: {len(trimmed)} chars included")
     else:
-        print("📝 Doc content: none")
+        print("Doc content: none")
 
-    # ── CALL 1: estrazione base ──────────────────────────────────────────────
-    print("🧠 Call 1/2 — Base extraction...")
+    # Call 1: base extraction
+    print("Call 1/2 -- Base extraction...")
     response1 = client.messages.create(
         model="claude-sonnet-4-5",
         max_tokens=8000,
         messages=[{"role": "user", "content": user_content}]
     )
 
-    raw1  = response1.content[0].text.strip()
-    data  = parse_json_safe(raw1)
+    raw1 = response1.content[0].text.strip()
+    data = parse_json_safe(raw1)
     if not data:
         raise ValueError("Could not parse base extraction response")
 
     cost1 = (response1.usage.input_tokens * 0.000003 +
              response1.usage.output_tokens * 0.000015)
-    print(f"   ✅ {len(data.get('vocabulary',[]))} words, "
-          f"{len(data.get('grammar_points',[]))} grammar points | €{cost1:.3f}")
+    print(f"   {len(data.get('vocabulary',[]))} words, "
+          f"{len(data.get('grammar_points',[]))} grammar points | {cost1:.3f} EUR")
 
-    # ── CALL 2: web search grammatica ────────────────────────────────────────
+    # Call 2: web search for grammar
     grammar_points = data.get("grammar_points", [])
     if grammar_points:
-        print("🌐 Call 2/2 — Checking grammar for web search...")
+        print("Call 2/2 -- Checking grammar for web search...")
         to_research = needs_web_search(grammar_points)
 
         if to_research:
             print(f"   Researching {len(to_research)}/{len(grammar_points)} rules...")
-            enriched = enrich_grammar_with_web(to_research)
-
-            # Merge: sostituisci solo i punti ricercati
+            enriched     = enrich_grammar_with_web(to_research)
             enriched_map = {gp.get("rule","").lower(): gp for gp in enriched}
             final_grammar = []
             for gp in grammar_points:
@@ -302,29 +279,27 @@ def extract(transcript_path: str, output_filename: str = None,
                 final_grammar.append(enriched_map.get(key, gp))
             data["grammar_points"] = final_grammar
         else:
-            print("   ✅ All rules already complete — web search skipped")
+            print("   All rules already complete -- web search skipped")
     else:
-        print("🌐 No grammar points — skipping web search")
+        print("No grammar points -- skipping web search")
 
-    # Salva
     output_path.write_text(
         json.dumps(data, ensure_ascii=False, indent=2),
         encoding="utf-8"
     )
 
-    print(f"\n✅ Saved: {output_path}")
-    print(f"📚 Topic: {data.get('topic','N/A')}")
-    print(f"📝 Words: {len(data.get('vocabulary',[]))} | "
+    print(f"\nSaved: {output_path}")
+    print(f"Topic: {data.get('topic','N/A')}")
+    print(f"Words: {len(data.get('vocabulary',[]))} | "
           f"Grammar: {len(data.get('grammar_points',[]))} | "
           f"Phrases: {len(data.get('phrases',[]))}")
 
     if data.get("homework"):
-        print(f"📌 Homework: {data['homework']}")
+        print(f"Homework: {data['homework']}")
     if data.get("doc_sections_covered"):
-        print(f"📖 Sections: {', '.join(data['doc_sections_covered'])}")
+        print(f"Sections: {', '.join(data['doc_sections_covered'])}")
 
-    print(f"\n--- SUMMARY ---")
-    print(f"EN: {data.get('summary_en','')}")
+    print(f"\nSummary EN: {data.get('summary_en','')}")
 
     return data
 
