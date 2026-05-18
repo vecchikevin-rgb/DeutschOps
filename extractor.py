@@ -73,6 +73,21 @@ CRITICAL RULES:
 - comprehension_questions: exactly 3
 - phrases: English field only, no Italian"""
 
+LINGUISTIC ACCURACY RULES (from native speaker feedback)(take these as feedback to improve the model's accuracy in future iterations):
+- "sollen" in Präsens = "shall I...?" (real suggestion asking for opinion)
+  NEVER translate as "should" — that is Konjunktiv II "sollte"
+- "verreisen" = to go on a trip (no destination implied)
+  "reisen nach [place]" = to travel to a specific place
+  BAD example: "Ich verreise nach Italien" — use "Ich reise nach Italien" instead
+- Use "die KI" not "AI" when referring to Artificial Intelligence in German context
+- "keine Ahnung" is a fixed phrase — add to phrases/Redemittel, NOT isolated vocabulary
+  Correct: {"german": "Ich habe keine Ahnung", "english": "I have no idea", "context": "fixed phrase"}
+- "die Sorge" = "concern" (more precise than "worry")
+- "egal" is NOT a standalone word — only in fixed structure "es ist mir egal"
+  Add to phrases only: {"german": "Es ist mir egal", "english": "It doesn't matter to me"}
+- "mindestens" example: "Du brauchst mindestens 14 GB" NOT "du siehst mind 14 gb benutzen"
+- "es ist mir egal" belongs in phrases/Redemittel, NOT in grammar_points"""
+
 
 def parse_json_safe(raw: str, fallback: dict = None) -> dict | None:
     """
