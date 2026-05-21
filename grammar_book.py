@@ -15,6 +15,9 @@ from reportlab.platypus import (
     SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle,
     HRFlowable, PageBreak
 )
+from reportlab.platypus.tableofcontents import TableOfContents
+from reportlab.platypus.doctemplate import BaseDocTemplate, PageTemplate
+from reportlab.platypus.frames import Frame
 
 load_dotenv()
 client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
@@ -38,31 +41,47 @@ C_ORANGE  = colors.HexColor("#e65100")
 
 W = A4[0] - 4*cm
 
+# Didactic order — English only
 CATEGORY_ORDER = [
-    "Verben — Basics",
-    "Verben — Separable & Modal",
-    "Verben — Irregular & Tenses",
-    "Satzstruktur — Word Order",
-    "Nebensätze — Subordinate Clauses",
-    "Kasus — Cases",
-    "Pronomen — Pronouns",
-    "Adjektive & Adverbien",
-    "Präpositionen",
-    "Andere Strukturen",
+    "Verbs — Basics",
+    "Verbs — Separable & Modal",
+    "Verbs — Irregular & Tenses",
+    "Sentence Structure — Word Order",
+    "Subordinate Clauses",
+    "Cases — Kasus",
+    "Pronouns",
+    "Adjectives & Adverbs",
+    "Prepositions",
+    "Other Structures",
 ]
 
+# Keywords → category mapping
 CATEGORY_MAP = [
-    (["separable", "trennbar", "prefix"], "Verben — Separable & Modal"),
-    (["modal", "können", "müssen", "dürfen", "wollen", "sollen", "mögen"], "Verben — Separable & Modal"),
-    (["irregular", "unregelmäßig", "vowel change", "umlaut", "strong verb"], "Verben — Irregular & Tenses"),
-    (["perfekt", "präteritum", "futur", "konjunktiv", "passive", "tense", "partizip"], "Verben — Irregular & Tenses"),
-    (["verb", "conjugat", "konjugat", "infinitiv"], "Verben — Basics"),
-    (["nebensatz", "subordinate", "conjunction", "weil", "dass", "wenn", "ob", "als", "obwohl", "damit"], "Nebensätze — Subordinate Clauses"),
-    (["word order", "wortstellung", "position", "v2", "verb second", "satzstellung"], "Satzstruktur — Word Order"),
-    (["akkusativ", "dativ", "genitiv", "nominativ", "case", "kasus", "declension", "deklination"], "Kasus — Cases"),
-    (["pronoun", "pronomen", "reflexive", "personal", "possessiv", "relative", "demonstrativ"], "Pronomen — Pronouns"),
-    (["adjektiv", "adjective", "adverb", "komparativ", "superlativ", "comparative", "superlative"], "Adjektive & Adverbien"),
-    (["präposition", "preposition"], "Präpositionen"),
+    (["separable", "trennbar", "prefix", "trennbare"], "Verbs — Separable & Modal"),
+    (["modal", "können", "müssen", "dürfen", "wollen", "sollen", "mögen",
+      "shall", "should", "konjunktiv ii"], "Verbs — Separable & Modal"),
+    (["irregular", "unregelmäßig", "vowel change", "umlaut", "strong verb",
+      "ablaut"], "Verbs — Irregular & Tenses"),
+    (["perfekt", "präteritum", "futur", "passive", "partizip", "perfect tense",
+      "past tense", "tense", "haben/sein"], "Verbs — Irregular & Tenses"),
+    (["verb", "conjugat", "konjugat", "infinitiv", "infinitive",
+      "conjugation"], "Verbs — Basics"),
+    (["nebensatz", "subordinate", "conjunction", "weil", "dass", "wenn",
+      "ob", "als", "obwohl", "damit", "indirect question",
+      "word order in"], "Subordinate Clauses"),
+    (["word order", "wortstellung", "position", "v2", "verb second",
+      "satzstellung", "sentence structure", "tekamolo",
+      "main clause"], "Sentence Structure — Word Order"),
+    (["akkusativ", "dativ", "genitiv", "nominativ", "case", "kasus",
+      "declension", "deklination", "außer",
+      "preposition with dativ"], "Cases — Kasus"),
+    (["pronoun", "pronomen", "reflexive", "personal", "possessiv",
+      "relative", "demonstrativ"], "Pronouns"),
+    (["adjektiv", "adjective", "adverb", "komparativ", "superlativ",
+      "comparative", "superlative", "gefallen",
+      "dative object"], "Adjectives & Adverbs"),
+    (["präposition", "preposition", "mit dativ", "mit akkusativ",
+      "two-way"], "Prepositions"),
 ]
 
 
@@ -71,7 +90,7 @@ def assign_category(rule: str, explanation: str) -> str:
     for keywords, category in CATEGORY_MAP:
         if any(kw in text for kw in keywords):
             return category
-    return "Andere Strukturen"
+    return "Other Structures"
 
 
 def load_grammar_db() -> dict:
@@ -102,33 +121,28 @@ def collect_rules_from_lessons() -> dict:
                 ):
                     rules[key] = gp
         except Exception as e:
-            print(f"⚠️  {f.name}: {e}")
+            print(f"Warning: {f.name}: {e}")
     return rules
 
 
 def collect_rules_from_doc(doc_text: str) -> list:
-    print("🧠 Estrazione regole dal Google Doc...")
-    prompt = f"""You are an expert German grammar tutor.
-Analyze this Google Doc and extract ALL grammar rules mentioned.
-For each rule extract name, brief explanation, and examples.
-
-Return ONLY valid JSON, zero backtick:
-{{
-  "grammar_rules": [
-    {{
-      "rule": "rule name",
-      "explanation_en": "explanation in English",
-      "examples": ["example 1", "example 2"],
-      "full_rule": "",
-      "common_mistakes": "",
-      "exceptions": "",
-      "source_verified": false
-    }}
-  ]
-}}
-
-GOOGLE DOC CONTENT:
-{doc_text[:40000]}"""
+    print("Extracting rules from Google Doc...")
+    prompt = (
+        "You are an expert German grammar tutor.\n"
+        "Analyze this Google Doc and extract ALL grammar rules mentioned.\n"
+        "All explanations must be in English only.\n\n"
+        "Return ONLY valid JSON, zero backtick:\n"
+        '{\n  "grammar_rules": [\n    {\n'
+        '      "rule": "rule name in English",\n'
+        '      "explanation_en": "explanation in English",\n'
+        '      "examples": ["example 1", "example 2"],\n'
+        '      "full_rule": "",\n'
+        '      "common_mistakes": "",\n'
+        '      "exceptions": "",\n'
+        '      "source_verified": false\n'
+        "    }\n  ]\n}\n\n"
+        f"GOOGLE DOC CONTENT:\n{doc_text[:40000]}"
+    )
 
     response = client.messages.create(
         model="claude-sonnet-4-5",
@@ -145,14 +159,14 @@ GOOGLE DOC CONTENT:
         raw = raw[start:end]
 
     try:
-        data = json.loads(raw)
+        data  = json.loads(raw)
         rules = data.get("grammar_rules", [])
-        cost = (response.usage.input_tokens * 0.000003 +
-                response.usage.output_tokens * 0.000015)
-        print(f"   ✅ {len(rules)} regole estratte | €{cost:.3f}")
+        cost  = (response.usage.input_tokens * 0.000003 +
+                 response.usage.output_tokens * 0.000015)
+        print(f"   {len(rules)} rules extracted | EUR {cost:.3f}")
         return rules
     except Exception as e:
-        print(f"   ⚠️  Parse error: {e}")
+        print(f"   Parse error: {e}")
         return []
 
 
@@ -161,10 +175,10 @@ def enrich_rules_with_web(rules: list) -> list:
     already_done = [r for r in rules if r.get("full_rule")]
 
     if not to_research:
-        print("   ✅ All rules already complete")
+        print("   All rules already complete")
         return rules
 
-    print(f"🌐 Web search per {len(to_research)} regole...")
+    print(f"Web search for {len(to_research)} rules...")
     enriched_all = []
     batch_size   = 3
 
@@ -172,33 +186,27 @@ def enrich_rules_with_web(rules: list) -> list:
         batch = to_research[i:i+batch_size]
         print(f"   Batch {i//batch_size+1}: {[r['rule'] for r in batch]}")
 
-        prompt = f"""You are an expert German grammar tutor with web search access.
-Research these German grammar rules thoroughly.
-Search on: dartmouth.edu/~deutsch, germanveryeasy.com, duden.de
-
-For each rule provide:
-1. Complete rule with ALL forms, conjugation/declension tables
-2. Common mistakes Italian speakers make with specific examples
-3. 4 varied example sentences in different contexts
-4. Exceptions and special cases
-
-Rules to research:
-{json.dumps(batch, ensure_ascii=False, indent=2)}
-
-Return ONLY valid JSON, zero backtick:
-{{
-  "grammar_rules": [
-    {{
-      "rule": "exact rule name",
-      "explanation_en": "complete clear explanation",
-      "full_rule": "complete rule with all forms and tables",
-      "common_mistakes": "Italian speaker mistakes with examples",
-      "examples": ["example 1", "example 2", "example 3", "example 4"],
-      "exceptions": "exceptions and special cases",
-      "source_verified": true
-    }}
-  ]
-}}"""
+        prompt = (
+            "You are an expert German grammar tutor with web search access.\n"
+            "Research these German grammar rules. All output must be in English.\n"
+            "Search on: dartmouth.edu/~deutsch, germanveryeasy.com, duden.de\n\n"
+            "For each rule provide:\n"
+            "1. Complete rule with ALL forms, conjugation/declension tables\n"
+            "2. Common mistakes Italian speakers make (specific examples)\n"
+            "3. 4 varied example sentences in different contexts\n"
+            "4. Exceptions and special cases\n\n"
+            f"Rules:\n{json.dumps(batch, ensure_ascii=False, indent=2)}\n\n"
+            "Return ONLY valid JSON, zero backtick:\n"
+            '{\n  "grammar_rules": [\n    {\n'
+            '      "rule": "exact rule name",\n'
+            '      "explanation_en": "complete explanation in English",\n'
+            '      "full_rule": "complete rule with all forms and tables",\n'
+            '      "common_mistakes": "Italian speaker mistakes with examples",\n'
+            '      "examples": ["ex 1", "ex 2", "ex 3", "ex 4"],\n'
+            '      "exceptions": "exceptions and special cases",\n'
+            '      "source_verified": true\n'
+            "    }\n  ]\n}"
+        )
 
         try:
             response = client.messages.create(
@@ -215,7 +223,7 @@ Return ONLY valid JSON, zero backtick:
 
             cost = (response.usage.input_tokens * 0.000003 +
                     response.usage.output_tokens * 0.000015)
-            print(f"   💶 €{cost:.3f}")
+            print(f"   EUR {cost:.3f}")
 
             clean = raw.strip()
             if clean.startswith("```"):
@@ -225,126 +233,108 @@ Return ONLY valid JSON, zero backtick:
             if start >= 0 and end > start:
                 clean = clean[start:end]
 
-            data = json.loads(clean)
+            data           = json.loads(clean)
             batch_enriched = data.get("grammar_rules", [])
             enriched_all.extend(batch_enriched)
-            print(f"   ✅ {len(batch_enriched)} regole arricchite")
+            print(f"   {len(batch_enriched)} rules enriched")
 
         except Exception as e:
-            print(f"   ⚠️  Batch error: {e} — using base rules")
+            print(f"   Batch error: {e} -- using base rules")
             enriched_all.extend(batch)
 
     return already_done + enriched_all
 
 
-# ─── PDF STYLES ───────────────────────────────────────────────────────────────
-def S(name, **kw):
-    return ParagraphStyle(name, **kw)
+# ─── DOC TEMPLATE WITH TOC SUPPORT ───────────────────────────────────────────
+class GrammarBookTemplate(BaseDocTemplate):
+    """Custom template that supports TOC with page numbers."""
+
+    def __init__(self, filename, **kwargs):
+        super().__init__(filename, **kwargs)
+        frame = Frame(
+            self.leftMargin, self.bottomMargin,
+            self.width, self.height,
+            id="normal"
+        )
+        template = PageTemplate(id="Later", frames=frame,
+                                onPage=self._add_footer)
+        self.addPageTemplates([template])
+
+    def afterFlowable(self, flowable):
+        """Notify TOC when a heading is encountered."""
+        if isinstance(flowable, Paragraph):
+            style = flowable.style.name
+            if style == "TOCChapter":
+                text = flowable.getPlainText()
+                self.notify("TOCEntry", (0, text, self.page, None))
+            elif style == "TOCRule":
+                text = flowable.getPlainText()
+                self.notify("TOCEntry", (1, text, self.page, None))
+
+    @staticmethod
+    def _add_footer(canvas, doc):
+        canvas.saveState()
+        canvas.setFont("Helvetica", 7.5)
+        canvas.setFillColor(colors.HexColor("#90a4ae"))
+        canvas.drawString(
+            2*cm, 1.1*cm,
+            f"DeutschOps Grammar Book  |  Kevin Vecchi  |  "
+            f"Generated {datetime.now().strftime('%d %b %Y')}"
+        )
+        canvas.drawRightString(A4[0]-2*cm, 1.1*cm, f"Page {doc.page}")
+        canvas.setStrokeColor(colors.HexColor("#b0bec5"))
+        canvas.setLineWidth(0.5)
+        canvas.line(2*cm, 1.5*cm, A4[0]-2*cm, 1.5*cm)
+        canvas.restoreState()
 
 
-def build_styles():
-    return {
-        "cover_title": S("CT", fontName="Helvetica-Bold", fontSize=36,
-                         textColor=C_WHITE, alignment=TA_CENTER, leading=42),
-        "cover_sub":   S("CS", fontName="Helvetica", fontSize=13,
-                         textColor=colors.HexColor("#90caf9"), alignment=TA_CENTER),
-        "cover_stat":  S("CST", fontName="Helvetica-Bold", fontSize=20,
-                         textColor=colors.HexColor("#f9a825"), alignment=TA_CENTER),
-        "toc_cat":     S("TC", fontName="Helvetica-Bold", fontSize=12,
-                         textColor=C_BLUE, spaceBefore=10, spaceAfter=3),
-        "toc_rule":    S("TR", fontName="Helvetica", fontSize=9.5,
-                         textColor=C_GRAY, leftIndent=20, spaceAfter=2),
-        "chapter_hdr": S("CH", fontName="Helvetica-Bold", fontSize=18,
-                         textColor=C_WHITE),
-        "rule_title":  S("RT", fontName="Helvetica-Bold", fontSize=14,
-                         textColor=C_NAVY, spaceBefore=20, spaceAfter=6),
-        "section_hdr": S("SH", fontName="Helvetica-Bold", fontSize=10,
-                         textColor=C_WHITE),
-        "body":        S("BD", fontName="Helvetica", fontSize=10,
-                         textColor=colors.HexColor("#212121"), leading=16,
-                         alignment=TA_JUSTIFY, spaceAfter=6),
-        "body_b":      S("BDB", fontName="Helvetica-Bold", fontSize=10,
-                         textColor=C_NAVY, spaceAfter=4),
-        "italic":      S("IT", fontName="Helvetica-Oblique", fontSize=10,
-                         textColor=C_GRAY, leading=15, spaceAfter=3),
-        "code":        S("CD", fontName="Courier", fontSize=9.5,
-                         textColor=C_NAVY, leading=14, leftIndent=8,
-                         spaceAfter=2),
-        "example":     S("EX", fontName="Helvetica-Oblique", fontSize=10,
-                         textColor=C_TEAL, leftIndent=16, spaceAfter=4,
-                         leading=15),
-        "mistake":     S("MK", fontName="Helvetica", fontSize=10,
-                         textColor=C_RED, leftIndent=16, spaceAfter=3,
-                         leading=15),
-        "exception":   S("EXC", fontName="Helvetica", fontSize=10,
-                         textColor=C_ORANGE, leftIndent=16, spaceAfter=3,
-                         leading=15),
-        "small":       S("SM", fontName="Helvetica", fontSize=8,
-                         textColor=C_GRAY),
-    }
-
-
-def hr(color=C_BLUE, thickness=1.0, space_before=2, space_after=8):
-    return HRFlowable(width="100%", thickness=thickness, color=color,
-                      spaceAfter=space_after, spaceBefore=space_before)
-
-
-def section_banner(text: str, color, styles: dict) -> list:
-    """Banner colorato per sezioni (Full Rule, Common Mistakes, ecc.)"""
-    t = Table([[Paragraph(text, styles["section_hdr"])]], colWidths=[W])
-    t.setStyle(TableStyle([
-        ("BACKGROUND", (0,0), (-1,-1), color),
-        ("LEFTPADDING", (0,0), (-1,-1), 10),
-        ("TOPPADDING", (0,0), (-1,-1), 6),
-        ("BOTTOMPADDING", (0,0), (-1,-1), 6),
-    ]))
-    return [t, Spacer(1, 4)]
-
-
-def render_multiline(text: str, style, prefix: str = "") -> list:
-    """
-    Renderizza testo multiriga riga per riga come paragrafi separati.
-    Ogni paragrafo può andare su pagine diverse — nessun limite di altezza.
-    """
-    elements = []
-    for line in text.split("\n"):
-        line = line.strip()
-        if not line:
-            elements.append(Spacer(1, 4))
-            continue
-        if prefix:
-            elements.append(Paragraph(f"{prefix} {line}", style))
-        else:
-            elements.append(Paragraph(line, style))
-    return elements
+def heading_with_bookmark(text: str, style_name: str,
+                           bookmark: str, styles: dict) -> Paragraph:
+    """Create a paragraph that registers with TOC via style name."""
+    return Paragraph(text, styles[style_name])
 
 
 # ─── COVER ────────────────────────────────────────────────────────────────────
-def make_cover(styles: dict, rule_count: int, date_str: str) -> list:
+def make_cover(styles: dict, rule_count: int, cat_count: int,
+               date_str: str) -> list:
     elements = []
     elements.append(Spacer(1, 3*cm))
-    elements.append(Paragraph("🇩🇪", S("EM", fontSize=60, alignment=TA_CENTER)))
-    elements.append(Spacer(1, 0.5*cm))
-    elements.append(Paragraph("DeutschOps", styles["cover_title"]))
+    elements.append(Paragraph(
+        "DeutschOps",
+        styles["cover_title"]
+    ))
     elements.append(Spacer(1, 0.3*cm))
-    elements.append(Paragraph("German Grammar Reference Book", styles["cover_sub"]))
-    elements.append(Spacer(1, 0.2*cm))
-    elements.append(Paragraph("Kevin Vecchi · A2→B2 · Basel Pharma Track",
-                               styles["cover_sub"]))
+    elements.append(Paragraph(
+        "German Grammar Reference Book",
+        styles["cover_sub"]
+    ))
+    elements.append(Paragraph(
+        "Kevin Vecchi  ·  A2 → B2  ·  Basel Pharma Track",
+        styles["cover_sub"]
+    ))
     elements.append(Spacer(1, 1.5*cm))
 
-    # Stats box
     stats = Table([[
-        Paragraph(f"{rule_count}\ngrammar rules", styles["cover_stat"]),
+        Paragraph(
+            f"{rule_count} grammar rules<br/>"
+            f"<font size='12'>{cat_count} categories</font>",
+            styles["cover_stat"]
+        )
     ]], colWidths=[W])
     stats.setStyle(TableStyle([
         ("BACKGROUND", (0,0), (-1,-1), colors.HexColor("#1a3a5c")),
         ("TOPPADDING", (0,0), (-1,-1), 20),
         ("BOTTOMPADDING", (0,0), (-1,-1), 20),
+        ("ALIGN", (0,0), (-1,-1), "CENTER"),
     ]))
     elements.append(stats)
-    elements.append(Spacer(1, 0.5*cm))
+    elements.append(Spacer(1, 0.8*cm))
     elements.append(Paragraph(f"Last updated: {date_str}", styles["cover_sub"]))
+    elements.append(Paragraph(
+        "Auto-generated by DeutschOps pipeline + web-verified sources",
+        S("CS2", fontName="Helvetica-Oblique", fontSize=9,
+          textColor=colors.HexColor("#607d8b"), alignment=TA_CENTER)
+    ))
     elements.append(PageBreak())
     return elements
 
@@ -352,69 +342,83 @@ def make_cover(styles: dict, rule_count: int, date_str: str) -> list:
 # ─── HOW TO USE ───────────────────────────────────────────────────────────────
 def make_how_to_use(styles: dict) -> list:
     elements = []
-    elements.append(Paragraph("How to Use This Book", styles["rule_title"]))
-    elements.append(hr())
+    elements.append(Paragraph("How to Use This Book", styles["toc_title"]))
+    elements.append(hr(thickness=2))
     elements.append(Paragraph(
         "This grammar reference is automatically generated from your DeutschOps "
-        "lessons with Stefanie and enriched with web-verified rules from authoritative "
-        "German grammar sources. It grows automatically with every lesson you process.",
-        styles["body"]
+        "lessons with Stefanie, enriched with web-verified rules from authoritative "
+        "German grammar sources (Duden, Dartmouth, GermanVeryEasy). "
+        "It updates automatically after every lesson you process.",
+        styles["how_to"]
     ))
-    elements.append(Spacer(1, 12))
+    elements.append(Spacer(1, 10))
 
     guide = [
-        ("📘 Complete Rule", "Full grammar explanation with conjugation/declension tables"),
-        ("✏️ Examples", "Sentences from your actual lessons and web-verified sources"),
-        ("⚠️ Common Mistakes", "Errors Italian speakers typically make — read carefully"),
-        ("🔸 Exceptions", "Special cases and irregular patterns to memorize"),
-        ("✅ Source verified", "Rule confirmed with authoritative web sources"),
-        ("📝 From lesson", "Rule extracted from lesson transcript only"),
+        ("Complete Rule",    "Full grammar with conjugation/declension tables",   C_BLUE),
+        ("Examples",         "Sentences from your actual lessons + verified sources", C_TEAL),
+        ("Common Mistakes",  "Errors Italian speakers typically make — read carefully", C_RED),
+        ("Exceptions",       "Special cases and irregular patterns to memorize",  C_ORANGE),
+        ("Source verified",  "Rule confirmed with authoritative web sources",      C_GREEN),
+        ("From lesson only", "Rule extracted from transcript, not yet web-verified", C_GRAY),
     ]
-    for label, desc in guide:
-        elements.append(Paragraph(f"<b>{label}:</b>  {desc}", styles["body"]))
+    for label, desc, color in guide:
+        t = Table([[
+            Paragraph(f"<b>{label}</b>",
+                      S(f"GL{label[:3]}", fontName="Helvetica-Bold", fontSize=10,
+                        textColor=C_WHITE)),
+            Paragraph(desc, styles["how_to"])
+        ]], colWidths=[3.5*cm, W-3.5*cm])
+        t.setStyle(TableStyle([
+            ("BACKGROUND", (0,0), (0,-1), color),
+            ("LEFTPADDING", (0,0), (-1,-1), 8),
+            ("TOPPADDING", (0,0), (-1,-1), 5),
+            ("BOTTOMPADDING", (0,0), (-1,-1), 5),
+            ("VALIGN", (0,0), (-1,-1), "MIDDLE"),
+            ("GRID", (0,0), (-1,-1), 0.3, colors.HexColor("#b0bec5")),
+        ]))
+        elements.append(t)
+        elements.append(Spacer(1, 3))
 
     elements.append(PageBreak())
     return elements
 
 
-# ─── TABLE OF CONTENTS ────────────────────────────────────────────────────────
-def make_toc(categories: dict, styles: dict) -> list:
+# ─── TOC ──────────────────────────────────────────────────────────────────────
+def make_toc(styles: dict) -> list:
     elements = []
-    elements.append(Paragraph("Table of Contents", styles["rule_title"]))
-    elements.append(hr())
+    elements.append(Paragraph("Table of Contents", styles["toc_title"]))
+    elements.append(hr(thickness=2))
     elements.append(Spacer(1, 8))
 
-    for cat in CATEGORY_ORDER:
-        rules = categories.get(cat, [])
-        if not rules:
-            continue
-        elements.append(Paragraph(
-            f"📗  {cat}  <font color='#90a4ae'>({len(rules)} rules)</font>",
-            styles["toc_cat"]
-        ))
-        for rule in rules:
-            verified = "✅" if rule.get("source_verified") else "📝"
-            elements.append(Paragraph(
-                f"{verified}  {rule['rule']}", styles["toc_rule"]
-            ))
-
+    toc = TableOfContents()
+    toc.levelStyles = [
+        S("TOCL0", fontName="Helvetica-Bold", fontSize=11,
+          textColor=C_BLUE, leftIndent=0, spaceAfter=4,
+          spaceBefore=6),
+        S("TOCL1", fontName="Helvetica", fontSize=9.5,
+          textColor=C_GRAY, leftIndent=20, spaceAfter=2),
+    ]
+    toc.dotsMinLevel = 0
+    elements.append(toc)
     elements.append(PageBreak())
     return elements
 
 
 # ─── CHAPTER HEADER ───────────────────────────────────────────────────────────
 def make_chapter_header(category: str, rule_count: int,
-                         styles: dict) -> list:
+                         bookmark: str, styles: dict) -> list:
     elements = []
+
+    hdr_para = Paragraph(category, styles["TOCChapter"])
+
     t = Table([[
-        Paragraph(f"📗  {category}", styles["chapter_hdr"]),
+        hdr_para,
         Paragraph(
             f"<font color='#90caf9'>{rule_count} rules</font>",
-            S("CR", fontName="Helvetica", fontSize=11,
-              textColor=colors.HexColor("#90caf9"),
-              alignment=TA_CENTER)
+            S("RC", fontName="Helvetica", fontSize=11,
+              textColor=colors.HexColor("#90caf9"), alignment=TA_CENTER)
         )
-    ]], colWidths=[W*0.8, W*0.2])
+    ]], colWidths=[W*0.82, W*0.18])
     t.setStyle(TableStyle([
         ("BACKGROUND", (0,0), (-1,-1), C_NAVY),
         ("LEFTPADDING", (0,0), (0,-1), 16),
@@ -424,108 +428,109 @@ def make_chapter_header(category: str, rule_count: int,
         ("VALIGN", (0,0), (-1,-1), "MIDDLE"),
     ]))
     elements.append(t)
-    elements.append(Spacer(1, 16))
+    elements.append(Spacer(1, 14))
     return elements
 
 
 # ─── RULE BLOCK ───────────────────────────────────────────────────────────────
 def make_rule_block(rule: dict, styles: dict) -> list:
-    """
-    Ogni sezione della regola è una serie di paragrafi separati.
-    Nessuna table di grandi dimensioni — tutto scorre liberamente su più pagine.
-    """
     elements = []
-    verified = "✅" if rule.get("source_verified") else "📝"
 
-    # Titolo regola
-    elements.append(hr(color=C_TEAL, thickness=2, space_before=16, space_after=4))
-    elements.append(Paragraph(
-        f"{verified}  {rule.get('rule','')}",
-        styles["rule_title"]
-    ))
+    elements.append(hr(color=C_TEAL, thickness=1.5, space_before=14, space_after=4))
 
-    # Spiegazione base
+    # Rule title — TOCRule style triggers TOC entry at level 1
+    elements.append(Paragraph(rule.get("rule", ""), styles["TOCRule"]))
+
+    # Verified badge inline
+    verified    = "✅ Web verified" if rule.get("source_verified") else "📝 From lesson"
+    v_color     = C_GREEN if rule.get("source_verified") else C_GRAY
+    badge = Table([[
+        Paragraph(verified,
+                  S("VB", fontName="Helvetica", fontSize=8, textColor=C_WHITE))
+    ]], colWidths=[3.5*cm])
+    badge.setStyle(TableStyle([
+        ("BACKGROUND", (0,0), (-1,-1), v_color),
+        ("LEFTPADDING", (0,0), (-1,-1), 8),
+        ("TOPPADDING", (0,0), (-1,-1), 3),
+        ("BOTTOMPADDING", (0,0), (-1,-1), 3),
+    ]))
+    elements.append(badge)
+    elements.append(Spacer(1, 6))
+
+    # Base explanation
     if rule.get("explanation_en"):
         elements.append(Paragraph(rule["explanation_en"], styles["body"]))
         elements.append(Spacer(1, 6))
 
-    # ── Full Rule ────────────────────────────────────────────────────────────
+    # Complete rule
     if rule.get("full_rule"):
-        elements += section_banner("📘  COMPLETE RULE", C_BLUE, styles)
-
+        elements += banner("COMPLETE RULE", C_BLUE, styles["section_hdr"])
         for line in rule["full_rule"].split("\n"):
             line = line.strip()
             if not line:
                 elements.append(Spacer(1, 4))
                 continue
-            # Riconosce header di sezione (tutto maiuscolo o finisce con :)
             if (line.isupper() and len(line) > 3) or \
                (len(line) < 70 and line.endswith(":")):
                 elements.append(Paragraph(
                     f"<b>{line}</b>",
-                    S("SL", fontName="Helvetica-Bold", fontSize=10,
+                    S("FR_HDR", fontName="Helvetica-Bold", fontSize=10,
                       textColor=C_BLUE, spaceBefore=8, spaceAfter=2)
                 ))
-            # Righe che sembrano tabelle (contengono tab o pipe)
             elif "\t" in line or "|" in line:
                 elements.append(Paragraph(line, styles["code"]))
-            # Bullet points
             elif line.startswith("-") or line.startswith("•") or \
                  (len(line) > 1 and line[0].isdigit() and line[1] in ".):"):
                 elements.append(Paragraph(f"  {line}", styles["italic"]))
             else:
                 elements.append(Paragraph(line, styles["italic"]))
-
         elements.append(Spacer(1, 10))
 
-    # ── Examples ─────────────────────────────────────────────────────────────
+    # Examples
     examples = rule.get("examples", [])
     if examples:
-        elements += section_banner("✏️  EXAMPLES", C_TEAL, styles)
+        elements += banner("EXAMPLES", C_TEAL, styles["section_hdr"])
         for ex in examples:
-            if " - " in ex or " — " in ex or "(I " in ex or "(He " in ex:
-                # Esempio con traduzione — mostra su righe separate
-                parts = ex.split(" - ") if " - " in ex else ex.split(" — ")
-                if len(parts) >= 2:
-                    elements.append(Paragraph(
-                        f"→  <b>{parts[0].strip()}</b>",
-                        styles["example"]
-                    ))
-                    elements.append(Paragraph(
-                        f"   <i>{' — '.join(parts[1:]).strip()}</i>",
-                        S("ET", fontName="Helvetica-Oblique", fontSize=9.5,
-                          textColor=C_GRAY, leftIndent=28, spaceAfter=6)
-                    ))
-                else:
-                    elements.append(Paragraph(f"→  {ex}", styles["example"]))
+            sep = " — " if " — " in ex else " - " if " - " in ex else None
+            if sep and ("I " in ex or "He " in ex or "She " in ex or
+                        "We " in ex or "You " in ex):
+                parts = ex.split(sep, 1)
+                elements.append(Paragraph(
+                    f"→  <b>{parts[0].strip()}</b>", styles["example"]
+                ))
+                elements.append(Paragraph(
+                    f"    <i>{parts[1].strip()}</i>",
+                    S("ExTr", fontName="Helvetica-Oblique", fontSize=9.5,
+                      textColor=C_GRAY, leftIndent=28, spaceAfter=5)
+                ))
             else:
                 elements.append(Paragraph(f"→  {ex}", styles["example"]))
         elements.append(Spacer(1, 10))
 
-    # ── Common Mistakes ───────────────────────────────────────────────────────
+    # Common mistakes
     if rule.get("common_mistakes"):
-        elements += section_banner("⚠️  COMMON MISTAKES — Italian Speakers",
-                                    C_RED, styles)
+        elements += banner(
+            "COMMON MISTAKES — Italian Speakers", C_RED, styles["section_hdr"]
+        )
         for line in rule["common_mistakes"].split("\n"):
             line = line.strip()
             if not line:
                 elements.append(Spacer(1, 3))
                 continue
             if line.startswith("*") and line.endswith("*"):
-                # Esempio sbagliato
                 elements.append(Paragraph(
                     f"❌  {line.strip('*')}",
                     S("WR", fontName="Helvetica-Oblique", fontSize=10,
                       textColor=C_RED, leftIndent=16, spaceAfter=2)
                 ))
-            elif "instead of" in line.lower() or "✓" in line or "correct:" in line.lower():
+            elif ("instead of" in line.lower() or "correct:" in line.lower()
+                  or line.startswith("✓") or "✅" in line):
                 elements.append(Paragraph(
                     f"✅  {line}",
                     S("CR2", fontName="Helvetica", fontSize=10,
                       textColor=C_GREEN, leftIndent=16, spaceAfter=4)
                 ))
-            elif line[0].isdigit() and "." in line[:3]:
-                # Punto numerato
+            elif len(line) > 1 and line[0].isdigit() and line[1] in ".):":
                 elements.append(Paragraph(
                     f"<b>{line}</b>",
                     S("MN", fontName="Helvetica-Bold", fontSize=10,
@@ -535,16 +540,17 @@ def make_rule_block(rule: dict, styles: dict) -> list:
                 elements.append(Paragraph(line, styles["mistake"]))
         elements.append(Spacer(1, 10))
 
-    # ── Exceptions ────────────────────────────────────────────────────────────
+    # Exceptions
     if rule.get("exceptions"):
-        elements += section_banner("🔸  EXCEPTIONS & SPECIAL CASES",
-                                    C_YELLOW_B, styles)
+        elements += banner(
+            "EXCEPTIONS & SPECIAL CASES", C_YELLOW_B, styles["section_hdr"]
+        )
         for line in rule["exceptions"].split("\n"):
             line = line.strip()
             if not line:
                 elements.append(Spacer(1, 3))
                 continue
-            if line[0].isdigit() and "." in line[:3]:
+            if len(line) > 1 and line[0].isdigit() and line[1] in ".):":
                 elements.append(Paragraph(
                     f"<b>{line}</b>",
                     S("EN", fontName="Helvetica-Bold", fontSize=10,
@@ -556,23 +562,67 @@ def make_rule_block(rule: dict, styles: dict) -> list:
 
     return elements
 
+def S(name, **kw):
+    return ParagraphStyle(name, **kw)
 
-# ─── FOOTER ───────────────────────────────────────────────────────────────────
-def add_footer(canvas, doc):
-    canvas.saveState()
-    canvas.setFont("Helvetica", 7.5)
-    canvas.setFillColor(colors.HexColor("#90a4ae"))
-    canvas.drawString(2*cm, 1.1*cm,
-        f"DeutschOps Grammar Book · Kevin Vecchi · "
-        f"Generated {datetime.now().strftime('%d %b %Y')}")
-    canvas.drawRightString(A4[0]-2*cm, 1.1*cm, f"Page {doc.page}")
-    canvas.setStrokeColor(colors.HexColor("#b0bec5"))
-    canvas.setLineWidth(0.5)
-    canvas.line(2*cm, 1.5*cm, A4[0]-2*cm, 1.5*cm)
-    canvas.restoreState()
+def hr(color=C_BLUE, thickness=1.0, space_before=2, space_after=8):
+    return HRFlowable(width="100%", thickness=thickness, color=color,
+                      spaceAfter=space_after, spaceBefore=space_before)
 
 
-# ─── BUILD ────────────────────────────────────────────────────────────────────
+def banner(text: str, color, style) -> list:
+    t = Table([[Paragraph(text, style)]], colWidths=[W])
+    t.setStyle(TableStyle([
+        ("BACKGROUND", (0,0), (-1,-1), color),
+        ("LEFTPADDING", (0,0), (-1,-1), 10),
+        ("TOPPADDING", (0,0), (-1,-1), 6),
+        ("BOTTOMPADDING", (0,0), (-1,-1), 6),
+    ]))
+    return [t, Spacer(1, 5)]
+
+def build_styles():
+    return {
+        "cover_title": S("CoverTitle", fontName="Helvetica-Bold", fontSize=36,
+                         textColor=C_WHITE, alignment=TA_CENTER, leading=42),
+        "cover_sub":   S("CoverSub", fontName="Helvetica", fontSize=13,
+                         textColor=colors.HexColor("#90caf9"),
+                         alignment=TA_CENTER, spaceAfter=4),
+        "cover_stat":  S("CoverStat", fontName="Helvetica-Bold", fontSize=22,
+                         textColor=C_YELLOW_B, alignment=TA_CENTER),
+        "toc_title":   S("TOCTitle", fontName="Helvetica-Bold", fontSize=18,
+                         textColor=C_NAVY, spaceBefore=0, spaceAfter=12),
+        "toc_1":       S("TOC1", fontName="Helvetica-Bold", fontSize=11,
+                         textColor=C_BLUE, leftIndent=0, spaceAfter=3),
+        "toc_2":       S("TOC2", fontName="Helvetica", fontSize=9.5,
+                         textColor=C_GRAY, leftIndent=16, spaceAfter=2),
+        "TOCChapter":  S("TOCChapter", fontName="Helvetica-Bold", fontSize=16,
+                         textColor=C_WHITE),
+        "TOCRule":     S("TOCRule", fontName="Helvetica-Bold", fontSize=13,
+                         textColor=C_NAVY, spaceBefore=18, spaceAfter=6),
+        "body":        S("Body", fontName="Helvetica", fontSize=10,
+                         textColor=colors.HexColor("#212121"), leading=15,
+                         alignment=TA_JUSTIFY, spaceAfter=5),
+        "body_b":      S("BodyB", fontName="Helvetica-Bold", fontSize=10,
+                         textColor=C_NAVY, spaceAfter=4),
+        "italic":      S("Italic", fontName="Helvetica-Oblique", fontSize=10,
+                         textColor=C_GRAY, leading=15, spaceAfter=3),
+        "code":        S("Code", fontName="Courier", fontSize=9,
+                         textColor=C_NAVY, leading=13, leftIndent=8, spaceAfter=2),
+        "example":     S("Example", fontName="Helvetica-Oblique", fontSize=10,
+                         textColor=C_TEAL, leftIndent=16, spaceAfter=4, leading=15),
+        "mistake":     S("Mistake", fontName="Helvetica", fontSize=10,
+                         textColor=C_RED, leftIndent=16, spaceAfter=3, leading=15),
+        "exception":   S("Exception", fontName="Helvetica", fontSize=10,
+                         textColor=C_ORANGE, leftIndent=16, spaceAfter=3,
+                         leading=15),
+        "section_hdr": S("SectionHdr", fontName="Helvetica-Bold", fontSize=10.5,
+                         textColor=C_WHITE),
+        "how_to":      S("HowTo", fontName="Helvetica", fontSize=10,
+                         textColor=colors.HexColor("#212121"), leading=15,
+                         spaceAfter=4),
+    }
+
+# ─── MAIN BUILD ───────────────────────────────────────────────────────────────
 def build_grammar_book(use_doc: bool = True, enrich_web: bool = True):
     print(f"\n{'='*55}")
     print(f"  DeutschOps — Grammar Book Builder")
@@ -581,23 +631,23 @@ def build_grammar_book(use_doc: bool = True, enrich_web: bool = True):
     db       = load_grammar_db()
     rules_db = db.get("rules", {})
 
-    # 1. Regole dalle lezioni
-    print("📚 Caricamento regole dalle lezioni...")
+    # 1. Rules from lessons
+    print("Loading rules from lessons...")
     lesson_rules = collect_rules_from_lessons()
-    print(f"   {len(lesson_rules)} regole trovate nelle lezioni")
+    print(f"   {len(lesson_rules)} rules found in lessons")
     for key, rule in lesson_rules.items():
         if key not in rules_db or (
             rule.get("full_rule") and not rules_db[key].get("full_rule")
         ):
             rules_db[key] = rule
 
-    # 2. Regole dal Google Doc
+    # 2. Rules from Google Doc
     if use_doc:
         try:
-            print("📄 Lettura Google Doc...")
+            print("Reading Google Doc...")
             from doc_reader import get_drive_service, read_doc
-            service  = get_drive_service()
-            doc_text = read_doc(service)
+            service   = get_drive_service()
+            doc_text  = read_doc(service)
             doc_rules = collect_rules_from_doc(doc_text)
             new_from_doc = 0
             for rule in doc_rules:
@@ -605,15 +655,15 @@ def build_grammar_book(use_doc: bool = True, enrich_web: bool = True):
                 if key and key not in rules_db:
                     rules_db[key] = rule
                     new_from_doc += 1
-            print(f"   {new_from_doc} nuove regole dal Google Doc")
+            print(f"   {new_from_doc} new rules from Google Doc")
         except Exception as e:
-            print(f"   ⚠️  Google Doc non accessibile: {e}")
+            print(f"   Google Doc not accessible: {e}")
 
-    # 3. Web search per regole incomplete
+    # 3. Web search for incomplete rules
     if enrich_web:
         all_rules  = list(rules_db.values())
         incomplete = [r for r in all_rules if not r.get("full_rule")]
-        print(f"🌐 {len(incomplete)}/{len(all_rules)} regole da arricchire...")
+        print(f"{len(incomplete)}/{len(all_rules)} rules to enrich...")
         if incomplete:
             enriched = enrich_rules_with_web(incomplete)
             for rule in enriched:
@@ -623,65 +673,107 @@ def build_grammar_book(use_doc: bool = True, enrich_web: bool = True):
 
     db["rules"] = rules_db
     save_grammar_db(db)
-    print(f"\n💾 Grammar DB: {len(rules_db)} regole totali")
+    print(f"\nGrammar DB: {len(rules_db)} rules total")
 
-    # 4. Organizza per categoria
+    # 4. Deduplicate and organize by category
     categories: dict = {cat: [] for cat in CATEGORY_ORDER}
+    seen_keys = set()
+
     for rule in rules_db.values():
+        key = rule.get("rule", "").strip().lower()
+        if key in seen_keys:
+            continue
+        seen_keys.add(key)
         cat = assign_category(
             rule.get("rule", ""),
             rule.get("explanation_en", "")
         )
         categories[cat].append(rule)
+
     for cat in categories:
-        categories[cat].sort(key=lambda r: r.get("rule", ""))
+        categories[cat].sort(
+            key=lambda r: (r.get("book_order") or 9999,
+                           r.get("rule", "").lower())
+        )
 
     total_rules = sum(len(v) for v in categories.values())
-    print(f"📊 Distribuzione:")
+    active_cats = sum(1 for v in categories.values() if v)
+
+    print("Distribution:")
     for cat in CATEGORY_ORDER:
         if categories[cat]:
-            print(f"   {cat}: {len(categories[cat])} regole")
+            print(f"   {cat}: {len(categories[cat])} rules")
 
-    # 5. Genera PDF
-    print(f"\n📄 Generazione PDF ({total_rules} regole)...")
+    # 5. Generate PDF
+    print(f"\nGenerating PDF ({total_rules} rules, {active_cats} categories)...")
     styles   = build_styles()
     date_str = datetime.now().strftime("%d %b %Y")
 
-    doc = SimpleDocTemplate(
+    doc = GrammarBookTemplate(
         str(OUTPUT_PDF),
         pagesize=A4,
         leftMargin=2*cm, rightMargin=2*cm,
         topMargin=2*cm, bottomMargin=2.5*cm,
         title="DeutschOps Grammar Book",
         author="Kevin Vecchi",
-        allowSplitting=1  # permette split di ogni elemento su più pagine
+        allowSplitting=1
     )
 
     story = []
-    story += make_cover(styles, total_rules, date_str)
-    story += make_how_to_use(styles)
-    story += make_toc(categories, styles)
 
+    # Cover
+    story += make_cover(styles, total_rules, active_cats, date_str)
+
+    # How to use
+    story += make_how_to_use(styles)
+
+    # TOC (populated on second pass by multiBuild)
+    story += make_toc(styles)
+
+    # Chapters
     for cat in CATEGORY_ORDER:
         rules = categories[cat]
         if not rules:
             continue
-        story += make_chapter_header(cat, len(rules), styles)
+
+        # Chapter header — TOCChapter style triggers TOC entry
+        t = Table([[
+            Paragraph(cat, styles["TOCChapter"]),
+            Paragraph(
+                f"<font color='#90caf9'>{len(rules)} rules</font>",
+                S("RC", fontName="Helvetica", fontSize=11,
+                  textColor=colors.HexColor("#90caf9"),
+                  alignment=TA_CENTER)
+            )
+        ]], colWidths=[W*0.82, W*0.18])
+        t.setStyle(TableStyle([
+            ("BACKGROUND", (0,0), (-1,-1), C_NAVY),
+            ("LEFTPADDING", (0,0), (0,-1), 16),
+            ("RIGHTPADDING", (-1,0), (-1,-1), 16),
+            ("TOPPADDING", (0,0), (-1,-1), 14),
+            ("BOTTOMPADDING", (0,0), (-1,-1), 14),
+            ("VALIGN", (0,0), (-1,-1), "MIDDLE"),
+        ]))
+        story.append(t)
+        story.append(Spacer(1, 14))
+
         for rule in rules:
             story += make_rule_block(rule, styles)
+
         story.append(PageBreak())
 
-    doc.build(story, onFirstPage=add_footer, onLaterPages=add_footer)
+    # Build twice for TOC page numbers
+    doc.multiBuild(story)
 
     size_kb = OUTPUT_PDF.stat().st_size // 1024
-    print(f"✅ PDF generato: {OUTPUT_PDF} ({total_rules} regole · {size_kb}KB)")
+    print(f"PDF generated: {OUTPUT_PDF} ({total_rules} rules · {size_kb}KB)")
     return str(OUTPUT_PDF)
 
 
 def update_from_lesson(lesson_json_path: str):
-    """Chiamato da main.py — aggiorna DB e rigenera PDF se ci sono novità."""
+    """Called from main.py after each lesson."""
     try:
-        data = json.loads(Path(lesson_json_path).read_text(encoding="utf-8"))
+        data        = json.loads(Path(lesson_json_path).read_text(encoding="utf-8"))
         new_grammar = data.get("grammar_points", [])
         if not new_grammar:
             return
@@ -691,7 +783,7 @@ def update_from_lesson(lesson_json_path: str):
         new_count = 0
 
         for gp in new_grammar:
-            key = gp.get("rule", "").strip()
+            key = gp.get("rule","").strip()
             if not key:
                 continue
             if key not in rules_db:
@@ -704,13 +796,13 @@ def update_from_lesson(lesson_json_path: str):
         if new_count > 0:
             db["rules"] = rules_db
             save_grammar_db(db)
-            print(f"📖 Grammar Book: {new_count} nuove regole — rigenero PDF...")
+            print(f"Grammar Book: {new_count} new rules -- regenerating PDF...")
             build_grammar_book(use_doc=False, enrich_web=False)
         else:
-            print("📖 Grammar Book: nessuna regola nuova")
+            print("Grammar Book: no new rules")
 
     except Exception as e:
-        print(f"⚠️  Grammar book update error: {e}")
+        print(f"Grammar book update error: {e}")
 
 
 if __name__ == "__main__":

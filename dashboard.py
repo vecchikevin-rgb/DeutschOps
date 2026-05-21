@@ -344,8 +344,121 @@ if filtered_words:
         }
     )
 
-st.divider()
-st.markdown(
+# ─── BOOK EXPLORER ────────────────────────────────────────────────────────────
+book_db_path = Path("data/book_db.json")
+if book_db_path.exists():
+    st.divider()
+    st.markdown('<div class="section-header">📗 Book Explorer — DaF Kompakt Neu A1-B1</div>',
+                unsafe_allow_html=True)
+
+    @st.cache_data(ttl=60)
+    def load_book_db():
+        return json.loads(book_db_path.read_text(encoding="utf-8"))
+
+    book_db   = load_book_db()
+    lektionen = book_db.get("lektionen", {})
+
+    # Filtri
+    col_lvl, col_lekt = st.columns(2)
+    with col_lvl:
+        lvl_filter = st.selectbox(
+            "Level", ["All", "A1", "A2", "B1"], key="book_level"
+        )
+    with col_lekt:
+        lekt_nums = sorted([int(k) for k in lektionen.keys()])
+        lekt_options = ["All"] + [f"Lektion {n}" for n in lekt_nums]
+        lekt_sel = st.selectbox("Lektion", lekt_options, key="book_lekt")
+
+    # Filtra
+    filtered_lektionen = {}
+    for k, v in lektionen.items():
+        if lvl_filter != "All" and v.get("level") != lvl_filter:
+            continue
+        if lekt_sel != "All" and f"Lektion {k}" != lekt_sel:
+            continue
+        filtered_lektionen[k] = v
+
+    # Totali
+    total_v = sum(len(v.get("vocabulary",[])) for v in filtered_lektionen.values())
+    total_g = sum(len(v.get("grammar_rules",[])) for v in filtered_lektionen.values())
+    total_r = sum(len(v.get("redemittel",[])) for v in filtered_lektionen.values())
+    b1, b2, b3 = st.columns(3)
+    with b1: st.metric("Vocabulary", total_v)
+    with b2: st.metric("Grammar rules", total_g)
+    with b3: st.metric("Redemittel", total_r)
+
+    st.divider()
+
+    # Mostra Lektionen
+    for k in sorted(filtered_lektionen.keys(), key=int):
+        ldata = filtered_lektionen[k]
+        lnum  = int(k)
+        level = ldata.get("level","")
+        vocab = ldata.get("vocabulary", [])
+        grammar = ldata.get("grammar_rules", [])
+        redemittel = ldata.get("redemittel", [])
+
+        with st.expander(
+            f"📗 Lektion {lnum} ({level}) — "
+            f"{len(vocab)} words · {len(grammar)} grammar · {len(redemittel)} Redemittel"
+        ):
+            # Vocab per campo semantico
+            if vocab:
+                st.markdown("**Vocabulary by semantic field:**")
+                fields = {}
+                for w in vocab:
+                    sf = w.get("semantic_field", "Other")
+                    fields.setdefault(sf, []).append(w)
+
+                for field, words in fields.items():
+                    st.markdown(f"*{field}*")
+                    pills = ""
+                    for w in words:
+                        art  = f"{w.get('article','')} " if w.get("article") else ""
+                        base = w.get("german","")
+                        eng  = w.get("english","")
+                        lvl  = w.get("level","")
+                        cat  = w.get("category","")
+                        color_map = {
+                            "noun": "#1565c0", "verb": "#2e7d32",
+                            "adjective": "#bf360c", "adverb": "#00838f",
+                            "phrase": "#6a1b9a", "expression": "#6a1b9a"
+                        }
+                        color = color_map.get(cat, "#546e7a")
+                        pills += (
+                            f'<span style="background:{color}20;color:{color};'
+                            f'border:1px solid {color};border-radius:10px;'
+                            f'padding:2px 8px;margin:2px;display:inline-block;'
+                            f'font-size:0.85em">'
+                            f'{art}{base} <i style="color:#90a4ae">({eng})</i>'
+                            f'</span>'
+                        )
+                    st.markdown(pills, unsafe_allow_html=True)
+                    st.markdown("")
+
+            # Grammar rules
+            if grammar:
+                st.divider()
+                st.markdown("**Grammar rules:**")
+                for r in grammar:
+                    st.markdown(f"📐 **{r.get('rule','')}**")
+                    if r.get("explanation_en"):
+                        st.markdown(f"  {r['explanation_en']}")
+                    if r.get("examples"):
+                        for ex in r["examples"][:2]:
+                            st.markdown(f"  → *{ex}*")
+
+            # Redemittel
+            if redemittel:
+                st.divider()
+                st.markdown("**Redemittel:**")
+                for rm in redemittel:
+                    ctx = f" _{rm.get('context','')}_" if rm.get("context") else ""
+                    st.markdown(
+                        f"• **{rm.get('german','')}** — "
+                        f"{rm.get('english','')}{ctx}"
+                    )
+    st.markdown(
     "*DeutschOps — AI-powered German learning pipeline | "
     "[GitHub](https://github.com/vecchikevin-rgb/DeutschOps)*"
 )
