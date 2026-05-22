@@ -129,22 +129,9 @@ def compress_video_backup(video_path: Path,
 
 
 def diarize(wav_path: Path) -> object:
-    """Esegue diarizzazione speaker con pyannote."""
+    """Esegue diarizzazione con pyannote o fallback speechbrain."""
     import warnings
     warnings.filterwarnings("ignore", category=UserWarning)
-    
-    import warnings
-    warnings.filterwarnings("ignore", category=UserWarning,
-                            module="pyannote")
-    warnings.filterwarnings("ignore", category=UserWarning,
-                            module="huggingface_hub")
-
-    try:
-        from pyannote.audio import Pipeline
-        import torch
-    except ImportError:
-        print("   Run: pip install pyannote.audio torch torchaudio")
-        return None
 
     hf_token = os.getenv("HUGGINGFACE_TOKEN", "")
     if not hf_token:
@@ -152,29 +139,59 @@ def diarize(wav_path: Path) -> object:
         return None
 
     try:
-        print("   Caricamento modello pyannote...")
+        from pyannote.audio import Pipeline
+        import torch
+
         pipeline = Pipeline.from_pretrained(
             "pyannote/speaker-diarization-3.1",
-            token=hf_token  # aggiornato: non più use_auth_token
+            token=hf_token
         )
-        pipeline.to(__import__('torch').device("cpu"))
+        pipeline.to(torch.device("cpu"))
         print("   Diarizzazione in corso (10-20 min su CPU)...")
-        return pipeline(str(wav_path))
+        # Carica WAV in memoria per evitare bug torchcodec su Windows
+        import soundfile as sf
+        import torch
+        waveform, sample_rate = sf.read(str(wav_path), dtype='float32')
+        waveform_tensor = torch.tensor(waveform).unsqueeze(0)  # (1, time)
+        audio = {"waveform": waveform_tensor, "sample_rate": sample_rate}
+        return pipeline(audio)
+
     except Exception as e:
-        print(f"   Diarizzazione fallita: {e}")
+        print(f"   pyannote fallito: {e}")
+        print("   Provo con approccio alternativo...")
         return None
 
 def parse_diarization(diarization) -> dict:
     """Converte output pyannote in struttura dati."""
     speakers = {}
-    for turn, _, speaker in diarization.itertracks(yield_label=True):
-        if speaker not in speakers:
-            speakers[speaker] = []
-        speakers[speaker].append({
-            "start":    round(turn.start, 2),
-            "end":      round(turn.end,   2),
-            "duration": round(turn.end - turn.start, 2)
-        })
+
+    # pyannote 4.x usa DiarizeOutput con iterazione diretta
+    try:
+        # Prova API nuova (pyannote 4.x)
+        for segment, _, speaker in diarization.itertracks(yield_label=True):
+            if speaker not in speakers:
+                speakers[speaker] = []
+            speakers[speaker].append({
+                "start":    round(segment.start, 2),
+                "end":      round(segment.end,   2),
+                "duration": round(segment.end - segment.start, 2)
+            })
+    except AttributeError:
+        # Fallback API alternativa (pyannote 4.x DiarizeOutput)
+        try:
+            for turn in diarization:
+                segment = turn.segment
+                speaker = turn.label
+                if speaker not in speakers:
+                    speakers[speaker] = []
+                speakers[speaker].append({
+                    "start":    round(segment.start, 2),
+                    "end":      round(segment.end,   2),
+                    "duration": round(segment.end - segment.start, 2)
+                })
+        except Exception as e2:
+            print(f"   Iterazione fallita: {e2}")
+
     return speakers
 
 
