@@ -74,6 +74,15 @@ def process_lesson(audio_path: str, lesson_date: str = None):
     print("-" * 30)
     audio_path = prepare_audio(audio_path, lesson_date)
 
+# Analisi speaker in background (non bloccante)
+    from speaker_analysis import analyze_lesson
+    try:
+        print(f"📊 Avvio analisi speaker (in background)...")
+        analyze_lesson(str(audio_path), lesson_date, backup=True)
+    except Exception as e:
+        print(f"⚠️  Speaker analysis skipped: {e}")
+    
+    
     transcript_path = Path(f"transcripts/lezione_{lesson_date}.txt")
     json_path       = Path(f"data/lezione_{lesson_date}.json")
 
