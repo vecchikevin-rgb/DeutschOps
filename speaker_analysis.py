@@ -130,6 +130,15 @@ def compress_video_backup(video_path: Path,
 
 def diarize(wav_path: Path) -> object:
     """Esegue diarizzazione speaker con pyannote."""
+    import warnings
+    warnings.filterwarnings("ignore", category=UserWarning)
+    
+    import warnings
+    warnings.filterwarnings("ignore", category=UserWarning,
+                            module="pyannote")
+    warnings.filterwarnings("ignore", category=UserWarning,
+                            module="huggingface_hub")
+
     try:
         from pyannote.audio import Pipeline
         import torch
@@ -154,10 +163,6 @@ def diarize(wav_path: Path) -> object:
     except Exception as e:
         print(f"   Diarizzazione fallita: {e}")
         return None
-
-import warnings
-        warnings.filterwarnings("ignore", category=UserWarning,
-                                module="pyannote")
 
 def parse_diarization(diarization) -> dict:
     """Converte output pyannote in struttura dati."""
