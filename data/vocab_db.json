@@ -58,7 +58,7 @@
       "anki_status": "added"
     },
     "die frage": {
-      "german": "die Frage",
+      "german": "Frage",
       "article": "die",
       "plural": "Fragen",
       "category": "noun",
@@ -134,7 +134,7 @@
       "anki_status": "added"
     },
     "die bedingung": {
-      "german": "die Bedingung",
+      "german": "Bedingung",
       "article": "die",
       "plural": "Bedingungen",
       "category": "noun",
@@ -163,12 +163,14 @@
       "level": "A2",
       "first_seen": "2026-05-14",
       "seen_in_lessons": [
-        "2026-05-14"
+        "2026-05-14",
+        "2026-05-22-stefanie"
       ],
       "seen_in_topics": [
-        "Subordinate clauses with ob and dass"
+        "Subordinate clauses with ob and dass",
+        "Relative clauses with relative pronouns"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "verwenden": {
@@ -182,12 +184,14 @@
       "level": "A2",
       "first_seen": "2026-05-14",
       "seen_in_lessons": [
-        "2026-05-14"
+        "2026-05-14",
+        "2026-05-15"
       ],
       "seen_in_topics": [
-        "Subordinate clauses with ob and dass"
+        "Subordinate clauses with ob and dass",
+        "Indirekte Fragen und typische Redemittel"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "bedeuten": {
@@ -220,12 +224,14 @@
       "level": "A1",
       "first_seen": "2026-05-14",
       "seen_in_lessons": [
-        "2026-05-14"
+        "2026-05-14",
+        "2026-05-18-stefanie"
       ],
       "seen_in_topics": [
-        "Subordinate clauses with ob and dass"
+        "Subordinate clauses with ob and dass",
+        "Modal verb sollen: shall and should"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "zu hause bleiben": {
@@ -248,7 +254,7 @@
       "anki_status": "added"
     },
     "der nebensatz": {
-      "german": "der Nebensatz",
+      "german": "Nebensatz",
       "article": "der",
       "plural": "Nebensätze",
       "category": "noun",
@@ -286,7 +292,7 @@
       "anki_status": "added"
     },
     "das kind": {
-      "german": "das Kind",
+      "german": "Kind",
       "article": "das",
       "plural": "die Kinder",
       "category": "",
@@ -362,7 +368,7 @@
       "anki_status": "added"
     },
     "der schulbus": {
-      "german": "der Schulbus",
+      "german": "Schulbus",
       "article": "der",
       "plural": "die Schulbusse",
       "category": "",
@@ -438,7 +444,7 @@
       "anki_status": "added"
     },
     "der kurs": {
-      "german": "der Kurs",
+      "german": "Kurs",
       "article": "der",
       "plural": "die Kurse",
       "category": "",
@@ -676,12 +682,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-22-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Relative clauses with relative pronouns"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "kennen": {
@@ -828,12 +836,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-22-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Relative clauses with relative pronouns"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "glauben": {
@@ -847,12 +857,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-19-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Imperative and Modal Verbs Review"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "passen": {
@@ -980,12 +992,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-21-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Indirect questions and future tense"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "leben": {
@@ -1151,12 +1165,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-22-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Relative clauses with relative pronouns"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "schmecken": {
@@ -1379,12 +1395,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-21-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Indirect questions and future tense"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "sein": {
@@ -1474,12 +1492,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-22-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Relative clauses with relative pronouns"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "vergessen": {
@@ -1493,12 +1513,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-15"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Indirekte Fragen und typische Redemittel"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "tragen": {
@@ -2604,7 +2626,7 @@
       "anki_status": "added"
     },
     "der wein": {
-      "german": "der Wein",
+      "german": "Wein",
       "article": "der",
       "plural": "Weine",
       "category": "noun",
@@ -2623,7 +2645,7 @@
       "anki_status": "added"
     },
     "das tennis": {
-      "german": "das Tennis",
+      "german": "Tennis",
       "article": "das",
       "plural": "",
       "category": "noun",
@@ -2642,7 +2664,7 @@
       "anki_status": "added"
     },
     "die briefmarke": {
-      "german": "die Briefmarke",
+      "german": "Briefmarke",
       "article": "die",
       "plural": "Briefmarken",
       "category": "noun",
@@ -2661,7 +2683,7 @@
       "anki_status": "added"
     },
     "der kriminalroman": {
-      "german": "der Kriminalroman",
+      "german": "Kriminalroman",
       "article": "der",
       "plural": "Kriminalromane",
       "category": "noun",
@@ -2680,7 +2702,7 @@
       "anki_status": "added"
     },
     "das computerprogramm": {
-      "german": "das Computerprogramm",
+      "german": "Computerprogramm",
       "article": "das",
       "plural": "Computerprogramme",
       "category": "noun",
@@ -2699,7 +2721,7 @@
       "anki_status": "added"
     },
     "die tochter": {
-      "german": "die Tochter",
+      "german": "Tochter",
       "article": "die",
       "plural": "Töchter",
       "category": "noun",
@@ -2718,7 +2740,7 @@
       "anki_status": "added"
     },
     "der sohn": {
-      "german": "der Sohn",
+      "german": "Sohn",
       "article": "der",
       "plural": "Söhne",
       "category": "noun",
@@ -2737,7 +2759,7 @@
       "anki_status": "added"
     },
     "der fußball": {
-      "german": "der Fußball",
+      "german": "Fußball",
       "article": "der",
       "plural": "Fußbälle",
       "category": "noun",
@@ -2756,7 +2778,7 @@
       "anki_status": "added"
     },
     "die musik": {
-      "german": "die Musik",
+      "german": "Musik",
       "article": "die",
       "plural": "",
       "category": "noun",
@@ -2775,7 +2797,7 @@
       "anki_status": "added"
     },
     "der podcast": {
-      "german": "der Podcast",
+      "german": "Podcast",
       "article": "der",
       "plural": "Podcasts",
       "category": "noun",
@@ -2794,7 +2816,7 @@
       "anki_status": "added"
     },
     "das buch": {
-      "german": "das Buch",
+      "german": "Buch",
       "article": "das",
       "plural": "Bücher",
       "category": "noun",
@@ -2813,7 +2835,7 @@
       "anki_status": "added"
     },
     "die zeitung": {
-      "german": "die Zeitung",
+      "german": "Zeitung",
       "article": "die",
       "plural": "Zeitungen",
       "category": "noun",
@@ -2832,7 +2854,7 @@
       "anki_status": "added"
     },
     "das bier": {
-      "german": "das Bier",
+      "german": "Bier",
       "article": "das",
       "plural": "Biere",
       "category": "noun",
@@ -2851,7 +2873,7 @@
       "anki_status": "added"
     },
     "der reis": {
-      "german": "der Reis",
+      "german": "Reis",
       "article": "der",
       "plural": "",
       "category": "noun",
@@ -2870,7 +2892,7 @@
       "anki_status": "added"
     },
     "die suppe": {
-      "german": "die Suppe",
+      "german": "Suppe",
       "article": "die",
       "plural": "Suppen",
       "category": "noun",
@@ -2889,7 +2911,7 @@
       "anki_status": "added"
     },
     "das fahrrad": {
-      "german": "das Fahrrad",
+      "german": "Fahrrad",
       "article": "das",
       "plural": "Fahrräder",
       "category": "noun",
@@ -2908,7 +2930,7 @@
       "anki_status": "added"
     },
     "das motorrad": {
-      "german": "das Motorrad",
+      "german": "Motorrad",
       "article": "das",
       "plural": "Motorräder",
       "category": "noun",
@@ -2927,7 +2949,7 @@
       "anki_status": "added"
     },
     "der actionfilm": {
-      "german": "der Actionfilm",
+      "german": "Actionfilm",
       "article": "der",
       "plural": "Actionfilme",
       "category": "noun",
@@ -2946,7 +2968,7 @@
       "anki_status": "added"
     },
     "die schwester": {
-      "german": "die Schwester",
+      "german": "Schwester",
       "article": "die",
       "plural": "Schwestern",
       "category": "noun",
@@ -2965,7 +2987,7 @@
       "anki_status": "added"
     },
     "der bruder": {
-      "german": "der Bruder",
+      "german": "Bruder",
       "article": "der",
       "plural": "Brüder",
       "category": "noun",
@@ -2984,7 +3006,7 @@
       "anki_status": "added"
     },
     "der vorname": {
-      "german": "der Vorname",
+      "german": "Vorname",
       "article": "der",
       "plural": "Vornamen",
       "category": "noun",
@@ -3003,7 +3025,7 @@
       "anki_status": "added"
     },
     "der familienname": {
-      "german": "der Familienname",
+      "german": "Familienname",
       "article": "der",
       "plural": "Familiennamen",
       "category": "noun",
@@ -3022,7 +3044,7 @@
       "anki_status": "added"
     },
     "die muttersprache": {
-      "german": "die Muttersprache",
+      "german": "Muttersprache",
       "article": "die",
       "plural": "Muttersprachen",
       "category": "noun",
@@ -3041,7 +3063,7 @@
       "anki_status": "added"
     },
     "die sprache": {
-      "german": "die Sprache",
+      "german": "Sprache",
       "article": "die",
       "plural": "Sprachen",
       "category": "noun",
@@ -3060,7 +3082,7 @@
       "anki_status": "added"
     },
     "die chemie": {
-      "german": "die Chemie",
+      "german": "Chemie",
       "article": "die",
       "plural": "",
       "category": "noun",
@@ -3079,7 +3101,7 @@
       "anki_status": "added"
     },
     "der produktionsmanager": {
-      "german": "der Produktionsmanager",
+      "german": "Produktionsmanager",
       "article": "der",
       "plural": "Produktionsmanager",
       "category": "noun",
@@ -3098,7 +3120,7 @@
       "anki_status": "added"
     },
     "der sektor": {
-      "german": "der Sektor",
+      "german": "Sektor",
       "article": "der",
       "plural": "Sektoren",
       "category": "noun",
@@ -3117,7 +3139,7 @@
       "anki_status": "added"
     },
     "der bäcker": {
-      "german": "der Bäcker",
+      "german": "Bäcker",
       "article": "der",
       "plural": "Bäcker",
       "category": "noun",
@@ -3136,7 +3158,7 @@
       "anki_status": "added"
     },
     "die bäckerei": {
-      "german": "die Bäckerei",
+      "german": "Bäckerei",
       "article": "die",
       "plural": "Bäckereien",
       "category": "noun",
@@ -3155,7 +3177,7 @@
       "anki_status": "added"
     },
     "der grafikdesigner": {
-      "german": "der Grafikdesigner",
+      "german": "Grafikdesigner",
       "article": "der",
       "plural": "Grafikdesigner",
       "category": "noun",
@@ -3174,7 +3196,7 @@
       "anki_status": "added"
     },
     "der bereich": {
-      "german": "der Bereich",
+      "german": "Bereich",
       "article": "der",
       "plural": "Bereiche",
       "category": "noun",
@@ -3193,7 +3215,7 @@
       "anki_status": "added"
     },
     "das grafikdesign": {
-      "german": "das Grafikdesign",
+      "german": "Grafikdesign",
       "article": "das",
       "plural": "",
       "category": "noun",
@@ -3212,7 +3234,7 @@
       "anki_status": "added"
     },
     "das hobby": {
-      "german": "das Hobby",
+      "german": "Hobby",
       "article": "das",
       "plural": "Hobbys",
       "category": "noun",
@@ -3231,7 +3253,7 @@
       "anki_status": "added"
     },
     "der lehrer": {
-      "german": "der Lehrer",
+      "german": "Lehrer",
       "article": "der",
       "plural": "Lehrer",
       "category": "noun",
@@ -3250,7 +3272,7 @@
       "anki_status": "added"
     },
     "die lehrerin": {
-      "german": "die Lehrerin",
+      "german": "Lehrerin",
       "article": "die",
       "plural": "Lehrerinnen",
       "category": "noun",
@@ -3269,7 +3291,7 @@
       "anki_status": "added"
     },
     "die schule": {
-      "german": "die Schule",
+      "german": "Schule",
       "article": "die",
       "plural": "Schulen",
       "category": "noun",
@@ -3288,7 +3310,7 @@
       "anki_status": "added"
     },
     "der film": {
-      "german": "der Film",
+      "german": "Film",
       "article": "der",
       "plural": "Filme",
       "category": "noun",
@@ -3307,7 +3329,7 @@
       "anki_status": "added"
     },
     "das kino": {
-      "german": "das Kino",
+      "german": "Kino",
       "article": "das",
       "plural": "Kinos",
       "category": "noun",
@@ -3326,7 +3348,7 @@
       "anki_status": "added"
     },
     "das interesse": {
-      "german": "das Interesse",
+      "german": "Interesse",
       "article": "das",
       "plural": "Interessen",
       "category": "noun",
@@ -3345,7 +3367,7 @@
       "anki_status": "added"
     },
     "die kunst": {
-      "german": "die Kunst",
+      "german": "Kunst",
       "article": "die",
       "plural": "",
       "category": "noun",
@@ -3364,7 +3386,7 @@
       "anki_status": "added"
     },
     "der computer": {
-      "german": "der Computer",
+      "german": "Computer",
       "article": "der",
       "plural": "Computer",
       "category": "noun",
@@ -3383,7 +3405,7 @@
       "anki_status": "added"
     },
     "die mode": {
-      "german": "die Mode",
+      "german": "Mode",
       "article": "die",
       "plural": "",
       "category": "noun",
@@ -3402,7 +3424,7 @@
       "anki_status": "added"
     },
     "der lieblingsfilm": {
-      "german": "der Lieblingsfilm",
+      "german": "Lieblingsfilm",
       "article": "der",
       "plural": "Lieblingsfilme",
       "category": "noun",
@@ -3421,7 +3443,7 @@
       "anki_status": "added"
     },
     "der krimi": {
-      "german": "der Krimi",
+      "german": "Krimi",
       "article": "der",
       "plural": "Krimis",
       "category": "noun",
@@ -3440,7 +3462,7 @@
       "anki_status": "added"
     },
     "das lieblingsessen": {
-      "german": "das Lieblingsessen",
+      "german": "Lieblingsessen",
       "article": "das",
       "plural": "",
       "category": "noun",
@@ -3459,7 +3481,7 @@
       "anki_status": "added"
     },
     "die pizza": {
-      "german": "die Pizza",
+      "german": "Pizza",
       "article": "die",
       "plural": "Pizzas",
       "category": "noun",
@@ -3478,7 +3500,7 @@
       "anki_status": "added"
     },
     "die nudeln": {
-      "german": "die Nudeln",
+      "german": "Nudeln",
       "article": "die",
       "plural": "",
       "category": "noun",
@@ -3497,7 +3519,7 @@
       "anki_status": "added"
     },
     "die freundin": {
-      "german": "die Freundin",
+      "german": "Freundin",
       "article": "die",
       "plural": "Freundinnen",
       "category": "noun",
@@ -3516,7 +3538,7 @@
       "anki_status": "added"
     },
     "der freund": {
-      "german": "der Freund",
+      "german": "Freund",
       "article": "der",
       "plural": "Freunde",
       "category": "noun",
@@ -3535,7 +3557,7 @@
       "anki_status": "added"
     },
     "die angst": {
-      "german": "die Angst",
+      "german": "Angst",
       "article": "die",
       "plural": "Ängste",
       "category": "noun",
@@ -3554,7 +3576,7 @@
       "anki_status": "added"
     },
     "der hunger": {
-      "german": "der Hunger",
+      "german": "Hunger",
       "article": "der",
       "plural": "",
       "category": "noun",
@@ -3573,7 +3595,7 @@
       "anki_status": "added"
     },
     "der plattenspieler": {
-      "german": "der Plattenspieler",
+      "german": "Plattenspieler",
       "article": "der",
       "plural": "Plattenspieler",
       "category": "noun",
@@ -3592,7 +3614,7 @@
       "anki_status": "added"
     },
     "die schallplatte": {
-      "german": "die Schallplatte",
+      "german": "Schallplatte",
       "article": "die",
       "plural": "Schallplatten",
       "category": "noun",
@@ -3611,7 +3633,7 @@
       "anki_status": "added"
     },
     "das smartphone": {
-      "german": "das Smartphone",
+      "german": "Smartphone",
       "article": "das",
       "plural": "Smartphones",
       "category": "noun",
@@ -3630,7 +3652,7 @@
       "anki_status": "added"
     },
     "der mp3-player": {
-      "german": "der MP3-Player",
+      "german": "MP3-Player",
       "article": "der",
       "plural": "MP3-Player",
       "category": "noun",
@@ -3649,7 +3671,7 @@
       "anki_status": "added"
     },
     "das papier": {
-      "german": "das Papier",
+      "german": "Papier",
       "article": "das",
       "plural": "Papiere",
       "category": "noun",
@@ -3668,7 +3690,7 @@
       "anki_status": "added"
     },
     "das auto": {
-      "german": "das Auto",
+      "german": "Auto",
       "article": "das",
       "plural": "Autos",
       "category": "noun",
@@ -3687,7 +3709,7 @@
       "anki_status": "added"
     },
     "das navi": {
-      "german": "das Navi",
+      "german": "Navi",
       "article": "das",
       "plural": "Navis",
       "category": "noun",
@@ -3706,7 +3728,7 @@
       "anki_status": "added"
     },
     "das tablet": {
-      "german": "das Tablet",
+      "german": "Tablet",
       "article": "das",
       "plural": "Tablets",
       "category": "noun",
@@ -3725,7 +3747,7 @@
       "anki_status": "added"
     },
     "die digitalkamera": {
-      "german": "die Digitalkamera",
+      "german": "Digitalkamera",
       "article": "die",
       "plural": "Digitalkameras",
       "category": "noun",
@@ -3744,7 +3766,7 @@
       "anki_status": "added"
     },
     "der apfel": {
-      "german": "der Apfel",
+      "german": "Apfel",
       "article": "der",
       "plural": "Äpfel",
       "category": "noun",
@@ -3763,7 +3785,7 @@
       "anki_status": "added"
     },
     "der schlüssel": {
-      "german": "der Schlüssel",
+      "german": "Schlüssel",
       "article": "der",
       "plural": "Schlüssel",
       "category": "noun",
@@ -3773,16 +3795,18 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-15"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Indirekte Fragen und typische Redemittel"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "der weg": {
-      "german": "der Weg",
+      "german": "Weg",
       "article": "der",
       "plural": "Wege",
       "category": "noun",
@@ -3801,7 +3825,7 @@
       "anki_status": "added"
     },
     "die kartoffel": {
-      "german": "die Kartoffel",
+      "german": "Kartoffel",
       "article": "die",
       "plural": "Kartoffeln",
       "category": "noun",
@@ -3820,7 +3844,7 @@
       "anki_status": "added"
     },
     "der saft": {
-      "german": "der Saft",
+      "german": "Saft",
       "article": "der",
       "plural": "Säfte",
       "category": "noun",
@@ -3839,7 +3863,7 @@
       "anki_status": "added"
     },
     "die hilfe": {
-      "german": "die Hilfe",
+      "german": "Hilfe",
       "article": "die",
       "plural": "",
       "category": "noun",
@@ -3858,7 +3882,7 @@
       "anki_status": "added"
     },
     "der job": {
-      "german": "der Job",
+      "german": "Job",
       "article": "der",
       "plural": "Jobs",
       "category": "noun",
@@ -3877,7 +3901,7 @@
       "anki_status": "added"
     },
     "das problem": {
-      "german": "das Problem",
+      "german": "Problem",
       "article": "das",
       "plural": "Probleme",
       "category": "noun",
@@ -3896,7 +3920,7 @@
       "anki_status": "added"
     },
     "das geld": {
-      "german": "das Geld",
+      "german": "Geld",
       "article": "das",
       "plural": "",
       "category": "noun",
@@ -3915,7 +3939,7 @@
       "anki_status": "added"
     },
     "die ahnung": {
-      "german": "die Ahnung",
+      "german": "Ahnung",
       "article": "die",
       "plural": "Ahnungen",
       "category": "noun",
@@ -3925,16 +3949,18 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-15"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Indirekte Fragen und typische Redemittel"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "das spiel": {
-      "german": "das Spiel",
+      "german": "Spiel",
       "article": "das",
       "plural": "die Spiele",
       "category": "noun",
@@ -3972,7 +3998,7 @@
       "anki_status": "added"
     },
     "der alltag": {
-      "german": "der Alltag",
+      "german": "Alltag",
       "article": "der",
       "plural": "",
       "category": "noun",
@@ -4010,7 +4036,7 @@
       "anki_status": "added"
     },
     "das mittagessen": {
-      "german": "das Mittagessen",
+      "german": "Mittagessen",
       "article": "das",
       "plural": "",
       "category": "noun",
@@ -4029,7 +4055,7 @@
       "anki_status": "added"
     },
     "die küche": {
-      "german": "die Küche",
+      "german": "Küche",
       "article": "die",
       "plural": "die Küchen",
       "category": "noun",
@@ -4086,7 +4112,7 @@
       "anki_status": "added"
     },
     "der stuhl": {
-      "german": "der Stuhl",
+      "german": "Stuhl",
       "article": "der",
       "plural": "die Stühle",
       "category": "noun",
@@ -4153,16 +4179,18 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-21-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Indirect questions and future tense"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "der experte": {
-      "german": "der Experte",
+      "german": "Experte",
       "article": "der",
       "plural": "die Experten",
       "category": "noun",
@@ -4181,7 +4209,7 @@
       "anki_status": "added"
     },
     "der elektriker": {
-      "german": "der Elektriker",
+      "german": "Elektriker",
       "article": "der",
       "plural": "die Elektriker",
       "category": "noun",
@@ -4238,7 +4266,7 @@
       "anki_status": "added"
     },
     "die farbe": {
-      "german": "die Farbe",
+      "german": "Farbe",
       "article": "die",
       "plural": "die Farben",
       "category": "noun",
@@ -4257,7 +4285,7 @@
       "anki_status": "added"
     },
     "der zahnarzt": {
-      "german": "der Zahnarzt",
+      "german": "Zahnarzt",
       "article": "der",
       "plural": "die Zahnärzte",
       "category": "noun",
@@ -4276,7 +4304,7 @@
       "anki_status": "added"
     },
     "das müsli": {
-      "german": "das Müsli",
+      "german": "Müsli",
       "article": "das",
       "plural": "",
       "category": "noun",
@@ -4314,7 +4342,7 @@
       "anki_status": "added"
     },
     "die zigarette": {
-      "german": "die Zigarette",
+      "german": "Zigarette",
       "article": "die",
       "plural": "die Zigaretten",
       "category": "noun",
@@ -4371,7 +4399,7 @@
       "anki_status": "added"
     },
     "der kellner": {
-      "german": "der Kellner",
+      "german": "Kellner",
       "article": "der",
       "plural": "die Kellner",
       "category": "noun",
@@ -4390,7 +4418,7 @@
       "anki_status": "added"
     },
     "die kellnerin": {
-      "german": "die Kellnerin",
+      "german": "Kellnerin",
       "article": "die",
       "plural": "die Kellnerinnen",
       "category": "noun",
@@ -4409,7 +4437,7 @@
       "anki_status": "added"
     },
     "das wort": {
-      "german": "das Wort",
+      "german": "Wort",
       "article": "das",
       "plural": "die Wörter",
       "category": "noun",
@@ -4428,7 +4456,7 @@
       "anki_status": "added"
     },
     "der kater": {
-      "german": "der Kater",
+      "german": "Kater",
       "article": "der",
       "plural": "die Kater",
       "category": "noun",
@@ -4447,7 +4475,7 @@
       "anki_status": "added"
     },
     "die nummer": {
-      "german": "die Nummer",
+      "german": "Nummer",
       "article": "die",
       "plural": "die Nummern",
       "category": "noun",
@@ -4466,7 +4494,7 @@
       "anki_status": "added"
     },
     "die zahl": {
-      "german": "die Zahl",
+      "german": "Zahl",
       "article": "die",
       "plural": "die Zahlen",
       "category": "noun",
@@ -4514,12 +4542,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-15"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Indirekte Fragen und typische Redemittel"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "geschlossen": {
@@ -4533,16 +4563,18 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-15"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Indirekte Fragen und typische Redemittel"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "das menü": {
-      "german": "das Menü",
+      "german": "Menü",
       "article": "das",
       "plural": "die Menüs",
       "category": "noun",
@@ -4561,7 +4593,7 @@
       "anki_status": "added"
     },
     "die speisekarte": {
-      "german": "die Speisekarte",
+      "german": "Speisekarte",
       "article": "die",
       "plural": "die Speisekarten",
       "category": "noun",
@@ -4580,7 +4612,7 @@
       "anki_status": "added"
     },
     "die vorspeise": {
-      "german": "die Vorspeise",
+      "german": "Vorspeise",
       "article": "die",
       "plural": "die Vorspeisen",
       "category": "noun",
@@ -4599,7 +4631,7 @@
       "anki_status": "added"
     },
     "die hauptspeise": {
-      "german": "die Hauptspeise",
+      "german": "Hauptspeise",
       "article": "die",
       "plural": "die Hauptspeisen",
       "category": "noun",
@@ -4618,7 +4650,7 @@
       "anki_status": "added"
     },
     "die nachspeise": {
-      "german": "die Nachspeise",
+      "german": "Nachspeise",
       "article": "die",
       "plural": "die Nachspeisen",
       "category": "noun",
@@ -4637,7 +4669,7 @@
       "anki_status": "added"
     },
     "das dessert": {
-      "german": "das Dessert",
+      "german": "Dessert",
       "article": "das",
       "plural": "die Desserts",
       "category": "noun",
@@ -4656,7 +4688,7 @@
       "anki_status": "added"
     },
     "der einwohner": {
-      "german": "der Einwohner",
+      "german": "Einwohner",
       "article": "der",
       "plural": "die Einwohner",
       "category": "noun",
@@ -4732,7 +4764,7 @@
       "anki_status": "added"
     },
     "das datum": {
-      "german": "das Datum",
+      "german": "Datum",
       "article": "das",
       "plural": "die Daten",
       "category": "noun",
@@ -4751,7 +4783,7 @@
       "anki_status": "added"
     },
     "der geburtstag": {
-      "german": "der Geburtstag",
+      "german": "Geburtstag",
       "article": "der",
       "plural": "die Geburtstage",
       "category": "noun",
@@ -4770,7 +4802,7 @@
       "anki_status": "added"
     },
     "die geburt": {
-      "german": "die Geburt",
+      "german": "Geburt",
       "article": "die",
       "plural": "die Geburten",
       "category": "noun",
@@ -4789,7 +4821,7 @@
       "anki_status": "added"
     },
     "der stock": {
-      "german": "der Stock",
+      "german": "Stock",
       "article": "der",
       "plural": "die Stockwerke",
       "category": "noun",
@@ -4808,7 +4840,7 @@
       "anki_status": "added"
     },
     "der fehler": {
-      "german": "der Fehler",
+      "german": "Fehler",
       "article": "der",
       "plural": "die Fehler",
       "category": "noun",
@@ -4827,7 +4859,7 @@
       "anki_status": "added"
     },
     "der monat": {
-      "german": "der Monat",
+      "german": "Monat",
       "article": "der",
       "plural": "die Monate",
       "category": "noun",
@@ -4865,7 +4897,7 @@
       "anki_status": "added"
     },
     "die wohngemeinschaft": {
-      "german": "die Wohngemeinschaft",
+      "german": "Wohngemeinschaft",
       "article": "die",
       "plural": "die Wohngemeinschaften",
       "category": "noun",
@@ -4884,7 +4916,7 @@
       "anki_status": "added"
     },
     "die wohnung": {
-      "german": "die Wohnung",
+      "german": "Wohnung",
       "article": "die",
       "plural": "die Wohnungen",
       "category": "noun",
@@ -4903,7 +4935,7 @@
       "anki_status": "added"
     },
     "das haus": {
-      "german": "das Haus",
+      "german": "Haus",
       "article": "das",
       "plural": "die Häuser",
       "category": "noun",
@@ -4922,7 +4954,7 @@
       "anki_status": "added"
     },
     "das reihenhaus": {
-      "german": "das Reihenhaus",
+      "german": "Reihenhaus",
       "article": "das",
       "plural": "die Reihenhäuser",
       "category": "noun",
@@ -4960,7 +4992,7 @@
       "anki_status": "added"
     },
     "die speise": {
-      "german": "die Speise",
+      "german": "Speise",
       "article": "die",
       "plural": "die Speisen",
       "category": "noun",
@@ -4979,7 +5011,7 @@
       "anki_status": "added"
     },
     "das gericht": {
-      "german": "das Gericht",
+      "german": "Gericht",
       "article": "das",
       "plural": "die Gerichte",
       "category": "noun",
@@ -4998,7 +5030,7 @@
       "anki_status": "added"
     },
     "die etage": {
-      "german": "die Etage",
+      "german": "Etage",
       "article": "die",
       "plural": "die Etagen",
       "category": "noun",
@@ -5017,7 +5049,7 @@
       "anki_status": "added"
     },
     "das schlafzimmer": {
-      "german": "das Schlafzimmer",
+      "german": "Schlafzimmer",
       "article": "das",
       "plural": "die Schlafzimmer",
       "category": "noun",
@@ -5036,7 +5068,7 @@
       "anki_status": "added"
     },
     "der garten": {
-      "german": "der Garten",
+      "german": "Garten",
       "article": "der",
       "plural": "die Gärten",
       "category": "noun",
@@ -5055,7 +5087,7 @@
       "anki_status": "added"
     },
     "der balkon": {
-      "german": "der Balkon",
+      "german": "Balkon",
       "article": "der",
       "plural": "die Balkone",
       "category": "noun",
@@ -5074,7 +5106,7 @@
       "anki_status": "added"
     },
     "die terrasse": {
-      "german": "die Terrasse",
+      "german": "Terrasse",
       "article": "die",
       "plural": "die Terrassen",
       "category": "noun",
@@ -5093,7 +5125,7 @@
       "anki_status": "added"
     },
     "der patio": {
-      "german": "der Patio",
+      "german": "Patio",
       "article": "der",
       "plural": "die Patios",
       "category": "noun",
@@ -5112,7 +5144,7 @@
       "anki_status": "added"
     },
     "die veranda": {
-      "german": "die Veranda",
+      "german": "Veranda",
       "article": "die",
       "plural": "die Veranden",
       "category": "noun",
@@ -5131,7 +5163,7 @@
       "anki_status": "added"
     },
     "der lieblingsort": {
-      "german": "der Lieblingsort",
+      "german": "Lieblingsort",
       "article": "der",
       "plural": "die Lieblingsorte",
       "category": "noun",
@@ -5150,7 +5182,7 @@
       "anki_status": "added"
     },
     "das wohnzimmer": {
-      "german": "das Wohnzimmer",
+      "german": "Wohnzimmer",
       "article": "das",
       "plural": "die Wohnzimmer",
       "category": "noun",
@@ -5169,7 +5201,7 @@
       "anki_status": "added"
     },
     "der hund": {
-      "german": "der Hund",
+      "german": "Hund",
       "article": "der",
       "plural": "die Hunde",
       "category": "noun",
@@ -5217,16 +5249,18 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-19-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Imperative and Modal Verbs Review"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "die wohnküche": {
-      "german": "die Wohnküche",
+      "german": "Wohnküche",
       "article": "die",
       "plural": "die Wohnküchen",
       "category": "noun",
@@ -5264,7 +5298,7 @@
       "anki_status": "added"
     },
     "das sofa": {
-      "german": "das Sofa",
+      "german": "Sofa",
       "article": "das",
       "plural": "die Sofas",
       "category": "noun",
@@ -5283,7 +5317,7 @@
       "anki_status": "added"
     },
     "der fernseher": {
-      "german": "der Fernseher",
+      "german": "Fernseher",
       "article": "der",
       "plural": "die Fernseher",
       "category": "noun",
@@ -5302,7 +5336,7 @@
       "anki_status": "added"
     },
     "das fenster": {
-      "german": "das Fenster",
+      "german": "Fenster",
       "article": "das",
       "plural": "die Fenster",
       "category": "noun",
@@ -5321,7 +5355,7 @@
       "anki_status": "added"
     },
     "die spülmaschine": {
-      "german": "die Spülmaschine",
+      "german": "Spülmaschine",
       "article": "die",
       "plural": "die Spülmaschinen",
       "category": "noun",
@@ -5359,7 +5393,7 @@
       "anki_status": "added"
     },
     "das geschirr": {
-      "german": "das Geschirr",
+      "german": "Geschirr",
       "article": "das",
       "plural": "",
       "category": "noun",
@@ -5397,7 +5431,7 @@
       "anki_status": "added"
     },
     "die waschmaschine": {
-      "german": "die Waschmaschine",
+      "german": "Waschmaschine",
       "article": "die",
       "plural": "die Waschmaschinen",
       "category": "noun",
@@ -5416,7 +5450,7 @@
       "anki_status": "added"
     },
     "der trockner": {
-      "german": "der Trockner",
+      "german": "Trockner",
       "article": "der",
       "plural": "die Trockner",
       "category": "noun",
@@ -5454,7 +5488,7 @@
       "anki_status": "added"
     },
     "die wäsche": {
-      "german": "die Wäsche",
+      "german": "Wäsche",
       "article": "die",
       "plural": "",
       "category": "noun",
@@ -5511,7 +5545,7 @@
       "anki_status": "added"
     },
     "der schritt": {
-      "german": "der Schritt",
+      "german": "Schritt",
       "article": "der",
       "plural": "die Schritte",
       "category": "noun",
@@ -5530,7 +5564,7 @@
       "anki_status": "added"
     },
     "der bus": {
-      "german": "der Bus",
+      "german": "Bus",
       "article": "der",
       "plural": "die Busse",
       "category": "noun",
@@ -5549,7 +5583,7 @@
       "anki_status": "added"
     },
     "der zug": {
-      "german": "der Zug",
+      "german": "Zug",
       "article": "der",
       "plural": "die Züge",
       "category": "noun",
@@ -5568,7 +5602,7 @@
       "anki_status": "added"
     },
     "das flugzeug": {
-      "german": "das Flugzeug",
+      "german": "Flugzeug",
       "article": "das",
       "plural": "die Flugzeuge",
       "category": "noun",
@@ -5587,7 +5621,7 @@
       "anki_status": "added"
     },
     "das badezimmer": {
-      "german": "das Badezimmer",
+      "german": "Badezimmer",
       "article": "das",
       "plural": "die Badezimmer",
       "category": "noun",
@@ -5606,7 +5640,7 @@
       "anki_status": "added"
     },
     "der spiegel": {
-      "german": "der Spiegel",
+      "german": "Spiegel",
       "article": "der",
       "plural": "die Spiegel",
       "category": "noun",
@@ -5625,7 +5659,7 @@
       "anki_status": "added"
     },
     "das waschbecken": {
-      "german": "das Waschbecken",
+      "german": "Waschbecken",
       "article": "das",
       "plural": "die Waschbecken",
       "category": "noun",
@@ -5644,7 +5678,7 @@
       "anki_status": "added"
     },
     "die badewanne": {
-      "german": "die Badewanne",
+      "german": "Badewanne",
       "article": "die",
       "plural": "die Badewannen",
       "category": "noun",
@@ -5663,7 +5697,7 @@
       "anki_status": "added"
     },
     "die dusche": {
-      "german": "die Dusche",
+      "german": "Dusche",
       "article": "die",
       "plural": "die Duschen",
       "category": "noun",
@@ -5701,7 +5735,7 @@
       "anki_status": "added"
     },
     "das gesicht": {
-      "german": "das Gesicht",
+      "german": "Gesicht",
       "article": "das",
       "plural": "die Gesichter",
       "category": "noun",
@@ -5720,7 +5754,7 @@
       "anki_status": "added"
     },
     "die zähne": {
-      "german": "die Zähne",
+      "german": "Zähne",
       "article": "die",
       "plural": "",
       "category": "noun",
@@ -5739,7 +5773,7 @@
       "anki_status": "added"
     },
     "der zahn": {
-      "german": "der Zahn",
+      "german": "Zahn",
       "article": "der",
       "plural": "die Zähne",
       "category": "noun",
@@ -5758,7 +5792,7 @@
       "anki_status": "added"
     },
     "die toilette": {
-      "german": "die Toilette",
+      "german": "Toilette",
       "article": "die",
       "plural": "die Toiletten",
       "category": "noun",
@@ -5777,7 +5811,7 @@
       "anki_status": "added"
     },
     "das klo": {
-      "german": "das Klo",
+      "german": "Klo",
       "article": "das",
       "plural": "die Klos",
       "category": "noun",
@@ -5796,7 +5830,7 @@
       "anki_status": "added"
     },
     "das bett": {
-      "german": "das Bett",
+      "german": "Bett",
       "article": "das",
       "plural": "die Betten",
       "category": "noun",
@@ -5815,7 +5849,7 @@
       "anki_status": "added"
     },
     "die bibliothek": {
-      "german": "die Bibliothek",
+      "german": "Bibliothek",
       "article": "die",
       "plural": "die Bibliotheken",
       "category": "noun",
@@ -5834,7 +5868,7 @@
       "anki_status": "added"
     },
     "die bar": {
-      "german": "die Bar",
+      "german": "Bar",
       "article": "die",
       "plural": "die Bars",
       "category": "noun",
@@ -5853,7 +5887,7 @@
       "anki_status": "added"
     },
     "das café": {
-      "german": "das Café",
+      "german": "Café",
       "article": "das",
       "plural": "die Cafés",
       "category": "noun",
@@ -5872,7 +5906,7 @@
       "anki_status": "added"
     },
     "der supermarkt": {
-      "german": "der Supermarkt",
+      "german": "Supermarkt",
       "article": "der",
       "plural": "die Supermärkte",
       "category": "noun",
@@ -5891,7 +5925,7 @@
       "anki_status": "added"
     },
     "der ofen": {
-      "german": "der Ofen",
+      "german": "Ofen",
       "article": "der",
       "plural": "die Öfen",
       "category": "noun",
@@ -5910,7 +5944,7 @@
       "anki_status": "added"
     },
     "die pfanne": {
-      "german": "die Pfanne",
+      "german": "Pfanne",
       "article": "die",
       "plural": "die Pfannen",
       "category": "noun",
@@ -5929,7 +5963,7 @@
       "anki_status": "added"
     },
     "das fleisch": {
-      "german": "das Fleisch",
+      "german": "Fleisch",
       "article": "das",
       "plural": "",
       "category": "noun",
@@ -6138,7 +6172,7 @@
       "anki_status": "added"
     },
     "die haltestelle": {
-      "german": "die Haltestelle",
+      "german": "Haltestelle",
       "article": "die",
       "plural": "die Haltestellen",
       "category": "noun",
@@ -6157,7 +6191,7 @@
       "anki_status": "added"
     },
     "die kreuzung": {
-      "german": "die Kreuzung",
+      "german": "Kreuzung",
       "article": "die",
       "plural": "die Kreuzungen",
       "category": "noun",
@@ -6195,7 +6229,7 @@
       "anki_status": "added"
     },
     "die apotheke": {
-      "german": "die Apotheke",
+      "german": "Apotheke",
       "article": "die",
       "plural": "die Apotheken",
       "category": "noun",
@@ -6214,7 +6248,7 @@
       "anki_status": "added"
     },
     "das krankenhaus": {
-      "german": "das Krankenhaus",
+      "german": "Krankenhaus",
       "article": "das",
       "plural": "die Krankenhäuser",
       "category": "noun",
@@ -6233,7 +6267,7 @@
       "anki_status": "added"
     },
     "der blumentopf": {
-      "german": "der Blumentopf",
+      "german": "Blumentopf",
       "article": "der",
       "plural": "die Blumentöpfe",
       "category": "noun",
@@ -6252,7 +6286,7 @@
       "anki_status": "added"
     },
     "das licht": {
-      "german": "das Licht",
+      "german": "Licht",
       "article": "das",
       "plural": "die Lichter",
       "category": "noun",
@@ -6271,7 +6305,7 @@
       "anki_status": "added"
     },
     "die lampe": {
-      "german": "die Lampe",
+      "german": "Lampe",
       "article": "die",
       "plural": "die Lampen",
       "category": "noun",
@@ -6290,7 +6324,7 @@
       "anki_status": "added"
     },
     "das bad": {
-      "german": "das Bad",
+      "german": "Bad",
       "article": "das",
       "plural": "die Bäder",
       "category": "noun",
@@ -6309,7 +6343,7 @@
       "anki_status": "added"
     },
     "die vase": {
-      "german": "die Vase",
+      "german": "Vase",
       "article": "die",
       "plural": "die Vasen",
       "category": "noun",
@@ -6328,7 +6362,7 @@
       "anki_status": "added"
     },
     "der schrank": {
-      "german": "der Schrank",
+      "german": "Schrank",
       "article": "der",
       "plural": "die Schränke",
       "category": "noun",
@@ -6366,7 +6400,7 @@
       "anki_status": "added"
     },
     "das esszimmer": {
-      "german": "das Esszimmer",
+      "german": "Esszimmer",
       "article": "das",
       "plural": "die Esszimmer",
       "category": "noun",
@@ -6537,7 +6571,7 @@
       "anki_status": "added"
     },
     "das ding": {
-      "german": "das Ding",
+      "german": "Ding",
       "article": "das",
       "plural": "die Dinge",
       "category": "noun",
@@ -6556,7 +6590,7 @@
       "anki_status": "added"
     },
     "der essig": {
-      "german": "der Essig",
+      "german": "Essig",
       "article": "der",
       "plural": "",
       "category": "noun",
@@ -6575,7 +6609,7 @@
       "anki_status": "added"
     },
     "das öl": {
-      "german": "das Öl",
+      "german": "Öl",
       "article": "das",
       "plural": "die Öle",
       "category": "noun",
@@ -6594,7 +6628,7 @@
       "anki_status": "added"
     },
     "das ei": {
-      "german": "das Ei",
+      "german": "Ei",
       "article": "das",
       "plural": "die Eier",
       "category": "noun",
@@ -6613,7 +6647,7 @@
       "anki_status": "added"
     },
     "das salz": {
-      "german": "das Salz",
+      "german": "Salz",
       "article": "das",
       "plural": "",
       "category": "noun",
@@ -6632,7 +6666,7 @@
       "anki_status": "added"
     },
     "die frucht": {
-      "german": "die Frucht",
+      "german": "Frucht",
       "article": "die",
       "plural": "die Früchte",
       "category": "noun",
@@ -6651,7 +6685,7 @@
       "anki_status": "added"
     },
     "das obst": {
-      "german": "das Obst",
+      "german": "Obst",
       "article": "das",
       "plural": "",
       "category": "noun",
@@ -6670,7 +6704,7 @@
       "anki_status": "added"
     },
     "das gemüse": {
-      "german": "das Gemüse",
+      "german": "Gemüse",
       "article": "das",
       "plural": "",
       "category": "noun",
@@ -6689,7 +6723,7 @@
       "anki_status": "added"
     },
     "die zitrone": {
-      "german": "die Zitrone",
+      "german": "Zitrone",
       "article": "die",
       "plural": "die Zitronen",
       "category": "noun",
@@ -6708,7 +6742,7 @@
       "anki_status": "added"
     },
     "der ort": {
-      "german": "der Ort",
+      "german": "Ort",
       "article": "der",
       "plural": "die Orte",
       "category": "noun",
@@ -6746,7 +6780,7 @@
       "anki_status": "added"
     },
     "der wäscheständer": {
-      "german": "der Wäscheständer",
+      "german": "Wäscheständer",
       "article": "der",
       "plural": "die Wäscheständer",
       "category": "noun",
@@ -6765,7 +6799,7 @@
       "anki_status": "added"
     },
     "die kleidung": {
-      "german": "die Kleidung",
+      "german": "Kleidung",
       "article": "die",
       "plural": "",
       "category": "noun",
@@ -6879,7 +6913,7 @@
       "anki_status": "added"
     },
     "das geschenk": {
-      "german": "das Geschenk",
+      "german": "Geschenk",
       "article": "das",
       "plural": "die Geschenke",
       "category": "noun",
@@ -6898,7 +6932,7 @@
       "anki_status": "added"
     },
     "der tourist": {
-      "german": "der Tourist",
+      "german": "Tourist",
       "article": "der",
       "plural": "die Touristen",
       "category": "noun",
@@ -6917,7 +6951,7 @@
       "anki_status": "added"
     },
     "die antwort": {
-      "german": "die Antwort",
+      "german": "Antwort",
       "article": "die",
       "plural": "die Antworten",
       "category": "noun",
@@ -6936,7 +6970,7 @@
       "anki_status": "added"
     },
     "die oma": {
-      "german": "die Oma",
+      "german": "Oma",
       "article": "die",
       "plural": "die Omas",
       "category": "noun",
@@ -6955,7 +6989,7 @@
       "anki_status": "added"
     },
     "die karte": {
-      "german": "die Karte",
+      "german": "Karte",
       "article": "die",
       "plural": "die Karten",
       "category": "noun",
@@ -6974,7 +7008,7 @@
       "anki_status": "added"
     },
     "der gast": {
-      "german": "der Gast",
+      "german": "Gast",
       "article": "der",
       "plural": "die Gäste",
       "category": "noun",
@@ -6993,7 +7027,7 @@
       "anki_status": "added"
     },
     "der tee": {
-      "german": "der Tee",
+      "german": "Tee",
       "article": "der",
       "plural": "die Tees",
       "category": "noun",
@@ -7012,7 +7046,7 @@
       "anki_status": "added"
     },
     "die geschichte": {
-      "german": "die Geschichte",
+      "german": "Geschichte",
       "article": "die",
       "plural": "die Geschichten",
       "category": "noun",
@@ -7031,7 +7065,7 @@
       "anki_status": "added"
     },
     "der kollege": {
-      "german": "der Kollege",
+      "german": "Kollege",
       "article": "der",
       "plural": "die Kollegen",
       "category": "noun",
@@ -7050,7 +7084,7 @@
       "anki_status": "added"
     },
     "der stift": {
-      "german": "der Stift",
+      "german": "Stift",
       "article": "der",
       "plural": "die Stifte",
       "category": "noun",
@@ -7069,7 +7103,7 @@
       "anki_status": "added"
     },
     "die chefin": {
-      "german": "die Chefin",
+      "german": "Chefin",
       "article": "die",
       "plural": "die Chefinnen",
       "category": "noun",
@@ -7088,7 +7122,7 @@
       "anki_status": "added"
     },
     "der nachbar": {
-      "german": "der Nachbar",
+      "german": "Nachbar",
       "article": "der",
       "plural": "die Nachbarn",
       "category": "noun",
@@ -7107,7 +7141,7 @@
       "anki_status": "added"
     },
     "der kuchen": {
-      "german": "der Kuchen",
+      "german": "Kuchen",
       "article": "der",
       "plural": "die Kuchen",
       "category": "noun",
@@ -7183,7 +7217,7 @@
       "anki_status": "added"
     },
     "das wochenende": {
-      "german": "das Wochenende",
+      "german": "Wochenende",
       "article": "das",
       "plural": "die Wochenenden",
       "category": "noun",
@@ -7202,7 +7236,7 @@
       "anki_status": "added"
     },
     "das thema": {
-      "german": "das Thema",
+      "german": "Thema",
       "article": "das",
       "plural": "die Themen",
       "category": "noun",
@@ -7240,7 +7274,7 @@
       "anki_status": "added"
     },
     "die e-mail": {
-      "german": "die E-Mail",
+      "german": "E-Mail",
       "article": "die",
       "plural": "die E-Mails",
       "category": "noun",
@@ -7259,7 +7293,7 @@
       "anki_status": "added"
     },
     "die mutter": {
-      "german": "die Mutter",
+      "german": "Mutter",
       "article": "die",
       "plural": "die Mütter",
       "category": "noun",
@@ -7278,7 +7312,7 @@
       "anki_status": "added"
     },
     "der gott": {
-      "german": "der Gott",
+      "german": "Gott",
       "article": "der",
       "plural": "die Götter",
       "category": "noun",
@@ -7297,7 +7331,7 @@
       "anki_status": "added"
     },
     "die gitarre": {
-      "german": "die Gitarre",
+      "german": "Gitarre",
       "article": "die",
       "plural": "die Gitarren",
       "category": "noun",
@@ -7316,7 +7350,7 @@
       "anki_status": "added"
     },
     "das ticket": {
-      "german": "das Ticket",
+      "german": "Ticket",
       "article": "das",
       "plural": "die Tickets",
       "category": "noun",
@@ -7335,7 +7369,7 @@
       "anki_status": "added"
     },
     "der hut": {
-      "german": "der Hut",
+      "german": "Hut",
       "article": "der",
       "plural": "die Hüte",
       "category": "noun",
@@ -7354,7 +7388,7 @@
       "anki_status": "added"
     },
     "die großmutter": {
-      "german": "die Großmutter",
+      "german": "Großmutter",
       "article": "die",
       "plural": "die Großmütter",
       "category": "noun",
@@ -7392,7 +7426,7 @@
       "anki_status": "added"
     },
     "das arbeitszimmer": {
-      "german": "das Arbeitszimmer",
+      "german": "Arbeitszimmer",
       "article": "das",
       "plural": "die Arbeitszimmer",
       "category": "noun",
@@ -7411,7 +7445,7 @@
       "anki_status": "added"
     },
     "die schweiz": {
-      "german": "die Schweiz",
+      "german": "Schweiz",
       "article": "die",
       "plural": "",
       "category": "noun",
@@ -7449,7 +7483,7 @@
       "anki_status": "added"
     },
     "das zimmer": {
-      "german": "das Zimmer",
+      "german": "Zimmer",
       "article": "das",
       "plural": "die Zimmer",
       "category": "noun",
@@ -7468,7 +7502,7 @@
       "anki_status": "added"
     },
     "das wasser": {
-      "german": "das Wasser",
+      "german": "Wasser",
       "article": "das",
       "plural": "",
       "category": "noun",
@@ -7487,7 +7521,7 @@
       "anki_status": "added"
     },
     "die stadt": {
-      "german": "die Stadt",
+      "german": "Stadt",
       "article": "die",
       "plural": "die Städte",
       "category": "noun",
@@ -7563,7 +7597,7 @@
       "anki_status": "added"
     },
     "der kommentar": {
-      "german": "der Kommentar",
+      "german": "Kommentar",
       "article": "der",
       "plural": "die Kommentare",
       "category": "noun",
@@ -7582,7 +7616,7 @@
       "anki_status": "added"
     },
     "die tabelle": {
-      "german": "die Tabelle",
+      "german": "Tabelle",
       "article": "die",
       "plural": "die Tabellen",
       "category": "noun",
@@ -7601,7 +7635,7 @@
       "anki_status": "added"
     },
     "die kirsche": {
-      "german": "die Kirsche",
+      "german": "Kirsche",
       "article": "die",
       "plural": "die Kirschen",
       "category": "noun",
@@ -7620,7 +7654,7 @@
       "anki_status": "added"
     },
     "die prüfung": {
-      "german": "die Prüfung",
+      "german": "Prüfung",
       "article": "die",
       "plural": "die Prüfungen",
       "category": "noun",
@@ -7639,7 +7673,7 @@
       "anki_status": "added"
     },
     "das examen": {
-      "german": "das Examen",
+      "german": "Examen",
       "article": "das",
       "plural": "die Examina",
       "category": "noun",
@@ -7858,12 +7892,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-22-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Relative clauses with relative pronouns"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "danken": {
@@ -7981,7 +8017,7 @@
       "anki_status": "added"
     },
     "der schmuck": {
-      "german": "der Schmuck",
+      "german": "Schmuck",
       "article": "der",
       "plural": "",
       "category": "noun",
@@ -8000,7 +8036,7 @@
       "anki_status": "added"
     },
     "der urlaub": {
-      "german": "der Urlaub",
+      "german": "Urlaub",
       "article": "der",
       "plural": "",
       "category": "noun",
@@ -8019,7 +8055,7 @@
       "anki_status": "added"
     },
     "das bild": {
-      "german": "das Bild",
+      "german": "Bild",
       "article": "das",
       "plural": "die Bilder",
       "category": "noun",
@@ -8038,7 +8074,7 @@
       "anki_status": "added"
     },
     "der turm": {
-      "german": "der Turm",
+      "german": "Turm",
       "article": "der",
       "plural": "die Türme",
       "category": "noun",
@@ -8076,7 +8112,7 @@
       "anki_status": "added"
     },
     "die tür": {
-      "german": "die Tür",
+      "german": "Tür",
       "article": "die",
       "plural": "die Türen",
       "category": "noun",
@@ -8095,7 +8131,7 @@
       "anki_status": "added"
     },
     "die sehenswürdigkeit": {
-      "german": "die Sehenswürdigkeit",
+      "german": "Sehenswürdigkeit",
       "article": "die",
       "plural": "die Sehenswürdigkeiten",
       "category": "noun",
@@ -8114,7 +8150,7 @@
       "anki_status": "added"
     },
     "die insel": {
-      "german": "die Insel",
+      "german": "Insel",
       "article": "die",
       "plural": "die Inseln",
       "category": "noun",
@@ -8228,7 +8264,7 @@
       "anki_status": "added"
     },
     "der dschungel": {
-      "german": "der Dschungel",
+      "german": "Dschungel",
       "article": "der",
       "plural": "die Dschungel",
       "category": "noun",
@@ -8247,7 +8283,7 @@
       "anki_status": "added"
     },
     "der strand": {
-      "german": "der Strand",
+      "german": "Strand",
       "article": "der",
       "plural": "die Strände",
       "category": "noun",
@@ -8779,7 +8815,7 @@
       "anki_status": "added"
     },
     "das hotel": {
-      "german": "das Hotel",
+      "german": "Hotel",
       "article": "das",
       "plural": "die Hotels",
       "category": "noun",
@@ -8798,7 +8834,7 @@
       "anki_status": "added"
     },
     "die garage": {
-      "german": "die Garage",
+      "german": "Garage",
       "article": "die",
       "plural": "die Garagen",
       "category": "noun",
@@ -8817,7 +8853,7 @@
       "anki_status": "added"
     },
     "das land": {
-      "german": "das Land",
+      "german": "Land",
       "article": "das",
       "plural": "die Länder",
       "category": "noun",
@@ -8836,7 +8872,7 @@
       "anki_status": "added"
     },
     "der norden": {
-      "german": "der Norden",
+      "german": "Norden",
       "article": "der",
       "plural": "",
       "category": "noun",
@@ -8855,7 +8891,7 @@
       "anki_status": "added"
     },
     "das schiff": {
-      "german": "das Schiff",
+      "german": "Schiff",
       "article": "das",
       "plural": "die Schiffe",
       "category": "noun",
@@ -8874,7 +8910,7 @@
       "anki_status": "added"
     },
     "das opernhaus": {
-      "german": "das Opernhaus",
+      "german": "Opernhaus",
       "article": "das",
       "plural": "die Opernhäuser",
       "category": "noun",
@@ -8893,7 +8929,7 @@
       "anki_status": "added"
     },
     "der berg": {
-      "german": "der Berg",
+      "german": "Berg",
       "article": "der",
       "plural": "die Berge",
       "category": "noun",
@@ -8912,7 +8948,7 @@
       "anki_status": "added"
     },
     "der felsen": {
-      "german": "der Felsen",
+      "german": "Felsen",
       "article": "der",
       "plural": "die Felsen",
       "category": "noun",
@@ -8931,7 +8967,7 @@
       "anki_status": "added"
     },
     "das meer": {
-      "german": "das Meer",
+      "german": "Meer",
       "article": "das",
       "plural": "die Meere",
       "category": "noun",
@@ -8950,7 +8986,7 @@
       "anki_status": "added"
     },
     "das korallenriff": {
-      "german": "das Korallenriff",
+      "german": "Korallenriff",
       "article": "das",
       "plural": "die Korallenriffe",
       "category": "noun",
@@ -8969,7 +9005,7 @@
       "anki_status": "added"
     },
     "die welle": {
-      "german": "die Welle",
+      "german": "Welle",
       "article": "die",
       "plural": "die Wellen",
       "category": "noun",
@@ -8988,7 +9024,7 @@
       "anki_status": "added"
     },
     "der surfer": {
-      "german": "der Surfer",
+      "german": "Surfer",
       "article": "der",
       "plural": "die Surfer",
       "category": "noun",
@@ -9026,7 +9062,7 @@
       "anki_status": "added"
     },
     "der reisepass": {
-      "german": "der Reisepass",
+      "german": "Reisepass",
       "article": "der",
       "plural": "die Reisepässe",
       "category": "noun",
@@ -9045,7 +9081,7 @@
       "anki_status": "added"
     },
     "der pass": {
-      "german": "der Pass",
+      "german": "Pass",
       "article": "der",
       "plural": "die Pässe",
       "category": "noun",
@@ -9064,7 +9100,7 @@
       "anki_status": "added"
     },
     "die lieblingsreise": {
-      "german": "die Lieblingsreise",
+      "german": "Lieblingsreise",
       "article": "die",
       "plural": "die Lieblingsreisen",
       "category": "noun",
@@ -9083,7 +9119,7 @@
       "anki_status": "added"
     },
     "die küste": {
-      "german": "die Küste",
+      "german": "Küste",
       "article": "die",
       "plural": "die Küsten",
       "category": "noun",
@@ -9102,7 +9138,7 @@
       "anki_status": "added"
     },
     "der see": {
-      "german": "der See",
+      "german": "See",
       "article": "der",
       "plural": "die Seen",
       "category": "noun",
@@ -9121,7 +9157,7 @@
       "anki_status": "added"
     },
     "der fluss": {
-      "german": "der Fluss",
+      "german": "Fluss",
       "article": "der",
       "plural": "die Flüsse",
       "category": "noun",
@@ -9140,7 +9176,7 @@
       "anki_status": "added"
     },
     "das gebirge": {
-      "german": "das Gebirge",
+      "german": "Gebirge",
       "article": "das",
       "plural": "die Gebirge",
       "category": "noun",
@@ -9159,7 +9195,7 @@
       "anki_status": "added"
     },
     "die wüste": {
-      "german": "die Wüste",
+      "german": "Wüste",
       "article": "die",
       "plural": "die Wüsten",
       "category": "noun",
@@ -9178,7 +9214,7 @@
       "anki_status": "added"
     },
     "der wald": {
-      "german": "der Wald",
+      "german": "Wald",
       "article": "der",
       "plural": "die Wälder",
       "category": "noun",
@@ -9197,7 +9233,7 @@
       "anki_status": "added"
     },
     "die sonne": {
-      "german": "die Sonne",
+      "german": "Sonne",
       "article": "die",
       "plural": "",
       "category": "noun",
@@ -9216,7 +9252,7 @@
       "anki_status": "added"
     },
     "der sonnenschutz": {
-      "german": "der Sonnenschutz",
+      "german": "Sonnenschutz",
       "article": "der",
       "plural": "",
       "category": "noun",
@@ -9235,7 +9271,7 @@
       "anki_status": "added"
     },
     "die sonnencreme": {
-      "german": "die Sonnencreme",
+      "german": "Sonnencreme",
       "article": "die",
       "plural": "die Sonnencremes",
       "category": "noun",
@@ -9254,7 +9290,7 @@
       "anki_status": "added"
     },
     "die creme": {
-      "german": "die Creme",
+      "german": "Creme",
       "article": "die",
       "plural": "die Cremes",
       "category": "noun",
@@ -9273,7 +9309,7 @@
       "anki_status": "added"
     },
     "der schutz": {
-      "german": "der Schutz",
+      "german": "Schutz",
       "article": "der",
       "plural": "",
       "category": "noun",
@@ -9292,7 +9328,7 @@
       "anki_status": "added"
     },
     "die reise": {
-      "german": "die Reise",
+      "german": "Reise",
       "article": "die",
       "plural": "die Reisen",
       "category": "noun",
@@ -9311,7 +9347,7 @@
       "anki_status": "added"
     },
     "der flug": {
-      "german": "der Flug",
+      "german": "Flug",
       "article": "der",
       "plural": "die Flüge",
       "category": "noun",
@@ -9425,7 +9461,7 @@
       "anki_status": "added"
     },
     "das känguru": {
-      "german": "das Känguru",
+      "german": "Känguru",
       "article": "das",
       "plural": "die Kängurus",
       "category": "noun",
@@ -9444,7 +9480,7 @@
       "anki_status": "added"
     },
     "der vogel": {
-      "german": "der Vogel",
+      "german": "Vogel",
       "article": "der",
       "plural": "die Vögel",
       "category": "noun",
@@ -9463,7 +9499,7 @@
       "anki_status": "added"
     },
     "das visum": {
-      "german": "das Visum",
+      "german": "Visum",
       "article": "das",
       "plural": "die Visa",
       "category": "noun",
@@ -9482,7 +9518,7 @@
       "anki_status": "added"
     },
     "der stopp": {
-      "german": "der Stopp",
+      "german": "Stopp",
       "article": "der",
       "plural": "die Stopps",
       "category": "noun",
@@ -9577,7 +9613,7 @@
       "anki_status": "added"
     },
     "die gastfamilie": {
-      "german": "die Gastfamilie",
+      "german": "Gastfamilie",
       "article": "die",
       "plural": "die Gastfamilien",
       "category": "noun",
@@ -9767,7 +9803,7 @@
       "anki_status": "added"
     },
     "das museum": {
-      "german": "das Museum",
+      "german": "Museum",
       "article": "das",
       "plural": "die Museen",
       "category": "noun",
@@ -9786,7 +9822,7 @@
       "anki_status": "added"
     },
     "die safari": {
-      "german": "die Safari",
+      "german": "Safari",
       "article": "die",
       "plural": "die Safaris",
       "category": "noun",
@@ -9824,7 +9860,7 @@
       "anki_status": "added"
     },
     "der aberglaube": {
-      "german": "der Aberglaube",
+      "german": "Aberglaube",
       "article": "der",
       "plural": "",
       "category": "noun",
@@ -9862,7 +9898,7 @@
       "anki_status": "added"
     },
     "die unterkunft": {
-      "german": "die Unterkunft",
+      "german": "Unterkunft",
       "article": "die",
       "plural": "die Unterkünfte",
       "category": "noun",
@@ -9938,7 +9974,7 @@
       "anki_status": "added"
     },
     "das foto": {
-      "german": "das Foto",
+      "german": "Foto",
       "article": "das",
       "plural": "die Fotos",
       "category": "noun",
@@ -9957,7 +9993,7 @@
       "anki_status": "added"
     },
     "das tier": {
-      "german": "das Tier",
+      "german": "Tier",
       "article": "das",
       "plural": "die Tiere",
       "category": "noun",
@@ -9976,7 +10012,7 @@
       "anki_status": "added"
     },
     "die spinne": {
-      "german": "die Spinne",
+      "german": "Spinne",
       "article": "die",
       "plural": "die Spinnen",
       "category": "noun",
@@ -10005,12 +10041,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-15"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Indirekte Fragen und typische Redemittel"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "drinnen": {
@@ -10033,7 +10071,7 @@
       "anki_status": "added"
     },
     "der körper": {
-      "german": "der Körper",
+      "german": "Körper",
       "article": "der",
       "plural": "die Körper",
       "category": "noun",
@@ -10052,7 +10090,7 @@
       "anki_status": "added"
     },
     "das bein": {
-      "german": "das Bein",
+      "german": "Bein",
       "article": "das",
       "plural": "die Beine",
       "category": "noun",
@@ -10090,7 +10128,7 @@
       "anki_status": "added"
     },
     "die schlange": {
-      "german": "die Schlange",
+      "german": "Schlange",
       "article": "die",
       "plural": "die Schlangen",
       "category": "noun",
@@ -10109,7 +10147,7 @@
       "anki_status": "added"
     },
     "der hai": {
-      "german": "der Hai",
+      "german": "Hai",
       "article": "der",
       "plural": "die Haie",
       "category": "noun",
@@ -10128,7 +10166,7 @@
       "anki_status": "added"
     },
     "die leute": {
-      "german": "die Leute",
+      "german": "Leute",
       "article": "die",
       "plural": "",
       "category": "noun",
@@ -10166,7 +10204,7 @@
       "anki_status": "added"
     },
     "der rucksack": {
-      "german": "der Rucksack",
+      "german": "Rucksack",
       "article": "der",
       "plural": "die Rucksäcke",
       "category": "noun",
@@ -10185,7 +10223,7 @@
       "anki_status": "added"
     },
     "der koffer": {
-      "german": "der Koffer",
+      "german": "Koffer",
       "article": "der",
       "plural": "die Koffer",
       "category": "noun",
@@ -10261,7 +10299,7 @@
       "anki_status": "added"
     },
     "der sonnenbrand": {
-      "german": "der Sonnenbrand",
+      "german": "Sonnenbrand",
       "article": "der",
       "plural": "die Sonnenbrände",
       "category": "noun",
@@ -10280,7 +10318,7 @@
       "anki_status": "added"
     },
     "der reiseführer": {
-      "german": "der Reiseführer",
+      "german": "Reiseführer",
       "article": "der",
       "plural": "die Reiseführer",
       "category": "noun",
@@ -10318,7 +10356,7 @@
       "anki_status": "added"
     },
     "das restaurant": {
-      "german": "das Restaurant",
+      "german": "Restaurant",
       "article": "das",
       "plural": "die Restaurants",
       "category": "noun",
@@ -10337,7 +10375,7 @@
       "anki_status": "added"
     },
     "das souvenir": {
-      "german": "das Souvenir",
+      "german": "Souvenir",
       "article": "das",
       "plural": "die Souvenirs",
       "category": "noun",
@@ -10375,7 +10413,7 @@
       "anki_status": "added"
     },
     "das schwimmbad": {
-      "german": "das Schwimmbad",
+      "german": "Schwimmbad",
       "article": "das",
       "plural": "die Schwimmbäder",
       "category": "noun",
@@ -10430,26 +10468,1638 @@
       ],
       "occurrences": 1,
       "anki_status": "added"
+    },
+    "mindestens": {
+      "german": "mindestens",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "almeno",
+      "english": "at least",
+      "example_de": "Du siehst mindestens 14 Gigabytes benutzen.",
+      "level": "B1",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15",
+        "2026-05-19-stefanie",
+        "2026-05-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel",
+        "Imperative and Modal Verbs Review",
+        "Indirect questions and future tense"
+      ],
+      "occurrences": 3,
+      "anki_status": "added"
+    },
+    "höchstens": {
+      "german": "höchstens",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "al massimo",
+      "english": "at most",
+      "example_de": "Der Computer braucht höchstens 16 Gigabytes.",
+      "level": "B1",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15",
+        "2026-05-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel",
+        "Imperative and Modal Verbs Review"
+      ],
+      "occurrences": 2,
+      "anki_status": "added"
+    },
+    "die sorge": {
+      "german": "Sorge",
+      "article": "die",
+      "plural": "die Sorgen",
+      "category": "noun",
+      "italian": "la preoccupazione",
+      "english": "the worry",
+      "example_de": "Mach dir keine Sorgen!",
+      "level": "A2",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "unterwegs": {
+      "german": "unterwegs",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "in viaggio, per strada",
+      "english": "on the way, on the go",
+      "example_de": "Kevin ist immer unterwegs.",
+      "level": "A2",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "egal": {
+      "german": "egal",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "uguale, non importa",
+      "english": "doesn't matter, I don't care",
+      "example_de": "Es ist mir egal, wo du bist.",
+      "level": "A2",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "überlegen": {
+      "german": "überlegen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "riflettere, pensarci su",
+      "english": "to think about, to consider",
+      "example_de": "Ich überlege, ob ich ihm schreiben soll.",
+      "level": "B1",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15",
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel",
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 2,
+      "anki_status": "added"
+    },
+    "abfahren": {
+      "german": "abfahren",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "partire (treno, autobus)",
+      "english": "to depart, to leave",
+      "example_de": "Der Zug fährt um 10 Uhr ab.",
+      "level": "A2",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "parken": {
+      "german": "parken",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "parcheggiare",
+      "english": "to park",
+      "example_de": "Kann man hier parken?",
+      "level": "A2",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "informieren": {
+      "german": "informieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "informare",
+      "english": "to inform",
+      "example_de": "Hat er den Chef schon informiert?",
+      "level": "A2",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "das redemittel": {
+      "german": "Redemittel",
+      "article": "das",
+      "plural": "die Redemittel",
+      "category": "noun",
+      "italian": "l'espressione, la frase idiomatica",
+      "english": "phrase, means of expression",
+      "example_de": "Wir lernen heute wichtige Redemittel für indirekte Fragen.",
+      "level": "B1",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "schade": {
+      "german": "schade",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "peccato",
+      "english": "a pity, a shame",
+      "example_de": "Schade, dass du nicht kommen kannst.",
+      "level": "A2",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sollen": {
+      "german": "sollen",
+      "article": "",
+      "plural": "",
+      "category": "verb_modal",
+      "italian": "dovere (nel senso di should)",
+      "english": "should",
+      "example_de": "Ich überlege, ob ich ihm schreiben soll.",
+      "level": "A2",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "verreisen": {
+      "german": "verreisen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "viaggiare, partire per un viaggio",
+      "english": "to travel, to go on a trip",
+      "example_de": "Ich verreise nächste Woche nach Italien.",
+      "level": "A2",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "klingen": {
+      "german": "klingen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "suonare (nel senso di sembrare)",
+      "english": "to sound",
+      "example_de": "Das klingt für mich nach Dialekt.",
+      "level": "B1",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sich konzentrieren": {
+      "german": "sich konzentrieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "concentrarsi",
+      "english": "to concentrate",
+      "example_de": "Ich weiß nicht, ob ich mich konzentrieren kann.",
+      "level": "B1",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "zuhören": {
+      "german": "zuhören",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "ascoltare",
+      "english": "to listen",
+      "example_de": "Die AI hört uns zu.",
+      "level": "A2",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "die performance": {
+      "german": "Performance",
+      "article": "die",
+      "plural": "die Performances",
+      "category": "noun",
+      "italian": "la prestazione, la performance",
+      "english": "the performance",
+      "example_de": "Ich habe nur an meine Performance für die AI gedacht.",
+      "level": "B1",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "das gefühl": {
+      "german": "Gefühl",
+      "article": "das",
+      "plural": "die Gefühle",
+      "category": "noun",
+      "italian": "il sentimento, la sensazione",
+      "english": "the feeling",
+      "example_de": "Wenn du das Gefühl hast, dass es nicht funktioniert...",
+      "level": "A2",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sich gewöhnen": {
+      "german": "sich gewöhnen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "abituarsi",
+      "english": "to get used to",
+      "example_de": "Ich muss mich daran gewöhnen.",
+      "level": "B1",
+      "first_seen": "2026-05-15",
+      "seen_in_lessons": [
+        "2026-05-15"
+      ],
+      "seen_in_topics": [
+        "Indirekte Fragen und typische Redemittel"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "krank": {
+      "german": "krank",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "malato",
+      "english": "ill, sick",
+      "example_de": "Warst du richtig krank?",
+      "level": "A1",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "krankenhaus": {
+      "german": "Krankenhaus",
+      "article": "das",
+      "plural": "die Krankenhäuser",
+      "category": "noun",
+      "italian": "l'ospedale",
+      "english": "hospital",
+      "example_de": "Wie ein Krankenhaus.",
+      "level": "A1",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "krankheit": {
+      "german": "Krankheit",
+      "article": "die",
+      "plural": "die Krankheiten",
+      "category": "noun",
+      "italian": "la malattia",
+      "english": "illness, disease",
+      "example_de": "Die Krankheit ist schlimm.",
+      "level": "A2",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "vorschlag": {
+      "german": "Vorschlag",
+      "article": "der",
+      "plural": "die Vorschläge",
+      "category": "noun",
+      "italian": "il suggerimento, la proposta",
+      "english": "suggestion, proposal",
+      "example_de": "Das ist ein guter Vorschlag.",
+      "level": "B1",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "angebot": {
+      "german": "Angebot",
+      "article": "das",
+      "plural": "die Angebote",
+      "category": "noun",
+      "italian": "l'offerta",
+      "english": "offer",
+      "example_de": "Soll ich dir ein Angebot machen?",
+      "level": "A2",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie",
+        "2026-05-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should",
+        "Indirect questions and future tense"
+      ],
+      "occurrences": 2,
+      "anki_status": "added"
+    },
+    "vorschlagen": {
+      "german": "vorschlagen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "suggerire, proporre",
+      "english": "to suggest, to propose",
+      "example_de": "Ich schlage vor, dass wir gehen.",
+      "level": "B1",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "gebot": {
+      "german": "Gebot",
+      "article": "das",
+      "plural": "die Gebote",
+      "category": "noun",
+      "italian": "il comandamento",
+      "english": "commandment",
+      "example_de": "Die 10 Gebote im Christentum.",
+      "level": "B1",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "außer": {
+      "german": "außer",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "tranne, eccetto",
+      "english": "except, besides",
+      "example_de": "Keine anderen Götter außer mir.",
+      "level": "A2",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "hausaufgabe": {
+      "german": "Hausaufgabe",
+      "article": "die",
+      "plural": "die Hausaufgaben",
+      "category": "noun",
+      "italian": "il compito (a casa)",
+      "english": "homework",
+      "example_de": "Die Kinder sollen die Hausaufgaben machen.",
+      "level": "A1",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "tablette": {
+      "german": "Tablette",
+      "article": "die",
+      "plural": "die Tabletten",
+      "category": "noun",
+      "italian": "la compressa, la pastiglia",
+      "english": "pill, tablet",
+      "example_de": "Er soll 3 Mal am Tag Tabletten nehmen.",
+      "level": "A2",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "reich": {
+      "german": "reich",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "ricco",
+      "english": "rich, wealthy",
+      "example_de": "Er soll sehr reich sein.",
+      "level": "A2",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "schneien": {
+      "german": "schneien",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "nevicare",
+      "english": "to snow",
+      "example_de": "Morgen soll es schneien.",
+      "level": "A1",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "scheinen": {
+      "german": "scheinen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "splendere, brillare",
+      "english": "to shine",
+      "example_de": "Die Sonne scheint.",
+      "level": "A2",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "fieber": {
+      "german": "Fieber",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "la febbre",
+      "english": "fever",
+      "example_de": "Wenn du Fieber hast, solltest du nicht rausgehen.",
+      "level": "A2",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ruhe": {
+      "german": "Ruhe",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "la quiete, il silenzio",
+      "english": "quiet, calm, peace",
+      "example_de": "Ich brauche etwas Ruhe.",
+      "level": "A2",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ruhig": {
+      "german": "ruhig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "tranquillo, silenzioso",
+      "english": "quiet, calm",
+      "example_de": "Bitte seid ruhig!",
+      "level": "A2",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "leise": {
+      "german": "leise",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "silenzioso, piano",
+      "english": "quiet, soft",
+      "example_de": "Bitte seid leise!",
+      "level": "A2",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "laut": {
+      "german": "laut",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "forte, rumoroso",
+      "english": "loud",
+      "example_de": "Sollten wir nicht laut sein?",
+      "level": "A2",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "lärm": {
+      "german": "Lärm",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "il rumore",
+      "english": "noise",
+      "example_de": "Mach keinen Lärm!",
+      "level": "B1",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie",
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should",
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 2,
+      "anki_status": "added"
+    },
+    "geräusch": {
+      "german": "Geräusch",
+      "article": "das",
+      "plural": "die Geräusche",
+      "category": "noun",
+      "italian": "il suono, il rumore",
+      "english": "sound, noise",
+      "example_de": "Was ist dieses Geräusch?",
+      "level": "B1",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "klang": {
+      "german": "Klang",
+      "article": "der",
+      "plural": "die Klänge",
+      "category": "noun",
+      "italian": "il suono (musicale)",
+      "english": "sound (musical, pleasant)",
+      "example_de": "Die Gitarre hat einen schönen Klang.",
+      "level": "B1",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie",
+        "2026-05-19-stefanie",
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should",
+        "Imperative and Modal Verbs Review",
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 3,
+      "anki_status": "added"
+    },
+    "rohr": {
+      "german": "Rohr",
+      "article": "das",
+      "plural": "die Rohre",
+      "category": "noun",
+      "italian": "il tubo",
+      "english": "pipe",
+      "example_de": "Die Rohre sind kaputt.",
+      "level": "B1",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "mechaniker": {
+      "german": "Mechaniker",
+      "article": "der",
+      "plural": "die Mechaniker",
+      "category": "noun",
+      "italian": "il meccanico",
+      "english": "mechanic",
+      "example_de": "Solltest du zum Mechaniker gehen?",
+      "level": "A2",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "nervig": {
+      "german": "nervig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "fastidioso, irritante",
+      "english": "annoying",
+      "example_de": "Du klingst wie ein nerviger Mensch.",
+      "level": "B1",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "besserwisser": {
+      "german": "Besserwisser",
+      "article": "der",
+      "plural": "die Besserwisser",
+      "category": "noun",
+      "italian": "il saccente",
+      "english": "know-it-all",
+      "example_de": "Er ist ein Besserwisser.",
+      "level": "B1",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "gewinnen": {
+      "german": "gewinnen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "vincere",
+      "english": "to win",
+      "example_de": "Wenn du alles weißt, gewinnst du.",
+      "level": "A2",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "kaputt": {
+      "german": "kaputt",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "rotto, guasto",
+      "english": "broken",
+      "example_de": "Sein Motorrad ist kaputt.",
+      "level": "A2",
+      "first_seen": "2026-05-18-stefanie",
+      "seen_in_lessons": [
+        "2026-05-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Modal verb sollen: shall and should"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "süßigkeit": {
+      "german": "Süßigkeit",
+      "article": "die",
+      "plural": "die Süßigkeiten",
+      "category": "noun",
+      "italian": "la caramella, il dolcetto",
+      "english": "sweet, candy",
+      "example_de": "Mein Arzt sagt, ich soll nicht so viele Süßigkeiten essen.",
+      "level": "A2",
+      "first_seen": "2026-05-19-stefanie",
+      "seen_in_lessons": [
+        "2026-05-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Imperative and Modal Verbs Review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "einladen": {
+      "german": "einladen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "invitare",
+      "english": "to invite",
+      "example_de": "Wenn Sie Ihre Freunde einladen, sollten Sie mich auch einladen.",
+      "level": "A2",
+      "first_seen": "2026-05-19-stefanie",
+      "seen_in_lessons": [
+        "2026-05-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Imperative and Modal Verbs Review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "gesund": {
+      "german": "gesund",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "sano",
+      "english": "healthy",
+      "example_de": "Wenn du gesund leben willst, solltest du lange schlafen.",
+      "level": "A2",
+      "first_seen": "2026-05-19-stefanie",
+      "seen_in_lessons": [
+        "2026-05-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Imperative and Modal Verbs Review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "jemand": {
+      "german": "jemand",
+      "article": "",
+      "plural": "",
+      "category": "expression",
+      "italian": "qualcuno",
+      "english": "someone, somebody",
+      "example_de": "Ist da jemand?",
+      "level": "A2",
+      "first_seen": "2026-05-19-stefanie",
+      "seen_in_lessons": [
+        "2026-05-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Imperative and Modal Verbs Review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "niemand": {
+      "german": "niemand",
+      "article": "",
+      "plural": "",
+      "category": "expression",
+      "italian": "nessuno",
+      "english": "nobody, no one",
+      "example_de": "Hier ist niemand.",
+      "level": "A2",
+      "first_seen": "2026-05-19-stefanie",
+      "seen_in_lessons": [
+        "2026-05-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Imperative and Modal Verbs Review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "keiner": {
+      "german": "keiner",
+      "article": "",
+      "plural": "",
+      "category": "expression",
+      "italian": "nessuno (di un gruppo)",
+      "english": "none, no one (of a group)",
+      "example_de": "Keiner hat eine Brille.",
+      "level": "B1",
+      "first_seen": "2026-05-19-stefanie",
+      "seen_in_lessons": [
+        "2026-05-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Imperative and Modal Verbs Review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "oft": {
+      "german": "oft",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "spesso",
+      "english": "often",
+      "example_de": "Mein Arzt sagt, er soll mir öfter sagen, dass ich keine Süßigkeiten essen soll.",
+      "level": "A2",
+      "first_seen": "2026-05-19-stefanie",
+      "seen_in_lessons": [
+        "2026-05-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Imperative and Modal Verbs Review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "häufig": {
+      "german": "häufig",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "frequentemente",
+      "english": "frequently, often",
+      "example_de": "In deutschen Büchern wird häufig verwendet.",
+      "level": "B1",
+      "first_seen": "2026-05-19-stefanie",
+      "seen_in_lessons": [
+        "2026-05-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Imperative and Modal Verbs Review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "richtig": {
+      "german": "richtig",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "correttamente, bene",
+      "english": "properly, correctly",
+      "example_de": "Wenn sie putzen muss, sollte sie es richtig machen.",
+      "level": "A2",
+      "first_seen": "2026-05-19-stefanie",
+      "seen_in_lessons": [
+        "2026-05-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Imperative and Modal Verbs Review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ewig": {
+      "german": "ewig",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "eternamente, per sempre",
+      "english": "eternally, forever",
+      "example_de": "Das dauert ewig.",
+      "level": "B1",
+      "first_seen": "2026-05-19-stefanie",
+      "seen_in_lessons": [
+        "2026-05-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Imperative and Modal Verbs Review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "rhythmus": {
+      "german": "Rhythmus",
+      "article": "der",
+      "plural": "die Rhythmen",
+      "category": "noun",
+      "italian": "il ritmo",
+      "english": "rhythm",
+      "example_de": "Du solltest nach dem Rhythmus tanzen.",
+      "level": "B1",
+      "first_seen": "2026-05-19-stefanie",
+      "seen_in_lessons": [
+        "2026-05-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Imperative and Modal Verbs Review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "brücke": {
+      "german": "Brücke",
+      "article": "die",
+      "plural": "die Brücken",
+      "category": "noun",
+      "italian": "ponte",
+      "english": "bridge",
+      "example_de": "Ich soll die Brücke zwischen der Schweiz und den USA sein.",
+      "level": "A2",
+      "first_seen": "2026-05-21-stefanie",
+      "seen_in_lessons": [
+        "2026-05-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirect questions and future tense"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "firma": {
+      "german": "Firma",
+      "article": "die",
+      "plural": "die Firmen",
+      "category": "noun",
+      "italian": "ditta, azienda",
+      "english": "company, firm",
+      "example_de": "Lonza ist eine große Firma.",
+      "level": "A2",
+      "first_seen": "2026-05-21-stefanie",
+      "seen_in_lessons": [
+        "2026-05-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirect questions and future tense"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "unternehmen": {
+      "german": "Unternehmen",
+      "article": "das",
+      "plural": "die Unternehmen",
+      "category": "noun",
+      "italian": "impresa, azienda",
+      "english": "company, enterprise",
+      "example_de": "Das Unternehmen hat viele Mitarbeiter.",
+      "level": "B1",
+      "first_seen": "2026-05-21-stefanie",
+      "seen_in_lessons": [
+        "2026-05-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirect questions and future tense"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "zukunft": {
+      "german": "Zukunft",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "futuro",
+      "english": "future",
+      "example_de": "In der Zukunft werde ich in Basel arbeiten.",
+      "level": "A2",
+      "first_seen": "2026-05-21-stefanie",
+      "seen_in_lessons": [
+        "2026-05-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirect questions and future tense"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sitz": {
+      "german": "Sitz",
+      "article": "der",
+      "plural": "die Sitze",
+      "category": "noun",
+      "italian": "sede",
+      "english": "headquarters, seat",
+      "example_de": "Der Sitz der Firma ist in Basel.",
+      "level": "B1",
+      "first_seen": "2026-05-21-stefanie",
+      "seen_in_lessons": [
+        "2026-05-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirect questions and future tense"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "norden": {
+      "german": "Norden",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "nord",
+      "english": "north",
+      "example_de": "Im Norden ist es kälter.",
+      "level": "A2",
+      "first_seen": "2026-05-21-stefanie",
+      "seen_in_lessons": [
+        "2026-05-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirect questions and future tense"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "süden": {
+      "german": "Süden",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "sud",
+      "english": "south",
+      "example_de": "Im Süden ist es wärmer.",
+      "level": "A2",
+      "first_seen": "2026-05-21-stefanie",
+      "seen_in_lessons": [
+        "2026-05-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirect questions and future tense"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "westen": {
+      "german": "Westen",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "ovest",
+      "english": "west",
+      "example_de": "Im Westen sind die Berge.",
+      "level": "A2",
+      "first_seen": "2026-05-21-stefanie",
+      "seen_in_lessons": [
+        "2026-05-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirect questions and future tense"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "osten": {
+      "german": "Osten",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "est",
+      "english": "east",
+      "example_de": "Die Arbeit könnte im Osten sein.",
+      "level": "A2",
+      "first_seen": "2026-05-21-stefanie",
+      "seen_in_lessons": [
+        "2026-05-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirect questions and future tense"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "verändern": {
+      "german": "verändern",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "cambiare, modificare",
+      "english": "to change, to modify",
+      "example_de": "Sie können die Adresse nicht verändern.",
+      "level": "B1",
+      "first_seen": "2026-05-21-stefanie",
+      "seen_in_lessons": [
+        "2026-05-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirect questions and future tense"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "klopfen": {
+      "german": "klopfen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "bussare, picchiettare",
+      "english": "to knock",
+      "example_de": "Auf Holz klopfen.",
+      "level": "B1",
+      "first_seen": "2026-05-21-stefanie",
+      "seen_in_lessons": [
+        "2026-05-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirect questions and future tense"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "mittlere": {
+      "german": "mittlere",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "medio, centrale",
+      "english": "middle, central",
+      "example_de": "Die Arbeit ist im mittleren Westen.",
+      "level": "B1",
+      "first_seen": "2026-05-21-stefanie",
+      "seen_in_lessons": [
+        "2026-05-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indirect questions and future tense"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "kirche": {
+      "german": "Kirche",
+      "article": "die",
+      "plural": "die Kirchen",
+      "category": "noun",
+      "italian": "la chiesa",
+      "english": "church",
+      "example_de": "Die Kirche ist 500 Meter entfernt.",
+      "level": "A1",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "entfernt": {
+      "german": "entfernt",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "distante, lontano",
+      "english": "away, distant",
+      "example_de": "Die Kirche ist 500 Meter entfernt.",
+      "level": "A2",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "paar": {
+      "german": "Paar",
+      "article": "das",
+      "plural": "die Paare",
+      "category": "noun",
+      "italian": "la coppia",
+      "english": "couple, pair",
+      "example_de": "Das Paar wohnt im vierten Stock.",
+      "level": "A2",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "dach": {
+      "german": "Dach",
+      "article": "das",
+      "plural": "die Dächer",
+      "category": "noun",
+      "italian": "il tetto",
+      "english": "roof",
+      "example_de": "Das Paar hat ein Problem mit dem Dach.",
+      "level": "A2",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "stock": {
+      "german": "Stock",
+      "article": "der",
+      "plural": "die Stockwerke",
+      "category": "noun",
+      "italian": "il piano",
+      "english": "floor, story",
+      "example_de": "Sie wohnen im vierten Stock.",
+      "level": "A2",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "büro": {
+      "german": "Büro",
+      "article": "das",
+      "plural": "die Büros",
+      "category": "noun",
+      "italian": "l'ufficio",
+      "english": "office",
+      "example_de": "Wo ist das Büro?",
+      "level": "A1",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "arbeitszimmer": {
+      "german": "Arbeitszimmer",
+      "article": "das",
+      "plural": "die Arbeitszimmer",
+      "category": "noun",
+      "italian": "lo studio",
+      "english": "office, study",
+      "example_de": "Er arbeitet im Arbeitszimmer.",
+      "level": "A2",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "steuer": {
+      "german": "Steuer",
+      "article": "die",
+      "plural": "die Steuern",
+      "category": "noun",
+      "italian": "la tassa",
+      "english": "tax",
+      "example_de": "Man muss Steuern bezahlen.",
+      "level": "B1",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "fenster": {
+      "german": "Fenster",
+      "article": "das",
+      "plural": "die Fenster",
+      "category": "noun",
+      "italian": "la finestra",
+      "english": "window",
+      "example_de": "Das Kind hat das Fenster kaputtgemacht.",
+      "level": "A1",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "junge": {
+      "german": "Junge",
+      "article": "der",
+      "plural": "die Jungen",
+      "category": "noun",
+      "italian": "il ragazzo",
+      "english": "boy",
+      "example_de": "Der Junge wohnt im zweiten Stock.",
+      "level": "A1",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "leute": {
+      "german": "Leute",
+      "article": "die",
+      "plural": "die Leute",
+      "category": "noun",
+      "italian": "la gente",
+      "english": "people",
+      "example_de": "Wo wohnen die Leute?",
+      "level": "A1",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "person": {
+      "german": "Person",
+      "article": "die",
+      "plural": "die Personen",
+      "category": "noun",
+      "italian": "la persona",
+      "english": "person",
+      "example_de": "Die Person wohnt hier.",
+      "level": "A1",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "geschenk": {
+      "german": "Geschenk",
+      "article": "das",
+      "plural": "die Geschenke",
+      "category": "noun",
+      "italian": "il regalo",
+      "english": "gift, present",
+      "example_de": "Ich habe ihr das Geschenk gegeben.",
+      "level": "A2",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "gemüse": {
+      "german": "Gemüse",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "la verdura",
+      "english": "vegetables",
+      "example_de": "Iss endlich dein Gemüse!",
+      "level": "A1",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "kaputtmachen": {
+      "german": "kaputtmachen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "rompere",
+      "english": "to break",
+      "example_de": "Das Kind hat das Fenster kaputtgemacht.",
+      "level": "A2",
+      "first_seen": "2026-05-22-stefanie",
+      "seen_in_lessons": [
+        "2026-05-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Relative clauses with relative pronouns"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
     }
   },
   "stats": {
-    "total_words": 549,
+    "total_words": 633,
     "by_category": {
-      "expression": 2,
-      "adjective": 57,
-      "noun": 266,
-      "adverb": 39,
-      "verb_separable": 26,
-      "verb_regular": 90,
+      "expression": 5,
+      "adjective": 69,
+      "noun": 309,
+      "adverb": 47,
+      "verb_separable": 32,
+      "verb_regular": 98,
       "phrase": 23,
       "": 10,
-      "verb_irregular": 31,
-      "verb_modal": 5
+      "verb_irregular": 34,
+      "verb_modal": 6
     },
     "by_level": {
-      "A2": 197,
-      "B1": 42,
-      "A1": 299,
+      "A2": 243,
+      "B1": 69,
+      "A1": 310,
       "": 10,
       "C2": 1
     }
