@@ -19,7 +19,13 @@
       "italian": "il bambino / i bambini",
       "english": "child / children",
       "example_de": "Die Kinder stehen auf.",
-      "example_it": "I bambini si alzano."
+      "example_it": "I bambini si alzano.",
+      "book_ref": {
+        "lektion": 2,
+        "book_page": 32,
+        "semantic_field": "Familie",
+        "level": "A1"
+      }
     },
     {
       "german": "aufstehen",
@@ -64,7 +70,13 @@
       "italian": "dormire",
       "english": "to sleep",
       "example_de": "Ich gehe schlafen.",
-      "example_it": "Vado a dormire."
+      "example_it": "Vado a dormire.",
+      "book_ref": {
+        "lektion": 30,
+        "book_page": 258,
+        "semantic_field": "Unregelmäßige und gemischte Verben",
+        "level": "A1-B1"
+      }
     },
     {
       "german": "schlecht",
@@ -91,7 +103,13 @@
       "italian": "il corso",
       "english": "course",
       "example_de": "Der Kurs ist zu Ende.",
-      "example_it": "Il corso è finito."
+      "example_it": "Il corso è finito.",
+      "book_ref": {
+        "lektion": 1,
+        "book_page": 22,
+        "semantic_field": "Sprachen lernen",
+        "level": "A1"
+      }
     }
   ],
   "grammar_points": [
@@ -174,6 +192,16 @@
       "german": "Nicht so gut.",
       "italian": "Non tanto bene.",
       "context": "risposta a 'come stai'"
+    },
+    {
+      "german": "Ich habe keine Ahnung",
+      "english": "I have no idea",
+      "context": "fixed phrase — expresses complete lack of knowledge"
+    },
+    {
+      "german": "Es ist mir egal",
+      "english": "It doesn't matter to me / I don't care",
+      "context": "fixed structure — egal only used in this form"
     }
   ],
   "comprehension_questions": [

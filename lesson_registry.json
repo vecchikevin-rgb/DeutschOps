@@ -27,11 +27,167 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-05-14T19:55:36.353250"
+    },
+    {
+      "id": "2026-05-15-stefanie",
+      "date": "2026-05-15",
+      "audio_file": "Audiolessons/lezione_2026-05-15-stefanie-compressed.mp4",
+      "topic": "Indirekte Fragen und typische Redemittel",
+      "summary_it": "Questa lezione si Ã¨ concentrata sulle domande indirette (NebensÃ¤tze) e sulle frasi comuni usate per introdurle. L'insegnante ha presentato tipici in...",
+      "vocabulary_count": 26,
+      "grammar_count": 4,
+      "phrases_count": 8,
+      "doc_sections": [
+        "17. NebensÃ¤tze (15. Mai)",
+        "Redemittel fÃ¼r indirekte Fragen",
+        "Ãœbungen mit 'ob'-SÃ¤tzen"
+      ],
+      "homework": "Continue practicing indirect questions with 'ob'. The teacher will provide more sentence starters and varied exercises for the next lesson. Review the Redemittel (common phrases) introduced in this lesson.",
+      "duration_minutes": 46.7,
+      "cost_whisper_eur": 0.28,
+      "cost_claude_eur": 0.09,
+      "cost_total_eur": 0.37,
+      "files": {
+        "transcript": "transcripts/lezione_2026-05-15-stefanie.txt",
+        "data": "data/lezione_2026-05-15-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-05-15T20:08:02.840729"
+    },
+    {
+      "id": "2026-05-18-stefanie",
+      "date": "2026-05-18",
+      "audio_file": "Audiolessons\\lezione_2026-05-18-stefanie-compressed.mp4",
+      "topic": "Modal verb sollen: shall and should",
+      "summary_it": "Questa lezione si è concentrata sul verbo modale 'sollen' e i suoi diversi usi. La distinzione principale era tra 'soll' (shall - Präsens) per suggeri...",
+      "vocabulary_count": 28,
+      "grammar_count": 5,
+      "phrases_count": 7,
+      "doc_sections": [
+        "Sollen / Modalverben",
+        "Vocabulary: krank, Krankenhaus, Krankheit",
+        "Modal verb sollen - shall vs should",
+        "Weather verbs: regnen, schneien, scheinen",
+        "Sound/noise vocabulary: laut, leise, Lärm, Geräusch, Klang"
+      ],
+      "homework": "",
+      "duration_minutes": 27.6,
+      "cost_whisper_eur": 0.166,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.266,
+      "files": {
+        "transcript": "transcripts/lezione_2026-05-18-stefanie.txt",
+        "data": "data/lezione_2026-05-18-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-05-19T00:59:06.864020"
+    },
+    {
+      "id": "2026-05-19-stefanie",
+      "date": "2026-05-19",
+      "audio_file": "Audiolessons\\lezione_2026-05-19-stefanie-compressed.mp4",
+      "topic": "Imperative and Modal Verbs Review",
+      "summary_it": "La lezione ha trattato la formazione dell'imperativo per la seconda persona singolare (du bringst → Bring!) e plurale (ihr bringt → Bringt!), più l'im...",
+      "vocabulary_count": 16,
+      "grammar_count": 5,
+      "phrases_count": 11,
+      "doc_sections": [
+        "2. Person Singular → du bring/st → Bring!",
+        "2. Person Plural wie Präsens → ihr bringt → Bringt!",
+        "Indefinite pronouns: alle/nichts, jemand/niemand, keiner/einer",
+        "Modal verbs Präsens - Imperfekt - Konjunktiv comparison",
+        "glauben + Dativ vs glauben an + Akkusativ"
+      ],
+      "homework": "",
+      "duration_minutes": 34.4,
+      "cost_whisper_eur": 0.206,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.306,
+      "files": {
+        "transcript": "transcripts/lezione_2026-05-19-stefanie.txt",
+        "data": "data/lezione_2026-05-19-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-05-20T12:25:52.584312"
+    },
+    {
+      "id": "2026-05-21-stefanie",
+      "date": "2026-05-21",
+      "audio_file": "Audiolessons\\lezione_2026-05-21-stefanie-compressed.mp4",
+      "topic": "Indirect questions and future tense",
+      "summary_it": "La lezione ha trattato le domande indirette con pronomi interrogativi (wo, wer, wem, wann, wie lange) nelle proposizioni subordinate. Kevin ha condivi...",
+      "vocabulary_count": 17,
+      "grammar_count": 5,
+      "phrases_count": 7,
+      "doc_sections": [
+        "Indirekte Fragen",
+        "20. Sollen / Modalverben",
+        "Futur"
+      ],
+      "homework": "",
+      "duration_minutes": 29.1,
+      "cost_whisper_eur": 0.175,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.275,
+      "files": {
+        "transcript": "transcripts/lezione_2026-05-21-stefanie.txt",
+        "data": "data/lezione_2026-05-21-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-05-22T10:39:24.271214"
+    },
+    {
+      "id": "2026-05-22-stefanie",
+      "date": "2026-05-22",
+      "audio_file": "Audiolessons\\lezione_2026-05-22-stefanie-compressed.mp4",
+      "topic": "Relative clauses with relative pronouns",
+      "summary_it": "La lezione si è concentrata sulla formazione di proposizioni relative (Relativsätze) usando i pronomi relativi in diversi casi. Kevin ha praticato la ...",
+      "vocabulary_count": 24,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "17. Nebensätze - 1. Relativsätze"
+      ],
+      "homework": "",
+      "duration_minutes": 34.4,
+      "cost_whisper_eur": 0.206,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.306,
+      "files": {
+        "transcript": "transcripts/lezione_2026-05-22-stefanie.txt",
+        "data": "data/lezione_2026-05-22-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-05-22T17:55:30.539678"
+    },
+    {
+      "id": "2026-05-25-stefanie",
+      "date": "2026-05-25",
+      "audio_file": "Audiolessons\\lezione_2026-05-25-stefanie-compressed.mp4",
+      "topic": "Comparison of adjectives and adverbs",
+      "summary_it": "Questa lezione ha coperto il comparativo degli aggettivi (Komparation) in tedesco: forme positive, comparative e superlative. Kevin ha imparato i tre ...",
+      "vocabulary_count": 41,
+      "grammar_count": 5,
+      "phrases_count": 6,
+      "doc_sections": [
+        "21. Komparation"
+      ],
+      "homework": "",
+      "duration_minutes": 31.2,
+      "cost_whisper_eur": 0.187,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.287,
+      "files": {
+        "transcript": "transcripts/lezione_2026-05-25-stefanie.txt",
+        "data": "data/lezione_2026-05-25-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-05-25T21:28:39.159607"
     }
   ],
   "stats": {
-    "total": 1,
-    "total_cost_eur": 0.237,
-    "total_minutes": 58.3
+    "total": 7,
+    "total_cost_eur": 2.047,
+    "total_minutes": 261.7
   }
 }

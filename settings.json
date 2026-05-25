@@ -1,0 +1,8 @@
+{
+    "python.defaultInterpreterPath": "C:\\Users\\vecch\\DeutschOps\\venv\\Scripts\\python.exe",
+    "terminal.integrated.env.windows": {
+        "VIRTUAL_ENV": "C:\\Users\\vecch\\DeutschOps\\venv",
+        "PATH": "C:\\Users\\vecch\\DeutschOps\\venv\\Scripts;${env:PATH}"
+    },
+    "terminal.integrated.defaultProfile.windows": "Command Prompt"
+}

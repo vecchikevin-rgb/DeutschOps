@@ -14,3 +14,4 @@ pdfs/
 transcripts/
 data/
 doc_snapshots/
+!data/grammar_db.json

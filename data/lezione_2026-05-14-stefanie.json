@@ -9,7 +9,6 @@
       "article": "",
       "plural": "",
       "category": "expression",
-      "english": "se (domanda indiretta)",
       "english": "whether, if (indirect question)",
       "example_de": "Ich weiß nicht, ob mein Freund bald kommt.",
       "example_it": "Non so se il mio amico arriva presto.",
@@ -20,7 +19,6 @@
       "article": "",
       "plural": "",
       "category": "expression",
-      "english": "che",
       "english": "that",
       "example_de": "Ich weiß, dass mein Freund bald kommt.",
       "example_it": "So che il mio amico arriva presto.",
@@ -31,7 +29,6 @@
       "article": "",
       "plural": "",
       "category": "adjective",
-      "english": "indiretto",
       "english": "indirect",
       "example_de": "eine indirekte Frage",
       "example_it": "una domanda indiretta",
@@ -42,7 +39,6 @@
       "article": "die",
       "plural": "Fragen",
       "category": "noun",
-      "english": "la domanda",
       "english": "question",
       "example_de": "Kommt dein Freund bald? Das ist eine direkte Frage.",
       "example_it": "Il tuo amico arriva presto? Questa è una domanda diretta.",
@@ -53,7 +49,6 @@
       "article": "",
       "plural": "",
       "category": "adverb",
-      "english": "presto",
       "english": "soon",
       "example_de": "Mein Freund kommt bald.",
       "example_it": "Il mio amico arriva presto.",
@@ -64,7 +59,6 @@
       "article": "",
       "plural": "",
       "category": "verb_separable",
-      "english": "trasformare, convertire",
       "english": "to convert, to transform",
       "example_de": "Du kannst es in eine Frage umwandeln.",
       "example_it": "Puoi trasformarlo in una domanda.",
@@ -75,7 +69,6 @@
       "article": "",
       "plural": "",
       "category": "verb_regular",
-      "english": "formulare",
       "english": "to formulate",
       "example_de": "Du kannst es als Frage formulieren.",
       "example_it": "Puoi formularlo come domanda.",
@@ -86,18 +79,22 @@
       "article": "die",
       "plural": "Bedingungen",
       "category": "noun",
-      "english": "la condizione",
       "english": "condition",
       "example_de": "Wenn es regnet - das ist eine Bedingung.",
       "example_it": "Se piove - questa è una condizione.",
-      "level": "B1"
+      "level": "B1",
+      "book_ref": {
+        "lektion": 12,
+        "book_page": 112,
+        "semantic_field": "In der Bank",
+        "level": "A2"
+      }
     },
     {
       "german": "erzählen",
       "article": "",
       "plural": "",
       "category": "verb_regular",
-      "english": "raccontare",
       "english": "to tell, to narrate",
       "example_de": "Ich erzähle, dass mein Freund kommt.",
       "example_it": "Racconto che il mio amico arriva.",
@@ -108,18 +105,22 @@
       "article": "",
       "plural": "",
       "category": "verb_regular",
-      "english": "usare, utilizzare",
       "english": "to use",
       "example_de": "Bei indirekten Fragen verwenden wir 'ob'.",
       "example_it": "Per le domande indirette usiamo 'ob'.",
-      "level": "A2"
+      "level": "A2",
+      "book_ref": {
+        "lektion": 22,
+        "book_page": 192,
+        "semantic_field": "Nomen",
+        "level": "B1"
+      }
     },
     {
       "german": "bedeuten",
       "article": "",
       "plural": "",
       "category": "verb_regular",
-      "english": "significare",
       "english": "to mean",
       "example_de": "Wenn bedeutet nicht immer 'if'.",
       "example_it": "Wenn non significa sempre 'if'.",
@@ -130,18 +131,22 @@
       "article": "",
       "plural": "",
       "category": "verb_regular",
-      "english": "piovere",
       "english": "to rain",
       "example_de": "Wenn es regnet, bleibe ich zu Hause.",
       "example_it": "Se piove, resto a casa.",
-      "level": "A1"
+      "level": "A1",
+      "book_ref": {
+        "lektion": 14,
+        "book_page": 128,
+        "semantic_field": "Wetterbericht",
+        "level": "A2"
+      }
     },
     {
       "german": "zu Hause bleiben",
       "article": "",
       "plural": "",
       "category": "phrase",
-      "english": "restare a casa",
       "english": "to stay at home",
       "example_de": "Ich bleibe zu Hause.",
       "example_it": "Resto a casa.",
@@ -152,7 +157,6 @@
       "article": "der",
       "plural": "Nebensätze",
       "category": "noun",
-      "english": "la proposizione subordinata",
       "english": "subordinate clause",
       "example_de": "Im Nebensatz steht das Verb am Ende.",
       "example_it": "Nella proposizione subordinata il verbo sta alla fine.",
@@ -195,27 +199,37 @@
     }
   ],
   "phrases": [
-  {
-    "german": "Ich weiß nicht, ob...",
-    "english": "I don't know if...",
-    "context": "to introduce an indirect question"
-  },
-  {
-    "german": "Ich weiß, dass...",
-    "english": "I know that...",
-    "context": "to report information"
-  },
-  {
-    "german": "bei indirekten Fragen",
-    "english": "in indirect questions",
-    "context": "grammatical expression"
-  },
-  {
-    "german": "Wenn dies, dann passiert dies",
-    "english": "If this, then that happens",
-    "context": "conditional structure"
-  }
-],
+    {
+      "german": "Ich weiß nicht, ob...",
+      "english": "I don't know if...",
+      "context": "to introduce an indirect question"
+    },
+    {
+      "german": "Ich weiß, dass...",
+      "english": "I know that...",
+      "context": "to report information"
+    },
+    {
+      "german": "bei indirekten Fragen",
+      "english": "in indirect questions",
+      "context": "grammatical expression"
+    },
+    {
+      "german": "Wenn dies, dann passiert dies",
+      "english": "If this, then that happens",
+      "context": "conditional structure"
+    },
+    {
+      "german": "Ich habe keine Ahnung",
+      "english": "I have no idea",
+      "context": "fixed phrase — expresses complete lack of knowledge"
+    },
+    {
+      "german": "Es ist mir egal",
+      "english": "It doesn't matter to me / I don't care",
+      "context": "fixed structure — egal only used in this form"
+    }
+  ],
   "homework": "",
   "comprehension_questions": [
     {
