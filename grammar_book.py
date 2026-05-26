@@ -125,29 +125,20 @@ def collect_rules_from_lessons() -> dict:
     return rules
 
 
+_DOC_EXTRACT_SYSTEM = (
+    "You are a German grammar expert. Extract ALL grammar rules from the provided document. All explanations in English.\n"
+    'Return ONLY valid JSON, no backticks: {"grammar_rules":[{"rule":"<English name>","explanation_en":"<str>","examples":["<str>"],"full_rule":"","common_mistakes":"","exceptions":"","source_verified":false}]}'
+)
+
+
 def collect_rules_from_doc(doc_text: str) -> list:
     print("Extracting rules from Google Doc...")
-    prompt = (
-        "You are an expert German grammar tutor.\n"
-        "Analyze this Google Doc and extract ALL grammar rules mentioned.\n"
-        "All explanations must be in English only.\n\n"
-        "Return ONLY valid JSON, zero backtick:\n"
-        '{\n  "grammar_rules": [\n    {\n'
-        '      "rule": "rule name in English",\n'
-        '      "explanation_en": "explanation in English",\n'
-        '      "examples": ["example 1", "example 2"],\n'
-        '      "full_rule": "",\n'
-        '      "common_mistakes": "",\n'
-        '      "exceptions": "",\n'
-        '      "source_verified": false\n'
-        "    }\n  ]\n}\n\n"
-        f"GOOGLE DOC CONTENT:\n{doc_text[:40000]}"
-    )
 
     response = client.messages.create(
         model="claude-sonnet-4-5",
         max_tokens=8000,
-        messages=[{"role": "user", "content": prompt}]
+        system=_DOC_EXTRACT_SYSTEM,
+        messages=[{"role": "user", "content": f"GOOGLE DOC:\n{doc_text[:40000]}"}]
     )
 
     raw = response.content[0].text.strip()
@@ -186,34 +177,20 @@ def enrich_rules_with_web(rules: list) -> list:
         batch = to_research[i:i+batch_size]
         print(f"   Batch {i//batch_size+1}: {[r['rule'] for r in batch]}")
 
-        prompt = (
-            "You are an expert German grammar tutor with web search access.\n"
-            "Research these German grammar rules. All output must be in English.\n"
-            "Search on: dartmouth.edu/~deutsch, germanveryeasy.com, duden.de\n\n"
-            "For each rule provide:\n"
-            "1. Complete rule with ALL forms, conjugation/declension tables\n"
-            "2. Common mistakes Italian speakers make (specific examples)\n"
-            "3. 4 varied example sentences in different contexts\n"
-            "4. Exceptions and special cases\n\n"
-            f"Rules:\n{json.dumps(batch, ensure_ascii=False, indent=2)}\n\n"
-            "Return ONLY valid JSON, zero backtick:\n"
-            '{\n  "grammar_rules": [\n    {\n'
-            '      "rule": "exact rule name",\n'
-            '      "explanation_en": "complete explanation in English",\n'
-            '      "full_rule": "complete rule with all forms and tables",\n'
-            '      "common_mistakes": "Italian speaker mistakes with examples",\n'
-            '      "examples": ["ex 1", "ex 2", "ex 3", "ex 4"],\n'
-            '      "exceptions": "exceptions and special cases",\n'
-            '      "source_verified": true\n'
-            "    }\n  ]\n}"
+        _web_system = (
+            "You are a German grammar expert with web search access. All output in English.\n"
+            "Search: dartmouth.edu/~deutsch, germanveryeasy.com, duden.de\n"
+            "For each rule: complete forms/declension tables, Italian-speaker mistakes with examples, 4 example sentences, exceptions.\n"
+            'Return ONLY valid JSON, no backticks: {"grammar_rules":[{"rule":"<exact name>","explanation_en":"<str>","full_rule":"<complete with tables>","common_mistakes":"<Italian examples>","examples":["<str>","<str>","<str>","<str>"],"exceptions":"<str>","source_verified":true}]}'
         )
 
         try:
             response = client.messages.create(
                 model="claude-sonnet-4-5",
                 max_tokens=8000,
+                system=_web_system,
                 tools=[{"type": "web_search_20250305", "name": "web_search"}],
-                messages=[{"role": "user", "content": prompt}]
+                messages=[{"role": "user", "content": f"Rules:\n{json.dumps(batch, ensure_ascii=False, indent=2)}"}]
             )
 
             raw = ""

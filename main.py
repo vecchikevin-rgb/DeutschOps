@@ -83,7 +83,6 @@ def process_lesson(audio_path: str, lesson_date: str = None):
     print("-" * 30)
     doc_data = read_and_diff(label=f"pre_{lesson_date}")
     doc_new  = doc_data["new_content"]
-    doc_full = doc_data["full_text"]
 
     # Step 2: Transcription
     if transcript_path.exists():
@@ -119,7 +118,6 @@ def process_lesson(audio_path: str, lesson_date: str = None):
             transcript_path=str(transcript_path),
             output_filename=f"lezione_{lesson_date}",
             doc_new_content=doc_new,
-            doc_full_content=doc_full
         )
 
     # Step 4: Anki

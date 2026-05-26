@@ -8,86 +8,29 @@ import anthropic
 load_dotenv()
 client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
-EXTRACTION_PROMPT = """You are an expert German language tutor.
-The student is Kevin, Italian, level A2->B1, studying via English with a native German speaker.
-The lesson transcript is in English with German examples and occasional Italian.
+SYSTEM_PROMPT = """You are a German language tutor. Student: Kevin (Italian, A2→B1), lessons in English with native speaker Stefanie. Transcript: English + German examples + occasional Italian.
 
-Extract ONLY valid JSON, zero backtick, zero extra text.
+Return ONLY valid JSON — no backticks, no extra text.
 
-Format:
-{
-  "lesson_number": "progressive number if deducible, else empty string",
-  "topic": "main topic in 5 words",
-  "summary_en": "lesson summary in English (max 120 words)",
-  "summary_it": "same summary in Italian",
-  "vocabulary": [
-    {
-      "german": "Sorge",
-      "article": "die",
-      "plural": "die Sorgen",
-      "category": "noun",
-      "italian": "la preoccupazione",
-      "english": "concern",
-      "example_de": "Mach dir keine Sorgen.",
-      "example_it": "Non preoccuparti.",
-      "level": "A2"
-    }
-  ],
-  "grammar_points": [
-    {
-      "rule": "rule name",
-      "explanation_en": "clear explanation in English",
-      "examples": ["example 1", "example 2", "example 3"],
-      "full_rule": "",
-      "common_mistakes": "",
-      "exceptions": "",
-      "source_verified": false
-    }
-  ],
-  "phrases": [
-    {
-      "german": "Ich frage mich, ob...",
-      "english": "I wonder if...",
-      "context": "introducing indirect question"
-    }
-  ],
-  "homework": "homework if mentioned, else empty string",
-  "comprehension_questions": [
-    {"question_de": "...", "answer_de": "..."}
-  ],
-  "doc_sections_covered": ["list of doc sections covered"]
-}
+{"lesson_number":"<int or ''>","topic":"<5 words>","summary_en":"<≤120 words>","summary_it":"<Italian>","vocabulary":[{"german":"<base word>","article":"<der|die|das|''>","plural":"<or ''>","category":"<see below>","italian":"<str>","english":"<str>","example_de":"<str>","example_it":"<str>","level":"<A1|A2|B1|B2>"}],"grammar_points":[{"rule":"<str>","explanation_en":"<str>","examples":["<str>"],"full_rule":"","common_mistakes":"","exceptions":"","source_verified":false}],"phrases":[{"german":"<str>","english":"<str>","context":"<str>"}],"homework":"<str or ''>","comprehension_questions":[{"question_de":"<str>","answer_de":"<str>"}],"doc_sections_covered":["<str>"]}
 
-CRITICAL RULES:
-- vocabulary "german" field: NEVER include the article. Base word only.
-  CORRECT: {"german": "Sorge", "article": "die"}
-  WRONG:   {"german": "die Sorge", "article": "die"}
-- category must be one of: verb_regular, verb_irregular, verb_separable,
-  verb_modal, noun, adjective, adverb, phrase, expression
-- article: der/die/das for nouns, empty string for everything else
-- plural: include for nouns when deducible, else empty string
-- level: A1, A2, B1, or B2
-- All explanations in English only
-- grammar_points: max 5, only those explicitly covered in the lesson
-- vocabulary: extract ALL new words for A2->B1, no artificial cap
+Rules:
+- vocabulary.german: base word ONLY, NEVER include article (✓ "Sorge", ✗ "die Sorge")
+- category: verb_regular|verb_irregular|verb_separable|verb_modal|noun|adjective|adverb|phrase|expression
+- article: der/die/das for nouns, "" otherwise; plural for nouns when deducible, "" otherwise
+- grammar_points: max 5, explicitly covered rules only
+- vocabulary: ALL new A2→B1 words, no cap
 - comprehension_questions: exactly 3
-- phrases: English field only, no Italian
+- phrases.english: English only, no Italian
 
-LINGUISTIC ACCURACY RULES (from native speaker Stefanie):
-- take these as feedback to improve the model accuracy in future iterations
-- "sollen" in Prasens = "shall I...?" (real suggestion asking for opinion)
-  NEVER translate as "should" - that is Konjunktiv II "sollte"
-- "verreisen" = to go on a trip (no destination implied)
-  "reisen nach [place]" = to travel to a specific place
-  BAD example: "Ich verreise nach Italien" - use "Ich reise nach Italien" instead
-- Use "die KI" not "AI" when referring to Artificial Intelligence in German
-- "keine Ahnung" is a fixed phrase - add to phrases only, NOT isolated vocabulary
-  Correct: {"german": "Ich habe keine Ahnung", "english": "I have no idea", "context": "fixed phrase"}
-- "die Sorge" = "concern" (more precise than "worry")
-- "egal" is NOT a standalone word - only used in fixed structure "es ist mir egal"
-  Add to phrases only: {"german": "Es ist mir egal", "english": "It does not matter to me"}
-- "mindestens" correct example: "Du brauchst mindestens 14 GB"
-- "es ist mir egal" belongs in phrases only, NOT in grammar_points"""
+Stefanie's corrections (apply strictly):
+- sollen Präsens = "shall I?" (asking opinion), NEVER "should" (= Konjunktiv II sollte)
+- verreisen = go on a trip (no destination); reisen nach [place] = travel to a specific place
+- German AI = "die KI" not "AI"
+- "keine Ahnung" → phrases only: {"german":"Ich habe keine Ahnung","english":"I have no idea","context":"fixed phrase"}
+- die Sorge = "concern" not "worry"
+- egal → phrases only: {"german":"Es ist mir egal","english":"It does not matter to me"}; NOT in grammar_points
+- mindestens example: "Du brauchst mindestens 14 GB" """
 
 
 def parse_json_safe(raw: str, fallback: dict = None) -> dict | None:
@@ -161,39 +104,30 @@ def needs_web_search(grammar_points: list) -> list:
     return to_research
 
 
+_GRAMMAR_WEB_SYSTEM = (
+    "You are a German grammar expert with web search access. All output in English.\n"
+    "Search: dartmouth.edu/~deutsch, germanveryeasy.com, duden.de\n"
+    "For each rule provide: complete forms/conjugation tables, Italian-speaker mistakes, 4 example sentences, exceptions.\n"
+    'Return ONLY valid JSON, no backticks: {"grammar_points":[{"rule":"<exact input name>","explanation_en":"<str>","full_rule":"<complete with tables>","common_mistakes":"<Italian-speaker errors>","examples":["<str>","<str>","<str>","<str>"],"exceptions":"<str>","source_verified":true}]}'
+)
+
+
 def enrich_grammar_with_web(grammar_points: list) -> list:
     """Use web search to enrich grammar points."""
     if not grammar_points:
         return grammar_points
 
-    grammar_prompt = (
-        "You are an expert German grammar tutor with web search access.\n"
-        "Research each grammar rule below using web search.\n"
-        "Search on: dartmouth.edu/~deutsch, germanveryeasy.com, duden.de\n\n"
-        "For each rule find and include:\n"
-        "1. Complete rule with ALL forms, cases, conjugation tables\n"
-        "2. Common mistakes Italian speakers make\n"
-        "3. 4 varied example sentences showing different contexts\n"
-        "4. Exceptions and special cases\n\n"
-        "Grammar points to research:\n"
+    user_msg = (
+        "Research these grammar rules:\n"
         + json.dumps(grammar_points, ensure_ascii=False, indent=2)
-        + "\n\nAfter your research, return ONLY valid JSON with NO backtick, NO extra text:\n"
-        '{\n  "grammar_points": [\n    {\n'
-        '      "rule": "exact same rule name as input",\n'
-        '      "explanation_en": "complete explanation in English",\n'
-        '      "full_rule": "complete grammar rule with all forms and tables",\n'
-        '      "common_mistakes": "typical mistakes Italian speakers make",\n'
-        '      "examples": ["example 1", "example 2", "example 3", "example 4"],\n'
-        '      "exceptions": "exceptions and special cases",\n'
-        '      "source_verified": true\n'
-        "    }\n  ]\n}"
     )
 
     response = client.messages.create(
         model="claude-sonnet-4-5",
         max_tokens=8000,
+        system=_GRAMMAR_WEB_SYSTEM,
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
-        messages=[{"role": "user", "content": grammar_prompt}]
+        messages=[{"role": "user", "content": user_msg}]
     )
 
     cost = (response.usage.input_tokens * 0.000003 +
@@ -215,7 +149,7 @@ def enrich_grammar_with_web(grammar_points: list) -> list:
 
 
 def extract(transcript_path: str, output_filename: str = None,
-            doc_new_content: str = "", doc_full_content: str = "") -> dict:
+            doc_new_content: str = "") -> dict:
     """
     Extract didactic structure from transcript + Google Doc new content.
     Call 1: base vocabulary and structure (no web search)
@@ -233,14 +167,13 @@ def extract(transcript_path: str, output_filename: str = None,
 
     print(f"Transcript: {transcript_path.name} ({len(transcript_text)} char)")
 
-    user_content  = f"{EXTRACTION_PROMPT}\n\n"
-    user_content += f"=== TRANSCRIPT AUDIO ===\n{transcript_text}\n\n"
+    user_content = f"=== TRANSCRIPT ===\n{transcript_text}\n\n"
 
     if doc_new_content.strip():
         trimmed = (doc_new_content[-8000:]
                    if len(doc_new_content) > 8000
                    else doc_new_content)
-        user_content += f"=== DOC NEW CONTENT ===\n{trimmed}\n\n"
+        user_content += f"=== DOC NEW CONTENT ===\n{trimmed}"
         print(f"Doc content: {len(trimmed)} chars included")
     else:
         print("Doc content: none")
@@ -250,6 +183,7 @@ def extract(transcript_path: str, output_filename: str = None,
     response1 = client.messages.create(
         model="claude-sonnet-4-5",
         max_tokens=8000,
+        system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_content}]
     )
 
@@ -309,5 +243,4 @@ if __name__ == "__main__":
         transcript_path="transcripts/lezione_2026-05-15-stefanie.txt",
         output_filename="lezione_2026-05-15-stefanie",
         doc_new_content="",
-        doc_full_content=""
     )
