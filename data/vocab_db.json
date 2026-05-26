@@ -644,12 +644,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-26-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Comparatives and Travel Options"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "benutzen": {
@@ -1536,12 +1538,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-26-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Comparatives and Travel Options"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "wissen": {
@@ -4240,12 +4244,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-26-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Comparatives and Travel Options"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "lieben": {
@@ -5232,12 +5238,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-26-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Comparatives and Travel Options"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "groß": {
@@ -5252,13 +5260,15 @@
       "first_seen": "storico",
       "seen_in_lessons": [
         "storico",
-        "2026-05-19-stefanie"
+        "2026-05-19-stefanie",
+        "2026-05-26-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
-        "Imperative and Modal Verbs Review"
+        "Imperative and Modal Verbs Review",
+        "Comparatives and Travel Options"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "die wohnküche": {
@@ -6547,12 +6557,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-26-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Comparatives and Travel Options"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "langsam": {
@@ -8526,12 +8538,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-26-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Comparatives and Travel Options"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "billig": {
@@ -8546,13 +8560,15 @@
       "first_seen": "storico",
       "seen_in_lessons": [
         "storico",
-        "2026-05-25-stefanie"
+        "2026-05-25-stefanie",
+        "2026-05-26-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
-        "Comparison of adjectives and adverbs"
+        "Comparison of adjectives and adverbs",
+        "Comparatives and Travel Options"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "modern": {
@@ -9492,12 +9508,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-26-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Comparatives and Travel Options"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "das känguru": {
@@ -12451,25 +12469,367 @@
       ],
       "occurrences": 1,
       "anki_status": "added"
+    },
+    "reisemöglichkeit": {
+      "german": "Reisemöglichkeit",
+      "article": "die",
+      "plural": "Reisemöglichkeiten",
+      "category": "noun",
+      "italian": "possibilità di viaggio",
+      "english": "travel option",
+      "example_de": "Vergleichen Sie die Reisemöglichkeiten von Frankfurt nach Düsseldorf.",
+      "level": "B1",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "möglichkeit": {
+      "german": "Möglichkeit",
+      "article": "die",
+      "plural": "Möglichkeiten",
+      "category": "noun",
+      "italian": "possibilità",
+      "english": "possibility, option",
+      "example_de": "Die dritte Möglichkeit ist der Regionalzug.",
+      "level": "A2",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "möglich": {
+      "german": "möglich",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "possibile",
+      "english": "possible",
+      "example_de": "Es ist möglich, mit dem Fernbus zu fahren.",
+      "level": "A2",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "unmöglich": {
+      "german": "unmöglich",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "impossibile",
+      "english": "impossible",
+      "example_de": "Es ist fast unmöglich, einen billigeren Preis zu finden.",
+      "level": "A2",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "vergleichen": {
+      "german": "vergleichen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "confrontare, paragonare",
+      "english": "to compare",
+      "example_de": "Vergleichen Sie die Preise der verschiedenen Züge.",
+      "level": "B1",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "regionalzug": {
+      "german": "Regionalzug",
+      "article": "der",
+      "plural": "Regionalzüge",
+      "category": "noun",
+      "italian": "treno regionale",
+      "english": "regional train",
+      "example_de": "Der Regionalzug braucht am längsten.",
+      "level": "A2",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "fernbus": {
+      "german": "Fernbus",
+      "article": "der",
+      "plural": "Fernbusse",
+      "category": "noun",
+      "italian": "pullman a lunga percorrenza",
+      "english": "long-distance bus",
+      "example_de": "Der Fernbus ist die billigste Option.",
+      "level": "B1",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "preis": {
+      "german": "Preis",
+      "article": "der",
+      "plural": "Preise",
+      "category": "noun",
+      "italian": "prezzo",
+      "english": "price",
+      "example_de": "Der Preis ist fair für die Dauer.",
+      "level": "A2",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "dauer": {
+      "german": "Dauer",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "durata",
+      "english": "duration",
+      "example_de": "Die Dauer der Fahrt beträgt drei Stunden.",
+      "level": "B1",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "fair": {
+      "german": "fair",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "giusto, equo",
+      "english": "fair",
+      "example_de": "Das ist ein fairer Preis.",
+      "level": "B1",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "verdienen": {
+      "german": "verdienen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "guadagnare",
+      "english": "to earn",
+      "example_de": "Der erste Mann verdient am meisten.",
+      "level": "B1",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "mensch": {
+      "german": "Mensch",
+      "article": "der",
+      "plural": "Menschen",
+      "category": "noun",
+      "italian": "persona, essere umano",
+      "english": "person, human being",
+      "example_de": "Wie viel verdienen die Menschen?",
+      "level": "A2",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ungefähr": {
+      "german": "ungefähr",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "circa, approssimativamente",
+      "english": "approximately, about",
+      "example_de": "Leon ist ungefähr so groß wie Elin.",
+      "level": "B1",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "zirka": {
+      "german": "zirka",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "circa",
+      "english": "approximately",
+      "example_de": "Die Fahrt dauert zirka drei Stunden.",
+      "level": "B1",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "wichtig": {
+      "german": "wichtig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "importante",
+      "english": "important",
+      "example_de": "Das ist wichtig zu wissen.",
+      "level": "A2",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "genauso": {
+      "german": "genauso",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "esattamente come",
+      "english": "just as, exactly as",
+      "example_de": "Leon ist genauso groß wie Robert.",
+      "level": "B1",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "zentimeter": {
+      "german": "Zentimeter",
+      "article": "der",
+      "plural": "Zentimeter",
+      "category": "noun",
+      "italian": "centimetro",
+      "english": "centimeter",
+      "example_de": "Alexander ist 13 Zentimeter größer als Leon.",
+      "level": "A2",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "option": {
+      "german": "Option",
+      "article": "die",
+      "plural": "Optionen",
+      "category": "noun",
+      "italian": "opzione",
+      "english": "option",
+      "example_de": "Die schnellste Option ist der ICE.",
+      "level": "B1",
+      "first_seen": "2026-05-26-stefanie",
+      "seen_in_lessons": [
+        "2026-05-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Comparatives and Travel Options"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
     }
   },
   "stats": {
-    "total_words": 650,
+    "total_words": 668,
     "by_category": {
       "expression": 5,
-      "adjective": 72,
-      "noun": 318,
-      "adverb": 47,
+      "adjective": 76,
+      "noun": 327,
+      "adverb": 50,
       "verb_separable": 34,
-      "verb_regular": 101,
+      "verb_regular": 103,
       "phrase": 23,
       "": 10,
       "verb_irregular": 34,
       "verb_modal": 6
     },
     "by_level": {
-      "A2": 246,
-      "B1": 80,
+      "A2": 254,
+      "B1": 90,
       "A1": 312,
       "": 10,
       "C2": 1,

@@ -183,11 +183,39 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-05-25T21:28:39.159607"
+    },
+    {
+      "id": "2026-05-26-stefanie",
+      "date": "2026-05-26",
+      "audio_file": "Audiolessons\\lezione_2026-05-26-stefanie-compressed.mp4",
+      "topic": "Comparatives and Travel Options",
+      "summary_it": "Questa lezione si è concentrata sugli aggettivi comparativi e superlativi in tedesco, applicati alle opzioni di viaggio da Francoforte a Düsseldorf. K...",
+      "vocabulary_count": 27,
+      "grammar_count": 5,
+      "phrases_count": 8,
+      "doc_sections": [
+        "Comparative and superlative adjectives table (teuer-teurer-am teuersten, etc.)",
+        "Travel options comparison exercise (ICE, IC, Regionalzug, Fernbus)",
+        "Price and duration vocabulary",
+        "Height and earning comparisons using comparative structures",
+        "Natural expressions with 'brauchen' for time duration"
+      ],
+      "homework": "",
+      "duration_minutes": 26.7,
+      "cost_whisper_eur": 0.16,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.26,
+      "files": {
+        "transcript": "transcripts/lezione_2026-05-26-stefanie.txt",
+        "data": "data/lezione_2026-05-26-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-05-26T21:38:39.759649"
     }
   ],
   "stats": {
-    "total": 7,
-    "total_cost_eur": 2.047,
-    "total_minutes": 261.7
+    "total": 8,
+    "total_cost_eur": 2.307,
+    "total_minutes": 288.4
   }
 }
