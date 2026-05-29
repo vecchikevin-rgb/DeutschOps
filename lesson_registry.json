@@ -211,11 +211,63 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-05-26T21:38:39.759649"
+    },
+    {
+      "id": "2026-05-28-stefanie",
+      "date": "2026-05-28",
+      "audio_file": "Audiolessons\\lezione_2026-05-28-stefanie-compressed.mp4",
+      "topic": "Free Conversation and Comparatives",
+      "summary_it": "Kevin e Stefanie hanno discusso dei piani di Kevin per il weekend, per assistere a una gara automobilistica a Monza. La conversazione ha coperto le di...",
+      "vocabulary_count": 22,
+      "grammar_count": 5,
+      "phrases_count": 3,
+      "doc_sections": [
+        "Comparatives: nicht so...wie structure",
+        "Purpose clauses: um...zu",
+        "Reflexive verbs: sich freuen auf/über",
+        "Negation: kein vs. nicht",
+        "Separable verbs in present tense"
+      ],
+      "homework": "",
+      "duration_minutes": 28.0,
+      "cost_whisper_eur": 0.168,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.268,
+      "files": {
+        "transcript": "transcripts/lezione_2026-05-28-stefanie.txt",
+        "data": "data/lezione_2026-05-28-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-05-29T01:19:56.368269"
+    },
+    {
+      "id": "2026-05-29-stefanie",
+      "date": "2026-05-29",
+      "audio_file": "Audiolessons\\lezione_2026-05-29-stefanie-compressed.mp4",
+      "topic": "Wiederholung: Vergleiche und Musik",
+      "summary_it": "Kevin e Stefanie hanno ripassato comparativi e superlativi usando fiumi, città, edifici e cucine. Hanno praticato strutture come 'nicht so...wie' e 'a...",
+      "vocabulary_count": 31,
+      "grammar_count": 5,
+      "phrases_count": 6,
+      "doc_sections": [
+        "22. Wiederholung"
+      ],
+      "homework": "",
+      "duration_minutes": 23.8,
+      "cost_whisper_eur": 0.143,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.243,
+      "files": {
+        "transcript": "transcripts/lezione_2026-05-29-stefanie.txt",
+        "data": "data/lezione_2026-05-29-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-05-29T17:20:01.215039"
     }
   ],
   "stats": {
-    "total": 8,
-    "total_cost_eur": 2.307,
-    "total_minutes": 288.4
+    "total": 10,
+    "total_cost_eur": 2.818,
+    "total_minutes": 340.2
   }
 }

@@ -31,7 +31,7 @@ streamlit run dashboard.py
 | 5 | `pdf_gen.py` | Generazione PDF lezione → `pdfs/lezione_{date}.pdf` |
 | 6 | `doc_writer.py` | Append riepilogo + KPI su Google Doc, upload PDF su Drive |
 
-**Post-pipeline automatico:** `lesson_registry.py`, `vocab_db.py`, `grammar_book.py`, `generate_astra_prompts.py`
+**Post-pipeline automatico:** `lesson_registry.py`, `vocab_db.py`, `grammar_book.py`, `generate_astra_prompts.py`, `notebooklm_export.py`
 
 ## File chiave
 
@@ -46,6 +46,7 @@ streamlit run dashboard.py
 | `doc_writer.py` | Google Docs API — append e KPI |
 | `doc_reader.py` | Google Docs API — lettura per diff |
 | `dashboard.py` | Streamlit — KPI interattivi con Plotly/Pandas |
+| `notebooklm_export.py` | Sincronizzazione automatica e formattazione per Google NotebookLM |
 | `lesson_registry.py` | Registro JSON persistente di tutte le lezioni |
 | `vocab_db.py` | Database vocabolario cumulativo |
 | `export_to_obsidian.py` | Export verso Obsidian |
@@ -84,7 +85,7 @@ Book/            PDF libri di corso
 | Runtime | Python 3.14, venv in `.venv/` |
 | Trascrizione | OpenAI Whisper API |
 | Estrazione AI | Anthropic Claude API |
-| Google | Google Docs/Drive API (OAuth2) |
+| Google | Google Docs/Drive API (OAuth2), Google NotebookLM (via notebooklm-py) |
 | Flashcard | AnkiConnect (localhost:8765) |
 | PDF | ReportLab |
 | Dashboard | Streamlit + Plotly + Pandas |

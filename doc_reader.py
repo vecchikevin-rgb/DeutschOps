@@ -23,7 +23,7 @@ SNAPSHOTS_DIR = Path("doc_snapshots")
 SNAPSHOTS_DIR.mkdir(exist_ok=True)
 
 
-def get_drive_service():
+def _get_creds() -> Credentials:
     creds = None
     token_path = Path("token.json")
     if token_path.exists():
@@ -38,10 +38,14 @@ def get_drive_service():
             creds = flow.run_local_server(port=0)
         token_path.write_text(creds.to_json())
         print("✅ Token salvato in token.json")
-    return build("drive", "v3", credentials=creds)
+    return creds
 
 
-def read_doc(service) -> str:
+def get_drive_service():
+    return build("drive", "v3", credentials=_get_creds())
+
+
+def read_doc() -> str:
     """
     Legge il documento via Docs API tab per tab.
     Esclude il tab KPI scritto da DeutschOps.
@@ -49,10 +53,7 @@ def read_doc(service) -> str:
     """
     print(f"📄 Lettura Google Doc ({DOC_ID[:20]}...)")
 
-    creds = Credentials.from_authorized_user_file(
-        str(Path("token.json")), SCOPES
-    )
-    docs_service = build("docs", "v1", credentials=creds)
+    docs_service = build("docs", "v1", credentials=_get_creds())
 
     doc = docs_service.documents().get(
         documentId=DOC_ID,
@@ -162,13 +163,15 @@ def extract_new_content(old_text: str, new_text: str) -> str:
     return "\n".join(added)
 
 
-def read_and_diff(label: str = None) -> dict:
+def read_and_diff(label: str = None, write_snapshot: bool = True) -> dict:
     """
-    Funzione principale: legge il doc, confronta con snapshot precedente,
-    restituisce dizionario con contenuto completo e novità.
+    Legge il doc, confronta con snapshot precedente, restituisce diff.
+
+    write_snapshot=False: calcola tutto ma non scrive il file snapshot.
+    Il chiamante riceve snapshot_path e snapshot_content per poterli scrivere
+    in un secondo momento (es. commit differito in task_tracker).
     """
-    service = get_drive_service()
-    current_text = read_doc(service)
+    current_text = read_doc()
 
     prev_path, prev_text = get_latest_snapshot()
 
@@ -183,13 +186,19 @@ def read_and_diff(label: str = None) -> dict:
         print("📋 Primo snapshot — nessun confronto disponibile")
         new_content = current_text
 
-    save_snapshot(current_text, label)
+    snap_label = label or date.today().isoformat()
+    snapshot_path = SNAPSHOTS_DIR / f"snapshot_{snap_label}.txt"
+
+    if write_snapshot:
+        save_snapshot(current_text, snap_label)
 
     return {
         "full_text": current_text,
         "new_content": new_content,
         "had_previous": prev_path is not None,
-        "previous_snapshot": str(prev_path) if prev_path else None
+        "previous_snapshot": str(prev_path) if prev_path else None,
+        "snapshot_path": str(snapshot_path),
+        "snapshot_content": current_text,
     }
 
 

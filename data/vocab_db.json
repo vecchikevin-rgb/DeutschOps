@@ -8238,13 +8238,15 @@
       "first_seen": "storico",
       "seen_in_lessons": [
         "storico",
-        "2026-05-25-stefanie"
+        "2026-05-25-stefanie",
+        "2026-05-29-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
-        "Comparison of adjectives and adverbs"
+        "Comparison of adjectives and adverbs",
+        "Wiederholung: Vergleiche und Musik"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "unbekannt": {
@@ -8561,14 +8563,16 @@
       "seen_in_lessons": [
         "storico",
         "2026-05-25-stefanie",
-        "2026-05-26-stefanie"
+        "2026-05-26-stefanie",
+        "2026-05-29-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
         "Comparison of adjectives and adverbs",
-        "Comparatives and Travel Options"
+        "Comparatives and Travel Options",
+        "Wiederholung: Vergleiche und Musik"
       ],
-      "occurrences": 3,
+      "occurrences": 4,
       "anki_status": "added"
     },
     "modern": {
@@ -9451,12 +9455,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-05-28-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Free Conversation and Comparatives"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "am liebsten": {
@@ -12101,12 +12107,14 @@
       "level": "A2",
       "first_seen": "2026-05-22-stefanie",
       "seen_in_lessons": [
-        "2026-05-22-stefanie"
+        "2026-05-22-stefanie",
+        "2026-05-28-stefanie"
       ],
       "seen_in_topics": [
-        "Relative clauses with relative pronouns"
+        "Relative clauses with relative pronouns",
+        "Free Conversation and Comparatives"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "gemüse": {
@@ -12443,12 +12451,14 @@
       "level": "A2",
       "first_seen": "2026-05-25-stefanie",
       "seen_in_lessons": [
-        "2026-05-25-stefanie"
+        "2026-05-25-stefanie",
+        "2026-05-29-stefanie"
       ],
       "seen_in_topics": [
-        "Comparison of adjectives and adverbs"
+        "Comparison of adjectives and adverbs",
+        "Wiederholung: Vergleiche und Musik"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "spazierengehen": {
@@ -12557,12 +12567,14 @@
       "level": "B1",
       "first_seen": "2026-05-26-stefanie",
       "seen_in_lessons": [
-        "2026-05-26-stefanie"
+        "2026-05-26-stefanie",
+        "2026-05-29-stefanie"
       ],
       "seen_in_topics": [
-        "Comparatives and Travel Options"
+        "Comparatives and Travel Options",
+        "Wiederholung: Vergleiche und Musik"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "regionalzug": {
@@ -12811,25 +12823,899 @@
       ],
       "occurrences": 1,
       "anki_status": "added"
+    },
+    "klimaanlage": {
+      "german": "Klimaanlage",
+      "article": "die",
+      "plural": "Klimaanlagen",
+      "category": "noun",
+      "italian": "aria condizionata",
+      "english": "air conditioning",
+      "example_de": "Ich habe die Klimaanlage aufgedreht, weil es so heiß ist.",
+      "level": "A2",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ebene": {
+      "german": "Ebene",
+      "article": "die",
+      "plural": "Ebenen",
+      "category": "noun",
+      "italian": "pianura",
+      "english": "plain, flatland",
+      "example_de": "Die Poebene ist eine große Ebene in Norditalien.",
+      "level": "B1",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "lügen": {
+      "german": "lügen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "mentire",
+      "english": "to lie",
+      "example_de": "Er hat nicht gelogen, das Wetter war wirklich schön.",
+      "level": "A2",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "rennen": {
+      "german": "Rennen",
+      "article": "das",
+      "plural": "Rennen",
+      "category": "noun",
+      "italian": "gara, corsa",
+      "english": "race",
+      "example_de": "Ich gehe nach Monza, um ein Autorennen zu sehen.",
+      "level": "A2",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "mitgliedschaft": {
+      "german": "Mitgliedschaft",
+      "article": "die",
+      "plural": "Mitgliedschaften",
+      "category": "noun",
+      "italian": "abbonamento, iscrizione",
+      "english": "membership",
+      "example_de": "Ich habe eine Mitgliedschaft im Rennclub bekommen.",
+      "level": "B1",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "mitglied": {
+      "german": "Mitglied",
+      "article": "das",
+      "plural": "Mitglieder",
+      "category": "noun",
+      "italian": "membro, socio",
+      "english": "member",
+      "example_de": "Er ist Mitglied im Sportverein.",
+      "level": "B1",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "eintritt": {
+      "german": "Eintritt",
+      "article": "der",
+      "plural": "Eintritte",
+      "category": "noun",
+      "italian": "ingresso, biglietto d'ingresso",
+      "english": "entrance, admission",
+      "example_de": "Der Eintritt kostet 50 Euro.",
+      "level": "B1",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "rabatt": {
+      "german": "Rabatt",
+      "article": "der",
+      "plural": "Rabatte",
+      "category": "noun",
+      "italian": "sconto",
+      "english": "discount",
+      "example_de": "Mit der Mitgliedschaft bekomme ich einen Rabatt.",
+      "level": "B1",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "reduzieren": {
+      "german": "reduzieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "ridurre",
+      "english": "to reduce",
+      "example_de": "Ich reduziere die Temperatur im Ofen.",
+      "level": "B1",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "erhöhen": {
+      "german": "erhöhen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "aumentare",
+      "english": "to increase, to raise",
+      "example_de": "Ich erhöhe die Lautstärke.",
+      "level": "B1",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sinken": {
+      "german": "sinken",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "scendere, calare",
+      "english": "to sink, to fall, to drop",
+      "example_de": "Die Temperatur sinkt im Winter.",
+      "level": "B1",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "steigen": {
+      "german": "steigen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "salire, aumentare",
+      "english": "to rise, to increase",
+      "example_de": "Die Temperatur steigt im Sommer.",
+      "level": "B1",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "veranstaltung": {
+      "german": "Veranstaltung",
+      "article": "die",
+      "plural": "Veranstaltungen",
+      "category": "noun",
+      "italian": "evento",
+      "english": "event",
+      "example_de": "Die Veranstaltung findet am Wochenende statt.",
+      "level": "B1",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "hauptstadt": {
+      "german": "Hauptstadt",
+      "article": "die",
+      "plural": "Hauptstädte",
+      "category": "noun",
+      "italian": "capitale",
+      "english": "capital city",
+      "example_de": "Berlin ist die Hauptstadt von Deutschland.",
+      "level": "A2",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "geduld": {
+      "german": "Geduld",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "pazienza",
+      "english": "patience",
+      "example_de": "Du brauchst viel Geduld mit Kindern.",
+      "level": "B1",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "urlaub": {
+      "german": "Urlaub",
+      "article": "der",
+      "plural": "Urlaube",
+      "category": "noun",
+      "italian": "vacanza, ferie",
+      "english": "vacation, holiday",
+      "example_de": "Ich habe nächste Woche Urlaub.",
+      "level": "A2",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sich freuen auf": {
+      "german": "sich freuen auf",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "essere felice di (futuro), non vedere l'ora",
+      "english": "to look forward to",
+      "example_de": "Ich freue mich auf das Wochenende.",
+      "level": "B1",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sich freuen über": {
+      "german": "sich freuen über",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "essere felice di (passato/presente)",
+      "english": "to be pleased about",
+      "example_de": "Ich habe mich über das Geschenk gefreut.",
+      "level": "B1",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "durchstreichen": {
+      "german": "durchstreichen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "cancellare, barrare",
+      "english": "to cross out",
+      "example_de": "Kannst du das Wort durchstreichen?",
+      "level": "B1",
+      "first_seen": "2026-05-28-stefanie",
+      "seen_in_lessons": [
+        "2026-05-28-stefanie"
+      ],
+      "seen_in_topics": [
+        "Free Conversation and Comparatives"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "richtung": {
+      "german": "Richtung",
+      "article": "die",
+      "plural": "Richtungen",
+      "category": "noun",
+      "italian": "direzione",
+      "english": "direction",
+      "example_de": "Ich höre viele Musikrichtungen.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "genre": {
+      "german": "Genre",
+      "article": "das",
+      "plural": "Genres",
+      "category": "noun",
+      "italian": "genere",
+      "english": "genre",
+      "example_de": "Welches Musikgenre hörst du normalerweise?",
+      "level": "B1",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "elektronisch": {
+      "german": "elektronisch",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "elettronico",
+      "english": "electronic",
+      "example_de": "Ich höre elektronische Musik.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "klassisch": {
+      "german": "klassisch",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "classico",
+      "english": "classical",
+      "example_de": "Er spielt klassische Gitarre.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "akustisch": {
+      "german": "akustisch",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "acustico",
+      "english": "acoustic",
+      "example_de": "Ich habe eine akustische Gitarre.",
+      "level": "B1",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "elektrisch": {
+      "german": "elektrisch",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "elettrico",
+      "english": "electric",
+      "example_de": "Sie spielt elektrische Gitarre und elektrischen Bass.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "violine": {
+      "german": "Violine",
+      "article": "die",
+      "plural": "Violinen",
+      "category": "noun",
+      "italian": "violino",
+      "english": "violin",
+      "example_de": "Kevin spielt auch die Violine.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "klavier": {
+      "german": "Klavier",
+      "article": "das",
+      "plural": "Klaviere",
+      "category": "noun",
+      "italian": "pianoforte (di legno)",
+      "english": "piano (wooden, full-size)",
+      "example_de": "Das Klavier ist aus Holz und sehr groß.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "piano": {
+      "german": "Piano",
+      "article": "das",
+      "plural": "Pianos",
+      "category": "noun",
+      "italian": "pianoforte elettronico",
+      "english": "piano (electronic)",
+      "example_de": "Ich habe ein Piano zu Hause, das elektronisch ist.",
+      "level": "B1",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "musikalisch": {
+      "german": "musikalisch",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "musicale",
+      "english": "musical",
+      "example_de": "Du bist sehr musikalisch.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "tastatur": {
+      "german": "Tastatur",
+      "article": "die",
+      "plural": "Tastaturen",
+      "category": "noun",
+      "italian": "tastiera",
+      "english": "keyboard",
+      "example_de": "Ich schreibe langsam mit der neuen Tastatur.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "fluss": {
+      "german": "Fluss",
+      "article": "der",
+      "plural": "Flüsse",
+      "category": "noun",
+      "italian": "fiume",
+      "english": "river",
+      "example_de": "Der Nil ist der längste Fluss.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "einwohner": {
+      "german": "Einwohner",
+      "article": "der",
+      "plural": "Einwohner",
+      "category": "noun",
+      "italian": "abitante",
+      "english": "inhabitant",
+      "example_de": "Tokio hat die meisten Einwohner.",
+      "level": "B1",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "punkt": {
+      "german": "Punkt",
+      "article": "der",
+      "plural": "Punkte",
+      "category": "noun",
+      "italian": "punto",
+      "english": "point",
+      "example_de": "Der Marianengraben ist der tiefste Punkt der Erde.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "erde": {
+      "german": "Erde",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "terra",
+      "english": "Earth",
+      "example_de": "Der tiefste Punkt der Erde liegt im Meer.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "graben": {
+      "german": "Graben",
+      "article": "der",
+      "plural": "Gräben",
+      "category": "noun",
+      "italian": "fossa (grande)",
+      "english": "trench",
+      "example_de": "Der Marianengraben ist sehr tief.",
+      "level": "B1",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "grube": {
+      "german": "Grube",
+      "article": "die",
+      "plural": "Gruben",
+      "category": "noun",
+      "italian": "fossa (piccola)",
+      "english": "pit",
+      "example_de": "Die Soldaten sind in einer Grube.",
+      "level": "B1",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "platz": {
+      "german": "Platz",
+      "article": "der",
+      "plural": "Plätze",
+      "category": "noun",
+      "italian": "posto, posizione",
+      "english": "place, position (ranking)",
+      "example_de": "Die italienische Küche ist auf dem ersten Platz.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "wiederholen": {
+      "german": "wiederholen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "ripetere, ripassare",
+      "english": "to repeat, to review",
+      "example_de": "Wir wiederholen heute Vergleiche.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "genießen": {
+      "german": "genießen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "godere",
+      "english": "to enjoy",
+      "example_de": "Ich genieße die französische Küche.",
+      "level": "B1",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "tief": {
+      "german": "tief",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "profondo",
+      "english": "deep",
+      "example_de": "Der Baikalsee ist sehr tief.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "hoch": {
+      "german": "hoch",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "alto",
+      "english": "high, tall",
+      "example_de": "Der Burj Khalifa ist höher als der Eiffelturm.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "nah": {
+      "german": "nah",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "vicino",
+      "english": "near, close",
+      "example_de": "München ist näher als Mailand.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "küche": {
+      "german": "Küche",
+      "article": "die",
+      "plural": "Küchen",
+      "category": "noun",
+      "italian": "cucina",
+      "english": "kitchen, cuisine",
+      "example_de": "Die italienische Küche ist am besten.",
+      "level": "A2",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "referendum": {
+      "german": "Referendum",
+      "article": "das",
+      "plural": "Referenden",
+      "category": "noun",
+      "italian": "referendum",
+      "english": "referendum",
+      "example_de": "Das Referendum ist am 14. Juni.",
+      "level": "B1",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "nachhaltig": {
+      "german": "nachhaltig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "sostenibile",
+      "english": "sustainable",
+      "example_de": "Die Nachhaltigkeitsinitiative ist wichtig.",
+      "level": "B1",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "manipuliert": {
+      "german": "manipuliert",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "manipolato",
+      "english": "manipulated",
+      "example_de": "Wie manipuliert sind die Nachrichten?",
+      "level": "B1",
+      "first_seen": "2026-05-29-stefanie",
+      "seen_in_lessons": [
+        "2026-05-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wiederholung: Vergleiche und Musik"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
     }
   },
   "stats": {
-    "total_words": 668,
+    "total_words": 714,
     "by_category": {
       "expression": 5,
-      "adjective": 76,
-      "noun": 327,
+      "adjective": 86,
+      "noun": 353,
       "adverb": 50,
-      "verb_separable": 34,
-      "verb_regular": 103,
+      "verb_separable": 35,
+      "verb_regular": 108,
       "phrase": 23,
       "": 10,
-      "verb_irregular": 34,
+      "verb_irregular": 38,
       "verb_modal": 6
     },
     "by_level": {
-      "A2": 254,
-      "B1": 90,
+      "A2": 276,
+      "B1": 114,
       "A1": 312,
       "": 10,
       "C2": 1,

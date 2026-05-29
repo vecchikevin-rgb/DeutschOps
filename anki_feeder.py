@@ -198,7 +198,7 @@ def feed(json_path: str, lesson_date: str = None):
         print(f"🔌 AnkiConnect v{version} connesso\n")
     except Exception:
         print("❌ AnkiConnect non raggiungibile. Assicurati che Anki sia aperto.")
-        return
+        return False
     
     ensure_deck_exists(DECK_NAME)
     
@@ -219,7 +219,14 @@ def feed(json_path: str, lesson_date: str = None):
     print(f"   Frasi: {added_phrases}/{len(phrases)}")
     print(f"{'='*40}")
     print("Apri Anki → deck 'Deutsch::DeutschOps' per vedere le carte.")
+    return True
 
 
 if __name__ == "__main__":
-    feed("data/lezione_2026-05-14.json", lesson_date="2026-05-14")
+    import sys
+    if len(sys.argv) > 1:
+        d = sys.argv[1]
+        feed(f"data/lezione_{d}.json", lesson_date=d)
+    else:
+        print("Uso: python anki_feeder.py <lesson_date>")
+        print("Esempio: python anki_feeder.py 2026-05-29-stefanie")
