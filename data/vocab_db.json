@@ -1207,12 +1207,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-09-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Infinitive Constructions with zu"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "liegen": {
@@ -1518,13 +1520,15 @@
       "first_seen": "storico",
       "seen_in_lessons": [
         "storico",
-        "2026-05-15"
+        "2026-05-15",
+        "2026-06-09-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
-        "Indirekte Fragen und typische Redemittel"
+        "Indirekte Fragen und typische Redemittel",
+        "Infinitive Constructions with zu"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "tragen": {
@@ -7585,12 +7589,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-09-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Infinitive Constructions with zu"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "hinzufügen": {
@@ -7718,12 +7724,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-09-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Infinitive Constructions with zu"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "anklicken": {
@@ -8564,15 +8572,17 @@
         "storico",
         "2026-05-25-stefanie",
         "2026-05-26-stefanie",
-        "2026-05-29-stefanie"
+        "2026-05-29-stefanie",
+        "2026-06-08-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
         "Comparison of adjectives and adverbs",
         "Comparatives and Travel Options",
-        "Wiederholung: Vergleiche und Musik"
+        "Wiederholung: Vergleiche und Musik",
+        "Formula 1 trip and past events"
       ],
-      "occurrences": 4,
+      "occurrences": 5,
       "anki_status": "added"
     },
     "modern": {
@@ -9668,12 +9678,14 @@
       "level": "B1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-08-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Formula 1 trip and past events"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "die gastfamilie": {
@@ -9822,12 +9834,16 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-08-stefanie",
+        "2026-06-10-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Formula 1 trip and past events",
+        "als vs wenn; dabei; während"
       ],
-      "occurrences": 1,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "mieten": {
@@ -10548,14 +10564,16 @@
       "seen_in_lessons": [
         "2026-05-15",
         "2026-05-19-stefanie",
-        "2026-05-21-stefanie"
+        "2026-05-21-stefanie",
+        "2026-06-08-stefanie"
       ],
       "seen_in_topics": [
         "Indirekte Fragen und typische Redemittel",
         "Imperative and Modal Verbs Review",
-        "Indirect questions and future tense"
+        "Indirect questions and future tense",
+        "Formula 1 trip and past events"
       ],
-      "occurrences": 3,
+      "occurrences": 4,
       "anki_status": "added"
     },
     "höchstens": {
@@ -10955,12 +10973,14 @@
       "level": "A2",
       "first_seen": "2026-05-18-stefanie",
       "seen_in_lessons": [
-        "2026-05-18-stefanie"
+        "2026-05-18-stefanie",
+        "2026-06-09-stefanie"
       ],
       "seen_in_topics": [
-        "Modal verb sollen: shall and should"
+        "Modal verb sollen: shall and should",
+        "Infinitive Constructions with zu"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "vorschlag": {
@@ -11404,12 +11424,14 @@
       "level": "A2",
       "first_seen": "2026-05-18-stefanie",
       "seen_in_lessons": [
-        "2026-05-18-stefanie"
+        "2026-05-18-stefanie",
+        "2026-06-08-stefanie"
       ],
       "seen_in_topics": [
-        "Modal verb sollen: shall and should"
+        "Modal verb sollen: shall and should",
+        "Formula 1 trip and past events"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "kaputt": {
@@ -12892,12 +12914,14 @@
       "level": "A2",
       "first_seen": "2026-05-28-stefanie",
       "seen_in_lessons": [
-        "2026-05-28-stefanie"
+        "2026-05-28-stefanie",
+        "2026-06-08-stefanie"
       ],
       "seen_in_topics": [
-        "Free Conversation and Comparatives"
+        "Free Conversation and Comparatives",
+        "Formula 1 trip and past events"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "mitgliedschaft": {
@@ -13519,12 +13543,14 @@
       "level": "A2",
       "first_seen": "2026-05-29-stefanie",
       "seen_in_lessons": [
-        "2026-05-29-stefanie"
+        "2026-05-29-stefanie",
+        "2026-06-08-stefanie"
       ],
       "seen_in_topics": [
-        "Wiederholung: Vergleiche und Musik"
+        "Wiederholung: Vergleiche und Musik",
+        "Formula 1 trip and past events"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "wiederholen": {
@@ -13538,12 +13564,14 @@
       "level": "A2",
       "first_seen": "2026-05-29-stefanie",
       "seen_in_lessons": [
-        "2026-05-29-stefanie"
+        "2026-05-29-stefanie",
+        "2026-06-08-stefanie"
       ],
       "seen_in_topics": [
-        "Wiederholung: Vergleiche und Musik"
+        "Wiederholung: Vergleiche und Musik",
+        "Formula 1 trip and past events"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "genießen": {
@@ -13557,12 +13585,14 @@
       "level": "B1",
       "first_seen": "2026-05-29-stefanie",
       "seen_in_lessons": [
-        "2026-05-29-stefanie"
+        "2026-05-29-stefanie",
+        "2026-06-08-stefanie"
       ],
       "seen_in_topics": [
-        "Wiederholung: Vergleiche und Musik"
+        "Wiederholung: Vergleiche und Musik",
+        "Formula 1 trip and past events"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "tief": {
@@ -13697,26 +13727,596 @@
       ],
       "occurrences": 1,
       "anki_status": "added"
+    },
+    "fahrer": {
+      "german": "Fahrer",
+      "article": "der",
+      "plural": "Fahrer",
+      "category": "noun",
+      "italian": "pilota",
+      "english": "driver",
+      "example_de": "Mein Lieblingsfahrer hat das Rennen nicht beendet.",
+      "level": "A2",
+      "first_seen": "2026-06-08-stefanie",
+      "seen_in_lessons": [
+        "2026-06-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Formula 1 trip and past events"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "unfall": {
+      "german": "Unfall",
+      "article": "der",
+      "plural": "Unfälle",
+      "category": "noun",
+      "italian": "incidente",
+      "english": "accident",
+      "example_de": "Er hatte einen Unfall während des Rennens.",
+      "level": "A2",
+      "first_seen": "2026-06-08-stefanie",
+      "seen_in_lessons": [
+        "2026-06-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Formula 1 trip and past events"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "vorfall": {
+      "german": "Vorfall",
+      "article": "der",
+      "plural": "Vorfälle",
+      "category": "noun",
+      "italian": "incidente/evento",
+      "english": "incident/occurrence",
+      "example_de": "Es gab einen Vorfall auf der Strecke.",
+      "level": "B1",
+      "first_seen": "2026-06-08-stefanie",
+      "seen_in_lessons": [
+        "2026-06-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Formula 1 trip and past events"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "position": {
+      "german": "Position",
+      "article": "die",
+      "plural": "Positionen",
+      "category": "noun",
+      "italian": "posizione (luogo/opinione)",
+      "english": "position (location/opinion)",
+      "example_de": "Ich hatte eine Position dazu.",
+      "level": "B1",
+      "first_seen": "2026-06-08-stefanie",
+      "seen_in_lessons": [
+        "2026-06-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Formula 1 trip and past events"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "entschuldigen": {
+      "german": "entschuldigen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "scusarsi",
+      "english": "to apologize",
+      "example_de": "Sie hat sich bei mir entschuldigt.",
+      "level": "A2",
+      "first_seen": "2026-06-08-stefanie",
+      "seen_in_lessons": [
+        "2026-06-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Formula 1 trip and past events"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "erinnern": {
+      "german": "erinnern",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "ricordare",
+      "english": "to remember/remind",
+      "example_de": "Ich habe mich nicht erinnert.",
+      "level": "A2",
+      "first_seen": "2026-06-08-stefanie",
+      "seen_in_lessons": [
+        "2026-06-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Formula 1 trip and past events"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "gesundheit": {
+      "german": "Gesundheit",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "salute",
+      "english": "health",
+      "example_de": "Man muss gesund essen, um gesund zu leben.",
+      "level": "A2",
+      "first_seen": "2026-06-09-stefanie",
+      "seen_in_lessons": [
+        "2026-06-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Infinitive Constructions with zu"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "schritt": {
+      "german": "Schritt",
+      "article": "der",
+      "plural": "Schritte",
+      "category": "noun",
+      "italian": "passo",
+      "english": "step",
+      "example_de": "Es ist wichtig, viele Schritte zu machen.",
+      "level": "A2",
+      "first_seen": "2026-06-09-stefanie",
+      "seen_in_lessons": [
+        "2026-06-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Infinitive Constructions with zu"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "fitnessstudio": {
+      "german": "Fitnessstudio",
+      "article": "das",
+      "plural": "Fitnessstudios",
+      "category": "noun",
+      "italian": "palestra",
+      "english": "gym",
+      "example_de": "Es ist wichtig, ins Fitnessstudio zu gehen.",
+      "level": "A2",
+      "first_seen": "2026-06-09-stefanie",
+      "seen_in_lessons": [
+        "2026-06-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Infinitive Constructions with zu"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "teller": {
+      "german": "Teller",
+      "article": "der",
+      "plural": "Teller",
+      "category": "noun",
+      "italian": "piatto (oggetto)",
+      "english": "plate",
+      "example_de": "Ich versuche, den Teller aus der Küche zu holen.",
+      "level": "A2",
+      "first_seen": "2026-06-09-stefanie",
+      "seen_in_lessons": [
+        "2026-06-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Infinitive Constructions with zu"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "gericht": {
+      "german": "Gericht",
+      "article": "das",
+      "plural": "Gerichte",
+      "category": "noun",
+      "italian": "piatto (cibo)",
+      "english": "dish (food)",
+      "example_de": "Das Gericht schmeckt sehr gut.",
+      "level": "A2",
+      "first_seen": "2026-06-09-stefanie",
+      "seen_in_lessons": [
+        "2026-06-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Infinitive Constructions with zu"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "angst": {
+      "german": "Angst",
+      "article": "die",
+      "plural": "Ängste",
+      "category": "noun",
+      "italian": "paura",
+      "english": "fear",
+      "example_de": "Ich habe Angst, im Meer zu schwimmen.",
+      "level": "A2",
+      "first_seen": "2026-06-09-stefanie",
+      "seen_in_lessons": [
+        "2026-06-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Infinitive Constructions with zu"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "lust": {
+      "german": "Lust",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "voglia",
+      "english": "desire, wish",
+      "example_de": "Ich habe keine Lust, Deutsch zu lernen.",
+      "level": "A2",
+      "first_seen": "2026-06-09-stefanie",
+      "seen_in_lessons": [
+        "2026-06-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Infinitive Constructions with zu"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "meer": {
+      "german": "Meer",
+      "article": "das",
+      "plural": "Meere",
+      "category": "noun",
+      "italian": "mare",
+      "english": "sea",
+      "example_de": "Ich habe Angst, ins Meer zu gehen.",
+      "level": "A2",
+      "first_seen": "2026-06-09-stefanie",
+      "seen_in_lessons": [
+        "2026-06-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Infinitive Constructions with zu"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "flugzeug": {
+      "german": "Flugzeug",
+      "article": "das",
+      "plural": "Flugzeuge",
+      "category": "noun",
+      "italian": "aereo",
+      "english": "airplane",
+      "example_de": "Ich habe Angst, das Flugzeug zu nehmen.",
+      "level": "A2",
+      "first_seen": "2026-06-09-stefanie",
+      "seen_in_lessons": [
+        "2026-06-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Infinitive Constructions with zu"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "versuchen": {
+      "german": "versuchen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "provare, tentare",
+      "english": "to try",
+      "example_de": "Ich versuche, immer den Bus zu nehmen.",
+      "level": "A2",
+      "first_seen": "2026-06-09-stefanie",
+      "seen_in_lessons": [
+        "2026-06-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Infinitive Constructions with zu"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "holen": {
+      "german": "holen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "andare a prendere",
+      "english": "to go get, to fetch",
+      "example_de": "Ich gehe in die Küche, um den Teller zu holen.",
+      "level": "A2",
+      "first_seen": "2026-06-09-stefanie",
+      "seen_in_lessons": [
+        "2026-06-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Infinitive Constructions with zu"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "flugangst": {
+      "german": "Flugangst",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "paura di volare",
+      "english": "fear of flying",
+      "example_de": "Ich habe Flugangst.",
+      "level": "B1",
+      "first_seen": "2026-06-09-stefanie",
+      "seen_in_lessons": [
+        "2026-06-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Infinitive Constructions with zu"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "rufezeichen": {
+      "german": "Rufezeichen",
+      "article": "das",
+      "plural": "Rufezeichen",
+      "category": "noun",
+      "italian": "punto esclamativo",
+      "english": "exclamation mark",
+      "example_de": "Das Rufezeichen zeigt eine starke Emotion.",
+      "level": "A2",
+      "first_seen": "2026-06-10-stefanie",
+      "seen_in_lessons": [
+        "2026-06-10-stefanie"
+      ],
+      "seen_in_topics": [
+        "als vs wenn; dabei; während"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "präsens": {
+      "german": "Präsens",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "presente (tempo verbale)",
+      "english": "present tense",
+      "example_de": "Im Präsens sagen wir 'ich gehe'.",
+      "level": "A2",
+      "first_seen": "2026-06-10-stefanie",
+      "seen_in_lessons": [
+        "2026-06-10-stefanie"
+      ],
+      "seen_in_topics": [
+        "als vs wenn; dabei; während"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "vater": {
+      "german": "Vater",
+      "article": "der",
+      "plural": "Väter",
+      "category": "noun",
+      "italian": "padre",
+      "english": "father",
+      "example_de": "Ihr Vater sagte, es gibt zwei schlimme Jahre.",
+      "level": "A1",
+      "first_seen": "2026-06-10-stefanie",
+      "seen_in_lessons": [
+        "2026-06-10-stefanie"
+      ],
+      "seen_in_topics": [
+        "als vs wenn; dabei; während"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "schlimm": {
+      "german": "schlimm",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "terribile, grave",
+      "english": "terrible, bad",
+      "example_de": "2014 war ein schlimmes Jahr für Brasilien.",
+      "level": "A2",
+      "first_seen": "2026-06-10-stefanie",
+      "seen_in_lessons": [
+        "2026-06-10-stefanie"
+      ],
+      "seen_in_topics": [
+        "als vs wenn; dabei; während"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "lachen": {
+      "german": "lachen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "ridere",
+      "english": "to laugh",
+      "example_de": "Dabei hat er gelacht.",
+      "level": "A2",
+      "first_seen": "2026-06-10-stefanie",
+      "seen_in_lessons": [
+        "2026-06-10-stefanie"
+      ],
+      "seen_in_topics": [
+        "als vs wenn; dabei; während"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "mitmachen": {
+      "german": "mitmachen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "partecipare",
+      "english": "to participate",
+      "example_de": "Ich mache bei der Meisterschaft mit.",
+      "level": "A2",
+      "first_seen": "2026-06-10-stefanie",
+      "seen_in_lessons": [
+        "2026-06-10-stefanie"
+      ],
+      "seen_in_topics": [
+        "als vs wenn; dabei; während"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "weg": {
+      "german": "Weg",
+      "article": "der",
+      "plural": "Wege",
+      "category": "noun",
+      "italian": "via, strada",
+      "english": "way, path",
+      "example_de": "Der Weg nach Hause ist lang.",
+      "level": "A2",
+      "first_seen": "2026-06-10-stefanie",
+      "seen_in_lessons": [
+        "2026-06-10-stefanie"
+      ],
+      "seen_in_topics": [
+        "als vs wenn; dabei; während"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "tür": {
+      "german": "Tür",
+      "article": "die",
+      "plural": "Türen",
+      "category": "noun",
+      "italian": "porta",
+      "english": "door",
+      "example_de": "Die Haustür war offen.",
+      "level": "A1",
+      "first_seen": "2026-06-10-stefanie",
+      "seen_in_lessons": [
+        "2026-06-10-stefanie"
+      ],
+      "seen_in_topics": [
+        "als vs wenn; dabei; während"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "puppe": {
+      "german": "Puppe",
+      "article": "die",
+      "plural": "Puppen",
+      "category": "noun",
+      "italian": "bambola",
+      "english": "doll",
+      "example_de": "Als ich ein Kind war, habe ich mit Puppen gespielt.",
+      "level": "A2",
+      "first_seen": "2026-06-10-stefanie",
+      "seen_in_lessons": [
+        "2026-06-10-stefanie"
+      ],
+      "seen_in_topics": [
+        "als vs wenn; dabei; während"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "meisterschaft": {
+      "german": "Meisterschaft",
+      "article": "die",
+      "plural": "Meisterschaften",
+      "category": "noun",
+      "italian": "campionato",
+      "english": "championship",
+      "example_de": "Bei der Fußball-Weltmeisterschaft hat Brasilien verloren.",
+      "level": "B1",
+      "first_seen": "2026-06-10-stefanie",
+      "seen_in_lessons": [
+        "2026-06-10-stefanie"
+      ],
+      "seen_in_topics": [
+        "als vs wenn; dabei; während"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "haustür": {
+      "german": "Haustür",
+      "article": "die",
+      "plural": "Haustüren",
+      "category": "noun",
+      "italian": "porta di casa",
+      "english": "front door",
+      "example_de": "Als ich nach Hause kam, war die Haustür offen.",
+      "level": "A2",
+      "first_seen": "2026-06-10-stefanie",
+      "seen_in_lessons": [
+        "2026-06-10-stefanie"
+      ],
+      "seen_in_topics": [
+        "als vs wenn; dabei; während"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ampel": {
+      "german": "Ampel",
+      "article": "die",
+      "plural": "Ampeln",
+      "category": "noun",
+      "italian": "semaforo",
+      "english": "traffic light",
+      "example_de": "Bei der Ampel gehen Sie rechts.",
+      "level": "A2",
+      "first_seen": "2026-06-10-stefanie",
+      "seen_in_lessons": [
+        "2026-06-10-stefanie"
+      ],
+      "seen_in_topics": [
+        "als vs wenn; dabei; während"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
     }
   },
   "stats": {
-    "total_words": 714,
+    "total_words": 744,
     "by_category": {
       "expression": 5,
-      "adjective": 86,
-      "noun": 353,
+      "adjective": 87,
+      "noun": 376,
       "adverb": 50,
-      "verb_separable": 35,
-      "verb_regular": 108,
+      "verb_separable": 36,
+      "verb_regular": 113,
       "phrase": 23,
       "": 10,
       "verb_irregular": 38,
       "verb_modal": 6
     },
     "by_level": {
-      "A2": 276,
-      "B1": 114,
-      "A1": 312,
+      "A2": 300,
+      "B1": 118,
+      "A1": 314,
       "": 10,
       "C2": 1,
       "B2": 1

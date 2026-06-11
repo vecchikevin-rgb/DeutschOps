@@ -263,11 +263,88 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-05-29T17:20:01.215039"
+    },
+    {
+      "id": "2026-06-08-stefanie",
+      "date": "2026-06-08",
+      "audio_file": "Audiolessons\\lezione_2026-06-08-stefanie-compressed.mp4",
+      "topic": "Formula 1 trip and past events",
+      "summary_it": "Kevin ha raccontato il suo viaggio a Monaco per la Formula 1. Il suo pilota preferito ha avuto un incidente e non ha finito la gara. La lezione ha cop...",
+      "vocabulary_count": 15,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "Formula 1 race vocabulary (Fahrer, Rennen, Unfall, Platz)",
+        "Past tense forms (Präteritum 'es gab' vs. Perfekt)",
+        "Direct vs. indirect questions (wer vs. der)",
+        "Reflexive verbs in perfect tense (sich entschuldigen, sich erinnern)",
+        "Comparative constructions with intensifiers (viel billiger als, mindestens)",
+        "Repetition vocabulary (wiederholen vs. nochmal)"
+      ],
+      "homework": "",
+      "duration_minutes": 70.8,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-08-stefanie.txt",
+        "data": "data/lezione_2026-06-08-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-10T14:44:43.921919"
+    },
+    {
+      "id": "2026-06-09-stefanie",
+      "date": "2026-06-09",
+      "audio_file": "Audiolessons\\lezione_2026-06-09-stefanie-compressed.mp4",
+      "topic": "Infinitive Constructions with zu",
+      "summary_it": "Kevin ha praticato le costruzioni all'infinito con zu e um...zu. La lezione ha chiarito tre modelli: 1) es ist + aggettivo + zu + infinito (affermazio...",
+      "vocabulary_count": 17,
+      "grammar_count": 5,
+      "phrases_count": 4,
+      "doc_sections": [
+        "23. Infinitivkonstruktionen"
+      ],
+      "homework": "",
+      "duration_minutes": 61.1,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-09-stefanie.txt",
+        "data": "data/lezione_2026-06-09-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-10T15:32:19.312695"
+    },
+    {
+      "id": "2026-06-10-stefanie",
+      "date": "2026-06-10",
+      "audio_file": "Audiolessons\\lezione_2026-06-10-stefanie-compressed.mp4",
+      "topic": "als vs wenn; dabei; während",
+      "summary_it": "Kevin e Stefanie hanno risolto problemi di connessione, poi si sono concentrati sulle subordinate con 'als' vs 'wenn'. 'Als' si usa per eventi singoli...",
+      "vocabulary_count": 13,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "24. Nebensätze: als vs wenn; dabei; während; bei preposition usage"
+      ],
+      "homework": "Watch one episode (approx. 4 minutes) of 'Nico's Weg' A2 series (starting with Episode 1, which includes an A1 summary). Prepare a brief summary to discuss in the next lesson.",
+      "duration_minutes": 67.7,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-10-stefanie.txt",
+        "data": "data/lezione_2026-06-10-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-10T18:46:40.756771"
     }
   ],
   "stats": {
-    "total": 10,
-    "total_cost_eur": 2.818,
-    "total_minutes": 340.2
+    "total": 13,
+    "total_cost_eur": 3.118,
+    "total_minutes": 539.8
   }
 }
