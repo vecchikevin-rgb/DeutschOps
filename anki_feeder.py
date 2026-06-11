@@ -1,7 +1,11 @@
 # anki_feeder.py
 # Legge un file JSON estratto e crea carte in Anki automaticamente
 
+import os
 import json
+import time
+import shutil
+import subprocess
 import requests
 from pathlib import Path
 from datetime import date
@@ -24,6 +28,55 @@ def ankiconnect(action: str, **params) -> dict:
         raise Exception(f"AnkiConnect error: {result['error']}")
     
     return result["result"]
+
+
+def _anki_reachable() -> bool:
+    """True se AnkiConnect risponde su localhost:8765."""
+    try:
+        ankiconnect("version")
+        return True
+    except Exception:
+        return False
+
+
+def ensure_anki_running(timeout: int = 45) -> bool:
+    """
+    Garantisce che Anki sia aperto con AnkiConnect raggiungibile.
+    Se chiuso, prova ad avviarlo e attende che AnkiConnect risponda.
+    Se non riesce, ritorna False: la pipeline lascia il task aperto e
+    ritenta Anki al prossimo run (vedi task_tracker).
+    """
+    if _anki_reachable():
+        return True
+
+    candidates = [
+        shutil.which("anki"),
+        os.path.expandvars(r"%LOCALAPPDATA%\Programs\Anki\anki.exe"),
+        os.path.expandvars(r"%PROGRAMFILES%\Anki\anki.exe"),
+        r"C:\Program Files\Anki\anki.exe",
+    ]
+    exe = next((c for c in candidates if c and Path(c).exists()), None)
+    if not exe:
+        print("⚠️  Anki non trovato sul sistema — auto-avvio saltato.")
+        return False
+
+    print(f"🚀 Anki chiuso — avvio automatico: {exe}")
+    try:
+        subprocess.Popen([exe],
+                         stdout=subprocess.DEVNULL,
+                         stderr=subprocess.DEVNULL)
+    except Exception as e:
+        print(f"⚠️  Impossibile avviare Anki: {e}")
+        return False
+
+    for _ in range(timeout):
+        if _anki_reachable():
+            print("✅ AnkiConnect pronto dopo auto-avvio.")
+            return True
+        time.sleep(1)
+
+    print("⚠️  Anki avviato ma AnkiConnect non risponde nel tempo previsto.")
+    return False
 
 
 def ensure_deck_exists(deck_name: str):
@@ -192,13 +245,13 @@ def feed(json_path: str, lesson_date: str = None):
     print(f"📚 Argomento: {data.get('topic', 'N/A')}")
     print(f"📅 Data lezione: {lesson_date}")
     
-    # Verifica connessione AnkiConnect
-    try:
-        version = ankiconnect("version")
-        print(f"🔌 AnkiConnect v{version} connesso\n")
-    except Exception:
-        print("❌ AnkiConnect non raggiungibile. Assicurati che Anki sia aperto.")
+    # Verifica connessione AnkiConnect (con auto-avvio se Anki è chiuso)
+    if not ensure_anki_running():
+        print("❌ AnkiConnect non raggiungibile. "
+              "Verrà ritentato automaticamente al prossimo run.")
         return False
+    version = ankiconnect("version")
+    print(f"🔌 AnkiConnect v{version} connesso\n")
     
     ensure_deck_exists(DECK_NAME)
     

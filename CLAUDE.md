@@ -6,8 +6,14 @@ Pipeline AI per l'apprendimento del tedesco (A2→B1). Automatizza il ciclo comp
 
 ```batch
 # Attivare venv e lanciare (o usare DeutschOps.bat)
-.venv\Scripts\activate
-python main.py "Audiolessons/Classroom with Stefanie 2026-05-25.mp4"
+# NB: l'ambiente reale e' venv/ (NON .venv/). Imposta sempre UTF-8.
+venv\Scripts\activate
+set PYTHONIOENCODING=utf-8
+set WHISPER_MODE=local         REM trascrizione locale (faster-whisper), niente costi API
+python main.py "Audiolessons/Classroom with Stefanie 2026-05-25.mp4" 2026-05-25-stefanie
+
+# Rilevare ed elaborare lezioni nuove in Audiolessons/ automaticamente
+python watch.py --process
 
 # Dashboard KPI
 streamlit run dashboard.py
@@ -23,6 +29,7 @@ streamlit run dashboard.py
 
 | Step | Modulo | Operazione |
 |------|--------|-----------|
+| PREFLIGHT | `preflight.py` | Check video (moov→auto-untrunc), token Google, sessione NBLM, Anki |
 | PREP | `transcriber.py` | Compressione audio con ffmpeg se >20MB |
 | 1 | `doc_reader.py` | Lettura Google Doc Stefanie (diff tracking) |
 | 2 | `transcriber.py` | Trascrizione OpenAI Whisper → `transcripts/lezione_{date}.txt` |
@@ -31,7 +38,23 @@ streamlit run dashboard.py
 | 5 | `pdf_gen.py` | Generazione PDF lezione → `pdfs/lezione_{date}.pdf` |
 | 6 | `doc_writer.py` | Append riepilogo + KPI su Google Doc, upload PDF su Drive |
 
-**Post-pipeline automatico:** `lesson_registry.py`, `vocab_db.py`, `grammar_book.py`, `generate_astra_prompts.py`, `notebooklm_export.py`
+**Post-pipeline automatico:** `lesson_registry.py`, `vocab_db.py`, `grammar_book.py`, `error_extractor.py` (quaderno errori), `generate_astra_prompts.py`, `notebooklm_export.py`
+
+## Miglioramento continuo (feedback loop)
+
+Chiudono l'anello di apprendimento — usano ciò che Kevin *fa* per decidere cosa studiare:
+
+| Tool | Ruolo |
+|------|-------|
+| `error_extractor.py` | Mina gli errori di Kevin + correzioni di Stefanie dai transcript → `data/error_db.json` + pattern ricorrenti. `--all` / `--lesson <date>` / `--report` |
+| `error_pdf.py` | PDF "Quaderno degli Errori" → `pdfs/Quaderno_Errori.pdf` |
+| `weak_cards.py` | Carte Anki più deboli (lapses/ease) → ripasso mirato. `--practice` genera esercizi |
+| `b1_gap.py` | Gap analysis vs curriculum B1 → argomenti concreti da proporre a Stefanie |
+| `pharma_glossary.py` | Glossario professionale (Basilea/pharma) + dialogo workplace |
+| `preflight.py` | Health-check pre-pipeline (video/token/NBLM/Anki) |
+| `watch.py` | Rileva ed elabora lezioni nuove in `Audiolessons/` |
+
+**Cadenza consigliata:** `error_extractor` gira in post-pipeline ad ogni lezione; `weak_cards` + `b1_gap` settimanali (Task Scheduler); `pharma_glossary` mensile.
 
 ## File chiave
 
@@ -82,7 +105,7 @@ Book/            PDF libri di corso
 
 | Categoria | Tecnologia |
 |-----------|-----------|
-| Runtime | Python 3.14, venv in `.venv/` |
+| Runtime | Python 3.14, venv in `venv/` (NON `.venv/`, che è vuoto) |
 | Trascrizione | OpenAI Whisper API |
 | Estrazione AI | Anthropic Claude API |
 | Google | Google Docs/Drive API (OAuth2), Google NotebookLM (via notebooklm-py) |

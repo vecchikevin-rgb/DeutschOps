@@ -247,11 +247,24 @@ def transcribe_local(audio_path: Path, output_path: Path) -> str:
     text = " ".join(all_segments).strip()
     output_path.write_text(text, encoding="utf-8")
 
+    # Meta con durata REALE (da faster-whisper) e costo 0 (locale).
+    # Senza questo, main.py stima la durata dal peso del file -> per un
+    # video non compresso da ~2.7GB risultano ~5663 min / €34 fittizi nei KPI.
+    meta_path = output_path.with_suffix(".meta.json")
+    meta_path.write_text(json.dumps({
+        "duration_seconds": actual_duration,
+        "duration_minutes": actual_duration / 60,
+        "cost_eur": 0.0,
+        "language": info.language,
+        "engine": "faster-whisper-local",
+    }), encoding="utf-8")
+
     if checkpoint_path.exists():
         checkpoint_path.unlink()
         print("🗑️  Checkpoint rimosso (trascrizione completata)")
 
     print(f"\n✅ Trascritto in: {output_path}")
+    print(f"⏱️  Durata reale: {actual_duration:.0f}s ({actual_duration/60:.1f} min)")
     return text
 
 

@@ -43,15 +43,18 @@ def save_state(state: dict):
     STATE_FILE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 def run_cli(args: list) -> str:
-    """Helper to execute the notebooklm CLI from the local virtual environment."""
-    # Look for notebooklm executable in standard Windows venv paths
-    venv_path = Path("venv/Scripts/notebooklm.exe")
-    if not venv_path.exists():
-        venv_path = Path(".venv/Scripts/notebooklm.exe")
-    
-    cmd = [str(venv_path)] if venv_path.exists() else ["notebooklm"]
+    """Helper to execute the notebooklm CLI.
+
+    We invoke it as a module via the *current* Python interpreter
+    (`python -m notebooklm`) instead of the pip console-script wrapper
+    (venv\\Scripts\\notebooklm.exe). That wrapper is broken in this
+    environment — it exits 1 with empty stdout/stderr even for --help —
+    while `python -m notebooklm` works correctly. Using sys.executable
+    guarantees the same venv that imported this module.
+    """
+    cmd = [sys.executable, "-m", "notebooklm"]
     cmd.extend(args)
-    
+
     res = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8")
     if res.returncode != 0:
         raise Exception(

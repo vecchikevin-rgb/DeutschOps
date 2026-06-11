@@ -1,7 +1,7 @@
 # main.py
 import sys
-import os
 import json
+import subprocess
 from datetime import date
 from pathlib import Path
 
@@ -16,8 +16,11 @@ from vocab_db import update_from_lesson
 from grammar_book import update_from_lesson as update_grammar_book
 from generate_astra_prompts import generate_all_prompts
 from notebooklm_export import update_from_lesson as update_notebooklm
+from error_extractor import update_from_lesson as update_errors
+from error_pdf import generate_error_pdf
 
 from task_tracker import TaskTracker
+from preflight import run_preflight
 
 
 def prepare_audio(audio_path: str, lesson_date: str) -> str:
@@ -37,9 +40,17 @@ def prepare_audio(audio_path: str, lesson_date: str) -> str:
     if audio_path.stat().st_size > 20 * 1024 * 1024:
         size_mb = audio_path.stat().st_size / 1024 / 1024
         print(f"   Video detected ({size_mb:.0f}MB) -- compressing to audio...")
-        os.system(
-            f'ffmpeg.exe -i "{audio_path}" -vn -ar 16000 -ac 1 -b:a 32k '
-            f'"{compressed}" -y -loglevel quiet'
+        # ffmpeg.exe vive nella cartella del progetto, non nel PATH.
+        # subprocess.run con lista di argomenti: niente shell, niente problemi
+        # di quoting (os.system su Windows sbaglia il parsing con piu' path
+        # quotati -> "ffmpeg non riconosciuto" / "compression failed").
+        ffmpeg = Path(__file__).resolve().parent / "ffmpeg.exe"
+        ffmpeg_bin = str(ffmpeg) if ffmpeg.exists() else "ffmpeg"
+        subprocess.run(
+            [ffmpeg_bin, "-i", str(audio_path),
+             "-vn", "-ar", "16000", "-ac", "1", "-b:a", "32k",
+             str(compressed), "-y", "-loglevel", "quiet"],
+            check=False,
         )
         if compressed.exists():
             new_mb = compressed.stat().st_size / 1024 / 1024
@@ -74,6 +85,10 @@ def process_lesson(audio_path: str, lesson_date: str = None):
 
     # Apre (o riprende) il task. Se esiste gia' = run precedente non finito.
     task = TaskTracker(lesson_date)
+
+    # Preflight: recupera video corrotto (moov mancante -> untrunc) e avvisa su
+    # token Google / sessione NotebookLM / Anki PRIMA di iniziare il lavoro.
+    audio_path, _preflight = run_preflight(audio_path)
 
     # Prepare audio (compress if video)
     print("PREP — Audio preparation")
@@ -204,6 +219,15 @@ def process_lesson(audio_path: str, lesson_date: str = None):
             )
             update_from_lesson(str(json_path), lesson_date)
             update_grammar_book(str(json_path))
+
+            # Quaderno degli errori: mina gli errori di Kevin dal transcript e
+            # rigenera il PDF cumulativo (non-blocking: feature di studio).
+            print(f"\nUpdating error notebook...")
+            try:
+                update_errors(str(transcript_path), lesson_date)
+                generate_error_pdf()
+            except Exception as e:
+                print(f"   Error notebook failed (non-blocking): {e}")
 
             print(f"\nGenerating Astra prompts...")
             generate_all_prompts()
