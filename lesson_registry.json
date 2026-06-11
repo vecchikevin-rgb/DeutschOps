@@ -340,11 +340,36 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-06-10T18:46:40.756771"
+    },
+    {
+      "id": "2026-06-11-stefanie",
+      "date": "2026-06-11",
+      "audio_file": "Audiolessons\\lezione_2026-06-11-stefanie-compressed.mp4",
+      "topic": "Nico's Weg A1 Summary",
+      "summary_it": "Kevin ha raccontato in tedesco la trama di livello A1 di 'Nico's Weg': Nico, un giovane spagnolo, arriva in Germania e perde la borsa con passaporto e...",
+      "vocabulary_count": 27,
+      "grammar_count": 5,
+      "phrases_count": 4,
+      "doc_sections": [
+        "19. Indefinitpronomen",
+        "25. Nicos Weg"
+      ],
+      "homework": "Watch the next episode of Nico's Weg (A1, Episode: 'Angekommen') and write a short summary in German. Review indefinite pronouns (jemand/niemand, etwas/nichts, alle) and their declension. Practice relative clauses with 'was' using indefinite pronouns (alles, etwas, nichts). Review Chapter 9 in the textbook (subordinate clauses).",
+      "duration_minutes": 68.9,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-11-stefanie.txt",
+        "data": "data/lezione_2026-06-11-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-11T17:52:43.577151"
     }
   ],
   "stats": {
-    "total": 13,
-    "total_cost_eur": 3.118,
-    "total_minutes": 539.8
+    "total": 14,
+    "total_cost_eur": 3.218,
+    "total_minutes": 608.7
   }
 }
