@@ -365,11 +365,40 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-06-11T17:52:43.577151"
+    },
+    {
+      "id": "2026-06-12-stefanie",
+      "date": "2026-06-12",
+      "audio_file": "Audiolessons\\lezione_2026-06-12-stefanie-compressed.mp4",
+      "topic": "Indefinite Pronouns and Relative Clauses",
+      "summary_it": "Kevin e Stefanie hanno ripassato i pronomi indefiniti (jemand, niemand, alle, jeder, einer, ecc.) e le loro declinazioni, che si sono rivelati comples...",
+      "vocabulary_count": 15,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "Indefinite pronouns (jemand, niemand, alle, jeder, einer)",
+        "Temporal prepositions vor and seit",
+        "Double conjunctions (zwar...aber, nicht nur...sondern auch)",
+        "Verb abschließen",
+        "Relative pronoun was",
+        "Vocabulary: Heimweh, Kellner, fremd, Gehirn, Gruppe, Wald, voll, leer"
+      ],
+      "homework": "Complete exercises on Relativsätze (relative clauses) from chapter 16. Focus on relative pronouns, especially the use of 'was' after indefinite pronouns (alles, etwas, nichts). Stefanie will provide additional exercises via screenshot.",
+      "duration_minutes": 64.6,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-12-stefanie.txt",
+        "data": "data/lezione_2026-06-12-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-12T15:05:18.520454"
     }
   ],
   "stats": {
-    "total": 14,
-    "total_cost_eur": 3.218,
-    "total_minutes": 608.7
+    "total": 15,
+    "total_cost_eur": 3.318,
+    "total_minutes": 673.3
   }
 }

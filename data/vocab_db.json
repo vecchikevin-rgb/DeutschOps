@@ -899,12 +899,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-12-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Indefinite Pronouns and Relative Clauses"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "fragen": {
@@ -1501,15 +1503,17 @@
         "storico",
         "2026-05-22-stefanie",
         "2026-05-25-stefanie",
-        "2026-06-11-stefanie"
+        "2026-06-11-stefanie",
+        "2026-06-12-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
         "Relative clauses with relative pronouns",
         "Comparison of adjectives and adverbs",
-        "Nico's Weg A1 Summary"
+        "Nico's Weg A1 Summary",
+        "Indefinite Pronouns and Relative Clauses"
       ],
-      "occurrences": 4,
+      "occurrences": 5,
       "anki_status": "added"
     },
     "vergessen": {
@@ -12132,12 +12136,14 @@
       "level": "A1",
       "first_seen": "2026-05-22-stefanie",
       "seen_in_lessons": [
-        "2026-05-22-stefanie"
+        "2026-05-22-stefanie",
+        "2026-06-12-stefanie"
       ],
       "seen_in_topics": [
-        "Relative clauses with relative pronouns"
+        "Relative clauses with relative pronouns",
+        "Indefinite Pronouns and Relative Clauses"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "geschenk": {
@@ -14623,16 +14629,244 @@
       ],
       "occurrences": 1,
       "anki_status": "added"
+    },
+    "heimweh": {
+      "german": "Heimweh",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "nostalgia di casa",
+      "english": "homesickness",
+      "example_de": "Yara hat Heimweh.",
+      "level": "A2",
+      "first_seen": "2026-06-12-stefanie",
+      "seen_in_lessons": [
+        "2026-06-12-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indefinite Pronouns and Relative Clauses"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "kellner": {
+      "german": "Kellner",
+      "article": "der",
+      "plural": "Kellner",
+      "category": "noun",
+      "italian": "cameriere",
+      "english": "waiter",
+      "example_de": "Der Kellner kommt aus der Türkei.",
+      "level": "A2",
+      "first_seen": "2026-06-12-stefanie",
+      "seen_in_lessons": [
+        "2026-06-12-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indefinite Pronouns and Relative Clauses"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "fremd": {
+      "german": "fremd",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "straniero, estraneo",
+      "english": "foreign, strange",
+      "example_de": "Das Land und die Sprache waren fremd für sie.",
+      "level": "A2",
+      "first_seen": "2026-06-12-stefanie",
+      "seen_in_lessons": [
+        "2026-06-12-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indefinite Pronouns and Relative Clauses"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "abschließen": {
+      "german": "abschließen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "completare, finire",
+      "english": "to finish, to complete, to close off",
+      "example_de": "Vor zwei Jahren habe ich meinen Bachelor abgeschlossen.",
+      "level": "B1",
+      "first_seen": "2026-06-12-stefanie",
+      "seen_in_lessons": [
+        "2026-06-12-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indefinite Pronouns and Relative Clauses"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "gehirn": {
+      "german": "Gehirn",
+      "article": "das",
+      "plural": "Gehirne",
+      "category": "noun",
+      "italian": "cervello",
+      "english": "brain",
+      "example_de": "Jede Person hat ein Gehirn.",
+      "level": "B1",
+      "first_seen": "2026-06-12-stefanie",
+      "seen_in_lessons": [
+        "2026-06-12-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indefinite Pronouns and Relative Clauses"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "gruppe": {
+      "german": "Gruppe",
+      "article": "die",
+      "plural": "Gruppen",
+      "category": "noun",
+      "italian": "gruppo",
+      "english": "group",
+      "example_de": "Einer von ihnen ist aus der Gruppe.",
+      "level": "A2",
+      "first_seen": "2026-06-12-stefanie",
+      "seen_in_lessons": [
+        "2026-06-12-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indefinite Pronouns and Relative Clauses"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "wald": {
+      "german": "Wald",
+      "article": "der",
+      "plural": "Wälder",
+      "category": "noun",
+      "italian": "bosco, foresta",
+      "english": "forest, woods",
+      "example_de": "Gestern habe ich jemanden im Wald getroffen.",
+      "level": "A2",
+      "first_seen": "2026-06-12-stefanie",
+      "seen_in_lessons": [
+        "2026-06-12-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indefinite Pronouns and Relative Clauses"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "voll": {
+      "german": "voll",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "pieno",
+      "english": "full",
+      "example_de": "Die Straßen sind voll.",
+      "level": "A2",
+      "first_seen": "2026-06-12-stefanie",
+      "seen_in_lessons": [
+        "2026-06-12-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indefinite Pronouns and Relative Clauses"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "leer": {
+      "german": "leer",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "vuoto",
+      "english": "empty",
+      "example_de": "Alle Straßen sind leer.",
+      "level": "A2",
+      "first_seen": "2026-06-12-stefanie",
+      "seen_in_lessons": [
+        "2026-06-12-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indefinite Pronouns and Relative Clauses"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "annehmen": {
+      "german": "annehmen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "accettare, ricevere",
+      "english": "to accept, to receive, to take",
+      "example_de": "Ich nehme jede Hilfe an.",
+      "level": "B1",
+      "first_seen": "2026-06-12-stefanie",
+      "seen_in_lessons": [
+        "2026-06-12-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indefinite Pronouns and Relative Clauses"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "türkei": {
+      "german": "Türkei",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "Turchia",
+      "english": "Turkey",
+      "example_de": "Er kommt aus der Türkei.",
+      "level": "A2",
+      "first_seen": "2026-06-12-stefanie",
+      "seen_in_lessons": [
+        "2026-06-12-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indefinite Pronouns and Relative Clauses"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "bachelor": {
+      "german": "Bachelor",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "laurea triennale",
+      "english": "bachelor's degree",
+      "example_de": "Ich habe meinen Bachelor abgeschlossen.",
+      "level": "B1",
+      "first_seen": "2026-06-12-stefanie",
+      "seen_in_lessons": [
+        "2026-06-12-stefanie"
+      ],
+      "seen_in_topics": [
+        "Indefinite Pronouns and Relative Clauses"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
     }
   },
   "stats": {
-    "total_words": 760,
+    "total_words": 772,
     "by_category": {
       "expression": 5,
-      "adjective": 87,
-      "noun": 386,
+      "adjective": 90,
+      "noun": 393,
       "adverb": 50,
-      "verb_separable": 37,
+      "verb_separable": 39,
       "verb_regular": 114,
       "phrase": 23,
       "": 10,
@@ -14641,8 +14875,8 @@
       "pronoun": 3
     },
     "by_level": {
-      "A2": 305,
-      "B1": 123,
+      "A2": 313,
+      "B1": 127,
       "A1": 320,
       "": 10,
       "C2": 1,
