@@ -1230,12 +1230,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-15-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Weekend trip and pronoun review"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "erziehen": {
@@ -10508,12 +10510,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-15-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Weekend trip and pronoun review"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "das schwimmbad": {
@@ -14857,26 +14861,672 @@
       ],
       "occurrences": 1,
       "anki_status": "added"
+    },
+    "schiff": {
+      "german": "Schiff",
+      "article": "das",
+      "plural": "Schiffe",
+      "category": "noun",
+      "italian": "nave",
+      "english": "ship",
+      "example_de": "Wir sind mit dem Schiff gefahren.",
+      "level": "A2",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "boot": {
+      "german": "Boot",
+      "article": "das",
+      "plural": "Boote",
+      "category": "noun",
+      "italian": "barca",
+      "english": "boat",
+      "example_de": "Das Boot ist kleiner als das Schiff.",
+      "level": "A2",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "schloss": {
+      "german": "Schloss",
+      "article": "das",
+      "plural": "Schlösser",
+      "category": "noun",
+      "italian": "castello (residenza reale)",
+      "english": "castle (royal residence)",
+      "example_de": "Schloss Neuschwanstein ist sehr bekannt.",
+      "level": "A2",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "burg": {
+      "german": "Burg",
+      "article": "die",
+      "plural": "Burgen",
+      "category": "noun",
+      "italian": "fortezza, castello (difensivo)",
+      "english": "fortress, castle (defensive)",
+      "example_de": "Eine Burg ist normalerweise älter als ein Schloss.",
+      "level": "A2",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ruine": {
+      "german": "Ruine",
+      "article": "die",
+      "plural": "Ruinen",
+      "category": "noun",
+      "italian": "rovina",
+      "english": "ruin",
+      "example_de": "Das alte Gebäude ist jetzt eine Ruine.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "enttäuscht": {
+      "german": "enttäuscht",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "deluso",
+      "english": "disappointed",
+      "example_de": "Ich war ein bisschen enttäuscht von dem Schloss.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "erwartung": {
+      "german": "Erwartung",
+      "article": "die",
+      "plural": "Erwartungen",
+      "category": "noun",
+      "italian": "aspettativa",
+      "english": "expectation",
+      "example_de": "Meine Erwartung war zu hoch.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "klettern": {
+      "german": "klettern",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "arrampicarsi",
+      "english": "to climb",
+      "example_de": "Man darf nicht mehr auf die Pyramide klettern.",
+      "level": "A2",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "tanken": {
+      "german": "tanken",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "fare benzina / prendere sole",
+      "english": "to refuel / to soak up sun",
+      "example_de": "Ich habe Sonne getankt am Gardasee.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "legen": {
+      "german": "legen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "mettere (posizionare)",
+      "english": "to lay (to place)",
+      "example_de": "Ich habe mein Handy auf den Tisch gelegt.",
+      "level": "A2",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "leiden": {
+      "german": "leiden",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "soffrire",
+      "english": "to suffer",
+      "example_de": "Ich leide noch wegen des Sonnenbrands.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "stadtfest": {
+      "german": "Stadtfest",
+      "article": "das",
+      "plural": "Stadtfeste",
+      "category": "noun",
+      "italian": "festa cittadina",
+      "english": "city festival",
+      "example_de": "Ich war gestern auf dem Stadtfest.",
+      "level": "A2",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "meinen": {
+      "german": "meinen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "intendere",
+      "english": "to mean",
+      "example_de": "Wie meinst du das?",
+      "level": "A2",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "kater": {
+      "german": "Kater",
+      "article": "der",
+      "plural": "Kater",
+      "category": "noun",
+      "italian": "postumi della sbornia / gatto maschio",
+      "english": "hangover / male cat",
+      "example_de": "Ich habe heute ein bisschen Kater.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "zaun": {
+      "german": "Zaun",
+      "article": "der",
+      "plural": "Zäune",
+      "category": "noun",
+      "italian": "recinto",
+      "english": "fence",
+      "example_de": "Der Camping hatte einen hohen Zaun.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "grenzzaun": {
+      "german": "Grenzzaun",
+      "article": "der",
+      "plural": "Grenzzäune",
+      "category": "noun",
+      "italian": "recinzione di confine",
+      "english": "border fence",
+      "example_de": "Der Grenzzaun ist sehr hoch.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "maschendrahtzaun": {
+      "german": "Maschendrahtzaun",
+      "article": "der",
+      "plural": "Maschendrahtzäune",
+      "category": "noun",
+      "italian": "rete metallica",
+      "english": "chain-link fence",
+      "example_de": "Es war ein Maschendrahtzaun um das Gelände.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "holzzaun": {
+      "german": "Holzzaun",
+      "article": "der",
+      "plural": "Holzzäune",
+      "category": "noun",
+      "italian": "recinto di legno",
+      "english": "wooden fence",
+      "example_de": "Ein Holzzaun ist schöner als ein Maschendrahtzaun.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "überall": {
+      "german": "überall",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "dappertutto",
+      "english": "everywhere",
+      "example_de": "Ich kann den Laptop überall mitnehmen.",
+      "level": "A2",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "lösung": {
+      "german": "Lösung",
+      "article": "die",
+      "plural": "Lösungen",
+      "category": "noun",
+      "italian": "soluzione",
+      "english": "solution",
+      "example_de": "Das ist nicht die beste Lösung.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "lösen": {
+      "german": "lösen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "risolvere",
+      "english": "to solve",
+      "example_de": "Ich muss ein Problem lösen.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "problem": {
+      "german": "Problem",
+      "article": "das",
+      "plural": "Probleme",
+      "category": "noun",
+      "italian": "problema",
+      "english": "problem",
+      "example_de": "Das ist ein großes Problem.",
+      "level": "A2",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ändern": {
+      "german": "ändern",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "cambiare (modificare)",
+      "english": "to change (alter)",
+      "example_de": "Ich sollte es ändern.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "wechseln": {
+      "german": "wechseln",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "cambiare (scambiare)",
+      "english": "to switch (exchange)",
+      "example_de": "Ich möchte meine Handyfirma wechseln.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "wechselstube": {
+      "german": "Wechselstube",
+      "article": "die",
+      "plural": "Wechselstuben",
+      "category": "noun",
+      "italian": "ufficio di cambio",
+      "english": "currency exchange office",
+      "example_de": "Die Wechselstube ist am Bahnhof.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "geheimnis": {
+      "german": "Geheimnis",
+      "article": "das",
+      "plural": "Geheimnisse",
+      "category": "noun",
+      "italian": "segreto",
+      "english": "secret",
+      "example_de": "Das ist ein großes Geheimnis.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sparen": {
+      "german": "sparen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "risparmiare",
+      "english": "to save (money)",
+      "example_de": "Ich habe jeden Euro gespart.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "führerschein": {
+      "german": "Führerschein",
+      "article": "der",
+      "plural": "Führerscheine",
+      "category": "noun",
+      "italian": "patente di guida",
+      "english": "driving license",
+      "example_de": "Ich mache gerade den Führerschein.",
+      "level": "A2",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "gegend": {
+      "german": "Gegend",
+      "article": "die",
+      "plural": "Gegenden",
+      "category": "noun",
+      "italian": "zona, area",
+      "english": "area, region",
+      "example_de": "Diese Gegend ist sehr touristisch.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "beneiden": {
+      "german": "beneiden",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "invidiare",
+      "english": "to envy, to be jealous of",
+      "example_de": "Sie werden dich beneiden.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "irgendwo": {
+      "german": "irgendwo",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "da qualche parte",
+      "english": "somewhere",
+      "example_de": "Mein Handy ist irgendwo in der Wohnung.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "irgendwohin": {
+      "german": "irgendwohin",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "verso qualche posto",
+      "english": "to somewhere",
+      "example_de": "Ich möchte irgendwohin verreisen.",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "irgendjemand": {
+      "german": "irgendjemand",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "qualcuno",
+      "english": "someone, anyone",
+      "example_de": "Gibt es irgendjemanden, der Chinesisch spricht?",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "irgendein": {
+      "german": "irgendein",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "qualche",
+      "english": "some, any",
+      "example_de": "Hast du irgendeine Idee?",
+      "level": "B1",
+      "first_seen": "2026-06-15-stefanie",
+      "seen_in_lessons": [
+        "2026-06-15-stefanie"
+      ],
+      "seen_in_topics": [
+        "Weekend trip and pronoun review"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
     }
   },
   "stats": {
-    "total_words": 772,
+    "total_words": 806,
     "by_category": {
       "expression": 5,
-      "adjective": 90,
-      "noun": 393,
-      "adverb": 50,
+      "adjective": 91,
+      "noun": 411,
+      "adverb": 53,
       "verb_separable": 39,
-      "verb_regular": 114,
-      "phrase": 23,
+      "verb_regular": 123,
+      "phrase": 25,
       "": 10,
-      "verb_irregular": 39,
+      "verb_irregular": 40,
       "verb_modal": 6,
       "pronoun": 3
     },
     "by_level": {
-      "A2": 313,
-      "B1": 127,
+      "A2": 324,
+      "B1": 150,
       "A1": 320,
       "": 10,
       "C2": 1,

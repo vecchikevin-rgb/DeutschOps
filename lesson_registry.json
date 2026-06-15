@@ -394,11 +394,35 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-06-12T15:05:18.520454"
+    },
+    {
+      "id": "2026-06-15-stefanie",
+      "date": "2026-06-15",
+      "audio_file": "Audiolessons\\lezione_2026-06-15-stefanie-compressed.mp4",
+      "topic": "Weekend trip and pronoun review",
+      "summary_it": "Kevin ha condiviso il suo weekend al Lago di Garda, viaggiando in barca e visitando un castello. La lezione ha coperto vocabolario relativo ai castell...",
+      "vocabulary_count": 36,
+      "grammar_count": 5,
+      "phrases_count": 6,
+      "doc_sections": [
+        "26. Übungen Relativsätze und Wiederholung Pronomen"
+      ],
+      "homework": "",
+      "duration_minutes": 67.3,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-15-stefanie.txt",
+        "data": "data/lezione_2026-06-15-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-15T21:20:06.861693"
     }
   ],
   "stats": {
-    "total": 15,
-    "total_cost_eur": 3.318,
-    "total_minutes": 673.3
+    "total": 16,
+    "total_cost_eur": 3.418,
+    "total_minutes": 740.6
   }
 }
