@@ -418,11 +418,38 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-06-15T21:20:06.861693"
+    },
+    {
+      "id": "2026-06-16-stefanie",
+      "date": "2026-06-16",
+      "audio_file": "Audiolessons\\lezione_2026-06-16-stefanie-compressed.mp4",
+      "topic": "Indefinite pronouns & relative clauses",
+      "summary_it": "Kevin ha rivisto l'audio di Nicos Weg, chiarendo 'mit den Händen' (con le mani, dativo) e le espressioni fisse 'auf keinen Fall' (in nessun caso) vs. ...",
+      "vocabulary_count": 21,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "25. Nicos Weg: Pläne machen, das Angebot, anbieten",
+        "Relative clauses with indefinite pronouns (alles, nichts, etwas)",
+        "Indefinite pronouns: jemand, niemand, jeder declension",
+        "Dative plural -n ending (mit den Händen, von den Leuten, mit allen Dingen)"
+      ],
+      "homework": "Retell a Nicos Weg story using reported speech (Er sagte, dass... / Sie fragte, ob...). Prepare a party-planning dialogue in German with at least 5 turns per person, covering: guest list, time, location, food/drinks. Use indefinite pronouns (jemand, niemand) and relative clauses where possible.",
+      "duration_minutes": 67.4,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-16-stefanie.txt",
+        "data": "data/lezione_2026-06-16-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-16T16:57:35.535918"
     }
   ],
   "stats": {
-    "total": 16,
-    "total_cost_eur": 3.418,
-    "total_minutes": 740.6
+    "total": 17,
+    "total_cost_eur": 3.518,
+    "total_minutes": 808.0
   }
 }
