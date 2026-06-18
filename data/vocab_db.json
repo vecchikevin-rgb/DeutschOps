@@ -1470,12 +1470,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-18-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Appointments and Time Expressions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "lesen": {
@@ -1513,7 +1515,8 @@
         "2026-05-25-stefanie",
         "2026-06-11-stefanie",
         "2026-06-12-stefanie",
-        "2026-06-16-stefanie"
+        "2026-06-16-stefanie",
+        "2026-06-18-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
@@ -1521,9 +1524,10 @@
         "Comparison of adjectives and adverbs",
         "Nico's Weg A1 Summary",
         "Indefinite Pronouns and Relative Clauses",
-        "Indefinite pronouns & relative clauses"
+        "Indefinite pronouns & relative clauses",
+        "Appointments and Time Expressions"
       ],
-      "occurrences": 6,
+      "occurrences": 7,
       "anki_status": "added"
     },
     "vergessen": {
@@ -4175,12 +4179,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-18-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Appointments and Time Expressions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "denn": {
@@ -5019,12 +5025,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-18-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Appointments and Time Expressions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "die speise": {
@@ -5770,12 +5778,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-18-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Appointments and Time Expressions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "das gesicht": {
@@ -9687,12 +9697,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-18-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Appointments and Time Expressions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "beenden": {
@@ -9822,12 +9834,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-18-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Appointments and Time Expressions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "sicher": {
@@ -10723,13 +10737,15 @@
       "first_seen": "2026-05-15",
       "seen_in_lessons": [
         "2026-05-15",
-        "2026-05-25-stefanie"
+        "2026-05-25-stefanie",
+        "2026-06-18-stefanie"
       ],
       "seen_in_topics": [
         "Indirekte Fragen und typische Redemittel",
-        "Comparison of adjectives and adverbs"
+        "Comparison of adjectives and adverbs",
+        "Appointments and Time Expressions"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "parken": {
@@ -12178,13 +12194,15 @@
       "first_seen": "2026-05-22-stefanie",
       "seen_in_lessons": [
         "2026-05-22-stefanie",
-        "2026-05-28-stefanie"
+        "2026-05-28-stefanie",
+        "2026-06-18-stefanie"
       ],
       "seen_in_topics": [
         "Relative clauses with relative pronouns",
-        "Free Conversation and Comparatives"
+        "Free Conversation and Comparatives",
+        "Appointments and Time Expressions"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "gemüse": {
@@ -12943,12 +12961,14 @@
       "level": "A2",
       "first_seen": "2026-05-28-stefanie",
       "seen_in_lessons": [
-        "2026-05-28-stefanie"
+        "2026-05-28-stefanie",
+        "2026-06-18-stefanie"
       ],
       "seen_in_topics": [
-        "Free Conversation and Comparatives"
+        "Free Conversation and Comparatives",
+        "Appointments and Time Expressions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "rennen": {
@@ -15668,27 +15688,407 @@
       ],
       "occurrences": 1,
       "anki_status": "added"
+    },
+    "hymne": {
+      "german": "Hymne",
+      "article": "die",
+      "plural": "Hymnen",
+      "category": "noun",
+      "italian": "inno",
+      "english": "anthem",
+      "example_de": "Die Hymne ist sehr alt.",
+      "level": "A2",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "weiterstudieren": {
+      "german": "weiterstudieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "continuare a studiare",
+      "english": "continue studying",
+      "example_de": "Ich will an der Uni weiterstudieren.",
+      "level": "B1",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "weitergehen": {
+      "german": "weitergehen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "continuare ad andare",
+      "english": "go on, continue",
+      "example_de": "Wir müssen weitergehen.",
+      "level": "A2",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "weggehen": {
+      "german": "weggehen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "andare via",
+      "english": "go away",
+      "example_de": "Ich gehe jetzt weg.",
+      "level": "A2",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "neuanfang": {
+      "german": "Neuanfang",
+      "article": "der",
+      "plural": "Neuanfänge",
+      "category": "noun",
+      "italian": "nuovo inizio",
+      "english": "new beginning",
+      "example_de": "Nach dem Umzug ist es ein Neuanfang.",
+      "level": "B1",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "anfang": {
+      "german": "Anfang",
+      "article": "der",
+      "plural": "Anfänge",
+      "category": "noun",
+      "italian": "inizio",
+      "english": "beginning",
+      "example_de": "Der Anfang war schwer.",
+      "level": "A2",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "beginnen": {
+      "german": "beginnen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "iniziare",
+      "english": "begin",
+      "example_de": "Die Schule beginnt um 8 Uhr.",
+      "level": "A2",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "schaffen": {
+      "german": "schaffen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "farcela, riuscire",
+      "english": "make it, manage",
+      "example_de": "Wir schaffen das zusammen!",
+      "level": "B1",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "üben": {
+      "german": "üben",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "esercitarsi",
+      "english": "practice",
+      "example_de": "Ich habe gestern Deutsch geübt.",
+      "level": "A2",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "erfolg": {
+      "german": "Erfolg",
+      "article": "der",
+      "plural": "Erfolge",
+      "category": "noun",
+      "italian": "successo",
+      "english": "success",
+      "example_de": "Ich wünsche dir viel Erfolg!",
+      "level": "A2",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "belügen": {
+      "german": "belügen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "mentire a qualcuno",
+      "english": "lie to someone",
+      "example_de": "Ich belüge dich nicht.",
+      "level": "B1",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "anlügen": {
+      "german": "anlügen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "mentire a qualcuno",
+      "english": "lie to someone",
+      "example_de": "Warum lügst du mich an?",
+      "level": "B1",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "anschauen": {
+      "german": "anschauen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "guardare",
+      "english": "look at",
+      "example_de": "Ich schaue mir den Film an.",
+      "level": "A2",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "runde": {
+      "german": "Runde",
+      "article": "die",
+      "plural": "Runden",
+      "category": "noun",
+      "italian": "giro",
+      "english": "round",
+      "example_de": "Ich mache eine Runde im Park.",
+      "level": "A2",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "duschen": {
+      "german": "duschen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "fare la doccia",
+      "english": "shower",
+      "example_de": "Ich dusche mich jeden Morgen.",
+      "level": "A1",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "kühlschrank": {
+      "german": "Kühlschrank",
+      "article": "der",
+      "plural": "Kühlschränke",
+      "category": "noun",
+      "italian": "frigorifero",
+      "english": "refrigerator",
+      "example_de": "Der Kühlschrank ist leer.",
+      "level": "A2",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ab": {
+      "german": "ab",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "a partire da",
+      "english": "from (time onwards)",
+      "example_de": "Ab sieben Uhr habe ich Zeit.",
+      "level": "A2",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "genügend": {
+      "german": "genügend",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "sufficiente",
+      "english": "sufficient",
+      "example_de": "Es gibt nicht genügend Zeit.",
+      "level": "B1",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "vor": {
+      "german": "vor",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "prima",
+      "english": "before",
+      "example_de": "Wir treffen uns vor drei Uhr.",
+      "level": "A2",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "danach": {
+      "german": "danach",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "dopo",
+      "english": "afterwards",
+      "example_de": "Danach gehe ich nach Hause.",
+      "level": "A2",
+      "first_seen": "2026-06-18-stefanie",
+      "seen_in_lessons": [
+        "2026-06-18-stefanie"
+      ],
+      "seen_in_topics": [
+        "Appointments and Time Expressions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
     }
   },
   "stats": {
-    "total_words": 813,
+    "total_words": 833,
     "by_category": {
       "expression": 5,
-      "adjective": 91,
-      "noun": 414,
-      "adverb": 54,
-      "verb_separable": 39,
-      "verb_regular": 124,
+      "adjective": 92,
+      "noun": 420,
+      "adverb": 57,
+      "verb_separable": 44,
+      "verb_regular": 127,
       "phrase": 25,
       "": 10,
-      "verb_irregular": 41,
+      "verb_irregular": 43,
       "verb_modal": 6,
       "pronoun": 4
     },
     "by_level": {
-      "A2": 328,
-      "B1": 152,
-      "A1": 321,
+      "A2": 341,
+      "B1": 158,
+      "A1": 322,
       "": 10,
       "C2": 1,
       "B2": 1

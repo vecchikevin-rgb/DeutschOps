@@ -107,17 +107,26 @@ def process_lesson(audio_path: str, lesson_date: str = None):
         # ---------------------------------------------------------------
         print(f"\nSTEP 1/6 — Google Doc")
         print("-" * 30)
-        if not task.is_done("doc"):
-            doc_data = read_and_diff(label=f"pre_{lesson_date}", write_snapshot=False)
-            task.save_stage("doc", {"new_content": doc_data["new_content"]})
-            # effetto irreversibile differito: scrittura snapshot
-            task.defer_commit("snapshot", {
-                "path": doc_data["snapshot_path"],
-                "content": doc_data["snapshot_content"],
-            })
-        else:
+        if task.is_done("doc"):
             print("   Gia' fatto in un run precedente -- riuso il diff.")
-        doc_new = task.stage_result("doc")["new_content"]
+            doc_new = task.stage_result("doc")["new_content"]
+        else:
+            try:
+                doc_data = read_and_diff(label=f"pre_{lesson_date}", write_snapshot=False)
+                task.save_stage("doc", {"new_content": doc_data["new_content"]})
+                # effetto irreversibile differito: scrittura snapshot
+                task.defer_commit("snapshot", {
+                    "path": doc_data["snapshot_path"],
+                    "content": doc_data["snapshot_content"],
+                })
+                doc_new = doc_data["new_content"]
+            except Exception as e:
+                # Token Google scaduto o doc irraggiungibile: il diff e' solo
+                # contesto ausiliario. NON marchiamo lo stage (un resume con
+                # token valido lo ritentera') e proseguiamo con la trascrizione.
+                print(f"   ⚠️  Step 1 saltato (token Google?): {str(e)[:70]}")
+                print("   Proseguo senza contesto doc; rifai login e rilancia per recuperarlo.")
+                doc_new = ""
 
         # ---------------------------------------------------------------
         # Step 2: Transcription

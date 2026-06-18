@@ -445,11 +445,36 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-06-16T16:57:35.535918"
+    },
+    {
+      "id": "2026-06-18-stefanie",
+      "date": "2026-06-18",
+      "audio_file": "Audiolessons\\lezione_2026-06-18-stefanie-compressed.mp4",
+      "topic": "Appointments and Time Expressions",
+      "summary_it": "Kevin e Stefanie hanno discusso il passaggio da Preply a Google Meet o Microsoft Teams, con Kevin che raccomanda Google Meet per la qualità migliore. ...",
+      "vocabulary_count": 30,
+      "grammar_count": 5,
+      "phrases_count": 6,
+      "doc_sections": [
+        "TAB: 25. Nicos Weg - Lerngewohnheiten vocabulary (weiter-, abfahren, Neuanfang, schaffen, üben, lügen, reflexive verbs)",
+        "TAB: 27. Speaking - Appointment making with time expressions (ab, von...bis, vor) and um...zu constructions"
+      ],
+      "homework": "",
+      "duration_minutes": 68.6,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-18-stefanie.txt",
+        "data": "data/lezione_2026-06-18-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-18T17:12:40.274181"
     }
   ],
   "stats": {
-    "total": 17,
-    "total_cost_eur": 3.518,
-    "total_minutes": 808.0
+    "total": 18,
+    "total_cost_eur": 3.618,
+    "total_minutes": 876.6
   }
 }
