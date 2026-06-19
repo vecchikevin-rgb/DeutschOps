@@ -1543,14 +1543,16 @@
       "seen_in_lessons": [
         "storico",
         "2026-05-15",
-        "2026-06-09-stefanie"
+        "2026-06-09-stefanie",
+        "2026-06-19-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
         "Indirekte Fragen und typische Redemittel",
-        "Infinitive Constructions with zu"
+        "Infinitive Constructions with zu",
+        "Prepositional Adverbs & Finalsätze"
       ],
-      "occurrences": 3,
+      "occurrences": 4,
       "anki_status": "added"
     },
     "tragen": {
@@ -12195,14 +12197,16 @@
       "seen_in_lessons": [
         "2026-05-22-stefanie",
         "2026-05-28-stefanie",
-        "2026-06-18-stefanie"
+        "2026-06-18-stefanie",
+        "2026-06-19-stefanie"
       ],
       "seen_in_topics": [
         "Relative clauses with relative pronouns",
         "Free Conversation and Comparatives",
-        "Appointments and Time Expressions"
+        "Appointments and Time Expressions",
+        "Prepositional Adverbs & Finalsätze"
       ],
-      "occurrences": 3,
+      "occurrences": 4,
       "anki_status": "added"
     },
     "gemüse": {
@@ -14092,12 +14096,14 @@
       "level": "A2",
       "first_seen": "2026-06-09-stefanie",
       "seen_in_lessons": [
-        "2026-06-09-stefanie"
+        "2026-06-09-stefanie",
+        "2026-06-19-stefanie"
       ],
       "seen_in_topics": [
-        "Infinitive Constructions with zu"
+        "Infinitive Constructions with zu",
+        "Prepositional Adverbs & Finalsätze"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "holen": {
@@ -15833,12 +15839,14 @@
       "level": "B1",
       "first_seen": "2026-06-18-stefanie",
       "seen_in_lessons": [
-        "2026-06-18-stefanie"
+        "2026-06-18-stefanie",
+        "2026-06-19-stefanie"
       ],
       "seen_in_topics": [
-        "Appointments and Time Expressions"
+        "Appointments and Time Expressions",
+        "Prepositional Adverbs & Finalsätze"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "üben": {
@@ -15890,12 +15898,14 @@
       "level": "B1",
       "first_seen": "2026-06-18-stefanie",
       "seen_in_lessons": [
-        "2026-06-18-stefanie"
+        "2026-06-18-stefanie",
+        "2026-06-19-stefanie"
       ],
       "seen_in_topics": [
-        "Appointments and Time Expressions"
+        "Appointments and Time Expressions",
+        "Prepositional Adverbs & Finalsätze"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "anlügen": {
@@ -16068,27 +16078,445 @@
       ],
       "occurrences": 1,
       "anki_status": "added"
+    },
+    "wegen": {
+      "german": "wegen",
+      "article": "",
+      "plural": "",
+      "category": "phrase",
+      "italian": "a causa di",
+      "english": "because of",
+      "example_de": "Sie sind wütend wegen Nico",
+      "level": "A2",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "wütend": {
+      "german": "wütend",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "arrabbiato",
+      "english": "angry",
+      "example_de": "Sie sind wütend wegen des schlechten Wetters",
+      "level": "A2",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sauer": {
+      "german": "sauer",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "arrabbiato / acido",
+      "english": "angry / sour",
+      "example_de": "Eine Zitrone ist sauer",
+      "level": "A2",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "eröffnen": {
+      "german": "eröffnen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "inaugurare / aprire ufficialmente",
+      "english": "to inaugurate / to open officially",
+      "example_de": "Ich muss ein Konto eröffnen",
+      "level": "B1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "eröffnung": {
+      "german": "Eröffnung",
+      "article": "die",
+      "plural": "Eröffnungen",
+      "category": "noun",
+      "italian": "inaugurazione / apertura",
+      "english": "inauguration / opening",
+      "example_de": "Die Eröffnung des Festivals ist morgen",
+      "level": "B1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "kümmern": {
+      "german": "kümmern",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "preoccuparsi di / prendersi cura di",
+      "english": "to take care of / to worry about",
+      "example_de": "Ich kümmere mich um meine Eltern",
+      "level": "B1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "konto": {
+      "german": "Konto",
+      "article": "das",
+      "plural": "Konten",
+      "category": "noun",
+      "italian": "conto (bancario)",
+      "english": "account (bank account)",
+      "example_de": "Ich will ein Konto eröffnen",
+      "level": "A2",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "kurs": {
+      "german": "Kurs",
+      "article": "der",
+      "plural": "Kurse",
+      "category": "noun",
+      "italian": "corso",
+      "english": "course",
+      "example_de": "Der Kurs ist um 11 Uhr",
+      "level": "A2",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "willkommensgeschenk": {
+      "german": "Willkommensgeschenk",
+      "article": "das",
+      "plural": "Willkommensgeschenke",
+      "category": "noun",
+      "italian": "regalo di benvenuto",
+      "english": "welcome gift",
+      "example_de": "Sie will ihm ein Willkommensgeschenk geben",
+      "level": "B1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "fahrrad": {
+      "german": "Fahrrad",
+      "article": "das",
+      "plural": "Fahrräder",
+      "category": "noun",
+      "italian": "bicicletta",
+      "english": "bicycle",
+      "example_de": "Mit dem Fahrrad geht es schneller",
+      "level": "A1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "bank": {
+      "german": "Bank",
+      "article": "die",
+      "plural": "Banken",
+      "category": "noun",
+      "italian": "banca",
+      "english": "bank",
+      "example_de": "Ich muss zur Bank gehen",
+      "level": "A1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "termin": {
+      "german": "Termin",
+      "article": "der",
+      "plural": "Termine",
+      "category": "noun",
+      "italian": "appuntamento",
+      "english": "appointment",
+      "example_de": "Ich habe einen Termin",
+      "level": "A2",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "autorennen": {
+      "german": "Autorennen",
+      "article": "das",
+      "plural": "Autorennen",
+      "category": "noun",
+      "italian": "gara automobilistica",
+      "english": "car race",
+      "example_de": "Bei dem Autorennen hat mein Mann verloren",
+      "level": "B1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "garten": {
+      "german": "Garten",
+      "article": "der",
+      "plural": "Gärten",
+      "category": "noun",
+      "italian": "giardino",
+      "english": "garden",
+      "example_de": "Der Garten ist hinter dem Haus",
+      "level": "A1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "damit": {
+      "german": "damit",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "con quello / affinché",
+      "english": "with that / so that",
+      "example_de": "Damit geht es schneller",
+      "level": "B1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "dabei": {
+      "german": "dabei",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "a quello / lì",
+      "english": "at that / thereby",
+      "example_de": "Dabei verliert er",
+      "level": "B1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "dafür": {
+      "german": "dafür",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "per quello",
+      "english": "for that",
+      "example_de": "Dafür habe ich 100 Euro bezahlt",
+      "level": "B1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "darüber": {
+      "german": "darüber",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "di quello / su quello",
+      "english": "about that",
+      "example_de": "Darüber spreche ich nicht gerne",
+      "level": "B1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "dagegen": {
+      "german": "dagegen",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "contro quello",
+      "english": "against that",
+      "example_de": "Dagegen habe ich nichts",
+      "level": "B1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "daneben": {
+      "german": "daneben",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "accanto a quello",
+      "english": "next to that",
+      "example_de": "Ich stehe daneben",
+      "level": "B1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "davor": {
+      "german": "davor",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "davanti a quello",
+      "english": "in front of that",
+      "example_de": "Ich stehe davor",
+      "level": "B1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "dahinter": {
+      "german": "dahinter",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "dietro a quello",
+      "english": "behind that",
+      "example_de": "Der Garten ist dahinter",
+      "level": "B1",
+      "first_seen": "2026-06-19-stefanie",
+      "seen_in_lessons": [
+        "2026-06-19-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional Adverbs & Finalsätze"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
     }
   },
   "stats": {
-    "total_words": 833,
+    "total_words": 855,
     "by_category": {
       "expression": 5,
-      "adjective": 92,
-      "noun": 420,
-      "adverb": 57,
+      "adjective": 94,
+      "noun": 429,
+      "adverb": 65,
       "verb_separable": 44,
-      "verb_regular": 127,
-      "phrase": 25,
+      "verb_regular": 129,
+      "phrase": 26,
       "": 10,
       "verb_irregular": 43,
       "verb_modal": 6,
       "pronoun": 4
     },
     "by_level": {
-      "A2": 341,
-      "B1": 158,
-      "A1": 322,
+      "A2": 347,
+      "B1": 171,
+      "A1": 325,
       "": 10,
       "C2": 1,
       "B2": 1

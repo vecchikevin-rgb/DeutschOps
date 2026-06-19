@@ -470,11 +470,36 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-06-18T17:12:40.274181"
+    },
+    {
+      "id": "2026-06-19-stefanie",
+      "date": "2026-06-19",
+      "audio_file": "Audiolessons\\lezione_2026-06-19-stefanie-compressed.mp4",
+      "topic": "Prepositional Adverbs & Finalsätze",
+      "summary_it": "Kevin ha riassunto l'episodio 5 di Nicos Weg, concentrandosi su Nico che mente ai genitori riguardo agli studi e Yara che gli offre una bicicletta. St...",
+      "vocabulary_count": 27,
+      "grammar_count": 5,
+      "phrases_count": 4,
+      "doc_sections": [
+        "25. Nicos Weg",
+        "28. Prepositional Adverbs"
+      ],
+      "homework": "",
+      "duration_minutes": 65.8,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-19-stefanie.txt",
+        "data": "data/lezione_2026-06-19-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-19T21:51:25.214907"
     }
   ],
   "stats": {
-    "total": 18,
-    "total_cost_eur": 3.618,
-    "total_minutes": 876.6
+    "total": 19,
+    "total_cost_eur": 3.718,
+    "total_minutes": 942.4
   }
 }
