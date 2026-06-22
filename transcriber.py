@@ -111,10 +111,15 @@ def transcribe_api(audio_path: Path, output_path: Path) -> str:
 
 def transcribe_local(audio_path: Path, output_path: Path) -> str:
     """
-    Trascrizione locale via faster-whisper con:
-    - Progress bar con % e tempo rimanente
-    - Resume automatico da checkpoint se interrotta
+    Trascrizione locale via faster-whisper.
+    Divide l'audio in chunk da 15 min per evitare OOM sul FFT STFT
+    (faster-whisper carica l'intero file in memoria per l'estrazione feature).
+    Supporta resume da checkpoint per-chunk.
     """
+    import shutil
+    import subprocess
+    import tempfile
+
     try:
         from faster_whisper import WhisperModel
         from tqdm import tqdm
@@ -123,149 +128,142 @@ def transcribe_local(audio_path: Path, output_path: Path) -> str:
         print("   Esegui: pip install faster-whisper tqdm")
         return transcribe_api(audio_path, output_path)
 
-    # File checkpoint — salva progresso ogni N segmenti
     checkpoint_path = output_path.parent / f"{output_path.stem}.checkpoint.json"
 
-    # Carica checkpoint se esiste
-    completed_segments = []
-    start_from = 0.0
+    # Carica checkpoint — solo formato chunk-based (chunks_done presente).
+    # Checkpoint vecchio formato (solo last_end) viene scartato e si ricomincia.
+    completed_segments: list[str] = []
+    chunks_done = 0
 
     if checkpoint_path.exists():
         try:
-            checkpoint = json.loads(checkpoint_path.read_text(encoding="utf-8"))
-            completed_segments = checkpoint.get("segments", [])
-            start_from = checkpoint.get("last_end", 0.0)
-            print(f"♻️  Checkpoint trovato — riprendo da {start_from:.0f}s "
-                  f"({len(completed_segments)} segmenti già completati)")
+            ck = json.loads(checkpoint_path.read_text(encoding="utf-8"))
+            if "chunks_done" in ck:
+                completed_segments = ck.get("segments", [])
+                chunks_done = ck.get("chunks_done", 0)
+                print(f"♻️  Checkpoint trovato — chunk {chunks_done} completati, "
+                      f"{len(completed_segments)} segmenti già salvati")
+            else:
+                print("⚠️  Checkpoint vecchio formato — ricomincio da zero")
+                checkpoint_path.unlink()
         except Exception:
-            print("⚠️  Checkpoint corrotto, ricomincio da zero")
-            completed_segments = []
-            start_from = 0.0
+            print("⚠️  Checkpoint corrotto — ricomincio da zero")
+            checkpoint_path.unlink()
     else:
-        print("🖥️  Elaborazione locale (CPU)")
-        print("   Premi Ctrl+C per interrompere — il progresso verrà salvato")
+        print("🖥️  Elaborazione locale (CPU) — chunk da 15 min")
+        print("   Premi Ctrl+C per interrompere — il progresso verrà salvato per chunk")
 
     print(f"   Modello: small | Lingua: auto-detect\n")
 
-    model = WhisperModel("small", device="cpu", compute_type="int8")
-
-    # Prima passata veloce per ottenere durata totale e numero segmenti stimati
-    import wave
-    import contextlib
+    # Durata totale (ffprobe o fallback)
+    ffmpeg_root = Path(__file__).resolve().parent
+    ffmpeg_bin = str(ffmpeg_root / "ffmpeg.exe") if (ffmpeg_root / "ffmpeg.exe").exists() else "ffmpeg"
     try:
-        # Stima durata dal file
-        import subprocess
-        result = subprocess.run(
+        res = subprocess.run(
             ["ffprobe", "-v", "error", "-show_entries", "format=duration",
              "-of", "default=noprint_wrappers=1:nokey=1", str(audio_path)],
             capture_output=True, text=True
         )
-        total_duration = float(result.stdout.strip()) if result.returncode == 0 else 3600.0
+        total_duration = float(res.stdout.strip()) if res.returncode == 0 else 3600.0
     except Exception:
-        total_duration = 3600.0  # fallback 60 min
+        total_duration = 3600.0
 
     print(f"   Durata stimata: {total_duration/60:.0f} minuti")
 
-    # Trascrizione con progress bar
-    segments_gen, info = model.transcribe(
-        str(audio_path),
-        beam_size=5,
-        language=None,
-        vad_filter=True,
-        word_timestamps=False
-    )
+    CHUNK_MINUTES = 15
+    chunk_sec = CHUNK_MINUTES * 60
 
-    actual_duration = info.duration if hasattr(info, 'duration') else total_duration
-    print(f"🌍 Lingua rilevata: {info.language} "
-          f"(confidenza: {info.language_probability:.0%})\n")
-
-    new_segments = []
-    last_save = 0
-    SAVE_EVERY = 30  # salva checkpoint ogni 30 segmenti
-
+    tmp_dir = Path(tempfile.mkdtemp(prefix="whisper_chunks_"))
     try:
-        with tqdm(
-            total=actual_duration,
-            unit="s",
-            unit_scale=True,
-            bar_format="   {l_bar}{bar}| {n:.0f}/{total:.0f}s [{elapsed}<{remaining}]",
-            colour="green"
-        ) as pbar:
+        # Dividi con ffmpeg segment muxer
+        out_pattern = str(tmp_dir / "chunk_%03d.mp4")
+        subprocess.run([
+            ffmpeg_bin, "-i", str(audio_path),
+            "-f", "segment", "-segment_time", str(chunk_sec),
+            "-c", "copy", "-reset_timestamps", "1",
+            out_pattern, "-y", "-loglevel", "quiet"
+        ], check=True)
 
-            # Avanza la progress bar ai segmenti già completati
-            if start_from > 0:
-                pbar.update(start_from)
+        chunks = sorted(tmp_dir.glob("chunk_*.mp4"))
+        print(f"   Diviso in {len(chunks)} chunk da ~{CHUNK_MINUTES} min\n")
 
-            for segment in segments_gen:
-                # Salta segmenti già completati nel checkpoint
-                if segment.end <= start_from:
+        model = WhisperModel("small", device="cpu", compute_type="int8")
+
+        detected_language = "de"
+        new_segments: list[str] = []
+
+        try:
+            for i, chunk_path in enumerate(chunks):
+                if i < chunks_done:
+                    print(f"   Chunk {i+1}/{len(chunks)} — già completato, skip")
                     continue
 
-                new_segments.append(segment.text.strip())
+                print(f"   Chunk {i+1}/{len(chunks)} (~{CHUNK_MINUTES} min)...")
+                segments_gen, info = model.transcribe(
+                    str(chunk_path),
+                    beam_size=5,
+                    language=None,
+                    vad_filter=True,
+                    word_timestamps=False
+                )
 
-                # Aggiorna progress bar
-                pbar.update(segment.end - max(segment.start, start_from))
-                pbar.set_postfix({
-                    "segmenti": len(completed_segments) + len(new_segments),
-                    "checkpoint": "💾" if len(new_segments) % SAVE_EVERY == 0 else "  "
-                })
+                if i == 0:
+                    detected_language = info.language
+                    print(f"🌍 Lingua rilevata: {info.language} "
+                          f"(confidenza: {info.language_probability:.0%})\n")
 
-                # Salva checkpoint periodicamente
-                if len(new_segments) - last_save >= SAVE_EVERY:
-                    all_so_far = completed_segments + new_segments
-                    checkpoint_data = {
-                        "segments": all_so_far,
-                        "last_end": segment.end,
-                        "audio_file": str(audio_path)
-                    }
-                    checkpoint_path.write_text(
-                        json.dumps(checkpoint_data, ensure_ascii=False),
-                        encoding="utf-8"
-                    )
-                    last_save = len(new_segments)
+                chunk_text: list[str] = []
+                with tqdm(
+                    total=info.duration,
+                    unit="s", unit_scale=True,
+                    bar_format="   {l_bar}{bar}| {n:.0f}/{total:.0f}s [{elapsed}<{remaining}]",
+                    colour="green"
+                ) as pbar:
+                    for seg in segments_gen:
+                        chunk_text.append(seg.text.strip())
+                        pbar.update(seg.end - seg.start)
 
-    except KeyboardInterrupt:
-        # Salva checkpoint prima di uscire
-        print("\n\n⏸️  Trascrizione interrotta — salvo checkpoint...")
-        all_so_far = completed_segments + new_segments
-        if all_so_far:
-            checkpoint_data = {
-                "segments": all_so_far,
-                "last_end": new_segments[-1] if new_segments else start_from,
-                "audio_file": str(audio_path)
-            }
-            checkpoint_path.write_text(
-                json.dumps(checkpoint_data, ensure_ascii=False),
-                encoding="utf-8"
-            )
-            print(f"💾 Checkpoint salvato: {len(all_so_far)} segmenti")
-            print(f"   Rilancia lo script per riprendere da dove eri.")
-        raise SystemExit(0)
+                new_segments.extend(chunk_text)
+                chunks_done = i + 1
 
-    # Completato — unisci tutto e pulisci checkpoint
-    all_segments = completed_segments + new_segments
-    text = " ".join(all_segments).strip()
-    output_path.write_text(text, encoding="utf-8")
+                # Salva checkpoint dopo ogni chunk completato
+                checkpoint_path.write_text(
+                    json.dumps({
+                        "segments": completed_segments + new_segments,
+                        "chunks_done": chunks_done,
+                        "audio_file": str(audio_path),
+                    }, ensure_ascii=False),
+                    encoding="utf-8"
+                )
 
-    # Meta con durata REALE (da faster-whisper) e costo 0 (locale).
-    # Senza questo, main.py stima la durata dal peso del file -> per un
-    # video non compresso da ~2.7GB risultano ~5663 min / €34 fittizi nei KPI.
-    meta_path = output_path.with_suffix(".meta.json")
-    meta_path.write_text(json.dumps({
-        "duration_seconds": actual_duration,
-        "duration_minutes": actual_duration / 60,
-        "cost_eur": 0.0,
-        "language": info.language,
-        "engine": "faster-whisper-local",
-    }), encoding="utf-8")
+        except KeyboardInterrupt:
+            print("\n\n⏸️  Trascrizione interrotta — checkpoint salvato per chunk")
+            raise SystemExit(0)
 
-    if checkpoint_path.exists():
-        checkpoint_path.unlink()
-        print("🗑️  Checkpoint rimosso (trascrizione completata)")
+        # Completato
+        all_segments = completed_segments + new_segments
+        text = " ".join(all_segments).strip()
+        output_path.write_text(text, encoding="utf-8")
 
-    print(f"\n✅ Trascritto in: {output_path}")
-    print(f"⏱️  Durata reale: {actual_duration:.0f}s ({actual_duration/60:.1f} min)")
-    return text
+        meta_path = output_path.with_suffix(".meta.json")
+        meta_path.write_text(json.dumps({
+            "duration_seconds": total_duration,
+            "duration_minutes": total_duration / 60,
+            "cost_eur": 0.0,
+            "language": detected_language,
+            "engine": "faster-whisper-local-chunked",
+        }), encoding="utf-8")
+
+        if checkpoint_path.exists():
+            checkpoint_path.unlink()
+            print("🗑️  Checkpoint rimosso (trascrizione completata)")
+
+        print(f"\n✅ Trascritto in: {output_path}")
+        print(f"⏱️  Durata reale: {total_duration:.0f}s ({total_duration/60:.1f} min)")
+        return text
+
+    finally:
+        shutil.rmtree(tmp_dir, ignore_errors=True)
 
 
 def transcribe(audio_path: str | Path, output_filename: str | None = None) -> str:

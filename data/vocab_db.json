@@ -1196,12 +1196,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-22-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Dative verbs and prepositional adverbs"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "fliegen": {
@@ -1297,12 +1299,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-22-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Dative verbs and prepositional adverbs"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "bestehen": {
@@ -1663,12 +1667,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-22-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Dative verbs and prepositional adverbs"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "geben": {
@@ -7650,12 +7656,14 @@
       "level": "B1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-22-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Dative verbs and prepositional adverbs"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "der kommentar": {
@@ -12022,12 +12030,14 @@
       "level": "A2",
       "first_seen": "2026-05-22-stefanie",
       "seen_in_lessons": [
-        "2026-05-22-stefanie"
+        "2026-05-22-stefanie",
+        "2026-06-22-stefanie"
       ],
       "seen_in_topics": [
-        "Relative clauses with relative pronouns"
+        "Relative clauses with relative pronouns",
+        "Dative verbs and prepositional adverbs"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "stock": {
@@ -14923,12 +14933,14 @@
       "level": "A2",
       "first_seen": "2026-06-15-stefanie",
       "seen_in_lessons": [
-        "2026-06-15-stefanie"
+        "2026-06-15-stefanie",
+        "2026-06-22-stefanie"
       ],
       "seen_in_topics": [
-        "Weekend trip and pronoun review"
+        "Weekend trip and pronoun review",
+        "Dative verbs and prepositional adverbs"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "boot": {
@@ -16496,26 +16508,273 @@
       ],
       "occurrences": 1,
       "anki_status": "added"
+    },
+    "gehören": {
+      "german": "gehören",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "appartenere",
+      "english": "to belong to",
+      "example_de": "Die Tasche gehört mir.",
+      "level": "A2",
+      "first_seen": "2026-06-22-stefanie",
+      "seen_in_lessons": [
+        "2026-06-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Dative verbs and prepositional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "öffentlich": {
+      "german": "öffentlich",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "pubblico",
+      "english": "public",
+      "example_de": "Der öffentliche Transport ist günstig.",
+      "level": "A2",
+      "first_seen": "2026-06-22-stefanie",
+      "seen_in_lessons": [
+        "2026-06-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Dative verbs and prepositional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "vermeiden": {
+      "german": "vermeiden",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "evitare",
+      "english": "to avoid",
+      "example_de": "Ich vermeide den Verkehr.",
+      "level": "B1",
+      "first_seen": "2026-06-22-stefanie",
+      "seen_in_lessons": [
+        "2026-06-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Dative verbs and prepositional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "wunderbar": {
+      "german": "wunderbar",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "meraviglioso",
+      "english": "wonderful",
+      "example_de": "Das Wetter ist wunderbar.",
+      "level": "A2",
+      "first_seen": "2026-06-22-stefanie",
+      "seen_in_lessons": [
+        "2026-06-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Dative verbs and prepositional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "gemütlich": {
+      "german": "gemütlich",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "comodo, accogliente",
+      "english": "comfortable, cozy",
+      "example_de": "Dein Schreibtisch ist sehr gemütlich.",
+      "level": "A2",
+      "first_seen": "2026-06-22-stefanie",
+      "seen_in_lessons": [
+        "2026-06-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Dative verbs and prepositional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "rücken": {
+      "german": "Rücken",
+      "article": "der",
+      "plural": "Rücken",
+      "category": "noun",
+      "italian": "schiena",
+      "english": "back",
+      "example_de": "Mein Rücken tut weh.",
+      "level": "A2",
+      "first_seen": "2026-06-22-stefanie",
+      "seen_in_lessons": [
+        "2026-06-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Dative verbs and prepositional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "schmerzen": {
+      "german": "schmerzen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "far male, dolere",
+      "english": "to hurt, to ache",
+      "example_de": "Mein Rücken schmerzt.",
+      "level": "B1",
+      "first_seen": "2026-06-22-stefanie",
+      "seen_in_lessons": [
+        "2026-06-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Dative verbs and prepositional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "bauen": {
+      "german": "bauen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "costruire",
+      "english": "to build",
+      "example_de": "Wir bauen ein Haus.",
+      "level": "A2",
+      "first_seen": "2026-06-22-stefanie",
+      "seen_in_lessons": [
+        "2026-06-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Dative verbs and prepositional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "lassen": {
+      "german": "lassen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "lasciare, farsi fare",
+      "english": "to let, to have something done",
+      "example_de": "Ich lasse mir die Haare schneiden.",
+      "level": "B1",
+      "first_seen": "2026-06-22-stefanie",
+      "seen_in_lessons": [
+        "2026-06-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Dative verbs and prepositional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "pferd": {
+      "german": "Pferd",
+      "article": "das",
+      "plural": "Pferde",
+      "category": "noun",
+      "italian": "cavallo",
+      "english": "horse",
+      "example_de": "Das Pferd hat lange Haare.",
+      "level": "A2",
+      "first_seen": "2026-06-22-stefanie",
+      "seen_in_lessons": [
+        "2026-06-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Dative verbs and prepositional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "besonders": {
+      "german": "besonders",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "specialmente",
+      "english": "especially",
+      "example_de": "Ich freue mich besonders darauf.",
+      "level": "A2",
+      "first_seen": "2026-06-22-stefanie",
+      "seen_in_lessons": [
+        "2026-06-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Dative verbs and prepositional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sterben": {
+      "german": "sterben",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "morire",
+      "english": "to die",
+      "example_de": "Das Pferd ist gestorben.",
+      "level": "B1",
+      "first_seen": "2026-06-22-stefanie",
+      "seen_in_lessons": [
+        "2026-06-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Dative verbs and prepositional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "fast": {
+      "german": "fast",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "quasi",
+      "english": "almost, nearly",
+      "example_de": "Ich bin fast fertig.",
+      "level": "A2",
+      "first_seen": "2026-06-22-stefanie",
+      "seen_in_lessons": [
+        "2026-06-22-stefanie"
+      ],
+      "seen_in_topics": [
+        "Dative verbs and prepositional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
     }
   },
   "stats": {
-    "total_words": 855,
+    "total_words": 868,
     "by_category": {
       "expression": 5,
-      "adjective": 94,
-      "noun": 429,
-      "adverb": 65,
+      "adjective": 97,
+      "noun": 431,
+      "adverb": 67,
       "verb_separable": 44,
-      "verb_regular": 129,
+      "verb_regular": 133,
       "phrase": 26,
       "": 10,
-      "verb_irregular": 43,
+      "verb_irregular": 45,
       "verb_modal": 6,
       "pronoun": 4
     },
     "by_level": {
-      "A2": 347,
-      "B1": 171,
+      "A2": 356,
+      "B1": 175,
       "A1": 325,
       "": 10,
       "C2": 1,

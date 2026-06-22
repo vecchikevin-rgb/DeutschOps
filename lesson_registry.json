@@ -495,11 +495,38 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-06-19T21:51:25.214907"
+    },
+    {
+      "id": "2026-06-22-stefanie",
+      "date": "2026-06-22",
+      "audio_file": "Audiolessons\\lezione_2026-06-22-stefanie-compressed.mp4",
+      "topic": "Dative verbs and prepositional adverbs",
+      "summary_it": "Kevin ha raccontato il suo weekend al Lago di Garda, viaggiando in traghetto. La lezione si è concentrata su tre strutture con dativo: 'gefallen' (pia...",
+      "vocabulary_count": 19,
+      "grammar_count": 5,
+      "phrases_count": 4,
+      "doc_sections": [
+        "TAB: 27. Speaking - Weekend activities at Gardasee",
+        "TAB: 27. Speaking - Dative verbs gefallen/schmecken/gehören",
+        "TAB: 27. Speaking - Lassen constructions",
+        "TAB: 27. Speaking - Prepositional adverbs introduction"
+      ],
+      "homework": "",
+      "duration_minutes": 65.7,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-22-stefanie.txt",
+        "data": "data/lezione_2026-06-22-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-23T00:48:16.675764"
     }
   ],
   "stats": {
-    "total": 19,
-    "total_cost_eur": 3.718,
-    "total_minutes": 942.4
+    "total": 20,
+    "total_cost_eur": 3.818,
+    "total_minutes": 1008.1
   }
 }
