@@ -91,7 +91,7 @@ def process_lesson(audio_path: str, lesson_date: str = None):
     audio_path, _preflight = run_preflight(audio_path)
 
     # Prepare audio (compress if video)
-    print("PREP — Audio preparation")
+    print("\nPREP — Audio preparation")
     print("-" * 30)
     audio_path = prepare_audio(audio_path, lesson_date)
 

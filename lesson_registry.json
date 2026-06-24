@@ -522,11 +522,36 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-06-23T00:48:16.675764"
+    },
+    {
+      "id": "2026-06-24-stefanie",
+      "date": "2026-06-24",
+      "audio_file": "Audiolessons\\lezione_2026-06-24-stefanie-compressed.mp4",
+      "topic": "Verbs with Prepositions",
+      "summary_it": "Kevin e Stefanie hanno lavorato intensivamente sui verbi che richiedono preposizioni specifiche (Verben mit Präpositionalergänzung), coprendo struttur...",
+      "vocabulary_count": 34,
+      "grammar_count": 5,
+      "phrases_count": 4,
+      "doc_sections": [
+        "25. Nicos Weg",
+        "29. Liste Verben mit Präposition"
+      ],
+      "homework": "",
+      "duration_minutes": 60.5,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-24-stefanie.txt",
+        "data": "data/lezione_2026-06-24-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-24T15:53:30.003490"
     }
   ],
   "stats": {
-    "total": 20,
-    "total_cost_eur": 3.818,
-    "total_minutes": 1008.1
+    "total": 21,
+    "total_cost_eur": 3.918,
+    "total_minutes": 1068.6
   }
 }

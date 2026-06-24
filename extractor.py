@@ -149,9 +149,9 @@ def enrich_grammar_with_web(grammar_points: list) -> list:
 
 
 def extract(transcript_path: str, output_filename: str = None,
-            doc_new_content: str = "") -> dict:
+            doc_new_content: str = "", visual_context: dict | None = None) -> dict:
     """
-    Extract didactic structure from transcript + Google Doc new content.
+    Extract didactic structure from transcript + Google Doc new content + visual context.
     Call 1: base vocabulary and structure (no web search)
     Call 2: web search only for new or incomplete grammar rules
     """
@@ -173,10 +173,18 @@ def extract(transcript_path: str, output_filename: str = None,
         trimmed = (doc_new_content[-8000:]
                    if len(doc_new_content) > 8000
                    else doc_new_content)
-        user_content += f"=== DOC NEW CONTENT ===\n{trimmed}"
+        user_content += f"=== DOC NEW CONTENT ===\n{trimmed}\n\n"
         print(f"Doc content: {len(trimmed)} chars included")
     else:
         print("Doc content: none")
+
+    if visual_context and visual_context.get("visual_items"):
+        from frame_extractor import format_for_extraction
+        visual_text = format_for_extraction(visual_context)
+        if visual_text:
+            user_content += visual_text
+            print(f"Visual content: {visual_context['frames_with_content']}/"
+                  f"{visual_context['frames_analyzed']} frame con testo")
 
     # Call 1: base extraction
     print("Call 1/2 -- Base extraction...")

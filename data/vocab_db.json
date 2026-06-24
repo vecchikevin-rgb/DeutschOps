@@ -864,13 +864,15 @@
       "first_seen": "storico",
       "seen_in_lessons": [
         "storico",
-        "2026-05-19-stefanie"
+        "2026-05-19-stefanie",
+        "2026-06-24-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
-        "Imperative and Modal Verbs Review"
+        "Imperative and Modal Verbs Review",
+        "Verbs with Prepositions"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "passen": {
@@ -7888,12 +7890,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-24-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Verbs with Prepositions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "ausmachen": {
@@ -9708,13 +9712,15 @@
       "first_seen": "storico",
       "seen_in_lessons": [
         "storico",
-        "2026-06-18-stefanie"
+        "2026-06-18-stefanie",
+        "2026-06-24-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
-        "Appointments and Time Expressions"
+        "Appointments and Time Expressions",
+        "Verbs with Prepositions"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "beenden": {
@@ -13916,12 +13922,14 @@
       "level": "A2",
       "first_seen": "2026-06-08-stefanie",
       "seen_in_lessons": [
-        "2026-06-08-stefanie"
+        "2026-06-08-stefanie",
+        "2026-06-24-stefanie"
       ],
       "seen_in_topics": [
-        "Formula 1 trip and past events"
+        "Formula 1 trip and past events",
+        "Verbs with Prepositions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "gesundheit": {
@@ -15813,12 +15821,14 @@
       "level": "A2",
       "first_seen": "2026-06-18-stefanie",
       "seen_in_lessons": [
-        "2026-06-18-stefanie"
+        "2026-06-18-stefanie",
+        "2026-06-24-stefanie"
       ],
       "seen_in_topics": [
-        "Appointments and Time Expressions"
+        "Appointments and Time Expressions",
+        "Verbs with Prepositions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "beginnen": {
@@ -15832,12 +15842,14 @@
       "level": "A2",
       "first_seen": "2026-06-18-stefanie",
       "seen_in_lessons": [
-        "2026-06-18-stefanie"
+        "2026-06-18-stefanie",
+        "2026-06-24-stefanie"
       ],
       "seen_in_topics": [
-        "Appointments and Time Expressions"
+        "Appointments and Time Expressions",
+        "Verbs with Prepositions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "schaffen": {
@@ -16755,26 +16767,558 @@
       ],
       "occurrences": 1,
       "anki_status": "added"
+    },
+    "mittlerweile": {
+      "german": "mittlerweile",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "nel frattempo",
+      "english": "meanwhile, in the meantime",
+      "example_de": "Ich kann das mittlerweile im Schlaf.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "inzwischen": {
+      "german": "inzwischen",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "nel frattempo",
+      "english": "meanwhile, in the meantime",
+      "example_de": "Inzwischen habe ich viel gelernt.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "formular": {
+      "german": "Formular",
+      "article": "das",
+      "plural": "Formulare",
+      "category": "noun",
+      "italian": "modulo",
+      "english": "form",
+      "example_de": "Das Formular muss ausgefüllt werden.",
+      "level": "A2",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "einkommen": {
+      "german": "Einkommen",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "reddito",
+      "english": "income",
+      "example_de": "Die Bank will ein festes Einkommen sehen.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "fest": {
+      "german": "fest",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "fisso, stabile",
+      "english": "fixed, steady",
+      "example_de": "Hast du ein festes Einkommen?",
+      "level": "A2",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "abhängen": {
+      "german": "abhängen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "dipendere",
+      "english": "to depend",
+      "example_de": "Es hängt davon ab, ob es regnet.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "achten": {
+      "german": "achten",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "fare attenzione",
+      "english": "to pay attention",
+      "example_de": "Man sollte darauf achten.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ernährung": {
+      "german": "Ernährung",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "alimentazione, nutrizione",
+      "english": "nutrition",
+      "example_de": "Achte besser auf deine Ernährung!",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "aufmerksamkeit": {
+      "german": "Aufmerksamkeit",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "attenzione",
+      "english": "attention",
+      "example_de": "Ich danke Ihnen für Ihre Aufmerksamkeit.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ende": {
+      "german": "Ende",
+      "article": "das",
+      "plural": "Enden",
+      "category": "noun",
+      "italian": "fine",
+      "english": "end",
+      "example_de": "Das Ende ist nah.",
+      "level": "A2",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ärgern": {
+      "german": "ärgern",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "arrabbiarsi",
+      "english": "to get angry",
+      "example_de": "Wir ärgern uns über die Verspätung.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "beschweren": {
+      "german": "beschweren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "lamentarsi",
+      "english": "to complain",
+      "example_de": "Sie beschweren sich bei der Fluggesellschaft über die Verspätung.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "fluggesellschaft": {
+      "german": "Fluggesellschaft",
+      "article": "die",
+      "plural": "Fluggesellschaften",
+      "category": "noun",
+      "italian": "compagnia aerea",
+      "english": "airline",
+      "example_de": "Die Fluggesellschaft hat den Flug annulliert.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "verspätung": {
+      "german": "Verspätung",
+      "article": "die",
+      "plural": "Verspätungen",
+      "category": "noun",
+      "italian": "ritardo",
+      "english": "delay",
+      "example_de": "Der Zug hat Verspätung.",
+      "level": "A2",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "verspäten": {
+      "german": "verspäten",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "ritardare",
+      "english": "to be late, to delay",
+      "example_de": "Der Flug verspätet sich.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "bewerben": {
+      "german": "bewerben",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "candidarsi",
+      "english": "to apply",
+      "example_de": "Ich bewerbe mich um eine Stelle.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "stelle": {
+      "german": "Stelle",
+      "article": "die",
+      "plural": "Stellen",
+      "category": "noun",
+      "italian": "posto di lavoro",
+      "english": "position, job",
+      "example_de": "Ich habe mich um eine Stelle beworben.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "entscheiden": {
+      "german": "entscheiden",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "decidere, decidersi",
+      "english": "to decide",
+      "example_de": "Ich habe mich für einen HP entschieden.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "freuen": {
+      "german": "freuen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "rallegrarsi",
+      "english": "to be happy, to look forward",
+      "example_de": "Ich freue mich auf das Wochenende.",
+      "level": "A2",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "unterricht": {
+      "german": "Unterricht",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "lezione",
+      "english": "lesson, class",
+      "example_de": "Wir beginnen mit dem Unterricht.",
+      "level": "A2",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "wahl": {
+      "german": "Wahl",
+      "article": "die",
+      "plural": "Wahlen",
+      "category": "noun",
+      "italian": "scelta, elezione",
+      "english": "choice, election",
+      "example_de": "Die Wahl ist schwer.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "wahlergebnis": {
+      "german": "Wahlergebnis",
+      "article": "das",
+      "plural": "Wahlergebnisse",
+      "category": "noun",
+      "italian": "risultato elettorale",
+      "english": "election result",
+      "example_de": "Das Wahlergebnis war überraschend.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ergebnis": {
+      "german": "Ergebnis",
+      "article": "das",
+      "plural": "Ergebnisse",
+      "category": "noun",
+      "italian": "risultato",
+      "english": "result",
+      "example_de": "Das Ergebnis ist gut.",
+      "level": "A2",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "gewöhnen": {
+      "german": "gewöhnen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "abituarsi",
+      "english": "to get used to",
+      "example_de": "Ich habe mich daran gewöhnt, nicht zu arbeiten.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "umgebung": {
+      "german": "Umgebung",
+      "article": "die",
+      "plural": "Umgebungen",
+      "category": "noun",
+      "italian": "ambiente, dintorni",
+      "english": "surroundings, environment",
+      "example_de": "Sie haben sich an die neue Umgebung gewöhnt.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "geschichte": {
+      "german": "Geschichte",
+      "article": "die",
+      "plural": "Geschichten",
+      "category": "noun",
+      "italian": "storia, racconto",
+      "english": "story, history",
+      "example_de": "Die Geschichte ist interessant.",
+      "level": "A2",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "konzentrieren": {
+      "german": "konzentrieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "concentrarsi",
+      "english": "to concentrate",
+      "example_de": "Wir konzentrieren uns auf die Arbeit.",
+      "level": "B1",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "interessieren": {
+      "german": "interessieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "interessarsi",
+      "english": "to be interested",
+      "example_de": "Ich interessiere mich für Geschichte.",
+      "level": "A2",
+      "first_seen": "2026-06-24-stefanie",
+      "seen_in_lessons": [
+        "2026-06-24-stefanie"
+      ],
+      "seen_in_topics": [
+        "Verbs with Prepositions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
     }
   },
   "stats": {
-    "total_words": 868,
+    "total_words": 896,
     "by_category": {
       "expression": 5,
-      "adjective": 97,
-      "noun": 431,
-      "adverb": 67,
-      "verb_separable": 44,
-      "verb_regular": 133,
+      "adjective": 98,
+      "noun": 445,
+      "adverb": 69,
+      "verb_separable": 45,
+      "verb_regular": 141,
       "phrase": 26,
       "": 10,
-      "verb_irregular": 45,
+      "verb_irregular": 47,
       "verb_modal": 6,
       "pronoun": 4
     },
     "by_level": {
-      "A2": 356,
-      "B1": 175,
+      "A2": 365,
+      "B1": 194,
       "A1": 325,
       "": 10,
       "C2": 1,
