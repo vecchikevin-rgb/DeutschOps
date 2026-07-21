@@ -185,13 +185,15 @@
       "first_seen": "2026-05-14",
       "seen_in_lessons": [
         "2026-05-14",
-        "2026-05-15"
+        "2026-05-15",
+        "2026-07-07-stefanie"
       ],
       "seen_in_topics": [
         "Subordinate clauses with ob and dass",
-        "Indirekte Fragen und typische Redemittel"
+        "Indirekte Fragen und typische Redemittel",
+        "Wechselpräpositionen and Directional Particles"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "bedeuten": {
@@ -587,12 +589,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-09-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Describing chaotic situations & hypotheticals"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "wählen": {
@@ -685,13 +689,15 @@
       "first_seen": "storico",
       "seen_in_lessons": [
         "storico",
-        "2026-05-22-stefanie"
+        "2026-05-22-stefanie",
+        "2026-07-07-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
-        "Relative clauses with relative pronouns"
+        "Relative clauses with relative pronouns",
+        "Wechselpräpositionen and Directional Particles"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "kennen": {
@@ -745,12 +751,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-06-26-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Prepositional verbs and directional adverbs"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "kosten": {
@@ -1082,12 +1090,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-07-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Wechselpräpositionen and Directional Particles"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "bringen": {
@@ -1120,12 +1130,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-06-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Vacation recap and study materials"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "zeigen": {
@@ -1241,13 +1253,15 @@
       "first_seen": "storico",
       "seen_in_lessons": [
         "storico",
-        "2026-06-15-stefanie"
+        "2026-06-15-stefanie",
+        "2026-07-07-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
-        "Weekend trip and pronoun review"
+        "Weekend trip and pronoun review",
+        "Wechselpräpositionen and Directional Particles"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "erziehen": {
@@ -1360,12 +1374,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-06-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Vacation recap and study materials"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "überfluten": {
@@ -1398,12 +1414,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-06-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Vacation recap and study materials"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "passieren": {
@@ -1522,7 +1540,8 @@
         "2026-06-11-stefanie",
         "2026-06-12-stefanie",
         "2026-06-16-stefanie",
-        "2026-06-18-stefanie"
+        "2026-06-18-stefanie",
+        "2026-07-06-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
@@ -1531,9 +1550,10 @@
         "Nico's Weg A1 Summary",
         "Indefinite Pronouns and Relative Clauses",
         "Indefinite pronouns & relative clauses",
-        "Appointments and Time Expressions"
+        "Appointments and Time Expressions",
+        "Vacation recap and study materials"
       ],
-      "occurrences": 7,
+      "occurrences": 8,
       "anki_status": "added"
     },
     "vergessen": {
@@ -1550,15 +1570,17 @@
         "storico",
         "2026-05-15",
         "2026-06-09-stefanie",
-        "2026-06-19-stefanie"
+        "2026-06-19-stefanie",
+        "2026-07-21-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
         "Indirekte Fragen und typische Redemittel",
         "Infinitive Constructions with zu",
-        "Prepositional Adverbs & Finalsätze"
+        "Prepositional Adverbs & Finalsätze",
+        "Sailing vocabulary and describing situations"
       ],
-      "occurrences": 4,
+      "occurrences": 5,
       "anki_status": "added"
     },
     "tragen": {
@@ -1728,12 +1750,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-21-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Sailing vocabulary and describing situations"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "fernsehen": {
@@ -2283,12 +2307,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-07-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Wechselpräpositionen and Directional Particles"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "sehen": {
@@ -5349,14 +5375,16 @@
       "seen_in_lessons": [
         "storico",
         "2026-05-25-stefanie",
-        "2026-06-11-stefanie"
+        "2026-06-11-stefanie",
+        "2026-07-09-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
         "Comparison of adjectives and adverbs",
-        "Nico's Weg A1 Summary"
+        "Nico's Weg A1 Summary",
+        "Describing chaotic situations & hypotheticals"
       ],
-      "occurrences": 3,
+      "occurrences": 4,
       "anki_status": "added"
     },
     "das sofa": {
@@ -6569,12 +6597,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-06-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Vacation recap and study materials"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "über": {
@@ -7255,12 +7285,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-08-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Problem situations and solutions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "erklären": {
@@ -7485,12 +7517,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-21-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Sailing vocabulary and describing situations"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "das arbeitszimmer": {
@@ -7969,13 +8003,15 @@
       "first_seen": "storico",
       "seen_in_lessons": [
         "storico",
-        "2026-05-22-stefanie"
+        "2026-05-22-stefanie",
+        "2026-07-06-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
-        "Relative clauses with relative pronouns"
+        "Relative clauses with relative pronouns",
+        "Vacation recap and study materials"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "danken": {
@@ -8519,13 +8555,15 @@
       "first_seen": "storico",
       "seen_in_lessons": [
         "storico",
-        "2026-05-25-stefanie"
+        "2026-05-25-stefanie",
+        "2026-06-29-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
-        "Comparison of adjectives and adverbs"
+        "Comparison of adjectives and adverbs",
+        "Holiday Small Talk & Comparisons"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "bequem": {
@@ -8625,16 +8663,18 @@
         "2026-05-25-stefanie",
         "2026-05-26-stefanie",
         "2026-05-29-stefanie",
-        "2026-06-08-stefanie"
+        "2026-06-08-stefanie",
+        "2026-06-29-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
         "Comparison of adjectives and adverbs",
         "Comparatives and Travel Options",
         "Wiederholung: Vergleiche und Musik",
-        "Formula 1 trip and past events"
+        "Formula 1 trip and past events",
+        "Holiday Small Talk & Comparisons"
       ],
-      "occurrences": 5,
+      "occurrences": 6,
       "anki_status": "added"
     },
     "modern": {
@@ -8785,12 +8825,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-09-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Describing chaotic situations & hypotheticals"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "entspannt": {
@@ -8825,12 +8867,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-08-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Problem situations and solutions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "schwierig": {
@@ -9498,12 +9542,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-08-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Problem situations and solutions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "lieber": {
@@ -9872,13 +9918,17 @@
       "first_seen": "storico",
       "seen_in_lessons": [
         "storico",
-        "2026-05-25-stefanie"
+        "2026-05-25-stefanie",
+        "2026-07-08-stefanie",
+        "2026-07-21-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
-        "Comparison of adjectives and adverbs"
+        "Comparison of adjectives and adverbs",
+        "Problem situations and solutions",
+        "Sailing vocabulary and describing situations"
       ],
-      "occurrences": 2,
+      "occurrences": 4,
       "anki_status": "added"
     },
     "verlieren": {
@@ -9895,15 +9945,17 @@
         "storico",
         "2026-06-08-stefanie",
         "2026-06-10-stefanie",
-        "2026-06-11-stefanie"
+        "2026-06-11-stefanie",
+        "2026-07-21-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
         "Formula 1 trip and past events",
         "als vs wenn; dabei; während",
-        "Nico's Weg A1 Summary"
+        "Nico's Weg A1 Summary",
+        "Sailing vocabulary and describing situations"
       ],
-      "occurrences": 4,
+      "occurrences": 5,
       "anki_status": "added"
     },
     "mieten": {
@@ -10261,12 +10313,14 @@
       "level": "A2",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-21-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Sailing vocabulary and describing situations"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "die schlange": {
@@ -10338,13 +10392,15 @@
       "first_seen": "storico",
       "seen_in_lessons": [
         "storico",
-        "2026-06-11-stefanie"
+        "2026-06-11-stefanie",
+        "2026-07-06-stefanie"
       ],
       "seen_in_topics": [
         "bulk_import",
-        "Nico's Weg A1 Summary"
+        "Nico's Weg A1 Summary",
+        "Vacation recap and study materials"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "der rucksack": {
@@ -10609,12 +10665,14 @@
       "level": "A1",
       "first_seen": "storico",
       "seen_in_lessons": [
-        "storico"
+        "storico",
+        "2026-07-06-stefanie"
       ],
       "seen_in_topics": [
-        "bulk_import"
+        "bulk_import",
+        "Vacation recap and study materials"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "mindestens": {
@@ -11356,13 +11414,15 @@
       "first_seen": "2026-05-18-stefanie",
       "seen_in_lessons": [
         "2026-05-18-stefanie",
-        "2026-05-22-stefanie"
+        "2026-05-22-stefanie",
+        "2026-06-26-stefanie"
       ],
       "seen_in_topics": [
         "Modal verb sollen: shall and should",
-        "Relative clauses with relative pronouns"
+        "Relative clauses with relative pronouns",
+        "Prepositional verbs and directional adverbs"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "geräusch": {
@@ -11515,12 +11575,14 @@
       "level": "A2",
       "first_seen": "2026-05-18-stefanie",
       "seen_in_lessons": [
-        "2026-05-18-stefanie"
+        "2026-05-18-stefanie",
+        "2026-07-08-stefanie"
       ],
       "seen_in_topics": [
-        "Modal verb sollen: shall and should"
+        "Modal verb sollen: shall and should",
+        "Problem situations and solutions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "süßigkeit": {
@@ -11808,12 +11870,14 @@
       "level": "A2",
       "first_seen": "2026-05-21-stefanie",
       "seen_in_lessons": [
-        "2026-05-21-stefanie"
+        "2026-05-21-stefanie",
+        "2026-06-26-stefanie"
       ],
       "seen_in_topics": [
-        "Indirect questions and future tense"
+        "Indirect questions and future tense",
+        "Prepositional verbs and directional adverbs"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "sitz": {
@@ -11998,12 +12062,14 @@
       "level": "A2",
       "first_seen": "2026-05-22-stefanie",
       "seen_in_lessons": [
-        "2026-05-22-stefanie"
+        "2026-05-22-stefanie",
+        "2026-06-29-stefanie"
       ],
       "seen_in_topics": [
-        "Relative clauses with relative pronouns"
+        "Relative clauses with relative pronouns",
+        "Holiday Small Talk & Comparisons"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "paar": {
@@ -12114,12 +12180,14 @@
       "level": "B1",
       "first_seen": "2026-05-22-stefanie",
       "seen_in_lessons": [
-        "2026-05-22-stefanie"
+        "2026-05-22-stefanie",
+        "2026-06-26-stefanie"
       ],
       "seen_in_topics": [
-        "Relative clauses with relative pronouns"
+        "Relative clauses with relative pronouns",
+        "Prepositional verbs and directional adverbs"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "fenster": {
@@ -12133,12 +12201,14 @@
       "level": "A1",
       "first_seen": "2026-05-22-stefanie",
       "seen_in_lessons": [
-        "2026-05-22-stefanie"
+        "2026-05-22-stefanie",
+        "2026-07-08-stefanie"
       ],
       "seen_in_topics": [
-        "Relative clauses with relative pronouns"
+        "Relative clauses with relative pronouns",
+        "Problem situations and solutions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "junge": {
@@ -12152,12 +12222,14 @@
       "level": "A1",
       "first_seen": "2026-05-22-stefanie",
       "seen_in_lessons": [
-        "2026-05-22-stefanie"
+        "2026-05-22-stefanie",
+        "2026-07-08-stefanie"
       ],
       "seen_in_topics": [
-        "Relative clauses with relative pronouns"
+        "Relative clauses with relative pronouns",
+        "Problem situations and solutions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "leute": {
@@ -12867,12 +12939,14 @@
       "level": "A2",
       "first_seen": "2026-05-26-stefanie",
       "seen_in_lessons": [
-        "2026-05-26-stefanie"
+        "2026-05-26-stefanie",
+        "2026-07-09-stefanie"
       ],
       "seen_in_topics": [
-        "Comparatives and Travel Options"
+        "Comparatives and Travel Options",
+        "Describing chaotic situations & hypotheticals"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "genauso": {
@@ -13653,13 +13727,15 @@
       "first_seen": "2026-05-29-stefanie",
       "seen_in_lessons": [
         "2026-05-29-stefanie",
-        "2026-06-08-stefanie"
+        "2026-06-08-stefanie",
+        "2026-07-06-stefanie"
       ],
       "seen_in_topics": [
         "Wiederholung: Vergleiche und Musik",
-        "Formula 1 trip and past events"
+        "Formula 1 trip and past events",
+        "Vacation recap and study materials"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "genießen": {
@@ -13713,12 +13789,14 @@
       "level": "A2",
       "first_seen": "2026-05-29-stefanie",
       "seen_in_lessons": [
-        "2026-05-29-stefanie"
+        "2026-05-29-stefanie",
+        "2026-06-26-stefanie"
       ],
       "seen_in_topics": [
-        "Wiederholung: Vergleiche und Musik"
+        "Wiederholung: Vergleiche und Musik",
+        "Prepositional verbs and directional adverbs"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "nah": {
@@ -14095,12 +14173,14 @@
       "level": "A2",
       "first_seen": "2026-06-09-stefanie",
       "seen_in_lessons": [
-        "2026-06-09-stefanie"
+        "2026-06-09-stefanie",
+        "2026-06-26-stefanie"
       ],
       "seen_in_topics": [
-        "Infinitive Constructions with zu"
+        "Infinitive Constructions with zu",
+        "Prepositional verbs and directional adverbs"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "versuchen": {
@@ -14135,12 +14215,14 @@
       "level": "A2",
       "first_seen": "2026-06-09-stefanie",
       "seen_in_lessons": [
-        "2026-06-09-stefanie"
+        "2026-06-09-stefanie",
+        "2026-07-07-stefanie"
       ],
       "seen_in_topics": [
-        "Infinitive Constructions with zu"
+        "Infinitive Constructions with zu",
+        "Wechselpräpositionen and Directional Particles"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "flugangst": {
@@ -14287,12 +14369,14 @@
       "level": "A2",
       "first_seen": "2026-06-10-stefanie",
       "seen_in_lessons": [
-        "2026-06-10-stefanie"
+        "2026-06-10-stefanie",
+        "2026-07-08-stefanie"
       ],
       "seen_in_topics": [
-        "als vs wenn; dabei; während"
+        "als vs wenn; dabei; während",
+        "Problem situations and solutions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "tür": {
@@ -14496,12 +14580,18 @@
       "level": "B1",
       "first_seen": "2026-06-11-stefanie",
       "seen_in_lessons": [
-        "2026-06-11-stefanie"
+        "2026-06-11-stefanie",
+        "2026-07-06-stefanie",
+        "2026-07-08-stefanie",
+        "2026-07-09-stefanie"
       ],
       "seen_in_topics": [
-        "Nico's Weg A1 Summary"
+        "Nico's Weg A1 Summary",
+        "Vacation recap and study materials",
+        "Problem situations and solutions",
+        "Describing chaotic situations & hypotheticals"
       ],
-      "occurrences": 1,
+      "occurrences": 4,
       "anki_status": "added"
     },
     "unterkunft": {
@@ -14846,12 +14936,14 @@
       "level": "A2",
       "first_seen": "2026-06-12-stefanie",
       "seen_in_lessons": [
-        "2026-06-12-stefanie"
+        "2026-06-12-stefanie",
+        "2026-07-21-stefanie"
       ],
       "seen_in_topics": [
-        "Indefinite Pronouns and Relative Clauses"
+        "Indefinite Pronouns and Relative Clauses",
+        "Sailing vocabulary and describing situations"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "leer": {
@@ -14865,12 +14957,14 @@
       "level": "A2",
       "first_seen": "2026-06-12-stefanie",
       "seen_in_lessons": [
-        "2026-06-12-stefanie"
+        "2026-06-12-stefanie",
+        "2026-07-21-stefanie"
       ],
       "seen_in_topics": [
-        "Indefinite Pronouns and Relative Clauses"
+        "Indefinite Pronouns and Relative Clauses",
+        "Sailing vocabulary and describing situations"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "annehmen": {
@@ -15078,12 +15172,14 @@
       "level": "A2",
       "first_seen": "2026-06-15-stefanie",
       "seen_in_lessons": [
-        "2026-06-15-stefanie"
+        "2026-06-15-stefanie",
+        "2026-07-07-stefanie"
       ],
       "seen_in_topics": [
-        "Weekend trip and pronoun review"
+        "Weekend trip and pronoun review",
+        "Wechselpräpositionen and Directional Particles"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "tanken": {
@@ -15116,12 +15212,14 @@
       "level": "A2",
       "first_seen": "2026-06-15-stefanie",
       "seen_in_lessons": [
-        "2026-06-15-stefanie"
+        "2026-06-15-stefanie",
+        "2026-07-07-stefanie"
       ],
       "seen_in_topics": [
-        "Weekend trip and pronoun review"
+        "Weekend trip and pronoun review",
+        "Wechselpräpositionen and Directional Particles"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "leiden": {
@@ -15135,12 +15233,14 @@
       "level": "B1",
       "first_seen": "2026-06-15-stefanie",
       "seen_in_lessons": [
-        "2026-06-15-stefanie"
+        "2026-06-15-stefanie",
+        "2026-06-26-stefanie"
       ],
       "seen_in_topics": [
-        "Weekend trip and pronoun review"
+        "Weekend trip and pronoun review",
+        "Prepositional verbs and directional adverbs"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "stadtfest": {
@@ -15306,12 +15406,14 @@
       "level": "B1",
       "first_seen": "2026-06-15-stefanie",
       "seen_in_lessons": [
-        "2026-06-15-stefanie"
+        "2026-06-15-stefanie",
+        "2026-07-08-stefanie"
       ],
       "seen_in_topics": [
-        "Weekend trip and pronoun review"
+        "Weekend trip and pronoun review",
+        "Problem situations and solutions"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "lösen": {
@@ -15460,12 +15562,14 @@
       "level": "A2",
       "first_seen": "2026-06-15-stefanie",
       "seen_in_lessons": [
-        "2026-06-15-stefanie"
+        "2026-06-15-stefanie",
+        "2026-07-21-stefanie"
       ],
       "seen_in_topics": [
-        "Weekend trip and pronoun review"
+        "Weekend trip and pronoun review",
+        "Sailing vocabulary and describing situations"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "gegend": {
@@ -15864,13 +15968,15 @@
       "first_seen": "2026-06-18-stefanie",
       "seen_in_lessons": [
         "2026-06-18-stefanie",
-        "2026-06-19-stefanie"
+        "2026-06-19-stefanie",
+        "2026-06-29-stefanie"
       ],
       "seen_in_topics": [
         "Appointments and Time Expressions",
-        "Prepositional Adverbs & Finalsätze"
+        "Prepositional Adverbs & Finalsätze",
+        "Holiday Small Talk & Comparisons"
       ],
-      "occurrences": 2,
+      "occurrences": 3,
       "anki_status": "added"
     },
     "üben": {
@@ -16019,12 +16125,14 @@
       "level": "A2",
       "first_seen": "2026-06-18-stefanie",
       "seen_in_lessons": [
-        "2026-06-18-stefanie"
+        "2026-06-18-stefanie",
+        "2026-07-21-stefanie"
       ],
       "seen_in_topics": [
-        "Appointments and Time Expressions"
+        "Appointments and Time Expressions",
+        "Sailing vocabulary and describing situations"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "ab": {
@@ -16133,12 +16241,14 @@
       "level": "A2",
       "first_seen": "2026-06-19-stefanie",
       "seen_in_lessons": [
-        "2026-06-19-stefanie"
+        "2026-06-19-stefanie",
+        "2026-07-21-stefanie"
       ],
       "seen_in_topics": [
-        "Prepositional Adverbs & Finalsätze"
+        "Prepositional Adverbs & Finalsätze",
+        "Sailing vocabulary and describing situations"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "sauer": {
@@ -16399,12 +16509,14 @@
       "level": "B1",
       "first_seen": "2026-06-19-stefanie",
       "seen_in_lessons": [
-        "2026-06-19-stefanie"
+        "2026-06-19-stefanie",
+        "2026-06-26-stefanie"
       ],
       "seen_in_topics": [
-        "Prepositional Adverbs & Finalsätze"
+        "Prepositional Adverbs & Finalsätze",
+        "Prepositional verbs and directional adverbs"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "dafür": {
@@ -16722,12 +16834,14 @@
       "level": "A2",
       "first_seen": "2026-06-22-stefanie",
       "seen_in_lessons": [
-        "2026-06-22-stefanie"
+        "2026-06-22-stefanie",
+        "2026-06-29-stefanie"
       ],
       "seen_in_topics": [
-        "Dative verbs and prepositional adverbs"
+        "Dative verbs and prepositional adverbs",
+        "Holiday Small Talk & Comparisons"
       ],
-      "occurrences": 1,
+      "occurrences": 2,
       "anki_status": "added"
     },
     "sterben": {
@@ -17299,30 +17413,2442 @@
       ],
       "occurrences": 1,
       "anki_status": "added"
+    },
+    "vermindern": {
+      "german": "vermindern",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "ridurre, diminuire",
+      "english": "to reduce, to decrease",
+      "example_de": "Wir möchten die Steuern vermindern.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "niedrig": {
+      "german": "niedrig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "basso",
+      "english": "low",
+      "example_de": "Die Steuern sollten niedriger sein.",
+      "level": "A2",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "methode": {
+      "german": "Methode",
+      "article": "die",
+      "plural": "Methoden",
+      "category": "noun",
+      "italian": "metodo",
+      "english": "method",
+      "example_de": "Es gibt viele Methoden, die Steuern zu vermindern.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "zukünftig": {
+      "german": "zukünftig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "futuro (aggettivo)",
+      "english": "future (adjective)",
+      "example_de": "Meine zukünftige Arbeit wird interessant sein.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "insel": {
+      "german": "Insel",
+      "article": "die",
+      "plural": "Inseln",
+      "category": "noun",
+      "italian": "isola",
+      "english": "island",
+      "example_de": "Ich fahre auf die Insel.",
+      "level": "A2",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie",
+        "2026-07-06-stefanie",
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs",
+        "Vacation recap and study materials",
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 3,
+      "anki_status": "added"
+    },
+    "dorthin": {
+      "german": "dorthin",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "là (moto a luogo)",
+      "english": "to there (direction away from speaker)",
+      "example_de": "Ich fliege nächste Woche dorthin.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "hierher": {
+      "german": "hierher",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "qui (moto a luogo)",
+      "english": "to here (direction toward speaker)",
+      "example_de": "Komm hierher!",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie",
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs",
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 2,
+      "anki_status": "added"
+    },
+    "sonnenschirm": {
+      "german": "Sonnenschirm",
+      "article": "der",
+      "plural": "Sonnenschirme",
+      "category": "noun",
+      "italian": "ombrellone",
+      "english": "parasol, sun umbrella",
+      "example_de": "Ich sitze unter dem Sonnenschirm.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "schatten": {
+      "german": "Schatten",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "ombra",
+      "english": "shadow, shade",
+      "example_de": "Ich sitze im Schatten.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sonnenbrand": {
+      "german": "Sonnenbrand",
+      "article": "der",
+      "plural": "Sonnenbrände",
+      "category": "noun",
+      "italian": "scottatura solare",
+      "english": "sunburn",
+      "example_de": "Komm hierher, es ist so heiß in der Sonne und du bekommst einen Sonnenbrand.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sonnencreme": {
+      "german": "Sonnencreme",
+      "article": "die",
+      "plural": "Sonnencremes",
+      "category": "noun",
+      "italian": "crema solare",
+      "english": "sunscreen",
+      "example_de": "Ich nehme Sonnencreme mit.",
+      "level": "A2",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "baustelle": {
+      "german": "Baustelle",
+      "article": "die",
+      "plural": "Baustellen",
+      "category": "noun",
+      "italian": "cantiere",
+      "english": "construction site",
+      "example_de": "Der Lärm kommt von der Baustelle.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sich beschweren": {
+      "german": "sich beschweren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "lamentarsi",
+      "english": "to complain",
+      "example_de": "Sie beschweren sich über den Lärm.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "reagieren": {
+      "german": "reagieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "reagire",
+      "english": "to react",
+      "example_de": "Sie reagieren auf den Lärm.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "teilnehmen": {
+      "german": "teilnehmen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "partecipare",
+      "english": "to take part, to participate",
+      "example_de": "Sie nimmt an dem Kurs teil.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "telefonieren": {
+      "german": "telefonieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "telefonare",
+      "english": "to telephone, to phone",
+      "example_de": "Ich telefoniere mit meinem Freund.",
+      "level": "A2",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sich unterhalten": {
+      "german": "sich unterhalten",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "conversare, intrattenersi",
+      "english": "to talk, to converse, to entertain oneself",
+      "example_de": "Sie unterhalten sich über das Wetter.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sich verlieben": {
+      "german": "sich verlieben",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "innamorarsi",
+      "english": "to fall in love",
+      "example_de": "Romeo hat sich unsterblich in Julia verliebt.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "unsterblich": {
+      "german": "unsterblich",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "immortalmente",
+      "english": "immortally (used figuratively for 'deeply in love')",
+      "example_de": "Er ist unsterblich verliebt.",
+      "level": "B2",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sich vorbereiten": {
+      "german": "sich vorbereiten",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "prepararsi",
+      "english": "to prepare oneself",
+      "example_de": "Ich bereite mich auf die Prüfung vor.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "prüfung": {
+      "german": "Prüfung",
+      "article": "die",
+      "plural": "Prüfungen",
+      "category": "noun",
+      "italian": "esame",
+      "english": "exam, test",
+      "example_de": "Ich habe nächste Woche eine Prüfung.",
+      "level": "A2",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie",
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs",
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 2,
+      "anki_status": "added"
+    },
+    "marker": {
+      "german": "Marker",
+      "article": "der",
+      "plural": "Marker",
+      "category": "noun",
+      "italian": "evidenziatore",
+      "english": "marker, highlighter",
+      "example_de": "Ich habe meinen Marker vergessen.",
+      "level": "A2",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "leuchtstift": {
+      "german": "Leuchtstift",
+      "article": "der",
+      "plural": "Leuchtstifte",
+      "category": "noun",
+      "italian": "evidenziatore",
+      "english": "highlighter",
+      "example_de": "Ich brauche einen Leuchtstift.",
+      "level": "B1",
+      "first_seen": "2026-06-26-stefanie",
+      "seen_in_lessons": [
+        "2026-06-26-stefanie"
+      ],
+      "seen_in_topics": [
+        "Prepositional verbs and directional adverbs"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "aussehen": {
+      "german": "aussehen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "sembrare, avere l'aspetto di",
+      "english": "to look like",
+      "example_de": "Wie sieht das Hotel aus?",
+      "level": "A2",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ziemlich": {
+      "german": "ziemlich",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "abbastanza, piuttosto",
+      "english": "quite, fairly",
+      "example_de": "Es war ziemlich günstig.",
+      "level": "B1",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "günstig": {
+      "german": "günstig",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "conveniente, economico",
+      "english": "affordable, cheap (in standard German)",
+      "example_de": "Wir haben ein günstiges Hotel gefunden.",
+      "level": "A2",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "paket": {
+      "german": "Paket",
+      "article": "das",
+      "plural": "Pakete",
+      "category": "noun",
+      "italian": "pacco, pacchetto",
+      "english": "package",
+      "example_de": "Das komplette Paket kostet 700 Euro.",
+      "level": "A2",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "päckchen": {
+      "german": "Päckchen",
+      "article": "das",
+      "plural": "Päckchen",
+      "category": "noun",
+      "italian": "pacchettino",
+      "english": "small package",
+      "example_de": "Ich habe ein kleines Päckchen bekommen.",
+      "level": "A2",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "vollpension": {
+      "german": "Vollpension",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "pensione completa",
+      "english": "full board",
+      "example_de": "Wir haben Vollpension gebucht.",
+      "level": "A2",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "halbpension": {
+      "german": "Halbpension",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "mezza pensione",
+      "english": "half board",
+      "example_de": "Im Hotel gibt es Halbpension.",
+      "level": "A2",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "all-inclusive": {
+      "german": "All-inclusive",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "tutto incluso",
+      "english": "all-inclusive",
+      "example_de": "Wir haben All-inclusive für 700 Euro.",
+      "level": "A2",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "entfernung": {
+      "german": "Entfernung",
+      "article": "die",
+      "plural": "Entfernungen",
+      "category": "noun",
+      "italian": "distanza",
+      "english": "distance",
+      "example_de": "Die Entfernung zum Strand ist kurz.",
+      "level": "B1",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "bett": {
+      "german": "Bett",
+      "article": "das",
+      "plural": "Betten",
+      "category": "noun",
+      "italian": "letto",
+      "english": "bed",
+      "example_de": "Wir haben zwei Betten im Zimmer.",
+      "level": "A1",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "pool": {
+      "german": "Pool",
+      "article": "der",
+      "plural": "Pools",
+      "category": "noun",
+      "italian": "piscina",
+      "english": "pool",
+      "example_de": "Ich war den ganzen Tag am Pool.",
+      "level": "A2",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ausprobieren": {
+      "german": "ausprobieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "provare (qualcosa)",
+      "english": "to try out",
+      "example_de": "Ich habe viele Dinge ausprobiert.",
+      "level": "B1",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "anprobieren": {
+      "german": "anprobieren",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "provare (vestiti)",
+      "english": "to try on (clothes)",
+      "example_de": "Ich möchte die rote Hose anprobieren.",
+      "level": "A2",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "hauptstrand": {
+      "german": "Hauptstrand",
+      "article": "der",
+      "plural": "Hauptstrände",
+      "category": "noun",
+      "italian": "spiaggia principale",
+      "english": "main beach",
+      "example_de": "Ich habe den Hauptstrand ausprobiert.",
+      "level": "A2",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "jugendliche": {
+      "german": "Jugendliche",
+      "article": "die",
+      "plural": "Jugendlichen",
+      "category": "noun",
+      "italian": "giovani, adolescenti",
+      "english": "young people, teenagers",
+      "example_de": "Viele Jugendliche waren am Strand.",
+      "level": "A2",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "betrunken": {
+      "german": "betrunken",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "ubriaco",
+      "english": "drunk",
+      "example_de": "Sie waren betrunken.",
+      "level": "B1",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sich betrinken": {
+      "german": "sich betrinken",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "ubriacarsi",
+      "english": "to get drunk",
+      "example_de": "Ich habe mich mit Cocktails betrunken.",
+      "level": "B1",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "kontrolle": {
+      "german": "Kontrolle",
+      "article": "die",
+      "plural": "Kontrollen",
+      "category": "noun",
+      "italian": "controllo",
+      "english": "control",
+      "example_de": "Sie verlieren die Kontrolle.",
+      "level": "B1",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "streifen": {
+      "german": "Streifen",
+      "article": "der",
+      "plural": "Streifen",
+      "category": "noun",
+      "italian": "striscia, riga",
+      "english": "stripe",
+      "example_de": "Die Hose hat gelbe Streifen.",
+      "level": "B1",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "batterie": {
+      "german": "Batterie",
+      "article": "die",
+      "plural": "Batterien",
+      "category": "noun",
+      "italian": "batteria",
+      "english": "battery",
+      "example_de": "Ich muss die Batterie aufladen.",
+      "level": "A2",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "aufladen": {
+      "german": "aufladen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "ricaricare",
+      "english": "to charge (battery)",
+      "example_de": "Ich lade die Batterie auf.",
+      "level": "B1",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "hose": {
+      "german": "Hose",
+      "article": "die",
+      "plural": "Hosen",
+      "category": "noun",
+      "italian": "pantaloni",
+      "english": "trousers, pants",
+      "example_de": "Ich möchte die rote Hose anprobieren.",
+      "level": "A1",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "sangria": {
+      "german": "Sangria",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "sangria",
+      "english": "sangria",
+      "example_de": "Ich hatte Sangria und Bier.",
+      "level": "A2",
+      "first_seen": "2026-06-29-stefanie",
+      "seen_in_lessons": [
+        "2026-06-29-stefanie"
+      ],
+      "seen_in_topics": [
+        "Holiday Small Talk & Comparisons"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "flug": {
+      "german": "Flug",
+      "article": "der",
+      "plural": "Flüge",
+      "category": "noun",
+      "italian": "volo",
+      "english": "flight",
+      "example_de": "Der Flug war auch gut.",
+      "level": "A2",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "hausmeister": {
+      "german": "Hausmeister",
+      "article": "der",
+      "plural": "Hausmeister",
+      "category": "noun",
+      "italian": "custode",
+      "english": "caretaker, janitor",
+      "example_de": "Der Hausmeister steht vor der Tür.",
+      "level": "B1",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ländlich": {
+      "german": "ländlich",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "rurale, di campagna",
+      "english": "rural, countryside",
+      "example_de": "Die Gegend ist sehr ländlich.",
+      "level": "B1",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "arm": {
+      "german": "arm",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "povero",
+      "english": "poor",
+      "example_de": "Es sieht arm aus.",
+      "level": "A2",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "menschenrechte": {
+      "german": "Menschenrechte",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "diritti umani",
+      "english": "human rights",
+      "example_de": "Die Menschenrechte sind wichtig.",
+      "level": "B1",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "magisch": {
+      "german": "magisch",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "magico",
+      "english": "magical",
+      "example_de": "Die Kirche war sehr magisch.",
+      "level": "B1",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "mülleimer": {
+      "german": "Mülleimer",
+      "article": "der",
+      "plural": "Mülleimer",
+      "category": "noun",
+      "italian": "cestino/bidone della spazzatura",
+      "english": "trash can, garbage bin",
+      "example_de": "Der Hausmeister ist mit den Mülleimern beschäftigt.",
+      "level": "A2",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "verrückt": {
+      "german": "verrückt",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "pazzo, folle",
+      "english": "crazy, insane",
+      "example_de": "Das ist verrückt!",
+      "level": "A2",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "natürlich": {
+      "german": "natürlich",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "naturale",
+      "english": "natural",
+      "example_de": "Das sind sehr natürliche Dialoge.",
+      "level": "A2",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie",
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials",
+        "Problem situations and solutions"
+      ],
+      "occurrences": 2,
+      "anki_status": "added"
+    },
+    "beschäftigt": {
+      "german": "beschäftigt",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "occupato",
+      "english": "busy, occupied",
+      "example_de": "Er ist mit den Mülleimern beschäftigt.",
+      "level": "B1",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "zusammenfassen": {
+      "german": "zusammenfassen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "riassumere",
+      "english": "to summarize",
+      "example_de": "Du könntest etwas zusammenfassen.",
+      "level": "B1",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "dialog": {
+      "german": "Dialog",
+      "article": "der",
+      "plural": "Dialoge",
+      "category": "noun",
+      "italian": "dialogo",
+      "english": "dialogue",
+      "example_de": "Das sind sehr natürliche Dialoge.",
+      "level": "A2",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "strand": {
+      "german": "Strand",
+      "article": "der",
+      "plural": "Strände",
+      "category": "noun",
+      "italian": "spiaggia",
+      "english": "beach",
+      "example_de": "Der Strand ist neben dem Hotel.",
+      "level": "A2",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie",
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials",
+        "Problem situations and solutions"
+      ],
+      "occurrences": 2,
+      "anki_status": "added"
+    },
+    "lesson": {
+      "german": "Lesson",
+      "article": "die",
+      "plural": "Lessons",
+      "category": "noun",
+      "italian": "lezione",
+      "english": "lesson",
+      "example_de": "Es sind neun Szenen für jede Lesson.",
+      "level": "A1",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "übung": {
+      "german": "Übung",
+      "article": "die",
+      "plural": "Übungen",
+      "category": "noun",
+      "italian": "esercizio",
+      "english": "exercise",
+      "example_de": "Ich habe ein paar Übungen mit Präpositionen.",
+      "level": "A2",
+      "first_seen": "2026-07-06-stefanie",
+      "seen_in_lessons": [
+        "2026-07-06-stefanie"
+      ],
+      "seen_in_topics": [
+        "Vacation recap and study materials"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "baum": {
+      "german": "Baum",
+      "article": "der",
+      "plural": "Bäume",
+      "category": "noun",
+      "italian": "albero",
+      "english": "tree",
+      "example_de": "Kletterst du auf den Baum?",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ofen": {
+      "german": "Ofen",
+      "article": "der",
+      "plural": "Öfen",
+      "category": "noun",
+      "italian": "forno",
+      "english": "oven",
+      "example_de": "Holst du die Pizza aus dem Ofen?",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "körbchen": {
+      "german": "Körbchen",
+      "article": "das",
+      "plural": "Körbchen",
+      "category": "noun",
+      "italian": "cestino",
+      "english": "small basket",
+      "example_de": "Die Katze geht in ihr Körbchen hinein",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "korb": {
+      "german": "Korb",
+      "article": "der",
+      "plural": "Körbe",
+      "category": "noun",
+      "italian": "cesto",
+      "english": "basket",
+      "example_de": "Die Äpfel sind im Korb",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "straßenhund": {
+      "german": "Straßenhund",
+      "article": "der",
+      "plural": "Straßenhunde",
+      "category": "noun",
+      "italian": "cane randagio",
+      "english": "street dog, stray dog",
+      "example_de": "Lassen wir den Straßenhund ins Haus kommen?",
+      "level": "B1",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "blumenvase": {
+      "german": "Blumenvase",
+      "article": "die",
+      "plural": "Blumenvasen",
+      "category": "noun",
+      "italian": "vaso da fiori",
+      "english": "flower vase",
+      "example_de": "Die Blumenvase ist auf den Boden gefallen",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "boden": {
+      "german": "Boden",
+      "article": "der",
+      "plural": "Böden",
+      "category": "noun",
+      "italian": "pavimento, suolo",
+      "english": "floor, ground",
+      "example_de": "Die Vase fällt auf den Boden",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie",
+        "2026-07-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles",
+        "Describing chaotic situations & hypotheticals"
+      ],
+      "occurrences": 2,
+      "anki_status": "added"
+    },
+    "fallen": {
+      "german": "fallen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "cadere",
+      "english": "to fall",
+      "example_de": "Die Vase ist nicht auf den Boden gefallen",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie",
+        "2026-07-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles",
+        "Describing chaotic situations & hypotheticals"
+      ],
+      "occurrences": 2,
+      "anki_status": "added"
+    },
+    "ecke": {
+      "german": "Ecke",
+      "article": "die",
+      "plural": "Ecken",
+      "category": "noun",
+      "italian": "angolo",
+      "english": "corner",
+      "example_de": "Sie stellt die Lampe in die Ecke",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "lampe": {
+      "german": "Lampe",
+      "article": "die",
+      "plural": "Lampen",
+      "category": "noun",
+      "italian": "lampada",
+      "english": "lamp",
+      "example_de": "Die Lampe steht in der Ecke",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "stellen": {
+      "german": "stellen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "mettere in piedi, posizionare verticalmente",
+      "english": "to put (standing/vertically)",
+      "example_de": "Sie stellt die Lampe in die Ecke",
+      "level": "B1",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "hängen": {
+      "german": "hängen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "appendere / essere appeso",
+      "english": "to hang (active) / to be hanging",
+      "example_de": "Der Spiegel hängt an der Wand",
+      "level": "B1",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "setzen": {
+      "german": "setzen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "mettere seduto",
+      "english": "to put sitting, to seat",
+      "example_de": "Sie setzt das Kind auf den Stuhl",
+      "level": "B1",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "spiegel": {
+      "german": "Spiegel",
+      "article": "der",
+      "plural": "Spiegel",
+      "category": "noun",
+      "italian": "specchio",
+      "english": "mirror",
+      "example_de": "Der Spiegel hängt an der Wand",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "wand": {
+      "german": "Wand",
+      "article": "die",
+      "plural": "Wände",
+      "category": "noun",
+      "italian": "parete",
+      "english": "wall",
+      "example_de": "Das Bild hängt an der Wand",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "teppich": {
+      "german": "Teppich",
+      "article": "der",
+      "plural": "Teppiche",
+      "category": "noun",
+      "italian": "tappeto",
+      "english": "carpet, rug",
+      "example_de": "Der Teppich liegt auf dem Boden",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "nachttisch": {
+      "german": "Nachttisch",
+      "article": "der",
+      "plural": "Nachttische",
+      "category": "noun",
+      "italian": "comodino",
+      "english": "nightstand",
+      "example_de": "Der Nachttisch steht neben dem Bett",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "regal": {
+      "german": "Regal",
+      "article": "das",
+      "plural": "Regale",
+      "category": "noun",
+      "italian": "scaffale",
+      "english": "shelf, shelving unit",
+      "example_de": "Die CDs stehen im Regal",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "verwendungszweck": {
+      "german": "Verwendungszweck",
+      "article": "der",
+      "plural": "Verwendungszwecke",
+      "category": "noun",
+      "italian": "causale (bancario)",
+      "english": "purpose of use, payment reference",
+      "example_de": "Bitte schreiben Sie den Verwendungszweck auf die Überweisung",
+      "level": "B1",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "überweisen": {
+      "german": "überweisen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "fare un bonifico",
+      "english": "to transfer (money)",
+      "example_de": "Ich muss die Miete überweisen",
+      "level": "B1",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "rechnung": {
+      "german": "Rechnung",
+      "article": "die",
+      "plural": "Rechnungen",
+      "category": "noun",
+      "italian": "fattura, conto",
+      "english": "bill, invoice",
+      "example_de": "Ich muss die Rechnungen bezahlen",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "bestellung": {
+      "german": "Bestellung",
+      "article": "die",
+      "plural": "Bestellungen",
+      "category": "noun",
+      "italian": "ordine",
+      "english": "order",
+      "example_de": "Ich gebe eine Bestellung auf",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "erledigen": {
+      "german": "erledigen",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "sbrigare, completare",
+      "english": "to take care of, to complete",
+      "example_de": "Ich muss noch viel erledigen",
+      "level": "B1",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "zoll": {
+      "german": "Zoll",
+      "article": "der",
+      "plural": "Zölle",
+      "category": "noun",
+      "italian": "dazio, dogana",
+      "english": "customs duty, tariff",
+      "example_de": "Ich muss Zoll für dieses Paket zahlen",
+      "level": "B1",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "schwanz": {
+      "german": "Schwanz",
+      "article": "der",
+      "plural": "Schwänze",
+      "category": "noun",
+      "italian": "coda",
+      "english": "tail",
+      "example_de": "Ich sehe nur den Schwanz der Katze",
+      "level": "A2",
+      "first_seen": "2026-07-07-stefanie",
+      "seen_in_lessons": [
+        "2026-07-07-stefanie"
+      ],
+      "seen_in_topics": [
+        "Wechselpräpositionen and Directional Particles"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "karte": {
+      "german": "Karte",
+      "article": "die",
+      "plural": "Karten",
+      "category": "noun",
+      "italian": "mappa",
+      "english": "map",
+      "example_de": "Er hat eine Karte gefunden.",
+      "level": "A2",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "handy": {
+      "german": "Handy",
+      "article": "das",
+      "plural": "Handys",
+      "category": "noun",
+      "italian": "cellulare",
+      "english": "mobile phone",
+      "example_de": "Er hat kein Handy.",
+      "level": "A2",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "polizei": {
+      "german": "Polizei",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "polizia",
+      "english": "police",
+      "example_de": "Die Lösung ist, die Polizei zu fragen.",
+      "level": "A2",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "straße": {
+      "german": "Straße",
+      "article": "die",
+      "plural": "Straßen",
+      "category": "noun",
+      "italian": "strada",
+      "english": "street",
+      "example_de": "Er könnte jemanden auf der Straße fragen.",
+      "level": "A1",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "verloren": {
+      "german": "verloren",
+      "article": "",
+      "plural": "",
+      "category": "adjective",
+      "italian": "perso, smarrito",
+      "english": "lost",
+      "example_de": "Ohne Handy ist er verloren.",
+      "level": "A2",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ladekabel": {
+      "german": "Ladekabel",
+      "article": "das",
+      "plural": "Ladekabel",
+      "category": "noun",
+      "italian": "cavo di ricarica",
+      "english": "charging cable",
+      "example_de": "Er könnte auch ein Ladekabel leihen.",
+      "level": "B1",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "ausleihen": {
+      "german": "ausleihen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "prendere in prestito",
+      "english": "to borrow (to take)",
+      "example_de": "Kann ich deinen Bleistift ausleihen?",
+      "level": "B1",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie",
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions",
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 2,
+      "anki_status": "added"
+    },
+    "bleistift": {
+      "german": "Bleistift",
+      "article": "der",
+      "plural": "Bleistifte",
+      "category": "noun",
+      "italian": "matita",
+      "english": "pencil",
+      "example_de": "Soll ich dir meinen Bleistift leihen?",
+      "level": "A2",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "kugelschreiber": {
+      "german": "Kugelschreiber",
+      "article": "der",
+      "plural": "Kugelschreiber",
+      "category": "noun",
+      "italian": "penna a sfera",
+      "english": "ballpoint pen",
+      "example_de": "Ich brauche einen Kugelschreiber.",
+      "level": "A2",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "stift": {
+      "german": "Stift",
+      "article": "der",
+      "plural": "Stifte",
+      "category": "noun",
+      "italian": "penna (generico)",
+      "english": "pen (general)",
+      "example_de": "Hast du einen Stift für mich?",
+      "level": "A2",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "fußball": {
+      "german": "Fußball",
+      "article": "der",
+      "plural": "Fußbälle",
+      "category": "noun",
+      "italian": "pallone da calcio",
+      "english": "football, soccer ball",
+      "example_de": "Der Fußball ist ins Fenster geflogen.",
+      "level": "A1",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "werfen": {
+      "german": "werfen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "lanciare",
+      "english": "to throw",
+      "example_de": "Er hat ihn durch das Fenster geworfen.",
+      "level": "B1",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "besitzer": {
+      "german": "Besitzer",
+      "article": "der",
+      "plural": "Besitzer",
+      "category": "noun",
+      "italian": "proprietario",
+      "english": "owner (male)",
+      "example_de": "Der Junge bekommt Probleme mit dem Besitzer.",
+      "level": "B1",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "besitzerin": {
+      "german": "Besitzerin",
+      "article": "die",
+      "plural": "Besitzerinnen",
+      "category": "noun",
+      "italian": "proprietaria",
+      "english": "owner (female)",
+      "example_de": "Die Besitzerin ist nicht da.",
+      "level": "B1",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "elternhaus": {
+      "german": "Elternhaus",
+      "article": "das",
+      "plural": "Elternhäuser",
+      "category": "noun",
+      "italian": "casa dei genitori",
+      "english": "parents' house",
+      "example_de": "Das ist sein Elternhaus.",
+      "level": "B1",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "eltern": {
+      "german": "Eltern",
+      "article": "die",
+      "plural": "",
+      "category": "noun",
+      "italian": "genitori",
+      "english": "parents",
+      "example_de": "Das Haus gehört seinen Eltern.",
+      "level": "A1",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "durch": {
+      "german": "durch",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "attraverso",
+      "english": "through",
+      "example_de": "Er hat den Ball durch das Fenster geworfen.",
+      "level": "A2",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "wahnsinn": {
+      "german": "Wahnsinn",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "follia, pazzia",
+      "english": "madness, insanity",
+      "example_de": "Das ist ein Wahnsinn, wie gut du sprichst!",
+      "level": "B1",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "klar": {
+      "german": "klar",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "chiaro, certo",
+      "english": "clear, of course",
+      "example_de": "Ja klar, ich helfe dir!",
+      "level": "A2",
+      "first_seen": "2026-07-08-stefanie",
+      "seen_in_lessons": [
+        "2026-07-08-stefanie"
+      ],
+      "seen_in_topics": [
+        "Problem situations and solutions"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "mund": {
+      "german": "Mund",
+      "article": "der",
+      "plural": "Münder",
+      "category": "noun",
+      "italian": "bocca",
+      "english": "mouth",
+      "example_de": "Das Kind hat etwas im Mund.",
+      "level": "A2",
+      "first_seen": "2026-07-09-stefanie",
+      "seen_in_lessons": [
+        "2026-07-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Describing chaotic situations & hypotheticals"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "chaos": {
+      "german": "Chaos",
+      "article": "das",
+      "plural": "",
+      "category": "noun",
+      "italian": "caos",
+      "english": "chaos",
+      "example_de": "Es gibt großes Chaos in der Küche.",
+      "level": "A2",
+      "first_seen": "2026-07-09-stefanie",
+      "seen_in_lessons": [
+        "2026-07-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Describing chaotic situations & hypotheticals"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "runter": {
+      "german": "runter",
+      "article": "",
+      "plural": "",
+      "category": "adverb",
+      "italian": "giù",
+      "english": "down",
+      "example_de": "Etwas ist runtergefallen.",
+      "level": "A2",
+      "first_seen": "2026-07-09-stefanie",
+      "seen_in_lessons": [
+        "2026-07-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Describing chaotic situations & hypotheticals"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "empfehlung": {
+      "german": "Empfehlung",
+      "article": "die",
+      "plural": "Empfehlungen",
+      "category": "noun",
+      "italian": "raccomandazione, suggerimento",
+      "english": "recommendation, suggestion",
+      "example_de": "Ich frage nach einer Empfehlung.",
+      "level": "B1",
+      "first_seen": "2026-07-09-stefanie",
+      "seen_in_lessons": [
+        "2026-07-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Describing chaotic situations & hypotheticals"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "empfehlen": {
+      "german": "empfehlen",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "raccomandare, consigliare",
+      "english": "to recommend",
+      "example_de": "Was kannst du mir empfehlen?",
+      "level": "B1",
+      "first_seen": "2026-07-09-stefanie",
+      "seen_in_lessons": [
+        "2026-07-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Describing chaotic situations & hypotheticals"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "reinkommen": {
+      "german": "reinkommen",
+      "article": "",
+      "plural": "",
+      "category": "verb_separable",
+      "italian": "entrare",
+      "english": "to come in(side)",
+      "example_de": "Die Mutter kommt in die Küche rein.",
+      "level": "A2",
+      "first_seen": "2026-07-09-stefanie",
+      "seen_in_lessons": [
+        "2026-07-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Describing chaotic situations & hypotheticals"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "kontext": {
+      "german": "Kontext",
+      "article": "der",
+      "plural": "Kontexte",
+      "category": "noun",
+      "italian": "contesto",
+      "english": "context",
+      "example_de": "Ich kenne den Kontext nicht.",
+      "level": "B1",
+      "first_seen": "2026-07-09-stefanie",
+      "seen_in_lessons": [
+        "2026-07-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Describing chaotic situations & hypotheticals"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "müll": {
+      "german": "Müll",
+      "article": "der",
+      "plural": "",
+      "category": "noun",
+      "italian": "spazzatura",
+      "english": "garbage, trash",
+      "example_de": "Es ist Müll auf dem Boden.",
+      "level": "A2",
+      "first_seen": "2026-07-09-stefanie",
+      "seen_in_lessons": [
+        "2026-07-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Describing chaotic situations & hypotheticals"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "freund": {
+      "german": "Freund",
+      "article": "der",
+      "plural": "Freunde",
+      "category": "noun",
+      "italian": "fidanzato (in questo contesto), amico",
+      "english": "boyfriend (in context), friend",
+      "example_de": "Ihr Freund hat etwas in den Händen.",
+      "level": "A1",
+      "first_seen": "2026-07-09-stefanie",
+      "seen_in_lessons": [
+        "2026-07-09-stefanie"
+      ],
+      "seen_in_topics": [
+        "Describing chaotic situations & hypotheticals"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "segelboot": {
+      "german": "Segelboot",
+      "article": "das",
+      "plural": "Segelboote",
+      "category": "noun",
+      "italian": "barca a vela",
+      "english": "sailboat",
+      "example_de": "Wir leihen ein Segelboot aus.",
+      "level": "B1",
+      "first_seen": "2026-07-21-stefanie",
+      "seen_in_lessons": [
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "steuern": {
+      "german": "steuern",
+      "article": "",
+      "plural": "",
+      "category": "verb_regular",
+      "italian": "governare, pilotare",
+      "english": "to steer, to control",
+      "example_de": "Darf man ohne Führerschein ein Segelboot steuern?",
+      "level": "B1",
+      "first_seen": "2026-07-21-stefanie",
+      "seen_in_lessons": [
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "hafenplatz": {
+      "german": "Hafenplatz",
+      "article": "der",
+      "plural": "Hafenplätze",
+      "category": "noun",
+      "italian": "posto in porto",
+      "english": "harbor spot, berth",
+      "example_de": "Der Hafenplatz ist sehr teuer.",
+      "level": "B1",
+      "first_seen": "2026-07-21-stefanie",
+      "seen_in_lessons": [
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "notfall": {
+      "german": "Notfall",
+      "article": "der",
+      "plural": "Notfälle",
+      "category": "noun",
+      "italian": "emergenza",
+      "english": "emergency",
+      "example_de": "Du brauchst nur einen kleinen Motor für den Notfall.",
+      "level": "B1",
+      "first_seen": "2026-07-21-stefanie",
+      "seen_in_lessons": [
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "examen": {
+      "german": "Examen",
+      "article": "das",
+      "plural": "Examina",
+      "category": "noun",
+      "italian": "esame",
+      "english": "exam",
+      "example_de": "Das Examen findet im September statt.",
+      "level": "B1",
+      "first_seen": "2026-07-21-stefanie",
+      "seen_in_lessons": [
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "gefahr": {
+      "german": "Gefahr",
+      "article": "die",
+      "plural": "Gefahren",
+      "category": "noun",
+      "italian": "pericolo",
+      "english": "danger",
+      "example_de": "Es besteht keine Gefahr.",
+      "level": "B1",
+      "first_seen": "2026-07-21-stefanie",
+      "seen_in_lessons": [
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "streiten": {
+      "german": "streiten",
+      "article": "",
+      "plural": "",
+      "category": "verb_irregular",
+      "italian": "litigare",
+      "english": "to argue",
+      "example_de": "Die zwei Männer streiten sich vor dem Kühlschrank.",
+      "level": "B1",
+      "first_seen": "2026-07-21-stefanie",
+      "seen_in_lessons": [
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "einkauf": {
+      "german": "Einkauf",
+      "article": "der",
+      "plural": "Einkäufe",
+      "category": "noun",
+      "italian": "spesa",
+      "english": "shopping, purchase",
+      "example_de": "Der Mann rechts sollte den Einkauf machen.",
+      "level": "A2",
+      "first_seen": "2026-07-21-stefanie",
+      "seen_in_lessons": [
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "speisekammer": {
+      "german": "Speisekammer",
+      "article": "die",
+      "plural": "Speisekammern",
+      "category": "noun",
+      "italian": "dispensa",
+      "english": "pantry",
+      "example_de": "Ich kann viele Dinge aus der Speisekammer nehmen.",
+      "level": "B1",
+      "first_seen": "2026-07-21-stefanie",
+      "seen_in_lessons": [
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "schrank": {
+      "german": "Schrank",
+      "article": "der",
+      "plural": "Schränke",
+      "category": "noun",
+      "italian": "armadio",
+      "english": "cupboard, closet",
+      "example_de": "Ich kann viele Dinge aus dem Schrank nehmen.",
+      "level": "A2",
+      "first_seen": "2026-07-21-stefanie",
+      "seen_in_lessons": [
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "motor": {
+      "german": "Motor",
+      "article": "der",
+      "plural": "Motoren",
+      "category": "noun",
+      "italian": "motore",
+      "english": "engine, motor",
+      "example_de": "Du brauchst nur einen kleinen Motor für den Notfall.",
+      "level": "B1",
+      "first_seen": "2026-07-21-stefanie",
+      "seen_in_lessons": [
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
+    },
+    "grauzone": {
+      "german": "Grauzone",
+      "article": "die",
+      "plural": "Grauzonen",
+      "category": "noun",
+      "italian": "zona grigia",
+      "english": "gray area",
+      "example_de": "Es ist eine Grauzone.",
+      "level": "B1",
+      "first_seen": "2026-07-21-stefanie",
+      "seen_in_lessons": [
+        "2026-07-21-stefanie"
+      ],
+      "seen_in_topics": [
+        "Sailing vocabulary and describing situations"
+      ],
+      "occurrences": 1,
+      "anki_status": "added"
     }
   },
   "stats": {
-    "total_words": 896,
+    "total_words": 1022,
     "by_category": {
       "expression": 5,
-      "adjective": 98,
-      "noun": 445,
-      "adverb": 69,
-      "verb_separable": 45,
-      "verb_regular": 141,
+      "adjective": 111,
+      "noun": 526,
+      "adverb": 75,
+      "verb_separable": 55,
+      "verb_regular": 150,
       "phrase": 26,
       "": 10,
-      "verb_irregular": 47,
+      "verb_irregular": 54,
       "verb_modal": 6,
       "pronoun": 4
     },
     "by_level": {
-      "A2": 365,
-      "B1": 194,
-      "A1": 325,
+      "A2": 425,
+      "B1": 252,
+      "A1": 332,
       "": 10,
       "C2": 1,
-      "B2": 1
+      "B2": 2
     }
   }
 }

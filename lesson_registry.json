@@ -547,11 +547,197 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-06-24T15:53:30.003490"
+    },
+    {
+      "id": "2026-06-26-stefanie",
+      "date": "2026-06-26",
+      "audio_file": "Audiolessons\\lezione_2026-06-26-stefanie-compressed.mp4",
+      "topic": "Prepositional verbs and directional adverbs",
+      "summary_it": "Questa lezione si è concentrata sui verbi preposizionali (verbi con preposizioni fisse) e sugli avverbi direzionali (hin/her). Kevin ha praticato cost...",
+      "vocabulary_count": 31,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "Prepositional verbs",
+        "Directional adverbs (hin/her)",
+        "Modal verbs with infinitives",
+        "Dative and accusative with prepositions"
+      ],
+      "homework": "Review all prepositional verbs with their fixed prepositions and cases. Practice using hin/her in sentences describing movement. Create example sentences for: sich freuen auf, leiden an/unter, sich beschweren über, teilnehmen an, sich vorbereiten auf. Practice the difference between dorthin (to there, away from speaker) and hierher (to here, toward speaker).",
+      "duration_minutes": 67.6,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-26-stefanie.txt",
+        "data": "data/lezione_2026-06-26-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-26T17:46:11.285676"
+    },
+    {
+      "id": "2026-06-29-stefanie",
+      "date": "2026-06-29",
+      "audio_file": "Audiolessons\\lezione_2026-06-29-stefanie-compressed.mp4",
+      "topic": "Holiday Small Talk & Comparisons",
+      "summary_it": "Kevin descrive la sua vacanza all-inclusive a Tenerife con sua madre e sua zia. La lezione si è concentrata su strutture conversazionali naturali per ...",
+      "vocabulary_count": 28,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "27. Speaking: aussehen, Halb-/Vollpension, ziemlich günstig, Paket/Päckchen, distance expressions (bis zum, am nächsten, weiter als), langweilig/mir ist langweilig, ausprobieren/anprobieren/probieren zu, betrunken/sich betrinken, die Kontrolle verlieren, es schaffen, Streifen, Batterie aufladen"
+      ],
+      "homework": "",
+      "duration_minutes": 60.0,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-29-stefanie.txt",
+        "data": "data/lezione_2026-06-29-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-07T19:32:30.138006"
+    },
+    {
+      "id": "2026-07-06-stefanie",
+      "date": "2026-07-06",
+      "audio_file": "Audiolessons\\lezione_2026-07-06-stefanie-compressed.mp4",
+      "topic": "Vacation recap and study materials",
+      "summary_it": "Kevin è tornato da Tenerife, dove ha incontrato turisti dal Belgio e dall'Italia ma ha trovato il viaggio un po' noioso. La discussione ha coperto l'e...",
+      "vocabulary_count": 26,
+      "grammar_count": 5,
+      "phrases_count": 6,
+      "doc_sections": [
+        "Vacation discussion",
+        "Prepositions with locations (auf/in)",
+        "Origin expressions (aus/von)",
+        "Idiomatic expression: das gibt's nicht",
+        "Study materials and strategies",
+        "Relative clauses with 'in dem'",
+        "Conversational 'das' vs formal 'es'"
+      ],
+      "homework": "",
+      "duration_minutes": 60.0,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-06-stefanie.txt",
+        "data": "data/lezione_2026-07-06-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-07T20:05:17.321566"
+    },
+    {
+      "id": "2026-07-07-stefanie",
+      "date": "2026-07-07",
+      "audio_file": "Audiolessons\\lezione_2026-07-07-stefanie-compressed.mp4",
+      "topic": "Wechselpräpositionen and Directional Particles",
+      "summary_it": "Kevin e Stefanie hanno lavorato intensamente sulle Wechselpräpositionen (preposizioni a doppio caso) che richiedono l'accusativo con movimento e il da...",
+      "vocabulary_count": 34,
+      "grammar_count": 5,
+      "phrases_count": 2,
+      "doc_sections": [
+        "Wechselpräpositionen with two-way cases",
+        "Directional particles hin and her",
+        "Positioning verbs (stellen/stehen, legen/liegen, setzen/sitzen, hängen)",
+        "Question words wo vs. wohin",
+        "Diminutive suffix -chen"
+      ],
+      "homework": "",
+      "duration_minutes": 60.0,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-07-stefanie.txt",
+        "data": "data/lezione_2026-07-07-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-07T20:40:17.949301"
+    },
+    {
+      "id": "2026-07-08-stefanie",
+      "date": "2026-07-08",
+      "audio_file": "Audiolessons\\lezione_2026-07-08-stefanie-compressed.mp4",
+      "topic": "Problem situations and solutions",
+      "summary_it": "Kevin ha praticato la descrizione di situazioni problematiche e la proposta di soluzioni usando strutture condizionali (würde + infinitivo). La lezion...",
+      "vocabulary_count": 31,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "8. Juli"
+      ],
+      "homework": "",
+      "duration_minutes": 67.9,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-08-stefanie.txt",
+        "data": "data/lezione_2026-07-08-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-08T19:34:24.408882"
+    },
+    {
+      "id": "2026-07-09-stefanie",
+      "date": "2026-07-09",
+      "audio_file": "Audiolessons\\lezione_2026-07-09-stefanie-compressed.mp4",
+      "topic": "Describing chaotic situations & hypotheticals",
+      "summary_it": "Kevin ha descritto una cucina caotica (immagine 6) usando strutture complesse. Ha praticato verbi direzionali (reinkommen in die Küche), preoccupazion...",
+      "vocabulary_count": 16,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "8. Juli (picture 6 description)",
+        "fragen um vs. fragen nach corrections",
+        "TE-KA-MO-LO sentence order",
+        "Konjunktiv II hypotheticals",
+        "gerade for present continuous"
+      ],
+      "homework": "",
+      "duration_minutes": 58.4,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-09-stefanie.txt",
+        "data": "data/lezione_2026-07-09-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-10T11:23:08.615541"
+    },
+    {
+      "id": "2026-07-21-stefanie",
+      "date": "2026-07-21",
+      "audio_file": "Audiolessons\\lezione_2026-07-21-stefanie-compressed.mp4",
+      "topic": "Sailing vocabulary and describing situations",
+      "summary_it": "Kevin discute della sua vacanza al Lago di Garda, dove prevede di navigare a vela con gli amici per la prima volta senza capitano. La lezione si conce...",
+      "vocabulary_count": 26,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "8. Juli (picture description)",
+        "Tab 33 (sailing vocabulary and grammar)"
+      ],
+      "homework": "",
+      "duration_minutes": 65.5,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-21-stefanie.txt",
+        "data": "data/lezione_2026-07-21-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-21T22:37:31.561450"
     }
   ],
   "stats": {
-    "total": 21,
-    "total_cost_eur": 3.918,
-    "total_minutes": 1068.6
+    "total": 28,
+    "total_cost_eur": 4.618,
+    "total_minutes": 1508.0
   }
 }
