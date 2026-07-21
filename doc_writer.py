@@ -1,7 +1,6 @@
 # doc_writer.py v4 — testo ricco con emoji, niente API styling
 
 import json
-import shutil
 from pathlib import Path
 from datetime import date, datetime
 from google.auth.transport.requests import Request
@@ -11,11 +10,6 @@ from googleapiclient.discovery import build
 
 STEFANIE_DOC_ID = "165S8CsHT3TrCpr6Se3l3VYakb7r16_bgg81l5ygJvpc"
 KPI_TAB_ID      = "t.wjmdnwq7d6ek"
-
-PDF_DRIVE_FOLDER = Path(
-    r"C:\Users\vecch\Il mio Drive (vecchi.kevin@gmail.com)"
-    r"\Portatile Dati\Documenti Kevin\Deutsch\Audiolezioni\KPI + pdf lezioni"
-)
 
 SCOPES = [
     "https://www.googleapis.com/auth/drive",
@@ -53,33 +47,22 @@ def get_drive_service():
     return build("drive", "v3", credentials=creds)
 
 
-# ─── BACKUP ───────────────────────────────────────────────────────────────────
+# ─── BACKUP (locale, niente copie sul Drive personale) ────────────────────────
 def backup_doc(label: str = None) -> str:
+    """Esporta il Google Doc come .docx nella cartella locale del progetto.
+    Niente copie create nel Drive personale dell'utente (solo file locali)."""
     if label is None:
         label = datetime.now().strftime("%Y-%m-%d_%H-%M")
     backup_dir = Path("doc_snapshots/backups")
     backup_dir.mkdir(parents=True, exist_ok=True)
     drive_svc = get_drive_service()
-    copy = drive_svc.files().copy(
+    data = drive_svc.files().export_media(
         fileId=STEFANIE_DOC_ID,
-        body={"name": f"Kevin_BACKUP_{label}"}
+        mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
     ).execute()
-    copy_url = f"https://docs.google.com/document/d/{copy['id']}/edit"
-    (backup_dir / f"backup_{label}.json").write_text(json.dumps({
-        "label": label, "url": copy_url,
-        "created_at": datetime.now().isoformat()
-    }, indent=2))
-    print(f"💾 Backup: {copy_url}")
-    return copy_url
-
-
-# ─── PDF → DRIVE ──────────────────────────────────────────────────────────────
-def copy_pdf_to_drive(pdf_path: str) -> str:
-    pdf_path = Path(pdf_path)
-    PDF_DRIVE_FOLDER.mkdir(parents=True, exist_ok=True)
-    dest = PDF_DRIVE_FOLDER / pdf_path.name
-    shutil.copy2(str(pdf_path), str(dest))
-    print(f"📄 PDF → Drive: {dest.name}")
+    dest = backup_dir / f"backup_{label}.docx"
+    dest.write_bytes(data)
+    print(f"💾 Backup locale: {dest}")
     return str(dest)
 
 
@@ -402,16 +385,16 @@ def append_lesson_summary(lesson_json_path: str,
     print("🔑 Connessione Google...")
     service = get_service()
 
-    # 1. Backup
-    backup_doc(label=lesson_date)
+    # 1. Backup locale del Doc (nessuna copia sul Drive personale)
+    # Non-blocking: il Doc puo' superare il limite di export di Drive
+    # (docx troppo grande) senza che questo impedisca l'aggiornamento vero e proprio.
+    try:
+        backup_doc(label=lesson_date)
+    except Exception as e:
+        print(f"⚠️ Backup locale saltato (non-blocking): {e}")
 
-    # 2. PDF → Drive folder locale
-    pdf_filename = ""
-    if pdf_path and Path(pdf_path).exists():
-        copy_pdf_to_drive(pdf_path)
-        pdf_filename = Path(pdf_path).name
-    else:
-        print("⚠️  PDF non trovato, skip copia Drive")
+    # 2. PDF già salvato localmente in pdfs/ da pdf_gen.py (step 5)
+    pdf_filename = Path(pdf_path).name if pdf_path and Path(pdf_path).exists() else ""
 
     # 3. Carica dati
     registry = {"lessons": [], "stats": {}}

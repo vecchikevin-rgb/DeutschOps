@@ -28,6 +28,7 @@ SNAPSHOTS_DIR.mkdir(exist_ok=True)
 
 OLLAMA_BASE = "http://localhost:11434"
 _VISION_MODELS = ["minicpm-v:latest", "llava:7b"]
+IMAGE_CACHE_PATH = Path("data/doc_image_cache.json")
 
 _DOC_IMAGE_PROMPT = (
     "This image is from a German language lesson document. "
@@ -73,28 +74,60 @@ def _analyze_image_bytes(image_bytes: bytes, model: str) -> str:
     return ""
 
 
+def _load_image_cache() -> dict[str, str]:
+    if IMAGE_CACHE_PATH.exists():
+        try:
+            return json.loads(IMAGE_CACHE_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+
+def _save_image_cache(cache: dict[str, str]) -> None:
+    IMAGE_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    IMAGE_CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def _extract_doc_images(inline_objects: dict, creds: Credentials) -> dict[str, str]:
     """
-    Scarica e analizza le immagini embedded nel doc.
+    Scarica e analizza le immagini embedded nel doc (solo quelle non ancora
+    viste — le altre vengono riusate da data/doc_image_cache.json, altrimenti
+    con un doc da 100+ immagini ogni run ricomincia da zero via Ollama).
     Ritorna {obj_id: description} per le immagini con testo rilevante.
     """
     if not inline_objects:
         return {}
 
+    cache = _load_image_cache()
+    new_ids = [oid for oid in inline_objects if oid not in cache]
+
+    descriptions: dict[str, str] = {
+        oid: desc for oid, desc in cache.items()
+        if oid in inline_objects and desc
+    }
+
+    if not new_ids:
+        print(f"   📷 {len(inline_objects)} immagini nel doc — tutte già in cache")
+        return descriptions
+
+    if os.environ.get("SKIP_DOC_IMAGES") == "1":
+        print(f"   ⏭️  SKIP_DOC_IMAGES=1 — salto analisi di {len(new_ids)} immagini nuove")
+        return descriptions
+
     model = _ollama_vision_model()
     if not model:
-        print("   ⚠️  Ollama non disponibile — skip analisi immagini doc")
-        return {}
+        print(f"   ⚠️  Ollama non disponibile — skip analisi {len(new_ids)} immagini nuove")
+        return descriptions
 
     # Assicura token fresco per il download
     if creds.expired and creds.refresh_token:
         creds.refresh(Request())
 
-    print(f"   📷 {len(inline_objects)} immagini nel doc → analisi con {model}")
-    descriptions: dict[str, str] = {}
+    print(f"   📷 {len(inline_objects)} immagini nel doc, {len(new_ids)} nuove → analisi con {model}")
 
-    for i, (obj_id, obj_data) in enumerate(inline_objects.items(), 1):
+    for i, obj_id in enumerate(new_ids, 1):
         try:
+            obj_data = inline_objects[obj_id]
             img_props = (obj_data
                          .get("inlineObjectProperties", {})
                          .get("embeddedObject", {})
@@ -110,14 +143,17 @@ def _extract_doc_images(inline_objects: dict, creds: Credentials) -> dict[str, s
                 continue
 
             desc = _analyze_image_bytes(resp.content, model)
+            cache[obj_id] = desc
             if desc:
                 descriptions[obj_id] = desc
-                print(f"   [{i}/{len(inline_objects)}] ✓ testo trovato")
+                print(f"   [{i}/{len(new_ids)}] ✓ testo trovato")
             else:
-                print(f"   [{i}/{len(inline_objects)}] · nessun testo")
+                print(f"   [{i}/{len(new_ids)}] · nessun testo")
 
         except Exception as e:
-            print(f"   [{i}/{len(inline_objects)}] ⚠️  {e}")
+            print(f"   [{i}/{len(new_ids)}] ⚠️  {e}")
+
+    _save_image_cache(cache)
 
     return descriptions
 

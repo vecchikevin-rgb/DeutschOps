@@ -213,15 +213,24 @@ def transcribe_local(audio_path: Path, output_path: Path) -> str:
                           f"(confidenza: {info.language_probability:.0%})\n")
 
                 chunk_text: list[str] = []
-                with tqdm(
-                    total=info.duration,
+                pbar = tqdm(
+                    total=info.duration or chunk_sec,
                     unit="s", unit_scale=True,
                     bar_format="   {l_bar}{bar}| {n:.0f}/{total:.0f}s [{elapsed}<{remaining}]",
                     colour="green"
-                ) as pbar:
+                )
+                try:
                     for seg in segments_gen:
                         chunk_text.append(seg.text.strip())
-                        pbar.update(seg.end - seg.start)
+                        try:
+                            pbar.update(seg.end - seg.start)
+                        except Exception:
+                            pass
+                finally:
+                    try:
+                        pbar.close()
+                    except Exception:
+                        pass
 
                 new_segments.extend(chunk_text)
                 chunks_done = i + 1

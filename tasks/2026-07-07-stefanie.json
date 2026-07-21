@@ -1,0 +1,41 @@
+{
+  "lesson_date": "2026-07-07-stefanie",
+  "created_at": "2026-07-07T18:06:11+00:00",
+  "updated_at": "2026-07-07T18:41:34+00:00",
+  "stages": {
+    "doc": {
+      "status": "done",
+      "result": {
+        "new_content": ""
+      },
+      "at": "2026-07-07T18:14:45+00:00"
+    },
+    "transcript": {
+      "status": "done",
+      "result": {
+        "path": "transcripts\\lezione_2026-07-07-stefanie.txt"
+      },
+      "at": "2026-07-07T18:36:23+00:00"
+    },
+    "extraction": {
+      "status": "done",
+      "result": {
+        "path": "data\\lezione_2026-07-07-stefanie.json"
+      },
+      "at": "2026-07-07T18:39:40+00:00"
+    },
+    "pdf": {
+      "status": "done",
+      "result": {
+        "path": "pdfs\\lezione_2026-07-07-stefanie.pdf"
+      },
+      "at": "2026-07-07T18:39:44+00:00"
+    },
+    "doc_update": {
+      "status": "done",
+      "result": {},
+      "at": "2026-07-07T18:41:34+00:00"
+    }
+  },
+  "deferred_commits": {}
+}

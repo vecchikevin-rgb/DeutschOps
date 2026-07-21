@@ -9,6 +9,7 @@
 import os
 import sys
 import json
+import requests
 from pathlib import Path
 from datetime import datetime, date
 from collections import Counter
@@ -17,7 +18,50 @@ from dotenv import load_dotenv
 import anthropic
 
 load_dotenv()
-client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+
+LLM_BACKEND  = os.getenv("LLM_BACKEND", "anthropic")   # "anthropic" | "ollama"
+OLLAMA_HOST  = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen2.5:7b-instruct")
+
+_client = None
+
+
+def _anthropic_client():
+    global _client
+    if _client is None:
+        _client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+    return _client
+
+
+def call_llm(system: str, user_content: str, max_tokens: int = 4000) -> tuple[str, float]:
+    """Dispatch to Anthropic Claude (default) o Ollama locale (LLM_BACKEND=ollama)."""
+    if LLM_BACKEND == "ollama":
+        resp = requests.post(
+            f"{OLLAMA_HOST}/api/chat",
+            json={
+                "model": OLLAMA_MODEL,
+                "messages": [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user_content},
+                ],
+                "stream": False,
+                "options": {"num_predict": max_tokens},
+            },
+            timeout=900,
+        )
+        resp.raise_for_status()
+        return resp.json()["message"]["content"], 0.0
+
+    response = _anthropic_client().messages.create(
+        model=MODEL,
+        max_tokens=max_tokens,
+        system=system,
+        messages=[{"role": "user", "content": user_content}],
+    )
+    cost = (response.usage.input_tokens * 0.000003 +
+            response.usage.output_tokens * 0.000015)
+    return response.content[0].text.strip(), cost
+
 
 ERROR_DB = Path("data/error_db.json")
 MODEL = "claude-sonnet-4-5"
@@ -92,15 +136,8 @@ def extract_errors_from_transcript(transcript_path: str, lesson_date: str) -> li
     text = Path(transcript_path).read_text(encoding="utf-8")
     print(f"   Transcript: {Path(transcript_path).name} ({len(text)} char)")
 
-    resp = client.messages.create(
-        model=MODEL,
-        max_tokens=4000,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": f"=== TRANSCRIPT ===\n{text}"}],
-    )
-    cost = (resp.usage.input_tokens * 0.000003 +
-            resp.usage.output_tokens * 0.000015)
-    data = parse_json_safe(resp.content[0].text)
+    raw, cost = call_llm(SYSTEM_PROMPT, f"=== TRANSCRIPT ===\n{text}")
+    data = parse_json_safe(raw)
     errors = (data or {}).get("errors", [])
     for e in errors:
         e["lesson_date"] = lesson_date

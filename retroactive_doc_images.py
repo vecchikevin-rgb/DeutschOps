@@ -18,6 +18,7 @@ Uso:
 import base64
 import json
 import sys
+import time
 from pathlib import Path
 
 import requests
@@ -75,66 +76,118 @@ def read_doc_images_by_tab(creds, model: str) -> dict[str, list[dict]]:
     """
     Ritorna { tab_title: [ {"obj_id": ..., "description": ...} ] }
     solo per i tab che hanno immagini con testo rilevante.
+
+    Strategia in due fasi:
+    1. Download di TUTTE le immagini prima (veloce, ~0.4s/img).
+       Se un download fallisce, re-fetch doc lazy (max 1x ogni 60s) per URI freschi.
+    2. Analisi Ollama su tutti i bytes scaricati (lento, ma senza dipendenze di rete).
+    Questo evita che i timeout Ollama facciano scadere i contentUri CDN.
     """
     docs_service = build("docs", "v1", credentials=creds)
-    doc = docs_service.documents().get(
-        documentId=DOC_ID, includeTabsContent=True
-    ).execute()
 
-    # Assicura token fresco
-    if creds.expired and creds.refresh_token:
-        creds.refresh(Request())
+    def _fresh_doc():
+        if creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        return docs_service.documents().get(
+            documentId=DOC_ID, includeTabsContent=True
+        ).execute()
 
-    tabs = doc.get("tabs", [])
-    result: dict[str, list[dict]] = {}
-    total_imgs = sum(
-        len(t.get("documentTab", {}).get("inlineObjects", {}))
-        for t in tabs
-        if t.get("tabProperties", {}).get("tabId") != KPI_TAB_ID
-    )
-    print(f"  {len(tabs)} tab, {total_imgs} immagini totali nel doc")
-
-    done = 0
-    for tab in tabs:
+    # Leggi doc una volta, costruisci lista completa immagini
+    doc = _fresh_doc()
+    img_list = []
+    for tab in doc.get("tabs", []):
         props  = tab.get("tabProperties", {})
         tab_id = props.get("tabId", "")
         title  = props.get("title", "?")
         if tab_id == KPI_TAB_ID:
             continue
+        inline_objs = tab.get("documentTab", {}).get("inlineObjects", {})
+        for obj_id, obj_data in inline_objs.items():
+            uri = (obj_data
+                   .get("inlineObjectProperties", {})
+                   .get("embeddedObject", {})
+                   .get("imageProperties", {})
+                   .get("contentUri", ""))
+            img_list.append({"tab_id": tab_id, "title": title, "obj_id": obj_id, "uri": uri})
 
-        doc_tab      = tab.get("documentTab", {})
-        inline_objs  = doc_tab.get("inlineObjects", {})
-        if not inline_objs:
+    total = len(img_list)
+    print(f"  {len(doc.get('tabs', []))} tab, {total} immagini totali nel doc")
+
+    # ── Fase 1: download ──────────────────────────────────────────────────────
+    downloaded = []
+    last_refetch: float = 0.0
+
+    for i, img in enumerate(img_list, 1):
+        uri = img["uri"]
+        if not uri:
+            print(f"  DL [{i:3d}/{total}] —  {img['title'][:38]}  (no URI)")
             continue
 
-        tab_results: list[dict] = []
-        for obj_id, obj_data in inline_objs.items():
-            done += 1
-            img_props = (obj_data
-                         .get("inlineObjectProperties", {})
-                         .get("embeddedObject", {})
-                         .get("imageProperties", {}))
-            uri = img_props.get("contentUri", "")
-            if not uri:
-                continue
+        img_bytes = None
+        for attempt in range(3):
             try:
                 resp = requests.get(
                     uri,
                     headers={"Authorization": f"Bearer {creds.token}"},
-                    timeout=30
+                    timeout=60,
                 )
-                if resp.status_code != 200:
-                    continue
-                desc = _analyze(resp.content, model)
-                marker = "✓" if desc else "·"
-                print(f"  [{done:3d}/{total_imgs}] {marker}  {title[:40]}")
-                if desc:
-                    tab_results.append({"obj_id": obj_id, "description": desc})
-            except Exception as e:
-                print(f"  [{done:3d}/{total_imgs}] ⚠  {e}")
+                if resp.status_code == 200:
+                    img_bytes = resp.content
+                    break
 
-        if tab_results:
-            result[title] = tab_results
+                print(f"  DL [{i:3d}/{total}] HTTP {resp.status_code}  {img['title'][:30]}  (att.{attempt+1})")
+                if resp.status_code == 401:
+                    creds.refresh(Request())
+
+                # Re-fetch doc per URI freschi (max 1x/60s)
+                now = time.monotonic()
+                if now - last_refetch > 60:
+                    time.sleep(5)
+                    fresh = _fresh_doc()
+                    last_refetch = time.monotonic()
+                    for t in fresh.get("tabs", []):
+                        if t.get("tabProperties", {}).get("tabId") == img["tab_id"]:
+                            fresh_obj = (t.get("documentTab", {})
+                                         .get("inlineObjects", {})
+                                         .get(img["obj_id"], {}))
+                            uri = (fresh_obj
+                                   .get("inlineObjectProperties", {})
+                                   .get("embeddedObject", {})
+                                   .get("imageProperties", {})
+                                   .get("contentUri", uri))
+                            break
+                else:
+                    time.sleep(10)
+
+            except Exception as e:
+                print(f"  DL [{i:3d}/{total}] ⚠  {e} (att.{attempt+1})")
+                time.sleep(10)
+
+        if img_bytes:
+            downloaded.append({**img, "bytes": img_bytes})
+            print(f"  DL [{i:3d}/{total}] ✓  {img['title'][:40]}")
+        else:
+            print(f"  DL [{i:3d}/{total}] ✗  {img['title'][:40]}  (fallito)")
+
+        time.sleep(0.4)  # rate limit CDN
+
+    print(f"\n  Download: {len(downloaded)}/{total} immagini scaricate")
+
+    # ── Fase 2: analisi Ollama ────────────────────────────────────────────────
+    print(f"\n  Analisi Ollama ({model})...")
+    result: dict[str, list[dict]] = {}
+
+    for i, img in enumerate(downloaded, 1):
+        title = img["title"]
+        try:
+            desc = _analyze(img["bytes"], model)
+        except Exception as e:
+            print(f"  AI [{i:3d}/{len(downloaded)}] ⚠  {e}")
+            desc = ""
+        marker = "✓" if desc else "·"
+        print(f"  AI [{i:3d}/{len(downloaded)}] {marker}  {title[:40]}")
+        if desc:
+            result.setdefault(title, []).append({"obj_id": img["obj_id"], "description": desc})
 
     return result
 

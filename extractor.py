@@ -1,12 +1,55 @@
 # extractor.py
 import os
 import json
+import requests
 from pathlib import Path
 from dotenv import load_dotenv
 import anthropic
 
 load_dotenv()
-client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+
+LLM_BACKEND  = os.getenv("LLM_BACKEND", "anthropic")   # "anthropic" | "ollama"
+OLLAMA_HOST  = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen2.5:7b-instruct")
+
+_client = None
+
+
+def _anthropic_client():
+    global _client
+    if _client is None:
+        _client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+    return _client
+
+
+def call_llm(system: str, user_content: str, max_tokens: int = 8000) -> tuple[str, float]:
+    """Dispatch to Anthropic Claude (default) o Ollama locale (LLM_BACKEND=ollama)."""
+    if LLM_BACKEND == "ollama":
+        resp = requests.post(
+            f"{OLLAMA_HOST}/api/chat",
+            json={
+                "model": OLLAMA_MODEL,
+                "messages": [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user_content},
+                ],
+                "stream": False,
+                "options": {"num_predict": max_tokens},
+            },
+            timeout=900,
+        )
+        resp.raise_for_status()
+        return resp.json()["message"]["content"], 0.0
+
+    response = _anthropic_client().messages.create(
+        model="claude-sonnet-4-5",
+        max_tokens=max_tokens,
+        system=system,
+        messages=[{"role": "user", "content": user_content}],
+    )
+    cost = (response.usage.input_tokens * 0.000003 +
+            response.usage.output_tokens * 0.000015)
+    return response.content[0].text.strip(), cost
 
 SYSTEM_PROMPT = """You are a German language tutor. Student: Kevin (Italian, A2→B1), lessons in English with native speaker Stefanie. Transcript: English + German examples + occasional Italian.
 
@@ -122,7 +165,7 @@ def enrich_grammar_with_web(grammar_points: list) -> list:
         + json.dumps(grammar_points, ensure_ascii=False, indent=2)
     )
 
-    response = client.messages.create(
+    response = _anthropic_client().messages.create(
         model="claude-sonnet-4-5",
         max_tokens=8000,
         system=_GRAMMAR_WEB_SYSTEM,
@@ -186,28 +229,19 @@ def extract(transcript_path: str, output_filename: str = None,
             print(f"Visual content: {visual_context['frames_with_content']}/"
                   f"{visual_context['frames_analyzed']} frame con testo")
 
-    # Call 1: base extraction
-    print("Call 1/2 -- Base extraction...")
-    response1 = client.messages.create(
-        model="claude-sonnet-4-5",
-        max_tokens=8000,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": user_content}]
-    )
-
-    raw1 = response1.content[0].text.strip()
+    # Call 1: base extraction (Anthropic Claude oppure Ollama locale, LLM_BACKEND=ollama)
+    print(f"Call 1/2 -- Base extraction ({LLM_BACKEND})...")
+    raw1, cost1 = call_llm(SYSTEM_PROMPT, user_content)
     data = parse_json_safe(raw1)
     if not data:
         raise ValueError("Could not parse base extraction response")
 
-    cost1 = (response1.usage.input_tokens * 0.000003 +
-             response1.usage.output_tokens * 0.000015)
     print(f"   {len(data.get('vocabulary',[]))} words, "
           f"{len(data.get('grammar_points',[]))} grammar points | {cost1:.3f} EUR")
 
-    # Call 2: web search for grammar
+    # Call 2: web search for grammar (solo backend Anthropic -- Ollama non ha web search)
     grammar_points = data.get("grammar_points", [])
-    if grammar_points:
+    if grammar_points and LLM_BACKEND == "anthropic":
         print("Call 2/2 -- Checking grammar for web search...")
         to_research = needs_web_search(grammar_points)
 
@@ -222,6 +256,8 @@ def extract(transcript_path: str, output_filename: str = None,
             data["grammar_points"] = final_grammar
         else:
             print("   All rules already complete -- web search skipped")
+    elif grammar_points:
+        print("   Ollama backend: web search grammar enrichment non disponibile, skip")
     else:
         print("No grammar points -- skipping web search")
 

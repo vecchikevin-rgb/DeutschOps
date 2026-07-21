@@ -36,7 +36,7 @@ streamlit run dashboard.py
 | 3 | `extractor.py` | Estrazione strutturata via Claude → `data/lezione_{date}.json` |
 | 4 | `anki_feeder.py` | Creazione flashcard in deck "Deutsch::DeutschOps" |
 | 5 | `pdf_gen.py` | Generazione PDF lezione → `pdfs/lezione_{date}.pdf` |
-| 6 | `doc_writer.py` | Append riepilogo + KPI su Google Doc, upload PDF su Drive |
+| 6 | `doc_writer.py` | Append riepilogo + KPI su Google Doc, backup locale del Doc |
 
 **Post-pipeline automatico:** `lesson_registry.py`, `vocab_db.py`, `grammar_book.py`, `error_extractor.py` (quaderno errori), `generate_astra_prompts.py`, `notebooklm_export.py`
 
@@ -105,9 +105,9 @@ Book/            PDF libri di corso
 
 | Categoria | Tecnologia |
 |-----------|-----------|
-| Runtime | Python 3.14, venv in `venv/` (NON `.venv/`, che è vuoto) |
-| Trascrizione | OpenAI Whisper API |
-| Estrazione AI | Anthropic Claude API |
+| Runtime | Python 3.14, venv in `venv/` (non usare `.venv/`) |
+| Trascrizione | Whisper locale (faster-whisper, `WHISPER_MODE=local`) |
+| Estrazione AI | Anthropic Claude API (default) oppure Ollama locale (`LLM_BACKEND=ollama`, vedi sezione dedicata) |
 | Google | Google Docs/Drive API (OAuth2), Google NotebookLM (via notebooklm-py) |
 | Flashcard | AnkiConnect (localhost:8765) |
 | PDF | ReportLab |
@@ -125,6 +125,41 @@ HUGGINGFACE_TOKEN=...
 ```
 
 **Google OAuth2:** `credentials.json` + `token.json` (non in git) — flow automatico al primo run.
+
+## Regole operative per Claude
+
+- **Elaborare una lezione = far girare `main.py` (o `watch.py --process`).** La sequenza dei 6 step è già scritta in Python — non eseguire gli step manualmente uno a uno, non riscrivere logica già presente nei moduli.
+- **Tutto ciò che riguarda il progetto resta dentro questa cartella.** Nessuno script deve scrivere file in `Il mio Drive`, `OneDrive` o altri percorsi personali dell'utente fuori da `DeutschOps/`. Il backup del Google Doc (`doc_writer.backup_doc`) esporta un `.docx` locale in `doc_snapshots/backups/`, non crea più copie nel Drive personale di Kevin. Se serve un nuovo output "verso l'esterno", chiedere prima.
+- **File temporanei o script one-off vanno rimossi subito dopo l'uso** (sia lo script che gli eventuali output generati), non lasciati nella root del progetto. Non creare file `_tmp_*`, `test_*` improvvisati e dimenticarli.
+- **Verificare periodicamente `.tmp.driveupload/`** nella root: non è generato da nessuno script del progetto — è lo staging locale di Google Drive per Desktop, segno che questa cartella (o una superiore) è inclusa nel backup automatico "Il mio computer" di Drive. Va escluso dalle impostazioni di Google Drive per Desktop, non da qui.
+
+## Elaborazione locale con Ollama (PC fisso)
+
+Sul PC fisso (Intel i7 4 core, GTX 980) l'estrazione strutturata (step 3, `extractor.py`) e il quaderno errori (`error_extractor.py`) possono girare su un LLM locale via Ollama invece che sull'API Anthropic a pagamento.
+
+**Modello scelto:** `qwen2.5:7b-instruct` — miglior compromesso su questo hardware per estrazione JSON strutturata multilingua (tedesco/italiano/inglese); quantizzato Q4_K_M di default in Ollama (~4.7GB, gira con offload parziale GPU+CPU sulla GTX 980 da 4GB VRAM — lento ma accettabile per un job settimanale, non realtime).
+Fallback più leggero/veloce se il 7B risulta troppo lento: `llama3.2:3b-instruct` (entra interamente in 4GB VRAM, qualità di estrazione inferiore).
+
+**Setup una tantum sul PC fisso:**
+```powershell
+winget install Ollama.Ollama
+ollama pull qwen2.5:7b-instruct
+ollama pull llama3.2:3b-instruct   REM fallback opzionale, più veloce
+```
+Ollama parte come servizio locale su `http://localhost:11434` dopo l'installazione.
+
+**Attivazione nel progetto** — impostare in `.env` (solo su quel PC):
+```
+LLM_BACKEND=ollama
+OLLAMA_MODEL=qwen2.5:7b-instruct
+OLLAMA_HOST=http://localhost:11434
+```
+Senza `LLM_BACKEND=ollama` il progetto usa Anthropic Claude come sempre (default).
+
+**Limiti noti del backend Ollama:**
+- L'arricchimento grammaticale via web search (Call 2 in `extractor.py`, ricerca su dartmouth/germanveryeasy/duden) resta solo Anthropic — Ollama non ha web search; con `LLM_BACKEND=ollama` viene saltato e i grammar_points restano alla spiegazione base.
+- `grammar_book.py`, `pharma_glossary.py`, `b1_gap.py`, `weak_cards.py`, `book_extractor.py`/`book_reader.py`, `bulk_import*.py` usano ancora direttamente Claude e non sono collegati a `LLM_BACKEND` — girano solo quando eseguiti esplicitamente (non fanno parte della chiamata automatica per-lezione di `main.py`, tranne `grammar_book.update_from_lesson` che però non chiama l'AI, solo rigenera il PDF da dati già estratti).
+- La trascrizione (`transcriber.py`) resta separata da Ollama: usa già `WHISPER_MODE=local` (faster-whisper, CPU, gratis) — nessuna modifica necessaria lì.
 
 ## Contesto progetto
 
