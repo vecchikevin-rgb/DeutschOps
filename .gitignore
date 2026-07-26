@@ -15,9 +15,13 @@ Audiolessons/
 ffmpeg.exe
 pdfs/
 transcripts/
-data/
-doc_snapshots/
+# NB: "data/*" e non "data/" — con "data/" git non entra nella cartella e le
+# negazioni qui sotto restano lettera morta (era il caso di grammar_db.json).
+data/*
+!data/vocab_db.json
 !data/grammar_db.json
+!data/error_db.json
+doc_snapshots/
 Book/
 tools/
 *.log

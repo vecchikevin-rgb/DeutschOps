@@ -38,7 +38,25 @@ streamlit run dashboard.py
 | 5 | `pdf_gen.py` | Generazione PDF lezione → `pdfs/lezione_{date}.pdf` |
 | 6 | `doc_writer.py` | Append riepilogo + KPI su Google Doc, backup locale del Doc |
 
-**Post-pipeline automatico:** `lesson_registry.py`, `vocab_db.py`, `grammar_book.py`, `error_extractor.py` (quaderno errori), `generate_astra_prompts.py`, `notebooklm_export.py`
+**Post-pipeline automatico:** `lesson_registry.py`, `vocab_db.py`, `grammar_book.py`, `error_extractor.py` (quaderno errori), `generate_astra_prompts.py`, `notebooklm_export.py`, `archive_cleanup.py` (staging input a scadenza)
+
+## Staging input a scadenza (`Audiolessons/_processed/`)
+
+A fine di ogni elaborazione **riuscita**, `main.py` sposta il **file sorgente consumato** (il video originale ~140MB, oppure il `.txt` grezzo di una trascrizione esterna) in `Audiolessons/_processed/` con `archive_cleanup.archive_inputs()`, timbrando l'mtime a quel momento. Il cleanup è **opportunistico**: `archive_cleanup.cleanup_expired()` gira all'avvio di ogni run e cancella ciò che ha superato i **20 giorni**. Nessun Task Scheduler necessario.
+
+- **Cosa ci va:** solo input consumati e ridondanti (trascritto + output canonici esistono già).
+- **Cosa NON ci va mai:** i file canonici (`transcripts/`, `data/`, `pdfs/`) e l'audio compresso `lezione_*-compressed.mp4` (referenziato dal registry, riusato nei re-run). `archive_cleanup` li protegge esplicitamente. Per le lezioni senza audio il transcript canonico è **irrecuperabile** — non deve mai finire in un percorso a scadenza.
+- **A mano:** `python archive_cleanup.py --cleanup` (elimina gli scaduti) · `python archive_cleanup.py <file>...` (archivia) · `python archive_cleanup.py` (stato + giorni residui).
+
+## Lezione senza video (solo trascrizione esterna)
+
+Quando una lezione arriva **senza audio/video** (es. solo la trascrizione Gemini di una call), non c'è nulla da trascrivere: si inietta il transcript già pronto e la pipeline salta lo Step 2 (in `main.py` Step 2 fa skip se `transcripts/lezione_{date}.txt` esiste già).
+
+1. Copia il testo grezzo (verbatim, UTF-8, **senza ripulirlo** — pulire rischia di perdere il tedesco) in `transcripts/lezione_{date}-stefanie.txt`.
+2. Scrivi `transcripts/lezione_{date}-stefanie.meta.json` = `{"duration_minutes": <minuti reali dalla lezione>, "cost_eur": 0}` — la trascrizione esterna è gratuita e senza questo file il registry/dashboard registrerebbe una lezione di durata ~0.
+3. Lancia `main.py` passando **il `.txt` grezzo come dummy audio arg**: `check_video` lo ignora (suffisso non video), `prepare_audio` lo lascia com'è (<20MB), lo Step 2 salta perché il transcript canonico esiste. A fine run il `.txt` grezzo viene archiviato in `_processed/` come qualsiasi input consumato.
+
+L'estrazione (Step 3) su un dialogo grezzo con chiacchiere fuori tema è inerentemente più rumorosa: è un limite della fonte, non un bug.
 
 ## Miglioramento continuo (feedback loop)
 
@@ -75,6 +93,7 @@ Chiudono l'anello di apprendimento — usano ciò che Kevin *fa* per decidere co
 | `export_to_obsidian.py` | Export verso Obsidian |
 | `book_reader.py` / `book_extractor.py` | Import da libri PDF di corso (pdfplumber) |
 | `bulk_import.py` / `bulk_import_book.py` | Import bulk lezioni/libri |
+| `archive_cleanup.py` | Staging a scadenza degli input consumati → `Audiolessons/_processed/`, TTL 20 giorni |
 
 ## Struttura dati
 
@@ -84,6 +103,7 @@ data/            lezione_{date}.json (struttura estratta) + grammar_db.json
 pdfs/            lezione_{date}.pdf
 astra_prompts/   PDF prompt per caricamento su vector DB Astra
 Audiolessons/    File audio originali + compressi
+Audiolessons/_processed/   Input consumati (video originale, .txt grezzi esterni) — auto-eliminati 20g dopo l'elaborazione
 Book/            PDF libri di corso
 ```
 

@@ -733,11 +733,65 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-07-21T22:37:31.561450"
+    },
+    {
+      "id": "2026-07-22-stefanie",
+      "date": "2026-07-22",
+      "audio_file": "Audiolessons\\lezione_2026-07-22-stefanie-compressed.mp4",
+      "topic": "Weather vocabulary and bargaining",
+      "summary_it": "Kevin ha praticato la descrizione delle condizioni meteorologiche al Lago di Garda, imparando vocaboli chiave come 'bewölkt' (nuvoloso), 'windig' (ven...",
+      "vocabulary_count": 22,
+      "grammar_count": 5,
+      "phrases_count": 6,
+      "doc_sections": [
+        "TAB: 8. Juli - Weather vocabulary practice",
+        "TAB: 8. Juli - Picture 7 description: arguing about toy car price",
+        "TAB: 8. Juli - Bargaining vocabulary and conditional questions"
+      ],
+      "homework": "",
+      "duration_minutes": 56.9,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-22-stefanie.txt",
+        "data": "data/lezione_2026-07-22-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-23T14:44:32.708960"
+    },
+    {
+      "id": "2026-07-23-stefanie",
+      "date": "2026-07-23",
+      "audio_file": "Audiolessons\\trascrizione 23072026.txt",
+      "topic": "Travel and vacation small talk",
+      "summary_it": "Kevin e Stefanie hanno praticato conversazioni informali su viaggi e vacanze usando domande tipiche tedesche. Hanno coperto argomenti come orari di ar...",
+      "vocabulary_count": 24,
+      "grammar_count": 5,
+      "phrases_count": 6,
+      "doc_sections": [
+        "Small talk topics: travel and vacation",
+        "Time expressions and duration",
+        "Separable verbs in past tense",
+        "Superlative forms",
+        "Prepositions with verbs"
+      ],
+      "homework": "",
+      "duration_minutes": 66,
+      "cost_whisper_eur": 0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-23-stefanie.txt",
+        "data": "data/lezione_2026-07-23-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-23T14:52:08.611348"
     }
   ],
   "stats": {
-    "total": 28,
-    "total_cost_eur": 4.618,
-    "total_minutes": 1508.0
+    "total": 30,
+    "total_cost_eur": 4.818,
+    "total_minutes": 1630.9
   }
 }

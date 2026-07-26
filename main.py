@@ -21,6 +21,7 @@ from error_pdf import generate_error_pdf
 
 from task_tracker import TaskTracker
 from preflight import run_preflight
+from archive_cleanup import archive_inputs, cleanup_expired
 
 
 def prepare_audio(audio_path: str, lesson_date: str) -> str:
@@ -83,8 +84,17 @@ def process_lesson(audio_path: str, lesson_date: str = None):
     print(f"  DeutschOps -- Lesson {lesson_date}")
     print(f"{'='*50}\n")
 
+    # Path del file sorgente cosi' come passato (video originale o .txt grezzo
+    # di una trascrizione esterna). Va catturato ORA, prima che prepare_audio
+    # lo riassegni al compresso: e' l'input consumato da archiviare a fine run.
+    source_input = str(audio_path)
+
     # Apre (o riprende) il task. Se esiste gia' = run precedente non finito.
     task = TaskTracker(lesson_date)
+
+    # Cleanup opportunistico: elimina gli input consumati in Audiolessons/
+    # _processed/ scaduti (>20 giorni). Costo trascurabile, nessun setup.
+    cleanup_expired()
 
     # Preflight: recupera video corrotto (moov mancante -> untrunc) e avvisa su
     # token Google / sessione NotebookLM / Anki PRIMA di iniziare il lavoro.
@@ -265,6 +275,13 @@ def process_lesson(audio_path: str, lesson_date: str = None):
         )
         if all_core_done and task.is_done("anki"):
             task.commit_and_finish(commit_handlers={"snapshot": _write_snapshot})
+            # Lezione completata: l'input sorgente e' ormai ridondante (abbiamo
+            # transcript + output canonici). Lo spostiamo nello staging a
+            # scadenza. NB: il compresso lezione_*-compressed.mp4 resta dov'e'
+            # (protetto in archive_cleanup) perche' referenziato dal registry.
+            print("\nARCHIVE — input consumato")
+            print("-" * 30)
+            archive_inputs([source_input])
         else:
             # Scriviamo comunque lo snapshot (il doc e' stato letto e usato),
             # ma lasciamo il task aperto perche' manca Anki.
