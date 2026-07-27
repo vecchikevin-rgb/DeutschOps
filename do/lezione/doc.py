@@ -146,8 +146,13 @@ def _testo_dalle_immagini(oggetti: dict, creds) -> str:
         print("   Ollama non risponde — niente OCR sulle immagini.")
         return _formatta_immagini(descrizioni)
 
-    modello = next((c for c in ("minicpm-v:latest", "llava:7b")
-                    if any(c.split(":")[0] in m for m in disponibili)), None)
+    # La lista era ferma a minicpm-v e llava:7b. Sulla macchina di Kevin c'e'
+    # qwen2.5vl, che non corrispondeva a nessuno dei due: anche accendendo
+    # DOC_IMMAGINI=1 il modello non veniva trovato e l'OCR restava spento in
+    # silenzio. Qui si prova in ordine di preferenza e poi si accetta
+    # qualunque cosa somigli a un modello vision.
+    preferiti = ("qwen2.5vl", "minicpm-v", "llava", "llama3.2-vision", "moondream")
+    modello = next((m for p in preferiti for m in disponibili if p in m), None)
     if not modello:
         return _formatta_immagini(descrizioni)
 
@@ -193,6 +198,75 @@ def _formatta_immagini(descrizioni: dict[str, str]) -> str:
     righe = ["\n\n=== IMMAGINI NEL DOC ==="]
     righe += [f"\n[img {o[:16]}]\n{d}" for o, d in descrizioni.items()]
     return "\n".join(righe)
+
+
+def salva_immagini(*, forza: bool = False) -> dict:
+    """Scarica le immagini del Doc di Stefanie in doc_snapshots/immagini/.
+
+    PERCHE' ESISTE
+    Il backup .docx del Doc non puo' riuscire: 112.000 caratteri e 108
+    immagini superano il limite di export di Drive, e non e' transitorio.
+    Il testo e' salvato dagli snapshot; le immagini non erano da nessuna parte.
+
+    L'export in blocco fallisce, ma le singole immagini hanno un `contentUri`
+    e si scaricano una per una. Quindi non serve che Kevin scarichi niente a
+    mano: il buco si chiude in codice.
+
+    Incrementale: un'immagine gia' su disco non si riscarica. Gli id oggetto
+    che Google assegna sono stabili fra una lettura e l'altra.
+    """
+    from googleapiclient.discovery import build
+
+    dest = DOC_SNAPSHOTS / "immagini"
+    dest.mkdir(parents=True, exist_ok=True)
+
+    creds = _credenziali()
+    doc = build("docs", "v1", credentials=creds).documents().get(
+        documentId=DOC_ID, includeTabsContent=True).execute()
+
+    oggetti: dict = {}
+    for tab in doc.get("tabs", []):
+        oggetti.update(tab.get("documentTab", {}).get("inlineObjects", {}))
+    oggetti.update(doc.get("inlineObjects", {}))
+
+    esito = {"nel_doc": len(oggetti), "gia_presenti": 0, "scaricate": 0,
+             "senza_uri": 0, "fallite": 0, "cartella": str(dest)}
+    if not oggetti:
+        return esito
+
+    import requests as http
+    from google.auth.transport.requests import Request
+
+    if creds.expired and creds.refresh_token:
+        creds.refresh(Request())
+
+    for oid, dati in sorted(oggetti.items()):
+        uri = (dati.get("inlineObjectProperties", {}).get("embeddedObject", {})
+               .get("imageProperties", {}).get("contentUri", ""))
+        if not uri:
+            esito["senza_uri"] += 1
+            continue
+
+        esistente = next(dest.glob(f"{oid}.*"), None)
+        if esistente and not forza:
+            esito["gia_presenti"] += 1
+            continue
+
+        try:
+            r = http.get(uri, headers={"Authorization": f"Bearer {creds.token}"},
+                         timeout=60)
+            if r.status_code != 200:
+                esito["fallite"] += 1
+                continue
+            tipo = r.headers.get("Content-Type", "")
+            ext = {"image/png": ".png", "image/jpeg": ".jpg", "image/gif": ".gif",
+                   "image/webp": ".webp"}.get(tipo.split(";")[0], ".bin")
+            (dest / f"{oid}{ext}").write_bytes(r.content)
+            esito["scaricate"] += 1
+        except Exception:                                   # noqa: BLE001, S112
+            esito["fallite"] += 1
+
+    return esito
 
 
 def ultimo_snapshot() -> tuple[Path | None, str]:

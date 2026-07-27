@@ -84,6 +84,10 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("data", help="es. 2026-07-23-stefanie")
     p.add_argument("--prova", action="store_true", help="non tocca Anki")
 
+    p = sub.add_parser("doc-immagini",
+                       help="scarica in locale le immagini del Doc di Stefanie")
+    p.add_argument("--forza", action="store_true", help="riscarica anche quelle gia' salvate")
+
     p = sub.add_parser("grammatica", help="approfondisce le regole rimaste indietro")
     p.add_argument("--applica", action="store_true",
                    help="senza questo flag elenca soltanto")
@@ -185,6 +189,19 @@ def main(argv: list[str] | None = None) -> int:
         lez = _lezione_json(a.data)
         r = carte.alimenta(lez.get("vocabulary", []), a.data, prova=a.prova)
         print(json.dumps(r, ensure_ascii=False, indent=2))
+
+    elif a.cmd == "doc-immagini":
+        from do.lezione import doc
+
+        r = doc.salva_immagini(forza=a.forza)
+        print(f"\n  {r['nel_doc']} immagini nel Doc")
+        print(f"     {r['scaricate']:4d} scaricate ora")
+        print(f"     {r['gia_presenti']:4d} gia' in locale")
+        if r["senza_uri"]:
+            print(f"     {r['senza_uri']:4d} senza contentUri (disegni o incorporate)")
+        if r["fallite"]:
+            print(f"     {r['fallite']:4d} FALLITE")
+        print(f"  -> {r['cartella']}")
 
     elif a.cmd == "grammatica":
         from do.sapere import grammatica

@@ -155,6 +155,20 @@ def elabora(sorgente: str | Path, data_lezione: str | None = None,
                     print(f"   Riepilogo sul Doc non riuscito: {str(e)[:80]}")
                     esito.saltati.append("riepilogo-doc")
 
+                # Le immagini che Stefanie aggiunge al Doc non stanno da
+                # nessun'altra parte: l'export .docx del documento non puo'
+                # riuscire (troppo grande per Drive) e gli snapshot salvano
+                # solo il testo. Qui si scaricano una per una — incrementale,
+                # quindi dopo la prima volta scende a zero o poche.
+                try:
+                    im = doc.salva_immagini()
+                    if im["scaricate"]:
+                        print(f"   Immagini dal Doc: +{im['scaricate']} nuove "
+                              f"({im['nel_doc']} totali)")
+                except Exception as e:                      # noqa: BLE001
+                    print(f"   Immagini dal Doc non salvate: {str(e)[:80]}")
+                    esito.saltati.append("immagini-doc")
+
             vocaboli.aggiorna_da_lezione(dati, data_lezione)
             if grammatica.aggiorna_da_lezione(dati):
                 try:

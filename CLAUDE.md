@@ -29,6 +29,7 @@ py -3 deutschops.py lezione --auto        # elabora i video senza transcript
 | `drill [-n 10]` | Esercizi di produzione dai tuoi errori | ~0,03 € |
 | `frasi [-n 20]` | Frasi i+1 dal tuo corpus | 0 |
 | `carte <data>` | Carica in Anki le carte di una lezione | 0 |
+| `doc-immagini` | Salva in locale le immagini del Doc | 0 |
 | `grammatica --applica` | Approfondisce le regole rimaste indietro | ~0,02 €/regola |
 | `anki-audit` / `anki-ripara` | Difetti del mazzo e correzione | 0 |
 | `ponte` | Check verso il motore di `shared start up/` | 0 |
@@ -178,9 +179,10 @@ disattiva esplicitamente: lasciarlo implicito con un `max_tokens` stretto tronca
   che cade è il giro sui siti esterni, che gonfia il contesto a ogni ricerca. Si perde solo
   `source_verified`. Per accenderla su una lezione: `RICERCA_WEB=1 py -3 deutschops.py lezione ...`
 - **Il backup .docx del Doc di Stefanie non esiste e non può esistere:** il documento supera il
-  limite di export di Drive (112.000 caratteri, 108 immagini). Il testo è salvato a ogni lezione in
-  `doc_snapshots/snapshot_*.txt`; **immagini e formattazione no**. Per quelle serve un
-  File > Scarica a mano, ogni tanto.
+  limite di export di Drive (112.000 caratteri, 108 immagini). Al suo posto ci sono due cose, e
+  bastano: il testo in `doc_snapshots/snapshot_*.txt` a ogni lezione, e le immagini in
+  `doc_snapshots/immagini/` — scaricate una per una (l'export in blocco fallisce, le singole no),
+  in modo incrementale, dalla pipeline stessa. Resta fuori solo l'impaginazione.
 - **Il costo si misura, non si stima.** `do/base/llm.py` restituisce il costo reale da
   `response.usage`; il registro marca `cost_estimated` su ciò che misurato non è. Nella v1
   `main.py` scriveva `claude_cost = 0.10` costante: 2,95 € dei 4,82 € storici sono quella costante
