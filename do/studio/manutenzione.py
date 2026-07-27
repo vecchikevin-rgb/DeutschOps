@@ -47,6 +47,7 @@ from dataclasses import dataclass, field
 from ..base.paths import VOCAB_DB
 from .carte import (COLORE_DEFAULT, COLORE_VERBO, COLORI_GENERE, anki,
                     anki_raggiungibile)
+from .singolari import senza_plurale as _singularetantum
 
 # --------------------------------------------------------------- genere da suffisso
 # La prima versione di questa tabella ha prodotto 11 segnalazioni su 3535 carte,
@@ -265,7 +266,10 @@ def analizza(query: str = "deck:Deutsch") -> tuple[list[Scheda], dict]:
         if pare_sostantivo:
             if not s.articolo:
                 s.difetti.append("senza-articolo")
-            if not s.plurale:
+            # Un sostantivo senza plurale non e' incompleto se il plurale non
+            # esiste: Milch, Zucker, November, Süden, Ruhe. Vedi singolari.py —
+            # l'audit ne segnalava 37 come "da chiedere a Stefanie".
+            if not s.plurale and not _singularetantum(s.parola):
                 s.difetti.append("senza-plurale")
 
         if genere_sospetto(s.articolo, s.parola):
@@ -422,3 +426,88 @@ def ripara(
     riepilogo["applicate"] = len(modifiche)
     riepilogo["gruppi_tag"] = len(per_tag)
     return riepilogo
+
+
+# ------------------------------------------------------- esempi dal corpus
+def esempi_dal_corpus(schede: list[Scheda], *, prova: bool = True) -> dict:
+    """Aggiunge la frase d'esempio mancante pescandola dai transcript.
+
+    PERCHE' QUESTO E NON "CHIEDERE A STEFANIE"
+    L'audit produceva una lista di 367 carte "manca: esempio", dominata da
+    parole come auch, gut, weil, rauf. Chiedere a un'insegnante 367 frasi
+    d'esempio non e' una richiesta che si fa. Ma le frasi esistono gia': sono
+    nei transcript delle sue stesse lezioni, dette da lei.
+
+    Quindi: nessuna invenzione, nessuna chiamata di rete, nessun costo. Si
+    cerca nel corpus una frase che contenga la parola, tedesca (i transcript
+    sono bilingui) e di lunghezza ragionevole, e la si mette sul retro.
+
+    La frase piu' CORTA fra le candidate: su un parlato, una frase lunga porta
+    dentro contesto che sulla carta non serve e distrae dal punto.
+    """
+    import re as _re
+
+    from ..base.paths import TRANSCRIPTS
+    from .frasi import _FRASE, _TOKEN, e_tedesca
+
+    if not TRANSCRIPTS.is_dir():
+        return {"nessun_transcript": True}
+
+    frasi_corpus: list[str] = []
+    for f in sorted(TRANSCRIPTS.glob("lezione_*.txt")):
+        for fr in _FRASE.split(f.read_text(encoding="utf-8", errors="replace")):
+            fr = " ".join(fr.split())
+            n = len(_TOKEN.findall(fr))
+            # Filtro di qualita': il parlato produce frammenti. Una frase da
+            # mettere su una carta deve iniziare in maiuscolo, chiudersi con
+            # una punteggiatura vera e non troncarsi in sospensione — senza
+            # questo entrano cose come "Ok, das ist weil...".
+            if not (4 <= n <= 16 and e_tedesca(fr)):
+                continue
+            if "..." in fr or "…" in fr:
+                continue
+            if not fr[:1].isupper() or fr[-1] not in ".!?":
+                continue
+            frasi_corpus.append(fr)
+
+    # Indice parola -> frase piu' corta che la contiene.
+    migliore: dict[str, str] = {}
+    for fr in frasi_corpus:
+        for t in set(_TOKEN.findall(fr)):
+            k = t.lower()
+            if k not in migliore or len(fr) < len(migliore[k]):
+                migliore[k] = fr
+
+    modifiche, aggiunti, non_trovati = [], 0, []
+    for s in schede:
+        if "senza-esempio" not in s.difetti:
+            continue
+        frase = migliore.get(s.parola.lower())
+        if not frase:
+            non_trovati.append(s.parola)
+            continue
+        retro = s.retro_html + (
+            f'<br><br><i>{html.escape(frase)}</i>'
+            f'<br><small style="color:#90a4ae">dalla tua lezione</small>'
+        )
+        modifiche.append({"id": s.note_id, "fields": {"Retro": retro}})
+        aggiunti += 1
+
+    esito = {
+        "frasi_nel_corpus": len(frasi_corpus),
+        "parole_coperte": len(migliore),
+        "esempi_aggiunti": aggiunti,
+        "senza_riscontro": len(non_trovati),
+        "prova": prova,
+    }
+    if prova:
+        esito["campione"] = [
+            (s.parola, migliore[s.parola.lower()])
+            for s in schede[:400]
+            if "senza-esempio" in s.difetti and s.parola.lower() in migliore
+        ][:6]
+        return esito
+
+    for m in modifiche:
+        anki("updateNoteFields", note=m)
+    return esito

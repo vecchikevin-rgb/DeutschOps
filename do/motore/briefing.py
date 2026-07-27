@@ -24,7 +24,7 @@ from __future__ import annotations
 from datetime import date
 
 from ..base.tracker import dettaglio_pendenti
-from . import ponte, scadenze, stato as mod_stato
+from . import attivita, ponte, scadenze, stato as mod_stato
 
 LARGH = 68
 
@@ -69,7 +69,15 @@ def genera(*, con_ponte: bool = True) -> str:
         out.append(_riga(f"   {top}"))
     out.append(_riga(f"   Vocaboli B2+: {d['b2_o_oltre']} su {d['vocaboli']}"))
 
-    # ---------------------------------------------------------- 4. ponte
+    # ---------------------------------------------------------- 4. materiale fermo
+    # Elaborare lezioni da' la sensazione di studiare: il sistema lavora, i
+    # numeri salgono. Ma macinare non e' imparare — nella v1 la pipeline ha
+    # fatto 30 lezioni mentre il loop di ripasso girava una volta sola.
+    if righe := attivita.righe_briefing():
+        out += [_riga(), _riga("MATERIALE FERMO")]
+        out += [_riga("   " + r) for r in righe]
+
+    # ---------------------------------------------------------- 5. ponte
     if con_ponte:
         if righe := ponte.righe_briefing():
             out += [_riga(), _riga("MOTORE CONDIVISO")]
