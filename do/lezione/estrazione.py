@@ -28,7 +28,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from ..base.config import llm_config
+from ..base.config import RICERCA_WEB, llm_config
 from ..base.llm import chiama, estrai_json
 from ..base.paths import DATA
 
@@ -289,7 +289,9 @@ def rielabora(transcript: str | Path, nome: str, *, doc_nuovo: str = "",
           f"| {uso.input_tokens}->{uso.output_tokens} token | {costo:.4f} EUR")
 
     punti = dati["grammar_points"]
-    if punti and uso.model.startswith("claude"):
+    if punti and not RICERCA_WEB:
+        print("   RICERCA_WEB=0: regole alla spiegazione base, nessun costo di ricerca.")
+    elif punti and uso.model.startswith("claude"):
         fuori, rimandate = da_ricercare(punti)
         if rimandate:
             # Niente tetti silenziosi: se il freno di spesa taglia qualcosa,

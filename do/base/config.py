@@ -76,6 +76,15 @@ WHISPER_MODEL = os.getenv("WHISPER_MODEL", "small")
 # --------------------------------------------------------------------- staging
 STAGING_TTL_DAYS = int(os.getenv("STAGING_TTL_DAYS", "20"))
 
+# --------------------------------------------------------------------- costi
+# L'arricchimento grammaticale via ricerca web e' di gran lunga la voce piu'
+# cara: 1,01 EUR misurati su cinque regole, contro gli 0,07 di tutto il resto
+# della lezione. Il dedup per somiglianza (estrazione.da_ricercare) e il tetto
+# di tre ricerche lo tengono basso, ma resta l'unica leva grossa.
+# RICERCA_WEB=0 in .env lo spegne: i grammar_points restano alla spiegazione
+# base, tutto il resto della pipeline e' identico.
+RICERCA_WEB = _bool("RICERCA_WEB", True)
+
 # --------------------------------------------------------------------- ponte
 PONTE_CADENZA_GIORNI = int(os.getenv("PONTE_CADENZA_GIORNI", "14"))
 

@@ -35,17 +35,6 @@
 | Adjektivdeklination | 10 |
 | Sonstiges | 5 |
 
-## Lezioni non chiuse
-
-Un task aperto significa che quel run non e' arrivato in fondo. Finche' resta aperto, quella lezione ha dei pezzi mancanti.
-
-| Lezione | Manca | Ultimo errore |
-|---|---|---|
-| 2026-06-26-stefanie | doc | — |
-| 2026-06-29-stefanie | anki | unsupported format string passed to NoneType.__format__ |
-| 2026-07-06-stefanie | anki | — |
-| 2026-07-07-stefanie | anki | — |
-
 ---
 
 ### Fonti (non duplicate qui — questo file e' una vista)
