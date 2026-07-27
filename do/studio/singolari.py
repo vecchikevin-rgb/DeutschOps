@@ -68,6 +68,9 @@ ASTRATTI = {
 PLURALIA = {
     "teigwaren", "lebensmittel", "eltern", "leute", "ferien", "kosten",
     "möbel", "geschwister", "spaghetti", "nudeln",
+    # Forme che nel mazzo compaiono gia' al plurale: chiedere il plurale del
+    # plurale non ha senso. `Menschenrechte` e' il plurale di Menschenrecht.
+    "menschenrechte", "finanzen", "einnahmen", "ausgaben", "wanderschuhe",
 }
 
 _TUTTI = MESI | GIORNI | PUNTI_CARDINALI | DISCIPLINE | MATERIE | ASTRATTI | PLURALIA

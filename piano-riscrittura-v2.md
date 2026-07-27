@@ -441,20 +441,56 @@ l'hook `block-outside-project-writes.ps1` blocca a livello di sistema ogni `Writ
 **Vincolo forte: hai lezione ogni settimana. La pipeline attuale deve restare capace di elaborarla
 per tutta la migrazione.**
 
-| # | Stadio | Cosa | Fatto quando | Sistema vecchio |
+| # | Stadio | Cosa | Fatto quando | Stato |
 |---|---|---|---|---|
-| **S0** | Fondamenta | package `do/`, `paths`, `config`, `llm`, `pyproject.toml`. I 3 moduli maturi portati. | `py -3 -c "import do"` ok, i 3 test sui moduli portati passano | ✅ intatto |
-| **S1** | Pipeline in parallelo | `deutschops.py lezione` completo, ma il vecchio `main.py` resta | **rielabora `2026-07-23` e confronta l'output con quello esistente: JSON, PDF, carte devono coincidere** | ✅ intatto |
-| **S2** | Switch 🔴 | `main.py` e i 15 orfani → `_archivio/`. Astra via, anche da git. | una lezione **nuova** elaborata solo col nuovo | ❌ archiviato |
-| **S3** | Layer motore | `stato.py`, `briefing.py`, `ponte.py`, `scadenze.md`, hook `SessionStart` | apri una sessione e vedi il briefing senza chiederlo | — |
-| **S4** | Metodo | carte 3 direzioni, TTS, sentence mining, drill, `esame.py` | il primo drill generato dai tuoi errori reali | — |
-| **S5** | Pulizia | `pyproject` minimo, doc riscritta, `.tmp.driveupload` risolto in Drive | `pip install` scarica <100 MB invece di ~600 | — |
+| **S0** | Fondamenta | package `do/`, `paths`, `config`, `llm`, `pyproject.toml`. I 3 moduli maturi portati. | `py -3 -c "import do"` ok, i test sui moduli portati passano | ✅ 2026-07-26 |
+| **S1** | Pipeline in parallelo | `deutschops.py lezione` completo, ma il vecchio `main.py` resta | rielabora `2026-07-23` e confronta l'output con quello esistente | ✅ 2026-07-27 |
+| **S2** | Switch 🔴 | `main.py` e i 15 orfani → `_archivio/`. Astra via, anche da git. | una lezione **nuova** elaborata solo col nuovo | ✅ 2026-07-27 — *criterio non ancora soddisfatto: manca la lezione nuova* |
+| **S3** | Layer motore | `stato.py`, `briefing.py`, `ponte.py`, `scadenze.md`, hook `SessionStart` | apri una sessione e vedi il briefing senza chiederlo | ✅ 2026-07-27 |
+| **S4** | Metodo | carte 3 direzioni, sentence mining, drill, `esame.py` | il primo drill generato dai tuoi errori reali | ✅ 2026-07-27 · TTS rimandato |
+| **S5** | Pulizia | `pyproject` minimo, doc riscritta, `.tmp.driveupload` risolto in Drive | `pip install` scarica <100 MB invece di ~600 | 🟡 parziale — vedi sotto |
 
-🔴 **S2 è il punto di non ritorno.** Prima puoi fermarti in qualsiasi momento senza conseguenze.
-Il criterio di S1 — rielaborare una lezione già fatta e confrontare byte per byte — è la rete di
-sicurezza: se il nuovo non riproduce il vecchio, S2 non parte.
+🔴 **S2 è il punto di non ritorno.** Attraversato il 2026-07-27 con il cancello di S1 verde.
 
-S3 e S4 sono indipendenti fra loro: se il tempo stringe, S4 (il metodo) vale più di S3 (il layer).
+### Il criterio di S1, come è stato realmente applicato
+
+Il piano diceva «JSON, PDF, carte devono coincidere», sottintendendo un confronto byte per byte.
+**Non era esigibile**, e vale la pena scriverlo invece di far finta di averlo fatto: in mezzo alla
+pipeline c'è un LLM, la stessa richiesta non ritorna mai lo stesso testo, e per giunta il modello
+è cambiato (`claude-sonnet-4-5` → `claude-sonnet-5`).
+
+`deutschops.py confronta` separa quindi due livelli:
+
+- **deterministico** — a parità di JSON in ingresso, PDF / database / carte devono coincidere.
+  Qui l'identità è esigibile e viene verificata esatta. Su `2026-07-23`: PDF 7 pagine testo
+  identico (normalizzando la data in piedina), `vocab_db` e `grammar_db` idempotenti, 62 note
+  deterministiche.
+- **generativo** — la riestrazione si confronta per forma e sostanza: schema valido, 24 vocaboli
+  v1 contro 22 v2, 14 in comune. Il numero si stampa, non si giudica.
+
+Le carte **non possono** coincidere con la v1, ed è voluto: una direzione è diventata tre. Se
+coincidessero, il cambio di metodo non sarebbe avvenuto.
+
+### Cosa il cancello ha trovato (e che leggere il codice non aveva trovato)
+
+1. **Ricerca web a 1,01 € per lezione**, contro gli 0,07 € di una lezione intera. Il dedup delle
+   regole grammaticali confrontava il *nome esatto*, e Sonnet 5 lo riformula ogni volta. Ora è per
+   sovrapposizione di parole significative, più un tetto di 3 ricerche che stampa cosa rimanda.
+2. **`carte.alimenta` perdeva l'intero lotto al primo duplicato.** AnkiConnect aborta tutto invece
+   di saltare le singole note. Ogni lezione con vocaboli già visti sarebbe fallita.
+3. **`vocab_db` non idempotente** per una differenza fra `.get(k, d)` e `.get(k) or d` su dieci
+   parole con `category: ""`.
+
+### Cosa resta di S5
+
+- `pyproject.toml` è a 6 dipendenze dirette, `requirements.txt` è stato rimosso. ✅
+- `CLAUDE.md` e `README.md` riscritti. ✅
+- **`.tmp.driveupload/` non è risolto.** Va escluso dalle impostazioni di Google Drive per Desktop:
+  è una modifica alla configurazione di Drive, non a questo repository.
+- **I quattro generatori ReportLab / Docs API restano in root**, resi path-safe ma non consolidati
+  in `uscite/tema.py`. Sono ~1.900 righe di layout che nessun test può verificare: l'unico modo di
+  sapere se un PDF è ancora giusto è aprirlo, e l'unico modo di provare `doc_writer` è scrivere sul
+  documento vero di Stefanie. Rimandato, e dichiarato tale.
 
 ---
 
