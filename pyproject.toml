@@ -1,0 +1,41 @@
+[project]
+name = "deutschops"
+version = "2.0.0.dev0"
+description = "Pipeline AI per l'apprendimento del tedesco A2->B1"
+requires-python = ">=3.12"
+
+# Dipendenze DIRETTE del percorso critico.
+# Sostituisce un requirements.txt che era un `pip freeze` da 186 pacchetti:
+# torch (498MB), playwright (107MB), scikit-learn, matplotlib, optuna,
+# pyannote, speechbrain, lightning... circa 600MB tirati dentro quasi tutti
+# da speaker_analysis.py, un modulo orfano eseguito una volta il 22 maggio la
+# cui funzione principale (la diarizzazione) non ha mai funzionato.
+dependencies = [
+    "anthropic>=0.69",           # estrazione, drill
+    "requests>=2.32",            # AnkiConnect, Ollama
+    "faster-whisper>=1.1",       # trascrizione locale, gratis
+    "reportlab>=4.2",            # PDF
+    "google-api-python-client>=2.140",
+    "google-auth-oauthlib>=1.2",
+]
+
+[project.optional-dependencies]
+# Non serve alla pipeline per-lezione: si installa solo se lo usi davvero.
+dashboard = ["streamlit>=1.38", "plotly>=5.24", "pandas>=2.2"]
+tts = ["piper-tts>=1.2"]         # audio sulle carte, CPU-only
+dev = ["pytest>=8.3", "pyright>=1.1"]
+
+[project.scripts]
+deutschops = "deutschops:main"
+
+[tool.setuptools]
+packages = ["do", "do.base"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.pyright]
+venvPath = "."
+venv = "venv"
+include = ["do", "deutschops.py", "tests"]
+exclude = ["_archivio", "venv", "**/__pycache__"]
