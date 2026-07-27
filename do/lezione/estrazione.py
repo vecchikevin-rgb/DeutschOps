@@ -65,7 +65,9 @@ Rules:
 - category: verb_regular|verb_irregular|verb_separable|verb_modal|noun|adjective|adverb|phrase|expression
 - article: der/die/das for nouns, "" otherwise; plural for nouns when deducible, "" otherwise
 - plural: leave "" for Singularetantum (Milch, Zucker, Mathematik, month names, cardinal points). Do NOT invent a plural that does not exist.
-- example_de: a full sentence USING the word, ideally taken from the transcript. This is what the Anki cloze card is built from — without it the word gets no production card.
+- example_de: a full sentence USING the word. Prefer one from the transcript, BUT the transcript is a lesson in progress: it contains Kevin's mistakes and Whisper's noise. The example must be CORRECT German — if the sentence in the transcript has an error (wrong word order, wrong case, missing verb), write the corrected version. Never copy a wrong sentence verbatim: it becomes an Anki card and gets memorised.
+  Word order matters most: in a main clause the finite verb is second ("Die Leute dürfen drinnen rauchen"), NOT final ("Die Leute drinnen rauchen dürfen" is wrong). Verb-final belongs only in subordinate clauses introduced by weil/dass/wenn/ob/als.
+  This is what the Anki cloze card is built from — without it the word gets no production card.
 - grammar_points: max 5, explicitly covered rules only
 - vocabulary: ALL new A2 -> B2 words, no cap
 - comprehension_questions: exactly 3
