@@ -188,8 +188,12 @@ def _somiglianza(a: frozenset[str], b: frozenset[str]) -> float:
     return len(a & b) / len(a | b)
 
 
-def da_ricercare(punti: list[dict]) -> tuple[list[dict], list[str]]:
-    """Quali regole vanno cercate sul web. Ritorna (da_cercare, scartate).
+def da_ricercare(punti: list[dict], *, tetto: int | None = MAX_RICERCHE
+                 ) -> tuple[list[dict], list[str]]:
+    """Quali regole vanno approfondite. Ritorna (da_fare, rimandate).
+
+    `tetto=None` toglie il limite: serve quando l'approfondimento non passa
+    dalla ricerca web e quindi costa 0,02 EUR a regola invece di 0,58.
 
     IL CONFRONTO NON PUO' ESSERE SUL NOME ESATTO
     La v1 usava `rule.lower()` come chiave. Funzionava per caso: finche' lo
@@ -219,31 +223,47 @@ def da_ricercare(punti: list[dict]) -> tuple[list[dict], list[str]]:
             continue
         fuori.append(gp)
 
-    scartate = [(g.get("rule") or "") for g in fuori[MAX_RICERCHE:]]
-    return fuori[:MAX_RICERCHE], scartate
+    if tetto is None:
+        return fuori, []
+    return fuori[:tetto], [(g.get("rule") or "") for g in fuori[tetto:]]
 
 
-def arricchisci_grammatica(punti: list[dict]) -> tuple[list[dict], float]:
-    """Ricerca web sulle regole nuove. Degrada alla spiegazione base."""
+def arricchisci_grammatica(punti: list[dict], *, web: bool = False) -> tuple[list[dict], float]:
+    """Approfondisce le regole nuove: tabelle, errori tipici, eccezioni.
+
+    `web=False` (il default) usa la conoscenza del modello: 0,02 EUR a regola.
+    `web=True` monta la ricerca sui siti di riferimento: 0,58 EUR a regola, per
+    un testo equivalente. Vedi la nota in config.RICERCA_WEB.
+
+    In entrambi i casi degrada alla spiegazione base senza far fallire la
+    lezione: l'approfondimento e' un di piu'.
+    """
     if not punti:
         return punti, 0.0
+    etichetta = "con ricerca web" if web else "dal modello"
     try:
         testo, uso = chiama(
             SISTEMA_GRAMMATICA,
             "Research these grammar rules:\n" + json.dumps(punti, ensure_ascii=False, indent=2),
             llm_config(max_tokens=16000),
-            ricerca_web=True,
+            ricerca_web=web,
         )
         arricchiti = estrai_json(testo).get("grammar_points", [])
     except Exception as e:                                  # noqa: BLE001
-        # La ricerca e' un di piu': la lezione non deve fallire per questo.
-        print(f"   Ricerca web non riuscita ({str(e)[:80]}) — tengo la spiegazione base.")
+        print(f"   Approfondimento non riuscito ({str(e)[:80]}) — tengo la spiegazione base.")
         return punti, 0.0
 
     if not arricchiti:
-        print("   Ricerca web senza risultati utili — tengo la spiegazione base.")
+        print(f"   Approfondimento ({etichetta}) senza risultati — tengo la base.")
         return punti, uso.costo_eur
-    print(f"   {len(arricchiti)} regole arricchite | {uso.costo_eur:.4f} EUR")
+
+    # `source_verified` lo dichiara il prompt, ma e' vero solo se le fonti sono
+    # state davvero consultate. Senza ricerca resta false: un flag che mente
+    # e' peggio di un flag assente, perche' viene creduto.
+    for g in arricchiti:
+        g["source_verified"] = bool(web)
+
+    print(f"   {len(arricchiti)} regole approfondite ({etichetta}) | {uso.costo_eur:.4f} EUR")
     return arricchiti, uso.costo_eur
 
 
@@ -289,24 +309,25 @@ def rielabora(transcript: str | Path, nome: str, *, doc_nuovo: str = "",
           f"| {uso.input_tokens}->{uso.output_tokens} token | {costo:.4f} EUR")
 
     punti = dati["grammar_points"]
-    if punti and not RICERCA_WEB:
-        print("   RICERCA_WEB=0: regole alla spiegazione base, nessun costo di ricerca.")
-    elif punti and uso.model.startswith("claude"):
-        fuori, rimandate = da_ricercare(punti)
+    if punti and uso.model.startswith("claude"):
+        # Il tetto serve a frenare la ricerca web, non l'approfondimento: a
+        # 0,02 EUR a regola non c'e' niente da frenare.
+        fuori, rimandate = da_ricercare(punti, tetto=MAX_RICERCHE if RICERCA_WEB else None)
         if rimandate:
             # Niente tetti silenziosi: se il freno di spesa taglia qualcosa,
             # si vede. Rientreranno alla prossima lezione che le tocca.
             print(f"   Tetto di {MAX_RICERCHE} ricerche: rimandate "
                   f"{len(rimandate)} regole -> {'; '.join(rimandate)}")
         if fuori:
-            print(f"   Ricerca web su {len(fuori)}/{len(punti)} regole nuove...")
-            arricchiti, c2 = arricchisci_grammatica(fuori)
+            print(f"   Approfondisco {len(fuori)}/{len(punti)} regole nuove"
+                  f"{' con ricerca web' if RICERCA_WEB else ''}...")
+            arricchiti, c2 = arricchisci_grammatica(fuori, web=RICERCA_WEB)
             mappa = {(g.get("rule") or "").lower(): g for g in arricchiti}
             dati["grammar_points"] = [mappa.get((g.get("rule") or "").lower(), g)
                                       for g in punti]
             costo += c2
         else:
-            print("   Regole gia' tutte approfondite — nessuna ricerca.")
+            print("   Regole gia' tutte approfondite.")
 
     dati["_schema"] = SCHEMA_VERSIONE
     dati["_costo_estrazione_eur"] = round(costo, 6)

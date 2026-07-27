@@ -202,3 +202,37 @@ def test_registro_non_duplica_la_stessa_lezione(tmp_path, monkeypatch):
     r = registro.carica()
     assert r["stats"]["total"] == 1
     assert r["stats"]["total_cost_eur"] == 0.05
+
+
+# ------------------------------------------------------- costo dell'approfondimento
+def test_tetto_solo_con_ricerca_web(monkeypatch):
+    """Il tetto frena la ricerca web (0,58 EUR/regola), non l'approfondimento
+    dal modello (0,02). Con `tetto=None` non si rimanda niente."""
+    monkeypatch.setattr(estrazione, "_regole_gia_studiate", dict)
+    punti = [{"rule": f"Regola completamente distinta numero {i}"} for i in range(6)]
+
+    con, rimandate = estrazione.da_ricercare(punti, tetto=estrazione.MAX_RICERCHE)
+    assert len(con) == estrazione.MAX_RICERCHE and len(rimandate) == 3
+
+    senza, rimandate = estrazione.da_ricercare(punti, tetto=None)
+    assert len(senza) == 6 and rimandate == []
+
+
+def test_source_verified_non_mente(monkeypatch):
+    """Senza ricerca web `source_verified` deve restare false: un flag che
+    mente e' peggio di un flag assente, perche' viene creduto."""
+    class _Uso:
+        costo_eur = 0.02
+
+    def _finta(_sys, _usr, _cfg, ricerca_web=False):
+        payload = {"grammar_points": [{"rule": "Dativ", "full_rule": "...",
+                                       "source_verified": True}]}
+        return json.dumps(payload), _Uso()
+
+    monkeypatch.setattr(estrazione, "chiama", _finta)
+
+    senza, _ = estrazione.arricchisci_grammatica([{"rule": "Dativ"}], web=False)
+    assert senza[0]["source_verified"] is False
+
+    con, _ = estrazione.arricchisci_grammatica([{"rule": "Dativ"}], web=True)
+    assert con[0]["source_verified"] is True

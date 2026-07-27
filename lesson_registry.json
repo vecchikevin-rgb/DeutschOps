@@ -787,11 +787,36 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-07-23T14:52:08.611348"
+    },
+    {
+      "id": "2026-07-27-stefanie",
+      "date": "2026-07-27",
+      "audio_file": "C:\\Users\\vecch\\Antigravity\\DeutschOps\\Audiolessons\\lezione_2026-07-27-stefanie-compressed.mp4",
+      "topic": "Local prepositions, past trips, describing pictures",
+      "summary_it": "Kevin e Stefanie hanno parlato del suo recente viaggio in campeggio, esercitando espressioni sul prezzo totale e il tempo Perfekt (Du bist schon im Ur",
+      "vocabulary_count": 32,
+      "grammar_count": 5,
+      "phrases_count": 3,
+      "doc_sections": [
+        "TAB: Small Talk Fragen (id:t.u7m0gkb3h5bi)"
+      ],
+      "homework": "Review and practice describing pictures using local prepositions (an, in, durch, auf) and separable verbs (rausschauen, reingehen, etc.); practice placing 'gerade' correctly in weil-clauses.",
+      "duration_minutes": 71.7,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 1.9116,
+      "cost_total_eur": 1.9116,
+      "cost_estimated": false,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-27-stefanie.txt",
+        "data": "data/lezione_2026-07-27-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-27T21:20:15"
     }
   ],
   "stats": {
-    "total": 30,
-    "total_cost_eur": 4.818,
-    "total_minutes": 1630.9
+    "total": 31,
+    "total_cost_eur": 6.73,
+    "total_minutes": 1702.6
   }
 }

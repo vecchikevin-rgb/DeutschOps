@@ -84,6 +84,12 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("data", help="es. 2026-07-23-stefanie")
     p.add_argument("--prova", action="store_true", help="non tocca Anki")
 
+    p = sub.add_parser("grammatica", help="approfondisce le regole rimaste indietro")
+    p.add_argument("--applica", action="store_true",
+                   help="senza questo flag elenca soltanto")
+    p.add_argument("--web", action="store_true",
+                   help="con ricerca sulle fonti: ~0,58 EUR a regola invece di 0,02")
+
     sub.add_parser("anki-audit", help="difetti del mazzo")
     p = sub.add_parser("anki-ripara", help="corregge il mazzo")
     p.add_argument("--applica", action="store_true",
@@ -179,6 +185,20 @@ def main(argv: list[str] | None = None) -> int:
         lez = _lezione_json(a.data)
         r = carte.alimenta(lez.get("vocabulary", []), a.data, prova=a.prova)
         print(json.dumps(r, ensure_ascii=False, indent=2))
+
+    elif a.cmd == "grammatica":
+        from do.sapere import grammatica
+
+        r = grammatica.completa(web=a.web, prova=not a.applica)
+        if not a.applica:
+            print(f"\n  {r['incomplete']} regole senza approfondimento"
+                  f" — stima {r['incomplete'] * (0.58 if a.web else 0.022):.2f} EUR")
+            for nome in r.get("regole", []):
+                print(f"     {nome}")
+            print("\n  Rilancia con --applica per farlo davvero.")
+        else:
+            print(f"\n  {r['approfondite']}/{r['incomplete']} approfondite "
+                  f"| {r['costo_eur']:.4f} EUR misurati")
 
     elif a.cmd == "anki-audit":
         from do.studio import manutenzione

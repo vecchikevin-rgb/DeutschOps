@@ -20,8 +20,8 @@ py -3 deutschops.py lezione --auto        # elabora i video senza transcript
 
 | Comando | Cosa fa | Costo |
 |---|---|---|
-| `lezione <file> [data]` | La pipeline completa | ~0,10 € |
-| `lezione --auto` | Rileva ed elabora i video nuovi | ~0,10 €/lezione |
+| `lezione <file> [data]` | La pipeline completa | ~0,25 € |
+| `lezione --auto` | Rileva ed elabora i video nuovi | ~0,25 €/lezione |
 | `briefing` | Il riquadro di avvio (lo stampa l'hook) | 0 |
 | `stato` | Rigenera `stato/stato-tedesco.md` | 0 |
 | `pendenti` | Run non completati · `--recupera` · `--archivia` | 0 |
@@ -29,6 +29,7 @@ py -3 deutschops.py lezione --auto        # elabora i video senza transcript
 | `drill [-n 10]` | Esercizi di produzione dai tuoi errori | ~0,03 € |
 | `frasi [-n 20]` | Frasi i+1 dal tuo corpus | 0 |
 | `carte <data>` | Carica in Anki le carte di una lezione | 0 |
+| `grammatica --applica` | Approfondisce le regole rimaste indietro | ~0,02 €/regola |
 | `anki-audit` / `anki-ripara` | Difetti del mazzo e correzione | 0 |
 | `ponte` | Check verso il motore di `shared start up/` | 0 |
 | `confronta <data>` | Rielabora e confronta con la v1 | ~0,15 € |
@@ -172,6 +173,14 @@ disattiva esplicitamente: lasciarlo implicito con un `max_tokens` stretto tronca
 - **File temporanei e script one-off si rimuovono subito dopo l'uso**, script e output.
 - **`.tmp.driveupload/` nella root** non è generato da questo progetto: è lo staging di Google
   Drive per Desktop. Va escluso dalle impostazioni di Drive, non da qui.
+- **La ricerca web è spenta di default.** Misurato sulle stesse regole: 0,5815 € a regola con
+  ricerca, 0,0222 € senza, per un testo equivalente. L'approfondimento grammaticale resta — quello
+  che cade è il giro sui siti esterni, che gonfia il contesto a ogni ricerca. Si perde solo
+  `source_verified`. Per accenderla su una lezione: `RICERCA_WEB=1 py -3 deutschops.py lezione ...`
+- **Il backup .docx del Doc di Stefanie non esiste e non può esistere:** il documento supera il
+  limite di export di Drive (112.000 caratteri, 108 immagini). Il testo è salvato a ogni lezione in
+  `doc_snapshots/snapshot_*.txt`; **immagini e formattazione no**. Per quelle serve un
+  File > Scarica a mano, ogni tanto.
 - **Il costo si misura, non si stima.** `do/base/llm.py` restituisce il costo reale da
   `response.usage`; il registro marca `cost_estimated` su ciò che misurato non è. Nella v1
   `main.py` scriveva `claude_cost = 0.10` costante: 2,95 € dei 4,82 € storici sono quella costante

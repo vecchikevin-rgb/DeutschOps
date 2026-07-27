@@ -51,22 +51,36 @@ def get_drive_service():
 
 
 # ─── BACKUP (locale, niente copie sul Drive personale) ────────────────────────
-def backup_doc(label: str = None) -> str:
-    """Esporta il Google Doc come .docx nella cartella locale del progetto.
-    Niente copie create nel Drive personale dell'utente (solo file locali)."""
-    if label is None:
-        label = datetime.now().strftime("%Y-%m-%d_%H-%M")
-    backup_dir = DOC_SNAPSHOTS / "backups"
-    backup_dir.mkdir(parents=True, exist_ok=True)
-    drive_svc = get_drive_service()
-    data = drive_svc.files().export_media(
-        fileId=STEFANIE_DOC_ID,
-        mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-    ).execute()
-    dest = backup_dir / f"backup_{label}.docx"
-    dest.write_bytes(data)
-    print(f"💾 Backup locale: {dest}")
-    return str(dest)
+def backup_doc(label: str = None) -> str | None:
+    """Prova l'export .docx del Doc di Stefanie. Oggi NON puo' riuscire.
+
+    STATO REALE, verificato il 2026-07-27
+    In `doc_snapshots/backups/` non esiste NESSUN .docx. Ci sono 25 file .json
+    da 183 byte, prodotti da una versione precedente di questa funzione che
+    creava copie DENTRO il Drive (il campo `url` punta a un documento diverso)
+    — cioe' proprio il comportamento che CLAUDE.md dichiara rimosso. Quelle
+    copie sono presumibilmente ancora nel Drive di Kevin.
+
+    La versione attuale esporta .docx e fallisce sempre con
+    `exportSizeLimitExceeded`: il Doc ha 112.000 caratteri e 108 immagini, e
+    supera il limite di export dell'API Drive. Non e' un errore transitorio,
+    e' strutturale: crescendo, non tornera' sotto il limite.
+
+    COSA C'E' DAVVERO AL POSTO SUO
+    `doc_snapshots/snapshot_*.txt` — 30 file, l'ultimo da 119 KB, scritto a
+    ogni lezione dalla pipeline. Copre il TESTO, che e' cio' che serve al diff
+    e all'estrazione.
+
+    COSA RESTA SCOPERTO, e va detto invece che nascosto sotto un try/except:
+    le 108 immagini e la formattazione. Se il Doc sparisse, quelle non ci sono
+    da nessuna parte. Un export manuale (File > Scarica) le salverebbe.
+    """
+    del label                                   # firma tenuta per i chiamanti
+    print("   Backup .docx non disponibile: il Doc supera il limite di export "
+          "di Drive (strutturale, non transitorio).")
+    print("   Il testo e' comunque salvato in doc_snapshots/snapshot_*.txt. "
+          "Immagini e formattazione no: per quelle serve File > Scarica a mano.")
+    return None
 
 
 # ─── TAB HELPERS ──────────────────────────────────────────────────────────────

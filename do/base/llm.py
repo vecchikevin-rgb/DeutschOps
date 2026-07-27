@@ -26,7 +26,7 @@ from dataclasses import dataclass
 
 import requests
 
-from .config import LLMConfig, api_key, llm_config
+from .config import RICERCA_MAX_USI, LLMConfig, api_key, llm_config
 
 
 # --------------------------------------------------------------------- prezzi
@@ -76,13 +76,27 @@ def _costo_eur(model: str, inp: int, out: int, cache_read: int = 0) -> tuple[flo
 _client = None
 
 
+# Quanto si insiste prima di arrendersi. Il default dell'SDK e' 2.
+# Qui conta piu' del solito: l'estrazione arriva DOPO 45 minuti di
+# trascrizione locale, e perderla per un secondo di rete assente sarebbe un
+# costo sproporzionato all'errore. Il task tracker copre comunque il caso
+# peggiore — al rilancio si riparte dall'estrazione — ma non doverci arrivare
+# e' meglio.
+TENTATIVI = 5
+TIMEOUT_S = 900.0
+
+
 def _anthropic_client():
     """Client creato pigramente: importarlo non deve richiedere una chiave."""
     global _client
     if _client is None:
         import anthropic
 
-        _client = anthropic.Anthropic(api_key=api_key("ANTHROPIC_API_KEY"))
+        _client = anthropic.Anthropic(
+            api_key=api_key("ANTHROPIC_API_KEY"),
+            max_retries=TENTATIVI,
+            timeout=TIMEOUT_S,
+        )
     return _client
 
 
@@ -154,7 +168,16 @@ def _chiama_anthropic(system: str, user: str, cfg: LLMConfig,
     if ricerca_web:
         # extractor.py:172 montava `web_search_20250305`. Su Sonnet 5 la
         # versione corrente e' quella del 2026-02-09, con filtro dinamico.
-        kwargs["tools"] = [{"type": "web_search_20260209", "name": "web_search"}]
+        #
+        # `max_uses` non e' un dettaglio: senza tetto il modello incatena
+        # ricerche e ogni giro rimanda in input tutto il contesto accumulato.
+        # E' li' che nasce lo 0,58 EUR a regola misurato il 2026-07-27, contro
+        # gli 0,02 della stessa richiesta senza ricerca.
+        kwargs["tools"] = [{
+            "type": "web_search_20260209",
+            "name": "web_search",
+            "max_uses": RICERCA_MAX_USI,
+        }]
 
     # Su Sonnet 5 e Opus 5 il pensiero adattivo e' ATTIVO quando il campo viene
     # omesso, e max_tokens limita pensiero + risposta insieme. Per un'estrazione
@@ -168,7 +191,16 @@ def _chiama_anthropic(system: str, user: str, cfg: LLMConfig,
     if cfg.effort:
         kwargs["output_config"] = {"effort": cfg.effort}
 
-    resp = _anthropic_client().messages.create(**kwargs)
+    # IN STREAMING, SEMPRE.
+    # Il 2026-07-27 l'estrazione e' morta con APITimeoutError dopo 45 minuti di
+    # trascrizione. Con `messages.create()` la connessione resta muta per tutta
+    # la generazione: con max_tokens a 16.000 sono minuti in cui nessuno manda
+    # un byte, e qualsiasi cosa in mezzo — proxy, wifi, NAT — puo' chiudere.
+    # In streaming i token arrivano man mano e la connessione non e' mai ferma.
+    # Non cambia nulla per chi chiama: `get_final_message()` ritorna lo stesso
+    # oggetto Message, con usage e stop_reason.
+    with _anthropic_client().messages.stream(**kwargs) as flusso:
+        resp = flusso.get_final_message()
 
     # I classificatori possono rifiutare: HTTP 200 con stop_reason "refusal" e
     # content vuoto. Leggere content[0] senza controllare esplode.

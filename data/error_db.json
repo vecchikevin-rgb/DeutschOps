@@ -2555,6 +2555,106 @@
       "explanation_en": "The adjective 'hungry' is 'hungrig' in German, not 'hungerische' or 'hungrige' (which would be declined forms).",
       "example_correct": "Ich bin ein bisschen hungrig.",
       "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "bin gewesen oder war...",
+      "correction": "Ich war schon im Urlaub / Ich bin schon im Urlaub gewesen.",
+      "rule": "Perfekt mit sein bei 'sein'",
+      "explanation_en": "Kevin was unsure how to form the past of 'sein' referring to a completed vacation; Stefanie confirmed both 'bin gewesen' and 'war' work.",
+      "example_correct": "Ich war schon im Urlaub.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Ganzen (Dativ)",
+      "correction": "die ganzen drei Wochen (Akkusativ)",
+      "rule": "Akkusativ bei Zeitangaben",
+      "explanation_en": "Kevin thought the phrase for duration ('for three weeks') needed dative, but time expressions of duration take accusative.",
+      "example_correct": "Ich habe für die ganzen drei Wochen 800 Euro bezahlt.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "viele Personen / Besuch als Besucher",
+      "correction": "einige Personen zu Besuch / einige Personen, die mich besucht haben",
+      "rule": "Natürliche Kollokation 'zu Besuch haben'",
+      "explanation_en": "Kevin tried several literal translations ('als Besucher') that sound unnatural in German; the idiomatic form is 'zu Besuch' or a relative clause.",
+      "example_correct": "Ich hatte einige Personen zu Besuch.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Der Tankstelle ist ein Refuel / Riff",
+      "correction": "Die Tankstelle (place to refuel)",
+      "rule": "Wortwahl - korrektes Substantiv",
+      "explanation_en": "Kevin tried to invent a word for 'refuel spot' but the correct existing German word is 'Tankstelle', and its gender is feminine (die), not der.",
+      "example_correct": "Die Tankstelle ist der Ort zum Tanken.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "Der Tankstelle",
+      "correction": "Die Tankstelle",
+      "rule": "Genus von Tankstelle (feminin)",
+      "explanation_en": "Kevin used the masculine article 'der' for 'Tankstelle', but the noun is feminine.",
+      "example_correct": "Sie sind an der Tankstelle.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Man durfte hier nicht rauchen (present context)",
+      "correction": "Man darf hier nicht rauchen",
+      "rule": "Präsens vs. Präteritum von dürfen",
+      "explanation_en": "Kevin used the past tense 'durfte' when describing a present rule shown in the picture; the present tense 'darf' was needed.",
+      "example_correct": "Man darf hier nicht rauchen, weil das zu gefährlich ist.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "drinnen / in es / in das",
+      "correction": "darin",
+      "rule": "da-Komposita statt Präposition + es/das",
+      "explanation_en": "Kevin tried to use 'in es' or 'in das' to mean 'inside it', but German requires the da-compound 'darin'.",
+      "example_correct": "Weil die Leute darin/drinnen rauchen dürfen.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Er ist wütend über die Frau (Akkusativ gedacht)",
+      "correction": "Er ist wütend auf die Frau",
+      "rule": "Präposition 'auf' bei 'wütend sein'",
+      "explanation_en": "Kevin used 'über' with accusative, but the idiomatic and correct construction for 'angry at someone' is 'wütend auf + Akkusativ'.",
+      "example_correct": "Er ist wütend auf die Frau.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Sie sind in dem Film",
+      "correction": "Sie sind im Kino",
+      "rule": "Dativ nach 'in' bei Ortsangabe",
+      "explanction_en": "",
+      "explanation_en": "Kevin confused 'Film' (the movie itself) with 'Kino' (the place); also needed dative contraction 'im' for location.",
+      "example_correct": "Sie sind im Kino, weil sie einen Film sehen wollen.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "weil ein Film sie schauen wollen",
+      "correction": "weil sie einen Film schauen wollen",
+      "rule": "Nebensatz-Wortstellung: Subjekt direkt nach 'weil'",
+      "explanation_en": "Kevin placed the object before the subject pronoun 'sie' in the subordinate clause; German requires the subject right after the conjunction.",
+      "example_correct": "Weil sie einen Film schauen wollen, sind sie im Kino.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "Stewardess (as English word confusion)",
+      "correction": "Die Flugbegleiterin / Stewardess (German usage)",
+      "rule": "Wortwahl - Berufsbezeichnung",
+      "explanation_en": "Kevin was unsure of the correct term; Stefanie clarified that 'Stewardess' is used in German and 'Flugbegleiterin' is the official term.",
+      "example_correct": "Die Stewardess arbeitet im Flugzeug.",
+      "lesson_date": "2026-07-27-stefanie"
     }
   ],
   "lessons_processed": [
@@ -2587,7 +2687,8 @@
     "2026-07-09-stefanie",
     "2026-07-21-stefanie",
     "2026-07-22-stefanie",
-    "2026-07-23-stefanie"
+    "2026-07-23-stefanie",
+    "2026-07-27-stefanie"
   ],
-  "last_updated": "2026-07-23T14:53:06"
+  "last_updated": "2026-07-27T21:20:10"
 }

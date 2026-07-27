@@ -77,13 +77,30 @@ WHISPER_MODEL = os.getenv("WHISPER_MODEL", "small")
 STAGING_TTL_DAYS = int(os.getenv("STAGING_TTL_DAYS", "20"))
 
 # --------------------------------------------------------------------- costi
-# L'arricchimento grammaticale via ricerca web e' di gran lunga la voce piu'
-# cara: 1,01 EUR misurati su cinque regole, contro gli 0,07 di tutto il resto
-# della lezione. Il dedup per somiglianza (estrazione.da_ricercare) e il tetto
-# di tre ricerche lo tengono basso, ma resta l'unica leva grossa.
-# RICERCA_WEB=0 in .env lo spegne: i grammar_points restano alla spiegazione
-# base, tutto il resto della pipeline e' identico.
-RICERCA_WEB = _bool("RICERCA_WEB", True)
+# LA RICERCA WEB E' SPENTA DI DEFAULT. Misurato il 2026-07-27 sulla stessa
+# lezione, sulle stesse regole:
+#
+#     con ricerca web    0,5815 EUR a regola
+#     senza              0,0222 EUR a regola      <- 26 volte meno
+#
+# e il testo prodotto e' equivalente per lunghezza e struttura (tabelle di
+# coniugazione, errori tipici dell'italiano, eccezioni). L'arricchimento
+# grammaticale RESTA — e' utile e costa poco; quello che cade e' il giro sui
+# siti esterni, che gonfia il contesto di ogni ricerca e fa pagare la stessa
+# grammatica di base a peso d'oro.
+#
+# Cosa si perde davvero: `source_verified: true`, cioe' l'asserzione che la
+# regola sia stata confrontata con duden/dartmouth. Per la grammatica A2-B2
+# e' un'assicurazione cara. Quando serve — una regola dubbia, una correzione
+# di Stefanie da verificare — si accende per quella volta:
+#
+#     RICERCA_WEB=1 py -3 deutschops.py lezione ...
+RICERCA_WEB = _bool("RICERCA_WEB", False)
+
+# Tetto di ricerche per singola chiamata, quando la ricerca e' accesa. Senza,
+# il modello ne fa quante ne vuole e ogni giro rimanda in input tutto il
+# contesto accumulato: e' li' che nasce il fattore 26.
+RICERCA_MAX_USI = int(os.getenv("RICERCA_MAX_USI", "3"))
 
 # --------------------------------------------------------------------- ponte
 PONTE_CADENZA_GIORNI = int(os.getenv("PONTE_CADENZA_GIORNI", "14"))

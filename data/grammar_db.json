@@ -57,31 +57,45 @@
     },
     "Verbi separabili (Trennbare Verben)": {
       "rule": "Verbi separabili (Trennbare Verben)",
-      "explanation_it": "Alcuni verbi in tedesco sono composti da un prefisso separabile (come 'auf') e un verbo base (come 'stehen'). Nella frase, il prefisso va alla fine: 'Ich stehe auf' (mi alzo). All'infinito il verbo è unito: 'aufstehen'.",
+      "explanation_en": "Some German verbs consist of a separable prefix (like 'auf', 'an', 'aus', 'mit', 'vor', 'zu') plus a base verb. In main clauses with the verb in first or second position, the prefix detaches and moves to the very end of the clause. In the infinitive and in the past participle (with 'ge-' inserted between prefix and stem), the verb stays together as one word. In subordinate clauses, the verb remains united at the end because the conjugated verb itself moves to final position.",
+      "full_rule": "Conjugation example with 'aufstehen' (to get up), present tense:\nich stehe auf\ndu stehst auf\ner/sie/es steht auf\nwir stehen auf\nihr steht auf\nsie/Sie stehen auf\n\nPerfect tense: ich bin aufgestanden (prefix + ge + stem + t/en, all joined)\nInfinitive: aufstehen (joined)\nModal construction: Ich muss früh aufstehen. (infinitive stays joined, goes to end)\nSubordinate clause: Ich weiß, dass ich früh aufstehe. (verb joined at end, no separation because it's not in V2 position)\n\nCommon separable prefixes: auf-, an-, aus-, ein-, mit-, nach-, vor-, weg-, zu-, zurück-, fern-, her-, hin-\nNote: some prefixes (be-, ge-, er-, ver-, zer-, ent-, emp-, miss-) are NEVER separable.",
+      "common_mistakes": "Italian speakers often forget to split the prefix, keeping the verb joined as in Italian (e.g., incorrectly saying 'Ich aufstehe' instead of 'Ich stehe auf'), since Italian has no equivalent structure. Another frequent error is placing the prefix in the wrong position (not at the very end of the clause) or forgetting it entirely. Learners also confuse separable and inseparable prefixes, mistakenly separating verbs like 'verstehen' or 'besuchen', which are never split because their prefixes (ver-, be-) are inseparable.",
       "examples": [
-        "Ich stehe auf",
-        "Du stehst auf",
-        "Die Kinder stehen auf"
-      ]
+        "Ich stehe jeden Morgen um sechs Uhr auf.",
+        "Du stehst heute sehr spät auf.",
+        "Die Kinder stehen am Wochenende später auf.",
+        "Wir müssen morgen früh aufstehen."
+      ],
+      "exceptions": "Verbs with inseparable prefixes (be-, ge-, er-, ver-, zer-, ent-, emp-, miss-) never split. Some prefixes like 'durch-', 'über-', 'um-', 'unter-', 'wieder-' can be either separable or inseparable depending on the verb and meaning (e.g., 'übersetzen' = to translate, inseparable vs. to ferry across, separable), and stress placement often signals which type applies (separable verbs are stressed on the prefix).",
+      "source_verified": false
     },
     "Verbi irregolari con cambio vocalico (a → ä)": {
       "rule": "Verbi irregolari con cambio vocalico (a → ä)",
-      "explanation_it": "Alcuni verbi cambiano la vocale 'a' in 'ä' alla seconda e terza persona singolare. Esempio: 'schlafen' diventa 'du schläfst' e 'er/sie/es schläft'.",
+      "explanation_en": "A group of strong verbs with stem vowel 'a' change this vowel to 'ä' (umlaut) in the 2nd person singular (du) and 3rd person singular (er/sie/es) of the present tense. The 1st person singular, plural forms, and infinitive keep the unchanged 'a'.",
+      "full_rule": "Conjugation example with 'schlafen' (to sleep):\nich schlafe\ndu schläfst\ner/sie/es schläft\nwir schlafen\nihr schlaft\nsie/Sie schlafen\n\nOther common verbs following this pattern:\nfahren: ich fahre, du fährst, er fährt, wir fahren\ntragen: ich trage, du trägst, er trägt, wir tragen\nlaufen: ich laufe, du läufst, er läuft, wir laufen\nwaschen: ich wasche, du wäschst, er wäscht, wir waschen\nhalten: ich halte, du hältst, er hält, wir halten\nfallen: ich falle, du fällst, er fällt, wir fallen",
+      "common_mistakes": "Italian speakers often forget to apply the umlaut change, producing incorrect forms like 'du schlafst' or 'er schlaft' instead of 'du schläfst' and 'er schläft', since Italian verb conjugation has no equivalent vowel-mutation pattern. Learners may also mistakenly apply the umlaut to the 'ich' or plural forms, or confuse this pattern with the e→i/ie change (e.g., sprechen→spricht), applying the wrong type of vowel change to the wrong verb.",
       "examples": [
-        "Ich schlafe",
-        "Du schläfst",
-        "Er schläft",
-        "Wir schlafen"
-      ]
+        "Ich schlafe acht Stunden pro Nacht.",
+        "Du schläfst heute sehr lange.",
+        "Er schläft noch, wecke ihn nicht!",
+        "Wir schlafen im selben Zimmer."
+      ],
+      "exceptions": "Not all verbs with stem vowel 'a' undergo this change (e.g., 'machen' stays 'du machst', 'sagen' stays 'du sagst' — these are weak/regular verbs). The a→ä change only applies to specific strong verbs; there is no absolute rule predicting which 'a' verbs mutate, so each verb must be memorized individually.",
+      "source_verified": false
     },
     "Wie geht's? / Wie geht es dir?": {
       "rule": "Wie geht's? / Wie geht es dir?",
-      "explanation_it": "'Wie geht's?' è la forma abbreviata di 'Wie geht es dir?' e significa 'Come stai?'. Si può rispondere con: gut (bene), schlecht (male), nicht so gut (non tanto bene), sehr gut (molto bene).",
+      "explanation_en": "'Wie geht's?' is the contracted colloquial form of 'Wie geht es dir?' (informal, singular 'you') and means 'How are you?'. The formal version is 'Wie geht es Ihnen?'. Common responses range from positive to negative: sehr gut (very well), gut (good), es geht (so-so), nicht so gut (not so good), schlecht (bad).",
+      "full_rule": "Full forms by pronoun:\nWie geht es dir? (informal singular)\nWie geht es Ihnen? (formal singular/plural)\nWie geht es euch? (informal plural)\nContracted colloquial form: Wie geht's? (typically implies 'dir', used informally)\n\nStructure: 'es geht' + dative pronoun (dir/Ihnen/euch/ihm/ihr) — the verb 'gehen' here is used impersonally with dative, literally 'it goes to you' meaning 'you are doing (well/badly)'.\n\nTypical answers:\nSehr gut, danke. (Very well, thanks.)\nGut, danke. (Good, thanks.)\nEs geht. (So-so.)\nNicht so gut. (Not so good.)\nSchlecht. (Bad.)\nAnd reciprocally: Und dir? / Und Ihnen? (And you?)",
+      "common_mistakes": "Italian speakers often try to translate literally using nominative instead of dative, producing errors like 'Wie geht du?' instead of 'Wie geht es dir?', since Italian 'Come stai?' uses a subject construction rather than an impersonal dative one. Learners also confuse formal/informal registers, using 'dir' with strangers or elders instead of 'Ihnen'. Another mistake is omitting 'es', saying just 'Wie geht dir?' instead of 'Wie geht es dir?'.",
       "examples": [
-        "Wie geht's? - Gut!",
-        "Wie geht es dir? - Nicht so gut",
-        "Wie geht's? - Sehr gut, danke!"
-      ]
+        "Wie geht's? - Gut, danke!",
+        "Wie geht es dir? - Nicht so gut, ich bin müde.",
+        "Wie geht es Ihnen, Herr Müller? - Sehr gut, danke, und Ihnen?",
+        "Wie geht's euch? - Es geht, danke."
+      ],
+      "exceptions": "In very casual spoken German, 'Wie geht's?' can sometimes be used generically without specifying to whom, functioning almost like a greeting rather than a literal question. Regional variations exist (e.g., in Austria/Switzerland, other set phrases may be preferred), and the formal 'Ihnen' must always be used with unfamiliar adults or in professional contexts, unlike Italian where 'come stai/come sta' distinction is simpler.",
+      "source_verified": false
     },
     "Subordinate clause word order": {
       "rule": "Subordinate clause word order",
@@ -4394,7 +4408,77 @@
       ],
       "exceptions": "EXCEPTIONS AND SPECIAL CASES:\n\n1. MODAL VERBS: Often use 'werden' even with time expressions for nuance\n   - Ich werde morgen kommen müssen. (I will have to come tomorrow. - emphasis on obligation)\n   - vs. Ich muss morgen kommen. (I have to come tomorrow. - simpler)\n\n2. WEATHER PREDICTIONS: Usually require 'werden'\n   - Es wird morgen regnen. (It will rain tomorrow. - prediction)\n   - NOT: Es regnet morgen (sounds strange)\n\n3. IMMEDIATE FUTURE: 'gleich' with present is very common\n   - Ich komme gleich. (I'm coming right away.)\n   - Der Bus kommt gleich. (The bus is coming soon.)\n\n4. 'WERDEN' FOR ASSUMPTIONS ABOUT PRESENT:\n   - Er wird wohl krank sein. (He's probably sick. - NOT future!)\n   - Sie wird im Büro sein. (She's probably in the office.)\n\n5. FUTUR II (rare): Used for assumptions about past\n   - Er wird wohl angekommen sein. (He has probably arrived.)\n   - Structure: werden + past participle + sein/haben\n\n6. FIXED SCHEDULES: Always present tense\n   - Der Film beginnt um 20 Uhr. (The movie starts at 8 PM.)\n   - Die Schule fängt am Montag an. (School starts on Monday.)\n   - Das Konzert findet nächste Woche statt. (The concert takes place next week.)\n\n7. 'WOLLEN' VS. 'WERDEN' FOR INTENTION:\n   - Ich will nach Berlin fahren. (I want to go to Berlin. - desire)\n   - Ich werde nach Berlin fahren. (I will go to Berlin. - promise/determination)",
       "source_verified": true
+    },
+    "Perfekt with sein: schon im Urlaub gewesen": {
+      "rule": "Perfekt with sein: schon im Urlaub gewesen",
+      "explanation_en": "To say you have already been on a trip, German uses the Perfekt tense with the auxiliary 'sein' plus 'gewesen' (past participle of sein). 'Du bist schon im Urlaub gewesen' = 'You have already been on vacation.'",
+      "full_rule": "sein is one of the handful of verbs (along with passieren, bleiben, werden) that always form the Perfekt with the auxiliary sein rather than haben. Because sein is both the main verb and its own auxiliary here, the Perfekt of sein looks like 'sein (conjugated) + gewesen'.\n\nCONJUGATION TABLE - Perfekt of 'sein' (Duden):\nich bin gewesen\ndu bist gewesen\ner/sie/es ist gewesen\nwir sind gewesen\nihr seid gewesen\nsie/Sie sind gewesen\n\nPlusquamperfekt (for reference): ich war gewesen, du warst gewesen, er/sie/es war gewesen, wir waren gewesen, ihr wart gewesen, sie waren gewesen.\n\nGeneral rule for haben vs sein in the Perfekt (germanveryeasy.com / Duden):\n- sein is used as the auxiliary for: the verbs sein, passieren, bleiben, werden; intransitive verbs of movement/change of location (gehen, fahren, laufen, rennen, springen, fallen, kommen, fliegen, schwimmen); intransitive verbs expressing a change of state (sterben, werden, aufwachen, einschlafen, wachsen, schmelzen).\n- haben is used in all other cases (transitive verbs, reflexive verbs, most intransitive verbs that don't express motion/change of state).\n- Some motion verbs (schwimmen, joggen, klettern, tanzen) can take either haben or sein depending on whether the focus is on the activity itself (haben) or on covering a distance/reaching a destination (sein).\n\nWord order note: with time expressions like 'schon' (already), the adverb is placed directly after the conjugated auxiliary: Subject + sein(conj.) + schon + [place phrase] + gewesen. E.g. 'Du bist schon im Urlaub gewesen.'",
+      "common_mistakes": "Italian speakers, whose L1 Perfetto Composto also uses two auxiliaries (essere/avere), sometimes still default to using 'haben' for 'sein' or confuse it with the Italian pattern 'essere stato/a', and try to add a gender/number-agreeing ending onto 'gewesen' (German past participles used with an auxiliary do NOT agree in gender/number, unlike Italian past participles with essere, e.g. 'sono stata/stato'). Another common error is placing 'gewesen' in the wrong position: Italian word order keeps the participle right after the auxiliary ('sono stata a casa'), so learners may say '*Ich bin gewesen schon im Urlaub' instead of correctly sending the participle 'gewesen' to the very end of the clause: 'Ich bin schon im Urlaub gewesen.' Learners also sometimes confuse 'sein' (to be) with 'sein' as a possessive pronoun (his/its), leading to confusion when parsing sentences with 'ist gewesen'.",
+      "examples": [
+        "Du bist schon im Urlaub gewesen.",
+        "Ich bin gestern wieder zurück nach Hause gekommen.",
+        "Wir sind noch nie in Italien gewesen.",
+        "Seid ihr schon einmal in Berlin gewesen?"
+      ],
+      "exceptions": "A small set of verbs (liegen, sitzen, stehen) form the Perfekt with 'haben' in northern Germany but with 'sein' in southern Germany, Austria, and Switzerland (regional variation confirmed by Duden: 'Ich habe gelegen/gestanden/gesessen' vs. 'Ich bin gelegen/gestanden/gesessen'). Motion verbs like schwimmen, fahren, fliegen, klettern, joggen can take either haben or sein depending on whether the emphasis is on the action/duration (haben) or the movement/destination (sein). The verbs gehen and reisen are now used almost exclusively with sein in modern German.",
+      "source_verified": true
+    },
+    "gerade in Nebensätzen (subordinate clauses)": {
+      "rule": "gerade in Nebensätzen (subordinate clauses)",
+      "explanation_en": "When using 'gerade' (right now, currently) in a subordinate clause introduced by 'weil', the word order is: subordinating conjunction + subject + gerade + rest of verb phrase, with the conjugated verb at the end.",
+      "full_rule": "German subordinate clauses (Nebensätze) introduced by a subordinating conjunction such as weil, dass, wenn, ob, obwohl, etc. send the conjugated (finite) verb to the very end of the clause. Word order pattern for weil-clauses containing 'gerade':\nweil + subject + (time/gerade) + object(s)/other adverbials + non-finite verb parts + conjugated verb (end)\n\nThis follows the general TeKaMoLo principle (Temporal-Kausal-Modal-Lokal) for ordering middle-field elements, with 'gerade' functioning as a temporal adverb placed early in the clause, directly after the subject (and after any pronoun objects), but before the rest of the verb phrase (objects, separable prefixes, or infinitives), with the conjugated verb pushed to the final position.\n\nStructure: Hauptsatz, weil + Subjekt + gerade + (Objekt/e) + Verb (finit, am Ende).\nExample structure: 'Ich habe keine Zeit, weil ich gerade meine Wohnung putze.' -> weil (conj.) + ich (subj.) + gerade (adv.) + meine Wohnung (obj.) + putze (finite verb, end).\n\nThis mirrors the general subordinate-clause rule: a subordinating conjunction kicks the conjugated verb to the end of its clause, and the word order within the clause otherwise remains similar to a main clause (subject, objects, adverbials), just without the verb in second position.",
+      "common_mistakes": "Kevin tended to place 'gerade' incorrectly or overcomplicate the sentence structure instead of using this simple pattern. Italian speakers commonly struggle with this rule because Italian subordinate clauses (e.g., 'perché sto pulendo la mia casa proprio ora') keep the verb in second position, right after the subject, with adverbs like 'proprio ora'/'adesso' typically placed at the end or beginning of the clause, never forcing the verb to the clause-final position. This leads Italian learners to build sentences like '*weil ich putze gerade meine Wohnung' (keeping the verb in 'normal' second position, as in a main clause) instead of correctly moving 'putze' to the end: 'weil ich gerade meine Wohnung putze.' A second frequent error is forgetting the comma before 'weil', since Italian 'perché' does not obligatorily require comma separation in the same systematic way. Italian speakers may also over-complicate the sentence by trying to front 'gerade' at the very start of the clause (as they might with 'proprio ora' in Italian), producing incorrect orders such as '*weil gerade ich meine Wohnung putze.'",
+      "examples": [
+        "Ich habe keine Zeit, weil ich gerade meine Wohnung putze.",
+        "Sie sind im Flugzeug, weil sie gerade in den Urlaub fahren.",
+        "Er geht nicht ans Telefon, weil er gerade duscht.",
+        "Wir können nicht sprechen, weil wir gerade das Abendessen kochen."
+      ],
+      "exceptions": "The coordinating conjunction 'denn' (also meaning 'because') does NOT trigger verb-final word order — unlike 'weil', a clause with 'denn' keeps normal main-clause (verb-second) word order, so 'gerade' in a denn-clause behaves like in any main clause: 'Ich habe keine Zeit, denn ich putze gerade meine Wohnung.' In colloquial spoken German, some native speakers use 'weil' informally with main-clause (verb-second) word order ('weil ich putze gerade...'), but this is considered non-standard and should be avoided in formal or written German. When a modal verb or Perfekt tense is involved, 'gerade' still occupies the same early position in the middle field, while it is the auxiliary/modal verb (not the participle or infinitive) that moves to the clause-final position.",
+      "source_verified": true
+    },
+    "wütend auf + Akkusativ": {
+      "rule": "wütend auf + Akkusativ",
+      "explanation_en": "The adjective 'wütend' (angry) is used with the preposition 'auf', which requires the accusative case here, not the dative.",
+      "full_rule": "'auf' belongs to the group of nine German two-way prepositions (Wechselpräpositionen: an, auf, hinter, in, neben, über, unter, vor, zwischen) that can take either the accusative or the dative case depending on meaning (motion/direction -> accusative; static location -> dative). However, when 'auf' is used figuratively/idiomatically after certain adjectives of emotion — such as 'wütend auf' (angry at), 'stolz auf' (proud of), 'eifersüchtig auf' (jealous of), 'gespannt auf' (curious about) — it is fixed and always governs the ACCUSATIVE case, regardless of any physical motion or location.\n\nDECLENSION TABLE for 'auf' + Akkusativ (masculine/feminine/neuter/plural):\nauf + den (masc.) - wütend auf den Mann\nauf + die (fem.) - wütend auf die Frau\nauf + das (neut.) - wütend auf das Kind\nauf + die (plural) - wütend auf die Leute\nContraction: auf + das = aufs (less common with this idiom)\n\nDuden confirms the idiomatic phrase 'wütend auf/über jemanden sein' (to be very angry/incensed), listing 'auf' as a standard preposition choice alongside 'über' for this meaning. A commonly cited nuance (from general usage sources) is that 'wütend auf' + Akkusativ is typically used with a person as the object of anger, while 'wütend über' + Akkusativ is used with a thing, statement, or situation as the cause of anger.",
+      "common_mistakes": "Kevin initially tried 'über' with dative; corrected to 'auf' + accusative. Italian speakers frequently make this error because the equivalent Italian construction 'arrabbiato con qualcuno' uses 'con' (with), which has no case-marking equivalent in Italian, so learners have no built-in intuition for which German case to select and often default to the dative because many two-way prepositions describing static 'location of emotion' seem, by analogy with physical location (e.g., 'im Zimmer'), to call for dative. Another typical error is mixing up 'auf' and 'über': because Italian uses a single preposition regardless of whether the object of anger is a person or a situation, Italian learners often use 'wütend über' even when referring to a person, or vice versa. Learners also sometimes wrongly decline the noun after 'auf' in the dative (e.g., '*wütend auf der Frau' instead of correctly 'wütend auf die Frau'), treating 'auf' as always requiring dative because of its frequent use in fixed dative expressions like 'auf der Arbeit'.",
+      "examples": [
+        "Er ist wütend auf die Frau.",
+        "Ich bin wütend auf meinen Bruder.",
+        "Warum bist du so wütend auf mich?",
+        "Sie war wütend auf ihren Kollegen, weil er zu spät kam."
+      ],
+      "exceptions": "'wütend über' + Akkusativ is an accepted alternative, generally used when the cause of the anger is a thing, statement, or situation rather than a person (e.g., 'Er war wütend über die ungerechte Behandlung' — angry about the unjust treatment), whereas 'wütend auf' is preferred with a person as the object. As a two-way preposition, 'auf' still takes the dative in its literal, spatial sense of static location (e.g., 'Das Buch liegt auf dem Tisch' — the book lies on the table), so learners must distinguish the fixed idiomatic emotional use (always accusative) from the general locative use (dative for location, accusative for motion onto a surface).",
+      "source_verified": true
+    },
+    "durch + Akkusativ": {
+      "rule": "durch + Akkusativ",
+      "explanation_en": "The preposition 'durch' (meaning 'through' or 'by means of') always governs the accusative case, regardless of the verb or context in the sentence.",
+      "full_rule": "Declension of definite/indefinite articles after 'durch' (Akkusativ):\nMasculine: durch den Park, durch einen Park\nFeminine: durch die Stadt, durch eine Stadt\nNeuter: durch das Haus, durch ein Haus\nPlural: durch die Straßen\n\nPersonal pronouns after 'durch' (Akkusativ):\ndurch mich, durch dich, durch ihn, durch sie, durch es, durch uns, durch euch, durch sie, durch Sie\n\n'Durch' is one of the fixed accusative prepositions, grouped with: für, ohne, gegen, um, entlang (postpositive) — often remembered by the mnemonic 'FUDGO' or similar acronyms.",
+      "common_mistakes": "Italian speakers, whose language does not mark case on articles, often incorrectly apply dative forms after 'durch' by analogy with other prepositions they've learned (e.g., saying 'durch dem Park' instead of 'durch den Park'), confusing it with dative-triggering prepositions like 'mit' or 'nach'. Another common mistake is failing to decline the article at all, using the base form regardless of gender/case.",
+      "examples": [
+        "Sie geht durch den Park.",
+        "Wir fahren durch die Stadt.",
+        "Das Licht scheint durch das Fenster.",
+        "Er hat den Erfolg durch harte Arbeit erreicht."
+      ],
+      "exceptions": "No true exceptions exist to the rule that 'durch' takes accusative; it is one of the fixed accusative prepositions in German with no dative or genitive usage. However, in certain fixed idiomatic expressions ('durch und durch' = 'through and through'), no article is used, so case marking is not visibly tested.",
+      "source_verified": false
+    },
+    "Separable verbs: rausschauen, reinschauen, reingehen, rausgehen": {
+      "rule": "Separable verbs: rausschauen, reinschauen, reingehen, rausgehen",
+      "explanation_en": "These are separable verbs formed from the colloquial short prefixes 'raus' (contraction of 'heraus', meaning 'out') and 'rein' (contraction of 'herein', meaning 'in') combined with base verbs like 'schauen' (to look) or 'gehen' (to go). As separable verbs, the prefix detaches and moves to the end of the clause in finite main-clause constructions, while staying joined in the infinitive.",
+      "full_rule": "Conjugation of 'rausschauen' (to look out), present tense:\nich schaue raus\ndu schaust raus\ner/sie/es schaut raus\nwir schauen raus\nihr schaut raus\nsie/Sie schauen raus\n\nConjugation of 'reingehen' (to go in), present tense:\nich gehe rein\ndu gehst rein\ner/sie/es geht rein\nwir gehen rein\nihr geht rein\nsie/Sie gehen rein\n\nImperative forms:\nSchau raus! (Look out! - informal singular)\nSchaut raus! (Look out! - informal plural)\nSchauen Sie raus! (Look out! - formal)\nGeh rein! / Geht rein! / Gehen Sie rein!\n\nNote: 'raus' and 'rein' are colloquial shortenings of the full literary forms 'heraus' (out, toward speaker) and 'hinein' (in, away from speaker); 'herein' (in, toward speaker) and 'hinaus' (out, away from speaker) also exist. In casual speech, 'raus' and 'rein' are used regardless of direction relative to speaker, though formally the distinction persists (e.g., 'herausschauen' vs. 'hinausschauen').",
+      "common_mistakes": "Italian speakers often fail to separate the prefix in conjugated forms, incorrectly saying 'Ich rausschaue' instead of 'Ich schaue raus', by analogy with Italian verbs which do not split. They also frequently confuse 'raus' and 'rein' with directionality errors, or forget that formal German distinguishes 'her-' (toward speaker) and 'hin-' (away from speaker) compounds, oversimplifying by using only 'raus/rein' in contexts requiring more precision in writing.",
+      "examples": [
+        "Die Frau links schaut raus.",
+        "Schau rein, bevor du reingehst!",
+        "Wir gehen jetzt raus, es ist schön draußen.",
+        "Er schaut oft aus dem Fenster raus."
+      ],
+      "exceptions": "In formal or written German, the fuller forms 'heraus-', 'hinaus-', 'herein-', 'hinein-' are preferred over the colloquial 'raus-'/'rein-' shortenings (e.g., 'hinausgehen' instead of 'rausgehen'). Additionally, when used with certain verbs, these prefixes may carry idiomatic meanings not directly translating literal 'in/out' motion (e.g., 'rauskommen' can mean 'to come out/result' in abstract contexts, not just literal exit).",
+      "source_verified": false
     }
   },
-  "last_updated": "2026-07-23T14:52:08.733233"
+  "last_updated": "2026-07-27T21:27:17"
 }

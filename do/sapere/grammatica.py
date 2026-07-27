@@ -62,6 +62,47 @@ def aggiorna_da_lezione(dati: dict) -> int:
     return nuove
 
 
+def incomplete() -> list[dict]:
+    """Regole nel DB senza approfondimento (tabelle, errori tipici, eccezioni)."""
+    return [v for v in carica().get("rules", {}).values()
+            if not (v.get("full_rule") or "").strip()]
+
+
+def completa(*, web: bool = False, prova: bool = False) -> dict:
+    """Approfondisce le regole rimaste indietro.
+
+    IL BUCO CHE CHIUDE
+    `estrazione.da_ricercare` guarda solo i grammar_points della lezione in
+    corso. Una regola rimandata dal tetto di spesa — o arrivata quando la
+    ricerca era spenta — non viene piu' ripresa da nessuno: la lezione dopo
+    porta le SUE regole, non quelle vecchie. Restava indietro per sempre.
+
+    Qui si guarda il DB intero, che e' il posto giusto: le regole sono
+    cumulative, le lezioni no.
+    """
+    fuori = incomplete()
+    esito = {"incomplete": len(fuori), "approfondite": 0, "costo_eur": 0.0}
+    if not fuori:
+        return esito
+    if prova:
+        esito["regole"] = [g.get("rule") for g in fuori]
+        return esito
+
+    from ..lezione.estrazione import arricchisci_grammatica
+
+    arricchite, costo = arricchisci_grammatica(fuori, web=web)
+    db = carica()
+    for g in arricchite:
+        k = (g.get("rule") or "").strip()
+        if k in db["rules"] and (g.get("full_rule") or "").strip():
+            db["rules"][k] = g
+            esito["approfondite"] += 1
+    if esito["approfondite"]:
+        salva(db)
+    esito["costo_eur"] = round(costo, 6)
+    return esito
+
+
 def raccogli_dalle_lezioni() -> dict:
     """Ricostruisce l'insieme delle regole dai JSON lezione (sorgente vera)."""
     regole: dict[str, dict] = {}
