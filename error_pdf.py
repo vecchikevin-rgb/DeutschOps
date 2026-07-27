@@ -17,8 +17,13 @@ from reportlab.platypus import (
     HRFlowable, KeepTogether
 )
 
-ERROR_DB = Path("data/error_db.json")
-OUT = Path("pdfs/Quaderno_Errori.pdf")
+# Path ancorati al progetto, non alla cwd (vedi do/base/paths.py). Erano
+# `Path("data/...")`: lanciare da un'altra cartella creava directory vuote nel
+# posto sbagliato, in silenzio. Questo modulo resta il generatore ReportLab
+# finche' non viene consolidato in do/uscite/ — vedi la nota in do/uscite/pdf.py.
+from do.base.paths import ERROR_DB, PDFS  # noqa: E402
+
+OUT = PDFS / "Quaderno_Errori.pdf"
 
 C_NAVY = colors.HexColor("#0d2137")
 C_BLUE = colors.HexColor("#1565c0")

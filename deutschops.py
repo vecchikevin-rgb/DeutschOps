@@ -3,6 +3,8 @@
 Sostituisce main.py + watch.py + DeutschOps.bat + i 15 script standalone che
 si lanciavano ognuno a modo suo. Un comando, sottocomandi espliciti.
 
+    py -3 deutschops.py lezione <file> [data]   elabora una lezione (pipeline completa)
+    py -3 deutschops.py lezione --auto          elabora i video non ancora fatti
     py -3 deutschops.py briefing          il riquadro di avvio (lo chiama l'hook)
     py -3 deutschops.py stato             rigenera stato/stato-tedesco.md
     py -3 deutschops.py esame             gap analysis B2 (1 chiamata LLM)
@@ -13,9 +15,7 @@ si lanciavano ognuno a modo suo. Un comando, sottocomandi espliciti.
     py -3 deutschops.py anki-ripara       li corregge da fonti verificabili
     py -3 deutschops.py ponte             check verso il motore condiviso
     py -3 deutschops.py pendenti          lezioni con run non completati
-
-Nota: la pipeline della lezione gira ancora con `main.py` (v1). La migrazione
-e' lo stadio S1 del piano — vedi piano-riscrittura-v2.md.
+    py -3 deutschops.py confronta <data>  rielabora e confronta col vecchio (S1)
 """
 
 from __future__ import annotations
@@ -47,6 +47,19 @@ def main(argv: list[str] | None = None) -> int:
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
 
+    p = sub.add_parser("lezione", help="elabora una lezione")
+    p.add_argument("sorgente", nargs="?", help="video/audio, o il .txt grezzo")
+    p.add_argument("data", nargs="?", help="es. 2026-07-23-stefanie")
+    p.add_argument("--auto", action="store_true",
+                   help="cerca in Audiolessons/ i video senza transcript")
+    p.add_argument("--senza-doc", action="store_true",
+                   help="non tocca il Google Doc di Stefanie")
+
+    p = sub.add_parser("confronta", help="rielabora una lezione e confronta (S1)")
+    p.add_argument("data", help="es. 2026-07-23-stefanie")
+    p.add_argument("--riusa", action="store_true",
+                   help="non richiama l'LLM: confronta l'ultimo output di prova")
+
     sub.add_parser("briefing", help="riquadro di avvio sessione")
     sub.add_parser("stato", help="rigenera stato/stato-tedesco.md")
     sub.add_parser("pendenti", help="lezioni con run non completati")
@@ -75,7 +88,31 @@ def main(argv: list[str] | None = None) -> int:
     a = ap.parse_args(argv)
 
     # ------------------------------------------------------------------
-    if a.cmd == "briefing":
+    if a.cmd == "lezione":
+        from do.lezione import pipeline
+
+        if a.auto:
+            trovate = pipeline.da_elaborare()
+            if not trovate:
+                print("  Nessun video nuovo in Audiolessons/.")
+                return 0
+            print(f"  {len(trovate)} da elaborare: "
+                  f"{', '.join(f.name for f in trovate)}")
+            for f in trovate:
+                d = pipeline._data_dal_nome(f.stem)
+                pipeline.elabora(f, f"{d}-stefanie" if d else None,
+                                 salta_doc=a.senza_doc)
+        elif not a.sorgente:
+            raise SystemExit("Serve un file sorgente, oppure --auto.")
+        else:
+            pipeline.elabora(a.sorgente, a.data, salta_doc=a.senza_doc)
+
+    elif a.cmd == "confronta":
+        from do.lezione import confronto
+
+        return 0 if confronto.esegui(a.data, riusa=a.riusa) else 1
+
+    elif a.cmd == "briefing":
         from do.motore import briefing
         print(briefing.genera())
 

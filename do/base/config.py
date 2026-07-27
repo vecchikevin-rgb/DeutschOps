@@ -68,7 +68,10 @@ ANKI_DECK = os.getenv("ANKI_DECK", "Deutsch::DeutschOps")
 # main.prepare_audio usava 20MB, transcriber.compress_if_needed 24MB.
 COMPRESS_THRESHOLD_MB = int(os.getenv("COMPRESS_THRESHOLD_MB", "20"))
 WHISPER_MODE = os.getenv("WHISPER_MODE", "local")       # local | api
-WHISPER_MODEL = os.getenv("WHISPER_MODEL", "large-v3")
+# `small`, non `large-v3`: e' il modello che la v1 usava davvero
+# (transcriber.transcribe_local:190 lo aveva cablato). Su CPU la differenza e'
+# fra ore e mezze giornate. Sovrascrivibile da .env se un giorno gira su GPU.
+WHISPER_MODEL = os.getenv("WHISPER_MODEL", "small")
 
 # --------------------------------------------------------------------- staging
 STAGING_TTL_DAYS = int(os.getenv("STAGING_TTL_DAYS", "20"))

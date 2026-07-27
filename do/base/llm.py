@@ -90,18 +90,29 @@ def chiama(
     system: str,
     user: str,
     cfg: LLMConfig | None = None,
+    *,
+    ricerca_web: bool = False,
 ) -> tuple[str, Uso]:
     """Una chiamata LLM. Ritorna sempre (testo, Uso) — il costo non si perde.
 
     Solleva l'eccezione del backend in caso di errore: chi chiama decide se
     degradare. Non inghiottiamo errori qui — nella v1 il sync NotebookLM e'
     fallito 12 volte di fila dentro un try/except che stampava e proseguiva.
+
+    `ricerca_web` monta il tool di ricerca lato server. Non e' disponibile su
+    Ollama: chi lo chiede su backend locale riceve un errore esplicito invece
+    di una risposta silenziosamente senza fonti.
     """
     cfg = cfg or llm_config()
 
     if cfg.backend == "ollama":
+        if ricerca_web:
+            raise RuntimeError(
+                "ricerca_web non disponibile con LLM_BACKEND=ollama: "
+                "il backend locale non ha accesso a internet."
+            )
         return _chiama_ollama(system, user, cfg)
-    return _chiama_anthropic(system, user, cfg)
+    return _chiama_anthropic(system, user, cfg, ricerca_web=ricerca_web)
 
 
 def _chiama_ollama(system: str, user: str, cfg: LLMConfig) -> tuple[str, Uso]:
@@ -131,13 +142,19 @@ def _chiama_ollama(system: str, user: str, cfg: LLMConfig) -> tuple[str, Uso]:
     )
 
 
-def _chiama_anthropic(system: str, user: str, cfg: LLMConfig) -> tuple[str, Uso]:
+def _chiama_anthropic(system: str, user: str, cfg: LLMConfig,
+                      *, ricerca_web: bool = False) -> tuple[str, Uso]:
     kwargs: dict = {
         "model": cfg.model,
         "max_tokens": cfg.max_tokens,
         "system": system,
         "messages": [{"role": "user", "content": user}],
     }
+
+    if ricerca_web:
+        # extractor.py:172 montava `web_search_20250305`. Su Sonnet 5 la
+        # versione corrente e' quella del 2026-02-09, con filtro dinamico.
+        kwargs["tools"] = [{"type": "web_search_20260209", "name": "web_search"}]
 
     # Su Sonnet 5 e Opus 5 il pensiero adattivo e' ATTIVO quando il campo viene
     # omesso, e max_tokens limita pensiero + risposta insieme. Per un'estrazione
@@ -159,7 +176,12 @@ def _chiama_anthropic(system: str, user: str, cfg: LLMConfig) -> tuple[str, Uso]
         motivo = getattr(getattr(resp, "stop_details", None), "explanation", "") or "nessun dettaglio"
         raise RuntimeError(f"Richiesta rifiutata dal modello ({motivo}).")
 
-    testo = "".join(b.text for b in resp.content if b.type == "text")
+    blocchi = [b.text for b in resp.content if b.type == "text" and b.text.strip()]
+    # Con la ricerca web la risposta e' a piu' blocchi: commento del modello,
+    # server_tool_use, risultati, e infine la risposta vera. Concatenarli
+    # metterebbe il ragionamento davanti al JSON e il parser prenderebbe la
+    # prima graffa che trova nel commento. L'ultimo blocco e' la risposta.
+    testo = (blocchi[-1] if ricerca_web and blocchi else "".join(blocchi))
 
     # Troncamento a max_tokens: senza questo controllo il chiamante riceve un
     # JSON tagliato a meta' e vede un JSONDecodeError incomprensibile a riga

@@ -8,13 +8,17 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
-STEFANIE_DOC_ID = "165S8CsHT3TrCpr6Se3l3VYakb7r16_bgg81l5ygJvpc"
-KPI_TAB_ID      = "t.wjmdnwq7d6ek"
+# DOC_ID e KPI_TAB_ID arrivano da do/base/config.py: erano hardcoded in TRE
+# file (qui, doc_reader.py:17, retroactive_doc_images.py:29). Stessa cosa per i
+# path, che erano relativi alla cwd. Questo modulo resta il writer Google Docs
+# finche' non viene consolidato — vedi la nota in do/lezione/doc.py.
+from do.base.config import DOC_ID as STEFANIE_DOC_ID  # noqa: E402
+from do.base.config import GOOGLE_SCOPES, KPI_TAB_ID  # noqa: E402
+from do.base.paths import (  # noqa: E402
+    DOC_SNAPSHOTS, GOOGLE_CREDENTIALS, GOOGLE_TOKEN, REGISTRY, VOCAB_DB,
+)
 
-SCOPES = [
-    "https://www.googleapis.com/auth/drive",
-    "https://www.googleapis.com/auth/documents"
-]
+SCOPES = GOOGLE_SCOPES
 
 KPI_MARKER_START = "%%KPI_START%%"
 KPI_MARKER_END   = "%%KPI_END%%"
@@ -27,7 +31,7 @@ SEP2 = "─" * 52
 # ─── AUTH ─────────────────────────────────────────────────────────────────────
 def get_service():
     creds = None
-    token_path = Path("token.json")
+    token_path = GOOGLE_TOKEN
     if token_path.exists():
         creds = Credentials.from_authorized_user_file(str(token_path), SCOPES)
     if not creds or not creds.valid:
@@ -35,15 +39,14 @@ def get_service():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                "credentials.json", SCOPES)
+                str(GOOGLE_CREDENTIALS), SCOPES)
             creds = flow.run_local_server(port=0)
         token_path.write_text(creds.to_json())
     return build("docs", "v1", credentials=creds)
 
 
 def get_drive_service():
-    creds = Credentials.from_authorized_user_file(
-        str(Path("token.json")), SCOPES)
+    creds = Credentials.from_authorized_user_file(str(GOOGLE_TOKEN), SCOPES)
     return build("drive", "v3", credentials=creds)
 
 
@@ -53,7 +56,7 @@ def backup_doc(label: str = None) -> str:
     Niente copie create nel Drive personale dell'utente (solo file locali)."""
     if label is None:
         label = datetime.now().strftime("%Y-%m-%d_%H-%M")
-    backup_dir = Path("doc_snapshots/backups")
+    backup_dir = DOC_SNAPSHOTS / "backups"
     backup_dir.mkdir(parents=True, exist_ok=True)
     drive_svc = get_drive_service()
     data = drive_svc.files().export_media(
@@ -398,13 +401,12 @@ def append_lesson_summary(lesson_json_path: str,
 
     # 3. Carica dati
     registry = {"lessons": [], "stats": {}}
-    if Path("lesson_registry.json").exists():
-        registry = json.loads(
-            Path("lesson_registry.json").read_text(encoding="utf-8"))
+    if REGISTRY.exists():
+        registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
 
     vocab_stats = {"total_words": 0, "by_category": {}, "by_level": {}}
-    if Path("data/vocab_db.json").exists():
-        db = json.loads(Path("data/vocab_db.json").read_text(encoding="utf-8"))
+    if VOCAB_DB.exists():
+        db = json.loads(VOCAB_DB.read_text(encoding="utf-8"))
         vocab_stats = db.get("stats", vocab_stats)
 
     # 4. Scrivi nel tab

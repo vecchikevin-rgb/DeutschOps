@@ -22,8 +22,12 @@ from reportlab.platypus.frames import Frame
 load_dotenv()
 client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
-OUTPUT_PDF = Path("DeutschOps_Grammar_Book.pdf")
-GRAMMAR_DB = Path("data/grammar_db.json")
+# Path ancorati al progetto, non alla cwd (vedi do/base/paths.py). Questo
+# modulo resta il generatore ReportLab del libro di grammatica finche' non
+# viene consolidato in do/uscite/ — vedi la nota in do/uscite/pdf.py.
+from do.base.paths import GRAMMAR_DB, ROOT  # noqa: E402
+
+OUTPUT_PDF = ROOT / "DeutschOps_Grammar_Book.pdf"
 
 C_NAVY    = colors.HexColor("#0d2137")
 C_BLUE    = colors.HexColor("#1565c0")
