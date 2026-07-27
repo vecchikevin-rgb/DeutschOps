@@ -5,19 +5,28 @@
 > Il semaforo NON e' scritto qui: lo ricalcola `do/motore/scadenze.py` confrontando
 > la data con oggi. Aggiorna solo le righe, mai i colori.
 
-**Obiettivo:** Goethe-Zertifikat **B2** entro ottobre 2026.
-**Deciso il:** 2026-07-26 · **Da:** Kevin
+**Obiettivo:** Goethe-Zertifikat **B2** nella primavera 2027.
+**Deciso il:** 2026-07-26 · **Rivisto il:** 2026-07-26 (rinvio da ottobre) · **Da:** Kevin
 
 ---
 
-## Il vincolo, in chiaro
+## Perche' il rinvio, e cosa cambia
 
-Alla prima finestra utile di ottobre mancano **10 settimane**; a fine ottobre, 14.
-Il sistema oggi non sa a che punto sei davvero: `vocab_db` conta 1.048 parole di cui
-2 marcate B2, ma quel numero misura **cosa la pipeline ha estratto da 10 settimane di
-lezioni**, non cosa sai. Finche' non c'e' un punteggio esterno, ogni piano e' a occhio.
+La gap analysis del 2026-07-26 e' stata netta: a ottobre mancavano 10 temi B2 interi
+(Konjunktiv I, Nominalisierung, Funktionsverbgefüge, passivo avanzato) e il lessico
+estratto era quasi tutto A1-B1. Il solo modulo con una prontezza plausibile era
+Sprechen. Rinviare non e' una ritirata: e' smettere di pagare una tassa d'esame per
+un modulo su quattro.
 
-Per questo la scadenza piu' urgente non e' l'esame: e' il **Modellsatz di prova**.
+**Cosa cambia con 9-12 mesi invece di 10 settimane.** Il B2 pieno diventa realistico,
+e conviene puntare a **tutti e quattro i moduli in una volta** invece di spezzarli.
+Ma il tempo lungo ha un rischio opposto: senza una data, la pressione sparisce e il
+piano scivola. Le scadenze intermedie qui sotto servono a quello — non all'esame.
+
+Il primo passo resta identico e resta urgente: **un Modellsatz cronometrato**.
+Il sistema non ti ha mai misurato, ha solo archiviato. Rinviare l'esame non toglie
+il bisogno di sapere il punto di partenza — lo rende piu' utile, perche' adesso c'e'
+tempo per agire sul risultato.
 
 ## Il B2 e' modulare — questa e' la leva
 
@@ -36,21 +45,25 @@ Fonte: [Goethe-Institut — Goethe-Zertifikat B2](https://www.goethe.de/de/spr/p
 
 | Data | Cosa | Tipo | Stato | Note |
 |---|---|---|---|---|
-| 2026-08-02 | **Modellsatz B2 completo sotto tempo** — misura di partenza | gate | aperto | I 4 moduli, cronometrati, senza aiuti. Senza questo numero tutto il resto e' congettura. Materiale: il PDF Modellsatz Erwachsene + audio dal sito Goethe. |
-| 2026-08-04 | Verificare date e **scadenza iscrizioni** al proprio Goethe-Institut | milestone | aperto | ⚠️ **Da confermare a mano — non ho la data reale.** Le finestre di iscrizione sono per-istituto e chiudono tipicamente settimane prima dell'esame. E' la scadenza piu' facile da perdere e l'unica che rende irrilevanti tutte le altre. |
-| 2026-08-09 | Decidere **quali moduli** dare a ottobre | decisione | aperto | Sulla base del punteggio Modellsatz per modulo. Non serve darli tutti. |
-| 2026-09-06 | Modellsatz #2 — verifica di meta' percorso | gate | aperto | Stesso formato, per misurare la pendenza reale, non la sensazione. |
-| 2026-10-?? | **Esame Goethe-Zertifikat B2** (moduli scelti) | esame | aperto | Data esatta da fissare col passo del 2026-08-04. |
+| 2026-08-09 | **Modellsatz B2 completo sotto tempo** — misura di partenza | gate | aperto | I 4 moduli, cronometrati, senza aiuti. Senza questo numero ogni stima e' congettura. Materiale: PDF Modellsatz Erwachsene + audio dal sito Goethe. |
+| 2026-09-30 | **Chiudere il buco sui casi** — Kasus/Genus/Präposition | gate | aperto | 127 errori sullo stesso sistema, il 45% di tutto `error_db`. Sono fondamenta A2/B1: finche' reggono cosi', ogni modulo B2 ne paga il prezzo. Verifica: la quota di questi errori sul totale scende sotto il 25%. |
+| 2026-11-29 | Modellsatz #2 — pendenza reale a 4 mesi | gate | aperto | Stesso formato del #1. Serve a misurare la derivata, non il livello. |
+| 2027-01-31 | Modellsatz #3 + **decidere data e istituto** | decisione | aperto | ⚠️ Le finestre di iscrizione sono per-istituto e chiudono settimane prima. Da qui in poi diventa la scadenza piu' facile da perdere. |
+| 2027-02-28 | **Iscrizione formalizzata** | milestone | aperto | Data e sede confermate, tassa pagata. Da qui l'esame e' reale. |
+| 2027-04-?? | **Esame Goethe-Zertifikat B2** — 4 moduli | esame | aperto | Data esatta dal passo del 2027-01-31. Con 9 mesi l'obiettivo torna il B2 pieno, non i singoli moduli. |
 
 ### Soglie di allarme (kill-criteria)
 
 Non sono obiettivi: sono segnali che il piano va rivisto, non spinto piu' forte.
 
-- Modellsatz #1 sotto il **50%** in un modulo → quel modulo non e' da ottobre, si sposta.
-- Piu' di **2 settimane senza lezione** con Stefanie → la cadenza attuale e' 3/settimana,
-  perderla ora costa piu' che a marzo.
-- `error_db` che non cala su una categoria dopo **4 lezioni** che la coprono → il modo
-  di studiarla non funziona, non serve ripeterla uguale.
+- **Piu' di 3 settimane senza lezione** con Stefanie → la cadenza attuale e' 3/settimana.
+  Su un orizzonte lungo il rischio non e' l'intensita', e' l'interruzione.
+- **Ripasso Anki sotto i 4 giorni su 7** per due settimane di fila → il collo di
+  bottiglia non e' la pipeline, e' l'abitudine. Aggiungere carte peggiora le cose.
+- **`error_db` che non cala su una categoria dopo 6 lezioni** che la coprono → il modo
+  di studiarla non funziona, ripeterla uguale non serve.
+- **Modellsatz #2 non migliore del #1** → il metodo non sta rendendo; si rivede il
+  piano, non si aumenta il volume.
 
 ---
 
