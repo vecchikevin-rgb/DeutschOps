@@ -293,9 +293,42 @@ def alimenta(vocabolario: list[dict], data_lezione: str, *, prova: bool = False)
         if d not in esistenti:
             anki("createDeck", deck=d)
 
-    # addNotes in blocco: una chiamata invece di N. Ritorna None per le note
-    # rifiutate (tipicamente duplicati), senza far fallire le altre.
-    esiti = anki("addNotes", notes=tutte)
+    # I DUPLICATI VANNO TOLTI PRIMA, NON GESTITI DOPO
+    # La documentazione di AnkiConnect dice che `addNotes` ritorna null per le
+    # note rifiutate senza toccare le altre. Questa versione (AnkiConnect 6,
+    # misurato il 2026-07-27) fa l'opposto: al primo duplicato ABORTISCE
+    # l'intero lotto e ritorna `result: null` con l'errore in cima. Su
+    # 2026-07-06: 6 note gia' presenti su 74, e tutte e 74 rifiutate.
+    #
+    # Non e' un caso limite. Ogni lezione che ripassa vocaboli gia' visti ha
+    # duplicati: la fase Anki sarebbe fallita quasi sempre. Non si e' visto
+    # prima solo perche' la lezione su cui il codice era stato provato non
+    # aveva sovrapposizioni.
+    #
+    # Due filtri, in ordine:
+    #   1. dentro il lotto — due vocaboli possono generare lo stesso fronte;
+    #   2. contro la collezione — `canAddNotes`, che risponde per-nota.
+    visti: set[tuple[str, str]] = set()
+    candidate: list[dict] = []
+    for n in tutte:
+        k = (n["deckName"], n["fields"]["Fronte"])
+        if k in visti:
+            riepilogo["duplicate"] += 1
+            continue
+        visti.add(k)
+        candidate.append(n)
+
+    aggiungibili = anki("canAddNotes", notes=candidate) if candidate else []
+    da_inviare = [n for n, ok in zip(candidate, aggiungibili) if ok]
+    riepilogo["duplicate"] += sum(1 for ok in aggiungibili if not ok)
+
+    if not da_inviare:
+        print(f"   Nessuna carta nuova: tutte e {riepilogo['proposte']} gia' nel mazzo.")
+        return riepilogo
+
+    esiti = anki("addNotes", notes=da_inviare)
     riepilogo["aggiunte"] = sum(1 for e in esiti if e is not None)
-    riepilogo["duplicate"] = sum(1 for e in esiti if e is None)
+    # Se qualcosa viene comunque rifiutata dopo il filtro, e' una collisione
+    # nata fra il controllo e l'invio: si conta, non si nasconde.
+    riepilogo["duplicate"] += sum(1 for e in esiti if e is None)
     return riepilogo

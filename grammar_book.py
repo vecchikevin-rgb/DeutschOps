@@ -626,9 +626,12 @@ def build_grammar_book(use_doc: bool = True, enrich_web: bool = True):
     if use_doc:
         try:
             print("Reading Google Doc...")
-            from doc_reader import get_drive_service, read_doc
-            service   = get_drive_service()
-            doc_text  = read_doc(service)
+            # Era `from doc_reader import get_drive_service, read_doc` seguito
+            # da `read_doc(service)`. Ma doc_reader.read_doc non accetta
+            # argomenti: questo ramo sollevava TypeError da sempre — non si
+            # vedeva perche' la pipeline chiama solo use_doc=False.
+            from do.lezione.doc import leggi as read_doc
+            doc_text  = read_doc()
             doc_rules = collect_rules_from_doc(doc_text)
             new_from_doc = 0
             for rule in doc_rules:

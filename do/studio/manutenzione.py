@@ -244,6 +244,21 @@ def analizza(query: str = "deck:Deutsch") -> tuple[list[Scheda], dict]:
                 sc.tags = list(n.get("tags") or [])
 
     for s in schede:
+        # L'AUDIT VALE SOLO SULLE CARTE CON IL TEDESCO SUL FRONTE
+        # Tutti i controlli qui sotto — colore per genere, articolo, plurale,
+        # presenza in vocab_db — presuppongono che il fronte sia una parola
+        # tedesca. Vale per il mazzo storico e per Riconoscimento, non per le
+        # due direzioni nuove: Produzione ha l'italiano davanti (dare
+        # l'articolo tedesco svelerebbe proprio cio' che Kevin sbaglia) e
+        # Cloze ha una frase con un buco.
+        #
+        # Applicarli lo stesso produce il quarto falso positivo di questa
+        # famiglia: 154 carte "colore-incoerente" appena create, dove il
+        # grigio letto dal parser e' il colore del SUGGERIMENTO — il "(f.)"
+        # accanto al nome italiano — non un colore di genere sbagliato.
+        if s.deck.endswith(("::Produzione", "::Cloze")):
+            continue
+
         voce = idx.get(s.parola.lower())
         atteso = _colore_atteso(s, voce)
         cat = ((voce or {}).get("category") or "").lower()

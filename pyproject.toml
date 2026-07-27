@@ -1,7 +1,7 @@
 [project]
 name = "deutschops"
-version = "2.0.0.dev0"
-description = "Pipeline AI per l'apprendimento del tedesco A2->B1"
+version = "2.0.0"
+description = "Pipeline AI per l'apprendimento del tedesco, obiettivo Goethe B2"
 requires-python = ">=3.12"
 
 # Dipendenze DIRETTE del percorso critico.
@@ -11,7 +11,7 @@ requires-python = ">=3.12"
 # da speaker_analysis.py, un modulo orfano eseguito una volta il 22 maggio la
 # cui funzione principale (la diarizzazione) non ha mai funzionato.
 dependencies = [
-    "anthropic>=0.69",           # estrazione, drill
+    "anthropic>=0.69",           # estrazione, drill, gap B2
     "requests>=2.32",            # AnkiConnect, Ollama
     "faster-whisper>=1.1",       # trascrizione locale, gratis
     "reportlab>=4.2",            # PDF
@@ -20,16 +20,18 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-# Non serve alla pipeline per-lezione: si installa solo se lo usi davvero.
-dashboard = ["streamlit>=1.38", "plotly>=5.24", "pandas>=2.2"]
+# La trascrizione via API OpenAI e' l'alternativa a pagamento del percorso
+# locale: serve solo con WHISPER_MODE=api.
+whisper-api = ["openai>=1.50"]
 tts = ["piper-tts>=1.2"]         # audio sulle carte, CPU-only
-dev = ["pytest>=8.3", "pyright>=1.1"]
+dev = ["pytest>=8.3", "pyright>=1.1", "pypdf>=5.0"]
 
 [project.scripts]
 deutschops = "deutschops:main"
 
 [tool.setuptools]
-packages = ["do", "do.base"]
+packages = ["do", "do.base", "do.lezione", "do.sapere", "do.studio",
+            "do.motore", "do.uscite"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

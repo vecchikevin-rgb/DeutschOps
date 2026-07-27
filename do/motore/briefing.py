@@ -54,11 +54,19 @@ def genera(*, con_ponte: bool = True) -> str:
             out.append(_riga(f"   {p['data']} — manca: {', '.join(p['mancanti'])}"))
 
     # ---------------------------------------------------------- 2. scadenze
-    if righe := scadenze.righe_briefing():
+    # Gli alert (rosso/giallo) compaiono solo quando servono. La riga
+    # dell'orizzonte c'e' sempre: senza, per settimane il riquadro non dice
+    # qual e' il prossimo passo e sembra che non ce ne siano.
+    urgenti = scadenze.righe_briefing()
+    prossima = scadenze.prossima()
+    if urgenti or prossima:
         out += [_riga(), _riga("SCADENZE")]
-        out += [_riga("   " + r) for r in righe]
-    elif d["giorni_esame"] is not None:
-        out.append(_riga(f"Esame B2 fra {d['giorni_esame']} giorni."))
+        out += [_riga("   " + r) for r in urgenti]
+        if prossima and not any(prossima.cosa in r for r in urgenti):
+            out.append(_riga(f"   prossima: {prossima.cosa} "
+                             f"— {prossima.data} (fra {prossima.giorni}g)"))
+        if d["giorni_esame"] is not None:
+            out.append(_riga(f"   esame B2 fra {d['giorni_esame']} giorni"))
 
     # ---------------------------------------------------------- 3. dove sbagli
     out += [_riga(), _riga("DOVE SBAGLI")]

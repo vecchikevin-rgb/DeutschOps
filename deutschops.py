@@ -62,7 +62,14 @@ def main(argv: list[str] | None = None) -> int:
 
     sub.add_parser("briefing", help="riquadro di avvio sessione")
     sub.add_parser("stato", help="rigenera stato/stato-tedesco.md")
-    sub.add_parser("pendenti", help="lezioni con run non completati")
+    p = sub.add_parser("pendenti", help="lezioni con run non completati")
+    p.add_argument("--recupera", action="store_true",
+                   help="esegue le fasi mancanti recuperabili e chiude i task")
+    p.add_argument("--archivia", metavar="DATA",
+                   help="chiude un task dichiarando irrecuperabile cio' che manca")
+    p.add_argument("--motivo", default="",
+                   help="perche' e' irrecuperabile (obbligatorio con --archivia)")
+    p.add_argument("--prova", action="store_true", help="non scrive niente")
     sub.add_parser("esame", help="gap analysis verso il B2")
 
     p = sub.add_parser("drill", help="esercizi dagli errori reali")
@@ -123,7 +130,22 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Scritto: {STATO / 'stato-tedesco.md'}")
 
     elif a.cmd == "pendenti":
+        from do.base import recupero
         from do.base.tracker import dettaglio_pendenti
+
+        if a.archivia:
+            if not a.motivo:
+                raise SystemExit("--archivia richiede --motivo: chiudere un task "
+                                 "senza dire perche' fa sparire l'informazione.")
+            print(json.dumps(recupero.archivia(a.archivia, a.motivo),
+                             ensure_ascii=False, indent=2))
+            return 0
+
+        if a.recupera:
+            for r in recupero.tutti(prova=a.prova):
+                print(json.dumps(r, ensure_ascii=False, indent=2))
+            return 0
+
         pend = dettaglio_pendenti()
         if not pend:
             print("Nessun task pendente: tutte le pipeline sono chiuse.")

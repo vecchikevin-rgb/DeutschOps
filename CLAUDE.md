@@ -1,186 +1,206 @@
 # DeutschOps
 
-Pipeline AI per l'apprendimento del tedesco (A2→B1). Automatizza il ciclo completo da lezione audio con l'insegnante Stefanie a materiali di studio strutturati: trascrizione, estrazione AI, flashcard Anki, PDF, aggiornamento Google Doc.
+Pipeline AI per l'apprendimento del tedesco, obiettivo **Goethe-Zertifikat B2** (primavera 2027).
+Automatizza il ciclo dalla lezione con l'insegnante Stefanie ai materiali di studio: trascrizione,
+estrazione, flashcard Anki a tre direzioni, PDF, aggiornamento del Google Doc condiviso — e il
+livello che chiude l'anello: esercizi generati dagli errori reali, gap analysis verso il B2,
+promemoria di cosa non sta girando.
 
 ## Come eseguire
 
-```batch
-# Attivare venv e lanciare (o usare DeutschOps.bat)
-# NB: l'ambiente reale e' venv/ (NON .venv/). Imposta sempre UTF-8.
+Un entry point solo. Non ci sono più script standalone da lanciare a mano.
+
+```powershell
 venv\Scripts\activate
-set PYTHONIOENCODING=utf-8
-set WHISPER_MODE=local         REM trascrizione locale (faster-whisper), niente costi API
-python main.py "Audiolessons/Classroom with Stefanie 2026-05-25.mp4" 2026-05-25-stefanie
+$env:PYTHONIOENCODING = "utf-8"
 
-# Rilevare ed elaborare lezioni nuove in Audiolessons/ automaticamente
-python watch.py --process
-
-# Dashboard KPI
-streamlit run dashboard.py
+py -3 deutschops.py lezione "Audiolessons\Deutsch mit Kevin - 2026_07_28.mp4" 2026-07-28-stefanie
+py -3 deutschops.py lezione --auto        # elabora i video senza transcript
 ```
 
-**Prerequisiti obbligatori:**
-- Anki aperto con AnkiConnect attivo su `localhost:8765`
-- `.env` compilato con le API key
-- `credentials.json` + `token.json` presenti (Google OAuth2)
-- Google Drive mappato localmente
+| Comando | Cosa fa | Costo |
+|---|---|---|
+| `lezione <file> [data]` | La pipeline completa | ~0,10 € |
+| `lezione --auto` | Rileva ed elabora i video nuovi | ~0,10 €/lezione |
+| `briefing` | Il riquadro di avvio (lo stampa l'hook) | 0 |
+| `stato` | Rigenera `stato/stato-tedesco.md` | 0 |
+| `pendenti` | Run non completati · `--recupera` · `--archivia` | 0 |
+| `esame` | Gap analysis verso il curriculum B2 | ~0,05 € |
+| `drill [-n 10]` | Esercizi di produzione dai tuoi errori | ~0,03 € |
+| `frasi [-n 20]` | Frasi i+1 dal tuo corpus | 0 |
+| `carte <data>` | Carica in Anki le carte di una lezione | 0 |
+| `anki-audit` / `anki-ripara` | Difetti del mazzo e correzione | 0 |
+| `ponte` | Check verso il motore di `shared start up/` | 0 |
+| `confronta <data>` | Rielabora e confronta con la v1 | ~0,15 € |
 
-## Pipeline (main.py — 6 step)
+**Prerequisiti:** Anki aperto con AnkiConnect su `localhost:8765` · `.env` con le chiavi ·
+`credentials.json` + `token.json` (Google OAuth2).
 
-| Step | Modulo | Operazione |
-|------|--------|-----------|
-| PREFLIGHT | `preflight.py` | Check video (moov→auto-untrunc), token Google, sessione NBLM, Anki |
-| PREP | `transcriber.py` | Compressione audio con ffmpeg se >20MB |
-| 1 | `doc_reader.py` | Lettura Google Doc Stefanie (diff tracking) |
-| 2 | `transcriber.py` | Trascrizione OpenAI Whisper → `transcripts/lezione_{date}.txt` |
-| 3 | `extractor.py` | Estrazione strutturata via Claude → `data/lezione_{date}.json` |
-| 4 | `anki_feeder.py` | Creazione flashcard in deck "Deutsch::DeutschOps" |
-| 5 | `pdf_gen.py` | Generazione PDF lezione → `pdfs/lezione_{date}.pdf` |
-| 6 | `doc_writer.py` | Append riepilogo + KPI su Google Doc, backup locale del Doc |
+## La pipeline
 
-**Post-pipeline automatico:** `lesson_registry.py`, `vocab_db.py`, `grammar_book.py`, `error_extractor.py` (quaderno errori), `generate_astra_prompts.py`, `notebooklm_export.py`, `archive_cleanup.py` (staging input a scadenza)
+| Passo | Modulo | Operazione |
+|---|---|---|
+| preflight | `do/base/preflight.py` | Video corrotto (moov → auto-`untrunc`), token Google, Anki. **Non blocca mai**: avvisa e la pipeline degrada. |
+| prep | `do/lezione/audio.py` | Compressione ffmpeg se sopra i 20 MB |
+| 1 | `do/lezione/doc.py` | Google Doc di Stefanie, diff contro l'ultimo snapshot |
+| 2 | `do/lezione/audio.py` | Whisper (locale di default) → `transcripts/lezione_{data}.txt` |
+| 3 | `do/lezione/estrazione.py` | LLM → `data/lezione_{data}.json`, schema validato |
+| 4 | `do/studio/carte.py` | Flashcard, tre direzioni |
+| 5 | `do/uscite/pdf.py` | PDF lezione → `pdfs/` |
+| 6 | `do/sapere/*` + `do/lezione/doc.py` | Database cumulativi, quaderno errori, riepilogo sul Doc |
 
-## Staging input a scadenza (`Audiolessons/_processed/`)
+### Degradazione: cosa succede quando qualcosa non c'è
 
-A fine di ogni elaborazione **riuscita**, `main.py` sposta il **file sorgente consumato** (il video originale ~140MB, oppure il `.txt` grezzo di una trascrizione esterna) in `Audiolessons/_processed/` con `archive_cleanup.archive_inputs()`, timbrando l'mtime a quel momento. Il cleanup è **opportunistico**: `archive_cleanup.cleanup_expired()` gira all'avvio di ogni run e cancella ciò che ha superato i **20 giorni**. Nessun Task Scheduler necessario.
+È la parte più matura del progetto e non va toccata.
 
-- **Cosa ci va:** solo input consumati e ridondanti (trascritto + output canonici esistono già).
-- **Cosa NON ci va mai:** i file canonici (`transcripts/`, `data/`, `pdfs/`) e l'audio compresso `lezione_*-compressed.mp4` (referenziato dal registry, riusato nei re-run). `archive_cleanup` li protegge esplicitamente. Per le lezioni senza audio il transcript canonico è **irrecuperabile** — non deve mai finire in un percorso a scadenza.
-- **A mano:** `python archive_cleanup.py --cleanup` (elimina gli scaduti) · `python archive_cleanup.py <file>...` (archivia) · `python archive_cleanup.py` (stato + giorni residui).
+- **Anki chiuso** → la fase non viene marcata, il task resta aperto, il run dopo riparte da lì.
+  Il resto della lezione (PDF, database, riepilogo) prosegue.
+- **Token Google scaduto** → il passo 1 degrada a stringa vuota. Il diff è contesto ausiliario.
+- **Snapshot del Doc** → commit **differito**, scritto solo a pipeline completa. Scriverlo prima e
+  poi fallire sposterebbe il punto di riferimento del diff, perdendolo per sempre.
+- **Fase completata** → non si rifà mai.
 
-## Lezione senza video (solo trascrizione esterna)
+### Run rimasti aperti
 
-Quando una lezione arriva **senza audio/video** (es. solo la trascrizione Gemini di una call), non c'è nulla da trascrivere: si inietta il transcript già pronto e la pipeline salta lo Step 2 (in `main.py` Step 2 fa skip se `transcripts/lezione_{date}.txt` esiste già).
+`pendenti` li elenca; `pendenti --recupera` esegue ciò che manca ed è rifacibile (oggi: Anki);
+`pendenti --archivia <data> --motivo "..."` chiude un task dichiarando irrecuperabile ciò che manca
+— serve per il diff del Doc di una lezione vecchia, che non esiste più.
 
-1. Copia il testo grezzo (verbatim, UTF-8, **senza ripulirlo** — pulire rischia di perdere il tedesco) in `transcripts/lezione_{date}-stefanie.txt`.
-2. Scrivi `transcripts/lezione_{date}-stefanie.meta.json` = `{"duration_minutes": <minuti reali dalla lezione>, "cost_eur": 0}` — la trascrizione esterna è gratuita e senza questo file il registry/dashboard registrerebbe una lezione di durata ~0.
-3. Lancia `main.py` passando **il `.txt` grezzo come dummy audio arg**: `check_video` lo ignora (suffisso non video), `prepare_audio` lo lascia com'è (<20MB), lo Step 2 salta perché il transcript canonico esiste. A fine run il `.txt` grezzo viene archiviato in `_processed/` come qualsiasi input consumato.
+## Il metodo di studio
 
-L'estrazione (Step 3) su un dialogo grezzo con chiacchiere fuori tema è inerentemente più rumorosa: è un limite della fonte, non un bug.
+### Carte: tre direzioni, non una
 
-## Miglioramento continuo (feedback loop)
+| Direzione | Fronte | Perché |
+|---|---|---|
+| Riconoscimento | la parola tedesca, colorata per genere | com'era |
+| **Produzione** | l'italiano + `(f.)`, **non** `die` | dare l'articolo svelerebbe proprio ciò che sbaglia: 27 errori di Genus |
+| **Cloze** | una frase vera di Stefanie con un buco | il contesto, non la parola isolata |
 
-Chiudono l'anello di apprendimento — usano ciò che Kevin *fa* per decidere cosa studiare:
+Sottodeck separati (`::Riconoscimento`, `::Produzione`, `::Cloze`): FSRS pianifica ogni direzione
+per conto suo. FSRS attivo, retention desiderata 90%.
 
-| Tool | Ruolo |
-|------|-------|
-| `error_extractor.py` | Mina gli errori di Kevin + correzioni di Stefanie dai transcript → `data/error_db.json` + pattern ricorrenti. `--all` / `--lesson <date>` / `--report` |
-| `error_pdf.py` | PDF "Quaderno degli Errori" → `pdfs/Quaderno_Errori.pdf` |
-| `weak_cards.py` | Carte Anki più deboli (lapses/ease) → ripasso mirato. `--practice` genera esercizi |
-| `b1_gap.py` | Gap analysis vs curriculum B1 → argomenti concreti da proporre a Stefanie |
-| `pharma_glossary.py` | Glossario professionale (Basilea/pharma) + dialogo workplace |
-| `preflight.py` | Health-check pre-pipeline (video/token/NBLM/Anki) |
-| `watch.py` | Rileva ed elabora lezioni nuove in `Audiolessons/` |
+### Gli errori sono il curriculum
 
-**Cadenza consigliata:** `error_extractor` gira in post-pipeline ad ogni lezione; `weak_cards` + `b1_gap` settimanali (Task Scheduler); `pharma_glossary` mensile.
+`data/error_db.json` ha 284 errori reali con la correzione di Stefanie accanto. `drill` ci
+costruisce sopra esercizi di **produzione** in contesti nuovi — se riconosci la frase originale non
+stai imparando.
 
-## File chiave
+**Il dato che orienta tutto: 127 errori su 284 (45%) sono Kasus, Genus, Präposition.** Tre facce
+dello stesso sistema, e sono fondamenta A2/B1.
 
-| File | Ruolo |
-|------|-------|
-| `main.py` | Orchestratore — entry point principale |
-| `transcriber.py` | Whisper API + compressione ffmpeg (limite 24MB) |
-| `extractor.py` | Claude API — output JSON con vocab, grammar, frasi, domande |
-| `anki_feeder.py` | AnkiConnect HTTP — colori genere: der=blu, die=rosso, das=verde |
-| `pdf_gen.py` | PDF lezione (ReportLab) |
-| `grammar_book.py` | Libro grammatica progressivo (ReportLab + Claude) |
-| `doc_writer.py` | Google Docs API — append e KPI |
-| `doc_reader.py` | Google Docs API — lettura per diff |
-| `dashboard.py` | Streamlit — KPI interattivi con Plotly/Pandas |
-| `notebooklm_export.py` | Sincronizzazione automatica e formattazione per Google NotebookLM |
-| `lesson_registry.py` | Registro JSON persistente di tutte le lezioni |
-| `vocab_db.py` | Database vocabolario cumulativo |
-| `export_to_obsidian.py` | Export verso Obsidian |
-| `book_reader.py` / `book_extractor.py` | Import da libri PDF di corso (pdfplumber) |
-| `bulk_import.py` / `bulk_import_book.py` | Import bulk lezioni/libri |
-| `archive_cleanup.py` | Staging a scadenza degli input consumati → `Audiolessons/_processed/`, TTL 20 giorni |
+### Il promemoria
 
-## Struttura dati
+`do/motore/attivita.py` misura in **lezioni**, non in giorni: due settimane senza lezioni non sono
+un problema, tre lezioni elaborate senza un drill sì. Se `drill` salta 3 lezioni o `esame` ne salta
+8, compare nel briefing sotto **MATERIALE FERMO**.
+
+Nella v1 questo mancava: la pipeline ha macinato 30 lezioni mentre il loop di ripasso girava **una
+volta**, l'11 giugno. Nessuno se n'è accorto per 45 giorni.
+
+## Lezione senza video
+
+Quando arriva solo una trascrizione esterna:
+
+1. Copia il testo grezzo, verbatim e senza ripulirlo, in `transcripts/lezione_{data}.txt`.
+2. Scrivi `transcripts/lezione_{data}.meta.json` = `{"duration_minutes": <minuti reali>, "cost_eur": 0}`.
+   Senza, il registro segna una lezione di durata zero.
+3. Lancia `deutschops.py lezione <il .txt> {data}`: il passo 2 salta perché il transcript esiste.
+
+## Struttura
 
 ```
-transcripts/     lezione_{date}.txt + .meta.json (durata, costo API)
-data/            lezione_{date}.json (struttura estratta) + grammar_db.json
-pdfs/            lezione_{date}.pdf
-astra_prompts/   PDF prompt per caricamento su vector DB Astra
-Audiolessons/    File audio originali + compressi
-Audiolessons/_processed/   Input consumati (video originale, .txt grezzi esterni) — auto-eliminati 20g dopo l'elaborazione
-Book/            PDF libri di corso
+deutschops.py          entry point unico
+do/
+  base/      paths · config · llm · tracker · preflight · staging · recupero
+  lezione/   audio · estrazione · doc · pipeline · confronto
+  sapere/    vocaboli · grammatica · errori · registro
+  studio/    carte · frasi · drill · esame · manutenzione · singolari
+  motore/    stato · briefing · scadenze · attivita · ponte
+  uscite/    pdf (adattatori sui generatori ReportLab)
+stato/
+  scadenze.md          l'UNICO markdown di stato scritto a mano
+  stato-tedesco.md     GENERATO — non editare
+_archivio/             la v1 e i 15 orfani. Vedi _archivio/LEGGIMI.md
 ```
 
-### Schema JSON estrazione (`data/lezione_*.json`)
+I quattro moduli rimasti in root (`pdf_gen`, `grammar_book`, `error_pdf`, `doc_writer`) sono il
+layer di uscita non ancora consolidato: 1.900 righe di ReportLab e di aritmetica sugli indici della
+Docs API, che nessun test può verificare. Resi path-safe, consolidazione rimandata.
+
+### Schema di `data/lezione_*.json`
+
+Lo schema **reale**, non quello che la documentazione vecchia descriveva. È piatto:
+
 ```json
 {
-  "lesson_number": 42,
   "topic": "...",
-  "summary": { "en": "...", "it": "..." },
-  "vocabulary": [{ "word": "...", "gender": "der/die/das", "plural": "...", "category": "...", "cefr": "A2" }],
-  "grammar_points": [{ "rule": "...", "explanation": "...", "examples": [] }],
-  "phrases": [],
-  "comprehension_questions": [],
-  "doc_sections_covered": []
+  "summary_en": "...", "summary_it": "...",
+  "vocabulary": [{"german": "Sorge", "article": "die", "plural": "Sorgen",
+                  "category": "noun", "italian": "...", "english": "...",
+                  "example_de": "...", "example_it": "...", "level": "B1"}],
+  "grammar_points": [{"rule": "...", "explanation_en": "...", "examples": [],
+                      "full_rule": "", "common_mistakes": "", "exceptions": ""}],
+  "phrases": [], "comprehension_questions": [], "homework": "",
+  "_schema": 2, "_costo_estrazione_eur": 0.0731, "_modello": "claude-sonnet-5"
 }
 ```
 
-## Stack tecnologico
+`do/lezione/estrazione.py` lo **valida e fallisce rumorosamente**. Un vocabolo senza `german`
+diventerebbe una carta con il fronte vuoto: meglio fermarsi dove si vede il perché.
 
-| Categoria | Tecnologia |
-|-----------|-----------|
-| Runtime | Python 3.14, venv in `venv/` (non usare `.venv/`) |
-| Trascrizione | Whisper locale (faster-whisper, `WHISPER_MODE=local`) |
-| Estrazione AI | Anthropic Claude API (default) oppure Ollama locale (`LLM_BACKEND=ollama`, vedi sezione dedicata) |
-| Google | Google Docs/Drive API (OAuth2), Google NotebookLM (via notebooklm-py) |
-| Flashcard | AnkiConnect (localhost:8765) |
-| PDF | ReportLab |
-| Dashboard | Streamlit + Plotly + Pandas |
-| Audio | ffmpeg (binario standalone `ffmpeg.exe`) |
-| PDF parsing | pdfplumber |
+## Stack
 
-## Configurazione
+| Cosa | Con cosa |
+|---|---|
+| Runtime | Python 3.14, venv in `venv/` (**non** `.venv/`) |
+| Trascrizione | faster-whisper locale, modello `small` (`WHISPER_MODE=local`, gratis) |
+| Estrazione | Anthropic `claude-sonnet-5`, oppure Ollama locale (`LLM_BACKEND=ollama`) |
+| Flashcard | AnkiConnect · der=blu, die=rosso, das=verde |
+| PDF | ReportLab · Google Docs API (OAuth2) |
+| Audio | `ffmpeg.exe` locale |
 
-**`.env`** (non in git):
-```
-OPENAI_API_KEY=...
-ANTHROPIC_API_KEY=...
-HUGGINGFACE_TOKEN=...
-```
+Il pensiero adattivo è **attivo di default** su Sonnet 5 quando `thinking` viene omesso, e
+`max_tokens` limita pensiero e risposta **insieme**. Per l'estrazione JSON `do/base/llm.py` lo
+disattiva esplicitamente: lasciarlo implicito con un `max_tokens` stretto tronca il JSON a metà.
 
-**Google OAuth2:** `credentials.json` + `token.json` (non in git) — flow automatico al primo run.
+## Regole operative
 
-## Regole operative per Claude
+- **Elaborare una lezione = `deutschops.py lezione`.** Non eseguire i passi a mano, non
+  riscrivere logica che è già nei moduli.
+- **Tutto resta dentro questa cartella.** Nessuno script scrive in `Il mio Drive`, `OneDrive` o
+  altri percorsi personali. Se serve un output verso l'esterno, chiedere prima.
+- **File temporanei e script one-off si rimuovono subito dopo l'uso**, script e output.
+- **`.tmp.driveupload/` nella root** non è generato da questo progetto: è lo staging di Google
+  Drive per Desktop. Va escluso dalle impostazioni di Drive, non da qui.
+- **Il costo si misura, non si stima.** `do/base/llm.py` restituisce il costo reale da
+  `response.usage`; il registro marca `cost_estimated` su ciò che misurato non è. Nella v1
+  `main.py` scriveva `claude_cost = 0.10` costante: 2,95 € dei 4,82 € storici sono quella costante
+  moltiplicata per 30.
+- **Prima di dichiarare un difetto del mazzo, verificarlo.** L'audit ha prodotto quattro falsi
+  positivi in fila — tag letti da `cardsInfo` (che ritorna sempre `None`), generi dedotti da
+  suffissi senza eccezioni, plurali pretesi da Singularetantum, colori di genere cercati su carte
+  che il tedesco davanti non ce l'hanno. Una regola senza le sue eccezioni produce rumore, e il
+  rumore fa smettere di leggere.
 
-- **Elaborare una lezione = far girare `main.py` (o `watch.py --process`).** La sequenza dei 6 step è già scritta in Python — non eseguire gli step manualmente uno a uno, non riscrivere logica già presente nei moduli.
-- **Tutto ciò che riguarda il progetto resta dentro questa cartella.** Nessuno script deve scrivere file in `Il mio Drive`, `OneDrive` o altri percorsi personali dell'utente fuori da `DeutschOps/`. Il backup del Google Doc (`doc_writer.backup_doc`) esporta un `.docx` locale in `doc_snapshots/backups/`, non crea più copie nel Drive personale di Kevin. Se serve un nuovo output "verso l'esterno", chiedere prima.
-- **File temporanei o script one-off vanno rimossi subito dopo l'uso** (sia lo script che gli eventuali output generati), non lasciati nella root del progetto. Non creare file `_tmp_*`, `test_*` improvvisati e dimenticarli.
-- **Verificare periodicamente `.tmp.driveupload/`** nella root: non è generato da nessuno script del progetto — è lo staging locale di Google Drive per Desktop, segno che questa cartella (o una superiore) è inclusa nel backup automatico "Il mio computer" di Drive. Va escluso dalle impostazioni di Google Drive per Desktop, non da qui.
+## Staging degli input (`Audiolessons/_processed/`)
 
-## Elaborazione locale con Ollama (PC fisso)
+A fine di ogni elaborazione **riuscita** l'input consumato (il video originale, o il `.txt` grezzo)
+va in `Audiolessons/_processed/`, e viene cancellato dopo **20 giorni**. Il cleanup è
+opportunistico, gira all'avvio di ogni run: nessuno scheduler.
 
-Sul PC fisso (Intel i7 4 core, GTX 980) l'estrazione strutturata (step 3, `extractor.py`) e il quaderno errori (`error_extractor.py`) possono girare su un LLM locale via Ollama invece che sull'API Anthropic a pagamento.
+Non ci finiscono mai i file canonici (`transcripts/`, `data/`, `pdfs/`) né i
+`lezione_*-compressed.mp4`, referenziati dal registro. `do/base/staging.py` li protegge
+esplicitamente. Per le lezioni senza audio il transcript è **irrecuperabile**.
 
-**Modello scelto:** `qwen2.5:7b-instruct` — miglior compromesso su questo hardware per estrazione JSON strutturata multilingua (tedesco/italiano/inglese); quantizzato Q4_K_M di default in Ollama (~4.7GB, gira con offload parziale GPU+CPU sulla GTX 980 da 4GB VRAM — lento ma accettabile per un job settimanale, non realtime).
-Fallback più leggero/veloce se il 7B risulta troppo lento: `llama3.2:3b-instruct` (entra interamente in 4GB VRAM, qualità di estrazione inferiore).
+## Il ponte con `shared start up/`
 
-**Setup una tantum sul PC fisso:**
-```powershell
-winget install Ollama.Ollama
-ollama pull qwen2.5:7b-instruct
-ollama pull llama3.2:3b-instruct   REM fallback opzionale, più veloce
-```
-Ollama parte come servizio locale su `http://localhost:11434` dopo l'installazione.
+`do/motore/ponte.py` controlla ogni 14 giorni se nel motore condiviso è comparso qualcosa di
+riusabile qui. **Sola lettura, a senso unico.** Importa metodo — skill, prompt, protocolli — mai
+dati. Nulla di DeutschOps esce da questa cartella: vedi il firewall di privacy nel `CLAUDE.md` della
+root del workspace. Se Drive è offline, tace.
 
-**Attivazione nel progetto** — impostare in `.env` (solo su quel PC):
-```
-LLM_BACKEND=ollama
-OLLAMA_MODEL=qwen2.5:7b-instruct
-OLLAMA_HOST=http://localhost:11434
-```
-Senza `LLM_BACKEND=ollama` il progetto usa Anthropic Claude come sempre (default).
+## Contesto
 
-**Limiti noti del backend Ollama:**
-- L'arricchimento grammaticale via web search (Call 2 in `extractor.py`, ricerca su dartmouth/germanveryeasy/duden) resta solo Anthropic — Ollama non ha web search; con `LLM_BACKEND=ollama` viene saltato e i grammar_points restano alla spiegazione base.
-- `grammar_book.py`, `pharma_glossary.py`, `b1_gap.py`, `weak_cards.py`, `book_extractor.py`/`book_reader.py`, `bulk_import*.py` usano ancora direttamente Claude e non sono collegati a `LLM_BACKEND` — girano solo quando eseguiti esplicitamente (non fanno parte della chiamata automatica per-lezione di `main.py`, tranne `grammar_book.update_from_lesson` che però non chiama l'AI, solo rigenera il PDF da dati già estratti).
-- La trascrizione (`transcriber.py`) resta separata da Ollama: usa già `WHISPER_MODE=local` (faster-whisper, CPU, gratis) — nessuna modifica necessaria lì.
-
-## Contesto progetto
-
-Kevin (manager di produzione in transizione verso pharma svizzero, area Basilea) usa questo sistema per le lezioni settimanali con Stefanie, insegnante nativa. Obiettivo: A2→B1 in preparazione al mercato del lavoro svizzero tedesco.
+Kevin (manager di produzione in transizione verso il pharma svizzero, area Basilea) fa lezione
+settimanale con Stefanie, insegnante madrelingua. Obiettivo: **B2 entro la primavera 2027**, con il
+Modellsatz come misura esterna invece di una metrica che il sistema si autoproduce.

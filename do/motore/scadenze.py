@@ -116,6 +116,18 @@ def da_segnalare() -> list[Scadenza]:
     return sorted(urgenti, key=lambda s: (s.semaforo != "rosso", s.giorni or 9999))
 
 
+def prossima() -> Scadenza | None:
+    """La prossima scadenza aperta con una data, urgente o no.
+
+    Serve al briefing per mostrare SEMPRE una riga di orizzonte. `da_segnalare`
+    tace finche' non manca poco, ed e' giusto per gli alert; ma un riquadro che
+    per settimane non dice quando e' il prossimo passo lascia credere che non
+    ce ne siano. Una riga non e' rumore.
+    """
+    con_data = [s for s in leggi() if not s.chiusa and s.data and (s.giorni or 0) >= 0]
+    return min(con_data, key=lambda s: s.data) if con_data else None
+
+
 def prossima_data_esame() -> date | None:
     for s in leggi():
         if s.tipo.strip().lower() == "esame" and s.data and not s.chiusa:
