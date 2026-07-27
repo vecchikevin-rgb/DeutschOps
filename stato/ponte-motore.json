@@ -1,0 +1,23 @@
+{
+  "ultimo_check": "2026-07-27",
+  "cadenza_giorni": 14,
+  "sorgenti": {
+    "catalogo-skill": {
+      "size": 25811,
+      "mtime": 1784664514,
+      "sha256": "c45cb74f4da923890488089e2e5ba973dde69b53b94d868ec29143e5ebab9f47"
+    },
+    "changelog-engine": {
+      "size": 127975,
+      "mtime": 1785075243,
+      "sha256": "2e571b6e8e220853332699138236e797a3239408304e5ccda08aba17a6033ad1"
+    },
+    "roadmap-engine": {
+      "size": 16557,
+      "mtime": 1784665687,
+      "sha256": "8e9f786266b57c6066fee114c0b3baeffd938486aebdf1a83501a8062c3491b9"
+    }
+  },
+  "importati": [],
+  "scartati": []
+}

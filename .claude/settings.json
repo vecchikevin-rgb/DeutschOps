@@ -21,6 +21,19 @@
           }
         ]
       }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "& \"$env:CLAUDE_PROJECT_DIR\\.claude\\hooks\\briefing.ps1\"",
+            "timeout": 30,
+            "statusMessage": "Briefing DeutschOps..."
+          }
+        ]
+      }
     ]
   }
 }
