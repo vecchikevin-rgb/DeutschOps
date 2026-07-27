@@ -161,6 +161,17 @@ def _chiama_anthropic(system: str, user: str, cfg: LLMConfig) -> tuple[str, Uso]
 
     testo = "".join(b.text for b in resp.content if b.type == "text")
 
+    # Troncamento a max_tokens: senza questo controllo il chiamante riceve un
+    # JSON tagliato a meta' e vede un JSONDecodeError incomprensibile a riga
+    # ignota, invece della causa vera.
+    if resp.stop_reason == "max_tokens":
+        raise RuntimeError(
+            f"Risposta troncata a max_tokens={cfg.max_tokens} "
+            f"({resp.usage.output_tokens} token generati). Alza max_tokens: "
+            f"su Sonnet 5 il tokenizer produce circa il 30% di token in piu' "
+            f"rispetto a Sonnet 4.5, quindi i limiti tarati sulla v1 stanno stretti."
+        )
+
     u = resp.usage
     cache_read = getattr(u, "cache_read_input_tokens", 0) or 0
     costo, stimato = _costo_eur(cfg.model, u.input_tokens, u.output_tokens, cache_read)

@@ -171,7 +171,9 @@ def analizza(settimane_rimaste: int | None = None) -> dict:
         + f"\n\nMODULI D'ESAME: {json.dumps(MODULI, ensure_ascii=False)}"
     )
 
-    testo, uso = chiama(SYSTEM, user, llm_config(max_tokens=6000))
+    # 16k e non 6k: l'output e' grosso (22 temi di grammatica + 4 moduli + 6
+    # priorita' + un messaggio in tedesco) e a 6000 veniva troncato a meta'.
+    testo, uso = chiama(SYSTEM, user, llm_config(max_tokens=16000))
     dati = estrai_json(testo)
 
     dati["generato"] = datetime.now().isoformat(timespec="seconds")
