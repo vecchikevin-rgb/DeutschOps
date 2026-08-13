@@ -10,7 +10,8 @@
       "italian": "stanco/a",
       "english": "tired",
       "example_de": "Ich bin müde.",
-      "example_it": "Sono stanco."
+      "example_it": "Sono stanco.",
+      "example_en": "I'm tired."
     },
     {
       "german": "das Kind",
@@ -25,7 +26,8 @@
         "book_page": 32,
         "semantic_field": "Familie",
         "level": "A1"
-      }
+      },
+      "example_en": "The children are getting up."
     },
     {
       "german": "aufstehen",
@@ -34,7 +36,8 @@
       "italian": "alzarsi",
       "english": "to stand up, to get up",
       "example_de": "Ich stehe auf.",
-      "example_it": "Mi alzo."
+      "example_it": "Mi alzo.",
+      "example_en": "I'm getting up."
     },
     {
       "german": "spät",
@@ -43,7 +46,8 @@
       "italian": "tardi",
       "english": "late",
       "example_de": "Es ist schon spät.",
-      "example_it": "È già tardi."
+      "example_it": "È già tardi.",
+      "example_en": "It's already late."
     },
     {
       "german": "früh",
@@ -52,7 +56,8 @@
       "italian": "presto",
       "english": "early",
       "example_de": "Ich komme früh.",
-      "example_it": "Vengo presto."
+      "example_it": "Vengo presto.",
+      "example_en": "I'm coming early."
     },
     {
       "german": "der Schulbus",
@@ -61,7 +66,8 @@
       "italian": "lo scuolabus",
       "english": "school bus",
       "example_de": "Der Schulbus kommt in fünf Minuten.",
-      "example_it": "Lo scuolabus arriva tra cinque minuti."
+      "example_it": "Lo scuolabus arriva tra cinque minuti.",
+      "example_en": "The school bus arrives in five minutes."
     },
     {
       "german": "schlafen",
@@ -76,7 +82,8 @@
         "book_page": 258,
         "semantic_field": "Unregelmäßige und gemischte Verben",
         "level": "A1-B1"
-      }
+      },
+      "example_en": "I'm going to sleep."
     },
     {
       "german": "schlecht",
@@ -85,7 +92,8 @@
       "italian": "male",
       "english": "bad",
       "example_de": "Mir geht es schlecht.",
-      "example_it": "Sto male."
+      "example_it": "Sto male.",
+      "example_en": "I feel bad."
     },
     {
       "german": "sehr",
@@ -94,7 +102,8 @@
       "italian": "molto",
       "english": "very",
       "example_de": "Sehr gut!",
-      "example_it": "Molto bene!"
+      "example_it": "Molto bene!",
+      "example_en": "Very good!"
     },
     {
       "german": "der Kurs",
@@ -109,7 +118,8 @@
         "book_page": 22,
         "semantic_field": "Sprachen lernen",
         "level": "A1"
-      }
+      },
+      "example_en": "The course is over."
     }
   ],
   "grammar_points": [

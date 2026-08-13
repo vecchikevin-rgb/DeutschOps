@@ -107,7 +107,17 @@ PONTE_CADENZA_GIORNI = int(os.getenv("PONTE_CADENZA_GIORNI", "14"))
 
 
 # --------------------------------------------------------------------- LLM
-Backend = Literal["anthropic", "ollama"]
+Backend = Literal["anthropic", "ollama", "claude"]
+
+# Percorso dell'eseguibile Claude Code, per il backend "claude". Su Windows
+# l'installazione npm mette sia `claude` che `claude.cmd` in
+# %APPDATA%\npm: il .cmd e' quello che subprocess sa lanciare senza shell.
+CLAUDE_CLI = os.getenv("CLAUDE_CLI", "claude")
+
+# Quanto si aspetta una singola chiamata via CLI. Piu' alto del timeout API
+# perche' qui dentro c'e' anche l'avvio del processo (misurato: ~0,7 s) e il
+# giro di autenticazione OAuth.
+CLAUDE_CLI_TIMEOUT_S = int(os.getenv("CLAUDE_CLI_TIMEOUT_S", "900"))
 
 
 @dataclass(frozen=True)
@@ -131,27 +141,43 @@ class LLMConfig:
     effort: str | None = None       # low | medium | high | xhigh | max
 
 
+_ALIAS_BACKEND = {
+    "ollama": "ollama",
+    "claude": "claude",
+    "cli": "claude",
+    "abbonamento": "claude",
+}
+
+
 def llm_config(
     *,
     max_tokens: int = 12000,
     thinking: bool = False,
     effort: str | None = None,
+    backend: Backend | None = None,
 ) -> LLMConfig:
     """Costruisce la configurazione leggendo l'ambiente.
 
     max_tokens sale da 8000 (v1) a 12000: Sonnet 5 usa un tokenizer nuovo che
     produce circa il 30% di token in piu' a parita' di testo, quindi un limite
     tarato su Sonnet 4.5 puo' troncare lo stesso output.
+
+    `backend` sovrascrive LLM_BACKEND per la singola chiamata. Serve perche' i
+    tre backend NON sono intercambiabili sul piano della latenza: il backend
+    "claude" paga ~0,7 s di avvio processo piu' il giro OAuth, quindi va bene
+    per il lavoro a lotti (libreria, estrazione lezione) e male per il giudice
+    interattivo, dove quei secondi si sentono a ogni risposta ambigua.
     """
-    backend: Backend = "ollama" if os.getenv("LLM_BACKEND", "").lower() == "ollama" else "anthropic"
-    if backend == "ollama":
+    scelto = _ALIAS_BACKEND.get(os.getenv("LLM_BACKEND", "").lower(), "anthropic")
+    b: Backend = backend or scelto  # type: ignore[assignment]
+    if b == "ollama":
         model = os.getenv("OLLAMA_MODEL", "qwen2.5:7b-instruct")
     else:
         # Migrazione dal claude-sonnet-4-5 della v1. Bumpalo a claude-opus-5
         # in .env se vuoi il modello piu' capace: ANTHROPIC_MODEL=claude-opus-5
         model = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-5")
     return LLMConfig(
-        backend=backend,
+        backend=b,
         model=model,
         max_tokens=max_tokens,
         ollama_host=os.getenv("OLLAMA_HOST", "http://localhost:11434"),

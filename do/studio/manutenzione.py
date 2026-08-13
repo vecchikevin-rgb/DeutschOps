@@ -526,3 +526,88 @@ def esempi_dal_corpus(schede: list[Scheda], *, prova: bool = True) -> dict:
     for m in modifiche:
         anki("updateNoteFields", note=m)
     return esito
+
+
+# ------------------------------------------------------- Cloze: traduzione mancante
+# Deck a parte, parsing a parte. Il retro Cloze non e' nel formato che `_leggi()`
+# capisce (la frase e' in <span>, non in <i>: `s.esempio` resta vuoto su queste
+# note), quindi l'audit generale non le vede. Questo e' il fix dedicato per le
+# carte create prima che `example_en` esistesse (vedi carte.py:_cloze,
+# do/sapere/vocaboli.py:backfill_example_en) — l'ask di Kevin del 2026-08-13:
+# "fixa anche le storiche".
+_FRASE_CLOZE = re.compile(r'font-weight:bold">(.*?)</span>')
+
+
+def analizza_cloze(query: str = "deck:Deutsch::DeutschOps::Cloze") -> list[dict]:
+    """Le carte Cloze esistenti, con la frase intera estratta dal retro."""
+    if not anki_raggiungibile():
+        raise RuntimeError("Anki non raggiungibile: apri Anki e riprova.")
+    ids = anki("findNotes", query=query)
+    note: list[dict] = []
+    for i in range(0, len(ids), 500):
+        note.extend(anki("notesInfo", notes=ids[i:i + 500]))
+
+    schede = []
+    for n in note:
+        retro = n.get("fields", {}).get("Retro", {}).get("value", "")
+        m = _FRASE_CLOZE.search(retro)
+        schede.append({
+            "note_id": n["noteId"],
+            "retro_html": retro,
+            "frase": _testo(m.group(1)) if m else "",
+        })
+    return schede
+
+
+def _indice_esempi_en() -> dict[str, str]:
+    """`example_de` esatto -> `example_en`. Da vocab_db, gia' aggiornato dal
+    backfill (`vocaboli.backfill_example_en()` chiama `ricostruisci()`)."""
+    return {
+        de: en
+        for w in _indice_vocab().values()
+        if (de := (w.get("example_de") or "").strip())
+        and (en := (w.get("example_en") or "").strip())
+    }
+
+
+def ripara_cloze(schede: list[dict], *, prova: bool = True) -> dict:
+    """Aggiunge la traduzione dell'intera frase alle Cloze che ne sono prive.
+
+    Idempotente per CONTENUTO, non per struttura: una carta viene saltata se
+    la traduzione e' gia' presente testualmente nel retro, non in base a cosa
+    c'era prima (le carte vecchie possono gia' avere un `<small>` col solo
+    significato della parola — quella riga resta, la traduzione si aggiunge
+    accanto, non la sostituisce: entrambe sono informazione utile).
+    """
+    indice = _indice_esempi_en()
+    modifiche = []
+    aggiornate = gia_a_posto = senza_frase = senza_traduzione = 0
+
+    for s in schede:
+        frase = s["frase"]
+        if not frase:
+            senza_frase += 1
+            continue
+        en = indice.get(frase)
+        if not en:
+            senza_traduzione += 1
+            continue
+        if en in s["retro_html"]:
+            gia_a_posto += 1
+            continue
+        nuovo_retro = s["retro_html"] + f'<br><small style="color:#666">{html.escape(en)}</small>'
+        modifiche.append({"id": s["note_id"], "fields": {"Retro": nuovo_retro}})
+        aggiornate += 1
+
+    esito = {
+        "note": len(schede), "da_aggiornare": aggiornate,
+        "gia_a_posto": gia_a_posto, "senza_frase_riconosciuta": senza_frase,
+        "senza_traduzione_disponibile": senza_traduzione, "prova": prova,
+    }
+    if prova:
+        return esito
+
+    for m in modifiche:
+        anki("updateNoteFields", note=m)
+    esito["applicate"] = len(modifiche)
+    return esito

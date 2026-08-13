@@ -27,6 +27,9 @@ GRAMMAR_DB = DATA / "grammar_db.json"
 ERROR_DB = DATA / "error_db.json"
 REGISTRY = ROOT / "lesson_registry.json"
 
+BOOK = ROOT / "Book"                    # scansioni del Kursbuch, escluse da git
+LIBRO_PAGINE = DATA / "libro_pagine.json"  # OCR pagina per pagina, vedi do/sapere/libro.py
+
 # --------------------------------------------------------------- input / staging
 AUDIO = ROOT / "Audiolessons"
 ARCHIVE = AUDIO / "_processed"          # staging a scadenza, TTL in base.staging

@@ -27,7 +27,7 @@ from datetime import date, datetime
 
 from ..base.config import llm_config
 from ..base.llm import chiama, estrai_json
-from ..base.paths import DATA, ERROR_DB, GRAMMAR_DB, VOCAB_DB
+from ..base.paths import DATA, GRAMMAR_DB, VOCAB_DB
 
 OUT = DATA / "esame_b2.json"
 
@@ -100,12 +100,18 @@ def _vocaboli_per_livello() -> dict[str, int]:
 
 
 def _errori_ricorrenti(top: int = 12) -> list[tuple[str, int]]:
-    e = _json(ERROR_DB, {})
-    errori = e.get("errors", e) if isinstance(e, dict) else e
-    if isinstance(errori, dict):
-        errori = list(errori.values())
+    """Solo gli errori corretti in lezione.
+
+    Quelli fatti nell'app sono segnale, ma di natura diversa: li giudica un
+    modello, non una madrelingua. La gap analysis decide quanto sei pronto per
+    il B2 — mescolare le due fonti in quel giudizio, senza distinguerle, e'
+    esattamente il tipo di contaminazione silenziosa che rende un numero
+    inutilizzabile. Riammetterli, se serve, va fatto come stream etichettato.
+    """
+    from ..sapere import errori as quaderno
+
     return Counter(
-        (x.get("category") or "?") for x in errori if isinstance(x, dict)
+        (x.get("category") or "?") for x in quaderno.registrati(quaderno.LEZIONE)
     ).most_common(top)
 
 

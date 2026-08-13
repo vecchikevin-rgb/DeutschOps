@@ -12,7 +12,8 @@
       "english": "whether, if (indirect question)",
       "example_de": "Ich weiß nicht, ob mein Freund bald kommt.",
       "example_it": "Non so se il mio amico arriva presto.",
-      "level": "A2"
+      "level": "A2",
+      "example_en": "I don't know if my friend is coming soon."
     },
     {
       "german": "dass",
@@ -22,7 +23,8 @@
       "english": "that",
       "example_de": "Ich weiß, dass mein Freund bald kommt.",
       "example_it": "So che il mio amico arriva presto.",
-      "level": "A2"
+      "level": "A2",
+      "example_en": "I know that my friend is coming soon."
     },
     {
       "german": "indirekt",
@@ -32,7 +34,8 @@
       "english": "indirect",
       "example_de": "eine indirekte Frage",
       "example_it": "una domanda indiretta",
-      "level": "B1"
+      "level": "B1",
+      "example_en": "an indirect question"
     },
     {
       "german": "die Frage",
@@ -42,7 +45,8 @@
       "english": "question",
       "example_de": "Kommt dein Freund bald? Das ist eine direkte Frage.",
       "example_it": "Il tuo amico arriva presto? Questa è una domanda diretta.",
-      "level": "A1"
+      "level": "A1",
+      "example_en": "Is your friend coming soon? That is a direct question."
     },
     {
       "german": "bald",
@@ -52,7 +56,8 @@
       "english": "soon",
       "example_de": "Mein Freund kommt bald.",
       "example_it": "Il mio amico arriva presto.",
-      "level": "A2"
+      "level": "A2",
+      "example_en": "My friend is coming soon."
     },
     {
       "german": "umwandeln",
@@ -62,7 +67,8 @@
       "english": "to convert, to transform",
       "example_de": "Du kannst es in eine Frage umwandeln.",
       "example_it": "Puoi trasformarlo in una domanda.",
-      "level": "B1"
+      "level": "B1",
+      "example_en": "You can turn it into a question."
     },
     {
       "german": "formulieren",
@@ -72,7 +78,8 @@
       "english": "to formulate",
       "example_de": "Du kannst es als Frage formulieren.",
       "example_it": "Puoi formularlo come domanda.",
-      "level": "B1"
+      "level": "B1",
+      "example_en": "You can phrase it as a question."
     },
     {
       "german": "die Bedingung",
@@ -88,7 +95,8 @@
         "book_page": 112,
         "semantic_field": "In der Bank",
         "level": "A2"
-      }
+      },
+      "example_en": "If it rains - that is a condition."
     },
     {
       "german": "erzählen",
@@ -98,7 +106,8 @@
       "english": "to tell, to narrate",
       "example_de": "Ich erzähle, dass mein Freund kommt.",
       "example_it": "Racconto che il mio amico arriva.",
-      "level": "A2"
+      "level": "A2",
+      "example_en": "I'm telling you that my friend is coming."
     },
     {
       "german": "verwenden",
@@ -114,7 +123,8 @@
         "book_page": 192,
         "semantic_field": "Nomen",
         "level": "B1"
-      }
+      },
+      "example_en": "In indirect questions we use 'whether'."
     },
     {
       "german": "bedeuten",
@@ -124,7 +134,8 @@
       "english": "to mean",
       "example_de": "Wenn bedeutet nicht immer 'if'.",
       "example_it": "Wenn non significa sempre 'if'.",
-      "level": "A2"
+      "level": "A2",
+      "example_en": "'Wenn' doesn't always mean 'if'."
     },
     {
       "german": "regnen",
@@ -140,7 +151,8 @@
         "book_page": 128,
         "semantic_field": "Wetterbericht",
         "level": "A2"
-      }
+      },
+      "example_en": "If it rains, I'll stay home."
     },
     {
       "german": "zu Hause bleiben",
@@ -150,7 +162,8 @@
       "english": "to stay at home",
       "example_de": "Ich bleibe zu Hause.",
       "example_it": "Resto a casa.",
-      "level": "A1"
+      "level": "A1",
+      "example_en": "I'm staying home."
     },
     {
       "german": "der Nebensatz",
@@ -160,7 +173,8 @@
       "english": "subordinate clause",
       "example_de": "Im Nebensatz steht das Verb am Ende.",
       "example_it": "Nella proposizione subordinata il verbo sta alla fine.",
-      "level": "B1"
+      "level": "B1",
+      "example_en": "In the subordinate clause, the verb goes at the end."
     }
   ],
   "grammar_points": [

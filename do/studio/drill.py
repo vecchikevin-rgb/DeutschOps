@@ -32,7 +32,8 @@ from datetime import datetime
 
 from ..base.config import llm_config
 from ..base.llm import chiama, estrai_json
-from ..base.paths import DATA, ERROR_DB
+from ..base.paths import DATA
+from ..sapere import errori as quaderno
 
 OUT = DATA / "drill.json"
 
@@ -40,15 +41,15 @@ OUT = DATA / "drill.json"
 FAMIGLIA_CASI = {"Kasus", "Genus", "Präposition"}
 
 
-def carica_errori() -> list[dict]:
-    try:
-        e = json.loads(ERROR_DB.read_text(encoding="utf-8"))
-    except Exception:
-        return []
-    errori = e.get("errors", e) if isinstance(e, dict) else e
-    if isinstance(errori, dict):
-        errori = list(errori.values())
-    return [x for x in errori if isinstance(x, dict) and x.get("correction")]
+def carica_errori(fonte: str | None = quaderno.LEZIONE) -> list[dict]:
+    """Gli errori con una correzione utilizzabile.
+
+    Per difetto solo quelli di lezione: un foglio di esercizi costruito su cio'
+    che una madrelingua ha corretto vale piu' di uno costruito su cio' che un
+    modello ha giudicato. `fonte=None` prende anche quelli fatti nell'app —
+    lo usa la coda dell'allenamento, dove ripresentarli e' il punto.
+    """
+    return [x for x in quaderno.registrati(fonte) if x.get("correction")]
 
 
 def per_categoria() -> dict[str, list[dict]]:
@@ -93,34 +94,36 @@ def _seleziona(categoria: str | None, quanti: int) -> list[dict]:
     return scelti[:quanti]
 
 
-SYSTEM = """Sei un insegnante di tedesco che prepara esercizi mirati per Kevin
-(italiano, verso il B2, in transizione verso il settore pharma svizzero).
+SYSTEM = """You are a German teacher preparing targeted exercises for Kevin
+(Italian native, working towards B2, moving into the Swiss pharmaceutical sector).
 
-Ricevi una lista dei suoi ERRORI REALI: cosa ha detto, la correzione della sua
-insegnante madrelingua, e la regola violata.
+You receive a list of his REAL MISTAKES: what he said, the correction his native
+teacher gave him, and the rule he broke.
 
-Costruisci un foglio di esercizi di PRODUZIONE. Regole non negoziabili:
+Build a PRODUCTION exercise sheet. Non-negotiable rules:
 
-1. Ogni esercizio deve nascere da un errore della lista. Non inventare temi.
-2. Chiedi di PRODURRE, mai di scegliere fra opzioni. Niente multipla scelta:
-   riconoscere e' facile e da' l'illusione di sapere.
-3. NON riusare la frase sbagliata originale. Costruisci un contesto NUOVO che
-   richieda la stessa struttura: se la riconosce a memoria non sta imparando.
-4. Vieta la traduzione parola per parola dall'italiano: e' l'origine di buona
-   parte degli errori di Wortwahl e Präposition.
-5. Le soluzioni devono essere tedesco corretto e naturale. Se non sei sicuro di
-   una forma, non usarla: qui un errore verrebbe studiato come se fosse giusto.
+1. Every exercise must come from a mistake in the list. Do not invent topics.
+2. Ask him to PRODUCE, never to choose between options. No multiple choice:
+   recognising is easy and gives the illusion of knowing.
+3. Do NOT reuse the original wrong sentence. Build a NEW context that requires
+   the same structure: if he recognises it by heart he is not learning.
+4. Block word-for-word translation from Italian: it is the source of most of his
+   Wortwahl and Präposition mistakes.
+5. Solutions must be correct, natural German. If you are not certain of a form,
+   do not use it: a mistake here would be studied as if it were right.
 
-Rispondi SOLO con JSON valido, niente backtick:
-{"titolo":"<breve, dice su cosa si lavora>",
- "esercizi":[{"consegna":"<cosa deve fare, in italiano>",
-              "stimolo":"<la frase o il contesto di partenza>",
-              "soluzione":"<il tedesco corretto>",
-              "errore_bersaglio":"<la regola che sta allenando>",
-              "tipo":"traduzione|riscrittura|completamento|produzione_libera"}],
- "nota_finale":"<1-2 frasi su cosa guardare mentre lo fa>"}
+Write the instructions in ENGLISH, the German content in German. No Italian.
 
-Varia i tipi. Ordina dal piu' semplice al piu' complesso."""
+Reply with valid JSON only, no backticks:
+{"titolo":"<short, says what is being worked on>",
+ "esercizi":[{"consegna":"<what he has to do, in English>",
+              "stimolo":"<the starting sentence or context>",
+              "soluzione":"<the correct German>",
+              "errore_bersaglio":"<the rule this trains>",
+              "tipo":"translation|rewrite|gap|free_production"}],
+ "nota_finale":"<1-2 sentences, in English, on what to watch while doing it>"}
+
+Vary the types. Order from simplest to hardest."""
 
 
 def genera(categoria: str | None = None, quanti: int = 10) -> dict:
@@ -133,19 +136,19 @@ def genera(categoria: str | None = None, quanti: int = 10) -> dict:
         )
 
     righe = "\n".join(
-        f"- [{e.get('category')}] ha detto: {e.get('kevin_said')!r}\n"
-        f"  corretto: {e.get('correction')!r}\n"
-        f"  regola: {e.get('rule')}"
+        f"- [{e.get('category')}] he said: {e.get('kevin_said')!r}\n"
+        f"  corrected: {e.get('correction')!r}\n"
+        f"  rule: {e.get('rule')}"
         for e in errori
     )
     p = profilo()
     user = (
-        f"ERRORI REALI DI KEVIN ({len(errori)} selezionati):\n{righe}\n\n"
-        f"QUADRO GENERALE: {p['totale']} errori totali, "
-        f"di cui {p['famiglia_casi']} ({p['quota_casi']}%) sul sistema dei casi "
+        f"KEVIN'S REAL MISTAKES ({len(errori)} selected):\n{righe}\n\n"
+        f"OVERALL PICTURE: {p['totale']} mistakes in total, "
+        f"{p['famiglia_casi']} of them ({p['quota_casi']}%) on the case system "
         f"(Kasus/Genus/Präposition).\n"
-        f"Distribuzione: {json.dumps(p['per_categoria'], ensure_ascii=False)}\n\n"
-        f"Genera {quanti} esercizi."
+        f"Distribution: {json.dumps(p['per_categoria'], ensure_ascii=False)}\n\n"
+        f"Generate {quanti} exercises."
     )
 
     testo, uso = chiama(SYSTEM, user, llm_config(max_tokens=12000))

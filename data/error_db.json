@@ -2655,6 +2655,346 @@
       "explanation_en": "Kevin was unsure of the correct term; Stefanie clarified that 'Stewardess' is used in German and 'Flugbegleiterin' is the official term.",
       "example_correct": "Die Stewardess arbeitet im Flugzeug.",
       "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "ist angekommt",
+      "correction": "ist angekommen",
+      "rule": "Perfekt mit 'sein' bei Bewegungsverben",
+      "explanation_en": "Wrong past participle 'angekommt' instead of 'angekommen' ankommen is a strong verb; its Partizip II is 'angekommen' (an- + gekommen), not a weak '-t' form",
+      "example_correct": "ist ... angekommen",
+      "aiuto": 0,
+      "esercizio": "Der Zug ___ vor fünf Minuten ___ (ankommen).",
+      "fonte": "studio",
+      "quando": "2026-07-29T09:54:08",
+      "lesson_date": null
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "runter den Tisch",
+      "correction": "unter den Tisch",
+      "rule": "Wechselpräposition: Bewegung → Akkusativ",
+      "explanation_en": "Wrote 'runter' instead of 'unter' The preposition needed is 'unter' (two-way preposition); 'runter' is a different word meaning 'down'",
+      "example_correct": "unter den Tisch",
+      "aiuto": 0,
+      "esercizio": "Der Ball rollte ___ (der Tisch).",
+      "fonte": "studio",
+      "quando": "2026-07-29T10:22:58",
+      "lesson_date": null
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "willtet sagen",
+      "correction": "sagen wollen",
+      "rule": "Modalverb + Infinitiv am Satzende",
+      "explanation_en": "\"willtet sagen\" is not a valid German verb form, and the order is wrong In Perfekt with modal verbs, the double infinitive construction is main verb infinitive + modal infinitive (sagen wollen), not a finite form of wollen",
+      "example_correct": "sagen wollen",
+      "aiuto": 0,
+      "esercizio": "Er hat mir gestern nur eine Sache ___ .",
+      "fonte": "studio",
+      "quando": "2026-07-29T10:23:31",
+      "lesson_date": null
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "endet",
+      "correction": "fertigstellen soll",
+      "rule": "Modalverb im Nebensatz am Ende",
+      "explanation_en": "wrong verb entirely; 'endet' does not express instruction and doesn't fit the sentence meaning the clause needs the infinitive 'fertigstellen' plus modal 'soll' at the end to express someone else's expectation",
+      "example_correct": "fertigstellen soll",
+      "aiuto": 0,
+      "esercizio": "Die Chefin hat gesagt, dass er den Bericht bis Freitag ___ .",
+      "fonte": "studio",
+      "quando": "2026-08-10T17:14:27",
+      "lesson_date": null
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Es war vor zwei Jahren far/po/dafür",
+      "correction": "Es war vor zwei Jahren",
+      "rule": "Zeitangabe 'vor' + Dativ",
+      "explanation_en": "Kevin tried several wrong words (far, po, dafür) to express 'ago'; the correct German preposition is 'vor' placed before the time expression, unlike English where 'ago' comes after.",
+      "example_correct": "Ich habe vor zwei Jahren dort gearbeitet.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Meine Stellenname",
+      "correction": "Der Name der Stelle",
+      "rule": "Vermeidung unnatürlicher Komposita",
+      "explanation_en": "Kevin created an odd compound noun 'Stellenname' which sounds strange; Stefanie corrected it to the more natural phrase 'der Name der Stelle'.",
+      "example_correct": "Wie lautet der Name der Stelle?",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Ich habe acht Jahre lang in der Chemie-Industrie gearbeitet, für diese Zeit... (using 'für' with duration)",
+      "correction": "Ich habe acht Jahre lang in der Chemie-Industrie gearbeitet.",
+      "rule": "Dauerangabe ohne 'für'",
+      "explanation_en": "Kevin used 'für' to express duration, directly translating from English/Italian, but German expresses duration naturally without 'für' plus 'lang'.",
+      "example_correct": "Ich habe acht Jahre lang dort gearbeitet.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Es ist nicht Konstruktion, sondern... die Leidenschaft (used wrong word before correction)",
+      "correction": "Die Leidenschaft",
+      "rule": "Korrektes Nomen für 'passion'",
+      "explanation_en": "Kevin struggled to find the right word for 'passion' and used incorrect alternatives before Stefanie supplied 'die Leidenschaft'.",
+      "example_correct": "Ich hatte schon immer eine Leidenschaft für Chemie.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "Es gibt kein Studierenkurs",
+      "correction": "Es gab keinen Studiengang",
+      "rule": "Korrekte Nomenbildung und Kasus (Akkusativ nach 'es gibt')",
+      "explanation_en": "Kevin invented a non-existent word 'Studierenkurs' and used wrong tense/case; the correct term is 'Studiengang' in the accusative after 'es gab'.",
+      "example_correct": "Es gab keinen speziellen Studiengang dafür.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Hatte ich die Queenie erzahlen / Wir zählten / Ich habe sie erzahlen",
+      "correction": "Ich habe sie gewählt",
+      "rule": "Partizip II von 'wählen' vs. 'zählen'",
+      "explanation_en": "Kevin confused the verbs 'wählen' (to choose) and 'zählen' (to count), and used wrong participle forms; the correct form for 'I chose it' is 'ich habe sie gewählt'.",
+      "example_correct": "Ich habe die Chemie gewählt.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Es war wegen das Auto",
+      "correction": "Es war wegen des Autos / wegen dem Auto",
+      "rule": "Präposition 'wegen' + Genitiv (oder umgangssprachlich Dativ)",
+      "explanation_en": "Kevin used the nominative/accusative form 'das Auto' after 'wegen', but 'wegen' requires genitive (or colloquially dative), never plain accusative/nominative.",
+      "example_correct": "Es war wegen des Autos.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Ich bin arbeitslos bis Februar (meaning 'since February')",
+      "correction": "Ich bin seit Februar arbeitslos",
+      "rule": "Präposition 'seit' für Zeitpunkt in der Vergangenheit bis jetzt",
+      "explanation_en": "Kevin used 'bis' (until) when he meant 'since', confusing the two temporal prepositions; 'seit' is required to express an ongoing state starting in the past.",
+      "example_correct": "Ich bin seit Februar arbeitslos.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "der Vertrag end it / made end it am Februar",
+      "correction": "Der Vertrag hat im Februar geendet",
+      "rule": "Perfekt von 'enden' und Präposition 'im' bei Monatsnamen",
+      "explanation_en": "Kevin used an English-influenced construction 'end it' instead of the German perfect tense of 'enden', and needed the correct preposition 'im' before the month.",
+      "example_correct": "Der Vertrag hat im Februar geendet.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Sie haben 50% des Personals... left home / Personell gut",
+      "correction": "Sie haben 50% des Personals entlassen",
+      "rule": "Korrektes Verb für 'to lay off'",
+      "explanation_en": "Kevin tried to translate 'laid off' literally and produced non-German phrases; the correct verb is 'entlassen'.",
+      "example_correct": "Sie haben die Hälfte des Personals entlassen.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Ich habe es für die Verkaufung geblieben / Bankruptie beklagen",
+      "correction": "Bankrott anmelden / Insolvenz anmelden",
+      "rule": "Korrekte Nomen für 'bankruptcy' und zugehöriges Verb",
+      "explanation_en": "Kevin invented non-existent words ('Verkaufung', 'Bankruptie') instead of the correct German terms for bankruptcy and filing for it.",
+      "example_correct": "Die Firma könnte Bankrott anmelden.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "Ein zweites Negation... das funktioniert in Deutschland",
+      "correction": "Doppelte Verneinung funktioniert nicht im Deutschen",
+      "rule": "Keine doppelte Verneinung im Deutschen",
+      "explanation_en": "Kevin implied double negation works in German like in Italian, but Stefanie clarified that German does not use double negation grammatically like Italian does.",
+      "example_correct": "Du kannst nicht einmal einen Monat nicht arbeiten - das funktioniert so nicht auf Deutsch.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "mit Hand, Kracht, Stach (attempting 'handwerklich geschickt')",
+      "correction": "Mit dem Handwerk bist du nicht so gut",
+      "rule": "Korrekte Wortwahl für handwerkliche Fähigkeiten",
+      "explanation_en": "Kevin produced garbled, non-existent words trying to express manual/practical skill; Stefanie supplied the correct phrase using 'Handwerk'.",
+      "example_correct": "Ich bin nicht so gut im Handwerk.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Aufruhren (meaning 'to stop')",
+      "correction": "Aufhören",
+      "rule": "Korrekte Verbform 'aufhören' statt 'aufruhren'",
+      "explanation_en": "Kevin misused/mispronounced the verb 'aufhören' (to stop) as 'aufruhren', which is not a correct German word in this context.",
+      "example_correct": "Du darfst nie aufhören.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Am 8 Uhr",
+      "correction": "Um 8 Uhr",
+      "rule": "Uhrzeit mit 'um'",
+      "explanation_en": "Clock times take the preposition 'um', not 'an/am'.",
+      "example_correct": "Ich bin um 8 Uhr aufgestanden.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "ein Grunde",
+      "correction": "ein Grund",
+      "rule": "Substantivform Singular",
+      "explanation_en": "The nominative singular is 'Grund' without an added -e.",
+      "example_correct": "Das ist ein guter Grund.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Sie sind sehr geschlossen",
+      "correction": "Sie sind sehr verschlossen",
+      "rule": "verschlossen (reserviert) vs. geschlossen",
+      "explanation_en": "For a reserved, closed-off person you use 'verschlossen'; 'geschlossen' means physically shut.",
+      "example_correct": "Die Nachbarn sind sehr verschlossen.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Sie will nicht mit mir sprechen, mit allem",
+      "correction": "Sie wollen mit niemandem sprechen",
+      "rule": "niemand als Negation von jemand",
+      "explanation_en": "To say they talk to nobody you need 'mit niemandem', not 'mit allem'.",
+      "example_correct": "Sie sprechen mit niemandem.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Wo kommt ihr?",
+      "correction": "Woher kommt ihr?",
+      "rule": "woher bei Herkunft",
+      "explanation_en": "Origin is asked with 'woher', not plain 'wo'.",
+      "example_correct": "Woher kommt ihr?",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Wo will ihr heute gehen zu schwimmen?",
+      "correction": "Wo wollt ihr heute schwimmen gehen?",
+      "rule": "Infinitivkombination am Satzende",
+      "explanation_en": "With a second verb, 'schwimmen gehen' stays together at the end; no 'zu' construction.",
+      "example_correct": "Wo wollt ihr heute schwimmen gehen?",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Wo isst ihr oft zu Mittag?",
+      "correction": "Wo esst ihr normalerweise zu Mittag?",
+      "rule": "normalerweise für 'usually'",
+      "explanation_en": "'oft' means 'often' and shifts the meaning; 'usually' is 'normalerweise'.",
+      "example_correct": "Wo esst ihr normalerweise zu Mittag?",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Wo isst ihr an/für Mittagessen?",
+      "correction": "Wo esst ihr zu Mittag?",
+      "rule": "zu Mittag essen (feste Wendung)",
+      "explanation_en": "The fixed expression is 'zu Mittag essen', not 'an' or 'für'.",
+      "example_correct": "Wir essen um eins zu Mittag.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Wo isst ihr?",
+      "correction": "Wo esst ihr?",
+      "rule": "Vokalwechsel nur im Singular (essen)",
+      "explanation_en": "Stem-changing verbs like 'essen' change only in the 2nd/3rd person singular; the plural 'ihr' keeps the regular stem: 'esst'.",
+      "example_correct": "Ihr esst am Strand.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Wohin fährt ihr?",
+      "correction": "Wohin fahrt ihr?",
+      "rule": "Umlaut nur im Singular (fahren)",
+      "explanation_en": "The umlaut in 'fahren' appears only in the singular (du fährst, er fährt); with 'ihr' it is 'fahrt'.",
+      "example_correct": "Wohin fahrt ihr nach dem Gardasee?",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Wir fahren nach Adria",
+      "correction": "Wir fahren an die Adria",
+      "rule": "an + Akkusativ bei Gewässern (Richtung)",
+      "explanation_en": "Direction toward a body of water uses 'an' with the accusative, so 'an die Adria'.",
+      "example_correct": "Wir fahren an die Adria.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "das Camping",
+      "correction": "der Campingplatz",
+      "rule": "Campingplatz statt 'Camping'",
+      "explanation_en": "The place is 'der Campingplatz'; 'Camping' alone refers to the activity.",
+      "example_correct": "Wir bleiben auf dem Campingplatz.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "wenn ich in kalten, oft?",
+      "correction": "Wenn du oft in der Kälte bist.",
+      "rule": "Präposition 'in' + Dativ bei Ortsangabe",
+      "explanation_en": "Kevin left the phrase incomplete and without the correct preposition/case; Stefanie reformulated it with 'in der Kälte' (in + dative, feminine article).",
+      "example_correct": "Ich werde krank, wenn ich oft in der Kälte bin.",
+      "lesson_date": "2026-08-11-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "wenn man ein kranker hatte",
+      "correction": "wenn man krank ist / wenn man eine Krankheit hat",
+      "rule": "'krank sein' vs. 'eine Krankheit haben'",
+      "explanation_en": "Kevin mixed the adjective and noun; Stefanie clarified that you are either 'krank' (adjective) or you 'have' a 'Krankheit' (noun).",
+      "example_correct": "Man hat ein schwaches Immunsystem, wenn man krank ist oder eine Krankheit hat.",
+      "lesson_date": "2026-08-11-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "ein Krankheit",
+      "correction": "eine Krankheit",
+      "rule": "Nomen auf -heit sind feminin",
+      "explanation_en": "'Krankheit' is feminine, so the article must be 'eine', not 'ein'; Stefanie noted it is again feminine.",
+      "example_correct": "Er hat eine schwere Krankheit.",
+      "lesson_date": "2026-08-11-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "wenn man nicht gesund ist",
+      "correction": "wenn man sich nicht gesund ernährt",
+      "rule": "reflexives Verb 'sich ernähren' für Ernährung",
+      "explanation_en": "To express 'eating unhealthily' German uses the reflexive 'sich (nicht) gesund ernähren', not 'gesund sein'.",
+      "example_correct": "Man bekommt ein schwaches Immunsystem, wenn man sich nicht gesund ernährt.",
+      "lesson_date": "2026-08-11-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "",
+      "correction": "Mir ist schlecht.",
+      "rule": "unpersönliche Konstruktion mit Dativ für Befinden",
+      "explanation_en": "Kevin used an English-style calque; Stefanie explained that German expresses feeling unwell with the dative ('mir ist schlecht'), since 'ich bin schlecht' would mean 'I am a bad person'.",
+      "example_correct": "Mir ist schlecht vom Alkohol.",
+      "lesson_date": "2026-08-11-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "mir ist müde",
+      "correction": "ich bin müde",
+      "rule": "'müde sein' bleibt nominativ",
+      "explanation_en": "Kevin overgeneralized the dative 'mir ist ...' construction to tiredness; Stefanie corrected that tiredness stays with the nominative 'ich bin müde'.",
+      "example_correct": "Ich bin müde, aber mir ist warm.",
+      "lesson_date": "2026-08-11-stefanie"
     }
   ],
   "lessons_processed": [
@@ -2688,7 +3028,10 @@
     "2026-07-21-stefanie",
     "2026-07-22-stefanie",
     "2026-07-23-stefanie",
-    "2026-07-27-stefanie"
+    "2026-07-27-stefanie",
+    "2026-08-10-stefanie",
+    "2026-07-28-stefanie",
+    "2026-08-11-stefanie"
   ],
-  "last_updated": "2026-07-27T21:20:10"
+  "last_updated": "2026-08-12T00:58:48"
 }

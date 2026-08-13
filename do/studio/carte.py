@@ -18,10 +18,24 @@ separatamente nelle opzioni di Anki, e sospendere una direzione senza toccare
 le altre.
 
 LA FRASE DEL CLOZE NON E' INVENTATA
-Viene da `example_de`, cioe' dal transcript della lezione con Stefanie:
-tedesco reale, detto da una madrelingua, nel contesto di Kevin. Se l'esempio
-non contiene la parola, la carta cloze non si genera — meglio due carte buone
-che tre di cui una storta.
+Preferenza in due passi (dal 2026-08-13). Prima il libro (`do/sapere/libro.py`,
+OCR del Kursbuch): frasi pubblicate, gia' pensate per essere comprensibili da
+sole. Se la parola non c'e' nel libro, `example_de` — ma solo se
+`_frase_utilizzabile()` dice che basta a se stessa. Ne' l'uno ne' l'altro ->
+niente carta cloze. Meglio due carte buone che tre di cui una storta.
+
+PERCHE' IL FILTRO NON E' frasi.completabile()
+Provato il 2026-08-13 su una lezione vera: `completabile()` — tarato sul
+PARLATO SPONTANEO dei transcript, soglia 8 token, controlli su esitazioni e
+balbettii — scartava 44 `example_de` su 48, tutte frasi corrette e complete
+tipo "Ich bleibe zu Hause, weil ich krank bin." Il motivo era il conteggio
+token: `example_de` e' gia' curato (do/lezione/estrazione.py lo corregge o
+riscrive apposta), non e' un frammento di parlato da giudicare con lo stesso
+righello. `_frase_utilizzabile()` sotto e' il controllo giusto per QUESTA
+popolazione — leggero, senza soglia sulla lunghezza. `completabile()` resta
+intatto in frasi.py: serve intatta la' per il parlato vero (la sezione i+1
+dell'app), e Kevin si era gia' lamentato una volta di quella proprio perche'
+troppo permissiva.
 
 REGOLA ANTI-ALLUCINAZIONE (piano §2.1)
 Qui un dato sbagliato non finisce in un report: finisce in memoria a lungo
@@ -40,6 +54,7 @@ from dataclasses import dataclass, field
 import requests
 
 from ..base.config import ANKI_DECK, ANKI_URL
+from ..sapere import libro
 
 # Sottodeck per direzione.
 DECK_RICONOSCIMENTO = f"{ANKI_DECK}::Riconoscimento"
@@ -56,9 +71,17 @@ ABBREV_GENERE = {"der": "m.", "die": "f.", "das": "n."}
 
 
 # --------------------------------------------------------------------- AnkiConnect
-def anki(azione: str, **params):
+def anki(azione: str, *, timeout: float = 30, **params):
+    """Una chiamata ad AnkiConnect.
+
+    Il timeout e' generoso per difetto — caricare un mazzo intero durante la
+    pipeline puo' richiedere tempo — ma va stretto quando la risposta serve a
+    disegnare un riquadro di stato: li' aspettare mezzo minuto un programma che
+    non risponde e' peggio che dire subito «Anki non c'e'».
+    """
     r = requests.post(
-        ANKI_URL, json={"action": azione, "version": 6, "params": params}, timeout=30
+        ANKI_URL, json={"action": azione, "version": 6, "params": params},
+        timeout=timeout,
     )
     r.raise_for_status()
     res = r.json()
@@ -180,16 +203,61 @@ def _retro_produzione(v: dict) -> str:
     return out
 
 
-def _cloze(v: dict) -> tuple[str, str] | None:
-    """(fronte, retro) della carta cloze, o None se l'esempio non serve.
-
-    Deterministico: se la parola non compare nell'esempio non si inventa una
-    frase, si rinuncia alla carta.
+def _frase_utilizzabile(frase: str, parola: str) -> bool:
+    """Se la frase basta a se stessa per una carta Cloze — controllo leggero,
+    pensato per `example_de` (gia' curato), non per il parlato spontaneo.
+    Vedi "PERCHE' IL FILTRO NON E' frasi.completabile()" in cima al modulo.
     """
+    testo = frase.strip()
+    if not testo[:1].isupper() or testo[-1:] not in ".!?":
+        return False
+    if ":" in testo:                        # etichette di chi parla
+        return False
+    token = re.findall(r"[a-zA-ZäöüÄÖÜß]+", testo)
+    if len(token) < 4:
+        return False
+    radice = parola.lower()[:4]
+    contenuto = [t for t in token if not t.lower().startswith(radice) and len(t) > 3]
+    return len(contenuto) >= 2
+
+
+def _frase_cloze(v: dict, parola: str) -> tuple[str, str] | None:
+    """(frase, fonte) da usare per il buco, o None se non ce n'e' una buona.
+
+    Libro prima (frasi pubblicate, pensate per stare da sole); altrimenti la
+    frase di lezione, se `_frase_utilizzabile()` la promuove. Vedi il
+    docstring del modulo.
+    """
+    pattern = re.compile(rf"\b{re.escape(parola)}\w*", re.IGNORECASE)
+
+    if trovata := libro.cerca(parola):
+        # cerca() puo' aver trovato per radice (nomi composti: "Verkehr" dentro
+        # "Schriftverkehr") — un match cosi' non isola un buco pulito con un
+        # confine di parola netto. Non e' un errore da propagare: si scarta il
+        # match del libro e si prova comunque example_de sotto.
+        if pattern.search(trovata["testo"]):
+            return trovata["testo"], f"libro · {trovata.get('fonte', '')}".strip(" ·")
+
     frase = (v.get("example_de") or "").strip()
+    if frase and pattern.search(frase) and _frase_utilizzabile(frase, parola):
+        return frase, "lezione"
+    return None
+
+
+def _cloze(v: dict) -> tuple[str, str] | None:
+    """(fronte, retro) della carta cloze, o None se non c'e' una frase buona.
+
+    Deterministico: se la parola non compare nella frase scelta non si
+    inventa niente, si rinuncia alla carta.
+    """
     parola = _pulisci(v.get("german", ""), v.get("article", ""))
-    if not frase or not parola or len(parola) < 3:
+    if not parola or len(parola) < 3:
         return None
+
+    scelta = _frase_cloze(v, parola)
+    if not scelta:
+        return None
+    frase, fonte = scelta
 
     pattern = re.compile(rf"\b{re.escape(parola)}\w*", re.IGNORECASE)
     if not pattern.search(frase):
@@ -200,8 +268,21 @@ def _cloze(v: dict) -> tuple[str, str] | None:
               f'<br><span style="color:#b0bec5;font-size:0.8em">Quale parola manca?</span>')
     retro = (f'<span style="color:{_colore(v)};font-weight:bold">'
              f'{html.escape(frase)}</span>')
-    if sig := (v.get("italian") or v.get("english") or "").strip():
+    # La traduzione dell'INTERA frase, non solo della parola: un buco giusto
+    # ma incastrato in una frase illeggibile mesi dopo non aiuta a rileggerla.
+    # Fonte libro (sempre presente per costruzione) o `example_en` (post
+    # backfill — vedi do/sapere/vocaboli.py). Il significato della sola
+    # parola resta come ultimo ripiego, per non lasciare il retro nudo.
+    if fonte.startswith("libro"):
+        # do/sapere/libro.py non traduce (deterministico, zero LLM): qui c'e'
+        # solo la parola, come prima del 2026-08-13.
+        if sig := (v.get("italian") or v.get("english") or "").strip():
+            retro += f'<br><small style="color:#666">{html.escape(sig)}</small>'
+    elif en := (v.get("example_en") or "").strip():
+        retro += f'<br><small style="color:#666">{html.escape(en)}</small>'
+    elif sig := (v.get("italian") or v.get("english") or "").strip():
         retro += f'<br><small style="color:#666">{html.escape(sig)}</small>'
+    retro += f'<br><span style="color:#b0bec5;font-size:0.7em">{html.escape(fonte)}</span>'
     return fronte, retro
 
 

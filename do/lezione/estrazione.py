@@ -50,15 +50,67 @@ CAMPI: dict[str, type] = {
 
 # Campi di un vocabolo. `german` e `level` sono gli unici obbligatori:
 # l'articolo e' vuoto per i verbi, il plurale per i Singularetantum.
+#
+# `example_en` (dal 2026-08-13): traduzione INGLESE dell'intera frase
+# d'esempio, non della sola parola. Serve alla carta Cloze — il retro mostrava
+# solo il significato della parola isolata, e una frase presa dal transcript
+# (parlato spontaneo, spesso non deducibile dal contesto) restava
+# incomprensibile mesi dopo. `example_it` esisteva gia' ma non basta: il resto
+# dell'app e' gia' in inglese (traduzione/gloss di allenamento.py). Backfill
+# sui JSON storici in do/sapere/vocaboli.py:backfill_example_en().
 CAMPI_VOCABOLO = ("german", "article", "plural", "category",
-                  "italian", "english", "example_de", "example_it", "level")
+                  "italian", "english", "example_de", "example_it",
+                  "example_en", "level")
+
+
+# Schema JSON passato a Ollama come `format` (structured outputs): vincola la
+# FORMA dell'estrazione a livello di decoding, non solo via prompt. Serve ai
+# modelli piccoli (7B) che altrimenti producono JSON valido ma con la struttura
+# sbagliata (visto su 08-11: ricalcavano i tab del Doc). Backend anthropic/claude
+# lo ignorano — seguono gia' il template nel prompt.
+_STR = {"type": "string"}
+SCHEMA_ESTRAZIONE: dict = {
+    "type": "object",
+    "properties": {
+        "topic": _STR,
+        "summary_en": _STR,
+        "summary_it": _STR,
+        "vocabulary": {"type": "array", "items": {
+            "type": "object",
+            "properties": {c: _STR for c in CAMPI_VOCABOLO},
+            "required": ["german", "level"],
+        }},
+        "grammar_points": {"type": "array", "items": {
+            "type": "object",
+            "properties": {
+                "rule": _STR, "explanation_en": _STR,
+                "examples": {"type": "array", "items": _STR},
+                "full_rule": _STR, "common_mistakes": _STR, "exceptions": _STR,
+            },
+            "required": ["rule"],
+        }},
+        "phrases": {"type": "array", "items": {
+            "type": "object",
+            "properties": {"german": _STR, "english": _STR, "context": _STR},
+            "required": ["german", "english"],
+        }},
+        "comprehension_questions": {"type": "array", "items": {
+            "type": "object",
+            "properties": {"question_de": _STR, "answer_de": _STR},
+            "required": ["question_de"],
+        }},
+        "homework": _STR,
+    },
+    "required": ["topic", "summary_en", "summary_it", "vocabulary",
+                 "grammar_points", "phrases", "comprehension_questions"],
+}
 
 
 SISTEMA = """You are a German language tutor. Student: Kevin (Italian, A2 -> B2 target), lessons in English with native speaker Stefanie. Transcript: English + German examples + occasional Italian.
 
 Return ONLY valid JSON — no backticks, no extra text.
 
-{"lesson_number":"<int or ''>","topic":"<5 words>","summary_en":"<=120 words>","summary_it":"<Italian>","vocabulary":[{"german":"<base word>","article":"<der|die|das|''>","plural":"<or ''>","category":"<see below>","italian":"<str>","english":"<str>","example_de":"<str>","example_it":"<str>","level":"<A1|A2|B1|B2>"}],"grammar_points":[{"rule":"<str>","explanation_en":"<str>","examples":["<str>"],"full_rule":"","common_mistakes":"","exceptions":"","source_verified":false}],"phrases":[{"german":"<str>","english":"<str>","context":"<str>"}],"homework":"<str or ''>","comprehension_questions":[{"question_de":"<str>","answer_de":"<str>"}],"doc_sections_covered":["<str>"]}
+{"lesson_number":"<int or ''>","topic":"<5 words>","summary_en":"<=120 words>","summary_it":"<Italian>","vocabulary":[{"german":"<base word>","article":"<der|die|das|''>","plural":"<or ''>","category":"<see below>","italian":"<str>","english":"<str>","example_de":"<str>","example_it":"<str>","example_en":"<str>","level":"<A1|A2|B1|B2>"}],"grammar_points":[{"rule":"<str>","explanation_en":"<str>","examples":["<str>"],"full_rule":"","common_mistakes":"","exceptions":"","source_verified":false}],"phrases":[{"german":"<str>","english":"<str>","context":"<str>"}],"homework":"<str or ''>","comprehension_questions":[{"question_de":"<str>","answer_de":"<str>"}],"doc_sections_covered":["<str>"]}
 
 Rules:
 - vocabulary.german: base word ONLY, NEVER include article (ok "Sorge", wrong "die Sorge")
@@ -67,7 +119,9 @@ Rules:
 - plural: leave "" for Singularetantum (Milch, Zucker, Mathematik, month names, cardinal points). Do NOT invent a plural that does not exist.
 - example_de: a full sentence USING the word. Prefer one from the transcript, BUT the transcript is a lesson in progress: it contains Kevin's mistakes and Whisper's noise. The example must be CORRECT German — if the sentence in the transcript has an error (wrong word order, wrong case, missing verb), write the corrected version. Never copy a wrong sentence verbatim: it becomes an Anki card and gets memorised.
   Word order matters most: in a main clause the finite verb is second ("Die Leute dürfen drinnen rauchen"), NOT final ("Die Leute drinnen rauchen dürfen" is wrong). Verb-final belongs only in subordinate clauses introduced by weil/dass/wenn/ob/als.
+  Prefer a sentence that stands on its own without the surrounding conversation — a fragment that only makes sense in the exact moment it was spoken becomes an unsolvable Cloze card months later. If the transcript only offers a context-bound fragment, write a short self-contained replacement instead: still correct, still natural, but complete on its own.
   This is what the Anki cloze card is built from — without it the word gets no production card.
+- example_en: a natural English translation of the WHOLE example_de sentence (not just the word). Pure English, must agree with example_de exactly — it is what makes the Cloze card readable months later.
 - grammar_points: max 5, explicitly covered rules only
 - vocabulary: ALL new A2 -> B2 words, no cap
 - comprehension_questions: exactly 3
@@ -304,7 +358,7 @@ def rielabora(transcript: str | Path, nome: str, *, doc_nuovo: str = "",
         utente += f"=== DOC NEW CONTENT ===\n{pezzo}\n\n"
         print(f"   Contesto dal Doc: {len(pezzo)} caratteri")
 
-    testo, uso = chiama(SISTEMA, utente, llm_config(max_tokens=16000))
+    testo, uso = chiama(SISTEMA, utente, llm_config(max_tokens=16000), formato_json=SCHEMA_ESTRAZIONE)
     dati = valida(estrai_json(testo))
     costo = uso.costo_eur
     print(f"   {len(dati['vocabulary'])} parole, {len(dati['grammar_points'])} regole "

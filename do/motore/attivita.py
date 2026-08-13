@@ -38,10 +38,26 @@ class Attivita:
     file_esito: str
     ogni_n_lezioni: int
     descrizione: str
+    # Un'attivita' puo' lasciare traccia in piu' di un file, e vale la piu'
+    # recente. Serve allo studio: `sessioni.json` si scrive solo quando una
+    # sessione arriva in fondo, `risposte.json` a ogni singola risposta. Senza
+    # il secondo, chiudere la scheda a meta' fa dire al briefing «mai eseguito»
+    # a chi ha appena studiato — ed e' successo davvero al primo uso.
+    anche: tuple[str, ...] = ()
 
 
 # Le attivita' che chiudono l'anello. La pipeline non e' qui: quella gira gia'.
+#
+# `studio` e' diverso dagli altri due e va letto con attenzione: drill ed esame
+# misurano una GENERAZIONE (il campo `generato` dentro il loro JSON), cioe' che
+# il materiale e' stato prodotto. Non che sia stato usato. E' il buco che ha
+# permesso al briefing di dire "in pari" con dieci esercizi mai aperti.
+# `sessioni.json` misura invece il consumo: e' l'unica riga qui dentro che parla
+# di cosa Kevin ha fatto davvero, e per questo ha la soglia piu' stretta.
 ATTIVITA = [
+    Attivita("studio", "deutschops.py studia", "sessioni.json", 2,
+             "l'app: leggere, esercitarsi, consultare",
+             anche=("risposte.json",)),
     Attivita("drill", "deutschops.py drill", "drill.json", 3,
              "esercizi di produzione sui tuoi errori reali"),
     Attivita("gap B2", "deutschops.py esame", "esame_b2.json", 8,
@@ -70,6 +86,17 @@ def _ultima_esecuzione(nome_file: str) -> date | None:
         return None
     try:
         d = json.loads(p.read_text(encoding="utf-8"))
+        # Registro di sessioni: conta l'ULTIMA voce, non la scrittura del file.
+        # Il file cresce a ogni sessione, quindi l'mtime direbbe la stessa cosa
+        # — ma solo finche' nessuno lo tocca per altri motivi.
+        # Un registro vuoto vale None, MAI l'mtime: il file esiste appena l'app
+        # parte, e cadere sul fallback direbbe "fatto oggi" senza una sessione.
+        for campo in ("sessioni", "risposte"):
+            if isinstance(d.get(campo), list):
+                if not d[campo]:
+                    return None
+                v = d[campo][-1].get("quando")
+                return datetime.fromisoformat(str(v)).date() if v else None
         for campo in ("generato", "generated"):
             if v := d.get(campo):
                 return datetime.fromisoformat(str(v)).date()
@@ -86,7 +113,10 @@ def stato() -> list[dict]:
     lezioni = _lezioni()
     out = []
     for a in ATTIVITA:
-        ultima = _ultima_esecuzione(a.file_esito)
+        date_viste = [_ultima_esecuzione(f)
+                      for f in (a.file_esito, *a.anche)]
+        viste = [d for d in date_viste if d is not None]
+        ultima = max(viste) if viste else None
         if ultima is None:
             arretrate = len(lezioni)
         else:

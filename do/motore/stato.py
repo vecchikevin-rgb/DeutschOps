@@ -20,7 +20,7 @@ import json
 from collections import Counter
 from datetime import date, datetime
 
-from ..base.paths import (ERROR_DB, GRAMMAR_DB, REGISTRY, STATO, TRANSCRIPTS,
+from ..base.paths import (GRAMMAR_DB, REGISTRY, STATO, TRANSCRIPTS,
                           VOCAB_DB)
 from ..base.tracker import dettaglio_pendenti
 from . import scadenze
@@ -48,10 +48,13 @@ def raccogli() -> dict:
     g = _json(GRAMMAR_DB, {})
     regole = g.get("rules", g)
 
-    e = _json(ERROR_DB, {})
-    errori = e.get("errors", e)
-    errori = list(errori.values()) if isinstance(errori, dict) else errori
-    cat = Counter((x.get("category") or "?") for x in errori if isinstance(x, dict))
+    # Solo gli errori di lezione. Da F2 l'app scrive nel quaderno i propri, e
+    # sommarli qui farebbe crescere il conteggio degli errori mentre studi —
+    # e la quota "45% sono i casi" deriverebbe senza che nessuno lo veda.
+    from ..sapere import errori as quaderno
+
+    errori = quaderno.registrati(quaderno.LEZIONE)
+    cat = Counter((x.get("category") or "?") for x in errori)
     famiglia_casi = sum(n for c, n in cat.items() if c in ("Kasus", "Genus", "Präposition"))
 
     date_lez = sorted(l.get("date", "") for l in lezioni if l.get("date"))

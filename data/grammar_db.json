@@ -4478,7 +4478,201 @@
       ],
       "exceptions": "In formal or written German, the fuller forms 'heraus-', 'hinaus-', 'herein-', 'hinein-' are preferred over the colloquial 'raus-'/'rein-' shortenings (e.g., 'hinausgehen' instead of 'rausgehen'). Additionally, when used with certain verbs, these prefixes may carry idiomatic meanings not directly translating literal 'in/out' motion (e.g., 'rauskommen' can mean 'to come out/result' in abstract contexts, not just literal exit).",
       "source_verified": false
+    },
+    "wegen + Genitiv (colloquial: Dativ)": {
+      "rule": "wegen + Genitiv (colloquial: Dativ)",
+      "explanation_en": "The preposition 'wegen' (because of, due to) is a genitive preposition in standard German and requires the noun following it to be in the genitive case. However, in everyday spoken German, it is extremely common to hear 'wegen' followed by the dative case instead, especially with plural nouns or nouns without a strong genitive marker. Duden and grammar authorities note that dative use is widespread colloquially but is still considered non-standard in formal writing.",
+      "full_rule": "STANDARD (GENITIVE) USE:\nwegen + genitive noun phrase\n\nGenitive articles/determiners:\n- Masculine: des (+ -s/-es on noun) — wegen des Regens\n- Feminine: der — wegen der Schule\n- Neuter: des (+ -s/-es on noun) — wegen des Wetters\n- Plural: der — wegen der Kinder\n\nFull declension table (definite article, genitive):\n| Gender | Genitive Article | Example |\n|--------|------------------|---------|\n| Masculine | des + noun-(e)s | wegen des Autos |\n| Feminine | der | wegen der Arbeit |\n| Neuter | des + noun-(e)s | wegen des Geldes |\n| Plural | der | wegen der Leute |\n\nCOLLOQUIAL (DATIVE) USE:\nwegen + dative noun phrase (common in spoken German)\n\n| Gender | Dative Article | Example |\n|--------|-----------------|---------|\n| Masculine | dem | wegen dem Auto |\n| Feminine | der | wegen der Schule (same as genitive) |\n| Neuter | dem | wegen dem Geld |\n| Plural | den (+ -n on noun) | wegen den Leuten |\n\nWith personal pronouns, 'wegen' typically combines with possessive-based forms: wegen mir, wegen dir, wegen ihm, wegen ihr, wegen uns, wegen euch, wegen ihnen (dative-based, very common even in fairly formal speech, though 'meinetwegen', 'deinetwegen', 'seinetwegen', 'ihretwegen', 'unseretwegen', 'euretwegen', 'ihretwegen' are the prescriptively correct fused forms).\n\nWith proper names, 'wegen' + name generally takes no article and looks the same in both cases: wegen Nico, wegen Maria.",
+      "common_mistakes": "Italian speakers often struggle because Italian has no case system, so the concept of choosing between genitive and dative after a preposition is unfamiliar. Common errors include: (1) using nominative forms after 'wegen' by direct word-for-word translation from Italian 'a causa di + noun' (e.g., incorrectly saying 'wegen der Mann' instead of 'wegen des Mannes' or colloquial 'wegen dem Mann'); (2) forgetting the genitive -s/-es ending on masculine/neuter nouns (e.g., saying 'wegen des Auto' instead of 'wegen des Autos'); (3) not realizing that dative is acceptable colloquially, leading learners to either avoid 'wegen' or overcorrect awkwardly; (4) confusing 'wegen' with 'weil' (because), since Italian 'perché' covers both 'why' and 'because', causing learners to use 'wegen' with a full clause instead of a noun phrase (wegen + noun vs. weil + subordinate clause).",
+      "examples": [
+        "Es war wegen der Schule.",
+        "Wegen dem Auto (colloquial) / Wegen des Autos (formal).",
+        "Sie sind wütend wegen Nico.",
+        "Wegen des schlechten Wetters mussten wir zu Hause bleiben.",
+        "Wegen dir bin ich zu spät gekommen. (colloquial, dative-based)"
+      ],
+      "exceptions": "With feminine singular nouns, the genitive and dative articles are identical ('der'), so there is no visible difference between formal and colloquial usage (e.g., 'wegen der Schule' works for both). With personal pronouns, the fused genitive forms (meinetwegen, deinetwegen, etc.) are traditionally preferred in correct written German, though 'wegen mir/dir/ihm' is very common in speech. With plural nouns lacking a genitive -n ending marker, colloquial dative plural (wegen den Leuten) is extremely frequent even among educated speakers. Duden explicitly acknowledges the genitive as standard but recognizes the dative as a widely tolerated colloquial variant, particularly when the genitive would be ambiguous or the noun has no case ending (e.g., 'wegen Geschäften' vs. dative clarity).",
+      "source_verified": false
+    },
+    "als vs. immer wenn (subordinate clauses of time)": {
+      "rule": "als vs. immer wenn (subordinate clauses of time)",
+      "explanation_en": "'Als' is used for a single, one-time event in the past. 'Immer wenn' (or just 'wenn' referring to repeated past events) is used for repeated/habitual events in the past. 'Wenn' alone is used for present/future single or repeated events.",
+      "examples": [
+        "Als wir geheiratet haben, haben wir eine große Party gemacht.",
+        "Immer wenn es geregnet hat, bin ich zu Hause geblieben.",
+        "Wenn wir heiraten, machen wir eine große Party."
+      ],
+      "full_rule": "",
+      "common_mistakes": "Using 'wenn' instead of 'als' for single past events.",
+      "exceptions": "",
+      "source_verified": false
+    },
+    "Separable verbs: anfangen and aufhören": {
+      "rule": "Separable verbs: anfangen and aufhören",
+      "explanation_en": "'Anfangen' (to begin/start) and 'aufhören' (to stop/cease) are separable-prefix verbs (trennbare Verben) in German. Their prefixes 'an-' and 'auf-' detach from the verb stem and move to the final position in present tense and simple past main clauses. In the perfect tense, the prefix reattaches to the front of the past participle, with 'ge-' inserted between the prefix and the stem.",
+      "full_rule": "CONJUGATION OF 'ANFANGEN' (to begin) — Present Tense:\n| Pronoun | Form |\n|---------|------|\n| ich | fange an |\n| du | fängst an |\n| er/sie/es | fängt an |\n| wir | fangen an |\n| ihr | fangt an |\n| sie/Sie | fangen an |\n\nSimple Past (Präteritum):\n| Pronoun | Form |\n|---------|------|\n| ich | fing an |\n| du | fingst an |\n| er/sie/es | fing an |\n| wir | fingen an |\n| ihr | fingt an |\n| sie/Sie | fingen an |\n\nPerfect Tense: hat/haben + angefangen (past participle: an + ge + fangen)\nExample: Ich habe angefangen.\n\nCONJUGATION OF 'AUFHÖREN' (to stop) — Present Tense:\n| Pronoun | Form |\n|---------|------|\n| ich | höre auf |\n| du | hörst auf |\n| er/sie/es | hört auf |\n| wir | hören auf |\n| ihr | hört auf |\n| sie/Sie | hören auf |\n\nSimple Past (Präteritum):\n| Pronoun | Form |\n|---------|------|\n| ich | hörte auf |\n| du | hörtest auf |\n| er/sie/es | hörte auf |\n| wir | hörten auf |\n| ihr | hörtet auf |\n| sie/Sie | hörten auf |\n\nPerfect Tense: hat/haben + aufgehört (past participle: auf + ge + hört)\nExample: Du hast aufgehört.\n\nWORD ORDER RULES:\n- Main clause, present/simple past: conjugated verb in position 2, separable prefix at the end.\n  Example: Ich fange die Arbeit morgen an.\n- Subordinate clause: verb + prefix reunite at the end, prefix attaches directly before the conjugated verb.\n  Example: ..., weil ich die Arbeit morgen anfange.\n- Perfect tense: auxiliary (haben) in position 2, past participle (with prefix+ge+stem) at the end.\n  Example: Ich habe die Arbeit angefangen.\n- Modal verb constructions: modal verb conjugated in position 2, infinitive (with prefix attached, not separated) at the end.\n  Example: Du darfst nie aufhören. / Ich muss jetzt anfangen.",
+      "common_mistakes": "Italian speakers, whose language has no separable verb prefixes, commonly make these errors: (1) forgetting to split the prefix in main clauses and instead keeping it attached like an infinitive (e.g., incorrectly saying 'Ich anfange die Arbeit' instead of 'Ich fange die Arbeit an'); (2) placing the separated prefix in the wrong position, not at the very end of the clause; (3) forgetting to insert 'ge-' between the prefix and stem in the past participle (e.g., saying 'geanfangen' instead of 'angefangen', or omitting it entirely as 'anfangen' instead of 'angefangen'); (4) with modal verb constructions, incorrectly separating the prefix when it should remain attached to the infinitive at the end (e.g., saying 'Du darfst nie auf hören' as two separate final elements incorrectly ordered, instead of 'Du darfst nie aufhören'); (5) confusing which auxiliary verb to use in the perfect tense (both use 'haben', but Italian speakers sometimes default to 'sein' by analogy with Italian intransitive verbs of motion/change like 'cominciare' patterns).",
+      "examples": [
+        "Ich habe die Arbeit vor zwei Jahren angefangen.",
+        "Du darfst nie aufhören.",
+        "Der Unterricht fängt um acht Uhr an.",
+        "Wann hörst du mit der Arbeit auf?"
+      ],
+      "exceptions": "When 'anfangen' or 'aufhören' are used with a dependent infinitive construction using 'zu' (e.g., 'aufhören zu rauchen' - to stop smoking), the prefix still separates in main clause conjugated forms, but the 'zu' is inserted between the prefix and stem of the second (dependent) infinitive verb, not of anfangen/aufhören itself: 'Er hört auf zu rauchen' (correct - prefix of aufhören separates; 'zu' belongs to rauchen). In subordinate clauses, verbs remain unseparated and moved to clause-final position: 'Ich weiß, dass er aufhört.' Additionally, in constructions with modal verbs, the separable verb stays as one infinitive unit and is NOT split: 'Er will anfangen' (not 'Er will an fangen').",
+      "source_verified": false
+    },
+    "Perfect tense formation with regular and irregular verbs": {
+      "rule": "Perfect tense formation with regular and irregular verbs",
+      "explanation_en": "The Perfekt (present perfect) tense in German is formed with a conjugated auxiliary verb (haben or sein) in second position plus a past participle at the end of the clause. Regular (weak) verbs form participles with ge-...-t, while irregular (strong) verbs typically form participles with ge-...-en and often a stem vowel change. This tense is commonly used in spoken German and informal writing to describe past events, including work history narratives.",
+      "full_rule": "REGULAR (WEAK) VERB PARTICIPLE FORMATION:\nge + stem + t\nExample: arbeiten → gearbeitet; machen → gemacht; kündigen → gekündigt\n\nIRREGULAR (STRONG) VERB PARTICIPLE FORMATION:\nge + (often changed) stem + en\nExample: enden → geendet (actually weak/regular); nehmen → genommen; sprechen → gesprochen\n\nNote: 'entlassen' (to lay off/dismiss) is a strong verb with an inseparable prefix 'ent-', so it does NOT take 'ge-' in the participle: entlassen → entlassen (participle identical to infinitive, following the rule that verbs with inseparable prefixes be-, ge-, er-, ver-, zer-, ent-, emp-, miss- omit 'ge-').\n\nAUXILIARY VERB SELECTION:\n- Most transitive verbs and verbs describing activities use 'haben': ich habe gearbeitet, sie haben entlassen.\n- Verbs of motion/change of state typically use 'sein': ich bin gegangen (not relevant to the given examples, but a key contrast).\n\nFULL CONJUGATION TABLE — PERFEKT with 'haben' (example verb: arbeiten):\n| Pronoun | Form |\n|---------|------|\n| ich | habe gearbeitet |\n| du | hast gearbeitet |\n| er/sie/es | hat gearbeitet |\n| wir | haben gearbeitet |\n| ihr | habt gearbeitet |\n| sie/Sie | haben gearbeitet |\n\nRELEVANT VERB PARTICIPLES FROM WORK-HISTORY CONTEXT:\n| Infinitive | Participle | Type |\n|------------|------------|------|\n| arbeiten | gearbeitet | regular/weak |\n| anfangen | angefangen | strong, separable |\n| kündigen | gekündigt | regular/weak |\n| entlassen | entlassen | strong, inseparable prefix (no ge-) |\n| enden | geendet | regular/weak |\n\nWORD ORDER: Subject + auxiliary (position 2) + ... + past participle (final position).\nExample: Ich habe acht Jahre lang in der Chemie-Industrie gearbeitet.",
+      "common_mistakes": "Italian speakers frequently make these errors: (1) direct translation of time expressions from Italian/English word order, placing time phrases at the end of the sentence (e.g., 'Ich habe gearbeitet acht Jahre lang' instead of the correct 'Ich habe acht Jahre lang gearbeitet'), since German requires the past participle to remain in final position with time expressions inserted in the middle (following the 'Zeit-Manner-Ort' / time-manner-place rule known as TeKaMoLo); (2) incorrectly adding 'ge-' to verbs with inseparable prefixes like 'entlassen', producing the incorrect 'geentlassen' instead of correct 'entlassen'; (3) choosing the wrong auxiliary verb, especially defaulting to 'sein' by analogy with Italian's 'essere' for certain verbs (Italian uses 'essere' more broadly than German uses 'sein'); (4) confusing weak/strong verb participle patterns, e.g., adding '-t' to strong verbs or '-en' to weak verbs; (5) mispositioning the auxiliary verb, since Italian avere/essere + participle typically stay adjacent, while German requires the participle to move to the very end of the clause, potentially far from the auxiliary.",
+      "examples": [
+        "Ich habe acht Jahre lang in der Chemie-Industrie gearbeitet.",
+        "Sie haben fünfzig Prozent des Personals entlassen.",
+        "Der Vertrag hat im Februar geendet.",
+        "Ich habe im letzten Jahr gekündigt, weil ich unzufrieden war."
+      ],
+      "exceptions": "Verbs with inseparable prefixes (be-, ge-, er-, ver-, zer-, ent-, emp-, miss-) do not add 'ge-' in the participle (e.g., entlassen → entlassen, verstehen → verstanden). Verbs ending in -ieren also do not take 'ge-' in the participle (e.g., studieren → studiert, telefonieren → telefoniert). Separable verbs insert '-ge-' between the prefix and the stem (e.g., anfangen → angefangen, as covered in the separable verb rule). A small number of verbs are 'mixed' (weak conjugation with a vowel change), such as denken → gedacht, bringen → gebracht, which don't fit neatly into either the fully regular or fully irregular pattern.",
+      "source_verified": false
+    },
+    "Time expressions: vor + Dativ (ago)": {
+      "rule": "Time expressions: vor + Dativ (ago)",
+      "explanation_en": "The preposition 'vor' followed by a dative-case time expression is used in German to express the English concept of 'ago' (e.g., 'two years ago' = 'vor zwei Jahren'). Unlike English, where 'ago' follows the time period at the end of a phrase, German 'vor' precedes the time expression and functions grammatically like other prepositional phrases, meaning it follows standard German word order rules (often appearing in the middle of the sentence, in the time-manner-place slot) rather than being fixed at the sentence's end.",
+      "full_rule": "STRUCTURE: vor + dative time expression\n\n'Vor' is a two-way (Wechselpräposition) preposition that takes dative case when indicating a temporal or static spatial relationship (as opposed to accusative for directional movement). In time expressions meaning 'ago', it always takes the dative.\n\nDATIVE CASE ENDINGS FOR TIME EXPRESSIONS (with plural nouns, most common in 'ago' phrases):\n| Article/Determiner | Dative Plural Form |\n|---------------------|---------------------|\n| die (plural def. article) | den (+ -n on noun) |\n| meine, seine, ihre, etc. | meinen, seinen, ihren (+ -n on noun) |\n| zwei, drei, etc. (no article) | zwei, drei + noun with -n ending |\n\nEXAMPLES OF DECLENSION:\n- vor einem Jahr (dative singular, neuter: 'Jahr')\n- vor einer Woche (dative singular, feminine: 'Woche')\n- vor zwei Jahren (dative plural: 'Jahre' → 'Jahren')\n- vor drei Monaten (dative plural: 'Monate' → 'Monaten')\n- vor fünf Minuten (dative plural: 'Minuten', already ends in -n)\n\nWORD ORDER: In German main clauses, 'vor + time' phrases typically appear after the conjugated verb but can shift position depending on emphasis, following the general TeKaMoLo (Temporal-Kausal-Modal-Lokal) guideline for placing adverbial information. It is NOT fixed at the end of the sentence as 'ago' is in English.\n\nCorrect: Ich habe die Arbeit vor zwei Jahren angefangen.\n(Literal gloss: I have the work before-two-years begun.)\n\nIncorrect (English-influenced): Ich habe die Arbeit angefangen vor zwei Jahren.",
+      "common_mistakes": "Italian speakers (and English speakers) commonly make these errors: (1) placing 'vor + time' at the very end of the sentence, mirroring English 'ago' placement or Italian 'fa' placement (Italian: 'due anni fa' also places the time expression at the end), producing incorrect German like 'Ich habe die Arbeit angefangen vor zwei Jahren' instead of correct 'Ich habe die Arbeit vor zwei Jahren angefangen'; (2) forgetting to decline the noun into dative case, especially forgetting the plural dative -n ending (e.g., saying 'vor zwei Jahre' instead of 'vor zwei Jahren'); (3) confusing 'vor' (ago, referring to past time from now) with 'seit' (since, referring to a duration that continues into the present) — Italian 'da' can cover meanings similar to both, leading to confusion between vor + Perfekt/Präteritum vs. seit + Präsens; (4) using accusative instead of dative after 'vor' by incorrectly treating it as a directional (movement) preposition rather than a static/temporal one.",
+      "examples": [
+        "Es war vor zwei Jahren.",
+        "Ich habe die Arbeit vor zwei Jahren angefangen.",
+        "Vor einem Monat habe ich gekündigt.",
+        "Wir haben uns vor drei Wochen kennengelernt."
+      ],
+      "exceptions": "When emphasis is desired, 'vor + time' can be moved to the very first position in the sentence (position 1), causing subject-verb inversion, which is grammatically correct and common for emphasis: 'Vor zwei Jahren habe ich die Arbeit angefangen.' This is different from placing it at the end, which remains incorrect. Additionally, 'vor' should not be confused with 'seit' + dative, which is used for actions/states that began in the past and continue into the present (typically paired with present tense in German, unlike English's present perfect continuous): 'Ich arbeite seit zwei Jahren hier' (I have been working here for two years) versus 'Ich habe vor zwei Jahren hier gearbeitet' (I worked here two years ago, completed action).",
+      "source_verified": false
+    },
+    "Strong verbs: no vowel change in the ihr form": {
+      "rule": "Strong verbs: no vowel change in the ihr form",
+      "explanation_en": "Strong (irregular) verbs that alter their stem vowel do so ONLY in the du and er/sie/es forms of the present tense. In the ich, wir, ihr and sie/Sie forms the vowel stays in its base (infinitive) form. Thus: ihr fahrt (not fährt), ihr esst (not isst), ihr lest (not liest). Even native speakers occasionally slip and write 'Ihr fährt', but this is an error.",
+      "full_rule": "Stem-changing (strong) verbs shift the vowel only in 2nd/3rd person singular. Four change classes:\n\na -> ä (fahren): ich fahre | du fährst | er/sie/es fährt | wir fahren | ihr fahrt | sie/Sie fahren\ne -> i (essen): ich esse | du isst | er isst | wir essen | ihr esst | sie essen\ne -> ie (lesen): ich lese | du liest | er liest | wir lesen | ihr lest | sie lesen\nau -> äu (laufen): ich laufe | du läufst | er läuft | wir laufen | ihr lauft | sie laufen\n\nEnding spelling for the ihr form depends on the stem final consonant: stems ending in -s/-ss/-ß/-z take just -t (ihr esst, ihr lest, ihr heißt, ihr sitzt); stems ending in -t/-d take -et (ihr haltet, ihr ratet, ihr findet). Note: modal verbs behave oppositely - they change in the singular but KEEP the changed/umlaut form in plural: ihr könnt, ihr müsst, ihr dürft, ihr wisst. Irregular: ihr seid (sein).",
+      "common_mistakes": "Italian dittongazione (e.g. sedere: io siedo, tu siedi, lui siede, noi sediamo, voi sedete, loro siedono) changes the vowel in 1sg and 3pl too. So Italian speakers wrongly extend the umlaut/vowel change to those persons: *ich fähre, *sie fähren, *wir essen->*wir issen. The voi form (sedete) actually matches German ihr correctly. Italian speakers also confuse the -s stem ending (*ihr esset). Because Italian polite 'Voi' overlaps with 'ihr', learners may use ihr where Sie is required.",
+      "examples": [
+        "Wohin fahrt ihr nach dem Gardasee?",
+        "Wo esst ihr normalerweise zu Mittag?",
+        "Warum lauft ihr so schnell? - Ihr lauft ja wie die Profis!",
+        "Lest ihr abends noch Bücher, oder seht ihr lieber fern?"
+      ],
+      "exceptions": "The du-imperative reveals a split: e->i/ie verbs KEEP the vowel change and drop the -e (Iss!, Nimm!, Lies!, Sieh!), but a->ä and au->äu verbs do NOT umlaut in the imperative (Fahr!, Lauf!, Halt! - never *Fähr!). The ihr-imperative is identical to the ihr present form (Fahrt!, Esst!, Lest!). Modal verbs invert the pattern (umlaut kept in plural: ihr könnt, ihr müsst). Sein is irregular throughout (ihr seid, not *seit).",
+      "source_verified": false
+    },
+    "Question words: wo, woher, wohin": {
+      "rule": "Question words: wo, woher, wohin",
+      "explanation_en": "wo = where (location), woher = where from (origin), wohin = where to (direction). Use them at the start of a question with the verb in second position.",
+      "examples": [
+        "Woher kommt ihr?",
+        "Wohin fahrt ihr nach dem Gardasee?",
+        "Wo esst ihr normalerweise?"
+      ],
+      "full_rule": "",
+      "common_mistakes": "",
+      "exceptions": "",
+      "source_verified": false
+    },
+    "einander + preposition": {
+      "rule": "einander + preposition",
+      "explanation_en": "The reciprocal pronoun 'einander' (each other/one another) combines with a preposition to form a single, invariable lowercase word: miteinander (with each other), untereinander (among each other), füreinander (for each other), voneinander (from each other). The preposition's case is absorbed into the fixed compound, so einander itself never declines.",
+      "full_rule": "The productive reciprocal compounds: aneinander, aufeinander, auseinander, beieinander, durcheinander, füreinander, gegeneinander, hintereinander, ineinander, miteinander, nacheinander, nebeneinander, übereinander, umeinander, untereinander, voneinander, voreinander, zueinander. Each is written as ONE word, lowercase, and is indeclinable. Reason it is obligatory: bare reflexive 'sich' can express reciprocity on its own (Sie waschen sich = they wash each other/themselves), BUT sich cannot be the object of a preposition in a reciprocal sense - *Sie sprechen mit sich is wrong; German therefore requires the fused prepositional form: Sie sprechen miteinander. With a separable-style verb the compound still stands apart from the verb: Wir warten aufeinander. Note: 'einander gegenüber' is conventionally written as two words (sie sitzen einander gegenüber), not as a single compound.",
+      "common_mistakes": "Italian expresses reciprocity with reflexive 'si' or 'l'un l'altro'/'tra loro'. Italian speakers therefore (1) split the spelling as a calque of 'l'un l'altro': *mit einander, *für einander; (2) use *unter ihnen for 'untereinander' (from 'tra loro') or *mit sich for 'miteinander' (from 'parlano con sé'); (3) reach for 'zusammen' where a reciprocal meaning is required; (4) try to decline einander.",
+      "examples": [
+        "Sie sprechen nur untereinander.",
+        "Sie reden kaum miteinander.",
+        "Die beiden Kinder haben viel Verständnis füreinander.",
+        "Nach dem Streit haben sie tagelang nichts voneinander gehört."
+      ],
+      "exceptions": "Several compounds are lexicalized and no longer purely reciprocal: auseinander (apart), durcheinander (in a muddle/confused), nacheinander and hintereinander (one after another, in sequence). 'untereinander' can also mean physically 'one below the other'. There is no genitive reciprocal form - use 'gegenseitig' instead (gegenseitiges Vertrauen). 'einander gegenüber' stays as two words.",
+      "source_verified": false
+    },
+    "Direction toward water: an + accusative": {
+      "rule": "Direction toward water: an + accusative",
+      "explanation_en": "'an' is a two-way (Wechsel) preposition. To express movement/direction TOWARD a shoreline or body of water (wohin?), use 'an' + accusative: an die Adria, ans Meer. For static location (wo?), use 'an' + dative: an der Adria, am Meer. Watch the gender of the water noun, since it determines the article form.",
+      "full_rule": "Direction (wohin? - accusative) vs. Location (wo? - dative):\nWir fahren an die Adria. | Wir sind an der Adria.\nWir fahren ans Meer. | Wir sind am Meer.\nWir fahren an den Strand. | Wir liegen am Strand.\nWir fahren an den See. | Wir wohnen am See.\nContractions: an + das = ans; an + dem = am.\n\nGenders: das Meer, die See (= the sea), but DER See (= lake); der Strand, die Küste, das Ufer, der Fluss, der Ozean. Named waters: die Adria, die Nordsee, die Ostsee, die Karibik, das Mittelmeer, der Atlantik, der Bodensee, der Rhein, die Donau, die Mosel.",
+      "common_mistakes": "Italian 'al mare' is ONE form for both direction and location, so the accusative/dative contrast is unmarked in the L1: Italian speakers produce both *Wir fahren am Meer (should be accusative) and *Wir sind ans Meer (should be dative). They also calque 'a' as *zum Meer instead of 'ans Meer'. Gender transfer causes errors: 'il mare' (masc) -> *an den Meer; 'l'Adriatico' (masc) -> *an den Adria; 'i Caraibi' (masc pl) -> the German is die Karibik (fem sg). 'in spiaggia' -> *in den Strand instead of 'an den Strand'.",
+      "examples": [
+        "Wir fahren an die Adria.",
+        "Wir fahren ans Meer.",
+        "Im Sommer fahren wir jedes Jahr an die Ostsee.",
+        "Die Kinder rennen an den Strand und springen dann ins Meer."
+      ],
+      "exceptions": "Use 'in' + accusative for going INTO the water (ins Meer springen, ins Wasser gehen), as opposed to 'an' + accusative for going TO the shore. Use 'auf' + accusative for heading out ONTO the open water (aufs Meer hinausfahren). For islands and places used without an article, use 'nach' (nach Sylt, nach Rügen), but 'an die Nordsee' for the sea region; use 'auf die Insel' for going onto an island. The homograph der See (lake) vs. die See (sea) is the key gender trap.",
+      "source_verified": false
+    },
+    "wegen + Genitiv": {
+      "rule": "wegen + Genitiv",
+      "explanation_en": "'wegen' (because of) takes the Genitive case. A 'weil'-clause can be rewritten with 'wegen' + a Genitive noun phrase.",
+      "examples": [
+        "Wegen des schlechten Wetters bleibe ich zu Hause.",
+        "Wegen des Alkohols kann ich nicht schlafen.",
+        "Wegen seiner schlechten Ernährung hat er ein schwaches Immunsystem."
+      ],
+      "full_rule": "",
+      "common_mistakes": "",
+      "exceptions": "",
+      "source_verified": false
+    },
+    "Genitiv: article and noun forms": {
+      "rule": "Genitiv: article and noun forms",
+      "explanation_en": "Genitive articles: des (masc./neut.), der (fem./plural). Masculine and neuter nouns add -(e)s: des Mannes, des Kindes. Feminine and plural nouns stay unchanged: der Frau, der Kunden.",
+      "full_rule": "Definite article (Genitive):\nMasc: des | Fem: der | Neut: des | Plural: der\n\nIndefinite/possessive (ein-/mein-):\nMasc: eines/meines | Fem: einer/meiner | Neut: eines/meines | Plural: (keiner/meiner)\n\nNoun endings:\n- Masc./Neut. add -s or -es: des Autos, des Mannes, des Kindes.\n- -es is obligatory after -s, -ß, -x, -z, -tsch: des Hauses, des Platzes, des Reflexes. Nouns in -nis double the s: des Ergebnisses.\n- Fem. and plural nouns do NOT change: der Frau, der Kunden, der Meetings.\n- N-declension masculines take -(e)n, not -s: des Kunden, des Studenten, des Jungen, des Menschen. Mixed: des Namens, des Herzens, des Gedankens.",
+      "common_mistakes": "Italian uses 'di + article' for possession and has no case system, so speakers often replace the Genitive with 'von + Dativ' (*die Betreuung von den Kunden instead of die Betreuung der Kunden). They also drop the -(e)s on masc./neut. nouns (*des Mann, *des Kind) and wrongly add -s to feminine nouns (*der Fraus). N-declension endings are frequently forgotten (*des Kunds instead of des Kunden).",
+      "examples": [
+        "die Betreuung der Kunden",
+        "die Planung der Meetings",
+        "die Erledigung des Schriftverkehrs",
+        "das Auto des Mannes"
+      ],
+      "exceptions": "N-declension masculines end in -(e)n (des Studenten, des Kunden) rather than -s; a few mixed nouns add -ns (des Namens, des Herzens). Proper names normally take -s before the noun (Annas Buch, Peters Auto) and names ending in -s/-z use an apostrophe (Klaus' Auto). In spoken German 'von + Dativ' often replaces the Genitive.",
+      "source_verified": false
+    },
+    "Adjective endings in the Genitive": {
+      "rule": "Adjective endings in the Genitive",
+      "explanation_en": "In the Genitive the adjective ending is usually -en (weak and mixed declensions), like the Dative. BUT in the strong (unpreceded) declension, feminine and plural take -er, so the 'always -en' rule is not universal.",
+      "full_rule": "Genitive adjective endings by declension:\n\nWeak (after der/die/das):\nMasc: des guten Mannes | Fem: der guten Frau | Neut: des guten Kindes | Pl: der guten Kinder → all -en\n\nMixed (after ein/kein/mein):\nMasc: eines guten Mannes | Fem: einer guten Frau | Neut: eines guten Kindes | Pl: keiner guten Kinder → all -en\n\nStrong (no article):\nMasc: guten Weines | Fem: großer Hitze | Neut: guten Wetters | Pl: kleiner Kinder\n→ Masc./Neut. = -en, but Fem./Pl. = -er\n\nSo the input's 'always -en, like the Dative' holds only for weak/mixed and for strong masc./neut. It fails in the strong feminine and plural (genitive -er vs. dative -en: wegen kleiner Kinder / mit kleinen Kindern).",
+      "common_mistakes": "Italian marks adjectives only for gender and number, not case, so speakers fail to inflect for the Genitive (*wegen des schlechte Wetters instead of schlechten). They also over-apply the '-en everywhere' shortcut and write *wegen großen Hitze / *trotz schweren Verletzungen instead of the strong forms großer Hitze / schwerer Verletzungen.",
+      "examples": [
+        "wegen des schlechten Wetters",
+        "wegen der gesättigten Fettsäuren",
+        "wegen seiner schlechten Ernährung",
+        "trotz schwerer Verletzungen"
+      ],
+      "exceptions": "The unpreceded (strong) declension breaks the 'always -en' rule: feminine and plural take -er (wegen großer Hitze, die Rechte kleiner Kinder, trotz schwerer Verletzungen). Strong masculine and neuter, however, do end in -en (wegen schlechten Wetters), and the noun itself carries the -es ending.",
+      "source_verified": false
+    },
+    "mir tut ... weh (expressing pain)": {
+      "rule": "mir tut ... weh (expressing pain)",
+      "explanation_en": "With wehtun the body part is the subject in the Nominative and the affected person is in the Dative. Normally you name what hurts, but an impersonal 'es' is also possible (Tut es weh?).",
+      "full_rule": "Verb 'wehtun' (separable, dative object):\nPresent: es tut mir weh / dir / ihm / ihr / uns / euch / ihnen / Ihnen weh\nPlural subject → plural verb: die Füße tun mir weh.\nPerfect: es hat mir wehgetan.\n\nDative pronouns: mir, dir, ihm, ihr, uns, euch, ihnen, Ihnen.\n\nStructure: [Nominative body part = subject] + tut/tun + [Dative person] + weh.\n- Der Kopf tut mir weh.\n- Die Beine tun mir weh.\nAlternatively use the possessive without dative: Mein Kopf tut weh.",
+      "common_mistakes": "Italian 'mi fa male la testa' leads to two errors: (1) using the accusative because Italian 'mi' is case-ambiguous → *Es tut mich weh instead of Es tut mir weh; (2) combining possessive and dative → *Mein Kopf tut mir weh (say either Der Kopf tut mir weh OR Mein Kopf tut weh, not both). Italians also forget plural verb agreement: *Die Füße tut mir weh instead of tun.",
+      "examples": [
+        "Der Nacken tut mir weh.",
+        "Was tut dir weh?",
+        "Mein Kopf tut weh.",
+        "Die Beine tun mir weh."
+      ],
+      "exceptions": "You do not always have to name the body part: an impersonal 'es' is fully idiomatic — Tut es weh?, Es tut weh, Wo tut es weh? Note also the figurative meaning 'to hurt emotionally': Deine Worte haben mir wehgetan.",
+      "source_verified": false
+    },
+    "Impersonal mir ist / mir wird + adjective": {
+      "rule": "Impersonal mir ist / mir wird + adjective",
+      "explanation_en": "For temperature and feeling unwell, German uses a Dative construction: mir ist kalt/warm/schlecht/schwindelig, and mir wird schlecht for a change of state. Exception: for tiredness you say 'ich bin müde', not 'mir ist müde'.",
+      "full_rule": "sein + Dative (state) and werden + Dative (change of state):\nmir/dir/ihm/ihr/uns/euch/ihnen/Ihnen ist ... (kalt, warm, heiß, schlecht, übel, schwindelig, langweilig)\nmir wird ... (schlecht, übel, schwindelig, warm) = becoming.\n\nDative-impersonal adjectives: kalt, warm, heiß, schlecht, übel, schwindelig, langweilig, peinlich, egal.\nNominative-only (use ich bin ...): müde, krank, hungrig, durstig, nervös.\n\nWord order: Mir ist kalt / Es ist mir kalt. The 'es' is dropped when another element opens the sentence.",
+      "common_mistakes": "The signature Italian error copies 'ho freddo/caldo' (have cold/warm) → *Ich habe kalt / *Ich habe warm instead of Mir ist kalt/warm. Note 'Ich bin kalt' is grammatical but means 'I am cold-hearted'. From 'ho sonno/sono stanco' speakers may say *Mir ist müde instead of Ich bin müde, and from 'mi gira la testa' they may forget the dative (*Ich bin schwindelig instead of Mir ist schwindelig).",
+      "examples": [
+        "Mir ist schlecht.",
+        "Mir wird schlecht vom Alkohol.",
+        "Mir ist schwindelig.",
+        "Ich bin müde."
+      ],
+      "exceptions": "Tiredness, hunger, thirst and illness use the Nominative with sein: ich bin müde/hungrig/durstig/krank, NOT *mir ist müde. Also, physical adjectives like groß/klein/dick only work with sein + Nominative (ich bin groß), never in the dative-impersonal pattern.",
+      "source_verified": false
     }
   },
-  "last_updated": "2026-07-27T21:27:17"
+  "last_updated": "2026-08-12T00:57:40.864449"
 }

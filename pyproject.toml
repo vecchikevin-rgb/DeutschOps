@@ -17,6 +17,7 @@ dependencies = [
     "reportlab>=4.2",            # PDF
     "google-api-python-client>=2.140",
     "google-auth-oauthlib>=1.2",
+    "pymupdf>=1.24",             # rendering pagine Kursbuch per l'OCR, do/sapere/libro.py
 ]
 
 [project.optional-dependencies]
