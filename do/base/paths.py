@@ -30,6 +30,7 @@ REGISTRY = ROOT / "lesson_registry.json"
 # --------------------------------------------------------------- input / staging
 AUDIO = ROOT / "Audiolessons"
 ARCHIVE = AUDIO / "_processed"          # staging a scadenza, TTL in base.staging
+AUDIO_ARCHIVE = AUDIO / "_archivio_audio"  # PERMANENTE — mai in scadenza, vedi do/lezione/audio.py
 DOC_SNAPSHOTS = ROOT / "doc_snapshots"
 
 # --------------------------------------------------------------- stato di lavoro
@@ -57,7 +58,7 @@ SHARED_ROADMAP = SHARED / "_engine" / "sviluppo" / "roadmap-engine.md"
 
 def ensure_dirs() -> None:
     """Crea le cartelle di lavoro se mancano. Idempotente."""
-    for d in (DATA, TRANSCRIPTS, PDFS, AUDIO, ARCHIVE, TASKS, STATO):
+    for d in (DATA, TRANSCRIPTS, PDFS, AUDIO, ARCHIVE, AUDIO_ARCHIVE, TASKS, STATO):
         d.mkdir(parents=True, exist_ok=True)
 
 

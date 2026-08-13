@@ -45,7 +45,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from ..base.config import COMPRESS_THRESHOLD_MB, WHISPER_MODE, WHISPER_MODEL, api_key
-from ..base.paths import AUDIO, FFMPEG, TRANSCRIPTS
+from ..base.paths import AUDIO, AUDIO_ARCHIVE, FFMPEG, TRANSCRIPTS
 
 # Whisper API OpenAI: 0,006 USD al minuto. Serve solo per stimare, il costo
 # vero arriva da result.duration.
@@ -130,6 +130,56 @@ def prepara(percorso: str | Path, data_lezione: str) -> Path:
 
     print(f"   {mb:.0f} MB -> {compresso.stat().st_size / 1024 / 1024:.1f} MB")
     return compresso
+
+
+def archivia_audio_grezzo(percorso: str | Path, data_lezione: str) -> Path | None:
+    """Estrae l'audio dal video e lo salva per sempre in AUDIO_ARCHIVE.
+
+    Non e' il compresso di `prepara()`: quello e' scarnificato per Whisper
+    (16kHz mono 32k) e ottimizzato per la trascrizione, non per la qualita'.
+    Questo backup serve a poter rielaborare la lezione in futuro — un modello
+    diverso, un Whisper piu' grosso — anche dopo che il video originale (che
+    va in staging e scade in 20 giorni, vedi `base/staging.py`) non c'e' piu'.
+
+    Va chiamato PRIMA che il video finisca in staging, sulla sorgente grezza.
+    Idempotente: se il backup esiste gia' non rifa' nulla. Non solleva mai:
+    un fallimento qui non deve bloccare la pipeline, solo essere segnalato.
+    """
+    p = Path(percorso)
+    if not e_video(p):
+        return None
+
+    AUDIO_ARCHIVE.mkdir(parents=True, exist_ok=True)
+    dest = AUDIO_ARCHIVE / f"lezione_{data_lezione}.m4a"
+    if dest.exists():
+        return dest
+
+    # Primo tentativo: copia il flusso audio senza ricodificare (bit-esatto,
+    # istantaneo). Funziona quando l'audio sorgente e' gia' AAC, il caso
+    # comune per le registrazioni Zoom/Meet in .mp4.
+    subprocess.run(
+        [_ffmpeg(), "-i", str(p), "-vn", "-acodec", "copy", str(dest),
+         "-y", "-loglevel", "quiet"],
+        check=False,
+    )
+
+    if not dest.exists() or dest.stat().st_size == 0:
+        # Codec sorgente non copiabile nel contenitore m4a (es. Opus/webm):
+        # ricodifica a una qualita' comunque ben sopra il compresso Whisper.
+        subprocess.run(
+            [_ffmpeg(), "-i", str(p), "-vn", "-ar", "44100", "-ac", "2",
+             "-b:a", "128k", str(dest), "-y", "-loglevel", "quiet"],
+            check=False,
+        )
+
+    if dest.exists() and dest.stat().st_size > 0:
+        mb = dest.stat().st_size / 1024 / 1024
+        print(f"   Audio grezzo archiviato -> {AUDIO_ARCHIVE.name}/{dest.name} ({mb:.1f} MB)")
+        return dest
+
+    dest.unlink(missing_ok=True)
+    print("   Estrazione audio d'archivio fallita — proseguo comunque.")
+    return None
 
 
 # ------------------------------------------------------------------ API OpenAI

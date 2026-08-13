@@ -43,7 +43,8 @@ py -3 deutschops.py lezione --auto        # elabora i video senza transcript
 | Passo | Modulo | Operazione |
 |---|---|---|
 | preflight | `do/base/preflight.py` | Video corrotto (moov → auto-`untrunc`), token Google, Anki. **Non blocca mai**: avvisa e la pipeline degrada. |
-| prep | `do/lezione/audio.py` | Compressione ffmpeg se sopra i 20 MB |
+| prep | `do/lezione/audio.py` | Backup audio **permanente** dal video grezzo (mai cancellato) — vedi § *Backup audio permanente* |
+| prep | `do/lezione/audio.py` | Compressione ffmpeg se sopra i 20 MB (per Whisper, non per l'archivio) |
 | 1 | `do/lezione/doc.py` | Google Doc di Stefanie, diff contro l'ultimo snapshot |
 | 2 | `do/lezione/audio.py` | Whisper (locale di default) → `transcripts/lezione_{data}.txt` |
 | 3 | `do/lezione/estrazione.py` | LLM → `data/lezione_{data}.json`, schema validato |
@@ -202,6 +203,30 @@ opportunistico, gira all'avvio di ogni run: nessuno scheduler.
 Non ci finiscono mai i file canonici (`transcripts/`, `data/`, `pdfs/`) né i
 `lezione_*-compressed.mp4`, referenziati dal registro. `do/base/staging.py` li protegge
 esplicitamente. Per le lezioni senza audio il transcript è **irrecuperabile**.
+
+## Backup audio permanente (`Audiolessons/_archivio_audio/`)
+
+Ad ogni lezione con video, **prima** di qualunque compressione o staging,
+`do/lezione/audio.py:archivia_audio_grezzo()` estrae l'audio dal video grezzo e lo salva **per
+sempre** in `Audiolessons/_archivio_audio/lezione_{data}.m4a`.
+
+Non è il `-compressed.mp4` dello step "prep" sopra: quello è scarnificato per Whisper (16kHz mono
+32k) e ottimizzato per la trascrizione, non per la qualità. Questo backup tiene il flusso audio
+il più vicino possibile all'originale — copia bit-esatta del flusso audio se il codec sorgente lo
+permette (`-acodec copy`), altrimenti ricodifica AAC 128k stereo 44,1kHz — e serve a poter
+rielaborare la lezione in futuro (un modello diverso, un Whisper più grosso, un errore scoperto
+tardi nell'estrazione) anche dopo che il video originale — che va in staging e scade in 20 giorni,
+vedi sopra — non c'è più.
+
+- **Non scade mai.** `do/base/staging.py:_protetto()` esclude esplicitamente `_archivio_audio/`,
+  come già faceva per `-compressed.mp4`. Nessun cleanup lo tocca.
+- **Peso trascurabile rispetto al video**: un m4a a ~128kbps di una lezione da 60' pesa qualche MB
+  contro le centinaia (fino a >1 GB) del video sorgente in `_processed/` — lo spazio non è un
+  problema anche tenendolo per sempre.
+- **Idempotente**: se `lezione_{data}.m4a` esiste già non lo rifà.
+- **Non blocca mai la pipeline**: un fallimento nell'estrazione stampa un avviso e la lezione
+  prosegue — non è un requisito, è un'assicurazione.
+- Esclusa da graphify come tutto `Audiolessons/` (media, vedi `.graphifyignore`).
 
 ## Il ponte con `shared start up/`
 

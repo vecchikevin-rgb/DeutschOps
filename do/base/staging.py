@@ -25,7 +25,7 @@ import time
 from pathlib import Path
 
 from .config import STAGING_TTL_DAYS
-from .paths import ARCHIVE
+from .paths import ARCHIVE, AUDIO_ARCHIVE
 
 
 def _protetto(p: Path) -> bool:
@@ -36,6 +36,9 @@ def _protetto(p: Path) -> bool:
         return True
     # Gia' dentro la cartella a scadenza.
     if ARCHIVE.resolve() in p.resolve().parents:
+        return True
+    # Backup audio permanente: mai toccato da questo modulo (TTL=infinito).
+    if AUDIO_ARCHIVE.resolve() in p.resolve().parents:
         return True
     return False
 

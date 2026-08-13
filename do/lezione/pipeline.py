@@ -80,6 +80,9 @@ def elabora(sorgente: str | Path, data_lezione: str | None = None,
     percorso, _diagnosi = preflight.esegui(str(sorgente))
 
     _titolo("PREP — audio")
+    # Backup permanente PRIMA di qualunque compressione/staging: il video
+    # grezzo scade in 20 giorni (base/staging.py), questo backup mai.
+    audio.archivia_audio_grezzo(percorso, data_lezione)
     percorso = audio.prepara(percorso, data_lezione)
 
     try:
