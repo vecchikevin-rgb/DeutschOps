@@ -126,6 +126,8 @@ def main(argv: list[str] | None = None) -> int:
                    default=None, help="limita il lotto a una sola fonte")
     p.add_argument("--risolvi-tracce", action="store_true",
                    help="collega le pagine con icona audio alle trascrizioni gia' OCR'ate, poi esce")
+    p.add_argument("--esporta", action="store_true",
+                   help="scrive la trascrizione integrale in Book/trascrizione-completa.md, poi esce")
 
     p = sub.add_parser("carte", help="carica le carte di una lezione in Anki")
     p.add_argument("data", help="es. 2026-07-23-stefanie")
@@ -344,6 +346,11 @@ def main(argv: list[str] | None = None) -> int:
             r = libro.risolvi_tracce()
             print(f"\n  {r['tracce_trovate']} tracce trovate nelle trascrizioni "
                   f"| {r['pagine_collegate']} pagine collegate\n")
+            return 0
+
+        if a.esporta:
+            path = libro.esporta_markdown()
+            print(f"\n  Scritto: {path}\n")
             return 0
 
         st = libro.stato()

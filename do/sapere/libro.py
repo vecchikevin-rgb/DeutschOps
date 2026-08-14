@@ -200,6 +200,71 @@ def stato() -> dict:
     return fuori
 
 
+# --------------------------------------------------------------------- export
+def esporta_markdown(destinazione: Path | None = None) -> Path:
+    """Le pagine OCR'ate come documento leggibile, per intero.
+
+    Kevin, 2026-08-13: "le trascrizioni sono da salvare integralmente come
+    documento di analisi del libro... torneranno utili per altro". Non e' un
+    sottoprodotto della ricerca (`cerca()`/`cerca_riferimento()` leggono il
+    JSON direttamente e non hanno bisogno di questo file) — e' un documento a
+    se', pensato per essere letto o dato in pasto a un'analisi futura.
+
+    Dentro `Book/`, quindi fuori da git per lo stesso motivo del resto del
+    libro (copyright — vedi il commit "Add book PDFs to gitignore").
+    Si rigenera per intero a ogni chiamata: e' derivato, non c'e' uno stato
+    incrementale da preservare.
+    """
+    pagine = _carica()
+    destinazione = destinazione or (BOOK / "trascrizione-completa.md")
+
+    righe = ["# DaF Kompakt Neu A1-B1 — trascrizione OCR",
+             f"\nGenerato il {datetime.now().isoformat(timespec='minutes')} "
+             f"da {len(pagine)} pagine OCR'ate.\n"]
+
+    for nome, pdf in FONTI:
+        chiavi = sorted(
+            (k for k in pagine if k.startswith(f"{nome}:")),
+            key=lambda k: int(k.split(":", 1)[1]),
+        )
+        if not chiavi:
+            continue
+        righe.append(f"\n## {nome} ({len(chiavi)} pagine)\n")
+
+        for k in chiavi:
+            p = pagine[k]
+            intestazione = f"### {k}"
+            if p.get("lezione"):
+                intestazione += f" — Lektion {p['lezione']}"
+            if p.get("pagina_stampata"):
+                intestazione += f" (p. {p['pagina_stampata']})"
+            intestazione += f" [{p.get('tipo', '?')}]"
+            righe.append(intestazione)
+
+            if testo := (p.get("testo") or "").strip():
+                righe.append(testo)
+
+            if esercizi := p.get("esercizi"):
+                righe.append("\n**Esercizi:**")
+                for e in esercizi:
+                    riga = f"- {e.get('consegna', '')}: {e.get('stimolo', '')}"
+                    if e.get("soluzione"):
+                        riga += f" → {e['soluzione']}"
+                    righe.append(riga)
+
+            if tracce := p.get("tracce_audio"):
+                righe.append(f"\n*Riferimenti audio: traccia/e {tracce}*")
+
+            if nota := (p.get("note") or "").strip():
+                righe.append(f"\n> Nota OCR: {nota}")
+
+            righe.append("")
+
+    destinazione.parent.mkdir(parents=True, exist_ok=True)
+    destinazione.write_text("\n".join(righe), encoding="utf-8")
+    return destinazione
+
+
 # --------------------------------------------------------------------- ricerca
 # Stesso stile di frasi.py: deterministico, zero chiamate di rete, zero costo.
 _TOKEN = re.compile(r"[a-zA-ZäöüÄÖÜß]+")

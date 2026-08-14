@@ -439,8 +439,10 @@ def _pool_distrattori() -> list[str]:
     distrattori come "against" (inglese) e "abitator" (che non esiste):
     scartabili senza sapere una parola di tedesco, quindi inutili.
 
-    La whitelist e' `vocab_db`: 1069 vocaboli estratti dalle lezioni e
-    validati, tedesco garantito. Il corpus resta come rinforzo, ma solo per le
+    La whitelist e' `vocab_db`: vocaboli estratti dalle lezioni e validati,
+    tedesco garantito (715 al 2026-08-13, su 35 JSON lezione con vocabolario —
+    numero che cresce a ogni lezione elaborata, non e' un tetto). Il corpus
+    resta come rinforzo, ma solo per le
     forme che compaiono in frasi riconosciute tedesche e almeno due volte —
     cosi' le sbavature di trascrizione, che sono episodi isolati, non entrano.
     """
