@@ -391,7 +391,17 @@ def esempio_esercizio(parole_chiave: list[str], *, quanti: int = 1) -> list[dict
 # le fonti hanno una traccia "12" con testo diverso) — sembra una registrazione
 # supplementare parallela (un CD di pratica A1 a parte), non una continuazione.
 # Resta come riserva SOLO per i numeri assenti dalla fonte primaria.
-_TESTA_TRACCIA = re.compile(r"^(\d{1,3})\s*$", re.MULTILINE)
+# Verificato il 2026-08-24: il "numero mancante" non era quasi mai mancante
+# davvero. Due difetti diversi nascosti dietro lo stesso sintomo:
+#   1. L'OCR a volte preserva l'icona dell'altoparlante davanti al numero
+#      ("🔊169", "🔊 182") — la vecchia regex, un numero SOLO sulla riga,
+#      non la vedeva. Tollerata fino a 3 caratteri non-cifra davanti.
+#   2. Alcuni "numeri mancanti" (161, 162...) erano il numero di PAGINA
+#      stampato in fondo alla pagina dell'appendice ("einhunderteinund-
+#      sechzig 161"), non una traccia — la riga ha decine di caratteri di
+#      testo prima del numero, quindi la tolleranza di 3 caratteri la esclude
+#      correttamente senza bisogno di un controllo apposta.
+_TESTA_TRACCIA = re.compile(r"^[^\d\n]{0,3}(\d{1,3})\s*$", re.MULTILINE)
 
 
 def _tracce_da_fonte(fonte: str) -> dict[int, str]:
