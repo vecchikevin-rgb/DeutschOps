@@ -345,6 +345,36 @@ def cerca_riferimento(parole_chiave: list[str], *, quante: int = 1) -> list[str]
     return fuori
 
 
+def esempio_esercizio(parole_chiave: list[str], *, quanti: int = 1) -> list[dict]:
+    """Esercizi del libro gia' RISOLTI (consegna+stimolo+soluzione, un buco
+    solo) che condividono vocabolario con `parole_chiave` — modello di
+    FORMATO per allenamento.py:riferimento(), non solo di frase come
+    `cerca_riferimento()`. Vedi Task Kevin 2026-08-24: "il libro come stile,
+    i tuoi errori come contenuto".
+
+    Solo esercizi con un buco solo: sono quelli che rispettano gia' la regola
+    3 del prompt di allenamento.py (un buco solo, altrimenti irrisolvibile).
+    """
+    chiavi = {_radice(p) for p in parole_chiave if len(p) > 3}
+    if not chiavi:
+        return []
+
+    punteggi: list[tuple[int, dict]] = []
+    for pag in _carica().values():
+        if pag.get("fonte") != "kursbuch":
+            continue
+        for e in pag.get("esercizi", []):
+            stim = (e.get("stimolo") or "").strip()
+            if not (e.get("soluzione") or "").strip() or stim.count("___") != 1:
+                continue
+            token = {_radice(t) for t in _TOKEN.findall(f"{e.get('consegna', '')} {stim}")}
+            if comuni := len(token & chiavi):
+                punteggi.append((comuni, e))
+
+    punteggi.sort(key=lambda c: -c[0])
+    return [e for _, e in punteggi[:quanti]]
+
+
 # --------------------------------------------------------------------- tracce audio
 # Verificato sui dati OCR reali (2026-08-24), non per ipotesi: la numerazione
 # delle tracce e' CONTINUA su tutto il libro (1, 2, 3... fino a ~199+), non

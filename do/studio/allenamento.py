@@ -372,22 +372,39 @@ def _neg(d: str) -> str:
 _PAROLA_CONTENUTO = re.compile(r"[a-zA-ZäöüÄÖÜß]{4,}")
 
 
-def riferimento(v: dict) -> str:
-    """Una frase reale da dare al modello come ancora, o "" se non se ne trova una.
+def riferimento(v: dict) -> tuple[str, str] | None:
+    """(testo, tipo) da dare al modello come ancora, o None se non se ne trova una.
+
+    `tipo` e' "esercizio" (consegna+stimolo+soluzione, gia' completo — vedi
+    libro.esempio_esercizio: e' un modello di FORMATO, non solo di frase) o
+    "frase" (solo il tono/vocabolario). Preferito il primo: e' il "il libro
+    come stile, i tuoi errori come contenuto" chiesto da Kevin il 2026-08-24 —
+    prima passava solo una frase, ora quando c'e' passa un esercizio vero da
+    cui il modello vede la FORMA (un buco, una consegna, una soluzione),
+    non solo il lessico.
 
     Non e' un requisito: l'esercizio si costruisce comunque senza, come prima.
     """
     from ..sapere import libro
 
     parole = _PAROLA_CONTENUTO.findall(f"{v.get('regola', '')} {v.get('corretto', '')}")
-    if trovate := libro.cerca_riferimento(parole, quante=1):
-        return trovate[0]
+
+    if v.get("tipo") != "tema":
+        if trovati := libro.esempio_esercizio(parole, quanti=1):
+            e = trovati[0]
+            testo = (f"consegna: {e.get('consegna', '')} | "
+                    f"stimolo: {e.get('stimolo', '')} | "
+                    f"soluzione: {e.get('soluzione', '')}")
+            return testo, "esercizio"
+        if trovate := libro.cerca_riferimento(parole, quante=1):
+            return trovate[0], "frase"
+        return None
 
     # I temi B2 sono fuori dal libro per definizione (il Kursbuch arriva a
     # B1): l'unica fonte reale possibile e' la ricerca esterna.
-    if v.get("tipo") == "tema":
-        return _riferimento_web(v.get("regola", ""))
-    return ""
+    if rif := _riferimento_web(v.get("regola", "")):
+        return rif, "frase"
+    return None
 
 
 def _riferimento_web(tema: str) -> str:
@@ -455,10 +472,14 @@ Non-negotiable rules:
 2. Do NOT reuse his original wrong sentence. Build a NEW context that requires
    the same structure. If he recognises the sentence, he is remembering it, not
    applying the rule.
-   Some items carry a "real German sentence for reference" — genuine text from
-   his course book or the web, touching similar vocabulary. It is there so you
-   are not inventing in a vacuum, not a template: use it only for register and
-   plausibility, never copy its wording or structure into the exercise.
+   Some items carry a "real BOOK EXERCISE for FORMAT reference" — a genuine,
+   already-solved gap-fill exercise from his course book (consegna, stimolo,
+   soluzione), touching similar vocabulary. It shows what a real exercise for
+   this level looks like — gap placement, register, sentence length, how
+   direct the instruction is. Match that FORMAT, never its wording: change
+   the sentence, the names, the scenario. Others carry a plain "real German
+   sentence for reference" (course book or web) — same rule, but for tone and
+   vocabulary only, since it is not itself a solved exercise.
 3. **The stimulus contains EXACTLY ONE gap, written `___`, and the answer is
    exactly what replaces it.** One box, one gap, one contiguous span. Two gaps
    with one answer is unanswerable — he cannot know which one you mean:
@@ -636,7 +657,14 @@ def prepara(quanti: int = QUANTI_PER_VOLTA, *, voci: list[dict] | None = None,
                 f"   why: {v['spiegazione'][:220]}"
             )
         if rif := riferimento(v):
-            riga += f"\n   real German sentence for tone/vocabulary only — do NOT reuse it or its structure: {rif!r}"
+            testo_rif, tipo_rif = rif
+            if tipo_rif == "esercizio":
+                riga += (f"\n   real BOOK EXERCISE for FORMAT reference (gap count, register, "
+                        f"difficulty) — build a NEW item in this style, do not reuse its "
+                        f"wording or structure: {testo_rif!r}")
+            else:
+                riga += (f"\n   real German sentence for tone/vocabulary only — "
+                        f"do NOT reuse it or its structure: {testo_rif!r}")
         righe.append(riga)
     mira = ""
     if livello:
