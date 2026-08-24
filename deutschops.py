@@ -128,6 +128,12 @@ def main(argv: list[str] | None = None) -> int:
                    help="collega le pagine con icona audio alle trascrizioni gia' OCR'ate, poi esce")
     p.add_argument("--esporta", action="store_true",
                    help="scrive la trascrizione integrale in Book/trascrizione-completa.md, poi esce")
+    p.add_argument("--associa-tracce", type=int, nargs="?", const=20, default=None, metavar="N",
+                   help="collega ogni esercizio alla sua traccia audio (N pagine per lotto, default 20), poi esce")
+    p.add_argument("--risolvi-esercizi", type=int, nargs="?", const=20, default=None, metavar="N",
+                   help="risolve N esercizi del libro (audio se disponibile, altrimenti grammatica), poi esce")
+    p.add_argument("--risolvi-visione", type=int, nargs="?", const=10, default=None, metavar="N",
+                   help="secondo giro con l'immagine della pagina per gli esercizi che dipendono da foto/mappe, poi esce")
 
     p = sub.add_parser("carte", help="carica le carte di una lezione in Anki")
     p.add_argument("data", help="es. 2026-07-23-stefanie")
@@ -351,6 +357,28 @@ def main(argv: list[str] | None = None) -> int:
         if a.esporta:
             path = libro.esporta_markdown()
             print(f"\n  Scritto: {path}\n")
+            return 0
+
+        if a.associa_tracce is not None:
+            r = libro.associa_tracce_esercizi(a.associa_tracce)
+            print(f"\n  {r['pagine_associate']} pagine associate | {r['rimaste']} rimaste "
+                  f"| ~{r['costo_nozionale_eur']:.2f} EUR nozionali (abbonamento: 0 in fattura)\n")
+            return 0
+
+        if a.risolvi_esercizi is not None:
+            r = libro.risolvi_esercizi(a.risolvi_esercizi)
+            if r.get("errore"):
+                print(f"\n  Lotto fallito: {r['errore']} | {r['rimasti']} rimasti\n")
+                return 1
+            print(f"\n  {r['risolti']} risolti | {r['irrisolti']} segnalati irrisolvibili "
+                  f"| {r['rimasti']} rimasti "
+                  f"| ~{r['costo_nozionale_eur']:.2f} EUR nozionali (abbonamento: 0 in fattura)\n")
+            return 0
+
+        if a.risolvi_visione is not None:
+            r = libro.risolvi_esercizi_visione(a.risolvi_visione)
+            print(f"\n  {r['risolti']} risolti | {r['irrisolti']} ancora irrisolvibili "
+                  f"| {r['rimasti']} rimasti\n")
             return 0
 
         st = libro.stato()

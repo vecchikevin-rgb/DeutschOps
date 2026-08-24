@@ -346,37 +346,384 @@ def cerca_riferimento(parole_chiave: list[str], *, quante: int = 1) -> list[str]
 
 
 # --------------------------------------------------------------------- tracce audio
-_TRACCIA = re.compile(r"(?:track|hörtext|h[oö]rtext|traccia)\D{0,4}(\d{1,3})", re.IGNORECASE)
+# Verificato sui dati OCR reali (2026-08-24), non per ipotesi: la numerazione
+# delle tracce e' CONTINUA su tutto il libro (1, 2, 3... fino a ~199+), non
+# ricomincia per Lektion. Il primo tentativo (_TRACCIA, cercava le parole
+# "track"/"traccia" prima del numero) trovava zero corrispondenze: le
+# trascrizioni segnano ogni traccia con il numero SOLO, su una riga a se',
+# senza etichetta ("1\nChristiane Brandt: Guten Morgen...\n\n2\n...").
+#
+# `book_transcriptions` (43 pagine, copre "Lektionen 1-8 A1" + "9-18 A2" +
+# "19-30 B1" in sequenza) e' la fonte primaria, perche' e' quella che segue
+# davvero la numerazione del Kursbuch — verificato: la traccia 1 li' e' il
+# dialogo di apertura della Lektion 1, esattamente cio' che kursbuch:15
+# referenzia. `transkriptionen_a1` ha numeri bassi SOVRAPPOSTI (es. entrambe
+# le fonti hanno una traccia "12" con testo diverso) — sembra una registrazione
+# supplementare parallela (un CD di pratica A1 a parte), non una continuazione.
+# Resta come riserva SOLO per i numeri assenti dalla fonte primaria.
+_TESTA_TRACCIA = re.compile(r"^(\d{1,3})\s*$", re.MULTILINE)
+
+
+def _tracce_da_fonte(fonte: str) -> dict[int, str]:
+    """Numero di traccia -> testo del dialogo, da una fonte di trascrizione.
+
+    Concatena TUTTE le pagine della fonte, in ordine, prima di spezzare: un
+    dialogo puo' proseguire oltre un cambio pagina, e spezzare pagina per
+    pagina lo troncherebbe a meta'.
+    """
+    pagine = _carica()
+    chiavi = sorted(
+        (k for k in pagine if k.startswith(f"{fonte}:")),
+        key=lambda k: int(k.split(":", 1)[1]),
+    )
+    intero = "\n\n".join(pagine[k].get("testo", "") for k in chiavi)
+
+    teste = list(_TESTA_TRACCIA.finditer(intero))
+    fuori: dict[int, str] = {}
+    for i, m in enumerate(teste):
+        numero = int(m.group(1))
+        fine = teste[i + 1].start() if i + 1 < len(teste) else len(intero)
+        testo = intero[m.end():fine].strip()
+        # La prima occorrenza vince: un numero puo' ripetersi per rumore OCR
+        # (un indice, una didascalia), il vero dialogo e' quasi sempre il primo.
+        if testo and numero not in fuori:
+            fuori[numero] = testo
+    return fuori
+
+
+def indice_tracce() -> dict[int, str]:
+    """Numero di traccia -> testo del dialogo, su tutte le fonti disponibili."""
+    primaria = _tracce_da_fonte("book_transcriptions")
+    riserva = _tracce_da_fonte("transkriptionen_a1")
+    for n, testo in riserva.items():
+        primaria.setdefault(n, testo)
+    return primaria
 
 
 def risolvi_tracce() -> dict:
-    """Prima passata, deterministica: collega le pagine con icona audio alle
-    trascrizioni delle appendici, per numero di traccia.
+    """Collega le pagine con icona audio alle trascrizioni delle appendici.
 
-    Aggiunge le frasi trovate nella trascrizione alla lista "frasi" della
-    pagina che referenzia la traccia — cosi' `cerca()` le trova senza sapere
-    che venivano da un esercizio con audio. Best-effort: se il formato delle
-    appendici non usa nessuno dei pattern in `_TRACCIA`, non collega niente
-    (non inventa un numero).
+    Aggiunge le frasi del dialogo alla lista "frasi" della pagina kursbuch che
+    referenzia quella traccia — cosi' `cerca()`/`cerca_riferimento()` le
+    trovano senza sapere che venivano da un esercizio con audio. Le frasi
+    vengono spezzate deterministicamente (stesso confine di frase di
+    `frasi.py`), non prese per intero: un turno di dialogo lungo mischierebbe
+    piu' battute in una sola "frase".
     """
+    indice = indice_tracce()
+    if not indice:
+        return {"tracce_trovate": 0, "pagine_collegate": 0}
+
     pagine = _carica()
-    per_traccia: dict[int, list[str]] = {}
-    for chiave, pag in pagine.items():
-        if pag.get("fonte") not in ("book_transcriptions", "transkriptionen_a1"):
-            continue
-        m = _TRACCIA.search(pag.get("testo", ""))
-        if m:
-            per_traccia.setdefault(int(m.group(1)), []).extend(pag.get("frasi", []))
+    confine_frase = re.compile(r"(?<=[.!?])\s+")
 
     collegate = 0
+    for pag in pagine.values():
+        if pag.get("fonte") != "kursbuch":
+            continue
+        nuove = []
+        for n in pag.get("tracce_audio", []):
+            testo = indice.get(int(n))
+            if not testo:
+                continue
+            nuove.extend(f.strip() for f in confine_frase.split(testo)
+                        if len(f.strip()) > 15)
+        if nuove:
+            esistenti = set(pag.get("frasi", []))
+            pag.setdefault("frasi", []).extend(f for f in nuove if f not in esistenti)
+            collegate += 1
+
+    _salva(pagine)
+    return {"tracce_trovate": len(indice), "pagine_collegate": collegate}
+
+
+# --------------------------------------------------------------------- esercizio <-> traccia
+SISTEMA_ASSOCIA_TRACCE = """You are matching listening-exercise instructions to \
+audio track numbers on a page of a German course book.
+
+You get the page's full transcription (which shows where each audio icon and \
+its track number sits, relative to the exercise instructions) and a numbered \
+list of the gap-fill exercises found on that page.
+
+For each exercise, decide which single track number (if any) it requires \
+listening to in order to answer — the icon closest to, or explicitly part of, \
+that exercise's instruction. An exercise with no audio icon near it gets null.
+
+Reply with valid JSON only, no backticks:
+{"associazioni":[{"n":<exercise number>,"traccia":<track number or null>}]}"""
+
+
+def associa_tracce_esercizi(quante_pagine: int = 20) -> dict:
+    """Per le pagine con esercizi E icone audio, decide quale esercizio usa
+    quale traccia. Scrive `traccia_audio` (int o None) su ogni esercizio.
+
+    PERCHE' SERVE UN GIRO A PARTE
+    L'OCR (chiama_visione) registra `tracce_audio` a livello di PAGINA — tutti
+    i numeri visti, senza dire quale esercizio li usa. Su una pagina con 3
+    esercizi e tracce [5,6,7] l'associazione non e' scontata (un esercizio puo'
+    usare piu' tracce, o le tracce possono servire a un ascolto guidato non a
+    un gap-fill specifico). Qui basta un giro di TESTO (niente vision, gia'
+    tutto trascritto) — economico, backend abbonamento.
+
+    Idempotente: salta le pagine i cui esercizi hanno gia' tutti il campo
+    `traccia_audio` valorizzato (anche a None, che significa "controllato,
+    nessuna traccia").
+    """
+    from ..base.config import llm_config
+    from ..base.llm import chiama, estrai_json
+
+    pagine = _carica()
+    da_fare = [
+        (k, p) for k, p in pagine.items()
+        if p.get("fonte") == "kursbuch" and p.get("esercizi") and p.get("tracce_audio")
+        and any("traccia_audio" not in e for e in p["esercizi"])
+    ]
+    if not da_fare:
+        return {"pagine_associate": 0, "rimaste": 0, "costo_eur": 0.0}
+
+    lotto = da_fare[:quante_pagine]
+    fatte = 0
+    costo_tot = 0.0
+    for chiave, pag in lotto:
+        righe = "\n".join(
+            f"{i}. consegna: {e.get('consegna','')!r} | stimolo: {e.get('stimolo','')!r}"
+            for i, e in enumerate(pag["esercizi"], 1)
+        )
+        user = (
+            f"PAGE TRANSCRIPTION:\n{pag.get('testo', '')}\n\n"
+            f"TRACK NUMBERS SEEN ON THIS PAGE: {pag['tracce_audio']}\n\n"
+            f"EXERCISES ({len(pag['esercizi'])}):\n{righe}"
+        )
+        try:
+            testo, uso = chiama(SISTEMA_ASSOCIA_TRACCE, user,
+                                llm_config(max_tokens=2000, effort="low", backend="claude"))
+            per_numero = {int(a["n"]): a.get("traccia")
+                          for a in estrai_json(testo).get("associazioni", [])
+                          if str(a.get("n", "")).strip().isdigit()}
+        except Exception as e:                                  # noqa: BLE001
+            print(f"   {chiave}: {type(e).__name__}: {str(e)[:150]}")
+            continue
+
+        for i, e in enumerate(pag["esercizi"], 1):
+            e["traccia_audio"] = per_numero.get(i)
+        costo_tot += uso.costo_nozionale_eur
+        fatte += 1
+        _salva(pagine)          # incrementale, come l'OCR
+
+    return {"pagine_associate": fatte, "rimaste": len(da_fare) - fatte,
+            "costo_nozionale_eur": round(costo_tot, 4)}
+
+
+# --------------------------------------------------------------------- risoluzione esercizi
+SISTEMA_RISOLVI = """You solve gap-fill exercises from a German course book \
+(DaF Kompakt Neu, A1-B1).
+
+Each item has the instruction and the German text with one or more blanks \
+(___), PLUS the full transcription of the page it comes from — exercises \
+routinely reference a reading passage, list, or dialogue printed elsewhere on \
+the SAME page (\"see 2a\", \"see the ad above\", a table, a list of names) and \
+that referenced text is usually right there in the page transcription. Read \
+it before deciding you lack the reference. Some items also carry an AUDIO \
+TRANSCRIPT — when present, it is the SOURCE OF TRUTH for that item: the \
+answer is what the transcript actually says, not your best grammatical guess.
+
+For each item, return the exact text filling each blank, in order, joined by \
+" | " if there is more than one blank. If you truly cannot determine the \
+answer even after checking the page transcription (open-ended personal \
+response, illegible OCR, a photo/image to match that the transcription can't \
+capture), return "" and say why in "nota" — an empty answer is honest, a \
+guessed one is not.
+
+Reply with valid JSON only, no backticks:
+{"risposte":[{"n":<item number>,"soluzione":"<answer(s), or ''>","nota":"<reason if empty, else ''>"}]}"""
+
+
+def risolvi_esercizi(quanti: int = 20) -> dict:
+    """Risolve un lotto di esercizi senza soluzione. Priorita': traccia audio
+    risolta (fonte di verita') o sola grammatica.
+
+    Le 64 soluzioni gia' stampate nel libro (`soluzione` non vuota dall'OCR)
+    non passano di qui: sono gia' fatte, a costo zero.
+
+    Il lotto e' preso PER PAGINA INTERA, non a esercizi sciolti — verificato
+    il 2026-08-24: molti esercizi rimandano a un testo/tabella/lista stampata
+    altrove sulla STESSA pagina ("vedi 2a", un annuncio, un volantino), gia'
+    nel corpus (`testo` della pagina). Raggrupparli permette di mandare quel
+    testo UNA volta per pagina invece che ripeterlo per ogni esercizio —
+    piu' pagine intere in un lotto senza sprecare token.
+
+    Salvataggio incrementale per lotto, come `associa_tracce_esercizi()`.
+    """
+    pagine = _carica()
+    per_pagina: dict[str, list[int]] = {}
     for chiave, pag in pagine.items():
         if pag.get("fonte") != "kursbuch":
             continue
-        for n in pag.get("tracce_audio", []):
-            if frasi := per_traccia.get(int(n)):
-                esistenti = set(pag.get("frasi", []))
-                pag.setdefault("frasi", []).extend(f for f in frasi if f not in esistenti)
-                collegate += 1
+        indici = [i for i, e in enumerate(pag.get("esercizi", []))
+                 if not (e.get("soluzione") or "").strip()]
+        if indici:
+            per_pagina[chiave] = indici
+
+    totale_da_fare = sum(len(v) for v in per_pagina.values())
+    if not totale_da_fare:
+        return {"risolti": 0, "irrisolti": 0, "rimasti": 0, "costo_nozionale_eur": 0.0}
+
+    # Pagine intere finche' non si arriva a `quanti` esercizi (l'ultima pagina
+    # puo' sforare un po': meglio un lotto leggermente piu' grande che
+    # spezzare gli esercizi di una pagina fra due lotti diversi).
+    scelte: dict[str, list[int]] = {}
+    presi = 0
+    for chiave, indici in per_pagina.items():
+        if presi >= quanti:
+            break
+        scelte[chiave] = indici
+        presi += len(indici)
+
+    tutti_gli_esercizi = [pagine[c]["esercizi"][i] for c, idx in scelte.items() for i in idx]
+    tracce = indice_tracce() if any(e.get("traccia_audio") for e in tutti_gli_esercizi) else {}
+
+    righe: list[str] = []
+    mappa_n: dict[int, tuple[str, int]] = {}
+    n = 0
+    for chiave, indici in scelte.items():
+        pag = pagine[chiave]
+        righe.append(f"=== PAGE {chiave} ===")
+        if testo_pag := (pag.get("testo") or "").strip():
+            righe.append(f"full page: {testo_pag[:2500]}")
+        for i in indici:
+            n += 1
+            mappa_n[n] = (chiave, i)
+            e = pag["esercizi"][i]
+            pezzo = (f"{n}. consegna: {e.get('consegna', '')}\n"
+                    f"   stimolo: {e.get('stimolo', '')}")
+            if e.get("traccia_audio") and (testo_tr := tracce.get(int(e["traccia_audio"]))):
+                # 800 caratteri tagliava a meta' i dialoghi/interviste lunghe:
+                # visto piu' volte "audio transcript cuts off" fra le note di
+                # irrisolvibilita' (2026-08-24). I dialoghi delle appendici
+                # arrivano a ~2-3000 caratteri, non poche righe.
+                pezzo += f"\n   audio transcript: {testo_tr[:3000]}"
+            righe.append(pezzo)
+
+    from ..base.config import llm_config
+    from ..base.llm import chiama, estrai_json
+
+    try:
+        testo, uso = chiama(
+            SISTEMA_RISOLVI, "ITEMS:\n" + "\n\n".join(righe),
+            llm_config(max_tokens=8000, effort="low", backend="claude"),
+        )
+        risultati = {int(r["n"]): r for r in estrai_json(testo).get("risposte", [])
+                    if str(r.get("n", "")).strip().isdigit()}
+    except Exception as e:                                      # noqa: BLE001
+        return {"risolti": 0, "irrisolti": 0, "rimasti": totale_da_fare,
+                "costo_nozionale_eur": 0.0, "errore": f"{type(e).__name__}: {str(e)[:200]}"}
+
+    risolti = irrisolti = 0
+    for n, (chiave, i) in mappa_n.items():
+        e = pagine[chiave]["esercizi"][i]
+        r = risultati.get(n)
+        if not r:
+            continue
+        if sol := (r.get("soluzione") or "").strip():
+            pagine[chiave]["esercizi"][i]["soluzione"] = sol
+            pagine[chiave]["esercizi"][i]["soluzione_fonte"] = (
+                "audio" if e.get("traccia_audio") else "grammatica")
+            risolti += 1
+        elif nota := (r.get("nota") or "").strip():
+            pagine[chiave]["esercizi"][i]["nota_irrisolto"] = nota
+            irrisolti += 1
 
     _salva(pagine)
-    return {"tracce_trovate": len(per_traccia), "pagine_collegate": collegate}
+    return {"risolti": risolti, "irrisolti": irrisolti,
+            "rimasti": totale_da_fare - len(mappa_n),
+            "costo_nozionale_eur": round(uso.costo_nozionale_eur, 4)}
+
+
+# ----------------------------------------------------- risoluzione visiva (secondo giro)
+# Sui 730 esercizi, il giro di solo testo si ferma al 76% (558) — verificato
+# il 2026-08-24, categorizzando le note di rifiuto. Il resto si spacca in tre:
+# ~60 giustamente irrisolvibili (produzione libera, nessuna risposta unica),
+# ~20 dove il modello ha rifiutato una traccia audio "non pertinente" invece
+# di rispondere a caso (il controllo di coerenza ha funzionato, non e' un
+# buco), e **~30 che citano una foto, una mappa o un simbolo** — questi soli
+# sono recuperabili, e solo mandando l'immagine della pagina, non altro testo.
+_PAROLE_IMMAGINE = ("photo", "foto", "image", "immagin", "picture", "map",
+                    "mappa", "karte", "route", "draw", "disegn", "symbol", "bild")
+
+
+def risolvi_esercizi_visione(quanti: int = 10) -> dict:
+    """Secondo giro, solo per gli esercizi che il primo ha segnalato come
+    dipendenti da un elemento visivo. Manda l'immagine della pagina, non solo
+    la trascrizione — piu' caro (una chiamata vision a pagina, non un lotto di
+    piu' pagine come `risolvi_esercizi()`), quindi lotti piccoli di proposito.
+    """
+    pagine = _carica()
+    fonti = dict(FONTI)
+    da_fare: list[tuple[str, int]] = []
+    for chiave, pag in pagine.items():
+        if pag.get("fonte") != "kursbuch":
+            continue
+        for i, e in enumerate(pag.get("esercizi", [])):
+            if (e.get("soluzione") or "").strip():
+                continue
+            nota = (e.get("nota_irrisolto") or "").lower()
+            if any(p in nota for p in _PAROLE_IMMAGINE):
+                da_fare.append((chiave, i))
+
+    if not da_fare:
+        return {"risolti": 0, "irrisolti": 0, "rimasti": 0, "costo_nozionale_eur": 0.0}
+
+    lotto = da_fare[:quanti]
+    per_pagina: dict[str, list[int]] = {}
+    for chiave, i in lotto:
+        per_pagina.setdefault(chiave, []).append(i)
+
+    cfg = llm_config(backend="claude")
+
+    risolti = irrisolti = 0
+    with tempfile.TemporaryDirectory(prefix="libro_visione_") as tmp:
+        cartella = Path(tmp)
+        for chiave, indici in per_pagina.items():
+            fonte, idx_str = chiave.split(":", 1)
+            pdf = fonti.get(fonte)
+            if not pdf:
+                continue
+            pag = pagine[chiave]
+            try:
+                immagine = _rendi_pagina(pdf, int(idx_str), cartella)
+            except Exception as e:                              # noqa: BLE001
+                print(f"   {chiave}: render fallito: {str(e)[:150]}")
+                continue
+
+            righe = []
+            for n, i in enumerate(indici, 1):
+                e = pag["esercizi"][i]
+                righe.append(f"{n}. consegna: {e.get('consegna', '')}\n"
+                            f"   stimolo: {e.get('stimolo', '')}\n"
+                            f"   (previously flagged: {e.get('nota_irrisolto', '')})")
+            user = ("Look at the photos, maps, or symbols on this page to solve "
+                    "these exercises:\n\n" + "\n\n".join(righe))
+
+            try:
+                testo, uso = chiama_visione(SISTEMA_RISOLVI, user, immagine, cfg)
+                risultati = {int(r["n"]): r for r in estrai_json(testo).get("risposte", [])
+                            if str(r.get("n", "")).strip().isdigit()}
+            except Exception as e:                              # noqa: BLE001
+                print(f"   {chiave}: {type(e).__name__}: {str(e)[:150]}")
+                continue
+
+            for n, i in enumerate(indici, 1):
+                r = risultati.get(n)
+                if not r:
+                    continue
+                if sol := (r.get("soluzione") or "").strip():
+                    pag["esercizi"][i]["soluzione"] = sol
+                    pag["esercizi"][i]["soluzione_fonte"] = "immagine"
+                    risolti += 1
+                elif nota := (r.get("nota") or "").strip():
+                    pag["esercizi"][i]["nota_irrisolto"] = nota
+                    irrisolti += 1
+            _salva(pagine)
+
+    return {"risolti": risolti, "irrisolti": irrisolti,
+            "rimasti": len(da_fare) - len(lotto)}
