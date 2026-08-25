@@ -410,7 +410,14 @@ def libro_lektioni() -> dict:
             # lezione collegata. Il design voleva "% di temi coperti", ma
             # richiede sapere quanti temi ha una Lektion in totale — non
             # estratto da questo piano. Definire "tema" prima di affinarla.
+            # NON e' mai None come pratica_pct: il frontend non ci disegna piu'
+            # sopra una barra, perche' un 0/100 fisso sembra piu' sicuro di
+            # quanto sia — vedi n_lezioni_collegate qui sotto, che e' il dato
+            # vero dietro questo numero. Nessun consumatore oggi legge
+            # copertura_pct (verificato con grep su web/ e do/); tenuta solo
+            # per non cambiare la forma della risposta di questo endpoint.
             "copertura_pct": round(100 * min(1, len(collegate) / 1)) if collegate else 0,
+            "n_lezioni_collegate": len(collegate),
         })
     return {"lektioni": fuori}
 
@@ -453,8 +460,24 @@ def libro_listening(n: int, lektion_filtro: int | None = None) -> dict:
 
 
 def libro_risposta(voce: dict) -> dict:
-    """Rivela la soluzione e registra il tentativo. L'unico endpoint Listening
-    con effetto collaterale — gli altri sono di sola lettura."""
+    """Rivela la soluzione e, solo quando arriva un voto vero, registra il
+    tentativo.
+
+    `rivelaAscolto()` (frontend) chiama questo endpoint due volte per esercizio:
+    una per mostrare la soluzione (senza sapere ancora se e' giusta), una per
+    registrare il voto vero dato dopo averla letta. Le due chiamate NON possono
+    scrivere entrambe: `sessione.annota_risposta()` APPENDE, non sovrascrive
+    (vedi il suo docstring — e' una scelta voluta, per non perdere sessioni
+    interrotte), quindi due scritture per esercizio raddoppierebbero ogni
+    conteggio a valle (`_pratica_pct` qui sotto, e `progressi.studio()`).
+
+    La distinzione e' su `voce.get("corretta") is not None`, non su verita':
+    chiave assente o `null` vuol dire "sto solo rivelando, non ho ancora
+    votato" (nessuna scrittura), `corretta: false` vuol dire "voto vero, e il
+    voto e' sbagliato" (scrive). Un controllo di verita' (`if
+    voce.get("corretta")`) confonderebbe i due casi, perche' `False` e
+    "assente/null" sono entrambi falsy in Python.
+    """
     from ..sapere import libro
     from ..studio import sessione
 
@@ -470,11 +493,11 @@ def libro_risposta(voce: dict) -> dict:
         return {"errore": "esercizio non trovato"}
     e = d["esercizi"][indice]
 
-    corretta = bool(voce.get("corretta"))
-    sessione.annota_risposta({
-        "zona": "listening", "lektion": lektion_n, "chiave_pagina": chiave,
-        "indice_esercizio": indice, "corretta": corretta,
-    })
+    if voce.get("corretta") is not None:
+        sessione.annota_risposta({
+            "zona": "listening", "lektion": lektion_n, "chiave_pagina": chiave,
+            "indice_esercizio": indice, "corretta": bool(voce.get("corretta")),
+        })
     return {"soluzione": e.get("soluzione", ""), "fonte": e.get("soluzione_fonte", "")}
 
 

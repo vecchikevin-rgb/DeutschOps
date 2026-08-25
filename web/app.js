@@ -39,6 +39,11 @@ const stato = {
   registraMs: false,   // il modulo per registrare un Modellsatz
   kursbuch: null,      // { lektioni, aperta } della zona Kursbuch
   kursbuchDettaglio: null,   // il dettaglio della Lektion aperta
+  kursbuchDettaglioNumero: null,  // quale Lektion e' aperta nel dettaglio —
+                                   // separato da kursbuch.aperta perche' si puo'
+                                   // arrivare al dettaglio anche da fuori la zona
+                                   // Kursbuch (es. il puntatore in Exam), dove
+                                   // stato.kursbuch e' ancora null
   ascolto: null,       // sessione di ascolto in corso
 };
 
@@ -1433,7 +1438,7 @@ function disegnaKursbuch() {
         return el('div', { class: 'kursbuch-tappa-espansa' },
           nodo,
           disegnaBarra('Your practice', l.pratica_pct),
-          disegnaBarra('Covered with Stefanie', l.copertura_pct),
+          disegnaCollegate(l.n_lezioni_collegate),
         );
       })
     )
@@ -1444,11 +1449,27 @@ function disegnaBarra(etichetta, pct) {
   if (pct === null || pct === undefined) {
     return el('p', { class: 'provenienza' }, `${etichetta}: not enough data yet`);
   }
-  return el('div', { class: 'kursbuch-barra' },
-    el('div', { class: 'kursbuch-barra-etichetta' },
+  // Riusa il pattern esistente .avanzamento + .barra/.barra i (vedi lettura e
+  // allenamento) invece di inventare classi kursbuch-* — stessa forma di DOM,
+  // stile gia' definito in stile.css, niente CSS nuovo da scrivere e tenere
+  // sincrono.
+  return el('div', {},
+    el('div', { class: 'avanzamento' },
       el('span', {}, etichetta), el('span', {}, `${pct}%`)),
-    el('div', { class: 'kursbuch-barra-fondo' },
-      el('i', { class: 'kursbuch-barra-riempita', style: `width:${pct}%` })));
+    el('div', { class: 'barra' },
+      el('i', { style: `width:${pct}%` })));
+}
+
+// `copertura_pct` (dal server) e' 0 o 100 fisso — non una vera percentuale
+// (vedi il commento in do/uscite/web.py:libro_lektioni). A differenza di
+// pratica_pct non e' mai `null`, quindi non passerebbe mai per il ramo "not
+// enough data" di disegnaBarra: mostrerebbe sempre un numero sicuro anche
+// quando il dato dietro e' debole. Qui si mostra invece il conteggio vero
+// delle lezioni collegate — meno appariscente, ma non finto.
+function disegnaCollegate(n) {
+  return el('div', { class: 'avanzamento' },
+    el('span', {}, 'Covered with Stefanie'),
+    el('span', {}, n ? `${n} lesson${n === 1 ? '' : 's'} touched this topic` : 'none yet'));
 }
 
 async function avviaDettaglioLektion(numero) {
@@ -1457,6 +1478,7 @@ async function avviaDettaglioLektion(numero) {
 }
 
 function vaiDettaglioLektion(numero) {
+  stato.kursbuchDettaglioNumero = numero;
   stato.zona = 'kursbuch-dettaglio';
   stato.kursbuchDettaglio = null;
   disegna();
@@ -1464,7 +1486,7 @@ function vaiDettaglioLektion(numero) {
 
 function disegnaKursbuchDettaglio() {
   const c = $('#contenuto');
-  const numero = stato.kursbuch?.aperta;
+  const numero = stato.kursbuchDettaglioNumero ?? stato.kursbuch?.aperta;
   if (!stato.kursbuchDettaglio) {
     c.replaceChildren(el('p', { class: 'vuoto' }, 'Loading Lektion…'));
     avviaDettaglioLektion(numero).then(disegna).catch(mostraErrore);
@@ -1551,16 +1573,10 @@ function disegnaAscolto() {
 }
 
 async function rivelaAscolto() {
-  // Decisione presa in Task 9 (vedi task-9-report.md): l'endpoint POST
-  // /api/libro/risposta (Task 6) registra SEMPRE il tentativo — non esiste
-  // una "rivela senza registrare" lato server, e crearla e' fuori dallo
-  // scope di questo task (solo web/app.js). Per mostrare la soluzione
-  // prima del voto vero, questa chiamata registra un `corretta: false`
-  // provvisorio, che avantiAscolto() sovrascrive subito dopo col voto
-  // reale, sulla stessa chiave (lektion/chiave_pagina/indice_esercizio).
-  // Il log finisce quindi con un record "false" provvisorio seguito dal
-  // record vero per ogni esercizio affrontato — difetto onesto e minimo,
-  // non nascosto, non risolvibile qui senza toccare do/uscite/web.py.
+  // Sola lettura: niente campo `corretta` nel corpo. do/uscite/web.py
+  // (libro_risposta) distingue "corretta" assente da "corretta: false" — la
+  // prima non scrive nel registro, la seconda si'. Il voto vero arriva solo
+  // dopo, da avantiAscolto(), che e' quindi l'UNICA scrittura per esercizio.
   const a = stato.ascolto;
   const e = a.esercizi[a.i];
   const r = await api('/api/libro/risposta', {
@@ -1568,7 +1584,7 @@ async function rivelaAscolto() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       lektion: e.lektion, chiave_pagina: e.chiave_pagina,
-      indice_esercizio: e.indice_esercizio, corretta: false,  // provvisorio, il voto vero arriva dopo
+      indice_esercizio: e.indice_esercizio,
     }),
   });
   a.soluzione = r.soluzione;
@@ -1880,7 +1896,15 @@ function sezioneTemi(e) {
           el('span', { class: 'de', style: 'font-size:1.0625rem' }, t.tema)),
         t.nota ? el('div', { class: 'provenienza' }, t.nota) : null,
         el('button', { class: 'gradino-tasto', onclick: () => vaiACercare(t.tema) },
-          'Look it up'))));
+          'Look it up'),
+        // Puntatore verso il Kursbuch, solo se esame() ha trovato un esempio
+        // in una Lektion — vedi do/uscite/web.py:esame(). Stesso stile del
+        // tasto "Look it up" qui sopra: e' un'altra scorciatoia di
+        // navigazione sulla stessa riga, non un componente nuovo.
+        t.lektion_libro
+          ? el('button', { class: 'gradino-tasto', onclick: () => vaiDettaglioLektion(t.lektion_libro) },
+              `→ Lektion ${t.lektion_libro}`)
+          : null)));
 }
 
 function sezioneModuli(e) {
