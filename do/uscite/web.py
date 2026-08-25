@@ -62,6 +62,7 @@ TIPI = {
     ".js": "text/javascript; charset=utf-8",
     ".svg": "image/svg+xml",
     ".json": "application/json; charset=utf-8",
+    ".png": "image/png",
 }
 
 
@@ -486,6 +487,20 @@ class Gestore(BaseHTTPRequestHandler):
                 except ValueError:
                     return self._json({"errore": "numero Lektion non valido"}, 400)
                 return self._json(libro_lektion(n))
+            if percorso.startswith("/api/libro/pagina/"):
+                resto = percorso[len("/api/libro/pagina/"):]
+                if "/" not in resto:
+                    return self._json({"errore": "percorso immagine non valido"}, 400)
+                fonte, indice_str = resto.rsplit("/", 1)
+                try:
+                    indice = int(indice_str)
+                except ValueError:
+                    return self._json({"errore": "indice non valido"}, 400)
+                from ..sapere import libro
+                path = libro.pagina_cachata(fonte, indice)
+                if path is None:
+                    return self._json({"errore": "pagina non trovata"}, 404)
+                return self._invia(path.read_bytes(), TIPI[".png"])
             if percorso.startswith("/api/"):
                 return self._json({"errore": "endpoint sconosciuto"}, 404)
         except Exception as e:                       # degrada, non rompe
