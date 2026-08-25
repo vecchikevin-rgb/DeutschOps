@@ -134,6 +134,8 @@ def main(argv: list[str] | None = None) -> int:
                    help="risolve N esercizi del libro (audio se disponibile, altrimenti grammatica), poi esce")
     p.add_argument("--risolvi-visione", type=int, nargs="?", const=10, default=None, metavar="N",
                    help="secondo giro con l'immagine della pagina per gli esercizi che dipendono da foto/mappe, poi esce")
+    p.add_argument("--collega-lezioni", type=int, nargs="?", const=10, default=None, metavar="N",
+                   help="collega N lezioni non ancora mappate a una Lektion del libro, poi esce")
 
     p = sub.add_parser("carte", help="carica le carte di una lezione in Anki")
     p.add_argument("data", help="es. 2026-07-23-stefanie")
@@ -379,6 +381,12 @@ def main(argv: list[str] | None = None) -> int:
             r = libro.risolvi_esercizi_visione(a.risolvi_visione)
             print(f"\n  {r['risolti']} risolti | {r['irrisolti']} ancora irrisolvibili "
                   f"| {r['rimasti']} rimasti\n")
+            return 0
+
+        if a.collega_lezioni is not None:
+            r = libro.classifica_lezioni_per_lektion(a.collega_lezioni)
+            print(f"\n  {r['classificate']} classificate | {r['rimaste']} rimaste "
+                  f"| ~{r['costo_nozionale_eur']:.2f} EUR nozionali (abbonamento: 0 in fattura)\n")
             return 0
 
         st = libro.stato()

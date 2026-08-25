@@ -29,6 +29,7 @@ REGISTRY = ROOT / "lesson_registry.json"
 
 BOOK = ROOT / "Book"                    # scansioni del Kursbuch, escluse da git
 LIBRO_PAGINE = DATA / "libro_pagine.json"  # OCR pagina per pagina, vedi do/sapere/libro.py
+LIBRO_LEZIONI_MAPPA = DATA / "libro_lezioni_mappa.json"  # collegamento lezione<->Lektion, vedi do/sapere/libro.py
 
 # --------------------------------------------------------------- input / staging
 AUDIO = ROOT / "Audiolessons"

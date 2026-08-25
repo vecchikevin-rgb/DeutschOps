@@ -45,7 +45,7 @@ from pathlib import Path
 
 from ..base.config import llm_config
 from ..base.llm import chiama_visione, estrai_json
-from ..base.paths import BOOK, LIBRO_PAGINE
+from ..base.paths import BOOK, LIBRO_LEZIONI_MAPPA, LIBRO_PAGINE
 
 # I tre PDF sorgente e la loro etichetta. L'ordine e' quello in cui si OCRano:
 # prima il Kursbuch (il grosso del materiale), poi le due appendici di
@@ -883,3 +883,95 @@ def risolvi_esercizi_visione(quanti: int = 10) -> dict:
 
     return {"risolti": risolti, "irrisolti": irrisolti,
             "rimasti": len(da_fare) - len(lotto)}
+
+
+# --------------------------------------------------------------------- lezioni <-> Lektion
+def _carica_mappa_lezioni() -> dict:
+    try:
+        return json.loads(LIBRO_LEZIONI_MAPPA.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def lezioni_per_lektion(numero: int) -> list[dict]:
+    """Le lezioni vere con Stefanie collegate a questa Lektion, dalla mappa
+    gia' costruita da `classifica_lezioni_per_lektion()`. Nessuna chiamata
+    di rete: legge solo cio' che e' gia' salvato."""
+    fuori = []
+    for data_lezione, voci in _carica_mappa_lezioni().items():
+        for v in voci:
+            if isinstance(v, dict) and v.get("lektion") == numero:
+                fuori.append({"data_lezione": data_lezione, "motivo": v.get("motivo", "")})
+    return fuori
+
+
+SISTEMA_CLASSIFICA_LEZIONE = """You match one German lesson to the course \
+book Lektionen it overlaps with.
+
+You get the lesson's topic and grammar points, and the titles of all 30 \
+Lektionen (numbered). Pick 0-3 Lektionen that genuinely overlap in grammar \
+or vocabulary theme — not every lesson matches something in an A1-B1 book \
+(B2-only topics, free conversation, exam prep have no match, and that is a \
+correct answer, not a failure).
+
+Reply with valid JSON only, no backticks:
+{"lektionen":[{"numero":<int>,"motivo":"<one short line: what overlaps>"}]}
+Empty list if nothing genuinely overlaps."""
+
+
+def classifica_lezioni_per_lektion(quante: int = 10) -> dict:
+    """Classifica un lotto di lezioni non ancora mappate. Incrementale:
+    rilanciare aggiunge solo le lezioni nuove.
+
+    BACKEND ABBONAMENTO SEMPRE — lavoro a lotti su materiale storico, non un
+    percorso interattivo. Vedi CLAUDE.md "Chi paga".
+    """
+    from ..base.config import llm_config
+    from ..base.llm import chiama, estrai_json
+    from ..base.paths import DATA
+
+    mappa = _carica_mappa_lezioni()
+    titoli = [f"{l['numero']}. {l['titolo']}" for l in lektioni() if l["titolo"]]
+    if not titoli:
+        return {"classificate": 0, "rimaste": 0, "costo_nozionale_eur": 0.0}
+
+    da_fare = []
+    for f in sorted(DATA.glob("lezione_*.json")):
+        etichetta = f.stem.replace("lezione_", "")
+        if etichetta in mappa:
+            continue
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        da_fare.append((etichetta, d))
+
+    if not da_fare:
+        return {"classificate": 0, "rimaste": 0, "costo_nozionale_eur": 0.0}
+
+    lotto = da_fare[:quante]
+    nozionale = 0.0
+    for etichetta, d in lotto:
+        regole = "; ".join((g.get("rule") or "") for g in d.get("grammar_points", []))[:500]
+        user = (
+            f"LESSON TOPIC: {d.get('topic', '')}\n"
+            f"GRAMMAR POINTS: {regole}\n\n"
+            f"LEKTIONEN:\n" + "\n".join(titoli)
+        )
+        try:
+            testo, uso = chiama(SISTEMA_CLASSIFICA_LEZIONE, user,
+                                llm_config(max_tokens=1000, effort="low", backend="claude"))
+            voci = [v for v in estrai_json(testo).get("lektionen", [])
+                   if isinstance(v, dict) and isinstance(v.get("numero"), int)]
+        except Exception as e:                              # noqa: BLE001
+            print(f"   {etichetta}: {type(e).__name__}: {str(e)[:150]}")
+            continue
+        mappa[etichetta] = [{"lektion": v["numero"], "motivo": (v.get("motivo") or "")[:200]}
+                            for v in voci]
+        nozionale += uso.costo_nozionale_eur
+        LIBRO_LEZIONI_MAPPA.parent.mkdir(parents=True, exist_ok=True)
+        LIBRO_LEZIONI_MAPPA.write_text(json.dumps(mappa, ensure_ascii=False, indent=2),
+                                       encoding="utf-8")
+
+    return {"classificate": len(lotto), "rimaste": len(da_fare) - len(lotto),
+            "costo_nozionale_eur": round(nozionale, 4)}
