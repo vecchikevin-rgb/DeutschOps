@@ -1,0 +1,3037 @@
+{
+  "errors": [
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Ich weiß nicht, wenn mein Freund bald kommt",
+      "correction": "Ich weiß nicht, ob mein Freund bald kommt",
+      "rule": "ob statt wenn in indirekten Fragen",
+      "explanation_en": "Kevin used 'wenn' (if/when as a condition) instead of 'ob' (whether/if in indirect questions). In indirect questions, German requires 'ob', not 'wenn'.",
+      "example_correct": "Ich weiß nicht, ob er heute kommt.",
+      "lesson_date": "2026-05-14-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "wenn es für du okay ist",
+      "correction": "wenn das für dich okay ist",
+      "rule": "Präposition 'für' verlangt Akkusativ",
+      "explanation_en": "After the preposition 'für', you must use the accusative case. 'Du' is nominative; the correct accusative form is 'dich'.",
+      "example_correct": "Ist das für dich in Ordnung?",
+      "lesson_date": "2026-05-15-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Du habe mir gefragt",
+      "correction": "Du hast mich gefragt",
+      "rule": "Konjugation Präsens + Akkusativpronomen",
+      "explanation_en": "Kevin used the wrong verb form ('habe' instead of 'hast') and the wrong pronoun case ('mir' dative instead of 'mich' accusative). The correct sentence uses 'hast' for 'du' and 'mich' as the direct object.",
+      "example_correct": "Du hast mich gestern gefragt, ob ich Zeit habe.",
+      "lesson_date": "2026-05-15-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "ob ich soll him schreiben",
+      "correction": "ob ich ihm schreiben soll",
+      "rule": "Modalverb am Ende im Nebensatz",
+      "explanation_en": "In a subordinate clause (Nebensatz), the conjugated verb (here the modal 'soll') must go to the end, after the infinitive 'schreiben'.",
+      "example_correct": "Ich überlege, ob ich ihm schreiben soll.",
+      "lesson_date": "2026-05-15-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Wie Sie mir sagen, ob der Zug nach Zurich hier abfahren",
+      "correction": "Können Sie mir sagen, ob der Zug nach Zürich hier abfährt",
+      "rule": "Modalverb + Verbkonjugation im Nebensatz",
+      "explanation_en": "Kevin missed the modal verb 'können' at the start and used the infinitive 'abfahren' instead of the conjugated form 'abfährt' in the subordinate clause.",
+      "example_correct": "Können Sie mir sagen, ob der Zug nach Berlin hier abfährt?",
+      "lesson_date": "2026-05-15-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "ist der Supermarkt",
+      "correction": "ob der Supermarkt",
+      "rule": "Nebensatz beginnt mit 'ob'",
+      "explanation_en": "In the indirect question, Kevin started with 'ist' (verb-first, direct question word order) instead of 'ob' (subordinating conjunction). The correct form uses 'ob' and moves the verb to the end.",
+      "example_correct": "Ich weiß nicht, ob der Supermarkt sonntags geöffnet ist.",
+      "lesson_date": "2026-05-15-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "ist es jemanden, der hier parken kann",
+      "correction": "ob man hier parken darf",
+      "rule": "Nebensatz mit 'ob' + Verb am Ende",
+      "explanation_en": "Kevin attempted a relative clause structure when the task required an indirect yes/no question with 'ob'. The correction uses 'ob man ... darf' with the verb at the end.",
+      "example_correct": "Ich möchte wissen, ob man hier parken darf.",
+      "lesson_date": "2026-05-15-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Ich habe keine Hand",
+      "correction": "Ich habe keine Ahnung",
+      "rule": "Feste Redewendung 'keine Ahnung haben'",
+      "explanation_en": "Kevin said 'Hand' (hand) instead of 'Ahnung' (idea/clue). The fixed expression in German is 'Ich habe keine Ahnung' meaning 'I have no idea'.",
+      "example_correct": "Ich habe keine Ahnung, wo er ist.",
+      "lesson_date": "2026-05-15-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Mir gefällt mit Bjarce",
+      "correction": "Mir gefällt ... (mit Dativ)",
+      "rule": "Verb 'gefallen' mit Dativ",
+      "explanation_en": "Kevin attempted to explain the dative usage but mispronounced/misunderstood. Stefanie corrected that 'gefallen' always takes a dative pronoun (mir, dir, ihm, etc.).",
+      "example_correct": "Mir gefällt deine neue Jacke.",
+      "lesson_date": "2026-05-15-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "C-Fragen ihre neue Arbeit gefällt",
+      "correction": "ob ihr die neue Arbeit gefällt / ob ihnen die neue Arbeit gefällt",
+      "rule": "Nebensatz: 'ob' + Subjekt + Verb am Ende",
+      "explanation_en": "Kevin broke off mid-sentence. The correct structure for the indirect question is 'Darf ich sie fragen, ob ihr/ihnen die neue Arbeit gefällt' with the verb 'gefällt' at the end.",
+      "example_correct": "Darf ich sie fragen, ob ihnen die neue Arbeit gefällt?",
+      "lesson_date": "2026-05-15-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "ich habe nicht so gut gefühlt",
+      "correction": "ich habe mich nicht so gut gefühlt",
+      "rule": "Reflexive Verben brauchen Reflexivpronomen",
+      "explanation_en": "The verb 'sich fühlen' (to feel) is reflexive in German and requires the reflexive pronoun 'mich'. Kevin omitted it.",
+      "example_correct": "Ich habe mich heute nicht so gut gefühlt.",
+      "lesson_date": "2026-05-18-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "es beginnete zu regnen",
+      "correction": "es begann zu regnen",
+      "rule": "Präteritum von 'beginnen' ist 'begann'",
+      "explanation_en": "Kevin used an incorrect past tense form. The correct simple past (Präteritum) of 'beginnen' is 'begann', not 'beginnete'.",
+      "example_correct": "Es begann gestern zu regnen.",
+      "lesson_date": "2026-05-18-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "exaktlich",
+      "correction": "genau / exakt",
+      "rule": "Das Wort 'exaktlich' existiert nicht",
+      "explanation_en": "Kevin created a non-existent word. The correct German words are 'genau' or 'exakt' (without '-lich').",
+      "example_correct": "Ja, genau, das stimmt.",
+      "lesson_date": "2026-05-18-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "ich kann nicht die Sink zu arbeiten",
+      "correction": "ich kann die Spüle nicht zum Laufen bringen / ich kann nicht das Waschbecken reparieren",
+      "rule": "Falsche Verbkonstruktion und Anglizismus",
+      "explanation_en": "Kevin tried to translate English structure word-for-word. In German, you cannot say 'etwas zu arbeiten' to mean 'make something work'.",
+      "example_correct": "Ich kann das Waschbecken nicht reparieren.",
+      "lesson_date": "2026-05-18-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "sollen ist Schutt",
+      "correction": "sollen ist 'shall' / sollen ohne Umlaut",
+      "rule": "Verwechslung von 'sollen' und 'sollte'",
+      "explanation_en": "Kevin confused 'sollen' (shall) with 'sollte' (should/Konjunktiv). Stefanie corrects that 'sollen' is the infinitive form without Umlaut, while 'sollte' is Konjunktiv.",
+      "example_correct": "Ich soll meine Hausaufgaben machen.",
+      "lesson_date": "2026-05-18-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Soll ich ihn schreiben",
+      "correction": "Soll ich ihm schreiben",
+      "rule": "Dativobjekt nach 'schreiben' (jemandem schreiben)",
+      "explanation_en": "The verb 'schreiben' with an indirect object (to write TO someone) requires dative 'ihm', not accusative 'ihn'.",
+      "example_correct": "Soll ich ihm eine E-Mail schreiben?",
+      "lesson_date": "2026-05-18-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Soll ich mache dir einen Tee machen",
+      "correction": "Soll ich dir einen Tee machen",
+      "rule": "Modalverb + Infinitiv am Satzende",
+      "explanation_en": "With modal verbs, the main verb goes to the end in infinitive form. Kevin incorrectly placed 'mache' in the middle.",
+      "example_correct": "Soll ich dir einen Kaffee machen?",
+      "lesson_date": "2026-05-18-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "morgen besuche ich dich",
+      "correction": "Soll ich dich morgen besuchen",
+      "rule": "Modalverb-Struktur mit Infinitiv am Ende",
+      "explanation_en": "In the modal verb construction with 'sollen', the infinitive 'besuchen' must go to the end, and the accusative object 'dich' comes before the time adverb.",
+      "example_correct": "Soll ich dich morgen besuchen?",
+      "lesson_date": "2026-05-18-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "dass du solle den Müll rausbringen",
+      "correction": "dass du den Müll rausbringen sollst",
+      "rule": "In Nebensätzen steht das Modalverb am Ende",
+      "explanation_en": "In subordinate clauses (with 'dass'), all verbs move to the end, with the modal verb 'sollst' coming last after the infinitive.",
+      "example_correct": "Ich denke, dass du den Müll rausbringen sollst.",
+      "lesson_date": "2026-05-18-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "zum Mechanik gehen",
+      "correction": "zum Mechaniker gehen",
+      "rule": "Zur Person: Mechaniker (maskulin, -er Endung)",
+      "explanation_en": "The profession is 'der Mechaniker' (with -er ending), not 'der Mechanik'. Kevin used the wrong form.",
+      "example_correct": "Wenn mein Auto kaputt ist, gehe ich zum Mechaniker.",
+      "lesson_date": "2026-05-18-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "gesparrt",
+      "correction": "gespart",
+      "rule": "Partizip Perfekt von 'sparen'",
+      "explanation_en": "Kevin repeatedly said 'gesparrt' instead of 'gespart'. The past participle of 'sparen' is formed with -t, not -rrt.",
+      "example_correct": "Du hast 400 Euro gespart.",
+      "lesson_date": "2026-05-19-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "ich kann ihn nicht glauben",
+      "correction": "ich kann ihm nicht glauben",
+      "rule": "glauben mit Dativ",
+      "explanation_en": "Kevin used accusative 'ihn' after 'glauben', but the verb 'glauben' (believe someone) takes dative: 'ihm'. Stefanie explained: 'Glauben ist mit Dativ auf Deutsch.'",
+      "example_correct": "Ich glaube ihm, dass er heute müde ist.",
+      "lesson_date": "2026-05-19-stefanie"
+    },
+    {
+      "category": "Adjektivdeklination",
+      "kevin_said": "alle",
+      "correction": "allen",
+      "rule": "Dativ Plural Endung -en",
+      "explanation_en": "Kevin wrote 'von alle' instead of 'von allen'. In dative plural, the pronoun/adjective takes the ending -en. Stefanie pointed out: 'There is always this N, right?'",
+      "example_correct": "Niemand von allen.",
+      "lesson_date": "2026-05-19-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "mit der Musik",
+      "correction": "nach dem Rhythmus / mit Musik",
+      "rule": "Idiomatische Präposition bei Tanzen",
+      "explanation_en": "Kevin said 'mit der Musik tanzen' when he meant 'to the beat/rhythm'. Stefanie corrected: 'Nach dem Rhythmus tanzen' or just 'mit Musik' (without article) is more natural. 'Klang' is a nice word for 'sound', but not fitting here.",
+      "example_correct": "Du solltest nach dem Rhythmus tanzen.",
+      "lesson_date": "2026-05-19-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "groß",
+      "correction": "groß (height context: Menschen sind groß, nicht hoch)",
+      "rule": "groß vs. hoch bei Personen",
+      "explanation_en": "Kevin asked about saying people are 'hoch' (tall). Stefanie corrected: 'Auf Deutsch, people are big. They aren't tall. We say big.' For people, use 'groß', not 'hoch'.",
+      "example_correct": "Die Menschen sind groß.",
+      "lesson_date": "2026-05-19-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "wolltet (wenn ihr ... wolltet)",
+      "correction": "wollt (wenn ihr ... wollt)",
+      "rule": "Präsens nach 'wenn' in realen Bedingungen",
+      "explanation_en": "Kevin used Konjunktiv II 'wolltet' in a real condition. Stefanie corrected: real conditions use Präsens: 'wenn ihr ... wollt'. She explained: 'Auf Deutsch gibt es das nicht' (the Italian-style subjunctive in 'wenn'-clauses). Only use Konjunktiv when the situation is unreal.",
+      "example_correct": "Wenn ihr einen Film sehen wollt, solltet ihr das Kinobuch ansehen.",
+      "lesson_date": "2026-05-19-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "gesunde",
+      "correction": "gesund",
+      "rule": "Adverb 'gesund leben', nicht Adjektiv",
+      "explanation_en": "Kevin said 'gesunde leben' (adjective form). Stefanie corrected to 'gesund leben' (adverb). The verb 'leben' needs the adverb 'gesund', not the adjective 'gesunde'.",
+      "example_correct": "Wenn du gesund leben willst, solltest du lange schlafen.",
+      "lesson_date": "2026-05-19-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Könnte",
+      "correction": "Kann",
+      "rule": "Präsens statt Konjunktiv bei neutraler Aussage",
+      "explanation_en": "Kevin started a sentence with 'Könnte' (conjunctive) when describing a simple fact. Stefanie corrected to 'Kann' (indicative). Conjunctive is for unreal/polite contexts; here Präsens is correct.",
+      "example_correct": "Ich kann nicht verstehen, dass ...",
+      "lesson_date": "2026-05-19-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "die preis",
+      "correction": "der Preis",
+      "rule": "Preis ist maskulin",
+      "explanation_en": "Kevin used the feminine article 'die' for 'Preis', but the correct gender is masculine ('der Preis').",
+      "example_correct": "Der Preis ist zu hoch.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Dann hat mir GLS mein Laptop bestellt",
+      "correction": "Dann hat mir GLS meinen Laptop geschickt/geliefert",
+      "rule": "Falsches Verb und Akkusativ",
+      "explanation_en": "Kevin said 'bestellt' (ordered), but GLS ordered nothing—GLS shipped it. Also 'mein Laptop' should be 'meinen Laptop' (accusative masculine).",
+      "example_correct": "GLS hat mir meinen Laptop geschickt.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "das deutsche Adresse",
+      "correction": "die deutsche Adresse",
+      "rule": "Adresse ist feminin",
+      "explanation_en": "Kevin used the neuter article 'das' for 'Adresse', but 'Adresse' is feminine ('die Adresse').",
+      "example_correct": "Ich habe die deutsche Adresse geschrieben.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "die falsche Laptop",
+      "correction": "der falsche Laptop / den falschen Laptop (je nach Kontext)",
+      "rule": "Laptop ist maskulin",
+      "explanation_en": "Kevin used the feminine article 'die' for 'Laptop', but 'Laptop' is masculine.",
+      "example_correct": "Der falsche Laptop wurde geliefert.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Was bist du gemacht?",
+      "correction": "Was hast du gemacht?",
+      "rule": "Perfekt von 'machen' wird mit 'haben' gebildet",
+      "explanation_en": "Kevin used 'bist' (sein) instead of 'hast' (haben) for the perfect tense of 'machen', which requires 'haben'.",
+      "example_correct": "Was hast du gestern gemacht?",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Ich sollte in den USA wohnen",
+      "correction": "Ich soll in den USA wohnen",
+      "rule": "Verwendung von 'sollen' für gegenwärtige Anforderung",
+      "explanation_en": "Stefanie corrected the modal usage: Kevin should use 'soll' (present requirement) rather than 'sollte' (conditional/past) when referring to the job offer requirement.",
+      "example_correct": "Ich soll in den USA arbeiten.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Zwischen dem, der, Schweizer",
+      "correction": "Zwischen der Schweiz",
+      "rule": "Nach 'zwischen' folgt Dativ",
+      "explanation_en": "Kevin struggled with the dative after 'zwischen'. The correct form is 'der Schweiz' (feminine dative).",
+      "example_correct": "Zwischen der Schweiz und den USA.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Sie haben sagen",
+      "correction": "Sie haben gesagt",
+      "rule": "Perfekt: Partizip Perfekt nach haben",
+      "explanation_en": "Kevin used the infinitive 'sagen' instead of the past participle 'gesagt' in the perfect tense.",
+      "example_correct": "Sie haben das gestern gesagt.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Ich stole die Brücke",
+      "correction": "Ich soll die Brücke sein",
+      "rule": "Falsches Verb verwendet",
+      "explanation_en": "Kevin said 'stole' (unclear/wrong), but meant 'soll' (should). He was trying to say 'I should be the bridge'.",
+      "example_correct": "Ich soll die Brücke zwischen den Firmen sein.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "die Firma",
+      "correction": "",
+      "rule": "Plural von Firma",
+      "explanation_en": "Stefanie corrected the plural: 'die Firma' becomes 'die Firmen' (not an error by Kevin in the transcript, but a teaching moment).",
+      "example_correct": "Die Firmen sind in Basel.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "grew-up",
+      "correction": "aufsteigen / Karriere machen",
+      "rule": "Englisches Wort statt deutschem Ausdruck",
+      "explanation_en": "Kevin used the English 'grew-up' in a German sentence; he should use 'aufsteigen' or 'Karriere machen'.",
+      "example_correct": "Ich möchte in der Karriere aufsteigen.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "die Annunzierung",
+      "correction": "das Angebot",
+      "rule": "Falsches Wort und Genus",
+      "explanation_en": "Kevin tried to say 'announcement' but used an incorrect form. Stefanie corrected it to 'das Angebot' (the offer).",
+      "example_correct": "Das Angebot kam gestern an.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "in der East",
+      "correction": "im Osten / im Westen",
+      "rule": "Himmelsrichtungen mit 'im' + maskulin",
+      "explanation_en": "Kevin used 'in der East' (mixing English and wrong gender). Correct is 'im Osten' (masculine, dative).",
+      "example_correct": "Der Job ist im Westen.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "wir sehen",
+      "correction": "wir werden sehen",
+      "rule": "Futur ohne Zeitangabe braucht 'werden'",
+      "explanation_en": "Kevin said 'wir sehen' for future, but without a time indicator, German requires 'wir werden sehen'.",
+      "example_correct": "Wir werden sehen, was passiert.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "das war der erste Mal",
+      "correction": "das war das erste Mal",
+      "rule": "Mal ist Neutrum",
+      "explanation_en": "Kevin used the masculine 'der erste Mal', but 'Mal' is neuter ('das erste Mal').",
+      "example_correct": "Das war das erste Mal.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Ich werde arbeiten ich auch",
+      "correction": "Ich werde arbeiten",
+      "rule": "Futur: werden + Infinitiv",
+      "explanation_en": "Kevin attempted the future tense but made word-order errors and redundancy. Stefanie corrected the structure to 'Ich werde arbeiten'.",
+      "example_correct": "Ich werde in Basel arbeiten.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "in Zukunft",
+      "correction": "in der Zukunft",
+      "rule": "Zukunft mit Artikel",
+      "explanation_en": "Kevin omitted the article. The correct phrase is 'in der Zukunft' (dative feminine).",
+      "example_correct": "In der Zukunft werde ich in Basel arbeiten.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "wem ich den Rund gegeben habe",
+      "correction": "wem ich den Hund gegeben habe",
+      "rule": "Nebensatz: Verb am Ende",
+      "explanation_en": "Kevin said 'Rund' instead of 'Hund' (a pronunciation/spelling error), but the word order was correct for the subordinate clause.",
+      "example_correct": "Ich weiß nicht, wem ich den Hund gegeben habe.",
+      "lesson_date": "2026-05-21-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "neben der Kirchte",
+      "correction": "neben der Kirche",
+      "rule": "Die Kirche ist feminin",
+      "explanation_en": "Kevin said 'Kirchte' (a mix-up or pronunciation error). Stefanie corrected it to 'Kirche'. The noun is 'die Kirche' (feminine).",
+      "example_correct": "Ich wohne neben der Kirche.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Ich kann nicht den Lärm hören",
+      "correction": "Ich kann den Lärm nicht hören",
+      "rule": "Negation 'nicht' steht meist nach dem Objekt im Hauptsatz",
+      "explanation_en": "Kevin placed 'nicht' before the object. In standard word order, 'nicht' comes after the object when negating the whole verb phrase.",
+      "example_correct": "Ich kann den Lärm nicht hören.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Dann kann ich den Lärm hören",
+      "correction": "Dann kann ich den Lärm nicht hören",
+      "rule": "Wortstellung nach 'dann' (Position 1)",
+      "explanation_en": "Stefanie corrected Kevin's sentence to clarify negation and word order. After 'dann', the verb comes second, and 'nicht' typically follows the object.",
+      "example_correct": "Dann kann ich den Lärm nicht hören.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "zwei Meter neben der Kirche (implying plural Meter)",
+      "correction": "zwei Meter (no plural -n)",
+      "rule": "Maßeinheiten nach Zahlen bleiben im Singular",
+      "explanation_en": "Stefanie corrected: 'zwei Meter ohne den Plural', similar to 'Kilo'. Kevin likely added a plural marker; Stefanie emphasized 'Meter' stays singular after numbers.",
+      "example_correct": "Die Kirche ist 500 Meter entfernt.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "das Paar das hat",
+      "correction": "das Paar, das ... hat (Verb am Ende im Relativsatz)",
+      "rule": "Verb am Ende im Relativsatz",
+      "explanation_en": "In a relative clause, the conjugated verb must go to the end. Kevin started 'das hat'; Stefanie corrected the structure to put 'hat' at the end.",
+      "example_correct": "Das Paar, das ein Problem mit dem Dach hat, wohnt im vierten Stock.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "mit der Ruffe / den Ruff",
+      "correction": "mit dem Dach",
+      "rule": "Das Dach (neutrum)",
+      "explanation_en": "Kevin used a wrong word 'Ruff/Ruffe' (confusion). Stefanie corrected: 'das Dach' (the roof). Also, Dativ singular neutrum: 'dem Dach'.",
+      "example_correct": "Das Paar hat ein Problem mit dem Dach.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "der Mann, der viel Lärm gehört hat wohnte",
+      "correction": "der Mann, der viel Lärm gehört hat, wohnt",
+      "rule": "Präsens vs. Präteritum",
+      "explanation_en": "Kevin wrote 'wohnte' (past). Stefanie wanted present tense 'wohnt'. Also, Kevin initially wrote 'kann nicht schlafen gehört hat' (mixing modal + perfect incorrectly). Stefanie corrected the structure.",
+      "example_correct": "Der Mann, der viel Lärm gehört hat, wohnt im dritten Stock.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "der Mann, der kann nicht schlafen",
+      "correction": "der Mann, der nicht schlafen kann",
+      "rule": "Modalverb am Ende im Nebensatz",
+      "explanation_en": "In a subordinate clause, the modal verb 'kann' goes to the end. Kevin put 'kann' right after 'der'. Stefanie corrected: 'der nicht schlafen kann'.",
+      "example_correct": "Der Mann, der nicht schlafen kann, wohnt im dritten Stock.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Was ist das? (meaning 'what else')",
+      "correction": "Was noch?",
+      "rule": "Korrekte Formulierung für 'what else'",
+      "explanation_en": "Kevin used 'Was ist das?' when he meant 'what else'. Stefanie taught him 'Was noch?' or 'Was soll ich noch sagen?'",
+      "example_correct": "Was soll ich noch sagen?",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "der Büro",
+      "correction": "das Büro",
+      "rule": "Das Büro ist neutrum",
+      "explanation_en": "Kevin said 'der Büro'. Stefanie confirmed 'das Büro' (neuter).",
+      "example_correct": "Ich arbeite im Büro.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "in dem die Steuern",
+      "correction": "in dem er die Steuern ... (mit korrektem Relativpronomen)",
+      "rule": "Relativpronomen + Präposition erfordern korrekten Kasus",
+      "explanation_en": "Kevin tried to use 'in dem' with a relative clause. Stefanie corrected the structure, clarifying that 'dem' (Dativ neuter) is correct for 'das Büro' → 'in dem'.",
+      "example_correct": "Das Büro, in dem er die Steuern bezahlt, ist im zweiten Stock.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "kaputt machen",
+      "correction": "kaputtmachen (zusammengeschrieben)",
+      "rule": "Verben mit Partikel oft zusammengeschrieben",
+      "explanation_en": "Kevin wrote 'kaputt machen' separately. Stefanie corrected: 'der Duden sagt zusammen' → 'kaputtmachen'.",
+      "example_correct": "Das Kind hat das Fenster kaputtgemacht.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "das Kind, das ist das Fenster kaputtgemacht hat",
+      "correction": "das Kind, das das Fenster kaputtgemacht hat",
+      "rule": "Kein 'ist' nötig; Perfekt mit 'hat' allein",
+      "explanation_en": "Kevin added an extra 'ist' in the relative clause. Stefanie corrected: just 'das das Fenster kaputtgemacht hat' (no 'ist').",
+      "example_correct": "Das Kind, das das Fenster kaputtgemacht hat, wohnt im zweiten Stock.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "besuchen (Infinitiv statt Partizip)",
+      "correction": "besucht (Partizip Perfekt)",
+      "rule": "Perfekt braucht Partizip Perfekt",
+      "explanation_en": "Kevin used the infinitive 'besuchen' instead of the past participle. Stefanie corrected to 'besucht' (or later 'getroffen').",
+      "example_correct": "Der Mann, den ich gestern besucht habe, wohnt hier.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "die ich geb / gegeben",
+      "correction": "der ich ... gegeben habe",
+      "rule": "Perfekt mit haben",
+      "explanation_en": "Kevin tried to form the perfect tense. Stefanie corrected the structure: 'der ich das Geschenk gegeben habe' (Dativ, because 'geben' takes Dativ for the person).",
+      "example_correct": "Die Frau, der ich das Geschenk gegeben habe, wohnt im ersten Stock.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "verheiratet (as a verb form)",
+      "correction": "geheiratet",
+      "rule": "heiraten → geheiratet (Partizip Perfekt)",
+      "explanation_en": "Kevin confused 'verheiratet' (married, adjective/state) with the past participle of 'heiraten'. Stefanie corrected: 'geheiratet haben' (to have married/gotten married).",
+      "example_correct": "Die Leute, die gestern geheiratet haben, wohnen im ersten Stock.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "denken an dir",
+      "correction": "denken an dich",
+      "rule": "denken an + Akkusativ",
+      "explanation_en": "Kevin used 'dir' (Dativ). Stefanie corrected: 'an dich' (Akkusativ), because 'denken an' takes Akkusativ.",
+      "example_correct": "Ich habe gestern an dich gedacht.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "dachten (wrong tense/form)",
+      "correction": "gedacht (Partizip Perfekt)",
+      "rule": "denken → gedacht (Perfekt)",
+      "explanation_en": "Kevin used 'dachten' (Präteritum plural). In context, Stefanie corrected to the perfect tense: 'gedacht haben'.",
+      "example_correct": "Ich habe gestern an dich gedacht.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "sprechen dem Mann",
+      "correction": "sprechen mit dem Mann",
+      "rule": "sprechen mit + Dativ",
+      "explanation_en": "Kevin omitted the preposition 'mit'. Stefanie clarified: 'ich spreche mit dem Mann' (I talk with the man).",
+      "example_correct": "Ich spreche mit dem Mann über das Projekt.",
+      "lesson_date": "2026-05-22-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Ich bin Livino von Ren",
+      "correction": "Ich bin nach Livigno gefahren",
+      "rule": "Perfekt mit 'sein' bei Bewegungsverben",
+      "explanation_en": "Kevin omitted the past participle 'gefahren' and the preposition 'nach'. For movement to a place, German uses 'sein' + past participle + preposition + destination.",
+      "example_correct": "Ich bin nach Berlin gefahren.",
+      "lesson_date": "2026-05-25-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Es gab sehr heißes Wetter",
+      "correction": "Es war sehr heißes Wetter (or: Das Wetter war sehr heiß)",
+      "rule": "Wetter ist Subjekt (Nominativ), nicht Akkusativ",
+      "explanation_en": "Kevin used 'es gab' (there was) which requires accusative, but 'das Wetter' as subject needs nominative with 'war'. Stefanie corrected: 'Das Wetter und Nominativ, genau.'",
+      "example_correct": "Das Wetter war heiß.",
+      "lesson_date": "2026-05-25-stefanie"
+    },
+    {
+      "category": "Adjektivdeklination",
+      "kevin_said": "Warme",
+      "correction": "warm",
+      "rule": "Prädikative Adjektive werden nicht dekliniert",
+      "explanation_en": "When an adjective follows 'sein/ist' (predicative position), it takes no ending. Kevin added an ending '-e' incorrectly.",
+      "example_correct": "Es ist warm.",
+      "lesson_date": "2026-05-25-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Ich fahre am Samstag los",
+      "correction": "Ich bin am Samstag losgefahren",
+      "rule": "Perfekt von 'losfahren' mit 'sein'",
+      "explanation_en": "Stefanie asked 'Wann bist du losgefahren?' (When did you leave?). Kevin answered in present tense instead of past (Perfekt).",
+      "example_correct": "Ich bin am Samstag losgefahren.",
+      "lesson_date": "2026-05-25-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "getroffen",
+      "correction": "getroffen (but Kevin struggled with 'ge-' prefix)",
+      "rule": "Perfekt-Partizip: nicht alle Verben bekommen 'ge-'",
+      "explanation_en": "Stefanie explained that verbs with inseparable prefixes (like 'versuchen', 'diskutieren', 'trainieren') do NOT take 'ge-' in the past participle. Kevin tried 'ge-probieren' incorrectly.",
+      "example_correct": "Ich habe es versucht. (not: ge-versucht)",
+      "lesson_date": "2026-05-25-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "kreiert",
+      "correction": "entwickelt",
+      "rule": "Idiomatische Wortwahl: 'entwickeln' statt 'kreieren'",
+      "explanation_en": "While 'kreiert' exists, Stefanie said 'entwickeln ist klassisch Deutsch' and is the better word for creating/developing a system.",
+      "example_correct": "Wir haben ein System entwickelt.",
+      "lesson_date": "2026-05-25-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "für Finanz",
+      "correction": "für Finanzen (or: im Finanzbereich)",
+      "rule": "Präposition + richtiger Artikel/Kasus",
+      "explanation_en": "Stefanie noted 'für Finance' is okay but 'für Finanzen' (plural) or a clearer prepositional phrase would be more natural in German.",
+      "example_correct": "Ein System für Finanzen.",
+      "lesson_date": "2026-05-25-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "weniger groß",
+      "correction": "nicht so groß wie",
+      "rule": "Komparativ-Ersatz: 'nicht so...wie' statt 'weniger'",
+      "explanation_en": "Italian speakers often translate 'meno grande' literally as 'weniger groß', but in German you must say 'nicht so groß wie'. Stefanie explicitly corrected this and wrote the wrong sentence in red.",
+      "example_correct": "Die Maus ist nicht so groß wie die Giraffe.",
+      "lesson_date": "2026-05-25-stefanie"
+    },
+    {
+      "category": "Aussprache",
+      "kevin_said": "schnellsten",
+      "correction": "am schnellsten",
+      "rule": "Superlativ mit 'am'",
+      "explanation_en": "Kevin initially wrote 'am climbsten' but omitted 'am' in spoken form. Stefanie reminded him that the superlative always uses 'am + -sten'.",
+      "example_correct": "Der Zug ist am schnellsten.",
+      "lesson_date": "2026-05-25-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "mit dem großem Tier",
+      "correction": "mit dem größten Tier",
+      "rule": "Adjektivdeklination Dativ + Superlativ",
+      "explanation_en": "Kevin used 'großem' (positive) instead of 'größten' (superlative). Also, the correct dative adjective ending after 'dem' is '-en' for weak declension.",
+      "example_correct": "Ich gehe mit dem größten Tier spazieren.",
+      "lesson_date": "2026-05-25-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "die Strukturen, die wir gemacht haben",
+      "correction": "die Strukturen, die wir gemacht haben (acceptable, but context unclear)",
+      "rule": "No clear error marked by Stefanie",
+      "explanation_en": "Stefanie did not explicitly correct this, so no error is logged here.",
+      "example_correct": "",
+      "lesson_date": "2026-05-25-stefanie"
+    },
+    {
+      "category": "Adjektivdeklination",
+      "kevin_said": "die billigste",
+      "correction": "die billigste (with ending -e after article)",
+      "rule": "Superlativ nach bestimmtem Artikel: Endung -e/-en",
+      "explanation_en": "When using the superlative after a definite article (die), the adjective must take the correct ending. Kevin likely struggled with the adjective declension pattern, though the transcript shows he got it right here after practice.",
+      "example_correct": "Die billigste Option ist der Fernbus.",
+      "lesson_date": "2026-05-26-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "ein richtiger Preis",
+      "correction": "ein fairer Preis",
+      "rule": "Idiomatische Ausdrücke: 'fairer Preis' statt 'richtiger Preis'",
+      "explanation_en": "Kevin tried to say 'a correct price' (ein richtiger Preis), but the natural German expression is 'ein fairer Preis' (a fair price) when talking about reasonable pricing.",
+      "example_correct": "Das ist ein fairer Preis für die Dauer der Fahrt.",
+      "lesson_date": "2026-05-26-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "ein halb (separate)",
+      "correction": "einhalb (zusammen geschrieben)",
+      "rule": "Zusammenschreibung bei Zeitangaben",
+      "explanation_en": "Kevin initially wrote 'ein halb' as two words. The teacher corrected that it should be written together as one word: 'einhalb'.",
+      "example_correct": "Der Zug braucht dreieinhalb Stunden.",
+      "lesson_date": "2026-05-26-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Welcher Zug ist der sloweste / braucht am kürzesten",
+      "correction": "Welcher Zug braucht am längsten",
+      "rule": "Natürliche Ausdrucksweise mit 'brauchen' statt 'langsam sein'",
+      "explanation_en": "Kevin tried to ask which train is 'the slowest' or 'needs the shortest', but the natural German way is to ask 'Welcher Zug braucht am längsten?' (which train takes the longest).",
+      "example_correct": "Der Regionalzug braucht am längsten für die Strecke.",
+      "lesson_date": "2026-05-26-stefanie"
+    },
+    {
+      "category": "Adjektivdeklination",
+      "kevin_said": "die schnellste, aber auch die teuerste",
+      "correction": "die schnellste, aber auch die teuerste Option",
+      "rule": "Substantiv nach dekliniertem Adjektiv notwendig",
+      "explanation_en": "When using the structure with article + superlative adjective, a noun must follow. Kevin initially left out 'Option' at the end, which made the sentence incomplete.",
+      "example_correct": "Die schnellste, aber auch die teuerste Option ist der ICE.",
+      "lesson_date": "2026-05-26-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "nierli / genauso",
+      "correction": "ungefähr",
+      "rule": "Unterscheidung: 'genau' vs 'ungefähr'",
+      "explanation_en": "Kevin confused 'genauso' (exactly as) with 'ungefähr' (approximately). When something is approximately the same, use 'ungefähr genauso groß wie'.",
+      "example_correct": "Leon ist ungefähr genauso groß wie Elin.",
+      "lesson_date": "2026-05-26-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "am kleinsten verdienen",
+      "correction": "am wenigsten verdienen",
+      "rule": "Superlativ bei Mengen: 'am wenigsten' statt 'am kleinsten'",
+      "explanation_en": "Kevin said 'am kleinsten verdienen' (earn the smallest), but when talking about amounts of money or quantities, the correct form is 'am wenigsten verdienen' (earn the least).",
+      "example_correct": "Tom verdient am wenigsten von allen.",
+      "lesson_date": "2026-05-26-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "die Klimaanlagen",
+      "correction": "die Klimaanlage",
+      "rule": "Singular statt Plural",
+      "explanation_en": "Kevin used the plural 'Klimaanlagen' when referring to his air conditioner at home, but he should use the singular 'die Klimaanlage' since he has one air conditioner.",
+      "example_correct": "Ich habe zu Hause eine Klimaanlage.",
+      "lesson_date": "2026-05-28-stefanie"
+    },
+    {
+      "category": "Adjektivdeklination",
+      "kevin_said": "zu viele Kalte",
+      "correction": "zu kalt",
+      "rule": "Adjektiv ohne Endung nach 'zu'",
+      "explanation_en": "Kevin incorrectly used 'Kalte' (as if it were a noun) instead of the adjective 'kalt'. After 'zu', the adjective takes no ending.",
+      "example_correct": "Es ist zu kalt hier.",
+      "lesson_date": "2026-05-28-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "War es noch schön",
+      "correction": "Ist es noch schön gewesen / War es noch schön",
+      "rule": "Perfekt mit 'sein' oder Präteritum richtig verwenden",
+      "explanation_en": "The teacher corrected Kevin's tense usage, guiding him to say 'war es noch schön' (simple past) properly in context.",
+      "example_correct": "Vor einer Stunde war es noch schön.",
+      "lesson_date": "2026-05-28-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Ich gehe nach Monza zu Sie auf Seen / Ich fahre am Morgen auf",
+      "correction": "Ich fahre am Morgen ab",
+      "rule": "Trennbares Verb 'abfahren' nicht 'auffahren'",
+      "explanation_en": "Kevin said 'auf' instead of 'ab'. The separable verb is 'abfahren' (to depart), not 'auffahren' (to drive up/onto).",
+      "example_correct": "Ich fahre am Morgen ab.",
+      "lesson_date": "2026-05-28-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "für sehen ein Autorennen",
+      "correction": "um ein Autorennen zu sehen",
+      "rule": "'um ... zu' für Zweck, nicht 'für'",
+      "explanation_en": "Kevin used 'für' (a common mistake by Italian speakers), but German requires 'um ... zu' to express purpose.",
+      "example_correct": "Ich gehe nach Monza, um ein Autorennen zu sehen.",
+      "lesson_date": "2026-05-28-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Redaktion / Reduktion (auf den Preis)",
+      "correction": "Rabatt",
+      "rule": "Preisermäßigung heißt 'Rabatt'",
+      "explanation_en": "Kevin used 'Reduktion' for a price discount, but the correct term is 'Rabatt' (though 'Reduktion' exists, it's not used for discounts).",
+      "example_correct": "Es gibt einen Rabatt auf die Tickets.",
+      "lesson_date": "2026-05-28-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "auch wenn es gibt keine große Rabatte",
+      "correction": "auch wenn es keine großen Rabatte gibt",
+      "rule": "Verb am Ende im Nebensatz",
+      "explanation_en": "In a subordinate clause ('auch wenn...'), the verb must go to the end. Also, 'keine' requires the correct plural adjective ending 'großen'.",
+      "example_correct": "Ich freue mich, auch wenn es keine großen Rabatte gibt.",
+      "lesson_date": "2026-05-28-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Nichts würde mehr schön sein",
+      "correction": "Nichts wäre schöner / Ich würde mich über nichts mehr freuen",
+      "rule": "Komparativ und idiomatische Ausdrucksweise",
+      "explanation_en": "Kevin's word order and choice were awkward. The teacher guided him to use 'Ich wäre lieber...' or a correct comparative structure.",
+      "example_correct": "Nichts wäre schöner als ein Abendessen mit meiner Mutter.",
+      "lesson_date": "2026-05-28-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Die Donau ist kurzer als der Neil",
+      "correction": "Die Donau ist kürzer als der Nil",
+      "rule": "Komparativ mit Umlaut bei kurz → kürzer",
+      "explanation_en": "The comparative of 'kurz' requires an umlaut: 'kürzer', not 'kurzer'. Also, 'Nil' was misspelled as 'Neil'.",
+      "example_correct": "Der Weg ist kürzer als ich dachte.",
+      "lesson_date": "2026-05-29-stefanie"
+    },
+    {
+      "category": "Adjektivdeklination",
+      "kevin_said": "der Amazonas ist der größte Fluss (initially attempted without adjective ending)",
+      "correction": "der Amazonas ist der größte Fluss",
+      "rule": "Superlativ vor Substantiv: dekliniertes Adjektiv",
+      "explanation_en": "When the superlative precedes a noun, it must be declined like an adjective: 'der größte Fluss', not 'der am größten Fluss'.",
+      "example_correct": "Der Mount Everest ist der höchste Berg der Welt.",
+      "lesson_date": "2026-05-29-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "die Baby",
+      "correction": "das Baby",
+      "rule": "Genus von Baby",
+      "explanation_en": "The German word for 'baby' is neuter: 'das Baby', not 'die Baby'.",
+      "example_correct": "Das Baby schläft in seinem Bett.",
+      "lesson_date": "2026-05-29-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "mit Juli",
+      "correction": "im Juni",
+      "rule": "Zeitangabe Monate: Präposition 'im' + Dativ",
+      "explanation_en": "For months, German uses 'im' (in dem), not 'mit'. The correct form is 'im Juni'.",
+      "example_correct": "Im Juni fahre ich in den Urlaub.",
+      "lesson_date": "2026-05-29-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "die französische Küche ist nicht so gut als die italienische Küche",
+      "correction": "die französische Küche ist nicht so gut wie die italienische Küche",
+      "rule": "Vergleich mit 'nicht so ... wie'",
+      "explanation_en": "For equality comparisons in German, use 'so ... wie', not 'als'. 'Als' is only used with the comparative (besser als).",
+      "example_correct": "Mein Auto ist nicht so schnell wie deins.",
+      "lesson_date": "2026-05-29-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "der tiefste Punkt auf der Erde (Kevin's initial attempt unclear)",
+      "correction": "der tiefste Punkt der Erde",
+      "rule": "Genitiv zur Zugehörigkeit",
+      "explanation_en": "To express possession or belonging, German uses the genitive case: 'der Erde' (of the Earth), not 'auf der Erde' in this context.",
+      "example_correct": "Die Hauptstadt der Schweiz ist Bern.",
+      "lesson_date": "2026-05-29-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "verdient der Urlaub",
+      "correction": "der Urlaub war verdient / hat sich gelohnt",
+      "rule": "Wortwahl: 'verdienen' passt nicht für Urlaub",
+      "explanation_en": "Kevin tried to say 'the vacation was deserved' but used the verb awkwardly. In German, you would say 'der Urlaub war verdient' or 'hat sich gelohnt' to express that the vacation was well-earned.",
+      "example_correct": "Der Urlaub hat sich gelohnt.",
+      "lesson_date": "2026-06-08-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Funnel",
+      "correction": "der Fahrer / er fährt",
+      "rule": "Unregelmäßiges Verb 'fahren'",
+      "explanation_en": "Kevin tried to use a word for 'driver' but said 'Funnel' (unclear). Stefanie corrected to 'der Fahrer' and reminded him of the irregular verb 'fahren' (er fährt, gefahren).",
+      "example_correct": "Der Fahrer fährt sehr schnell.",
+      "lesson_date": "2026-06-08-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "die Position",
+      "correction": "der Platz",
+      "rule": "Wortwahl: 'Platz' für Rang/Position im Rennen",
+      "explanation_en": "Kevin used 'die Position' for 'place/rank' in a race context. Stefanie corrected that 'der Platz' is the better word for ranking (e.g., first place), while 'Position' refers more to a location or opinion.",
+      "example_correct": "Er hat den ersten Platz gemacht.",
+      "lesson_date": "2026-06-08-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "den ersten Platz gemacht",
+      "correction": "den ersten Platz gemacht",
+      "rule": "Akkusativ nach 'machen'",
+      "explanation_en": "Stefanie reminded Kevin that 'Platz' needs to be in the accusative case ('den ersten Platz') because it is the direct object of 'machen'.",
+      "example_correct": "Antonelli hat den ersten Platz gemacht.",
+      "lesson_date": "2026-06-08-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "revising",
+      "correction": "wiederholen / noch einmal lesen",
+      "rule": "Wortwahl: 'wiederholen' statt 'revising'",
+      "explanation_en": "Kevin used the English word 'revising'. Stefanie corrected him to use 'wiederholen' (to repeat/review) or 'noch einmal lesen' (to read again).",
+      "example_correct": "Ich habe das Buch noch einmal gelesen.",
+      "lesson_date": "2026-06-08-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Anmerkung",
+      "correction": "Achtung",
+      "rule": "Wortwahl: 'Achtung' für Warnhinweis",
+      "explanation_en": "Kevin used 'Anmerkung' (note/remark) when he meant a warning mark. Stefanie corrected that 'Achtung' (attention/caution) is better for a warning or alert.",
+      "example_correct": "Achtung! Dieser Satz ist wichtig.",
+      "lesson_date": "2026-06-08-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "zum Fitnessstudio",
+      "correction": "im Fitnessstudio",
+      "rule": "Moto a luogo vs. Stato in luogo",
+      "explanation_en": "Kevin used 'zum' (to the gym, up to the door) instead of 'im' (inside the gym). 'Zum' implies going up to the location, while 'im' indicates being inside a building.",
+      "example_correct": "Es ist wichtig, im Fitnessstudio zu trainieren.",
+      "lesson_date": "2026-06-09-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Schritte gehen",
+      "correction": "Schritte machen",
+      "rule": "Kollokation: Schritte machen",
+      "explanation_en": "In German, one does not 'walk steps' (Schritte gehen) but 'makes steps' (Schritte machen). This is a fixed collocation.",
+      "example_correct": "Es ist wichtig, viele Schritte zu machen.",
+      "lesson_date": "2026-06-09-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "nehmen (den Teller)",
+      "correction": "holen (den Teller)",
+      "rule": "holen vs. nehmen",
+      "explanation_en": "Kevin initially wanted to use 'nehmen' for fetching a plate from the kitchen. 'Nehmen' is only for taking something within arm's reach without moving. When you must stand up or walk to get something, use 'holen'.",
+      "example_correct": "Ich versuche, den Teller aus der Küche zu holen.",
+      "lesson_date": "2026-06-09-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "in dem Meer",
+      "correction": "im Meer (dative, stato) or ins Meer (accusative, moto)",
+      "rule": "Akkusativ bei Bewegung, Dativ bei Position",
+      "explanation_en": "Kevin was unsure about the case. Swimming 'in the sea' (already there) = im Meer (dativ). Going 'into the sea' (motion toward) = ins Meer (akkusativ). The article is always used in German for 'das Meer'.",
+      "example_correct": "Ich habe Angst, im Meer zu schwimmen. / Ich habe Angst, ins Meer zu gehen.",
+      "lesson_date": "2026-06-09-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "zu Hause kommen",
+      "correction": "nach Hause kommen",
+      "rule": "Bewegung nach Hause = 'nach Hause', Position zu Hause = 'zu Hause'",
+      "explanation_en": "When expressing movement toward home, German uses 'nach Hause'. 'Zu Hause' means 'at home' (location). Kevin confused the two.",
+      "example_correct": "Als ich gestern nach Hause gekommen bin, war die Tür offen.",
+      "lesson_date": "2026-06-10-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "gegen Deutschland zu der Fußball-Weltmeisterschaft",
+      "correction": "gegen Deutschland bei der Fußball-Weltmeisterschaft",
+      "rule": "Ereignisse bei Veranstaltungen = 'bei'",
+      "explanation_en": "To indicate where/at which event something happened, German uses 'bei der Meisterschaft', not 'zu'. 'Bei' conveys 'at the championship'.",
+      "example_correct": "Brasilien hat bei der Weltmeisterschaft verloren.",
+      "lesson_date": "2026-06-10-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "mit einem Tasche",
+      "correction": "mit einer Tasche",
+      "rule": "Tasche ist feminin (die Tasche)",
+      "explanation_en": "Kevin used the masculine article 'einem' (m. Dativ) but 'Tasche' is feminine, requiring 'einer' in Dativ.",
+      "example_correct": "Er kam mit einer Tasche.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Drinnen die Tasche",
+      "correction": "in der Tasche",
+      "rule": "Lokale Präposition 'in' mit Dativ (wo?)",
+      "explanation_en": "Kevin attempted 'drinnen die Tasche' but when expressing location inside something, German uses 'in + Dativ', so 'in der Tasche'.",
+      "example_correct": "Die Adresse ist in der Tasche.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Gebt diese die Adresse",
+      "correction": "Es gibt die Adresse",
+      "rule": "Subjekt-Verb-Objekt in Aussagesätzen",
+      "explanation_en": "Kevin's word order was unclear/broken. The correct structure is 'Es gibt + Objekt' or simply stating what is in the bag.",
+      "example_correct": "In der Tasche gibt es die Adresse.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Imen",
+      "correction": "ihr Name",
+      "rule": "Name = der Name; Possessiv für 'her' = ihr",
+      "explanation_en": "Kevin tried to say 'her name' but mixed words. The correct form is 'ihr Name'.",
+      "example_correct": "Ihr Name ist Yara.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "nochni",
+      "correction": "gerade",
+      "rule": "'just now' = gerade",
+      "explanation_en": "Kevin couldn't recall 'gerade' (just/right now). Stefanie prompted him with 'it starts with G, like Italian apena'.",
+      "example_correct": "Er hat gerade die Tasche verloren.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "verliate",
+      "correction": "verloren",
+      "rule": "Perfekt: verlieren → hat verloren (irregulär)",
+      "explanation_en": "Kevin attempted a regular past participle but 'verlieren' is irregular: 'verloren'.",
+      "example_correct": "Nico hat die Tasche verloren.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Si helfen Nico",
+      "correction": "Sie helfen Nico",
+      "rule": "Verb 'helfen' mit Dativ",
+      "explanation_en": "Kevin's attempt was almost correct but Stefanie clarified structure: 'helfen + Dativ'. Also Kevin said 'si' (Italian) instead of 'sie'.",
+      "example_correct": "Sie helfen Nico.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "eine Fahradgeschäfte",
+      "correction": "ein Fahrradgeschäft",
+      "rule": "Geschäft ist neutral (das Geschäft)",
+      "explanation_en": "Kevin used feminine article 'eine' and wrong plural ending. 'Geschäft' is neuter singular: 'ein Fahrradgeschäft'.",
+      "example_correct": "Er hat ein Fahrradgeschäft.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "sein Freunde hilft",
+      "correction": "seine Freunde helfen",
+      "rule": "Pluralverb: Freunde (Plural) → helfen",
+      "explanation_en": "Kevin used singular 'hilft' for plural subject 'Freunde'. Correct is 'helfen'.",
+      "example_correct": "Seine Freunde helfen ihm.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "posting",
+      "correction": "eine Annonce machen / im Radio posten",
+      "rule": "Anglizismus anpassen oder natürliches Verb nutzen",
+      "explanation_en": "Kevin wanted 'by posting on radio' but Stefanie explained you can't 'post' in radio (radio isn't written). Better: 'eine Annonce machen' or say 'im Radio sprechen'.",
+      "example_correct": "Sie machen eine Annonce im Radio.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "wo Nico Kenen lernt Selma",
+      "correction": "wo Nico Selma kennenlernt",
+      "rule": "Nebensatz: Verb am Ende",
+      "explanation_en": "In a subordinate clause introduced by 'wo', the verb must come at the end. Also, 'kennenlernen' is one verb.",
+      "example_correct": "Sie haben eine Party, wo Nico Selma kennenlernt.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Die Tasche auf von Nico",
+      "correction": "die Tasche von Nico",
+      "rule": "Genitiv-Ersatz mit 'von + Dativ'",
+      "explanation_en": "Kevin added unnecessary 'auf'. To express possession, use 'von + Dativ': 'die Tasche von Nico'.",
+      "example_correct": "Selma findet die Tasche von Nico.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "ge findet",
+      "correction": "gefunden",
+      "rule": "Perfekt: finden → gefunden (irregulär)",
+      "explanation_en": "Kevin said 'ge findet' but the correct past participle is 'gefunden' (irregular, vowel change e→u, -en ending).",
+      "example_correct": "Sie hat die Tasche gefunden.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Sie gibt er Niko",
+      "correction": "Sie gibt Nico die Tasche",
+      "rule": "'geben' + Dativ (Person) + Akkusativ (Sache)",
+      "explanation_en": "Kevin mixed the objects. Correct structure: 'jdm. (Dativ) etwas (Akk.) geben'. Also 'er' is wrong (nominative); should be 'ihm' if pronoun, but here use the name directly.",
+      "example_correct": "Sie gibt Nico die Tasche.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "si Freunde werden",
+      "correction": "sie werden Freunde",
+      "rule": "Nach 'danach' normale Wortstellung: Subjekt-Verb",
+      "explanation_en": "After 'danach' (coordinating, not subordinating), the word order is regular: subject first, then verb.",
+      "example_correct": "Danach werden sie Freunde.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "dass er studieren muss",
+      "correction": "dass er studieren muss (korrekt) / dass er studieren soll (besser für den Kontext)",
+      "rule": "Modalverb im Nebensatz am Ende",
+      "explanation_en": "Kevin's structure was almost right. Stefanie suggested 'soll' instead of 'muss' to convey the father's rule/expectation.",
+      "example_correct": "Der Vater sagt, dass er studieren soll.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "geblieben",
+      "correction": "bleiben",
+      "rule": "Nach Modalverb (will) steht Infinitiv",
+      "explanation_en": "After the modal verb 'will', use the infinitive 'bleiben', not the past participle 'geblieben'.",
+      "example_correct": "Nico will in Deutschland bleiben.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "mit alles",
+      "correction": "mit allem",
+      "rule": "Präposition 'mit' + Dativ",
+      "explanation_en": "Kevin used nominative 'alles'. After 'mit' (Dativ), it must be 'allem' (neut. Dativ).",
+      "example_correct": "Er kam mit einer Tasche, mit allem, was er besitzt.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Adjektivdeklination",
+      "kevin_said": "seiner Tante",
+      "correction": "seiner Tante (korrekt im Kontext, aber Kevin hat 'seine' gesagt und Stefanie korrigierte zu 'seiner')",
+      "rule": "Possessivartikel Dativ feminin: seiner",
+      "explanation_en": "Kevin initially said 'seine Tante' but in Dativ (von seiner Tante), it becomes 'seiner Tante'.",
+      "example_correct": "Die Adresse seiner Tante war in der Tasche.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "in signer Tasche",
+      "correction": "in seiner Tasche",
+      "rule": "Possessivartikel Dativ maskulin/neutral: seinem; feminin: seiner",
+      "explanation_en": "Kevin said 'signer' (unclear). Correct is 'seiner Tasche' (fem. Dativ) for 'in his bag'.",
+      "example_correct": "Der Pass war in seiner Tasche.",
+      "lesson_date": "2026-06-11-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Ich kann es nicht erinnern",
+      "correction": "Ich kann mich nicht daran erinnern",
+      "rule": "sich erinnern an + Akkusativ (reflexives Verb)",
+      "explanation_en": "The verb 'erinnern' is reflexive when meaning 'to remember': 'sich erinnern an'. Kevin omitted both the reflexive pronoun 'mich' and the preposition 'an'.",
+      "example_correct": "Ich kann mich nicht an den Namen erinnern.",
+      "lesson_date": "2026-06-12-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "vom Leben",
+      "correction": "über ihr Leben / von ihrem Leben",
+      "rule": "sprechen über + Akkusativ oder von + Dativ",
+      "explanation_en": "When using 'von', the dative article must follow: 'von ihrem Leben' (not 'vom Leben'). Alternatively, 'sprechen über + Akkusativ' is also correct.",
+      "example_correct": "Sie sprechen über ihr Leben in Deutschland.",
+      "lesson_date": "2026-06-12-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Sie sprechen in Deutschland",
+      "correction": "Sie sprechen über ihr Leben in Deutschland",
+      "rule": "sprechen über + Akkusativ für Thema",
+      "explanation_en": "Kevin's sentence was incomplete/unclear; Stefanie corrected the structure to include 'über ihr Leben' to express what they speak about.",
+      "example_correct": "Sie sprechen über ihr neues Leben in Deutschland.",
+      "lesson_date": "2026-06-12-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "hat ihr geholfen",
+      "correction": "hat ihr geholfen (correct, but Stefanie clarified usage)",
+      "rule": "helfen + Dativ (jemandem helfen)",
+      "explanation_en": "Stefanie confirmed Kevin's form was correct ('hat ihr geholfen') but emphasized the dative structure.",
+      "example_correct": "Sarah hat ihr geholfen.",
+      "lesson_date": "2026-06-12-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Er spricht nicht zu jemanden",
+      "correction": "Er spricht zu niemandem (ohne 'nicht')",
+      "rule": "keine doppelte Verneinung im Deutschen",
+      "explanation_en": "German does not allow double negation. 'Nicht' + 'niemand' is wrong; use only 'niemand' (nobody).",
+      "example_correct": "Er spricht zu niemandem.",
+      "lesson_date": "2026-06-12-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Alle Straßen sie leer",
+      "correction": "Alle Straßen sind leer / waren leer",
+      "rule": "Verb an zweiter Position (V2) im Hauptsatz",
+      "explanation_en": "Kevin placed 'sie' incorrectly. The verb 'sind/waren' must be in second position; 'sie' is not needed as 'alle Straßen' is already the subject.",
+      "example_correct": "Alle Straßen waren leer.",
+      "lesson_date": "2026-06-12-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "gelegt",
+      "correction": "gelegen",
+      "rule": "liegen → gelegen (nicht gelegt)",
+      "explanation_en": "Kevin confused the past participle of 'liegen' (to lie) with 'legen' (to lay/put). 'Gelegt' is for the active verb 'legen' (I laid something down), while 'gelegen' is for 'liegen' (I was lying).",
+      "example_correct": "Ich habe den ganzen Tag in der Sonne gelegen.",
+      "lesson_date": "2026-06-15-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "benutzt",
+      "correction": "mitgebracht / vergessen mitzubringen",
+      "rule": "benutzen vs. mitbringen",
+      "explanation_en": "Stefanie corrected Kevin's use of 'benutzt' (used) when he meant 'mitgebracht' (brought along). She clarified he forgot to bring the sunscreen, not that he used it.",
+      "example_correct": "Ich habe die Sonnencreme vergessen mitzubringen.",
+      "lesson_date": "2026-06-15-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "gedrunken",
+      "correction": "getrunken",
+      "rule": "trinken → getrunken",
+      "explanation_en": "Kevin said 'gedrunken' instead of the correct past participle 'getrunken' for the verb 'trinken' (to drink).",
+      "example_correct": "Ich habe gestern viel Bier getrunken.",
+      "lesson_date": "2026-06-15-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Ich denke, dass sie nicht so wie ich",
+      "correction": "Ich denke, dass sie nicht alle so sind wie in diesem Camping",
+      "rule": "so wie + Vergleich",
+      "explanation_en": "Kevin's sentence was incomplete and lacked proper structure. Stefanie suggested 'so wie' for comparisons and improved the sentence to 'Es ist nicht überall so wie in diesem Camping'.",
+      "example_correct": "Es ist nicht überall so wie hier.",
+      "lesson_date": "2026-06-15-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Alten-Sound",
+      "correction": "(kein deutsches Wort)",
+      "rule": "Nicht existierendes Wort",
+      "explanation_en": "Kevin invented a non-existent German word 'Alten-Sound'. Stefanie clearly stated 'Das ist kein Deutsch' and 'Das gibt es wirklich nicht'.",
+      "example_correct": "Es gibt verschiedene Zäune: Holzzaun, Maschendrahtzaun, etc.",
+      "lesson_date": "2026-06-15-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "ich bin mit Elliot",
+      "correction": "ich habe Elliot",
+      "rule": "haben bei Mobilfunkanbietern",
+      "explanation_en": "Kevin said 'ich bin mit Elliot' (I am with Elliot) but Stefanie corrected that both 'ich habe Elliot' and 'ich bin bei Elliot' work for phone providers.",
+      "example_correct": "Ich habe Postemobile als Mobilfunkanbieter.",
+      "lesson_date": "2026-06-15-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "in keinen Fall",
+      "correction": "auf keinen Fall",
+      "rule": "Feste Wendung 'auf (keinen) Fall'",
+      "explanation_en": "The fixed expression for 'in any case' or 'in no case' in German uses the preposition 'auf', not 'in'. This is a set phrase.",
+      "example_correct": "Ich gehe auf keinen Fall zurück nach Spanien.",
+      "lesson_date": "2026-06-16-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "in Urlaub",
+      "correction": "in den Urlaub",
+      "rule": "Bewegungsverben verlangen Akkusativ",
+      "explanation_en": "With verbs of motion (like 'fahren'), you need the accusative case with 'in'. 'In den Urlaub fahren' shows direction/movement into the vacation.",
+      "example_correct": "Ich fahre in den Urlaub.",
+      "lesson_date": "2026-06-16-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "das alles was ich sagen wollte",
+      "correction": "das ist alles, was ich sagen wollte",
+      "rule": "Vollständiger Satz braucht Verb",
+      "explanation_en": "Kevin omitted the verb 'ist' in the main clause. A complete sentence requires a conjugated verb.",
+      "example_correct": "Das ist alles, was ich sagen wollte.",
+      "lesson_date": "2026-06-16-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "ich zwei sagen wollte",
+      "correction": "ich sagen wollte",
+      "rule": "Modalverb + Infinitiv am Satzende",
+      "explanation_en": "Kevin incorrectly inserted 'zwei' (two) and had confusion with modal verb structure. With modal verbs, the infinitive goes to the end.",
+      "example_correct": "Das ist alles, was ich sagen wollte.",
+      "lesson_date": "2026-06-16-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "ich rufe ist jemand da",
+      "correction": "ich rufe: Ist jemand da?",
+      "rule": "Indirekte und direkte Rede",
+      "explanation_en": "When reporting direct speech/a question shouted, the question 'Ist jemand da?' stands on its own with question word order, not embedded in the sentence structure.",
+      "example_correct": "Ich rufe: Ist jemand da?",
+      "lesson_date": "2026-06-16-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "niemand hat mehr geantwortet",
+      "correction": "niemand hat mir geantwortet",
+      "rule": "Verb 'antworten' verlangt Dativ",
+      "explanation_en": "The verb 'antworten' requires a dative object (to whom). Kevin said 'mehr' (more) instead of 'mir' (to me). Also, 'mehr' would be incorrect here.",
+      "example_correct": "Niemand hat mir geantwortet.",
+      "lesson_date": "2026-06-16-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "hast du jemant getroffen",
+      "correction": "hast du jemanden getroffen",
+      "rule": "Akkusativobjekt bei 'treffen'",
+      "explanation_en": "The verb 'treffen' takes an accusative object. 'Jemand' must be declined to 'jemanden' in the accusative case.",
+      "example_correct": "Hast du jemanden getroffen?",
+      "lesson_date": "2026-06-16-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "ich habe niemand getroffen",
+      "correction": "ich habe niemanden getroffen",
+      "rule": "Akkusativobjekt bei 'treffen'",
+      "explanation_en": "'Treffen' requires accusative. 'Niemand' must be declined to 'niemanden' as the accusative object.",
+      "example_correct": "Ich habe niemanden getroffen.",
+      "lesson_date": "2026-06-16-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "auf der Party",
+      "correction": "auf der Party",
+      "rule": "Feste Wendung 'auf der Party'",
+      "explanation_en": "This was actually correct when Kevin used 'auf der Party', but there was initial confusion. The fixed expression uses 'auf', not 'in'.",
+      "example_correct": "Ich war auf der Party.",
+      "lesson_date": "2026-06-16-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "mit niemand",
+      "correction": "mit niemandem",
+      "rule": "Präposition 'mit' verlangt Dativ",
+      "explanation_en": "The preposition 'mit' always requires the dative case. 'Niemand' must be declined to 'niemandem'.",
+      "example_correct": "Er hat mit niemandem gesprochen.",
+      "lesson_date": "2026-06-16-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "allen den Dingen",
+      "correction": "allen Dingen",
+      "rule": "Kein Artikel nach 'allen' im Plural",
+      "explanation_en": "When using 'allen' (all) with a plural noun, you don't add the article 'den'. 'Allen' already functions as the article.",
+      "example_correct": "Ich habe einen Koffer mit allen Dingen, die ich brauche.",
+      "lesson_date": "2026-06-16-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "am Samstag Abend",
+      "correction": "Samstag abends / am Samstagabend",
+      "rule": "Tageszeit ohne Artikel: 'abends' (adverbiell) oder zusammengesetzt 'Samstagabend'",
+      "explanation_en": "Kevin used 'am Samstag Abend' (literally 'on Saturday evening') but Stefanie corrected it to 'abends' or the compound 'Samstagabend'. In German, time expressions like 'in the evening' are typically expressed adverbially ('abends') or as compound nouns without the article-preposition structure.",
+      "example_correct": "Ich habe Samstag abends Zeit.",
+      "lesson_date": "2026-06-18-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "von sieben Uhr",
+      "correction": "ab sieben Uhr",
+      "rule": "'ab' für offene Zeitspanne ohne Endpunkt",
+      "explanation_en": "Kevin said 'von sieben Uhr' (from seven o'clock) when he meant an open-ended timeframe. Stefanie corrected that 'von...bis' is used for a range with an endpoint, but 'ab sieben Uhr' is correct for 'from seven o'clock onwards' without a stated end.",
+      "example_correct": "Ab sieben Uhr habe ich frei.",
+      "lesson_date": "2026-06-18-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "im Kino",
+      "correction": "ins Kino",
+      "rule": "Akkusativ bei Richtungsverben (gehen + Bewegung)",
+      "explanation_en": "Kevin said 'im Kino' (in the cinema, Dativ: location) when expressing movement ('I go to the cinema'). Stefanie corrected it to 'ins Kino' (Akkusativ) because 'gehen' here implies direction/movement, not static location.",
+      "example_correct": "Ich gehe ins Kino.",
+      "lesson_date": "2026-06-18-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "treffen uns wieder",
+      "correction": "uns treffen / uns wieder treffen",
+      "rule": "Reflexivpronomen direkt nach finitem Verb oder nach Subjekt",
+      "explanation_en": "Kevin said 'treffen uns wieder' but the reflexive pronoun 'uns' should come immediately after the finite verb (or after the subject in inverted clauses). Stefanie clarified the correct order: 'uns treffen' or in a full clause with modality, the pronoun follows the verb directly.",
+      "example_correct": "Wir treffen uns um sieben Uhr.",
+      "lesson_date": "2026-06-18-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "noch",
+      "correction": "genug / genügend",
+      "rule": "'genug' = enough; 'noch' = still/yet",
+      "explanation_en": "Kevin used 'noch' (still/yet) when he meant 'enough'. Stefanie corrected that 'nicht genug Zeit' means 'not enough time', whereas 'noch' would mean 'still' or 'yet'. The correct word for 'sufficient' is 'genug' or 'genügend'.",
+      "example_correct": "Ich habe nicht genug Zeit.",
+      "lesson_date": "2026-06-18-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "danach",
+      "correction": "dann",
+      "rule": "'dann' = then (in that case); 'danach' = afterwards (temporal sequence)",
+      "explanation_en": "Kevin said 'danach' (afterwards, implying temporal sequence) when he meant 'then' in the sense of 'in that case'. Stefanie corrected that 'dann' is the logical connector ('then we have a problem'), whereas 'danach' means 'after that' in a chronological sense.",
+      "example_correct": "Dann haben wir ein Problem.",
+      "lesson_date": "2026-06-18-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "zum Bank",
+      "correction": "zur Bank",
+      "rule": "Bank ist feminin (die Bank)",
+      "explanation_en": "Kevin said 'zum Bank' (masculine/neuter contraction), but 'Bank' is feminine in German, so the correct form is 'zur Bank' (zu + der = zur).",
+      "example_correct": "Ich muss zur Bank gehen.",
+      "lesson_date": "2026-06-19-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "ein Konto öffnen",
+      "correction": "ein Konto eröffnen",
+      "rule": "eröffnen für offizielle/formelle Eröffnungen",
+      "explanation_en": "For opening a bank account (or something official like a festival), German uses 'eröffnen', not the simple 'öffnen' (which is for doors, fridges, etc.).",
+      "example_correct": "Ich will ein Konto eröffnen.",
+      "lesson_date": "2026-06-19-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "dass er heute er nicht kann",
+      "correction": "dass er heute nicht kann",
+      "rule": "kein doppeltes Subjekt im Nebensatz",
+      "explanation_en": "Kevin repeated the subject pronoun 'er' in the subordinate clause. In a subordinate clause, the subject appears only once, right after 'dass'.",
+      "example_correct": "Er sagt, dass er heute nicht kann.",
+      "lesson_date": "2026-06-19-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "zu Lisa zu gehen / zum Lisa zu gehen",
+      "correction": "zu Lisa gehen (ohne 'zum')",
+      "rule": "zu + Name (keine Kontraktion)",
+      "explanation_en": "When using 'zu' with a person's name, there's no article, so no contraction 'zum'. It's simply 'zu Lisa gehen'.",
+      "example_correct": "Er muss zu Lisa gehen.",
+      "lesson_date": "2026-06-19-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "dass es um 11 Uhr ist",
+      "correction": "dass es 11 Uhr ist",
+      "rule": "Uhrzeit ohne 'um' bei sein",
+      "explanation_en": "'Um' means 'at' (time) when indicating when something happens, but when stating what time it *is*, German doesn't use 'um'. It's 'Es ist 11 Uhr' (not 'um 11 Uhr').",
+      "example_correct": "Es ist 11 Uhr. / Der Kurs ist um 11 Uhr.",
+      "lesson_date": "2026-06-19-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "dass er schaffen kann, zur Bank zu gehen",
+      "correction": "dass er es schafft, zur Bank zu gehen",
+      "rule": "schaffen + es + Infinitiv mit zu",
+      "explanation_en": "The verb 'schaffen' (to manage/make it) typically requires the pronoun 'es' and takes an infinitive construction with 'zu'. The modal verb structure Kevin tried doesn't fit here.",
+      "example_correct": "Ich schaffe es nicht, zur Bank zu gehen.",
+      "lesson_date": "2026-06-19-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "sie gibt ihm das Fahrrad als Geschenk",
+      "correction": "sie gibt ihm das Fahrrad als Geschenk (korrekt, aber Kevin sagte anfangs 'a Pharad' unklar)",
+      "rule": "als + Nominativ",
+      "explanation_en": "After 'als' (as), the noun stays in the nominative. Stefanie confirmed the structure 'als Geschenk' is correct.",
+      "example_correct": "Ich arbeite als Arzt.",
+      "lesson_date": "2026-06-19-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "um schneller zu sein",
+      "correction": "um schneller zu fahren / damit er schneller fahren kann",
+      "rule": "Finalstruktur: um...zu oder damit",
+      "explanation_en": "Kevin initially tried 'um schneller zu sein' (to be faster), but the context required 'to go/drive faster', so 'um schneller zu fahren' or 'damit er schneller fahren kann' is correct.",
+      "example_correct": "Sie gibt ihm das Fahrrad, damit er schneller fahren kann.",
+      "lesson_date": "2026-06-19-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "mit dem (when trying to say 'with that' for damit)",
+      "correction": "damit (not 'mit dem' when referring to a clause/idea)",
+      "rule": "Präpositionaladverb: damit = with that",
+      "explanation_en": "When a preposition refers back to an idea or clause (not a specific noun), German uses prepositional adverbs like 'damit' (with that), 'dabei' (at that), 'dafür' (for that), not 'mit dem'.",
+      "example_correct": "Mit dem Fahrrad geht es schneller. / Damit geht es schneller.",
+      "lesson_date": "2026-06-19-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "ich gefalle deine Hunde",
+      "correction": "deine Hunde gefallen mir",
+      "rule": "gefallen + Dativ (mir, dir, ihm...)",
+      "explanation_en": "The verb 'gefallen' (to please, to be pleasing) takes the dative case. The thing that is pleasing is the subject (nominative), and the person who is pleased is in the dative. Kevin reversed the structure.",
+      "example_correct": "Deine Hunde gefallen mir.",
+      "lesson_date": "2026-06-22-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "ich mag deinen Hund",
+      "correction": "ich mag deinen Hund (actually correct as stated by teacher)",
+      "rule": "mögen + Akkusativ",
+      "explanation_en": "Kevin initially struggled with the case after 'mögen', but Stefanie confirmed that 'ich mag deinen Hund' (accusative) is correct. This appears more as a clarification than a correction of a spoken error.",
+      "example_correct": "Ich mag deinen Hund.",
+      "lesson_date": "2026-06-22-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "ich lasse den Mechaniker mein Motorrad reparieren",
+      "correction": "ich lasse mein Motorrad reparieren",
+      "rule": "lassen + Infinitiv (ohne Agens wenn nicht nötig)",
+      "explanation_en": "When using 'lassen' to mean 'to have something done', you typically don't need to mention the agent (den Mechaniker). The simpler structure is 'ich lasse + object + infinitive'.",
+      "example_correct": "Ich lasse mein Motorrad reparieren.",
+      "lesson_date": "2026-06-22-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "in unserem Dat",
+      "correction": "in unserem Doc",
+      "rule": "das Dokument (Neutrum)",
+      "explanation_en": "Kevin likely mispronounced or misused the article. 'Das Dokument' is neuter, so it should be 'unserem Dokument' (dative) or if referring to a shared doc, 'Doc' is often used colloquially.",
+      "example_correct": "Wir schreiben in unserem Dokument.",
+      "lesson_date": "2026-06-24-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "die Antwort kannst du mittlerweile im Schlaf",
+      "correction": "die Antworten kannst du mittlerweile im Schlaf (geben)",
+      "rule": "Vollständigkeit des Satzes",
+      "explanation_en": "Kevin's sentence was incomplete or unclear. The teacher provided the correct phrasing 'ich kann das mittlerweile im Schlaf', showing the idiomatic structure.",
+      "example_correct": "Ich kann das mittlerweile im Schlaf.",
+      "lesson_date": "2026-06-24-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Ich bin auf der Uhrlaube zu bleiben",
+      "correction": "Ich freue mich darauf, Urlaub zu machen / im Urlaub zu sein",
+      "rule": "Verb + Präposition (sich freuen auf + Akkusativ)",
+      "explanation_en": "Kevin mixed up the structure. 'Sich freuen auf' (to look forward to) requires accusative, and 'Urlaub' is masculine (der Urlaub). The phrase 'auf der Urlaub zu bleiben' is grammatically incorrect.",
+      "example_correct": "Ich freue mich auf den Urlaub.",
+      "lesson_date": "2026-06-24-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Ich freue mich auf generell Arbeit",
+      "correction": "Ich freue mich auf die Arbeit / auf einen Job",
+      "rule": "Verb + Präposition (sich freuen auf + Akkusativ) + Artikel",
+      "explanation_en": "Kevin omitted the article. 'Sich freuen auf' requires the accusative case with an article. If speaking generally, 'die Arbeit' (feminine) is used.",
+      "example_correct": "Ich freue mich auf die Arbeit in der Schweiz.",
+      "lesson_date": "2026-06-24-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "Ich freue mich auf das Meer. Ich habe die Meer, das Meer schon gesehen.",
+      "correction": "Ich habe das Meer schon gesehen.",
+      "rule": "das Meer (Neutrum)",
+      "explanation_en": "Kevin first said 'die Meer' (wrong gender), then corrected himself to 'das Meer'. The sea is neuter in German.",
+      "example_correct": "Ich habe das Meer schon gesehen.",
+      "lesson_date": "2026-06-24-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Ich nehme meinen Zeit",
+      "correction": "Ich nehme mir Zeit",
+      "rule": "sich Zeit nehmen (reflexiv, Dativ)",
+      "explanation_en": "The idiomatic expression 'sich Zeit nehmen' requires the dative reflexive pronoun 'mir', not the accusative 'meinen Zeit'.",
+      "example_correct": "Ich nehme mir Zeit.",
+      "lesson_date": "2026-06-24-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Ich habe mich schon daran die Bezüge von nicht zu arbeiten gewöhnt",
+      "correction": "Ich habe mich schon daran gewöhnt, nicht zu arbeiten.",
+      "rule": "sich gewöhnen an + Akkusativ / daran + Infinitivsatz",
+      "explanation_en": "Kevin tried to insert a noun phrase but the structure requires 'daran' (adverb) followed by an infinitive clause with 'zu'. The teacher corrected the word order and structure.",
+      "example_correct": "Ich habe mich schon daran gewöhnt, nicht zu arbeiten.",
+      "lesson_date": "2026-06-24-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "die Antwort kannst du mittlerweile im Schlaf (mit dem Buchstatt)",
+      "correction": "mit der Buchstatt (if meaning 'letter') or proper noun",
+      "rule": "Artikel im Dativ (die → der)",
+      "explanation_en": "Kevin said 'mit dem Buchstatt', likely confusing the gender. If 'Buchstatt' were a feminine noun (die Buchstatt), the dative would be 'mit der Buchstatt'. The teacher did not correct this explicitly, but the pattern suggests confusion.",
+      "example_correct": "Ich arbeite mit der Firma.",
+      "lesson_date": "2026-06-24-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "ein guter Topic",
+      "correction": "ein gutes Thema",
+      "rule": "Topic → das Thema (neutrum)",
+      "explanation_en": "Kevin used the English word 'topic' with German article/adjective. The German word is 'das Thema' (neuter), so 'ein gutes Thema'.",
+      "example_correct": "Politik ist ein gutes Thema.",
+      "lesson_date": "2026-06-26-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Ich glaube nicht an Gott",
+      "correction": "Ich glaube nicht an Gott",
+      "rule": "glauben an + Akkusativ",
+      "explanation_en": "Kevin initially attempted 'Ich glaube nicht, an Gott' with wrong punctuation/word order, and Stefanie drilled the correct form repeatedly.",
+      "example_correct": "Ich glaube an Gott.",
+      "lesson_date": "2026-06-26-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "zu viel Taxis",
+      "correction": "zu hohe Steuern",
+      "rule": "hoch/niedrig für Steuern (nicht viel/wenig)",
+      "explanation_en": "For taxes, Germans say 'hoch' (high) and 'niedrig' (low), not 'viel/wenig'. Also 'Taxis' → 'Steuern'.",
+      "example_correct": "Die Steuern sind zu hoch in Deutschland.",
+      "lesson_date": "2026-06-26-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "auf den Insel / auf dem Insel",
+      "correction": "auf die Insel / auf der Insel",
+      "rule": "die Insel (feminin), auf + Dat./Akk.",
+      "explanation_en": "Kevin used 'dem Insel' (masc./neut.), but 'die Insel' is feminine. Location: auf der Insel (Dat.); motion: auf die Insel (Akk.).",
+      "example_correct": "Ich fahre auf die Insel. / Ich bin auf der Insel.",
+      "lesson_date": "2026-06-26-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "bei der Fliege",
+      "correction": "mit dem Flugzeug",
+      "rule": "Verkehrsmittel: mit + Dativ",
+      "explanation_en": "For means of transport, German uses 'mit'. Also 'Fliege' (fly/bow-tie) → 'Flugzeug' (airplane).",
+      "example_correct": "Ich fliege mit dem Flugzeug.",
+      "lesson_date": "2026-06-26-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "Ich fahre bei der Fliege",
+      "correction": "Ich fliege mit dem Flugzeug dorthin",
+      "rule": "hin/her bei Richtungsangaben",
+      "explanation_en": "Stefanie explained 'dorthin' (to there) vs. 'hierher' (to here) for directional adverbs, which Kevin omitted.",
+      "example_correct": "Ich fliege dorthin.",
+      "lesson_date": "2026-06-26-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Mit dem Flug",
+      "correction": "mit dem Flug",
+      "rule": "Präposition 'mit' + Dativ",
+      "explanation_en": "Kevin initially said 'mit das Flug' (accusative), but 'mit' always requires dative case. The correct form is 'mit dem Flug' (masculine dative).",
+      "example_correct": "Ich fahre mit dem Auto nach Berlin.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Ich wollte dir probieren",
+      "correction": "Ich wollte es dir erklären / Ich wollte es versuchen, dir zu sagen",
+      "rule": "Verb 'probieren' bedeutet 'to try/taste', nicht 'to try to do sth'",
+      "explanation_en": "Kevin mixed 'probieren' (to try out/taste) with 'versuchen' (to attempt). Stefanie corrected: use 'versuchen' or 'erklären' when trying to explain something.",
+      "example_correct": "Ich wollte versuchen, es dir zu erklären.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "das Ozean",
+      "correction": "der Ozean",
+      "rule": "Genus: der Ozean ist maskulin",
+      "explanation_en": "Kevin used 'das Ozean' (neuter), but the correct article is 'der Ozean' (masculine).",
+      "example_correct": "Der Ozean ist blau und tief.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Ich bin das Closest nebeneinander",
+      "correction": "Es sind nur 100 Meter bis zum Strand / Ich bin sehr nahe am Meer",
+      "rule": "Idiomatische Ausdrucksweise für Nähe",
+      "explanation_en": "Kevin tried a direct translation of 'I am the closest'. Stefanie explained Germans don't use superlative this way; instead say 'Es sind nur 100 Meter bis zum Strand' or 'nahe am Meer'.",
+      "example_correct": "Es sind nur 100 Meter bis zum Strand.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "zwischen mir und der Meer",
+      "correction": "zwischen mir und dem Meer",
+      "rule": "Präposition 'zwischen' + Dativ",
+      "explanation_en": "Kevin used 'der Meer' (nominative/genitive), but 'zwischen' requires dative: 'dem Meer' (neuter dative).",
+      "example_correct": "Zwischen mir und dem Meer gibt es nichts.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Es sind nur 100 Meter 4/2 hier",
+      "correction": "Es sind nur 100 Meter bis zum Strand",
+      "rule": "Präposition 'bis zu' + Dativ (Kontraktion 'zum')",
+      "explanation_en": "Kevin struggled with the preposition. Stefanie corrected: use 'bis zum Strand' (zu + dem = zum), not '4' or '2'.",
+      "example_correct": "Es sind nur 100 Meter bis zum Strand.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "mit meiner Mutter und meine Dante",
+      "correction": "mit meiner Mutter und meiner Tante",
+      "rule": "Präposition 'mit' + Dativ (beide Nomen)",
+      "explanation_en": "Kevin used 'meine Dante' (nominative/accusative) after 'mit', but 'mit' requires dative: 'meiner Tante'.",
+      "example_correct": "Ich fahre mit meiner Mutter und meiner Tante.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "den ganzen Tag / das ganze Tag",
+      "correction": "den ganzen Tag",
+      "rule": "Akkusativ-Zeitausdruck: 'den ganzen Tag' (maskulin Akkusativ)",
+      "explanation_en": "Kevin wavered between 'den ganzen Tag' and 'das ganze Tag'. Stefanie confirmed: 'der Tag' is masculine, accusative time expression = 'den ganzen Tag'.",
+      "example_correct": "Ich war den ganzen Tag am Pool.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "auf der Pool",
+      "correction": "am Pool",
+      "rule": "Idiom: 'am Pool' (an + dem)",
+      "explanation_en": "Kevin said 'auf der Pool', but the idiomatic expression is 'am Pool' (an dem Pool, dative). Stefanie corrected it.",
+      "example_correct": "Ich war den ganzen Tag am Pool.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Ich versuchte die Hauptstrand",
+      "correction": "Ich habe den Hauptstrand ausprobiert",
+      "rule": "Verb 'ausprobieren' für 'to try out'",
+      "explanation_en": "Kevin used 'versuchte die Hauptstrand' (wrong structure). Stefanie explained: 'ausprobieren' (separable) is correct for 'to try out' a place or thing.",
+      "example_correct": "Ich habe den Hauptstrand ausprobiert.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "ein Abend / einen Abend (uncertainty)",
+      "correction": "einen Abend / an einem Abend",
+      "rule": "Akkusativ-Zeitausdruck: 'einen Abend' oder 'an einem Abend' (Dativ mit Präposition)",
+      "explanation_en": "Kevin was unsure about 'ein Abend' vs 'einen Abend'. Stefanie clarified: unspecified time = 'einen Abend' (accusative), or 'an einem Abend' (dative with preposition).",
+      "example_correct": "Einen Abend habe ich viele Touristen getroffen.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Wo ich viele englische Jugendliche treffen treffe",
+      "correction": "Wo ich viele englische Jugendliche getroffen habe",
+      "rule": "Perfekt: haben + Partizip II",
+      "explanation_en": "Kevin started with infinitive 'treffen' then 'treffe'. Stefanie corrected to Perfekt: 'getroffen habe' (past tense).",
+      "example_correct": "Wo ich viele englische Jugendliche getroffen habe.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Ich habe mich mit Cocktails betrunken",
+      "correction": "Ich habe mich mit Cocktails betrunken",
+      "rule": "Reflexiv 'sich betrinken' = 'to get oneself drunk'",
+      "explanation_en": "Kevin struggled with the reflexive verb and irregular Partizip 'betrunken'. Stefanie confirmed: 'sich betrinken' → 'habe mich betrunken' (haben, not sein).",
+      "example_correct": "Ich habe mich mit Cocktails betrunken.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Ich habe ihnen gefunden",
+      "correction": "Ich habe sie gefunden",
+      "rule": "Akkusativobjekt bei 'finden'",
+      "explanation_en": "Kevin used 'ihnen' (dative), but 'finden' requires accusative object: 'sie'.",
+      "example_correct": "Ich habe sie gefunden.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Ich war noch nicht möglich / schaffen",
+      "correction": "Ich habe es nicht geschafft",
+      "rule": "Verb 'schaffen' für 'to manage'",
+      "explanation_en": "Kevin tried to say 'I couldn't make it'. Stefanie emphasized the verb 'schaffen' (to manage/succeed): 'Ich habe es nicht geschafft'.",
+      "example_correct": "Ich habe es nicht geschafft, Wein zu trinken.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Die Batterie zu auf laden",
+      "correction": "Die Batterie aufzuladen",
+      "rule": "Trennbare Verben mit 'zu': 'auf|zu|laden'",
+      "explanation_en": "Kevin put 'zu' before 'auf'. Stefanie corrected: with infinitive + zu, insert 'zu' between prefix and stem: 'auf-zu-laden'.",
+      "example_correct": "Ich brauche Zeit, um die Batterie aufzuladen.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "die rote Hose an probieren",
+      "correction": "die rote Hose anprobieren",
+      "rule": "Trennbares Verb 'anprobieren' im Infinitiv",
+      "explanation_en": "Kevin separated 'an probieren' in the infinitive with modal verb, but it should be written together 'anprobieren' (the separation happens in main clauses).",
+      "example_correct": "Ich möchte die rote Hose anprobieren.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Adjektivdeklination",
+      "kevin_said": "die rote Hose die louden Streifen hat",
+      "correction": "die rote Hose, die gelbe Streifen hat",
+      "rule": "Adjektivdeklination nach bestimmtem Artikel (Nominativ Plural: -en → -e)",
+      "explanation_en": "Kevin used 'louden' (incorrect form). Stefanie clarified: nominative plural after 'die' = '-en' ending normally, but here Kevin needed 'gelbe Streifen' (accusative plural -e for color adjective). The correct form depends on case; Stefanie confirmed the adjective ending.",
+      "example_correct": "Die rote Hose, die gelbe Streifen hat.",
+      "lesson_date": "2026-06-29-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "der Flug, die Flüge war auch gut",
+      "correction": "der Flug war auch gut / die Flüge waren auch gut",
+      "rule": "Singular/Plural-Kongruenz beim Verb",
+      "explanation_en": "Kevin mixed singular and plural: 'der Flug' (singular) or 'die Flüge' (plural) require 'war' or 'waren' respectively. He said 'die Flüge war', which is incorrect.",
+      "example_correct": "Die Flüge waren pünktlich.",
+      "lesson_date": "2026-07-06-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "aus Belgien",
+      "correction": "von Belgien (gekommen) / aus Belgien (sein)",
+      "rule": "von + Herkunft bei Bewegung, aus + Herkunft bei Identität",
+      "explanation_en": "When talking about where people came from (movement), 'von' is more natural ('sie sind von Belgien gekommen'), while 'aus' indicates origin/identity ('sie sind aus Belgien'). Stefanie clarified both are acceptable but 'von' fits motion better.",
+      "example_correct": "Sie sind von Belgien nach Teneriffa gekommen.",
+      "lesson_date": "2026-07-06-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "die Menschen aus Italien sind … wie auf Italien … nein",
+      "correction": "wie in Italien",
+      "rule": "Präposition 'in' bei Ländern",
+      "explanation_en": "Kevin tried to say 'like in Italy' but said 'wie auf Italien'. The correct preposition is 'in' when referring to being in a country.",
+      "example_correct": "Die Häuser sehen aus wie in Italien.",
+      "lesson_date": "2026-07-06-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "neben die Riffen",
+      "correction": "neben den Riffen",
+      "rule": "neben + Dativ bei Position",
+      "explanation_en": "The preposition 'neben' (next to) requires Dativ when indicating location (Wo?). Kevin used the wrong article/case.",
+      "example_correct": "Das Hotel liegt neben den Riffen.",
+      "lesson_date": "2026-07-06-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "ländlich (context: poor/broken buildings)",
+      "correction": "arm / heruntergekommen",
+      "rule": "ländlich = rural, nicht arm",
+      "explanation_en": "Kevin used 'ländlich' (rural, countryside) when he meant 'poor' or 'run-down'. Stefanie clarified 'arm' means poor.",
+      "example_correct": "Die Gegend sieht arm aus.",
+      "lesson_date": "2026-07-06-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Hast du viele Leute kennengelernt? … sie alle hat du … hat du zu?",
+      "correction": "mussten sie nach Hause gehen",
+      "rule": "Präteritum von 'müssen' ist 'mussten'",
+      "explanation_en": "Kevin struggled with the past form of 'müssen'. Stefanie corrected him multiple times: 'mussten zu Hause schon gehen' → 'mussten nach Hause gehen'.",
+      "example_correct": "Sie mussten früh nach Hause gehen.",
+      "lesson_date": "2026-07-06-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "mussten zu Hause schon gehen",
+      "correction": "mussten schon nach Hause gehen",
+      "rule": "nach Hause gehen (feste Wendung)",
+      "explanation_en": "Kevin said 'zu Hause gehen' (which would mean 'walk at home'), but the correct idiom is 'nach Hause gehen' (to go home).",
+      "example_correct": "Ich muss jetzt nach Hause gehen.",
+      "lesson_date": "2026-07-06-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Sie wollen dort leben. Sie wollen in Spanien leben. In Tenerife. Auf, auf.",
+      "correction": "auf Teneriffa / auf der Insel",
+      "rule": "auf + Insel (Dativ)",
+      "explanation_en": "Islands take 'auf' not 'in'. Kevin initially said 'in Tenerife', then self-corrected to 'auf'. Stefanie confirmed: 'auf der Insel'.",
+      "example_correct": "Ich lebe auf Teneriffa.",
+      "lesson_date": "2026-07-06-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "waren von Belgien",
+      "correction": "waren aus Belgien / kamen von Belgien",
+      "rule": "von + Bewegung, aus + Herkunft",
+      "explanation_en": "Stefanie noted 'waren von Belgien' is not standard; better is 'sie waren aus Belgien' (identity) or 'sie kamen von Belgien' (motion).",
+      "example_correct": "Sie kamen von Belgien nach Spanien.",
+      "lesson_date": "2026-07-06-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "ich habe um zwei Uhr in der Nacht geschlafen",
+      "correction": "ich habe bis zwei Uhr in der Nacht geschlafen / ich bin um zwei Uhr schlafen gegangen",
+      "rule": "schlafen vs. einschlafen / schlafen gehen",
+      "explanation_en": "Kevin said 'I slept at 2 a.m.' but meant 'I went to bed at 2 a.m.' or 'I slept until 2 a.m.' Stefanie corrected him to 'bis zwei Uhr' (until 2 a.m.).",
+      "example_correct": "Ich bin um zwei Uhr schlafen gegangen.",
+      "lesson_date": "2026-07-07-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "ich klettere nicht inhauf",
+      "correction": "ich klettere nicht hinauf / ich klettere nicht herauf",
+      "rule": "hin/her + auf",
+      "explanation_en": "Kevin tried to say 'I don't climb up there' but used a wrong form. Stefanie explained the difference between 'hinauf' (up there, away) and 'herauf' (up here, towards speaker).",
+      "example_correct": "Ich klettere nicht hinauf.",
+      "lesson_date": "2026-07-07-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "ich hole es hier ... her aus",
+      "correction": "ich hole es heraus",
+      "rule": "heraus (out, towards speaker)",
+      "explanation_en": "Kevin correctly identified 'her' (towards speaker) but the preposition-verb combination is 'herausholen' (to take out towards here).",
+      "example_correct": "Ja, ich hole es heraus.",
+      "lesson_date": "2026-07-07-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "wir schwimmen in (there, so in)",
+      "correction": "wir schwimmen hin",
+      "rule": "hin (away from speaker, motion towards)",
+      "explanation_en": "Kevin tried to express motion 'to the island' but mixed up the directional particle. Stefanie confirmed 'hin' is correct for 'away from speaker'.",
+      "example_correct": "Wir schwimmen hin.",
+      "lesson_date": "2026-07-07-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "sie geht ... in heim (or similar confusion)",
+      "correction": "sie geht hinein",
+      "rule": "hinein (in there, motion into)",
+      "explanation_en": "Kevin struggled with the directional particle for 'goes in there'. Stefanie corrected to 'hinein' (into, away from speaker).",
+      "example_correct": "Ja, sie geht hinein.",
+      "lesson_date": "2026-07-07-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "hier rein kommen",
+      "correction": "herein kommen",
+      "rule": "herein (in here, towards speaker)",
+      "explanation_en": "Kevin said 'hier rein' but Stefanie corrected to 'herein kommen' (to come in here, towards the speaker). 'Herein!' is the typical invitation when someone knocks.",
+      "example_correct": "Komm herein!",
+      "lesson_date": "2026-07-07-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "sie ist nicht da ... hin und her gefallen",
+      "correction": "sie ist nicht hinuntergefallen / sie ist nicht heruntergefallen",
+      "rule": "hinunter/herunter (down there/here)",
+      "explanation_en": "Kevin tried to say the vase 'fell down' but mixed up 'hin' and 'her'. The correct form is 'hinuntergefallen' (fell down there) or 'heruntergefallen' (fell down here).",
+      "example_correct": "Nein, sie ist nicht hinuntergefallen.",
+      "lesson_date": "2026-07-07-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "auf den Boden (context: confusion about Akkusativ)",
+      "correction": "auf den Boden (Akkusativ, because motion)",
+      "rule": "Wechselpräposition: Bewegung → Akkusativ",
+      "explanation_en": "Kevin was unsure why 'auf den Boden' (Akkusativ) is used when the vase falls. Stefanie explained: motion (falling) → Akkusativ. No motion (sitting) → Dativ ('auf dem Boden').",
+      "example_correct": "Die Vase fällt auf den Boden.",
+      "lesson_date": "2026-07-07-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "sie stellt die Lampe ... in die Ecke (Kevin was unsure)",
+      "correction": "sie stellt die Lampe in die Ecke",
+      "rule": "Wechselpräposition: Bewegung → Akkusativ",
+      "explanation_en": "Kevin hesitated but the lamp is being moved, so 'in die Ecke' (Akkusativ) is correct. Stefanie confirmed this.",
+      "example_correct": "Sie stellt die Lampe in die Ecke.",
+      "lesson_date": "2026-07-07-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "ist es die Chester?",
+      "correction": "die Truhe",
+      "rule": "Genus: die Truhe (feminine)",
+      "explanation_en": "Kevin asked about 'Chester' (chest) in Italian. Stefanie explained the German word is 'die Truhe', feminine. (Minor: not a direct German error by Kevin, but a vocab/genus clarification.)",
+      "example_correct": "Die Truhe ist hier.",
+      "lesson_date": "2026-07-07-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "in ihr ... (Kevin said 'in your basket')",
+      "correction": "in ihr Körbchen (ihr = its, feminine possessive)",
+      "rule": "Possessivpronomen: ihr (its, referring to die Katze)",
+      "explanation_en": "Kevin was confused about 'ihr' (its/her). Stefanie clarified: 'ihr Körbchen' = its (the cat's) basket. Kevin confused possessive pronouns.",
+      "example_correct": "Die Katze geht in ihr Körbchen.",
+      "lesson_date": "2026-07-07-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "neben den Stuhl (Kevin was checking cases)",
+      "correction": "neben den Stuhl (Akkusativ, if motion) / neben dem Stuhl (Dativ, if no motion)",
+      "rule": "Wechselpräposition neben: Bewegung → Akkusativ, keine Bewegung → Dativ",
+      "explanation_en": "Kevin worked through the example 'neben den Stuhl' (next to the chair, Akkusativ if placing something). Stefanie confirmed the logic.",
+      "example_correct": "Sie stellt die Lampe neben den Stuhl.",
+      "lesson_date": "2026-07-07-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "an der Wand (Kevin was unsure about an vs. auf)",
+      "correction": "an der Wand (Dativ, no motion: the mirror hangs on the wall)",
+      "rule": "Wechselpräposition an: keine Bewegung → Dativ",
+      "explanation_en": "Kevin thought 'an die Wand' (Akkusativ) but Stefanie explained: the mirror is already hanging (no motion), so 'an der Wand' (Dativ) is correct.",
+      "example_correct": "Der Spiegel hängt an der Wand.",
+      "lesson_date": "2026-07-07-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "neben dem Bett (Kevin hesitated)",
+      "correction": "neben dem Bett (Dativ, no motion)",
+      "rule": "Wechselpräposition neben: keine Bewegung → Dativ",
+      "explanation_en": "Kevin placed a nightstand 'next to the bed' (already there, no motion), so 'neben dem Bett' (Dativ) is correct. Stefanie confirmed.",
+      "example_correct": "Der Nachttisch steht neben dem Bett.",
+      "lesson_date": "2026-07-07-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "ein Haus",
+      "correction": "ein Haus",
+      "rule": "Haus ist Neutrum",
+      "explanation_en": "Kevin initially said 'eine Haus', which is incorrect. 'Haus' is neuter, so the correct indefinite article is 'ein'.",
+      "example_correct": "Er sucht ein Haus in der Stadt.",
+      "lesson_date": "2026-07-08-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "am Strand",
+      "correction": "an den Strand",
+      "rule": "Bewegungsverben mit Akkusativ",
+      "explanation_en": "With movement verbs like 'gehen', you need accusative (an den Strand), not dative (am Strand). 'Am' is the dative contraction.",
+      "example_correct": "Ich gehe an den Strand.",
+      "lesson_date": "2026-07-08-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "einen Handy",
+      "correction": "ein Handy",
+      "rule": "Handy ist Neutrum",
+      "explanation_en": "Kevin first said 'ein Handy' correctly, then incorrectly changed it to 'einen Handy'. 'Handy' is neuter, so 'ein' is correct.",
+      "example_correct": "Er hat kein Handy dabei.",
+      "lesson_date": "2026-07-08-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "gefunden (for 'found' a map)",
+      "correction": "gefunden",
+      "rule": "Korrekte Verwendung von 'finden'",
+      "explanation_en": "Kevin used 'gefindet' which is not a word. The correct past participle of 'finden' is 'gefunden'.",
+      "example_correct": "Er hat eine Karte gefunden.",
+      "lesson_date": "2026-07-08-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "über es",
+      "correction": "darüber",
+      "rule": "Da-Komposita bei Präpositionen mit Sachen",
+      "explanation_en": "When 'über' refers to a thing (not a person), you must use 'darüber', not 'über es'. Many native speakers make this error too, but 'darüber' is the grammatically correct form.",
+      "example_correct": "Was denkst du darüber?",
+      "lesson_date": "2026-07-08-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "an die Strasse",
+      "correction": "auf der Straße",
+      "rule": "Lokale Präposition für 'on the street'",
+      "explanation_en": "For 'on the street' (location, not movement), German uses 'auf der Straße' (dative), not 'an die Straße'. Kevin confused the preposition and case.",
+      "example_correct": "Er könnte jemanden auf der Straße fragen.",
+      "lesson_date": "2026-07-08-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "er kann es länden",
+      "correction": "er kann es (aus)leihen",
+      "rule": "Korrekte Verbform für 'to borrow'",
+      "explanation_en": "Kevin used 'länden' which doesn't exist. The correct verb is '(aus)leihen'. 'Leihen' means both to borrow and to lend in German.",
+      "example_correct": "Er kann sich ein Ladekabel ausleihen.",
+      "lesson_date": "2026-07-08-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "die ist die Polizei zu fragen",
+      "correction": "die Lösung ist, die Polizei zu fragen",
+      "rule": "Natürliche Satzstruktur",
+      "explanation_en": "Kevin's structure was grammatically possible but unnatural. Stefanie suggested simplifying: avoid 'die ist' and just say 'Die Lösung ist, die Polizei zu fragen.'",
+      "example_correct": "Die Lösung ist, die Polizei zu fragen.",
+      "lesson_date": "2026-07-08-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "ge kaputtet",
+      "correction": "kaputt gemacht",
+      "rule": "Kaputt machen ist feste Wendung",
+      "explanation_en": "There is no verb 'kaputteten'. The fixed expression is 'kaputt machen', with the past participle 'kaputt gemacht'.",
+      "example_correct": "Er hat das Fenster kaputt gemacht.",
+      "lesson_date": "2026-07-08-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "mit ein Bol",
+      "correction": "mit einem Ball",
+      "rule": "Dativ nach 'mit', Ball ist maskulin",
+      "explanation_en": "'Mit' requires dative. 'Ball' is masculine, so 'mit einem Ball' is correct, not 'mit ein Bol'.",
+      "example_correct": "Er hat das Fenster mit einem Ball kaputt gemacht.",
+      "lesson_date": "2026-07-08-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "im Fenster",
+      "correction": "ins Fenster / in das Fenster",
+      "rule": "Bewegung ins Fenster = Akkusativ",
+      "explanation_en": "For movement into the window, you need accusative 'ins Fenster' (in das Fenster), not dative 'im Fenster'.",
+      "example_correct": "Der Ball flog ins Fenster.",
+      "lesson_date": "2026-07-08-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Er hat durch das Fenster hin der geworfen",
+      "correction": "Er hat ihn durch das Fenster geworfen",
+      "rule": "Objektpronomen vor präpositionalen Angaben",
+      "explanation_en": "Kevin confused the word order. The object pronoun 'ihn' comes before the prepositional phrase 'durch das Fenster', and 'geworfen' comes at the end.",
+      "example_correct": "Er hat ihn durch das Fenster geworfen.",
+      "lesson_date": "2026-07-08-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "seinen Eltern (for genitive)",
+      "correction": "seiner Eltern",
+      "rule": "Genitiv Plural: seiner Eltern",
+      "explanation_en": "In the genitive case, 'his parents' is 'seiner Eltern', not 'seinen Eltern'. Kevin confused it with dative plural.",
+      "example_correct": "Das ist das Haus seiner Eltern.",
+      "lesson_date": "2026-07-08-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "nach dem Weg",
+      "correction": "um den Weg",
+      "rule": "fragen um (Objekt) vs. fragen nach (Information)",
+      "explanation_en": "Kevin used 'nach' (for asking about information) when he should have used 'um' because 'der Weg' is a concrete object. Stefanie corrected this, noting she had taught it incorrectly the day before: we ask 'nach einer Information' but 'um ein Objekt' (like a glass, napkin, or directions).",
+      "example_correct": "Ich frage um den Weg. / Ich frage nach einer Information.",
+      "lesson_date": "2026-07-09-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "weil ich kenne nicht den Kontext",
+      "correction": "weil ich den Kontext nicht kenne",
+      "rule": "Wortstellung im Nebensatz (Verb ans Ende)",
+      "explanation_en": "In a subordinate clause (starting with 'weil'), the conjugated verb must go to the end. Kevin placed 'kenne' too early.",
+      "example_correct": "Ich weiß es nicht, weil ich den Kontext nicht kenne.",
+      "lesson_date": "2026-07-09-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "sie sieht",
+      "correction": "sie sieht",
+      "rule": "Konjugation 'sehen' (3. Person Singular: sieht)",
+      "explanation_en": "Kevin hesitated on the spelling/form of 'sieht' (she sees), initially unsure about the ending. Stefanie confirmed 'sie sieht' with one 'h' and 't'.",
+      "example_correct": "Sie sieht ihren Sohn.",
+      "lesson_date": "2026-07-09-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "in seinem Mund",
+      "correction": "in seinem Mund (Dativ nach 'in' wenn Lage, nicht Richtung)",
+      "rule": "Dativ nach 'in' bei statischer Lage",
+      "explanation_en": "Kevin was unsure whether to use accusative or dative after 'in'. Stefanie clarified: because the garbage is already *in* the mouth (static location, not movement into), it takes dative: 'in seinem Mund'.",
+      "example_correct": "Der Müll ist in seinem Mund.",
+      "lesson_date": "2026-07-09-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "ihr Marito / ihr Mann",
+      "correction": "ihr Freund / ihr Mann",
+      "rule": "Wortwahl: 'Freund' (boyfriend) vs. 'Mann' (husband)",
+      "explanation_en": "Kevin mixed Italian ('marito') with German. Stefanie clarified the vocabulary: 'mein Freund' = my (male) friend / boyfriend; 'mein Mann' = my husband. Context suggests boyfriend ('Freund').",
+      "example_correct": "Sie macht sich Sorgen über ihren Freund.",
+      "lesson_date": "2026-07-09-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "über was ihr Freund tut / macht",
+      "correction": "über das, was ihr Freund gerade macht",
+      "rule": "Relativsatz mit 'was' (nach unbestimmtem Bezug: 'das, was')",
+      "explanation_en": "Kevin tried to say 'about what her boyfriend is doing'. In German, after prepositions referring to indefinite things, we use 'das, was' (not just 'was'). Stefanie also introduced 'gerade' for the present continuous sense.",
+      "example_correct": "Sie macht sich Sorgen über das, was ihr Freund gerade macht.",
+      "lesson_date": "2026-07-09-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "das könnte etwas sein das runterfallen",
+      "correction": "das könnte etwas sein, das runtergefallen ist",
+      "rule": "Relativsatz + Perfekt ('das runtergefallen ist')",
+      "explanation_en": "Kevin wanted to say 'something that has fallen down' but used the infinitive 'runterfallen'. The correct form is the past participle 'runtergefallen' with 'ist' at the end of the relative clause.",
+      "example_correct": "Das könnte etwas sein, das runtergefallen ist.",
+      "lesson_date": "2026-07-09-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Die Mutter kommt in die Küche herein (inside)",
+      "correction": "Die Mutter kommt in die Küche (herein)",
+      "rule": "Akkusativ nach 'in' bei Bewegungsrichtung; 'herein' optional (Wiederholung vermeiden)",
+      "explanation_en": "Kevin first said 'inside' (herein). Stefanie corrected: when there is movement *into* the kitchen, use accusative 'in die Küche'. You can add 'herein', but it's redundant and not typical in natural speech. 'Die Mutter kommt in die Küche' is sufficient.",
+      "example_correct": "Die Mutter kommt in die Küche.",
+      "lesson_date": "2026-07-09-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "ein großes Chaos",
+      "correction": "großes Chaos / ein großes Chaos",
+      "rule": "Kollokation: 'großes Chaos' (ohne 'das'/'ein' oft natürlicher)",
+      "explanation_en": "Kevin asked about how to say 'big chaos'. Stefanie confirmed 'ein großes Chaos' or simply 'großes Chaos' (often without article). Both are acceptable.",
+      "example_correct": "Hier ist großes Chaos in der Küche.",
+      "lesson_date": "2026-07-09-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "das erste Ding wäre ihm zu putzen",
+      "correction": "das erste Ding wäre, dass er die Küche putzt / das Wichtigste wäre, dass er die Küche putzt",
+      "rule": "Nebensatz mit 'dass' statt Infinitiv 'ihm zu putzen'",
+      "explanation_en": "Kevin tried to say 'the first thing would be him to clean' (English infinitive structure). In German, this requires a 'dass'-clause: 'dass er die Küche putzt'. Stefanie also suggested the natural phrasing 'das Wichtigste wäre, dass er...'.",
+      "example_correct": "Das Wichtigste wäre, dass er die Küche putzt.",
+      "lesson_date": "2026-07-09-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "hier kommen",
+      "correction": "hierher kommen",
+      "rule": "Richtungsangabe mit 'hierher'",
+      "explanation_en": "When indicating movement towards the speaker's location, German uses 'hierher' (to here), not just 'hier' (here). 'Hier' indicates static location, while 'hierher' shows direction of movement.",
+      "example_correct": "Meine Freunde kommen nächste Woche hierher.",
+      "lesson_date": "2026-07-21-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "auf den Schiff",
+      "correction": "auf dem Schiff",
+      "rule": "Dativ nach 'auf' bei Wo-Frage",
+      "explanation_en": "When describing a static location ('where are you?'), the preposition 'auf' takes Dativ. Kevin used Akkusativ (den), which would indicate movement towards the ship, but he meant he was on the ship.",
+      "example_correct": "Ich bin auf dem Schiff.",
+      "lesson_date": "2026-07-21-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "viele Male",
+      "correction": "oft / schon oft",
+      "rule": "Häufigkeitsangabe mit 'oft'",
+      "explanation_en": "While 'viele Male' is grammatically correct, native speakers naturally say 'oft' or 'schon oft' to express frequency. 'Viele Male' sounds unnatural in this context.",
+      "example_correct": "Ich bin schon oft mit dem Segelboot gefahren.",
+      "lesson_date": "2026-07-21-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "ob du ist hatte / haste",
+      "correction": "ob du es hast",
+      "rule": "Korrekte Konjugation von 'haben' im Präsens",
+      "explanation_en": "Kevin attempted to say 'if you have it' but used incorrect forms. The correct form is 'ob du es hast' (present tense, 2nd person singular).",
+      "example_correct": "Es ist besser, ob du es hast.",
+      "lesson_date": "2026-07-21-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "wütend auf dem anderen",
+      "correction": "wütend auf den anderen",
+      "rule": "Akkusativ nach 'wütend auf'",
+      "explanation_en": "The adjective 'wütend auf' (angry at) takes Akkusativ, not Dativ. Kevin initially used Dativ (dem) but was corrected to use Akkusativ (den).",
+      "example_correct": "Er ist wütend auf den anderen.",
+      "lesson_date": "2026-07-21-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "hatte vergessen zu einkaufen",
+      "correction": "hatte vergessen einzukaufen",
+      "rule": "Infinitiv mit 'zu' bei trennbaren Verben",
+      "explanation_en": "With separable verbs like 'einkaufen', the 'zu' is inserted between the prefix and the verb stem: 'einzukaufen', not 'zu einkaufen'.",
+      "example_correct": "Er hatte vergessen einzukaufen.",
+      "lesson_date": "2026-07-21-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "aus dem Schrank nehmen",
+      "correction": "aus dem Schrank nehmen",
+      "rule": "Dativ nach 'aus'",
+      "explanation_en": "Kevin briefly questioned whether 'aus' takes Dativ here. The preposition 'aus' always takes Dativ, so 'aus dem Schrank' is correct.",
+      "example_correct": "Ich kann viele Dinge aus dem Schrank nehmen.",
+      "lesson_date": "2026-07-21-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "es ist geregnet",
+      "correction": "es hat geregnet",
+      "rule": "Perfekt von 'regnen' mit 'haben'",
+      "explanation_en": "Impersonal weather verbs like 'regnen' form the perfect tense with 'haben', not 'sein'. Kevin used 'ist geregnet' instead of 'hat geregnet'.",
+      "example_correct": "Gestern hat es stark geregnet.",
+      "lesson_date": "2026-07-22-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "es gibt 33 Grad / es hat 33 Grad gegeben",
+      "correction": "es gab 33 Grad",
+      "rule": "Präteritum bei 'es gibt' bevorzugt",
+      "explanation_en": "With 'es gibt' in the past, Germans prefer the Präteritum form 'es gab' over the perfect 'es hat gegeben', even in spoken language. This is an exception.",
+      "example_correct": "Letzte Woche gab es 33 Grad.",
+      "lesson_date": "2026-07-22-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "es gibt viele Sonne",
+      "correction": "die Sonne scheint / es ist sonnig",
+      "rule": "Typische Wetterausdrücke",
+      "explanation_en": "Instead of 'es gibt Sonne', native speakers typically say 'die Sonne scheint' or 'es ist sonnig' to describe sunny weather.",
+      "example_correct": "Heute scheint die Sonne.",
+      "lesson_date": "2026-07-22-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "in dem nördlichen",
+      "correction": "im Norden",
+      "rule": "Präposition 'in' + Dativ",
+      "explanation_en": "Kevin likely attempted 'in dem nördlichen [Teil]' but was corrected to use the simpler and more natural 'im Norden' (in the north).",
+      "example_correct": "Im Norden gibt es viele Windsurfer.",
+      "lesson_date": "2026-07-22-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "sie spricht nicht gerade",
+      "correction": "sie spricht gerade nicht",
+      "rule": "Position von 'nicht' im Satz",
+      "explanation_en": "In German, 'nicht' typically comes after time expressions like 'gerade' (right now). The correct order is 'sie spricht gerade nicht'.",
+      "example_correct": "Sie spricht gerade nicht.",
+      "lesson_date": "2026-07-22-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "über das Preis",
+      "correction": "über den Preis",
+      "rule": "'der Preis' ist maskulin",
+      "explanation_en": "The noun 'Preis' is masculine ('der Preis'), so in the accusative after 'über' it becomes 'den Preis', not 'das Preis'.",
+      "example_correct": "Sie streiten sich über den Preis.",
+      "lesson_date": "2026-07-22-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "er könnte ihm einen Rabatt fragen",
+      "correction": "er könnte ihn fragen / er könnte nach einem Rabatt fragen",
+      "rule": "'fragen' + Akkusativ für Personen",
+      "explanation_en": "The verb 'fragen' takes accusative for the person being asked ('ihn', not 'ihm'). To ask for a discount, better phrasing is 'ihn fragen, ob er einen Rabatt macht'.",
+      "example_correct": "Er könnte ihn fragen, ob er einen besseren Preis macht.",
+      "lesson_date": "2026-07-22-stefanie"
+    },
+    {
+      "category": "Adjektivdeklination",
+      "kevin_said": "für einen besser Preis",
+      "correction": "für einen besseren Preis",
+      "rule": "Adjektivendung nach unbestimmtem Artikel",
+      "explanation_en": "After the indefinite article 'einen' (accusative masculine), the adjective 'besser' needs the ending '-en', becoming 'besseren'.",
+      "example_correct": "Er möchte einen besseren Preis bekommen.",
+      "lesson_date": "2026-07-22-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "meinen Nachbar",
+      "correction": "meine Nachbarn",
+      "rule": "Pluralform ohne Akkusativ-Endung",
+      "explanation_en": "Kevin used the singular accusative masculine form 'meinen Nachbar' when he meant the plural 'my neighbors'. The correct plural is 'meine Nachbarn'.",
+      "example_correct": "Meine Nachbarn sind aus Deutschland.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "gestern ich habe ... getrunken",
+      "correction": "gestern habe ich ... getrunken",
+      "rule": "Wortstellung im Perfekt nach Zeitangabe",
+      "explanation_en": "After a time expression like 'gestern' at the beginning, the verb comes second, so 'habe ich' not 'ich habe'.",
+      "example_correct": "Gestern habe ich mit einem Nachbarn getrunken.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "aus Nederlandisch",
+      "correction": "aus den Niederlanden",
+      "rule": "Ländername mit Artikel",
+      "explanation_en": "The Netherlands requires the article 'den Niederlanden' (plural, dative after 'aus'), not 'Nederlandisch'.",
+      "example_correct": "Er kommt aus den Niederlanden.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "ich hatte viele fun",
+      "correction": "ich hatte viel Spaß",
+      "rule": "Deutsches Wort für 'fun'",
+      "explanation_en": "The German word for 'fun' is 'Spaß', not the English 'fun'. Also, 'viel' (not 'viele') is used with uncountable nouns.",
+      "example_correct": "Ich hatte viel Spaß gestern.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "in englische gesprochen / gespricht",
+      "correction": "auf Englisch gesprochen",
+      "rule": "Sprache mit 'auf' + Partizip 'gesprochen'",
+      "explanation_en": "Languages use the preposition 'auf' (not 'in'), and the past participle of 'sprechen' is 'gesprochen', not 'gespricht'.",
+      "example_correct": "Wir haben auf Englisch gesprochen.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "meine Freunden / meinen Freunden",
+      "correction": "meine Freunde",
+      "rule": "Akkusativ Plural nach 'treffen'",
+      "explanation_en": "After 'treffen' (to meet), the accusative is required. The accusative plural is 'meine Freunde', not dative 'meinen Freunden'.",
+      "example_correct": "Ich habe meine Freunde getroffen.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "getreffen",
+      "correction": "getroffen",
+      "rule": "Partizip von 'treffen'",
+      "explanation_en": "The past participle of 'treffen' is 'getroffen', not 'getreffen'.",
+      "example_correct": "Ich habe gestern meine Freunde getroffen.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "sie fliegen heute aus",
+      "correction": "sie fliegen heute ab",
+      "rule": "Trennbares Verb 'abfliegen'",
+      "explanation_en": "For departing by plane, the correct verb is 'abfliegen', not 'ausfliegen'.",
+      "example_correct": "Sie fliegen heute ab.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "leben sie dort hin",
+      "correction": "sie leben dort",
+      "rule": "Kein 'hin' bei 'leben'",
+      "explanation_en": "'Leben' (to live) describes a static location and uses 'dort', not the directional 'dorthin'.",
+      "example_correct": "Sie leben dort.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "wann hast du hier kommen / einkommen",
+      "correction": "wann bist du hier angekommen",
+      "rule": "Perfekt mit 'sein' bei Bewegungsverben",
+      "explanation_en": "'Ankommen' (to arrive) uses 'sein' in the perfect tense, not 'haben'. The correct past participle is 'angekommen'.",
+      "example_correct": "Wann bist du hier angekommen?",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "bist du hier angekommen (written: 'hast du hier angekommen')",
+      "correction": "bist du hier angekommen",
+      "rule": "Perfekt mit 'sein' bei Bewegung",
+      "explanation_en": "Kevin initially wrote 'hast' but movement verbs like 'ankommen' require 'sein' in perfect tense.",
+      "example_correct": "Wann bist du angekommen?",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "braunen / brauner (adjective agreement unclear)",
+      "correction": "ein bisschen brauner",
+      "rule": "Komparativ ohne Endung nach 'ein bisschen'",
+      "explanation_en": "When using the comparative form as a predicate adjective, no ending is needed after 'ein bisschen'.",
+      "example_correct": "Du bist ein bisschen brauner als sonst.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "dass du nicht so braun usually bin",
+      "correction": "dass du normalerweise nicht so braun bist",
+      "rule": "Verb am Ende im Nebensatz + richtige Person",
+      "explanation_en": "In a subordinate clause, the verb goes to the end. Also, 'du' takes 'bist', not 'bin', and 'usually' is 'normalerweise' in German.",
+      "example_correct": "Ich weiß, dass du normalerweise nicht so braun bist.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "mit mir benutzen / mitnehmen mit mir",
+      "correction": "mitnehmen",
+      "rule": "'Mitnehmen' enthält schon 'mit'",
+      "explanation_en": "'Mitnehmen' already means 'to take with', so adding 'mit mir' is redundant.",
+      "example_correct": "Ich muss die Sonnencreme mitnehmen.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "in Urlaub / auf Urlaub",
+      "correction": "im Urlaub",
+      "rule": "Präposition 'in' + Dativ für Urlaub",
+      "explanation_en": "The correct expression is 'im Urlaub' (in + dem = im, dative), not 'in Urlaub' or 'auf Urlaub'.",
+      "example_correct": "Ich bin im Urlaub.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "wie ofte bist du am Meer",
+      "correction": "wie oft gehst du ans Meer / bist du am Meer",
+      "rule": "'Oft' ohne 'e'",
+      "explanation_en": "The adverb is 'oft', not 'ofte'. Also, the question about frequency of visiting uses 'wie oft gehst du' for habitual action.",
+      "example_correct": "Wie oft gehst du ans Meer?",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "du findest / findet",
+      "correction": "du findest",
+      "rule": "2. Person Singular Präsens",
+      "explanation_en": "The second person singular of 'finden' is 'du findest', not 'du findet'.",
+      "example_correct": "Du findest die Adria schöner.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "dass du die Adria mehr schon findest",
+      "correction": "dass du die Adria viel schöner findest",
+      "rule": "Komparativ 'schöner' + kein 'schon' hier",
+      "explanation_en": "Kevin mixed up word order and used 'schon' incorrectly. The comparative form is 'schöner', and intensifiers like 'viel' come before it.",
+      "example_correct": "Ich denke, dass du die Adria viel schöner findest.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "gewählte (verb form unclear in context)",
+      "correction": "gewählt",
+      "rule": "Partizip ohne Adjektivendung",
+      "explanation_en": "The past participle used with 'haben' is 'gewählt', not 'gewählte' (which would be an adjective).",
+      "example_correct": "Warum hast du die Adria gewählt?",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Adjektivdeklination",
+      "kevin_said": "am schönes / schönsten",
+      "correction": "am schönsten / das schönste Meer",
+      "rule": "Superlativ: 'am schönsten' oder 'das schönste + Nomen'",
+      "explanation_en": "The superlative is either 'am schönsten' (predicate, no noun) or 'das schönste Meer' (with noun). Kevin mixed the two forms.",
+      "example_correct": "Das ist das schönste Meer. / Das Meer ist am schönsten.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "hungrige / hungerische",
+      "correction": "hungrig",
+      "rule": "Adjektiv 'hungrig'",
+      "explanation_en": "The adjective 'hungry' is 'hungrig' in German, not 'hungerische' or 'hungrige' (which would be declined forms).",
+      "example_correct": "Ich bin ein bisschen hungrig.",
+      "lesson_date": "2026-07-23-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "bin gewesen oder war...",
+      "correction": "Ich war schon im Urlaub / Ich bin schon im Urlaub gewesen.",
+      "rule": "Perfekt mit sein bei 'sein'",
+      "explanation_en": "Kevin was unsure how to form the past of 'sein' referring to a completed vacation; Stefanie confirmed both 'bin gewesen' and 'war' work.",
+      "example_correct": "Ich war schon im Urlaub.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Ganzen (Dativ)",
+      "correction": "die ganzen drei Wochen (Akkusativ)",
+      "rule": "Akkusativ bei Zeitangaben",
+      "explanation_en": "Kevin thought the phrase for duration ('for three weeks') needed dative, but time expressions of duration take accusative.",
+      "example_correct": "Ich habe für die ganzen drei Wochen 800 Euro bezahlt.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "viele Personen / Besuch als Besucher",
+      "correction": "einige Personen zu Besuch / einige Personen, die mich besucht haben",
+      "rule": "Natürliche Kollokation 'zu Besuch haben'",
+      "explanation_en": "Kevin tried several literal translations ('als Besucher') that sound unnatural in German; the idiomatic form is 'zu Besuch' or a relative clause.",
+      "example_correct": "Ich hatte einige Personen zu Besuch.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Der Tankstelle ist ein Refuel / Riff",
+      "correction": "Die Tankstelle (place to refuel)",
+      "rule": "Wortwahl - korrektes Substantiv",
+      "explanation_en": "Kevin tried to invent a word for 'refuel spot' but the correct existing German word is 'Tankstelle', and its gender is feminine (die), not der.",
+      "example_correct": "Die Tankstelle ist der Ort zum Tanken.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "Der Tankstelle",
+      "correction": "Die Tankstelle",
+      "rule": "Genus von Tankstelle (feminin)",
+      "explanation_en": "Kevin used the masculine article 'der' for 'Tankstelle', but the noun is feminine.",
+      "example_correct": "Sie sind an der Tankstelle.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Man durfte hier nicht rauchen (present context)",
+      "correction": "Man darf hier nicht rauchen",
+      "rule": "Präsens vs. Präteritum von dürfen",
+      "explanation_en": "Kevin used the past tense 'durfte' when describing a present rule shown in the picture; the present tense 'darf' was needed.",
+      "example_correct": "Man darf hier nicht rauchen, weil das zu gefährlich ist.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "drinnen / in es / in das",
+      "correction": "darin",
+      "rule": "da-Komposita statt Präposition + es/das",
+      "explanation_en": "Kevin tried to use 'in es' or 'in das' to mean 'inside it', but German requires the da-compound 'darin'.",
+      "example_correct": "Weil die Leute darin/drinnen rauchen dürfen.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Er ist wütend über die Frau (Akkusativ gedacht)",
+      "correction": "Er ist wütend auf die Frau",
+      "rule": "Präposition 'auf' bei 'wütend sein'",
+      "explanation_en": "Kevin used 'über' with accusative, but the idiomatic and correct construction for 'angry at someone' is 'wütend auf + Akkusativ'.",
+      "example_correct": "Er ist wütend auf die Frau.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Sie sind in dem Film",
+      "correction": "Sie sind im Kino",
+      "rule": "Dativ nach 'in' bei Ortsangabe",
+      "explanction_en": "",
+      "explanation_en": "Kevin confused 'Film' (the movie itself) with 'Kino' (the place); also needed dative contraction 'im' for location.",
+      "example_correct": "Sie sind im Kino, weil sie einen Film sehen wollen.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "weil ein Film sie schauen wollen",
+      "correction": "weil sie einen Film schauen wollen",
+      "rule": "Nebensatz-Wortstellung: Subjekt direkt nach 'weil'",
+      "explanation_en": "Kevin placed the object before the subject pronoun 'sie' in the subordinate clause; German requires the subject right after the conjunction.",
+      "example_correct": "Weil sie einen Film schauen wollen, sind sie im Kino.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "Stewardess (as English word confusion)",
+      "correction": "Die Flugbegleiterin / Stewardess (German usage)",
+      "rule": "Wortwahl - Berufsbezeichnung",
+      "explanation_en": "Kevin was unsure of the correct term; Stefanie clarified that 'Stewardess' is used in German and 'Flugbegleiterin' is the official term.",
+      "example_correct": "Die Stewardess arbeitet im Flugzeug.",
+      "lesson_date": "2026-07-27-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "ist angekommt",
+      "correction": "ist angekommen",
+      "rule": "Perfekt mit 'sein' bei Bewegungsverben",
+      "explanation_en": "Wrong past participle 'angekommt' instead of 'angekommen' ankommen is a strong verb; its Partizip II is 'angekommen' (an- + gekommen), not a weak '-t' form",
+      "example_correct": "ist ... angekommen",
+      "aiuto": 0,
+      "esercizio": "Der Zug ___ vor fünf Minuten ___ (ankommen).",
+      "fonte": "studio",
+      "quando": "2026-07-29T09:54:08",
+      "lesson_date": null
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "runter den Tisch",
+      "correction": "unter den Tisch",
+      "rule": "Wechselpräposition: Bewegung → Akkusativ",
+      "explanation_en": "Wrote 'runter' instead of 'unter' The preposition needed is 'unter' (two-way preposition); 'runter' is a different word meaning 'down'",
+      "example_correct": "unter den Tisch",
+      "aiuto": 0,
+      "esercizio": "Der Ball rollte ___ (der Tisch).",
+      "fonte": "studio",
+      "quando": "2026-07-29T10:22:58",
+      "lesson_date": null
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "willtet sagen",
+      "correction": "sagen wollen",
+      "rule": "Modalverb + Infinitiv am Satzende",
+      "explanation_en": "\"willtet sagen\" is not a valid German verb form, and the order is wrong In Perfekt with modal verbs, the double infinitive construction is main verb infinitive + modal infinitive (sagen wollen), not a finite form of wollen",
+      "example_correct": "sagen wollen",
+      "aiuto": 0,
+      "esercizio": "Er hat mir gestern nur eine Sache ___ .",
+      "fonte": "studio",
+      "quando": "2026-07-29T10:23:31",
+      "lesson_date": null
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "endet",
+      "correction": "fertigstellen soll",
+      "rule": "Modalverb im Nebensatz am Ende",
+      "explanation_en": "wrong verb entirely; 'endet' does not express instruction and doesn't fit the sentence meaning the clause needs the infinitive 'fertigstellen' plus modal 'soll' at the end to express someone else's expectation",
+      "example_correct": "fertigstellen soll",
+      "aiuto": 0,
+      "esercizio": "Die Chefin hat gesagt, dass er den Bericht bis Freitag ___ .",
+      "fonte": "studio",
+      "quando": "2026-08-10T17:14:27",
+      "lesson_date": null
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Es war vor zwei Jahren far/po/dafür",
+      "correction": "Es war vor zwei Jahren",
+      "rule": "Zeitangabe 'vor' + Dativ",
+      "explanation_en": "Kevin tried several wrong words (far, po, dafür) to express 'ago'; the correct German preposition is 'vor' placed before the time expression, unlike English where 'ago' comes after.",
+      "example_correct": "Ich habe vor zwei Jahren dort gearbeitet.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Meine Stellenname",
+      "correction": "Der Name der Stelle",
+      "rule": "Vermeidung unnatürlicher Komposita",
+      "explanation_en": "Kevin created an odd compound noun 'Stellenname' which sounds strange; Stefanie corrected it to the more natural phrase 'der Name der Stelle'.",
+      "example_correct": "Wie lautet der Name der Stelle?",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Ich habe acht Jahre lang in der Chemie-Industrie gearbeitet, für diese Zeit... (using 'für' with duration)",
+      "correction": "Ich habe acht Jahre lang in der Chemie-Industrie gearbeitet.",
+      "rule": "Dauerangabe ohne 'für'",
+      "explanation_en": "Kevin used 'für' to express duration, directly translating from English/Italian, but German expresses duration naturally without 'für' plus 'lang'.",
+      "example_correct": "Ich habe acht Jahre lang dort gearbeitet.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Es ist nicht Konstruktion, sondern... die Leidenschaft (used wrong word before correction)",
+      "correction": "Die Leidenschaft",
+      "rule": "Korrektes Nomen für 'passion'",
+      "explanation_en": "Kevin struggled to find the right word for 'passion' and used incorrect alternatives before Stefanie supplied 'die Leidenschaft'.",
+      "example_correct": "Ich hatte schon immer eine Leidenschaft für Chemie.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "Es gibt kein Studierenkurs",
+      "correction": "Es gab keinen Studiengang",
+      "rule": "Korrekte Nomenbildung und Kasus (Akkusativ nach 'es gibt')",
+      "explanation_en": "Kevin invented a non-existent word 'Studierenkurs' and used wrong tense/case; the correct term is 'Studiengang' in the accusative after 'es gab'.",
+      "example_correct": "Es gab keinen speziellen Studiengang dafür.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Hatte ich die Queenie erzahlen / Wir zählten / Ich habe sie erzahlen",
+      "correction": "Ich habe sie gewählt",
+      "rule": "Partizip II von 'wählen' vs. 'zählen'",
+      "explanation_en": "Kevin confused the verbs 'wählen' (to choose) and 'zählen' (to count), and used wrong participle forms; the correct form for 'I chose it' is 'ich habe sie gewählt'.",
+      "example_correct": "Ich habe die Chemie gewählt.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "Es war wegen das Auto",
+      "correction": "Es war wegen des Autos / wegen dem Auto",
+      "rule": "Präposition 'wegen' + Genitiv (oder umgangssprachlich Dativ)",
+      "explanation_en": "Kevin used the nominative/accusative form 'das Auto' after 'wegen', but 'wegen' requires genitive (or colloquially dative), never plain accusative/nominative.",
+      "example_correct": "Es war wegen des Autos.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Ich bin arbeitslos bis Februar (meaning 'since February')",
+      "correction": "Ich bin seit Februar arbeitslos",
+      "rule": "Präposition 'seit' für Zeitpunkt in der Vergangenheit bis jetzt",
+      "explanation_en": "Kevin used 'bis' (until) when he meant 'since', confusing the two temporal prepositions; 'seit' is required to express an ongoing state starting in the past.",
+      "example_correct": "Ich bin seit Februar arbeitslos.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "der Vertrag end it / made end it am Februar",
+      "correction": "Der Vertrag hat im Februar geendet",
+      "rule": "Perfekt von 'enden' und Präposition 'im' bei Monatsnamen",
+      "explanation_en": "Kevin used an English-influenced construction 'end it' instead of the German perfect tense of 'enden', and needed the correct preposition 'im' before the month.",
+      "example_correct": "Der Vertrag hat im Februar geendet.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Sie haben 50% des Personals... left home / Personell gut",
+      "correction": "Sie haben 50% des Personals entlassen",
+      "rule": "Korrektes Verb für 'to lay off'",
+      "explanation_en": "Kevin tried to translate 'laid off' literally and produced non-German phrases; the correct verb is 'entlassen'.",
+      "example_correct": "Sie haben die Hälfte des Personals entlassen.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Ich habe es für die Verkaufung geblieben / Bankruptie beklagen",
+      "correction": "Bankrott anmelden / Insolvenz anmelden",
+      "rule": "Korrekte Nomen für 'bankruptcy' und zugehöriges Verb",
+      "explanation_en": "Kevin invented non-existent words ('Verkaufung', 'Bankruptie') instead of the correct German terms for bankruptcy and filing for it.",
+      "example_correct": "Die Firma könnte Bankrott anmelden.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "Ein zweites Negation... das funktioniert in Deutschland",
+      "correction": "Doppelte Verneinung funktioniert nicht im Deutschen",
+      "rule": "Keine doppelte Verneinung im Deutschen",
+      "explanation_en": "Kevin implied double negation works in German like in Italian, but Stefanie clarified that German does not use double negation grammatically like Italian does.",
+      "example_correct": "Du kannst nicht einmal einen Monat nicht arbeiten - das funktioniert so nicht auf Deutsch.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "mit Hand, Kracht, Stach (attempting 'handwerklich geschickt')",
+      "correction": "Mit dem Handwerk bist du nicht so gut",
+      "rule": "Korrekte Wortwahl für handwerkliche Fähigkeiten",
+      "explanation_en": "Kevin produced garbled, non-existent words trying to express manual/practical skill; Stefanie supplied the correct phrase using 'Handwerk'.",
+      "example_correct": "Ich bin nicht so gut im Handwerk.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Aufruhren (meaning 'to stop')",
+      "correction": "Aufhören",
+      "rule": "Korrekte Verbform 'aufhören' statt 'aufruhren'",
+      "explanation_en": "Kevin misused/mispronounced the verb 'aufhören' (to stop) as 'aufruhren', which is not a correct German word in this context.",
+      "example_correct": "Du darfst nie aufhören.",
+      "lesson_date": "2026-08-10-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Am 8 Uhr",
+      "correction": "Um 8 Uhr",
+      "rule": "Uhrzeit mit 'um'",
+      "explanation_en": "Clock times take the preposition 'um', not 'an/am'.",
+      "example_correct": "Ich bin um 8 Uhr aufgestanden.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "ein Grunde",
+      "correction": "ein Grund",
+      "rule": "Substantivform Singular",
+      "explanation_en": "The nominative singular is 'Grund' without an added -e.",
+      "example_correct": "Das ist ein guter Grund.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Sie sind sehr geschlossen",
+      "correction": "Sie sind sehr verschlossen",
+      "rule": "verschlossen (reserviert) vs. geschlossen",
+      "explanation_en": "For a reserved, closed-off person you use 'verschlossen'; 'geschlossen' means physically shut.",
+      "example_correct": "Die Nachbarn sind sehr verschlossen.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Sie will nicht mit mir sprechen, mit allem",
+      "correction": "Sie wollen mit niemandem sprechen",
+      "rule": "niemand als Negation von jemand",
+      "explanation_en": "To say they talk to nobody you need 'mit niemandem', not 'mit allem'.",
+      "example_correct": "Sie sprechen mit niemandem.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Wo kommt ihr?",
+      "correction": "Woher kommt ihr?",
+      "rule": "woher bei Herkunft",
+      "explanation_en": "Origin is asked with 'woher', not plain 'wo'.",
+      "example_correct": "Woher kommt ihr?",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Wortstellung",
+      "kevin_said": "Wo will ihr heute gehen zu schwimmen?",
+      "correction": "Wo wollt ihr heute schwimmen gehen?",
+      "rule": "Infinitivkombination am Satzende",
+      "explanation_en": "With a second verb, 'schwimmen gehen' stays together at the end; no 'zu' construction.",
+      "example_correct": "Wo wollt ihr heute schwimmen gehen?",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "Wo isst ihr oft zu Mittag?",
+      "correction": "Wo esst ihr normalerweise zu Mittag?",
+      "rule": "normalerweise für 'usually'",
+      "explanation_en": "'oft' means 'often' and shifts the meaning; 'usually' is 'normalerweise'.",
+      "example_correct": "Wo esst ihr normalerweise zu Mittag?",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Wo isst ihr an/für Mittagessen?",
+      "correction": "Wo esst ihr zu Mittag?",
+      "rule": "zu Mittag essen (feste Wendung)",
+      "explanation_en": "The fixed expression is 'zu Mittag essen', not 'an' or 'für'.",
+      "example_correct": "Wir essen um eins zu Mittag.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Wo isst ihr?",
+      "correction": "Wo esst ihr?",
+      "rule": "Vokalwechsel nur im Singular (essen)",
+      "explanation_en": "Stem-changing verbs like 'essen' change only in the 2nd/3rd person singular; the plural 'ihr' keeps the regular stem: 'esst'.",
+      "example_correct": "Ihr esst am Strand.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Verbform",
+      "kevin_said": "Wohin fährt ihr?",
+      "correction": "Wohin fahrt ihr?",
+      "rule": "Umlaut nur im Singular (fahren)",
+      "explanation_en": "The umlaut in 'fahren' appears only in the singular (du fährst, er fährt); with 'ihr' it is 'fahrt'.",
+      "example_correct": "Wohin fahrt ihr nach dem Gardasee?",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "Wir fahren nach Adria",
+      "correction": "Wir fahren an die Adria",
+      "rule": "an + Akkusativ bei Gewässern (Richtung)",
+      "explanation_en": "Direction toward a body of water uses 'an' with the accusative, so 'an die Adria'.",
+      "example_correct": "Wir fahren an die Adria.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "das Camping",
+      "correction": "der Campingplatz",
+      "rule": "Campingplatz statt 'Camping'",
+      "explanation_en": "The place is 'der Campingplatz'; 'Camping' alone refers to the activity.",
+      "example_correct": "Wir bleiben auf dem Campingplatz.",
+      "lesson_date": "2026-07-28-stefanie"
+    },
+    {
+      "category": "Präposition",
+      "kevin_said": "wenn ich in kalten, oft?",
+      "correction": "Wenn du oft in der Kälte bist.",
+      "rule": "Präposition 'in' + Dativ bei Ortsangabe",
+      "explanation_en": "Kevin left the phrase incomplete and without the correct preposition/case; Stefanie reformulated it with 'in der Kälte' (in + dative, feminine article).",
+      "example_correct": "Ich werde krank, wenn ich oft in der Kälte bin.",
+      "lesson_date": "2026-08-11-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "wenn man ein kranker hatte",
+      "correction": "wenn man krank ist / wenn man eine Krankheit hat",
+      "rule": "'krank sein' vs. 'eine Krankheit haben'",
+      "explanation_en": "Kevin mixed the adjective and noun; Stefanie clarified that you are either 'krank' (adjective) or you 'have' a 'Krankheit' (noun).",
+      "example_correct": "Man hat ein schwaches Immunsystem, wenn man krank ist oder eine Krankheit hat.",
+      "lesson_date": "2026-08-11-stefanie"
+    },
+    {
+      "category": "Genus",
+      "kevin_said": "ein Krankheit",
+      "correction": "eine Krankheit",
+      "rule": "Nomen auf -heit sind feminin",
+      "explanation_en": "'Krankheit' is feminine, so the article must be 'eine', not 'ein'; Stefanie noted it is again feminine.",
+      "example_correct": "Er hat eine schwere Krankheit.",
+      "lesson_date": "2026-08-11-stefanie"
+    },
+    {
+      "category": "Wortwahl",
+      "kevin_said": "wenn man nicht gesund ist",
+      "correction": "wenn man sich nicht gesund ernährt",
+      "rule": "reflexives Verb 'sich ernähren' für Ernährung",
+      "explanation_en": "To express 'eating unhealthily' German uses the reflexive 'sich (nicht) gesund ernähren', not 'gesund sein'.",
+      "example_correct": "Man bekommt ein schwaches Immunsystem, wenn man sich nicht gesund ernährt.",
+      "lesson_date": "2026-08-11-stefanie"
+    },
+    {
+      "category": "Kasus",
+      "kevin_said": "",
+      "correction": "Mir ist schlecht.",
+      "rule": "unpersönliche Konstruktion mit Dativ für Befinden",
+      "explanation_en": "Kevin used an English-style calque; Stefanie explained that German expresses feeling unwell with the dative ('mir ist schlecht'), since 'ich bin schlecht' would mean 'I am a bad person'.",
+      "example_correct": "Mir ist schlecht vom Alkohol.",
+      "lesson_date": "2026-08-11-stefanie"
+    },
+    {
+      "category": "Sonstiges",
+      "kevin_said": "mir ist müde",
+      "correction": "ich bin müde",
+      "rule": "'müde sein' bleibt nominativ",
+      "explanation_en": "Kevin overgeneralized the dative 'mir ist ...' construction to tiredness; Stefanie corrected that tiredness stays with the nominative 'ich bin müde'.",
+      "example_correct": "Ich bin müde, aber mir ist warm.",
+      "lesson_date": "2026-08-11-stefanie"
+    }
+  ],
+  "lessons_processed": [
+    "2026-06-09-stefanie",
+    "2026-05-14-stefanie",
+    "2026-05-15-stefanie",
+    "2026-05-18-stefanie",
+    "2026-05-19-stefanie",
+    "2026-05-21-stefanie",
+    "2026-05-22-stefanie",
+    "2026-05-25-stefanie",
+    "2026-05-26-stefanie",
+    "2026-05-28-stefanie",
+    "2026-05-29-stefanie",
+    "2026-06-08-stefanie",
+    "2026-06-10-stefanie",
+    "2026-06-11-stefanie",
+    "2026-06-12-stefanie",
+    "2026-06-15-stefanie",
+    "2026-06-16-stefanie",
+    "2026-06-18-stefanie",
+    "2026-06-19-stefanie",
+    "2026-06-22-stefanie",
+    "2026-06-24-stefanie",
+    "2026-06-26-stefanie",
+    "2026-06-29-stefanie",
+    "2026-07-06-stefanie",
+    "2026-07-07-stefanie",
+    "2026-07-08-stefanie",
+    "2026-07-09-stefanie",
+    "2026-07-21-stefanie",
+    "2026-07-22-stefanie",
+    "2026-07-23-stefanie",
+    "2026-07-27-stefanie",
+    "2026-08-10-stefanie",
+    "2026-07-28-stefanie",
+    "2026-08-11-stefanie"
+  ],
+  "last_updated": "2026-08-12T00:58:48"
+}

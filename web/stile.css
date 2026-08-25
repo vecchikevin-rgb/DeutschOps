@@ -1,0 +1,1091 @@
+/* DeutschOps — design system
+ *
+ * Fonti (motore condiviso, skill ui-ux-pro-max):
+ *   - stile "E-Ink / Paper"  -> fondo carta, alto contrasto, nessuna animazione in lettura
+ *   - stile "Flat Design"    -> transizioni 150-200ms, palette solida ridotta
+ *   - palette "Warm ink + amber accent on cream"
+ *
+ * Il design system generato con --design-system e' stato SCARTATO: proponeva
+ * "Exaggerated Minimalism" (font-weight 900, tipografia 12rem), viola, Google
+ * Fonts via CDN e GSAP. Fuori tema e incompatibile con il vincolo offline.
+ * E' il gotcha gia' noto al workspace: senza --domain mirato la skill aggancia
+ * la keyword sbagliata.
+ *
+ * VINCOLI NON NEGOZIABILI
+ *   1. Nessuna richiesta di rete. Font di sistema, niente CDN: l'app deve
+ *      funzionare con il Wi-Fi spento.
+ *   2. der=blu, die=rosso, das=verde. Sono i colori delle carte Anki da mesi;
+ *      cambiarli creerebbe interferenza proprio sui 27 errori di Genus.
+ *   3. Il colore non porta mai da solo un'informazione (WCAG 1.4.1): l'esito
+ *      si legge dal segno e dal bordo, il colore accompagna.
+ */
+
+/* ============================================================ token */
+
+:root {
+  /* Carta e inchiostro — E-Ink/Paper */
+  --carta:        #FDFBF7;
+  --carta-alt:    #F5F1E8;
+  --inchiostro:   #1A1A1A;
+  --matita:       #4A4A4A;
+  --matita-tenue: #78716C;
+  --bordo:        #E0DCD3;
+  --bordo-forte:  #C9C3B6;
+
+  /* Accento: ambra. Scelta deliberata al posto del rosso, che e' occupato
+   * da "die" — vedi vincolo 2. */
+  --accento:      #B45309;
+  --accento-vivo: #D97706;
+  --accento-velo: #FEF3E2;
+
+  /* Generi — identici ad Anki. Non toccare. */
+  --der: #1D4ED8;
+  --die: #B91C1C;
+  --das: #15803D;
+
+  /* Esito. Il "corretto" NON e' verde: sarebbe das. E' inchiostro pieno con
+   * un segno — coerente anche col tono severo e fattuale, che quando la
+   * risposta e' giusta non fa festa. L'errore e' ambra, non rosso. */
+  --esito-ok:     var(--inchiostro);
+  --esito-ok-velo:#F0F4F0;
+  --esito-no:     var(--accento);
+  --esito-no-velo:var(--accento-velo);
+
+  /* Tipografia. Serif per il tedesco: e' il contenuto e va letto.
+   * Sans di sistema per l'interfaccia, che deve farsi da parte. */
+  --font-de: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Cascadia Mono", Consolas, "SF Mono", monospace;
+
+  --testo-de:   1.25rem;   /* 20px — il tedesco non scende mai sotto */
+  --testo-base: 0.9375rem;
+  --testo-pic:  0.8125rem;
+
+  /* Scala 4/8pt */
+  --s1: 0.25rem; --s2: 0.5rem;  --s3: 0.75rem; --s4: 1rem;
+  --s5: 1.5rem;  --s6: 2rem;    --s7: 3rem;    --s8: 4rem;
+
+  --raggio: 3px;             /* Flat Design: 0-4px */
+  --transizione: 150ms ease; /* Flat Design: 150-200ms */
+  --larghezza: 44rem;        /* misura di lettura */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --carta:        #16150F;
+    --carta-alt:    #1F1E17;
+    --inchiostro:   #EDE9E0;
+    --matita:       #B8B2A5;
+    --matita-tenue: #8A8578;
+    --bordo:        #33312A;
+    --bordo-forte:  #4A473D;
+
+    --accento:      #F59E0B;
+    --accento-vivo: #FBBF24;
+    --accento-velo: #2A2114;
+
+    /* Generi schiariti: su fondo scuro le versioni chiare non reggono 4.5:1 */
+    --der: #7BA7F5;
+    --die: #F08A85;
+    --das: #6DD48E;
+
+    --esito-ok:      var(--inchiostro);
+    --esito-ok-velo: #1B2119;
+    --esito-no:      var(--accento);
+    --esito-no-velo: #2A2114;
+  }
+}
+
+/* ============================================================ base */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--carta);
+  color: var(--inchiostro);
+  font-family: var(--font-ui);
+  font-size: var(--testo-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Il tedesco, ovunque compaia. */
+.de {
+  font-family: var(--font-de);
+  font-size: var(--testo-de);
+  line-height: 1.75;
+}
+
+.der { color: var(--der); font-weight: 600; }
+.die { color: var(--die); font-weight: 600; }
+.das { color: var(--das); font-weight: 600; }
+
+:focus-visible {
+  outline: 2px solid var(--accento);
+  outline-offset: 2px;
+  border-radius: var(--raggio);
+}
+
+button, a { cursor: pointer; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================ struttura */
+
+.guscio {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.testata {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  padding: var(--s3) var(--s5);
+  border-bottom: 1px solid var(--bordo);
+  background: var(--carta);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.marchio {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: 1rem;
+  margin-right: auto;
+}
+.marchio span { color: var(--accento); }
+
+.contenuto {
+  width: 100%;
+  max-width: var(--larghezza);
+  margin: 0 auto;
+  padding: var(--s6) var(--s5) var(--s8);
+}
+
+.pieplista {
+  border-top: 1px solid var(--bordo);
+  padding: var(--s3) var(--s5);
+  font-size: var(--testo-pic);
+  color: var(--matita-tenue);
+  display: flex;
+  gap: var(--s4);
+  flex-wrap: wrap;
+}
+
+/* ============================================================ zone (nav) */
+
+.zone {
+  display: flex;
+  gap: var(--s1);
+  flex-wrap: wrap;
+}
+
+.zona {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  padding: var(--s2) var(--s3);
+  border: 1px solid transparent;
+  border-radius: var(--raggio);
+  background: none;
+  color: var(--matita);
+  font: inherit;
+  font-size: var(--testo-pic);
+  transition: background var(--transizione), color var(--transizione);
+}
+.zona:hover:not(:disabled) { background: var(--carta-alt); color: var(--inchiostro); }
+.zona[aria-current="page"] {
+  background: var(--accento-velo);
+  border-color: var(--accento);
+  color: var(--accento);
+  font-weight: 600;
+}
+.zona:disabled { opacity: 0.35; cursor: not-allowed; }
+.zona svg { width: 15px; height: 15px; flex: none; }
+
+/* ============================================================ home */
+
+.suggerimento {
+  border: 1px solid var(--bordo);
+  border-left: 3px solid var(--accento);
+  border-radius: var(--raggio);
+  padding: var(--s5);
+  margin-bottom: var(--s6);
+  background: var(--carta-alt);
+}
+.suggerimento h1 {
+  margin: 0 0 var(--s2);
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.suggerimento p { margin: 0 0 var(--s4); color: var(--matita); }
+
+.durata { display: flex; gap: var(--s2); align-items: center; flex-wrap: wrap; }
+.durata-etichetta {
+  font-size: var(--testo-pic);
+  color: var(--matita-tenue);
+  margin-right: var(--s2);
+}
+
+button.primario, button.secondario {
+  font: inherit;
+  padding: var(--s2) var(--s4);
+  border-radius: var(--raggio);
+  transition: background var(--transizione), border-color var(--transizione);
+}
+button.primario {
+  background: var(--accento);
+  color: var(--carta);
+  border: 1px solid var(--accento);
+  font-weight: 600;
+}
+button.primario:hover { background: var(--accento-vivo); border-color: var(--accento-vivo); }
+button.secondario {
+  background: none;
+  color: var(--inchiostro);
+  border: 1px solid var(--bordo-forte);
+}
+button.secondario:hover { background: var(--carta-alt); }
+button.secondario[aria-pressed="true"] {
+  border-color: var(--accento);
+  background: var(--accento-velo);
+  color: var(--accento);
+  font-weight: 600;
+}
+
+/* ============================================================ cifre */
+
+.cifre {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: var(--s3);
+  margin-bottom: var(--s6);
+}
+.cifra {
+  border: 1px solid var(--bordo);
+  border-radius: var(--raggio);
+  padding: var(--s3) var(--s4);
+}
+.cifra dt {
+  font-size: var(--testo-pic);
+  color: var(--matita-tenue);
+  margin-bottom: var(--s1);
+}
+.cifra dd {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+.cifra dd small {
+  font-size: var(--testo-pic);
+  font-weight: 400;
+  color: var(--matita-tenue);
+  letter-spacing: 0;
+}
+
+/* ============================================================ esercizio */
+
+.esercizio {
+  border: 1px solid var(--bordo);
+  border-radius: var(--raggio);
+  padding: var(--s5);
+  margin-bottom: var(--s4);
+}
+
+.avanzamento {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: var(--testo-pic);
+  color: var(--matita-tenue);
+  margin-bottom: var(--s4);
+}
+.barra {
+  height: 2px;
+  background: var(--bordo);
+  border-radius: 1px;
+  overflow: hidden;
+  margin-bottom: var(--s5);
+}
+.barra i {
+  display: block;
+  height: 100%;
+  background: var(--accento);
+  transition: width 200ms ease;
+}
+
+/* La banda CEFR. Sta accanto al contatore, non sull'esercizio: dice a che
+   altezza stai lavorando, ed e' un'informazione sulla sessione. Monospazio e
+   bordo sottile, come i tasti — e' un'etichetta, non un titolo. */
+.livello {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--bordo);
+  border-radius: 3px;
+  padding: 0 var(--s1);
+  margin-left: var(--s2);
+  color: var(--matita);
+}
+
+/* Lo stato di un tema B2. Tre valori, e il colore non porta l'informazione da
+   solo: la parola c'e' sempre, il bordo la accompagna. */
+.stato {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: 1px solid var(--bordo-forte);
+  border-radius: 3px;
+  padding: 0 var(--s2);
+  color: var(--matita-tenue);
+  flex: none;
+}
+.stato.manca    { border-color: var(--accento); color: var(--accento); }
+.stato.parziale { border-color: var(--bordo-forte); color: var(--matita); }
+.stato.coperto  { border-style: dashed; }
+
+/* L'area di scrittura: e' il posto dove si sta piu' a lungo di tutta l'app. */
+.area {
+  min-height: 16rem;
+  line-height: 1.7;
+  resize: vertical;
+  font-size: 1.125rem;
+}
+
+.stimolo {
+  font-family: var(--font-de);
+  font-size: 1.375rem;
+  line-height: 1.8;
+  margin-bottom: var(--s5);
+}
+.stimolo mark {
+  background: var(--accento-velo);
+  color: var(--accento);
+  padding: 0 var(--s1);
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.campo {
+  width: 100%;
+  font-family: var(--font-de);
+  font-size: var(--testo-de);
+  padding: var(--s3);
+  border: 1px solid var(--bordo-forte);
+  border-radius: var(--raggio);
+  background: var(--carta);
+  color: var(--inchiostro);
+  transition: border-color var(--transizione);
+}
+.campo:focus { border-color: var(--accento); outline: none; }
+
+/* Barra umlaut: su tastiera italiana e' l'attrito numero uno. */
+.umlaut {
+  display: flex;
+  gap: var(--s1);
+  margin-top: var(--s2);
+  flex-wrap: wrap;
+}
+.umlaut button {
+  font-family: var(--font-de);
+  font-size: 1rem;
+  min-width: 2.25rem;
+  padding: var(--s1) var(--s2);
+  border: 1px solid var(--bordo);
+  border-radius: var(--raggio);
+  background: var(--carta-alt);
+  color: var(--inchiostro);
+  transition: background var(--transizione);
+}
+.umlaut button:hover { background: var(--accento-velo); border-color: var(--accento); }
+
+/* ============================================================ esito */
+
+.esito {
+  border-left: 3px solid;
+  border-radius: var(--raggio);
+  padding: var(--s4);
+  margin-top: var(--s4);
+}
+.esito.ok  { border-color: var(--esito-ok); background: var(--esito-ok-velo); }
+.esito.no  { border-color: var(--esito-no); background: var(--esito-no-velo); }
+
+.esito-capo {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  font-weight: 600;
+  margin-bottom: var(--s2);
+}
+.esito.no .esito-capo { color: var(--esito-no); }
+.esito-segno { font-size: 1.125rem; line-height: 1; }
+.esito p { margin: var(--s2) 0 0; }
+.esito .regola { font-size: var(--testo-pic); color: var(--matita); }
+.esito .recidiva {
+  font-size: var(--testo-pic);
+  color: var(--matita);
+  margin-top: var(--s2);
+  padding-top: var(--s2);
+  border-top: 1px solid var(--bordo);
+}
+
+/* ============================================================ elenchi */
+
+.riga {
+  border-bottom: 1px solid var(--bordo);
+  padding: var(--s3) 0;
+}
+.riga:last-child { border-bottom: none; }
+.riga-capo {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s3);
+  margin-bottom: var(--s1);
+}
+.conteggio {
+  font-family: var(--font-mono);
+  font-size: var(--testo-pic);
+  color: var(--matita-tenue);
+  font-variant-numeric: tabular-nums;
+}
+.provenienza { font-size: var(--testo-pic); color: var(--matita-tenue); }
+
+.vuoto {
+  text-align: center;
+  padding: var(--s8) var(--s5);
+  color: var(--matita-tenue);
+}
+
+.errore-app {
+  border: 1px solid var(--esito-no);
+  border-left: 3px solid var(--esito-no);
+  border-radius: var(--raggio);
+  padding: var(--s4);
+  color: var(--esito-no);
+}
+
+/* ============================================================ opzioni
+
+   Scelta multipla, ma solo nella zona di lettura: li' la parola e' NUOVA per
+   definizione e la scelta misura il riconoscimento dal contesto. Nel drill
+   sugli errori (F2) resta la produzione — vedi la nota in do/studio/drill.py.
+
+   I distrattori condividono il suffisso con la parola giusta, quindi le quattro
+   voci si assomigliano: la colonna larga e il serif servono a leggerle senza
+   sforzo, e la lettera a sinistra tiene la mano sulla tastiera. */
+
+.opzioni {
+  display: grid;
+  gap: var(--s2);
+  margin-top: var(--s5);
+}
+
+.opzione {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  width: 100%;
+  padding: var(--s3) var(--s4);
+  border: 1px solid var(--bordo-forte);
+  border-radius: var(--raggio);
+  background: var(--carta);
+  color: var(--inchiostro);
+  font: inherit;
+  text-align: left;
+  transition: background var(--transizione), border-color var(--transizione);
+}
+.opzione:hover { background: var(--accento-velo); border-color: var(--accento); }
+
+.opzione-tasto {
+  font-family: var(--font-mono);
+  font-size: var(--testo-pic);
+  color: var(--matita-tenue);
+  border: 1px solid var(--bordo);
+  border-radius: 3px;
+  min-width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  flex: none;
+}
+.opzione:hover .opzione-tasto { border-color: var(--accento); color: var(--accento); }
+.opzione-parola { font-size: 1.125rem; }
+
+/* ============================================================ allenamento
+
+   La zona di produzione: si scrive, non si sceglie. Tre elementi nuovi.
+
+   1. La consegna sta SOPRA lo stimolo e in tono minore. E' l'unica riga di
+      inglese in mezzo al tedesco, e deve leggersi come una didascalia: se
+      competesse con la frase, l'occhio partirebbe dall'inglese.
+   2. La scala di aiuto e' visibile ma spenta. Deve essere raggiungibile senza
+      cercarla — chi e' bloccato non deve abbandonare — e non invitante: ogni
+      gradino ha un prezzo, e il prezzo e' che viene registrato.
+   3. Il gradino gia' aperto NON si richiude. Averlo visto conta comunque, e
+      una tendina che si richiude suggerirebbe il contrario. */
+
+.consegna {
+  font-size: var(--testo-base);
+  color: var(--matita);
+  margin: 0 0 var(--s4);
+  padding-bottom: var(--s3);
+  border-bottom: 1px solid var(--bordo);
+}
+.consegna b { color: var(--inchiostro); font-weight: 600; }
+
+/* Tre righe a specificita' crescente: il tedesco, il suo specchio inglese, la
+   chiave del buco. Il tedesco resta il piu' grande e in serif — e' il contenuto.
+   L'inglese scende di corpo e va in corsivo: si legge quando serve e non compete
+   con la frase da risolvere.
+
+   Nessuna delle due e' un aiuto della scala, e nessuna rivela la risposta: la
+   risposta e' la FORMA tedesca, che una traduzione non puo' esprimere. */
+.traduzione {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--matita);
+  margin: calc(var(--s5) * -1 + var(--s2)) 0 var(--s2);
+  padding-left: var(--s3);
+  border-left: 2px solid var(--bordo);
+}
+
+.glossa {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s2);
+  margin: 0 0 var(--s5);
+  color: var(--matita);
+}
+.glossa-buco {
+  font-family: var(--font-mono);
+  color: var(--accento);
+  letter-spacing: -0.05em;
+}
+.glossa-uguale { color: var(--matita-tenue); }
+
+/* La riga dei gradini. Numerata: il numero e' il costo. */
+.scala {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  flex-wrap: wrap;
+  margin-top: var(--s4);
+  padding-top: var(--s3);
+  border-top: 1px dashed var(--bordo);
+}
+.scala-etichetta {
+  font-size: var(--testo-pic);
+  color: var(--matita-tenue);
+  margin-right: var(--s1);
+}
+.gradino-tasto {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  padding: var(--s1) var(--s3);
+  border: 1px solid var(--bordo);
+  border-radius: var(--raggio);
+  background: none;
+  color: var(--matita-tenue);
+  font: inherit;
+  font-size: var(--testo-pic);
+  transition: color var(--transizione), border-color var(--transizione);
+}
+.gradino-tasto:hover:not(:disabled) { color: var(--accento); border-color: var(--accento); }
+.gradino-tasto:disabled { opacity: 0.4; cursor: default; }
+.gradino-tasto .n {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* La resa: stessa riga, ma staccata a destra e trattinata come il tasto di
+   segnalazione in lettura. Non e' il quarto gradino di una scala, e' un'altra
+   cosa — e le due non devono somigliarsi. */
+.resa-tasto {
+  margin-left: auto;
+  border-style: dashed;
+}
+.resa-tasto:hover:not(:disabled) { color: var(--esito-no); border-color: var(--esito-no); }
+
+/* I gradini aperti, impilati sopra il campo. */
+.gradino {
+  border-left: 2px solid var(--bordo-forte);
+  padding: var(--s2) 0 var(--s2) var(--s4);
+  margin-bottom: var(--s3);
+}
+.gradino-capo {
+  font-size: var(--testo-pic);
+  color: var(--matita-tenue);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--s1);
+}
+.gradino p { margin: 0; color: var(--inchiostro); }
+.gradino .struttura {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--accento);
+}
+
+.risposta-riga {
+  display: flex;
+  gap: var(--s2);
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: var(--s4);
+}
+
+/* La forma corretta, dopo la risposta: e' la cosa da guardare, e va grande. */
+.forma {
+  font-family: var(--font-de);
+  font-size: 1.375rem;
+  margin: var(--s3) 0 var(--s1);
+}
+.scritto {
+  font-size: var(--testo-pic);
+  color: var(--matita-tenue);
+}
+.scritto s { text-decoration-thickness: 1px; opacity: 0.8; }
+
+/* ============================================================ consultazione
+
+   Quattro popolazioni in una lista sola: regole, vocaboli, correzioni, passi di
+   lezione. Il genere sta in un'etichetta a sinistra, non in un colore — i tre
+   colori disponibili sono gia' i generi grammaticali, e un quarto significato
+   sugli stessi colori li renderebbe illeggibili tutti.
+
+   La distinzione che conta di piu' non e' fra i quattro generi ma fra
+   COLLEGAMENTO ESATTO e RISULTATO DI RICERCA: la prima si puo' affermare, la
+   seconda no. Sono due blocchi separati, con due intestazioni diverse, e il
+   punteggio resta visibile sui risultati di ricerca. */
+
+.cerca-riga { margin-bottom: var(--s4); }
+
+.campo-cerca {
+  width: 100%;
+  font-family: var(--font-de);
+  font-size: 1.375rem;
+  padding: var(--s3) var(--s4);
+  border: 1px solid var(--bordo-forte);
+  border-radius: var(--raggio);
+  background: var(--carta);
+  color: var(--inchiostro);
+  transition: border-color var(--transizione);
+}
+.campo-cerca:focus { border-color: var(--accento); outline: none; }
+.campo-cerca::placeholder { color: var(--matita-tenue); font-style: italic; }
+
+.filtri {
+  display: flex;
+  gap: var(--s2);
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: var(--s3);
+}
+.filtro {
+  padding: var(--s1) var(--s3);
+  border: 1px solid var(--bordo);
+  border-radius: var(--raggio);
+  background: none;
+  color: var(--matita);
+  font: inherit;
+  font-size: var(--testo-pic);
+  transition: background var(--transizione), border-color var(--transizione);
+}
+.filtro:hover { background: var(--carta-alt); }
+.filtro[aria-pressed="true"] {
+  border-color: var(--accento);
+  background: var(--accento-velo);
+  color: var(--accento);
+  font-weight: 600;
+}
+.filtro .n {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  opacity: 0.7;
+}
+
+.risultato {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: var(--s3);
+  width: 100%;
+  padding: var(--s3) var(--s2);
+  border: none;
+  border-bottom: 1px solid var(--bordo);
+  background: none;
+  color: var(--inchiostro);
+  font: inherit;
+  text-align: left;
+  transition: background var(--transizione);
+}
+.risultato:hover { background: var(--carta-alt); }
+.risultato:last-child { border-bottom: none; }
+
+.etichetta {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--matita-tenue);
+  padding-top: 0.35rem;
+}
+.risultato-capo {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s3);
+  flex-wrap: wrap;
+}
+.risultato-titolo {
+  font-family: var(--font-de);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.risultato-corpo {
+  font-size: var(--testo-pic);
+  color: var(--matita);
+  margin-top: 2px;
+}
+
+/* Il dettaglio. `.blocco` separa l'esatto dal cercato. */
+.dettaglio-capo {
+  border-bottom: 1px solid var(--bordo);
+  padding-bottom: var(--s4);
+  margin-bottom: var(--s5);
+}
+.dettaglio-capo h1 {
+  font-family: var(--font-de);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 var(--s2);
+  line-height: 1.3;
+}
+
+.blocco { margin-top: var(--s6); }
+.blocco > h2 {
+  font-size: var(--testo-pic);
+  font-weight: 600;
+  color: var(--matita-tenue);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 var(--s1);
+}
+.blocco > .nota {
+  font-size: var(--testo-pic);
+  color: var(--matita-tenue);
+  margin: 0 0 var(--s3);
+  font-style: italic;
+}
+.blocco p { margin: 0 0 var(--s3); }
+.blocco ul { margin: 0; padding-left: var(--s5); }
+.blocco li { margin-bottom: var(--s2); }
+
+.freccia {
+  color: var(--accento);
+  font-family: var(--font-mono);
+  padding: 0 var(--s2);
+}
+
+/* ============================================================ progressi
+
+   DUE COLORI, E IL SECONDO E' MISURATO NON SCELTO
+   I grafici qui sono a ENFASI: una serie e' il punto (la famiglia dei casi,
+   ambra), l'altra e' contesto (tutto il resto, grigio). Non e' una palette
+   categorica — nove categorie nel tempo sarebbero illeggibili, e la storia e'
+   gia' nota.
+
+   Il grigio non e' `--matita-tenue`: quella coppia sta a ΔE 13,4 a vista
+   normale, sotto la soglia di 15 sotto cui due linee si confondono anche con
+   la vista piena (misurato, non stimato). `#938D80` porta la coppia a 15,8 e
+   tiene il contrasto sopra 3:1 sulla carta. In scuro `--matita` passa gia'
+   tutto: 21,0.
+
+   Il colore non porta comunque informazione da solo — c'e' la legenda, e sotto
+   ogni grafico la sua tabella. */
+
+:root {
+  --serie-punto:  var(--accento);
+  --serie-sfondo: #938D80;
+  --griglia:      var(--bordo);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root { --serie-sfondo: #8A8578; }
+}
+
+.riquadro-anki {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  border: 1px solid var(--bordo);
+  border-radius: var(--raggio);
+  padding: var(--s3) var(--s4);
+  margin-bottom: var(--s6);
+}
+.riquadro-anki > div:first-child { margin-right: auto; }
+.riquadro-anki a {
+  padding: var(--s2) var(--s4);
+  border: 1px solid var(--bordo-forte);
+  border-radius: var(--raggio);
+  color: var(--inchiostro);
+  font-size: var(--testo-pic);
+}
+.riquadro-anki a:hover { background: var(--carta-alt); }
+
+.legenda {
+  display: flex;
+  gap: var(--s4);
+  flex-wrap: wrap;
+  font-size: var(--testo-pic);
+  color: var(--matita);
+  margin-bottom: var(--s3);
+}
+.chiave { display: inline-flex; align-items: center; gap: var(--s2); }
+.campione {
+  width: 14px;
+  height: 2px;
+  border-radius: 1px;
+  display: inline-block;
+}
+.campione.casi  { background: var(--serie-punto); height: 3px; }
+.campione.altri { background: var(--serie-sfondo); }
+
+.tela { width: 100%; overflow-x: auto; }
+.tela svg { width: 100%; height: auto; display: block; }
+
+/* Marche sottili, griglia in secondo piano, mai tratteggiata. */
+.linea { fill: none; stroke-linejoin: round; stroke-linecap: round; }
+.linea.casi  { stroke: var(--serie-punto);  stroke-width: 2; }
+.linea.altri { stroke: var(--serie-sfondo); stroke-width: 2; }
+.griglia { stroke: var(--griglia); stroke-width: 1; }
+.tacca {
+  fill: var(--matita-tenue);
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Barre orizzontali: i nomi tedeschi sono lunghi e in verticale si spezzano. */
+.barre { display: grid; gap: var(--s2); }
+.barra-riga {
+  display: grid;
+  grid-template-columns: 10rem 1fr 2.5rem;
+  align-items: center;
+  gap: var(--s3);
+}
+.barra-nome { font-size: var(--testo-pic); color: var(--matita); }
+.barra-pista {
+  background: var(--carta-alt);
+  border-radius: 2px;
+  height: 14px;
+  overflow: hidden;
+}
+.barra-fatto {
+  display: block;
+  height: 100%;
+  background: var(--serie-punto);
+  /* Estremita' arrotondata solo in punta: la base resta ancorata a zero. */
+  border-radius: 0 4px 4px 0;
+}
+.barra-valore {
+  font-family: var(--font-mono);
+  font-size: var(--testo-pic);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  color: var(--matita);
+}
+
+/* La tabella non e' una cortesia: e' l'unico modo di leggere i valori esatti,
+   e l'unico che funziona senza distinguere i colori. */
+.tabella-vista { margin-top: var(--s3); }
+.tabella-vista table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--testo-pic);
+  margin-top: var(--s2);
+}
+.tabella-vista caption { text-align: left; padding-bottom: var(--s2); }
+.tabella-vista th, .tabella-vista td {
+  text-align: left;
+  padding: var(--s1) var(--s3) var(--s1) 0;
+  border-bottom: 1px solid var(--bordo);
+}
+.tabella-vista td { font-variant-numeric: tabular-nums; }
+.tabella-vista th { color: var(--matita-tenue); font-weight: 600; }
+
+.suggerimento-fluttuante {
+  position: fixed;
+  transform: translate(-50%, -100%);
+  background: var(--carta);
+  border: 1px solid var(--bordo-forte);
+  border-radius: var(--raggio);
+  padding: var(--s2) var(--s3);
+  font-size: var(--testo-pic);
+  pointer-events: none;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.08);
+}
+.suggerimento-fluttuante[hidden] { display: none; }
+
+/* ============================================================ contesti */
+
+.contesti {
+  margin-top: var(--s5);
+  padding-top: var(--s4);
+  border-top: 1px solid var(--bordo);
+}
+.contesti h3 {
+  margin: 0 0 var(--s2);
+  font-size: var(--testo-pic);
+  font-weight: 600;
+  color: var(--matita-tenue);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ============================================================ voti
+
+   Quattro gradini come in Anki, ma NON i colori di Anki: rosso, verde e blu
+   sono gia' i tre generi, e riusarli qui creerebbe interferenza proprio dove
+   il profilo d'errore e' piu' debole (27 errori di Genus).
+
+   Al loro posto una scala di intensita': "Again" e' l'unico acceso, gli altri
+   degradano verso l'inchiostro. La gerarchia resta leggibile, e il colore non
+   porta comunque informazione da solo — ci sono numero ed etichetta. */
+
+.voti {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s2);
+  margin-top: var(--s4);
+}
+
+.voto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--s3) var(--s2);
+  border: 1px solid var(--bordo-forte);
+  border-radius: var(--raggio);
+  background: var(--carta);
+  color: var(--inchiostro);
+  font: inherit;
+  transition: background var(--transizione), border-color var(--transizione),
+              transform var(--transizione);
+}
+.voto:hover { background: var(--carta-alt); transform: translateY(-1px); }
+.voto:active { transform: none; }
+
+.voto-tasto {
+  font-family: var(--font-mono);
+  font-size: var(--testo-pic);
+  color: var(--matita-tenue);
+  border: 1px solid var(--bordo);
+  border-radius: 3px;
+  min-width: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+}
+.voto-nome { font-weight: 600; font-size: var(--testo-base); }
+.voto-nota {
+  font-size: 0.6875rem;
+  color: var(--matita-tenue);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.voto.again { border-color: var(--accento); }
+.voto.again .voto-nome { color: var(--accento); }
+.voto.again:hover { background: var(--accento-velo); }
+.voto.hard { border-color: var(--bordo-forte); }
+.voto.hard .voto-nome { color: var(--accento); opacity: 0.75; }
+.voto.good .voto-nome,
+.voto.easy .voto-nome { color: var(--inchiostro); }
+.voto.easy { border-style: dashed; }
+
+/* Il quinto tasto: non e' un voto, e non deve sembrarlo. Sta sotto, in tono
+   minore, e non compete con la riga dei quattro. */
+.segnala { margin-top: var(--s2); }
+.segnala-tasto {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  width: 100%;
+  padding: var(--s2) var(--s3);
+  border: 1px dashed var(--bordo-forte);
+  border-radius: var(--raggio);
+  background: none;
+  color: var(--matita-tenue);
+  font: inherit;
+  font-size: var(--testo-pic);
+  transition: color var(--transizione), border-color var(--transizione);
+}
+.segnala-tasto:hover { color: var(--accento); border-color: var(--accento); }
+
+/* riepilogo di fine sessione */
+.riepilogo-voti {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s2);
+  margin-top: var(--s4);
+}
+.voto-conteggio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--s2);
+  border: 1px solid var(--bordo);
+  border-radius: var(--raggio);
+  background: var(--carta);
+}
+.voto-conteggio strong {
+  font-size: 1.375rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+.voto-conteggio span { font-size: var(--testo-pic); color: var(--matita-tenue); }
+.voto-conteggio.again { border-color: var(--accento); }
+.voto-conteggio.again strong { color: var(--accento); }
+
+details summary {
+  cursor: pointer;
+  padding: var(--s2) 0;
+}
+details summary:hover { color: var(--inchiostro); }
+
+/* ============================================================ tasti */
+
+kbd {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 1px var(--s1);
+  border: 1px solid var(--bordo-forte);
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  background: var(--carta-alt);
+  color: var(--matita);
+}
+
+/* ============================================================ responsive */
+
+@media (max-width: 640px) {
+  .testata { padding: var(--s3) var(--s4); flex-wrap: wrap; }
+  .contenuto { padding: var(--s5) var(--s4) var(--s7); }
+  .marchio { width: 100%; margin-bottom: var(--s2); }
+  .stimolo { font-size: 1.25rem; }
+
+  /* I quattro voti su due righe: a 4 colonne le etichette si spezzano. */
+  .voti, .riepilogo-voti { grid-template-columns: repeat(2, 1fr); }
+  .voto-nota { display: none; }
+}

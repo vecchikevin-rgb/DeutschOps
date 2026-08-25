@@ -12,7 +12,8 @@
       "english": "whether, if (indirect question)",
       "example_de": "Ich weiß nicht, ob mein Freund bald kommt.",
       "example_it": "Non so se il mio amico arriva presto.",
-      "level": "A2"
+      "level": "A2",
+      "example_en": "I don't know if my friend is coming soon."
     },
     {
       "german": "dass",
@@ -22,7 +23,8 @@
       "english": "that",
       "example_de": "Ich weiß, dass mein Freund bald kommt.",
       "example_it": "So che il mio amico arriva presto.",
-      "level": "A2"
+      "level": "A2",
+      "example_en": "I know that my friend is coming soon."
     },
     {
       "german": "indirekt",
@@ -32,7 +34,8 @@
       "english": "indirect",
       "example_de": "eine indirekte Frage",
       "example_it": "una domanda indiretta",
-      "level": "B1"
+      "level": "B1",
+      "example_en": "an indirect question"
     },
     {
       "german": "die Frage",
@@ -42,7 +45,8 @@
       "english": "question",
       "example_de": "Kommt dein Freund bald? Das ist eine direkte Frage.",
       "example_it": "Il tuo amico arriva presto? Questa è una domanda diretta.",
-      "level": "A1"
+      "level": "A1",
+      "example_en": "Is your friend coming soon? That is a direct question."
     },
     {
       "german": "bald",
@@ -52,7 +56,8 @@
       "english": "soon",
       "example_de": "Mein Freund kommt bald.",
       "example_it": "Il mio amico arriva presto.",
-      "level": "A2"
+      "level": "A2",
+      "example_en": "My friend is coming soon."
     },
     {
       "german": "umwandeln",
@@ -62,7 +67,8 @@
       "english": "to convert, to transform",
       "example_de": "Du kannst es in eine Frage umwandeln.",
       "example_it": "Puoi trasformarlo in una domanda.",
-      "level": "B1"
+      "level": "B1",
+      "example_en": "You can turn it into a question."
     },
     {
       "german": "formulieren",
@@ -72,7 +78,8 @@
       "english": "to formulate",
       "example_de": "Du kannst es als Frage formulieren.",
       "example_it": "Puoi formularlo come domanda.",
-      "level": "B1"
+      "level": "B1",
+      "example_en": "You can phrase it as a question."
     },
     {
       "german": "die Bedingung",
@@ -88,7 +95,8 @@
         "book_page": 112,
         "semantic_field": "In der Bank",
         "level": "A2"
-      }
+      },
+      "example_en": "If it rains - that is a condition."
     },
     {
       "german": "erzählen",
@@ -98,7 +106,8 @@
       "english": "to tell, to narrate",
       "example_de": "Ich erzähle, dass mein Freund kommt.",
       "example_it": "Racconto che il mio amico arriva.",
-      "level": "A2"
+      "level": "A2",
+      "example_en": "I'm telling you that my friend is coming."
     },
     {
       "german": "verwenden",
@@ -114,7 +123,8 @@
         "book_page": 192,
         "semantic_field": "Nomen",
         "level": "B1"
-      }
+      },
+      "example_en": "In indirect questions we use 'whether'."
     },
     {
       "german": "bedeuten",
@@ -124,7 +134,8 @@
       "english": "to mean",
       "example_de": "Wenn bedeutet nicht immer 'if'.",
       "example_it": "Wenn non significa sempre 'if'.",
-      "level": "A2"
+      "level": "A2",
+      "example_en": "'Wenn' doesn't always mean 'if'."
     },
     {
       "german": "regnen",
@@ -140,7 +151,8 @@
         "book_page": 128,
         "semantic_field": "Wetterbericht",
         "level": "A2"
-      }
+      },
+      "example_en": "If it rains, I'll stay home."
     },
     {
       "german": "zu Hause bleiben",
@@ -150,7 +162,8 @@
       "english": "to stay at home",
       "example_de": "Ich bleibe zu Hause.",
       "example_it": "Resto a casa.",
-      "level": "A1"
+      "level": "A1",
+      "example_en": "I'm staying home."
     },
     {
       "german": "der Nebensatz",
@@ -160,7 +173,8 @@
       "english": "subordinate clause",
       "example_de": "Im Nebensatz steht das Verb am Ende.",
       "example_it": "Nella proposizione subordinata il verbo sta alla fine.",
-      "level": "B1"
+      "level": "B1",
+      "example_en": "In the subordinate clause, the verb goes at the end."
     }
   ],
   "grammar_points": [
@@ -247,5 +261,23 @@
   ],
   "doc_sections_covered": [
     "17. Nebensätze"
+  ],
+  "doc_images": [
+    {
+      "tab": "17. Nebensätze",
+      "description": "Title: Relativsätze und Relativepronomen\n\nTable:\n- Maskulinum (M)\n  - Nom.: der -> das\n  - Akk.: den -> den\n  - Dat.: dem -> dem\n- Neutrum (N)\n  - Nom.: das -> die\n  - Akk.: den -> den\n  - Dat.: dem -> dem\n- Femininum (F)\n  - Nom.: die -> die\n  - Akk.: den -> den\n  - Dat.: der -> der\n- Plural (M, N, F)\n  - Nom.: die -> die\n  - Akk.: den -> die\n  - Dat.: der -> denen\n\nNO_TEXT"
+    },
+    {
+      "tab": "17. Nebensätze",
+      "description": "Title: Relativsätze und Relativepronomen\n\nTable:\n- Maskulinum (M)\n  - Nom.: der -> das\n  - Akk.: den -> den\n  - Dat.: dem -> dem\n\n- Neutrum (N)\n  - Nom.: das -> die\n  - Akk.: den -> den\n  - Dat.: dem -> dem\n\n- Femininum (F)\n  - Nom.: die -> die\n  - Akk.: den -> den\n  - Dat.: der -> der\n\n- Plural (M, N, F)\n  - Nom.: die -> die\n  - Akk.: den -> den\n  - Dat.: der -> denen"
+    },
+    {
+      "tab": "17. Nebensätze",
+      "description": "The image contains several sections of German language material including vocabulary lists and exercises.\n\n1. Vocabulary List:\n   - \"Ich habe gehört, dass ... (Herr Meier ist nervig.)\"\n   - \"Ich habe gehört, Herr Meier nervig ist.\"\n   \n2. Grammar Table with Conjugation Examples:\n   a) Ich habe gehört, dass ...\n      b) Ich finde nicht, dass ...\n         c) Ich weiß, dass ...\n            d) Ich finde, dass ...\n               e) Vergiß bitte nicht, dass ...\n                  f) Amman sagt, dass ...\n                     g) Die Schüler meinen, dass ...\n                        h) ErZAerzählt, dass ...\n                           i) Ute vergisst immer, dass ...\n                              j) Mein Chef weiß, dass ...\n                                 k) Vielle Leute denken, dass ...\n\n3. Exercise Text:\n   - \"Herr Meier ist nervig.\"\n   - \"Ich finde nicht, dass ... (Herr Meier ist nervig.)\"\n   - \"Du hast keine Zeit.\" → \"Ich weiß, dass ...\"\n   - \"Du arbeitest zu viel!\" → \"Ich finde, dass ...\"\n   - \"(Ich feiere morgen meinen Geburtstag.)\" → \"Vergiß bitte nicht, dass ...\"\n   - \"Jana ist sehr nett.\"\n   - \"(Ihre Lehrerin gibt ihnen viele Hausaufgaben.)\"\n   - \"(Der Deutschkurs macht viel Spaß.)\"\n   - \"(Der Lehrer heißt Meyer mit y.)\"\n   - \"(Ich arbeite sehr genau.)\"\n   - \"(Sport ist gesund.)\"\n\nThis layout indicates a structured language learning material focusing on vocabulary, grammar rules with examples and exercises for practice."
+    },
+    {
+      "tab": "17. Nebensätze",
+      "description": "**Vocabulary Words**\n\n1. Ich zeche bald um,\n2. Das Zimmer ist frei,\n3. Meine Freunde helfen mir beim Umzug,\n4. Ich nehme alle Möbel mit,\n5. Die Wohnung war zu laut,\n6. Wir können braüen Frühstück,\n7. Ich kann mich jetzt ein Zimmer in einer WG haben.\n\n**Grammar Tables**\n\n1. Ich zeche bald um, weil ich jetzt ein Zimmer in einer WG habe.\n2. Ich kann mich jetzt ein Zimmer in einer WG haben.\n\n**Answers to Grammar Questions:**\n\nb) Ergänzen Sie die Verben.\n\n1. Laura steht um, wie sie auch so viel ... möchte (zahlen wollen).\n2. Die Freunde helfen ihr, weil sie also Mieke ... alllein (tragen können).\n3. Laura geht zum Vermieter, weil sie ihm das Schlussel ... geben müssen (geben müssen).\n4. Sie ist glücklich, weil sie ihre Katze ... (mitnehmen dürfen).\n\nC) Warum nicht? Antworten Sie mit weil-Sätzen im Perfekt.\n\nSie hat heute nicht gearbeitet. | Es hat ihr nicht gefallen. | Er ist in den Urlaub gefahren: | Der Bus hat so lange gewacht. | Ich habe den Termine vergessen.\n1. Warum hast du heute nicht den Chef angewendet? | Well er in den Urlaub gefahren ist.\n2. Warum bist du heute nicht zum Arzt gegangen?\n3. Warum hast du nicht mit dem Kollegin gesprochen?\n4. Warum bist du so spät nach Hause gekommen?\n5. Warum hast du das Bett nicht gekocht?"
+    }
   ]
 }

@@ -183,11 +183,640 @@
         "anki_deck": "Deutsch::DeutschOps"
       },
       "processed_at": "2026-05-25T21:28:39.159607"
+    },
+    {
+      "id": "2026-05-26-stefanie",
+      "date": "2026-05-26",
+      "audio_file": "Audiolessons\\lezione_2026-05-26-stefanie-compressed.mp4",
+      "topic": "Comparatives and Travel Options",
+      "summary_it": "Questa lezione si è concentrata sugli aggettivi comparativi e superlativi in tedesco, applicati alle opzioni di viaggio da Francoforte a Düsseldorf. K...",
+      "vocabulary_count": 27,
+      "grammar_count": 5,
+      "phrases_count": 8,
+      "doc_sections": [
+        "Comparative and superlative adjectives table (teuer-teurer-am teuersten, etc.)",
+        "Travel options comparison exercise (ICE, IC, Regionalzug, Fernbus)",
+        "Price and duration vocabulary",
+        "Height and earning comparisons using comparative structures",
+        "Natural expressions with 'brauchen' for time duration"
+      ],
+      "homework": "",
+      "duration_minutes": 26.7,
+      "cost_whisper_eur": 0.16,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.26,
+      "files": {
+        "transcript": "transcripts/lezione_2026-05-26-stefanie.txt",
+        "data": "data/lezione_2026-05-26-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-05-26T21:38:39.759649"
+    },
+    {
+      "id": "2026-05-28-stefanie",
+      "date": "2026-05-28",
+      "audio_file": "Audiolessons\\lezione_2026-05-28-stefanie-compressed.mp4",
+      "topic": "Free Conversation and Comparatives",
+      "summary_it": "Kevin e Stefanie hanno discusso dei piani di Kevin per il weekend, per assistere a una gara automobilistica a Monza. La conversazione ha coperto le di...",
+      "vocabulary_count": 22,
+      "grammar_count": 5,
+      "phrases_count": 3,
+      "doc_sections": [
+        "Comparatives: nicht so...wie structure",
+        "Purpose clauses: um...zu",
+        "Reflexive verbs: sich freuen auf/über",
+        "Negation: kein vs. nicht",
+        "Separable verbs in present tense"
+      ],
+      "homework": "",
+      "duration_minutes": 28.0,
+      "cost_whisper_eur": 0.168,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.268,
+      "files": {
+        "transcript": "transcripts/lezione_2026-05-28-stefanie.txt",
+        "data": "data/lezione_2026-05-28-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-05-29T01:19:56.368269"
+    },
+    {
+      "id": "2026-05-29-stefanie",
+      "date": "2026-05-29",
+      "audio_file": "Audiolessons\\lezione_2026-05-29-stefanie-compressed.mp4",
+      "topic": "Wiederholung: Vergleiche und Musik",
+      "summary_it": "Kevin e Stefanie hanno ripassato comparativi e superlativi usando fiumi, città, edifici e cucine. Hanno praticato strutture come 'nicht so...wie' e 'a...",
+      "vocabulary_count": 31,
+      "grammar_count": 5,
+      "phrases_count": 6,
+      "doc_sections": [
+        "22. Wiederholung"
+      ],
+      "homework": "",
+      "duration_minutes": 23.8,
+      "cost_whisper_eur": 0.143,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.243,
+      "files": {
+        "transcript": "transcripts/lezione_2026-05-29-stefanie.txt",
+        "data": "data/lezione_2026-05-29-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-05-29T17:20:01.215039"
+    },
+    {
+      "id": "2026-06-08-stefanie",
+      "date": "2026-06-08",
+      "audio_file": "Audiolessons\\lezione_2026-06-08-stefanie-compressed.mp4",
+      "topic": "Formula 1 trip and past events",
+      "summary_it": "Kevin ha raccontato il suo viaggio a Monaco per la Formula 1. Il suo pilota preferito ha avuto un incidente e non ha finito la gara. La lezione ha cop...",
+      "vocabulary_count": 15,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "Formula 1 race vocabulary (Fahrer, Rennen, Unfall, Platz)",
+        "Past tense forms (Präteritum 'es gab' vs. Perfekt)",
+        "Direct vs. indirect questions (wer vs. der)",
+        "Reflexive verbs in perfect tense (sich entschuldigen, sich erinnern)",
+        "Comparative constructions with intensifiers (viel billiger als, mindestens)",
+        "Repetition vocabulary (wiederholen vs. nochmal)"
+      ],
+      "homework": "",
+      "duration_minutes": 70.8,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-08-stefanie.txt",
+        "data": "data/lezione_2026-06-08-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-10T14:44:43.921919"
+    },
+    {
+      "id": "2026-06-09-stefanie",
+      "date": "2026-06-09",
+      "audio_file": "Audiolessons\\lezione_2026-06-09-stefanie-compressed.mp4",
+      "topic": "Infinitive Constructions with zu",
+      "summary_it": "Kevin ha praticato le costruzioni all'infinito con zu e um...zu. La lezione ha chiarito tre modelli: 1) es ist + aggettivo + zu + infinito (affermazio...",
+      "vocabulary_count": 17,
+      "grammar_count": 5,
+      "phrases_count": 4,
+      "doc_sections": [
+        "23. Infinitivkonstruktionen"
+      ],
+      "homework": "",
+      "duration_minutes": 61.1,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-09-stefanie.txt",
+        "data": "data/lezione_2026-06-09-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-10T15:32:19.312695"
+    },
+    {
+      "id": "2026-06-10-stefanie",
+      "date": "2026-06-10",
+      "audio_file": "Audiolessons\\lezione_2026-06-10-stefanie-compressed.mp4",
+      "topic": "als vs wenn; dabei; während",
+      "summary_it": "Kevin e Stefanie hanno risolto problemi di connessione, poi si sono concentrati sulle subordinate con 'als' vs 'wenn'. 'Als' si usa per eventi singoli...",
+      "vocabulary_count": 13,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "24. Nebensätze: als vs wenn; dabei; während; bei preposition usage"
+      ],
+      "homework": "Watch one episode (approx. 4 minutes) of 'Nico's Weg' A2 series (starting with Episode 1, which includes an A1 summary). Prepare a brief summary to discuss in the next lesson.",
+      "duration_minutes": 67.7,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-10-stefanie.txt",
+        "data": "data/lezione_2026-06-10-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-10T18:46:40.756771"
+    },
+    {
+      "id": "2026-06-11-stefanie",
+      "date": "2026-06-11",
+      "audio_file": "Audiolessons\\lezione_2026-06-11-stefanie-compressed.mp4",
+      "topic": "Nico's Weg A1 Summary",
+      "summary_it": "Kevin ha raccontato in tedesco la trama di livello A1 di 'Nico's Weg': Nico, un giovane spagnolo, arriva in Germania e perde la borsa con passaporto e...",
+      "vocabulary_count": 27,
+      "grammar_count": 5,
+      "phrases_count": 4,
+      "doc_sections": [
+        "19. Indefinitpronomen",
+        "25. Nicos Weg"
+      ],
+      "homework": "Watch the next episode of Nico's Weg (A1, Episode: 'Angekommen') and write a short summary in German. Review indefinite pronouns (jemand/niemand, etwas/nichts, alle) and their declension. Practice relative clauses with 'was' using indefinite pronouns (alles, etwas, nichts). Review Chapter 9 in the textbook (subordinate clauses).",
+      "duration_minutes": 68.9,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-11-stefanie.txt",
+        "data": "data/lezione_2026-06-11-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-11T17:52:43.577151"
+    },
+    {
+      "id": "2026-06-12-stefanie",
+      "date": "2026-06-12",
+      "audio_file": "Audiolessons\\lezione_2026-06-12-stefanie-compressed.mp4",
+      "topic": "Indefinite Pronouns and Relative Clauses",
+      "summary_it": "Kevin e Stefanie hanno ripassato i pronomi indefiniti (jemand, niemand, alle, jeder, einer, ecc.) e le loro declinazioni, che si sono rivelati comples...",
+      "vocabulary_count": 15,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "Indefinite pronouns (jemand, niemand, alle, jeder, einer)",
+        "Temporal prepositions vor and seit",
+        "Double conjunctions (zwar...aber, nicht nur...sondern auch)",
+        "Verb abschließen",
+        "Relative pronoun was",
+        "Vocabulary: Heimweh, Kellner, fremd, Gehirn, Gruppe, Wald, voll, leer"
+      ],
+      "homework": "Complete exercises on Relativsätze (relative clauses) from chapter 16. Focus on relative pronouns, especially the use of 'was' after indefinite pronouns (alles, etwas, nichts). Stefanie will provide additional exercises via screenshot.",
+      "duration_minutes": 64.6,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-12-stefanie.txt",
+        "data": "data/lezione_2026-06-12-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-12T15:05:18.520454"
+    },
+    {
+      "id": "2026-06-15-stefanie",
+      "date": "2026-06-15",
+      "audio_file": "Audiolessons\\lezione_2026-06-15-stefanie-compressed.mp4",
+      "topic": "Weekend trip and pronoun review",
+      "summary_it": "Kevin ha condiviso il suo weekend al Lago di Garda, viaggiando in barca e visitando un castello. La lezione ha coperto vocabolario relativo ai castell...",
+      "vocabulary_count": 36,
+      "grammar_count": 5,
+      "phrases_count": 6,
+      "doc_sections": [
+        "26. Übungen Relativsätze und Wiederholung Pronomen"
+      ],
+      "homework": "",
+      "duration_minutes": 67.3,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-15-stefanie.txt",
+        "data": "data/lezione_2026-06-15-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-15T21:20:06.861693"
+    },
+    {
+      "id": "2026-06-16-stefanie",
+      "date": "2026-06-16",
+      "audio_file": "Audiolessons\\lezione_2026-06-16-stefanie-compressed.mp4",
+      "topic": "Indefinite pronouns & relative clauses",
+      "summary_it": "Kevin ha rivisto l'audio di Nicos Weg, chiarendo 'mit den Händen' (con le mani, dativo) e le espressioni fisse 'auf keinen Fall' (in nessun caso) vs. ...",
+      "vocabulary_count": 21,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "25. Nicos Weg: Pläne machen, das Angebot, anbieten",
+        "Relative clauses with indefinite pronouns (alles, nichts, etwas)",
+        "Indefinite pronouns: jemand, niemand, jeder declension",
+        "Dative plural -n ending (mit den Händen, von den Leuten, mit allen Dingen)"
+      ],
+      "homework": "Retell a Nicos Weg story using reported speech (Er sagte, dass... / Sie fragte, ob...). Prepare a party-planning dialogue in German with at least 5 turns per person, covering: guest list, time, location, food/drinks. Use indefinite pronouns (jemand, niemand) and relative clauses where possible.",
+      "duration_minutes": 67.4,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-16-stefanie.txt",
+        "data": "data/lezione_2026-06-16-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-16T16:57:35.535918"
+    },
+    {
+      "id": "2026-06-18-stefanie",
+      "date": "2026-06-18",
+      "audio_file": "Audiolessons\\lezione_2026-06-18-stefanie-compressed.mp4",
+      "topic": "Appointments and Time Expressions",
+      "summary_it": "Kevin e Stefanie hanno discusso il passaggio da Preply a Google Meet o Microsoft Teams, con Kevin che raccomanda Google Meet per la qualità migliore. ...",
+      "vocabulary_count": 30,
+      "grammar_count": 5,
+      "phrases_count": 6,
+      "doc_sections": [
+        "TAB: 25. Nicos Weg - Lerngewohnheiten vocabulary (weiter-, abfahren, Neuanfang, schaffen, üben, lügen, reflexive verbs)",
+        "TAB: 27. Speaking - Appointment making with time expressions (ab, von...bis, vor) and um...zu constructions"
+      ],
+      "homework": "",
+      "duration_minutes": 68.6,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-18-stefanie.txt",
+        "data": "data/lezione_2026-06-18-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-18T17:12:40.274181"
+    },
+    {
+      "id": "2026-06-19-stefanie",
+      "date": "2026-06-19",
+      "audio_file": "Audiolessons\\lezione_2026-06-19-stefanie-compressed.mp4",
+      "topic": "Prepositional Adverbs & Finalsätze",
+      "summary_it": "Kevin ha riassunto l'episodio 5 di Nicos Weg, concentrandosi su Nico che mente ai genitori riguardo agli studi e Yara che gli offre una bicicletta. St...",
+      "vocabulary_count": 27,
+      "grammar_count": 5,
+      "phrases_count": 4,
+      "doc_sections": [
+        "25. Nicos Weg",
+        "28. Prepositional Adverbs"
+      ],
+      "homework": "",
+      "duration_minutes": 65.8,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-19-stefanie.txt",
+        "data": "data/lezione_2026-06-19-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-19T21:51:25.214907"
+    },
+    {
+      "id": "2026-06-22-stefanie",
+      "date": "2026-06-22",
+      "audio_file": "Audiolessons\\lezione_2026-06-22-stefanie-compressed.mp4",
+      "topic": "Dative verbs and prepositional adverbs",
+      "summary_it": "Kevin ha raccontato il suo weekend al Lago di Garda, viaggiando in traghetto. La lezione si è concentrata su tre strutture con dativo: 'gefallen' (pia...",
+      "vocabulary_count": 19,
+      "grammar_count": 5,
+      "phrases_count": 4,
+      "doc_sections": [
+        "TAB: 27. Speaking - Weekend activities at Gardasee",
+        "TAB: 27. Speaking - Dative verbs gefallen/schmecken/gehören",
+        "TAB: 27. Speaking - Lassen constructions",
+        "TAB: 27. Speaking - Prepositional adverbs introduction"
+      ],
+      "homework": "",
+      "duration_minutes": 65.7,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-22-stefanie.txt",
+        "data": "data/lezione_2026-06-22-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-23T00:48:16.675764"
+    },
+    {
+      "id": "2026-06-24-stefanie",
+      "date": "2026-06-24",
+      "audio_file": "Audiolessons\\lezione_2026-06-24-stefanie-compressed.mp4",
+      "topic": "Verbs with Prepositions",
+      "summary_it": "Kevin e Stefanie hanno lavorato intensivamente sui verbi che richiedono preposizioni specifiche (Verben mit Präpositionalergänzung), coprendo struttur...",
+      "vocabulary_count": 34,
+      "grammar_count": 5,
+      "phrases_count": 4,
+      "doc_sections": [
+        "25. Nicos Weg",
+        "29. Liste Verben mit Präposition"
+      ],
+      "homework": "",
+      "duration_minutes": 60.5,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-24-stefanie.txt",
+        "data": "data/lezione_2026-06-24-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-24T15:53:30.003490"
+    },
+    {
+      "id": "2026-06-26-stefanie",
+      "date": "2026-06-26",
+      "audio_file": "Audiolessons\\lezione_2026-06-26-stefanie-compressed.mp4",
+      "topic": "Prepositional verbs and directional adverbs",
+      "summary_it": "Questa lezione si è concentrata sui verbi preposizionali (verbi con preposizioni fisse) e sugli avverbi direzionali (hin/her). Kevin ha praticato cost...",
+      "vocabulary_count": 31,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "Prepositional verbs",
+        "Directional adverbs (hin/her)",
+        "Modal verbs with infinitives",
+        "Dative and accusative with prepositions"
+      ],
+      "homework": "Review all prepositional verbs with their fixed prepositions and cases. Practice using hin/her in sentences describing movement. Create example sentences for: sich freuen auf, leiden an/unter, sich beschweren über, teilnehmen an, sich vorbereiten auf. Practice the difference between dorthin (to there, away from speaker) and hierher (to here, toward speaker).",
+      "duration_minutes": 67.6,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-26-stefanie.txt",
+        "data": "data/lezione_2026-06-26-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-06-26T17:46:11.285676"
+    },
+    {
+      "id": "2026-06-29-stefanie",
+      "date": "2026-06-29",
+      "audio_file": "Audiolessons\\lezione_2026-06-29-stefanie-compressed.mp4",
+      "topic": "Holiday Small Talk & Comparisons",
+      "summary_it": "Kevin descrive la sua vacanza all-inclusive a Tenerife con sua madre e sua zia. La lezione si è concentrata su strutture conversazionali naturali per ...",
+      "vocabulary_count": 28,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "27. Speaking: aussehen, Halb-/Vollpension, ziemlich günstig, Paket/Päckchen, distance expressions (bis zum, am nächsten, weiter als), langweilig/mir ist langweilig, ausprobieren/anprobieren/probieren zu, betrunken/sich betrinken, die Kontrolle verlieren, es schaffen, Streifen, Batterie aufladen"
+      ],
+      "homework": "",
+      "duration_minutes": 60.0,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-06-29-stefanie.txt",
+        "data": "data/lezione_2026-06-29-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-07T19:32:30.138006"
+    },
+    {
+      "id": "2026-07-06-stefanie",
+      "date": "2026-07-06",
+      "audio_file": "Audiolessons\\lezione_2026-07-06-stefanie-compressed.mp4",
+      "topic": "Vacation recap and study materials",
+      "summary_it": "Kevin è tornato da Tenerife, dove ha incontrato turisti dal Belgio e dall'Italia ma ha trovato il viaggio un po' noioso. La discussione ha coperto l'e...",
+      "vocabulary_count": 26,
+      "grammar_count": 5,
+      "phrases_count": 6,
+      "doc_sections": [
+        "Vacation discussion",
+        "Prepositions with locations (auf/in)",
+        "Origin expressions (aus/von)",
+        "Idiomatic expression: das gibt's nicht",
+        "Study materials and strategies",
+        "Relative clauses with 'in dem'",
+        "Conversational 'das' vs formal 'es'"
+      ],
+      "homework": "",
+      "duration_minutes": 60.0,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-06-stefanie.txt",
+        "data": "data/lezione_2026-07-06-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-07T20:05:17.321566"
+    },
+    {
+      "id": "2026-07-07-stefanie",
+      "date": "2026-07-07",
+      "audio_file": "Audiolessons\\lezione_2026-07-07-stefanie-compressed.mp4",
+      "topic": "Wechselpräpositionen and Directional Particles",
+      "summary_it": "Kevin e Stefanie hanno lavorato intensamente sulle Wechselpräpositionen (preposizioni a doppio caso) che richiedono l'accusativo con movimento e il da...",
+      "vocabulary_count": 34,
+      "grammar_count": 5,
+      "phrases_count": 2,
+      "doc_sections": [
+        "Wechselpräpositionen with two-way cases",
+        "Directional particles hin and her",
+        "Positioning verbs (stellen/stehen, legen/liegen, setzen/sitzen, hängen)",
+        "Question words wo vs. wohin",
+        "Diminutive suffix -chen"
+      ],
+      "homework": "",
+      "duration_minutes": 60.0,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-07-stefanie.txt",
+        "data": "data/lezione_2026-07-07-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-07T20:40:17.949301"
+    },
+    {
+      "id": "2026-07-08-stefanie",
+      "date": "2026-07-08",
+      "audio_file": "Audiolessons\\lezione_2026-07-08-stefanie-compressed.mp4",
+      "topic": "Problem situations and solutions",
+      "summary_it": "Kevin ha praticato la descrizione di situazioni problematiche e la proposta di soluzioni usando strutture condizionali (würde + infinitivo). La lezion...",
+      "vocabulary_count": 31,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "8. Juli"
+      ],
+      "homework": "",
+      "duration_minutes": 67.9,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-08-stefanie.txt",
+        "data": "data/lezione_2026-07-08-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-08T19:34:24.408882"
+    },
+    {
+      "id": "2026-07-09-stefanie",
+      "date": "2026-07-09",
+      "audio_file": "Audiolessons\\lezione_2026-07-09-stefanie-compressed.mp4",
+      "topic": "Describing chaotic situations & hypotheticals",
+      "summary_it": "Kevin ha descritto una cucina caotica (immagine 6) usando strutture complesse. Ha praticato verbi direzionali (reinkommen in die Küche), preoccupazion...",
+      "vocabulary_count": 16,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "8. Juli (picture 6 description)",
+        "fragen um vs. fragen nach corrections",
+        "TE-KA-MO-LO sentence order",
+        "Konjunktiv II hypotheticals",
+        "gerade for present continuous"
+      ],
+      "homework": "",
+      "duration_minutes": 58.4,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-09-stefanie.txt",
+        "data": "data/lezione_2026-07-09-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-10T11:23:08.615541"
+    },
+    {
+      "id": "2026-07-21-stefanie",
+      "date": "2026-07-21",
+      "audio_file": "Audiolessons\\lezione_2026-07-21-stefanie-compressed.mp4",
+      "topic": "Sailing vocabulary and describing situations",
+      "summary_it": "Kevin discute della sua vacanza al Lago di Garda, dove prevede di navigare a vela con gli amici per la prima volta senza capitano. La lezione si conce...",
+      "vocabulary_count": 26,
+      "grammar_count": 5,
+      "phrases_count": 5,
+      "doc_sections": [
+        "8. Juli (picture description)",
+        "Tab 33 (sailing vocabulary and grammar)"
+      ],
+      "homework": "",
+      "duration_minutes": 65.5,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-21-stefanie.txt",
+        "data": "data/lezione_2026-07-21-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-21T22:37:31.561450"
+    },
+    {
+      "id": "2026-07-22-stefanie",
+      "date": "2026-07-22",
+      "audio_file": "Audiolessons\\lezione_2026-07-22-stefanie-compressed.mp4",
+      "topic": "Weather vocabulary and bargaining",
+      "summary_it": "Kevin ha praticato la descrizione delle condizioni meteorologiche al Lago di Garda, imparando vocaboli chiave come 'bewölkt' (nuvoloso), 'windig' (ven...",
+      "vocabulary_count": 22,
+      "grammar_count": 5,
+      "phrases_count": 6,
+      "doc_sections": [
+        "TAB: 8. Juli - Weather vocabulary practice",
+        "TAB: 8. Juli - Picture 7 description: arguing about toy car price",
+        "TAB: 8. Juli - Bargaining vocabulary and conditional questions"
+      ],
+      "homework": "",
+      "duration_minutes": 56.9,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-22-stefanie.txt",
+        "data": "data/lezione_2026-07-22-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-23T14:44:32.708960"
+    },
+    {
+      "id": "2026-07-23-stefanie",
+      "date": "2026-07-23",
+      "audio_file": "Audiolessons\\trascrizione 23072026.txt",
+      "topic": "Travel and vacation small talk",
+      "summary_it": "Kevin e Stefanie hanno praticato conversazioni informali su viaggi e vacanze usando domande tipiche tedesche. Hanno coperto argomenti come orari di ar...",
+      "vocabulary_count": 24,
+      "grammar_count": 5,
+      "phrases_count": 6,
+      "doc_sections": [
+        "Small talk topics: travel and vacation",
+        "Time expressions and duration",
+        "Separable verbs in past tense",
+        "Superlative forms",
+        "Prepositions with verbs"
+      ],
+      "homework": "",
+      "duration_minutes": 66,
+      "cost_whisper_eur": 0,
+      "cost_claude_eur": 0.1,
+      "cost_total_eur": 0.1,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-23-stefanie.txt",
+        "data": "data/lezione_2026-07-23-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-23T14:52:08.611348"
+    },
+    {
+      "id": "2026-07-27-stefanie",
+      "date": "2026-07-27",
+      "audio_file": "C:\\Users\\vecch\\Antigravity\\DeutschOps\\Audiolessons\\lezione_2026-07-27-stefanie-compressed.mp4",
+      "topic": "Local prepositions, past trips, describing pictures",
+      "summary_it": "Kevin e Stefanie hanno parlato del suo recente viaggio in campeggio, esercitando espressioni sul prezzo totale e il tempo Perfekt (Du bist schon im Ur",
+      "vocabulary_count": 32,
+      "grammar_count": 5,
+      "phrases_count": 3,
+      "doc_sections": [
+        "TAB: Small Talk Fragen (id:t.u7m0gkb3h5bi)"
+      ],
+      "homework": "Review and practice describing pictures using local prepositions (an, in, durch, auf) and separable verbs (rausschauen, reingehen, etc.); practice placing 'gerade' correctly in weil-clauses.",
+      "duration_minutes": 71.7,
+      "cost_whisper_eur": 0.0,
+      "cost_claude_eur": 1.9116,
+      "cost_total_eur": 1.9116,
+      "cost_estimated": false,
+      "files": {
+        "transcript": "transcripts/lezione_2026-07-27-stefanie.txt",
+        "data": "data/lezione_2026-07-27-stefanie.json",
+        "anki_deck": "Deutsch::DeutschOps"
+      },
+      "processed_at": "2026-07-27T21:20:15"
     }
   ],
   "stats": {
-    "total": 7,
-    "total_cost_eur": 2.047,
-    "total_minutes": 261.7
+    "total": 31,
+    "total_cost_eur": 6.73,
+    "total_minutes": 1702.6
   }
 }

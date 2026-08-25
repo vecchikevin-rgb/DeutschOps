@@ -1,0 +1,44 @@
+[project]
+name = "deutschops"
+version = "2.0.0"
+description = "Pipeline AI per l'apprendimento del tedesco, obiettivo Goethe B2"
+requires-python = ">=3.12"
+
+# Dipendenze DIRETTE del percorso critico.
+# Sostituisce un requirements.txt che era un `pip freeze` da 186 pacchetti:
+# torch (498MB), playwright (107MB), scikit-learn, matplotlib, optuna,
+# pyannote, speechbrain, lightning... circa 600MB tirati dentro quasi tutti
+# da speaker_analysis.py, un modulo orfano eseguito una volta il 22 maggio la
+# cui funzione principale (la diarizzazione) non ha mai funzionato.
+dependencies = [
+    "anthropic>=0.69",           # estrazione, drill, gap B2
+    "requests>=2.32",            # AnkiConnect, Ollama
+    "faster-whisper>=1.1",       # trascrizione locale, gratis
+    "reportlab>=4.2",            # PDF
+    "google-api-python-client>=2.140",
+    "google-auth-oauthlib>=1.2",
+    "pymupdf>=1.24",             # rendering pagine Kursbuch per l'OCR, do/sapere/libro.py
+]
+
+[project.optional-dependencies]
+# La trascrizione via API OpenAI e' l'alternativa a pagamento del percorso
+# locale: serve solo con WHISPER_MODE=api.
+whisper-api = ["openai>=1.50"]
+tts = ["piper-tts>=1.2"]         # audio sulle carte, CPU-only
+dev = ["pytest>=8.3", "pyright>=1.1", "pypdf>=5.0"]
+
+[project.scripts]
+deutschops = "deutschops:main"
+
+[tool.setuptools]
+packages = ["do", "do.base", "do.lezione", "do.sapere", "do.studio",
+            "do.motore", "do.uscite"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.pyright]
+venvPath = "."
+venv = "venv"
+include = ["do", "deutschops.py", "tests"]
+exclude = ["_archivio", "venv", "**/__pycache__"]

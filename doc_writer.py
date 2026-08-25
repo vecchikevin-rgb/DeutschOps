@@ -1,7 +1,6 @@
 # doc_writer.py v4 — testo ricco con emoji, niente API styling
 
 import json
-import shutil
 from pathlib import Path
 from datetime import date, datetime
 from google.auth.transport.requests import Request
@@ -9,18 +8,17 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
-STEFANIE_DOC_ID = "165S8CsHT3TrCpr6Se3l3VYakb7r16_bgg81l5ygJvpc"
-KPI_TAB_ID      = "t.wjmdnwq7d6ek"
-
-PDF_DRIVE_FOLDER = Path(
-    r"C:\Users\vecch\Il mio Drive (vecchi.kevin@gmail.com)"
-    r"\Portatile Dati\Documenti Kevin\Deutsch\Audiolezioni\KPI + pdf lezioni"
+# DOC_ID e KPI_TAB_ID arrivano da do/base/config.py: erano hardcoded in TRE
+# file (qui, doc_reader.py:17, retroactive_doc_images.py:29). Stessa cosa per i
+# path, che erano relativi alla cwd. Questo modulo resta il writer Google Docs
+# finche' non viene consolidato — vedi la nota in do/lezione/doc.py.
+from do.base.config import DOC_ID as STEFANIE_DOC_ID  # noqa: E402
+from do.base.config import GOOGLE_SCOPES, KPI_TAB_ID  # noqa: E402
+from do.base.paths import (  # noqa: E402
+    DOC_SNAPSHOTS, GOOGLE_CREDENTIALS, GOOGLE_TOKEN, REGISTRY, VOCAB_DB,
 )
 
-SCOPES = [
-    "https://www.googleapis.com/auth/drive",
-    "https://www.googleapis.com/auth/documents"
-]
+SCOPES = GOOGLE_SCOPES
 
 KPI_MARKER_START = "%%KPI_START%%"
 KPI_MARKER_END   = "%%KPI_END%%"
@@ -33,7 +31,7 @@ SEP2 = "─" * 52
 # ─── AUTH ─────────────────────────────────────────────────────────────────────
 def get_service():
     creds = None
-    token_path = Path("token.json")
+    token_path = GOOGLE_TOKEN
     if token_path.exists():
         creds = Credentials.from_authorized_user_file(str(token_path), SCOPES)
     if not creds or not creds.valid:
@@ -41,46 +39,48 @@ def get_service():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                "credentials.json", SCOPES)
+                str(GOOGLE_CREDENTIALS), SCOPES)
             creds = flow.run_local_server(port=0)
         token_path.write_text(creds.to_json())
     return build("docs", "v1", credentials=creds)
 
 
 def get_drive_service():
-    creds = Credentials.from_authorized_user_file(
-        str(Path("token.json")), SCOPES)
+    creds = Credentials.from_authorized_user_file(str(GOOGLE_TOKEN), SCOPES)
     return build("drive", "v3", credentials=creds)
 
 
-# ─── BACKUP ───────────────────────────────────────────────────────────────────
-def backup_doc(label: str = None) -> str:
-    if label is None:
-        label = datetime.now().strftime("%Y-%m-%d_%H-%M")
-    backup_dir = Path("doc_snapshots/backups")
-    backup_dir.mkdir(parents=True, exist_ok=True)
-    drive_svc = get_drive_service()
-    copy = drive_svc.files().copy(
-        fileId=STEFANIE_DOC_ID,
-        body={"name": f"Kevin_BACKUP_{label}"}
-    ).execute()
-    copy_url = f"https://docs.google.com/document/d/{copy['id']}/edit"
-    (backup_dir / f"backup_{label}.json").write_text(json.dumps({
-        "label": label, "url": copy_url,
-        "created_at": datetime.now().isoformat()
-    }, indent=2))
-    print(f"💾 Backup: {copy_url}")
-    return copy_url
+# ─── BACKUP (locale, niente copie sul Drive personale) ────────────────────────
+def backup_doc(label: str = None) -> str | None:
+    """Prova l'export .docx del Doc di Stefanie. Oggi NON puo' riuscire.
 
+    STATO REALE, verificato il 2026-07-27
+    In `doc_snapshots/backups/` non esiste NESSUN .docx. Ci sono 25 file .json
+    da 183 byte, prodotti da una versione precedente di questa funzione che
+    creava copie DENTRO il Drive (il campo `url` punta a un documento diverso)
+    — cioe' proprio il comportamento che CLAUDE.md dichiara rimosso. Quelle
+    copie sono presumibilmente ancora nel Drive di Kevin.
 
-# ─── PDF → DRIVE ──────────────────────────────────────────────────────────────
-def copy_pdf_to_drive(pdf_path: str) -> str:
-    pdf_path = Path(pdf_path)
-    PDF_DRIVE_FOLDER.mkdir(parents=True, exist_ok=True)
-    dest = PDF_DRIVE_FOLDER / pdf_path.name
-    shutil.copy2(str(pdf_path), str(dest))
-    print(f"📄 PDF → Drive: {dest.name}")
-    return str(dest)
+    La versione attuale esporta .docx e fallisce sempre con
+    `exportSizeLimitExceeded`: il Doc ha 112.000 caratteri e 108 immagini, e
+    supera il limite di export dell'API Drive. Non e' un errore transitorio,
+    e' strutturale: crescendo, non tornera' sotto il limite.
+
+    COSA C'E' DAVVERO AL POSTO SUO
+    `doc_snapshots/snapshot_*.txt` — 30 file, l'ultimo da 119 KB, scritto a
+    ogni lezione dalla pipeline. Copre il TESTO, che e' cio' che serve al diff
+    e all'estrazione.
+
+    COSA RESTA SCOPERTO, e va detto invece che nascosto sotto un try/except:
+    le 108 immagini e la formattazione. Se il Doc sparisse, quelle non ci sono
+    da nessuna parte. Un export manuale (File > Scarica) le salverebbe.
+    """
+    del label                                   # firma tenuta per i chiamanti
+    print("   Backup .docx non disponibile: il Doc supera il limite di export "
+          "di Drive (strutturale, non transitorio).")
+    print("   Il testo e' comunque salvato in doc_snapshots/snapshot_*.txt. "
+          "Immagini e formattazione no: per quelle serve File > Scarica a mano.")
+    return None
 
 
 # ─── TAB HELPERS ──────────────────────────────────────────────────────────────
@@ -402,26 +402,25 @@ def append_lesson_summary(lesson_json_path: str,
     print("🔑 Connessione Google...")
     service = get_service()
 
-    # 1. Backup
-    backup_doc(label=lesson_date)
+    # 1. Backup locale del Doc (nessuna copia sul Drive personale)
+    # Non-blocking: il Doc puo' superare il limite di export di Drive
+    # (docx troppo grande) senza che questo impedisca l'aggiornamento vero e proprio.
+    try:
+        backup_doc(label=lesson_date)
+    except Exception as e:
+        print(f"⚠️ Backup locale saltato (non-blocking): {e}")
 
-    # 2. PDF → Drive folder locale
-    pdf_filename = ""
-    if pdf_path and Path(pdf_path).exists():
-        copy_pdf_to_drive(pdf_path)
-        pdf_filename = Path(pdf_path).name
-    else:
-        print("⚠️  PDF non trovato, skip copia Drive")
+    # 2. PDF già salvato localmente in pdfs/ da pdf_gen.py (step 5)
+    pdf_filename = Path(pdf_path).name if pdf_path and Path(pdf_path).exists() else ""
 
     # 3. Carica dati
     registry = {"lessons": [], "stats": {}}
-    if Path("lesson_registry.json").exists():
-        registry = json.loads(
-            Path("lesson_registry.json").read_text(encoding="utf-8"))
+    if REGISTRY.exists():
+        registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
 
     vocab_stats = {"total_words": 0, "by_category": {}, "by_level": {}}
-    if Path("data/vocab_db.json").exists():
-        db = json.loads(Path("data/vocab_db.json").read_text(encoding="utf-8"))
+    if VOCAB_DB.exists():
+        db = json.loads(VOCAB_DB.read_text(encoding="utf-8"))
         vocab_stats = db.get("stats", vocab_stats)
 
     # 4. Scrivi nel tab

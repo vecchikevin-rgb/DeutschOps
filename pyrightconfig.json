@@ -1,5 +1,6 @@
 {
-    "venvPath": "C:\\Users\\vecch\\DeutschOps",
+    "venvPath": ".",
     "venv": "venv",
-    "pythonVersion": "3.14"
+    "pythonVersion": "3.14",
+    "pythonInterpreterPath": "./venv/Scripts/python.exe"
 }

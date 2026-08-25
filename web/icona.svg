@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DeutschOps">
+  <rect width="64" height="64" rx="8" fill="#FDFBF7"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="7.25" fill="none"
+        stroke="#C9C3B6" stroke-width="1.5"/>
+  <text x="30" y="45" font-family="Georgia, serif" font-size="40" font-weight="700"
+        fill="#1A1A1A" text-anchor="middle">D</text>
+  <path d="M40 40 l5 6 l11 -16" fill="none" stroke="#B45309" stroke-width="5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
