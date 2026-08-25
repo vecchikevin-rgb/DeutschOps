@@ -376,6 +376,10 @@ def libro_lektioni() -> dict:
         fuori.append({
             **l,
             "pratica_pct": _pratica_pct(l["numero"], risposte),
+            # Prima versione grezza: 0 o 100 a seconda che esista almeno una
+            # lezione collegata. Il design voleva "% di temi coperti", ma
+            # richiede sapere quanti temi ha una Lektion in totale — non
+            # estratto da questo piano. Definire "tema" prima di affinarla.
             "copertura_pct": round(100 * min(1, len(collegate) / 1)) if collegate else 0,
         })
     return {"lektioni": fuori}
