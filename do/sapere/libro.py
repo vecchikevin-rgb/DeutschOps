@@ -951,6 +951,8 @@ def classifica_lezioni_per_lektion(quante: int = 10) -> dict:
 
     lotto = da_fare[:quante]
     nozionale = 0.0
+    riuscite = 0                        # solo lezioni davvero scritte in mappa — non len(lotto):
+                                         # un'eccezione fa `continue` prima di scrivere (vedi sotto)
     for etichetta, d in lotto:
         regole = "; ".join((g.get("rule") or "") for g in d.get("grammar_points", []))[:500]
         user = (
@@ -969,9 +971,10 @@ def classifica_lezioni_per_lektion(quante: int = 10) -> dict:
         mappa[etichetta] = [{"lektion": v["numero"], "motivo": (v.get("motivo") or "")[:200]}
                             for v in voci]
         nozionale += uso.costo_nozionale_eur
+        riuscite += 1
         LIBRO_LEZIONI_MAPPA.parent.mkdir(parents=True, exist_ok=True)
         LIBRO_LEZIONI_MAPPA.write_text(json.dumps(mappa, ensure_ascii=False, indent=2),
                                        encoding="utf-8")
 
-    return {"classificate": len(lotto), "rimaste": len(da_fare) - len(lotto),
+    return {"classificate": riuscite, "rimaste": len(da_fare) - len(lotto),
             "costo_nozionale_eur": round(nozionale, 4)}
