@@ -39,6 +39,7 @@ const stato = {
   registraMs: false,   // il modulo per registrare un Modellsatz
   kursbuch: null,      // { lektioni, aperta } della zona Kursbuch
   kursbuchDettaglio: null,   // il dettaglio della Lektion aperta
+  ascolto: null,       // sessione di ascolto in corso
 };
 
 // ------------------------------------------------------------------ utilita'
@@ -1499,6 +1500,99 @@ function disegnaKursbuchDettaglio() {
   );
 }
 
+// ------------------------------------------------------------------ listening
+
+async function avviaAscolto() {
+  const d = await api('/api/libro/listening?n=10');
+  stato.ascolto = { esercizi: d.esercizi, totali: d.totali, i: 0, fase: 'domanda', soluzione: null };
+}
+
+function disegnaAscolto() {
+  const c = $('#contenuto');
+  const a = stato.ascolto;
+  if (!a) {
+    c.replaceChildren(el('p', { class: 'vuoto' }, 'Loading listening exercises…'));
+    avviaAscolto().then(disegna).catch(mostraErrore);
+    return;
+  }
+
+  const e = a.esercizi[a.i];
+  if (!e) {
+    c.replaceChildren(el('p', { class: 'vuoto' },
+      a.totali === 0
+        ? 'No listening exercises ready yet — run libro --risolvi-esercizi first.'
+        : "That's all for this session."));
+    return;
+  }
+
+  if (a.fase === 'rivelato') {
+    c.replaceChildren(
+      el('article', { class: 'esercizio' },
+        el('p', { class: 'consegna' }, e.consegna),
+        el('p', { class: 'stimolo' }, e.stimolo),
+        el('p', { class: 'traduzione' }, `→ ${a.soluzione}`),
+        el('div', { class: 'voti' },
+          el('button', { class: 'voto good', onclick: () => avantiAscolto(true) }, 'Got it right'),
+          el('button', { class: 'voto again', onclick: () => avantiAscolto(false) }, 'Got it wrong'),
+        )
+      )
+    );
+    return;
+  }
+
+  c.replaceChildren(
+    el('div', { class: 'avanzamento' },
+      el('span', {}, `${a.i + 1} of ${a.esercizi.length}`)),
+    el('article', { class: 'esercizio' },
+      el('p', { class: 'consegna' }, e.consegna),
+      el('p', { class: 'stimolo' }, e.stimolo),
+      el('button', { class: 'primario', onclick: () => rivelaAscolto() }, 'Show answer'))
+  );
+}
+
+async function rivelaAscolto() {
+  // Decisione presa in Task 9 (vedi task-9-report.md): l'endpoint POST
+  // /api/libro/risposta (Task 6) registra SEMPRE il tentativo — non esiste
+  // una "rivela senza registrare" lato server, e crearla e' fuori dallo
+  // scope di questo task (solo web/app.js). Per mostrare la soluzione
+  // prima del voto vero, questa chiamata registra un `corretta: false`
+  // provvisorio, che avantiAscolto() sovrascrive subito dopo col voto
+  // reale, sulla stessa chiave (lektion/chiave_pagina/indice_esercizio).
+  // Il log finisce quindi con un record "false" provvisorio seguito dal
+  // record vero per ogni esercizio affrontato — difetto onesto e minimo,
+  // non nascosto, non risolvibile qui senza toccare do/uscite/web.py.
+  const a = stato.ascolto;
+  const e = a.esercizi[a.i];
+  const r = await api('/api/libro/risposta', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      lektion: e.lektion, chiave_pagina: e.chiave_pagina,
+      indice_esercizio: e.indice_esercizio, corretta: false,  // provvisorio, il voto vero arriva dopo
+    }),
+  });
+  a.soluzione = r.soluzione;
+  a.fase = 'rivelato';
+  disegna();
+}
+
+function avantiAscolto(corretta) {
+  const a = stato.ascolto;
+  const e = a.esercizi[a.i];
+  api('/api/libro/risposta', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      lektion: e.lektion, chiave_pagina: e.chiave_pagina,
+      indice_esercizio: e.indice_esercizio, corretta,
+    }),
+  }).catch(() => {});  // il voto e' gia' mostrato all'utente, un fallimento di rete qui non deve bloccarlo
+  a.i += 1;
+  a.fase = 'domanda';
+  a.soluzione = null;
+  disegna();
+}
+
 // ------------------------------------------------------------------ exam
 
 /* «A che punto sono per il B2» — e la risposta ha due metà che non si sommano.
@@ -1900,6 +1994,7 @@ function disegna() {
   if (stato.zona === 'exam') return disegnaEsame();
   if (stato.zona === 'kursbuch') return disegnaKursbuch();
   if (stato.zona === 'kursbuch-dettaglio') return disegnaKursbuchDettaglio();
+  if (stato.zona === 'listening') return disegnaAscolto();
   $('#contenuto').replaceChildren(el('p', { class: 'vuoto' }, 'Not built yet.'));
 }
 
