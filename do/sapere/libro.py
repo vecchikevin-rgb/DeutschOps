@@ -91,6 +91,42 @@ def _rendi_pagina(pdf: Path, indice: int, cartella: Path) -> Path:
         return out
 
 
+# Cache su disco delle pagine renderizzate: l'app le richiede spesso (ogni
+# apertura di una Lektion), non ha senso ri-renderizzare la stessa pagina a
+# ogni richiesta. Dentro Book/, quindi fuori da git per lo stesso motivo del
+# resto del libro (copyright).
+_CARTELLA_RENDER = BOOK / "pagine_render"
+
+
+def pagina_cachata(fonte: str, indice: int) -> Path | None:
+    """Il PNG della pagina, renderizzato una volta sola e riusato dopo.
+
+    None se la fonte non esiste o l'indice e' fuori range — mai un'eccezione
+    che l'endpoint web dovrebbe intercettare per conto suo.
+    """
+    fonti = dict(FONTI)
+    pdf = fonti.get(fonte)
+    if not pdf or not pdf.exists():
+        return None
+
+    _CARTELLA_RENDER.mkdir(parents=True, exist_ok=True)
+    out = _CARTELLA_RENDER / f"{fonte}_{indice:04d}.png"
+    if out.exists():
+        return out
+
+    try:
+        if indice < 0 or indice >= _pagine_totali(pdf):
+            return None
+        immagine = _rendi_pagina(pdf, indice, _CARTELLA_RENDER)
+    except Exception:                                        # noqa: BLE001
+        return None
+    # _rendi_pagina scrive gia' col nome atteso da _CARTELLA_RENDER/pagina_NNNN.png
+    # (usato per l'OCR temporaneo) — qui serve il nome namespaced per fonte,
+    # quindi si rinomina invece di duplicare la logica di rendering.
+    immagine.replace(out)
+    return out
+
+
 def _carica() -> dict[str, dict]:
     if not LIBRO_PAGINE.exists():
         return {}
