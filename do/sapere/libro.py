@@ -265,6 +265,86 @@ def esporta_markdown(destinazione: Path | None = None) -> Path:
     return destinazione
 
 
+# --------------------------------------------------------------------- Lektionen
+_INTESTAZIONE_LEKTION = re.compile(r"^\s*\d{1,2}\s+(.+)$")
+
+
+def _titolo_lektion(testo: str) -> str:
+    """La prima riga sostanziosa dopo il numero della Lektion, es. "27
+    Geschichten und Gesichter Berlins" -> "Geschichten und Gesichter Berlins".
+    Euristica, non garanzia: se non trova nulla torna stringa vuota, mai
+    un titolo inventato."""
+    for riga in (testo or "").splitlines():
+        riga = riga.strip()
+        if not riga:
+            continue
+        if m := _INTESTAZIONE_LEKTION.match(riga):
+            return m.group(1).strip()
+        break  # la prima riga non vuota non era un'intestazione: fermati
+    return ""
+
+
+def lektioni() -> list[dict]:
+    """Le Lektionen del Kursbuch aggregate dalle pagine OCR, in ordine.
+
+    Il numero di Lektion e' gia' un campo per pagina (`lezione`, scritto
+    dall'OCR — vedi SISTEMA_OCR). Qui si raggruppa, non si inventa nulla:
+    una pagina senza `lezione` valorizzato (indice, copertina, appendice)
+    non entra in nessuna Lektion.
+    """
+    per_numero: dict[int, list[dict]] = {}
+    for chiave, pag in _carica().items():
+        if pag.get("fonte") != "kursbuch":
+            continue
+        n = str(pag.get("lezione") or "").strip()
+        if not n.isdigit():
+            continue
+        per_numero.setdefault(int(n), []).append(pag)
+
+    fuori = []
+    for numero in sorted(per_numero):
+        pagine = per_numero[numero]
+        livelli = [p.get("livello") for p in pagine if p.get("livello")]
+        esercizi = [e for p in pagine for e in p.get("esercizi", [])]
+        fuori.append({
+            "numero": numero,
+            "titolo": next((t for p in pagine if (t := _titolo_lektion(p.get("testo", "")))), ""),
+            "livello": max(livelli, key=livelli.count) if livelli else "",
+            "pagine": len(pagine),
+            "frasi": sum(len(p.get("frasi", [])) for p in pagine),
+            "esercizi_totali": len(esercizi),
+            "esercizi_risolti": sum(1 for e in esercizi if (e.get("soluzione") or "").strip()),
+        })
+    return fuori
+
+
+def lektion(numero: int) -> dict | None:
+    """Il dettaglio completo di una Lektion, o None se non esiste."""
+    pagine = []
+    for chiave, pag in sorted(_carica().items(), key=lambda kv: kv[1].get("indice", 0)):
+        if pag.get("fonte") != "kursbuch":
+            continue
+        n = str(pag.get("lezione") or "").strip()
+        if n.isdigit() and int(n) == numero:
+            pagine.append({
+                "chiave": chiave,
+                "tipo": pag.get("tipo", ""),
+                "testo": pag.get("testo", ""),
+                "frasi": pag.get("frasi", []),
+                "esercizi": pag.get("esercizi", []),
+            })
+    if not pagine:
+        return None
+
+    riepilogo = next((l for l in lektioni() if l["numero"] == numero), {})
+    return {
+        "numero": numero,
+        "titolo": riepilogo.get("titolo", ""),
+        "livello": riepilogo.get("livello", ""),
+        "pagine": pagine,
+    }
+
+
 # --------------------------------------------------------------------- ricerca
 # Stesso stile di frasi.py: deterministico, zero chiamate di rete, zero costo.
 _TOKEN = re.compile(r"[a-zA-ZäöüÄÖÜß]+")
