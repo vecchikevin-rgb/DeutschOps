@@ -350,6 +350,47 @@ def risposta(voce: dict) -> dict:
     return allenamento.registra_esito(es, testo, aiuto, esito)
 
 
+# ------------------------------------------------------------------ libro
+
+def _pratica_pct(numero: int, risposte: list[dict]) -> float | None:
+    """% di esercizi Listening di questa Lektion risposti giusti, o None
+    sotto la soglia minima — coerente con progressi.py: un numero fragile
+    non e' meglio di nessun numero."""
+    SOGLIA_MINIMA = 5
+    rilevanti = [r for r in risposte
+                if r.get("zona") == "listening" and r.get("lektion") == numero]
+    if len(rilevanti) < SOGLIA_MINIMA:
+        return None
+    giuste = sum(1 for r in rilevanti if r.get("corretta"))
+    return round(100 * giuste / len(rilevanti))
+
+
+def libro_lektioni() -> dict:
+    from ..sapere import libro
+    from ..studio import sessione
+
+    risposte = sessione.risposte()
+    fuori = []
+    for l in libro.lektioni():
+        collegate = libro.lezioni_per_lektion(l["numero"])
+        fuori.append({
+            **l,
+            "pratica_pct": _pratica_pct(l["numero"], risposte),
+            "copertura_pct": round(100 * min(1, len(collegate) / 1)) if collegate else 0,
+        })
+    return {"lektioni": fuori}
+
+
+def libro_lektion(numero: int) -> dict:
+    from ..sapere import libro
+
+    d = libro.lektion(numero)
+    if d is None:
+        return {"errore": f"Lektion {numero} non trovata"}
+    d["lezioni_collegate"] = libro.lezioni_per_lektion(numero)
+    return d
+
+
 # ------------------------------------------------------------------ server
 
 def _decodifica(grezzo: bytes) -> str:
@@ -433,6 +474,14 @@ class Gestore(BaseHTTPRequestHandler):
                 q = parse_qs(rotta.query)
                 return self._json(indice.dettaglio(q.get("genere", [""])[0],
                                                    q.get("id", [""])[0]))
+            if percorso == "/api/libro/lektioni":
+                return self._json(libro_lektioni())
+            if percorso.startswith("/api/libro/lektion/"):
+                try:
+                    n = int(percorso.rsplit("/", 1)[-1])
+                except ValueError:
+                    return self._json({"errore": "numero Lektion non valido"}, 400)
+                return self._json(libro_lektion(n))
             if percorso.startswith("/api/"):
                 return self._json({"errore": "endpoint sconosciuto"}, 404)
         except Exception as e:                       # degrada, non rompe
