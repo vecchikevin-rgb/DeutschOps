@@ -24,6 +24,7 @@ non viene riaperta.
 from __future__ import annotations
 
 import json
+import re
 import threading
 import webbrowser
 from datetime import date, datetime
@@ -317,6 +318,21 @@ def esame() -> dict:
     temi = [t for t in g.get("grammatica", []) if isinstance(t, dict)]
     ordine = {"mancante": 0, "parziale": 1, "coperto": 2}
     temi.sort(key=lambda t: (ordine.get(t.get("stato"), 9), t.get("tema", "")))
+
+    from ..sapere import libro
+    for t in temi:
+        if t.get("stato") != "mancante":
+            continue
+        parole = re.findall(r"[a-zA-ZäöüÄÖÜß]{4,}", t.get("tema", ""))
+        if trovati := libro.esempio_esercizio(parole, quanti=1):
+            e = trovati[0]
+            # Serve il numero di Lektion, non l'esercizio in se': si ricava
+            # dalla pagina che lo contiene, cercando fra tutte le Lektionen.
+            for l in libro.lektioni():
+                d = libro.lektion(l["numero"])
+                if d and any(e in pag.get("esercizi", []) for pag in d["pagine"]):
+                    t["lektion_libro"] = l["numero"]
+                    break
 
     return {
         "temi": temi,
