@@ -38,6 +38,7 @@ const stato = {
   scrittura: null,     // prova di scrittura in corso
   registraMs: false,   // il modulo per registrare un Modellsatz
   kursbuch: null,      // { lektioni, aperta } della zona Kursbuch
+  kursbuchDettaglio: null,   // il dettaglio della Lektion aperta
 };
 
 // ------------------------------------------------------------------ utilita'
@@ -1449,14 +1450,53 @@ function disegnaBarra(etichetta, pct) {
       el('i', { class: 'kursbuch-barra-riempita', style: `width:${pct}%` })));
 }
 
+async function avviaDettaglioLektion(numero) {
+  const d = await api(`/api/libro/lektion/${numero}`);
+  stato.kursbuchDettaglio = d;
+}
+
 function vaiDettaglioLektion(numero) {
-  // Placeholder per il Task 8: apre il dettaglio della Lektion. Se il Task 8
-  // non e' ancora stato eseguito in questa sessione di lavoro, questa
-  // funzione esiste ma disegnaLektionDettaglio() no — lascialo cosi', il
-  // Task 8 la implementa. Non lasciare pero' un TODO nel codice: la riga
-  // sotto e' funzionante finche' disegnaLektionDettaglio esiste.
   stato.zona = 'kursbuch-dettaglio';
+  stato.kursbuchDettaglio = null;
   disegna();
+}
+
+function disegnaKursbuchDettaglio() {
+  const c = $('#contenuto');
+  const numero = stato.kursbuch?.aperta;
+  if (!stato.kursbuchDettaglio) {
+    c.replaceChildren(el('p', { class: 'vuoto' }, 'Loading Lektion…'));
+    avviaDettaglioLektion(numero).then(disegna).catch(mostraErrore);
+    return;
+  }
+
+  const d = stato.kursbuchDettaglio;
+  c.replaceChildren(
+    el('button', { class: 'secondario', onclick: () => { stato.zona = 'kursbuch'; disegna(); } },
+      '← Back to Kursbuch'),
+    el('h1', {}, `Lektion ${d.numero} — ${d.titolo}`),
+
+    d.lezioni_collegate.length
+      ? el('section', {},
+          el('h2', { style: 'font-size:1rem' }, 'Your lessons on similar topics'),
+          ...d.lezioni_collegate.map((lc) =>
+            el('div', { class: 'riga' },
+              el('div', { class: 'riga-capo' }, lc.data_lezione),
+              el('div', { class: 'provenienza' }, lc.motivo))))
+      : null,
+
+    ...d.pagine.map((pag) => el('article', { class: 'esercizio' },
+      el('img', {
+        src: `/api/libro/pagina/${pag.chiave.split(':')[0]}/${pag.chiave.split(':')[1]}`,
+        loading: 'lazy', style: 'max-width:100%;border-radius:var(--r2);margin-bottom:var(--s3)',
+        alt: `Page ${pag.chiave}`,
+      }),
+      ...pag.esercizi.filter((e) => e.soluzione).map((e) =>
+        el('div', { class: 'riga' },
+          el('p', { class: 'stimolo' }, e.stimolo),
+          el('p', { class: 'provenienza' }, `→ ${e.soluzione}`)))
+    ))
+  );
 }
 
 // ------------------------------------------------------------------ exam
@@ -1859,6 +1899,7 @@ function disegna() {
   if (stato.zona === 'progress') return disegnaProgressi();
   if (stato.zona === 'exam') return disegnaEsame();
   if (stato.zona === 'kursbuch') return disegnaKursbuch();
+  if (stato.zona === 'kursbuch-dettaglio') return disegnaKursbuchDettaglio();
   $('#contenuto').replaceChildren(el('p', { class: 'vuoto' }, 'Not built yet.'));
 }
 
