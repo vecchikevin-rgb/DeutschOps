@@ -396,6 +396,59 @@ def libro_lektion(numero: int) -> dict:
     return d
 
 
+def libro_listening(n: int, lektion_filtro: int | None = None) -> dict:
+    """Esercizi audio del libro, gia' risolti, soluzione nascosta finche' non
+    si risponde — stesso principio di RISERVATI in allenamento.py."""
+    from ..sapere import libro
+
+    candidati = []
+    for l in libro.lektioni():
+        if lektion_filtro is not None and l["numero"] != lektion_filtro:
+            continue
+        d = libro.lektion(l["numero"])
+        if not d:
+            continue
+        for pag in d["pagine"]:
+            for i, e in enumerate(pag.get("esercizi", [])):
+                if not e.get("traccia_audio") or not (e.get("soluzione") or "").strip():
+                    continue
+                candidati.append({
+                    "lektion": l["numero"],
+                    "chiave_pagina": pag["chiave"],
+                    "indice_esercizio": i,
+                    "consegna": e.get("consegna", ""),
+                    "stimolo": e.get("stimolo", ""),
+                })
+
+    return {"esercizi": candidati[:n], "totali": len(candidati)}
+
+
+def libro_risposta(voce: dict) -> dict:
+    """Rivela la soluzione e registra il tentativo. L'unico endpoint Listening
+    con effetto collaterale — gli altri sono di sola lettura."""
+    from ..sapere import libro
+    from ..studio import sessione
+
+    chiave = str(voce.get("chiave_pagina") or "")
+    try:
+        indice = int(voce.get("indice_esercizio"))
+        lektion_n = int(voce.get("lektion"))
+    except (TypeError, ValueError):
+        return {"errore": "lektion/indice_esercizio non validi"}
+
+    d = libro._carica().get(chiave)                     # noqa: SLF001 — stesso modulo, dato interno
+    if not d or indice >= len(d.get("esercizi", [])):
+        return {"errore": "esercizio non trovato"}
+    e = d["esercizi"][indice]
+
+    corretta = bool(voce.get("corretta"))
+    sessione.annota_risposta({
+        "zona": "listening", "lektion": lektion_n, "chiave_pagina": chiave,
+        "indice_esercizio": indice, "corretta": corretta,
+    })
+    return {"soluzione": e.get("soluzione", ""), "fonte": e.get("soluzione_fonte", "")}
+
+
 # ------------------------------------------------------------------ server
 
 def _decodifica(grezzo: bytes) -> str:
@@ -481,6 +534,11 @@ class Gestore(BaseHTTPRequestHandler):
                                                    q.get("id", [""])[0]))
             if percorso == "/api/libro/lektioni":
                 return self._json(libro_lektioni())
+            if percorso == "/api/libro/listening":
+                q = parse_qs(rotta.query)
+                n = max(1, min(30, int(q.get("n", ["10"])[0])))
+                lek = q.get("lektion", [""])[0]
+                return self._json(libro_listening(n, int(lek) if lek.isdigit() else None))
             if percorso.startswith("/api/libro/lektion/"):
                 try:
                     n = int(percorso.rsplit("/", 1)[-1])
@@ -533,6 +591,8 @@ class Gestore(BaseHTTPRequestHandler):
             if percorso == "/api/modellsatz":
                 from ..studio import modellsatz
                 return self._json(modellsatz.registra(voce))
+            if percorso == "/api/libro/risposta":
+                return self._json(libro_risposta(voce))
 
             from ..studio import sessione
             if percorso == "/api/sessione":
