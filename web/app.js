@@ -18,7 +18,8 @@ const ZONE = [
   { id: 'home',      nome: 'Home',      icona: 'i-home',      pronta: true  },
   { id: 'reading',   nome: 'Reading',   icona: 'i-reading',   pronta: true  },
   { id: 'practice',  nome: 'Practice',  icona: 'i-practice',  pronta: true  },
-  { id: 'listening', nome: 'Listening', icona: 'i-listening', pronta: false, fase: 'F6' },
+  { id: 'listening', nome: 'Listening', icona: 'i-listening', pronta: true  },
+  { id: 'kursbuch',  nome: 'Kursbuch',  icona: 'i-book',      pronta: true  },
   { id: 'reference', nome: 'Reference', icona: 'i-reference', pronta: true  },
   { id: 'exam',      nome: 'Exam',      icona: 'i-exam',      pronta: true  },
   { id: 'progress',  nome: 'Progress',  icona: 'i-progress',  pronta: true  },
@@ -36,6 +37,7 @@ const stato = {
   esame: null,         // il quadro B2
   scrittura: null,     // prova di scrittura in corso
   registraMs: false,   // il modulo per registrare un Modellsatz
+  kursbuch: null,      // { lektioni, aperta } della zona Kursbuch
 };
 
 // ------------------------------------------------------------------ utilita'
@@ -1391,6 +1393,72 @@ function nascondiSuggerimento() {
   if (t) t.hidden = true;
 }
 
+// ------------------------------------------------------------------ kursbuch
+
+async function avviaKursbuch() {
+  const d = await api('/api/libro/lektioni');
+  stato.kursbuch = { lektioni: d.lektioni, aperta: null };
+}
+
+function disegnaKursbuch() {
+  const c = $('#contenuto');
+  if (!stato.kursbuch) {
+    c.replaceChildren(el('p', { class: 'vuoto' }, 'Loading the course book…'));
+    avviaKursbuch().then(disegna).catch(mostraErrore);
+    return;
+  }
+
+  const { lektioni, aperta } = stato.kursbuch;
+  // "Sei qui": la prima Lektion senza pratica registrata, o l'ultima se le
+  // hai fatte tutte — non e' un dato del server, e' una lettura del client
+  // sullo stesso elenco che gia' ha.
+  const primaAperta = lektioni.find((l) => l.pratica_pct === null) || lektioni[lektioni.length - 1];
+  const correnteNumero = aperta ?? (primaAperta ? primaAperta.numero : null);
+
+  c.replaceChildren(
+    el('section', { class: 'kursbuch-percorso' },
+      ...lektioni.map((l) => {
+        const e_corrente = l.numero === correnteNumero;
+        const nodo = el('button', {
+          class: 'kursbuch-tappa' + (e_corrente ? ' kursbuch-tappa-corrente' : ''),
+          onclick: () => { stato.kursbuch.aperta = l.numero; disegna(); vaiDettaglioLektion(l.numero); },
+        },
+          el('span', { class: 'kursbuch-numero' }, String(l.numero)),
+          el('span', { class: 'kursbuch-titolo' }, l.titolo || `Lektion ${l.numero}`),
+        );
+        if (!e_corrente) return nodo;
+
+        return el('div', { class: 'kursbuch-tappa-espansa' },
+          nodo,
+          disegnaBarra('Your practice', l.pratica_pct),
+          disegnaBarra('Covered with Stefanie', l.copertura_pct),
+        );
+      })
+    )
+  );
+}
+
+function disegnaBarra(etichetta, pct) {
+  if (pct === null || pct === undefined) {
+    return el('p', { class: 'provenienza' }, `${etichetta}: not enough data yet`);
+  }
+  return el('div', { class: 'kursbuch-barra' },
+    el('div', { class: 'kursbuch-barra-etichetta' },
+      el('span', {}, etichetta), el('span', {}, `${pct}%`)),
+    el('div', { class: 'kursbuch-barra-fondo' },
+      el('i', { class: 'kursbuch-barra-riempita', style: `width:${pct}%` })));
+}
+
+function vaiDettaglioLektion(numero) {
+  // Placeholder per il Task 8: apre il dettaglio della Lektion. Se il Task 8
+  // non e' ancora stato eseguito in questa sessione di lavoro, questa
+  // funzione esiste ma disegnaLektionDettaglio() no — lascialo cosi', il
+  // Task 8 la implementa. Non lasciare pero' un TODO nel codice: la riga
+  // sotto e' funzionante finche' disegnaLektionDettaglio esiste.
+  stato.zona = 'kursbuch-dettaglio';
+  disegna();
+}
+
 // ------------------------------------------------------------------ exam
 
 /* «A che punto sono per il B2» — e la risposta ha due metà che non si sommano.
@@ -1790,6 +1858,7 @@ function disegna() {
   if (stato.zona === 'reference') return disegnaConsultazione();
   if (stato.zona === 'progress') return disegnaProgressi();
   if (stato.zona === 'exam') return disegnaEsame();
+  if (stato.zona === 'kursbuch') return disegnaKursbuch();
   $('#contenuto').replaceChildren(el('p', { class: 'vuoto' }, 'Not built yet.'));
 }
 
