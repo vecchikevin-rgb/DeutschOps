@@ -77,8 +77,18 @@ def studio() -> dict:
     from . import allenamento, sessione
 
     risposte = [r for r in sessione.risposte()]
-    aiuti = [int(r.get("aiuto") or 0) for r in risposte]
-    pulite = [r for r in risposte if r.get("corretta") and not r.get("aiuto")]
+    # Il gradino di aiuto esiste solo in Practice: Listening (do/uscite/web.py:
+    # libro_risposta) e' autovalutato e non ha mai `aiuto`, quindi ogni suo
+    # record entrerebbe qui come "aiuto 0" — falsando la media, la tendenza e
+    # la soglia MINIME_PER_TENDENZA sotto. `risposte` resta intera (serve per
+    # "ultima" e per il conteggio totale: Listening e' comunque studio), ma le
+    # metriche sul gradino filtrano su zona.
+    pratica = [r for r in risposte if r.get("zona") != "listening"]
+    aiuti = [int(r.get("aiuto") or 0) for r in pratica]
+    # "chiuso senza aiuto" e' la definizione di progresso vero di questo
+    # modulo (vedi CLAUDE.md "il progresso lo misura... quanti esercizi
+    # chiudi senza aiuto") — stesso filtro di zona di `pratica` sopra.
+    pulite = [r for r in pratica if r.get("corretta") and not r.get("aiuto")]
 
     ses = sessione.riepilogo()
     # Anche una sessione mai chiusa conta come studio: le risposte si posano
