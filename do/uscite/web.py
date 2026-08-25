@@ -320,18 +320,31 @@ def esame() -> dict:
     temi.sort(key=lambda t: (ordine.get(t.get("stato"), 9), t.get("tema", "")))
 
     from ..sapere import libro
+    # Indice esercizio->Lektion costruito una volta sola (30 Lektionen), non
+    # per ogni tema mancante: libro.lektioni()/lektion() rileggono da disco
+    # a ogni chiamata, e il loop precedente le richiamava dentro `for t in
+    # temi`, arrivando a ~137 letture per ~22 temi B2. Stessa logica del
+    # brief, solo issata fuori dal loop — vedi nota "Nota sul costo" sopra.
+    indice_lektion: list[tuple[dict, int]] = []
+    for l in libro.lektioni():
+        d = libro.lektion(l["numero"])
+        if d:
+            for pag in d["pagine"]:
+                for es in pag.get("esercizi", []):
+                    indice_lektion.append((es, l["numero"]))
+
     for t in temi:
         if t.get("stato") != "mancante":
             continue
         parole = re.findall(r"[a-zA-ZäöüÄÖÜß]{4,}", t.get("tema", ""))
         if trovati := libro.esempio_esercizio(parole, quanti=1):
             e = trovati[0]
-            # Serve il numero di Lektion, non l'esercizio in se': si ricava
-            # dalla pagina che lo contiene, cercando fra tutte le Lektionen.
-            for l in libro.lektioni():
-                d = libro.lektion(l["numero"])
-                if d and any(e in pag.get("esercizi", []) for pag in d["pagine"]):
-                    t["lektion_libro"] = l["numero"]
+            # Serve il numero di Lektion, non l'esercizio in se': si cerca
+            # nell'indice pre-costruito, stesso ordine (Lektion crescente,
+            # poi pagina, poi esercizio) del loop originale.
+            for es, numero in indice_lektion:
+                if es == e:
+                    t["lektion_libro"] = numero
                     break
 
     return {
