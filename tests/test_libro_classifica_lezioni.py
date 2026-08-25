@@ -65,6 +65,6 @@ def test_classifica_lezioni_per_lektion_conta_solo_i_successi(tmp_path, monkeypa
     r = libro.classifica_lezioni_per_lektion(quante=10)
 
     assert r["classificate"] == 1          # una lezione fallita (continue), una riuscita
-    assert r["rimaste"] == 0               # entrambe erano nel lotto tentato
+    assert r["rimaste"] == 1               # la fallita resta non mappata, va ritentata
     mappa_salvata = json.loads(mappa_path.read_text(encoding="utf-8"))
     assert len(mappa_salvata) == 1         # solo la lezione riuscita e' scritta su disco

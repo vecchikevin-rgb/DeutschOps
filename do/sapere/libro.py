@@ -118,12 +118,20 @@ def pagina_cachata(fonte: str, indice: int) -> Path | None:
         if indice < 0 or indice >= _pagine_totali(pdf):
             return None
         immagine = _rendi_pagina(pdf, indice, _CARTELLA_RENDER)
+        # _rendi_pagina scrive gia' col nome atteso da _CARTELLA_RENDER/pagina_NNNN.png
+        # (usato per l'OCR temporaneo) — qui serve il nome namespaced per fonte,
+        # quindi si rinomina invece di duplicare la logica di rendering.
+        # Dentro il try: sotto richieste concorrenti sulla stessa pagina non
+        # ancora cachata (ThreadingHTTPServer lo permette), due richieste
+        # possono renderizzare sullo stesso nome temporaneo — la seconda
+        # `.replace()` puo' trovare il sorgente gia' consumato dalla prima e
+        # sollevare FileNotFoundError. Fuori dal try quell'eccezione
+        # scapperebbe oltre il contratto "non solleva mai" di questa funzione,
+        # fino all'handler generico 500 del router, che serve un corpo JSON
+        # dove un <img> si aspetta PNG.
+        immagine.replace(out)
     except Exception:                                        # noqa: BLE001
         return None
-    # _rendi_pagina scrive gia' col nome atteso da _CARTELLA_RENDER/pagina_NNNN.png
-    # (usato per l'OCR temporaneo) — qui serve il nome namespaced per fonte,
-    # quindi si rinomina invece di duplicare la logica di rendering.
-    immagine.replace(out)
     return out
 
 
@@ -976,5 +984,9 @@ def classifica_lezioni_per_lektion(quante: int = 10) -> dict:
         LIBRO_LEZIONI_MAPPA.write_text(json.dumps(mappa, ensure_ascii=False, indent=2),
                                        encoding="utf-8")
 
-    return {"classificate": riuscite, "rimaste": len(da_fare) - len(lotto),
+    # Stesso difetto che "classificate" aveva gia' (fix 94636e9): contare
+    # len(lotto) invece dei soli successi farebbe sparire dal conteggio anche
+    # le lezioni fallite in questo giro (`continue`, mai scritte in mappa) —
+    # restano genuinamente non mappate e vanno ritentate al prossimo run.
+    return {"classificate": riuscite, "rimaste": len(da_fare) - riuscite,
             "costo_nozionale_eur": round(nozionale, 4)}
